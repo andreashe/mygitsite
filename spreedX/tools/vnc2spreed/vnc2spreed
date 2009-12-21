@@ -1,0 +1,24 @@
+#!/bin/bash
+##      vnc2spreed
+
+if [ `id -u` -eq 0 ]; then
+        echo "You should not launch vnc2spreed as root."
+fi
+
+basefolder=`dirname "$0"`
+platform=`uname`
+
+PYTHON_EXEC=$VNC2SPREED_PYTHON
+
+if [ "x$PYTHON_EXEC" == "x" ]; then
+	PYTHON_EXEC=/usr/bin/python
+fi
+
+cd "${basefolder}"
+export PYTHONPATH="$basefolder/streaming.egg:$basefolder/setuptools.egg:$basefolder:$PYTHONPATH"
+
+if [ "x$platform" == "xDarwin" ]; then
+    exec "${PYTHON_EXEC}" -OO vnc2spreed.py $@
+else
+    exec -a vnc2spreed "${PYTHON_EXEC}" -OO vnc2spreed.py $@
+fi
