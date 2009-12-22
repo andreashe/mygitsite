@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>SELFHTML: VRML: dreidimensionale bewegliche Welten im WWW</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einf&uuml;hrung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tbb.htm"><b>Erg&auml;nzungen und Alternativen zu HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>VRML: dreidimensionale bewegliche Welten im WWW</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu VRML</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>VRML-Beispiel</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Informationen und Beispiele zu VRML im WWW</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu VRML</font></h2></a>
+VRML bedeutet <b>V</b>irtual <b>R</b>eality <b>M</b>odeling <b>L</b>anguage. 
+Die Sprache versteht sich als eine Erg&auml;nzung zu HTML mit dem 
+Ziel, das Surfen im WWW zu einem dreidimensionalen virtuellen Erlebnis zu machen. VRML ist wie HTML eine f&uuml;r das WWW standardisierte Beschreibungssprache. Die Idee zu dieser Sprache entstand auf der ersten World Wide Web Konferenz 1994 in Genf. Zun&auml;chst war angedacht, die Beschreibungen der virtuellen 3D-Objekte in HTML zu integrieren, doch bald schon wurde klar, da&szlig; man andere Beschreibungs-Schemata ben&ouml;tigen w&uuml;rde. So entstand die HTML-unabh&auml;ngige Sprache VRML. Im Unterschied zu HTML beschreibt VRML nicht prim&auml;r Text und Grafikreferenzen, sondern den vektoriellen Aufbau dreidimensionaler, polygonaler Grafikobjekte und deren Abh&auml;ngigkeiten. 
+<p>
+VRML liegt derzeit in der Spezifikation 2.0 vor. Diese Version erlaubt es, dreidimensionale Objekte zu entwerfen, die Verweise auf andere solche Objekte enthalten k&ouml;nnen. Damit ist das Navigieren realisierbar. Die Version 2.0 ist leider nicht vollst&auml;ndig r&uuml;ckw&auml;rtskompatibel zu der Vorg&auml;ngerversion 1.0, was derzeit bei Software zum Anzeigen von VRML-Dateien f&uuml;r Probleme sorgt. 
+<p>
+F&uuml;r die Anzeige von VRML-Dokumenten gibt es spezielle Browser oder Add-Ons f&uuml;r vorhandene WWW-Browser. Bei der Pr&auml;sentation eines VRML-Dokuments navigieren Sie nicht mehr, indem Sie auf einen Text- oder Grafikverweis klicken. Stattdessen sehen Sie eine dreidimensionale Szenerie. Mit Eingabeger&auml;ten wie einer Maus k&ouml;nnen Sie sich darin frei bewegen, verschiedene Ansichten w&auml;hlen usw. 
+<p>
+VRML-Dateien auch in HTML-Dateien eingebettet sein. 
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>VRML-Beispiel</font></h2></a>
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table cellpadding=12 width=100%><tr><td bgcolor=#FFFFCC><pre>
+ #VRML V1.0 ascii
+ Separator {
+  DirectionalLight {
+      direction 0 0 -1  # Licht aus Richtung des Betrachters auf die Szenerie fallen lassen
+  }
+  PerspectiveCamera {   # Perspektive einstellen
+      position    -8.6 2.1 5.6   
+      orientation -0.1352 -0.9831 -0.1233  1.1417
+      focalDistance       10.84
+  }
+  Separator {   # Rote Kugel definieren
+      Material {
+          diffuseColor 1 0 0   # Red
+      }
+      Translation { translation 3 0 1 }
+      Sphere { radius 2.3 }
+  }
+  Separator {  # Blauen W&uuml;rfel definieren
+      Material {
+          diffuseColor 0 0 1  # Blue
+      }
+      Transform {
+          translation -2.4 .2 1
+          rotation 0 1 1  .9
+      }
+      Cube {}
+  }
+}
+</pre></td></tr></table>
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Auf die einzelnen Sprachelemente kann hier nicht n&auml;her eingegangen werden. Wie Sie erkennen k&ouml;nnen, wird in dem Beispiel eine Szenerie definiert, die vier Objekte definiert: den Lichteinfall, die Betrachterperspektive sowie zwei &quot;handfeste&quot;, n&auml;mlich eine rote Kugel und einen blauen W&uuml;rfel. Bei der Betrachterperspektive wird der Einflu&szlig; des Lichteinfalls wirksam. Wenn Sie einen VRML-f&auml;higen WWW-Browser haben (z.B. wird  Netscape seit V3.0 von vorneherein mit VRML-Plugin ausgeliefert), k&ouml;nnen Sie das obige Beispiel in eine leere Textdatei kopieren, diese als <i>datei.wrl</i> abspeichern und die Datei anschlie&szlig;end mit dem WWW-Browser &ouml;ffnen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Informationen und Beispiele zu VRML im WWW</font></h2></a>
+
+Demos und Information zu VRML im WWW finden Sie an folgenden Stellen:
+
+<p>
+
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.ask.uni-karlsruhe.de/~doc/vrml/fokus/fokus.html"><b>Steinbuch's VRML-Fokus</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0><br>
+Deutschsprachige VRML-Dokumentation
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://vag.vrml.org/"><b>VRML Architecture Group</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Alles &uuml;ber VRML von einem Experten-Team
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://cedar.cic.net/~rtilmann/mm/vrml.htm"><b>Richard Tilmann's VRML-Einf&uuml;hrung</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Dokumentation zu VRML
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.vrmlsite.com/"><b>VRML Site</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Informationsforum zu VRML
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://webspace.sgi.com/Repository/index.html"><b>VRML Worlds</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Verweise zu VRML-Demos und viele Infos
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tbbb.htm"><b>Java: Animation und Interaktion</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tbbd.htm"><b>ActiveX: Microsoft Programm-Module f&uuml;r das WWW</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einf&uuml;hrung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tbb.htm"><b>Erg&auml;nzungen und Alternativen zu HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+
+
+
+
+
+
+
