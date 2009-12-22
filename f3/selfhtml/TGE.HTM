@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>SELFHTML: Zugriffe kontrollieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tg.htm"><b>Projektverwaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</a>
+<h1><font color=#6666CC>Zugriffe kontrollieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Logdateien und Statistikarten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Statistiken richtig auswerten</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> Allgemeines</font></h2></a>
+
+Wenn Sie ein Projekt im WWW plaziert haben, werden Sie sicher auch interessiert sein zu erfahren, wie h&auml;ufig darauf zugegriffen wird. Um richtig einsch&auml;tzen zu k&ouml;nnen, wie gut Ihr Projekt ankommt und was Sie daran verbessern sollten, reichen allerdings reine Zugriffszahlen nicht aus. Um aussagekr&auml;ftige Ergebnisse &uuml;ber die Abrufe Ihrer WWW-Seiten zu erhalten, sind Statistiken n&ouml;tig, die Ihnen die Zugriffe nach bestimmten Kriterien aufschl&uuml;ssen. So gibt es Statistiken, die auflisten, welche Dateien am h&auml;ufigsten abgerufen wurden, zu welchen Tageszeiten die meisten Besucher zu verzeichnen sind, oder welche WWW-Browser am h&auml;ufigsten verwendet werden.
+<p>
+Bei besseren Providern geh&ouml;rt es zum Service, da&szlig; Sie Zugriff auf Logdateien haben, die Ihren Speicherbereich betreffen. Die meisten Provider bieten auch CGI-Dienste an, mit deren Hilfe Sie die Besucherzahlen nach verschiedenen Kriterien als Statistik aufbereitet bekommen. 
+<p>
+Wenn Sie Ihre Homepage bei Discount-Providern wie Compuserve, T-Online usw. haben, stehen Ihnen solche Dienste bislang nicht zur Verf&uuml;gung. Um in solchen F&auml;llen an genaue Zugriffsstatistiken zu kommen, k&ouml;nnen Sie einen &ouml;ffentlichen CGI-Dienst in Anspruch nehmen. Dort bekommen Sie f&uuml;r eine geringe Jahresgeb&uuml;hr  einen Zugriffsz&auml;hler sowie ordentlich aufbereitete Statsitiken f&uuml;r Ihre Homepage, egal wie deren Adresse lautet. Ein Nachteil bei dieser L&ouml;sung ist allerdings, da&szlig; bei jedem Zugriff auf Ihre Homepage zus&auml;tzlich auf den fremden CGI-Dienst zugegriffen werden mu&szlig;. In diesem Dokument finden Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbba.htm#a3"><b>&ouml;ffentliche CGI-Dienste</b></a> aufgelistet.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> Logdateien und Statistikarten</font></h2></a>
+
+Grundlage aller Zugriffsstatistiken sind Logdateien. Jeder Server-Rechner im Internet f&uuml;hrt solche Logdateien, in denen er alle Zugriffe protokolliert. Dazu gibt es ein allgemeines Modell, wie Eintr&auml;ge in einer Logdatei auszusehen haben. Ein Eintrag nach diesem Modell hat folgendes Aussehen:
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+ad25-175.compuserve.com - - [02/Mar/1997:05:03:49 -0500] "GET /selfhtml/tg.htm HTTP/1.0" 200 1788
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Jede Zeile in der Logdatei dokumentiert einen Zugriff auf eine Datei. Am Beginn steht, wer zugegriffen hat. Bei den meisten Zugangsprovidern erhalten die Anwender beim Einw&auml;hlen ins Internet eine dynamische Session-Nummer, unter der sie dann in den Logdateien der Server auftauchen, die sie besucht haben. Im obigen Beispieleintrag ist erkennbar, da&szlig; sich der Anwender &uuml;ber CompuServe ins Internet eingew&auml;hlt hat. Die Angabe <i>ad25-175</i> ist eine dynamische Session-Nummer. 
+<p>
+Anstelle der beiden Bindestriche im obigen Beispiel k&ouml;nnen von Fall zu Fall noch Daten stehen. Anstelle des ersten Bindestriches kann der Anwender-Logname stehen (entsprechend der Spezifikation rfc931). Anstelle des zweiten Bindestriches kann ein Anwendername stehen, den der Anwender sich selbst gegeben hat.
+<p>
+Als n&auml;chstes zeigt der Eintrag, wann genau der Zugriff erfolgte. Im Beispiel war das am 2. M&auml;rz 1997 um 5.03 Uhr (und 49 Sekunden) morgens, und zwar minus 5 Stunden gerechnet gegen&uuml;ber GMT (Greenwich Meridian Time) aus Sicht der Systemzeit des Server-Rechners. 
+<p>
+Dahinter folgt ein Kurzprotokoll des HTTP-Headerbefehls, mit dem der WWW-Browser des Anwenders die Datei angefordert hat. <i>GET</i> ist dabei die &uuml;bliche Methode. Dahinter wird die Datei angegeben, auf die der Zugriff erfolgte. Im Beispiel ist das die Datei <i>http://www.netzwelt.com/selfhtml/tg.htm</i>. Da es sich um einen Eintrag aus der Loagdatei von <i>www.netzwelt.com</i> handelt, wird nur der Pfadname relativ zu der Domain-Adresse angezeigt. Schlie&szlig;lich zeigt die HTTP-Anforderung noch die verwendete HTTP-Protokollversion an. Das ist zur Zeit die Version 1.0.
+<p>
+Dahinter folgt eine Codenummer, die dar&uuml;ber Aufschlu&szlig; gibt, ob die Anforderung erfolgreich war, und wenn nicht, welches der Fehler war. Dabei sind folgende Nummern wichtig:<br>
+200 = Die Anforderung war erfolgreich<br>
+4xx, 5xx = Es traten Fehler auf. Zum Beispiel war die angeforderte Datei war nicht vorhanden.
+<p>
+Die letzte Zahl in der Zeile schlie&szlig;lich gibt an, wieviele Bytes von der Datei an den aufrufenden WWW-Browser &uuml;bertragen wurden. Wenn Sie die Bytezahl mit der tats&auml;chlichen Dateigr&ouml;&szlig;e vergleichen, k&ouml;nnen Sie feststellen, ob die Datei vollst&auml;ndig &uuml;bertragen wurde, oder ob die &Uuml;bertragung vorzeitig abgebrochen wurde. So kommt es zum Beispiel oft vor, da&szlig; Grafiken nicht vollst&auml;ndig &uuml;bertragen werden, weil der Anwender bereits vorher auf einen Verweis zu einer anderen Seite klickt.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Neben den reinen Zugriffs-Logdateien f&uuml;hren die meisten Server-Rechner auch Herkunfts-Logdateien. Darin wird festgehalten, von welcher anderen Datei aus ein Zugriff auf eine Datei erfolgte. Solche Herkunfts-Logdateien k&ouml;nnen interessante Aufschl&uuml;sse dar&uuml;ber geben, wo offensichtlich Verweise auf Ihr Projekt existieren und wie viele Besucher von dort kamen. Bei den meisten Providern erhalten Sie auch auf solche Logdateien Zugriff. Wenn nicht, fragen Sie ruhig danach.
+
+
+<h3><font color=#6666CC>Statistikarten:</font></h3>
+Logdateien sind normalerweise sehr gro&szlig; und etwa so spannend wie ein Telefonbuch. Um eine aussagekr&auml;ftige &Uuml;bersicht &uuml;ber die Zugriffe auf Ihre Seiten zu erhalten, sollte Ihr Provider Statistiken anbieten. Die Statistiken stehen Ihnen meistens als dynamisch generierte HTML-Dateien zur Verf&uuml;gung, die ein CGI-Programm durch Auslesen der Logdatei erzeugt.
+<p>
+Statistiken stellen Ihnen die Zugriffe nach einem bestimmten Kriterium sortiert dar. Folgende Kriterien sind typisch:
+<ul>
+<li>Auflistung nach Dateien (auf welche Dateien wurde am h&auml;ufigsten zugegriffen?)
+<li>Auflistung nach Zeit (zu welcher Tageszeit, an welchen Wochentagen wurden die meisten Zugriffe verzeichnet?)
+<li>Auflistung nach Herkunft (&uuml;ber welche Domain-Adressen haben sich die meisten Anwender ins Internet eingew&auml;hlt?)
+<li>Auflistung nach Erfolg (welche Dateien wurden vollst&auml;ndig &uuml;bertragen, bei welchen wurde bei der &Uuml;bertragung vorzeitig abgebrochen?)
+<li>Auflistung nach Anwender-Software (welche WWW-Browser in welchen Versionen wurden am h&auml;ufigsten verwendet?)
+</ul>
+Solche Statistiken sind meistens als gut lesbare Listen aufbereitet. Manche Provider bieten auch grafische Aufbereitungen von Statistiken an.
+
+<h4><font color=#6666CC>Beispiel einer Statistik:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+     3770   10544 :   selfhtml/
+      201    2311 :     index.htm
+      174       0 :     godown.gif
+      174       0 :     book.gif
+      173      86 :     goonline.gif
+      172       0 :     gomail.gif
+      171       0 :     goto.gif
+      169       0 :     goup.gif
+      167       0 :     download.gif
+      165       0 :     deu.gif
+       66       0 :     goback.gif
+       60       0 :     goprev.gif
+       57       0 :     gonext.gif
+       35       0 :     netscape.gif
+       34       0 :     eng.gif
+       29       0 :     msie.gif
+       28       0 :     ok.gif
+       27       0 :     netscap2.gif
+       22       0 :     html3.gif
+       20       0 :     os2.gif
+       17     664 :     brevier.htm
+       17     195 :     selfhtml.htm
+       17       0 :     msie3.gif
+       16      16 :     netscap3.gif
+       15     120 :     hinweise.htm
+       13     254 :     software.htm
+       12     415 :     shtmlidx.htm
+       12     258 :     frames.htm
+       11      11 :     mosaic.gif
+       10     161 :     html.htm
+       10     120 :     farbform.htm
+       10      95 :     formausw.htm
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel zeigt Auflistung nach Dateien. Es handelt sich um einen Ausschnitt aus einem Tagesergebnis der letzten Version dieses Dokuments. Die erste der beiden Zahlen in jeder Zeile stellt die Anzahl der Zugriffe auf die Datei dar, die jeweils zweite Zahl die Anzahl Kilobytes, die dabei insgesamt &uuml;bertragen wurden. In der ersten Zeile stehen die Summen f&uuml;r alle Dateien des Verzeichnisses. Das obige Beispiel zeigt auch eine Schw&auml;che des zugeh&ouml;rigen Aufbereitungs-Scripts: dieses z&auml;hlt n&auml;mlich keine einzelnen Bytes und weist f&uuml;r Dateien, die kleiner als 1 Kilobyte sind, immer das &Uuml;bertragungsvolumen 0 aus, obwohl die Datei mehrfach aufgerufen wurde.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> Statsitiken richtig auswerten</font></h2></a>
+
+Die folgende Checkliste soll Ihnen helfen, Statistiken zu interpretieren und Schl&uuml;sse daraus zu ziehen:
+
+<ul>
+<li><b>Haben Sie so gut wie keine Zugriffe?</b><br>
+Wenn Ihr Projekt erst seit wenigen Tagen im Netz steht, ist das normal. Wenn es allerdings schon seit Monaten online ist, haben Sie zu wenig unternommen, um das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tgd.htm"><b>Projekt bekannt zu machen</b></a>. Die Zugriffszahlen h&auml;ngen nat&uuml;rlich auch von den angebotenen Themen ab. Ein Projekt &uuml;ber die neuesten Computerspiele hat nun einmal mehr Zugriffe als ein Projekt &uuml;ber seltene Orchideensorten.
+<p>
+<li><b>Haben Sie viele Zugriffe auf die Einstiegsdatei, jedoch so gut wie keine auf die Unterseiten?</b><br>
+Es ist ganz normal, da&szlig; die Einstiegsseite mit Abstand die meisten Zugriffe zu verzeichnen hat. Wenn aber die Unterseiten so gut wie gar nicht besucht werden, deutet das darauf hin, da&szlig; vielen Besuchern Ihre Einstiegsseite nicht gef&auml;llt, da&szlig; bei der Einstiegsseite zu viele Daten (z.B. Grafiken) &uuml;bertragen werden, oder da&szlig; die Einstiegsseite so un&uuml;bersichtlich ist, da&szlig; die Besucher die Verweise zu den Unterseiten nicht finden. In diesem Fall sollten Sie Ihre Einstiegsseite neu, einfacher und &uuml;bersichtlicher gestalten und &uuml;berpr&uuml;fen, ob das Verh&auml;ltnis anschlie&szlig;end g&uuml;nstiger wird. 
+<p>
+<li><b>Werden gro&szlig;e Grafiken h&auml;ufig genug vollst&auml;ndig &uuml;bertragen?</b><br>
+Das gilt besonders f&uuml;r Einstiegsseiten. Wenn eine solche Seite ihren Blickfang beispielsweise aus einer 50 Kilobyte gro&szlig;en Grafik bezieht und von dieser Grafik im Schnitt nur die H&auml;lfte &uuml;bertragen wird, bedeutet das, da&szlig; kaum ein Besucher darauf wartet, bis die Seite ihre ganze Pracht entfaltet hat. In diesem Fall sollten Sie die Seite dringend neu gestalten.
+<p>
+<li><b>Wie lange halten sich Besucher auf Ihren Seiten auf?</b><br>
+Das k&ouml;nnen Sie am besten direkt an den Logdateien erkennen. Wenn Sie 50 Seiten haben und die Besucher im Schnitt unter einer Minute verweilen, ist das Projekt einfach nicht attraktiv genug. Ausgenommen davon sind Projekte mit dem Charakter von Nachschlagewerken, in denen niemand st&ouml;bert, sondern nur eine gezielte Auskunft sucht. Sie k&ouml;nnen nicht erwarten, da&szlig; die Besucher stundenlang bleiben und alles von vorne bis hinten studieren. Aber mehrere Minuten im Schnitt deuten darauf hin, da&szlig; die Besucher sich auch mal &quot;verf&uuml;hren&quot; lassen.
+<p>
+<li><b>Wo kommen Ihre Besucher her?</b><br>
+Entweder bietet Ihr Provider eine entsprechende Statistik dazu an, oder Sie m&uuml;ssen die Herkunfts-Logdateien (&quot;referrer-files&quot;) auswerten. Achten Sie dabei darauf, von welchen fremden Adressen aus auf Ihr Projekt zugegriffen wird. So k&ouml;nnen Sie beispielsweise erkennen, ob Sie h&auml;ufig &uuml;ber Themensuchen in Suchdiensten gefunden werden, oder ob eine anklickbare Anzeige, die Sie bei einem Kataloganbieter gegen Geb&uuml;hr geschaltet haben, sich rentiert. 
+<p>
+</ul>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tgd.htm"><b>WWW-Projekte bekannt machen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tgf.htm"><b>Adressenwechsel von WWW-Projekten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tg.htm"><b>Projektverwaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

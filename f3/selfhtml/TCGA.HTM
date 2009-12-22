@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>SELFHTML: Grafiken einbinden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Grafiken einbinden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Grafik referenzieren (allgemein)</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Grafik in anderem Verzeichnis referenzieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>zu Grafik auf einem anderen WWW-Server referenzieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Alternativer Text, falls Grafik nicht anzeigbar</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Rahmen um Grafiken</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Namen f&uuml;r Grafiken</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Grafik referenzieren (allgemein)</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgaa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Um Grafiken in Ihre HTML-Dateien einzubinden, brauchen Sie einen Befehl, um die gew&uuml;nschte Grafikdateien an den gew&uuml;nschten Stellen innerhalb der HTML-Dateien zu referenzieren. Geeignete Dateiformate f&uuml;r WWW-gerechte Grafiken sind GIF und JPEG (siehe hierzu <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfa.htm"><b>WWW-gerechte Grafiken</b></a>).
+
+<a name="ia_name"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot;&gt;
+&lt;img src=&quot;datei.jpg&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Grafikreferenz beginnt mit <b>&lt;img src=</b> (<i>img = image = Bild, src = source = Quelle</i>). Hinter dem Istgleichzeichen geben Sie den Namen der Grafikdatei an, auf die verwiesen wird (in den Beispielen: &quot;datei.gif&quot; bzw. &quot;datei.jpg&quot;). Der Dateiname mu&szlig; in Anf&uuml;hrungszeichen stehen. Der Befehl f&uuml;r die Grafikreferenz endet mit <b>&gt;</b>.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die obigen Beispiele setzen voraus, da&szlig; sich die Grafikdatei im gleichen Verzeichnis befindet wie die HTML-Datei, in der die Grafik referenziert wird. Sie k&ouml;nnen auch <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Grafiken in anderen Verzeichnissen</b></a> und sogar beliebige <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Grafiken auf anderen WWW-Servern</b></a> referenzieren 
+<p>
+Wenn Sie HTML-Dateien f&uuml;r's WWW erstellen, sollten Sie darauf achten, da&szlig; die darin referenzierten Grafiken nicht zu gro&szlig; sind, denn aufwendige Grafiken verursachen lange Ladezeiten und Mi&szlig;mut beim Anwender. Reduzieren Sie in Ihren Grafiken gegebenenfalls die Anzahl der Farben, verringern Sie die Bildgr&ouml;&szlig;e und stopfen Sie nicht zu viele Grafik-Referenzen in eine einzige HTML-Datei. In jedem Fall sollten Sie den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm"><b>Ladevorgang f&uuml;r Grafiken optimieren</b></a>.
+<p>
+Um eine Grafik alleine - ohne Text daneben - anzuzeigen, notieren Sie am besten vor und nach der Grafikreferenz eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm#a1"><b>Absatzschaltung f&uuml;r Textabs&auml;tze</b></a>. Also zum Beispiel: <b>&lt;p&gt;</b><b>&lt;img src=&quot;datei.gif&quot;&gt;</b><b>&lt;p&gt;</b>. Ansonsten k&ouml;nnen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgb.htm"><b>Grafiken beschriften</b></a> oder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm"><b>Text um die Grafik flie&szlig;en lassen</b></a>.
+<p>
+Unter grafischen Benutzeroberfl&auml;chen wie MS-Windows, Macintosh, OS/2 und anderen k&ouml;nnen 
+WWW-Browser die referenzierten Grafiken direkt im Anzeigefenster anzeigen. WWW-Browser f&uuml;r textorientierte Oberfl&auml;chen (z.B. DOS-Textmodus, Unix-Textmodus) m&uuml;ssen einen separates 
+Grafik-Betrachtungsprogramm aufrufen, um eine Grafik anzuzeigen. 
+<p>
+Wenn Sie wichtige HTML-Dateien Ihres WWW-Projekts, etwa die Einstiegsseite, vollst&auml;ndig grafisch gestalten, also fast keinen Text, daf&uuml;r nur Grafikreferenzen verwenden, erschweren Sie automatischen Suchprogrammen, die von vielen Suchdiensten im WWW eingesetzt werden, die Identifizierung des Inhalts Ihres Projekts. Im Zweifelsfall m&uuml;ssen Sie abw&auml;gen, was Ihnen wichtiger ist: das grafische Erscheinungsbild oder die inhaltliche Identifizierbarkeit. Falls Sie wichtige HTML-Dateien Ihres WWW-Projekts vorwiegend durch Grafikreferenzen gestalten, sollten Sie zumindest die M&ouml;glichkeit der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbd.htm"><b>Meta-Informationen</b></a> nutzen.
+<p>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Grafik in anderem Verzeichnis referenzieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgaa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei gr&ouml;&szlig;eren Projekten ist es sinnvoll, die Dateien auf mehrere Verzeichnisse zu verteilen. Dies dient der besseren &Uuml;bersicht. Damit die Projekte auf andere Rechner mit anderen Verzeichnisstrukturen &uuml;bertragbar bleiben, sollten Sie aber bei Grafikreferenzen mit relativen Pfadnamen arbeiten. 
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;verzeichnis/datei.gif&quot;&gt;
+&lt;img src=&quot;verzeichnis/unterverz/datei.gif&quot;&gt;
+&lt;img src=&quot;../datei.gif&quot;&gt;
+&lt;img src=&quot;../../../datei.gif&quot;&gt;
+&lt;img src=&quot;../woanders/datei.gif&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r die Grafikreferenz gelten der HTML-Befehl und die Bedingungen f&uuml;r <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Grafiken referenzieren (allgemein)</b></a>. Die Grafikreferenz besteht aus der relativen Pfadangabe und dem Dateinamen der Grafikdatei.
+<p>
+Bei relativen Pfadnamen ist das Verzeichnis, in dem die HTML-Datei steht, die die Grafikreferenz enth&auml;lt, der Bezugspunkt (im folgenden &quot;akutelles Verzeichnis&quot; genannt). 
+<p>
+Wenn sich die Grafikdatei in einem Verzeichnis unterhalb des aktuellen Verzeichnisses befindet, notieren Sie den Namen des Unterverzeichnisses, dann einen Schr&auml;gstrich, dann den Namen der Grafikdatei. Wenn sich die Grafikdatei im n&auml;chsth&ouml;heren Verzeichnis zu dem aktuellen Verzeichnis befindet, notieren Sie zwei Punkte, einen Schr&auml;gstrich und dahinter den Namen der Grafikdatei. Bei weiter entfernten Grafikateien m&uuml;ssen Sie mehrere Verzeichnisse aneinanderreihen, so wie in den obigen Beispielen.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Verwenden Sie zum Trennen der Verzeichnisnamen immer den einfachen Schr&auml;gstrich, auch, wenn Sie Ihr Projekt innerhalb einer DOS-/Windows-Umgebung erstellen. Der WWW-Browser ben&ouml;tigt die Angabe in Form von einfachen Schr&auml;gstrichen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Grafik auf einem anderen WWW-Server referenzieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgaa.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Jede Grafik, die in einem WWW-Projekt vorkommt, ist eine eigene Datei und hat deshalb eine eigene Internet-Adresse. Sie k&ouml;nnen jede beliebige Grafikdatei, deren genaue Internet-Adresse Sie kennen, in Ihrem WWW-Projekt referenzieren.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;http://www.netzwelt.com/selfhtml/xdance1.gif&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r die Grafikreferenz gelten der HTML-Befehl und die Bedingungen f&uuml;r <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Grafiken referenzieren (allgemein)</b></a>. Die Grafikreferenz besteht aus der Internet-Adresse der Grafikdatei.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie Grafiken von anderen WWW-Servern referenzieren, verursachen Sie zus&auml;tzliche Netzlast. Grafikreferenzen von fremden Internet-Servern sollten schon aus diesem Grund die Ausnahme sein.
+<p>
+Wenn Sie Grafiken aus einem fremden WWW-Projekt referenzieren, fragen Sie den Anbieter der betreffenden Seiten vorher, ob er damit einverstanden ist.
+<p>
+Bei Grafikreferenzen von fremden WWW-Projekten m&uuml;ssen Sie damit rechnen, da&szlig; die Grafikreferenz pl&ouml;tzlich nicht mehr funktioniert, weil der andere Anbieter beispielsweise sein Projekt ge&auml;ndert und die Grafik dabei entfernt oder umbenannt hat.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Alternativer Text, falls Grafik nicht anzeigbar</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgaa.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie HTML-Dateien f&uuml;r's WWW erstellen, sollten Sie bei Grafikreferenzen sicherheitshalber von der M&ouml;glichkeit Gebrauch machen, eine Textalternative zur Grafik mit einzubinden. Der Text wird dann und nur dann angezeigt, wenn die Grafik aus irgendwelchen Gr&uuml;nden (und da gibt es viele!) beim Anwender nicht angezeigt werden kann.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Kurzbeschreibung des Bildes&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Der alternativ zur Grafik anzuzeigende Text wird innerhalb des Befehls f&uuml;r die Grafikreferenz notiert. Eingeleitet wird die Anweisung f&uuml;r die Textalternative durch <b>alt=</b> (<i>alt = alternative</i>). Dahinter folgt, in Anf&uuml;hrungszeichen eingeschlossen, der Alternativtext.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Der alternative Text wird bei gr&ouml;&szlig;eren Grafiken auch angezeigt, bevor die Grafiken geladen sind. So kann der Anwender sich schon &uuml;ber den Inhalt der Grafik informieren, bevor die Grafik selbst am Bildschirm angezeigt wird. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Rahmen um Grafiken</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgaa.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen festlegen, da&szlig; der Browser einen Rahmen um die Grafik zeichnet.
+
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; border=10&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>border=</b> innerhalb der Grafikreferenz wird ein Rahmen um die Grafik definiert (<i>border = Rand</i>). Die Angabe erfolgt in Pixeln und bedeutet die Rahmendicke.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Namen f&uuml;r Grafiken</font></h2></a>
+
+Sie k&ouml;nnen festlegen, da&szlig; eine Grafik einen Namen erh&auml;lt. Dies ist in Verbindung mit JavaScript sinnvoll. Der Name einer Grafik kann zum Beispiel beim JavaScript-Objekt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdch.htm"><b>FENSTERNAME.document.images[ ] / BILDNAME</b></a> von Bedeutung sein. 
+
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; name=&quot;MeineGrafik&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>name=</b> innerhalb der Grafikreferenz vergeben Sie einen Namen f&uuml;r die Grafik. Der Name mu&szlig; in Anf&uuml;hrungszeichen stehen, sollte nicht zu lang sein und darf keine Leerzeichen, Sonderzeichen oder deutsche Umlaute enthalten. Nur der Buchstaben, Ziffern und der Unterstrich &quot;_&quot; sind erlaubt. Gro&szlig;- und Kleinschreibung werden unterschieden.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcfj.htm"><b>Browser-interne Verweise</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcgb.htm"><b>Grafiken beschriften</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

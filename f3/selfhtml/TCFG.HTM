@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>SELFHTML: Download-Verweise und Verweise auf beliebige Dateien</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Download-Verweise und Verweise auf beliebige Dateien</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Download-Verweise im Internet</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweise auf beliebige Dateien im Internet</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Download-Verweise im Internet</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfga.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Es gibt keinen spezifischen HTML-Befehl, um Dateien im Internet beim Anklicken zum Downloaden anzubieten. Es gibt lediglich Dateitypen, die (fast) jeder WWW-Browser so interpretiert, da&szlig; er dem Anwender anbietet, die Datei downzuloaden. Das verbreitetste Dateiformat daf&uuml;r ist heute das ZIP-Format (Dateien mit der Endung &quot;.zip&quot;). ZIP-Dateien sind Archivdateien, die mehrere andere Dateien enthalten k&ouml;nnen, sogar ganze Verzeichnisstrukturen. Die enthaltenen Dateien werden au&szlig;erdem komprimiert. Der Anwender mu&szlig; die ZIP-Datei nach dem Download mit einem geeigneten Programm entpacken (&quot;Unzip&quot;-Programm). 
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;selfhtml.zip&quot;&gt;Dokument downloaden&lt;/a&gt;
+&lt;a href=&quot;http://ourworld.compuserve.com/homepages/muenz/selfhtml.zip&quot;&gt;Dokument downloaden&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die Datei, die zum Download angeboten wird. Wenn die Datei zum eigenen Projekt geh&ouml;rt, gelten die gleichen Regeln wei bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm"><b>Projektverweisen zu anderen HTML-Dateien</b></a>. Wenn Sie einen Verweis auf eine downloadbare Datei auf einem fremden Server setzen, m&uuml;ssen Sie die vollst&auml;ndige Internet-Adresse der Datei als Verweisziel angeben. Benutzen Sie dabei das korrekte Internet-Protokoll, also <b>http://</b>, <b>ftp://</b> - je nachdem, wie die &quot;offizielle&quot; Internet-Adresse der Datei lautet. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Hier wird das ZIP-Format (PKZIP) f&uuml;r downloadbare Dateien empfohlen. Es gibt andere Formate, die Sie ebenfalls verwenden k&ouml;nnen. Da es jedoch etliche Formate gibt, m&uuml;ssen Sie sich selbst schlau machen. F&uuml;r das ZIP-Format gibt es Software im WWW. Eine gute Adresse ist zum Beispiel die <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://search.shareware.com/code/engine/Power/"><b>Suche in www.shareware.com</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>: W&auml;hlen Sie in dem Suchformular die gew&uuml;nschte Betriebssystem-Plattform aus, geben Sie als Suchbegriffe <b>zip</b> und <b>unzip</b> an, und schalten Sie die Option <i>Check to search in filenames too</i> aus.
+<p>
+Wenn Sie Dateien anbieten, die nur f&uuml;r bestimmte Rechnerumgebungen gedacht sind, k&ouml;nnen Sie nat&uuml;rlich auch Formate verwenden, die speziell f&uuml;r diese Umgebungen gedacht sind. F&uuml;r DOS/Windows-Umgebungen k&ouml;nnen das beispielsweise selbstentpackende EXE-Archive sein, oder f&uuml;r Macintosh HQX-Archive. Wenn der WWW-Browser mit der Dateiendung nichts anfangen kann, sollte er den Anwender im Dialog entscheiden lassen, was er mit der Datei tun m&ouml;chte - dabei sollte auch die Download-M&ouml;glichkeit angeboten werden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweise auf beliebige Dateien im Internet</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfga.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen auf jede beliebige Datei im Internet einen Verweis setzen. Es kann sich um Audio-Dateien, Tabellenkalkulations-Dateien, CAD-Dateien, Video-Dateien, Grafikdateien, Textverarbeitungs-Dateien, Programmdateien, Datenbankdateien handeln - was Sie wollen. Sie k&ouml;nnen auch jede beliebige Datei in Ihr eigenes Web-Projekt mit auf den Internet-Server laden und einen Verweis darauf setzen. Aus Sicht von HTML ist das kein Problem. Das Problem besteht darin, was der Anwender mit den Dateien anfangen kann, bzw. wie er ihren Inhalt korrekt anzeigen oder abspielen lassen kann.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;billanz.xls&quot;&gt;Unsere Billanzen als Excel-Datei&lt;/a&gt;
+&lt;a href=&quot;http://www.netzwelt.com/selfhtml/ybreeze.mid&quot;&gt;Eine Midi-Datei im WWW&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die gew&uuml;nschte Datei. Wenn die Datei zum eigenen Projekt geh&ouml;rt, gelten die gleichen Regeln wei bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm"><b>Projektverweisen zu anderen HTML-Dateien</b></a>. Wenn Sie einen Verweis auf eine downloadbare Datei auf einem fremden Server setzen, m&uuml;ssen Sie die vollst&auml;ndige Internet-Adresse der Datei als Verweisziel angeben. Benutzen Sie dabei das korrekte Internet-Protokoll, also <b>http://</b>, <b>ftp://</b> - je nachdem, wie die &quot;offizielle&quot; Internet-Adresse der Datei lautet. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Dateitypen wie reine Textdateien kann der WWW-Browser selbst anzeigen.
+<p>
+Moderne WWW-Browser wie Netscape haben eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbbf.htm"><b>Plugin</b></a>-Schnittstelle. Wenn der Anwender ein Plugin zur Darstellung des Dateityps besitzt, kann der WWW-Browser die Datei mit Hilfe des Plugins selbst anzeigen. Wenn Sie beispielsweise einen Verweis auf eine Microsoft Powerpoint-Datei (Pr&auml;sentationsgrafik) setzen und der Anwender ein Plugin f&uuml;r Powerpoint-Dateien besitzt, kann er die Datei auf diese Weise anzeigen.
+<p>
+Wenn der Anwender ein Programm besitzt, das den Dateityp verarbeiten kann, und im WWW-Browser den Dateityp mit dem betreffenden Programm verkn&uuml;pft hat, kann der WWW-Browser das Programm starten, um die Datei auf diese Weise anzuzeigen. Das ist jedoch nur m&ouml;glich, wenn verwendetes Betriebssystem, WWW-Browser und das andere Programm den dynamischen Datenaustausch zwischen Programmen erlauben, unter Windows etwa mit OLE oder DDE, unter Macintosh etwa mit OpenDoc. WWW-Browser wie Netscape oder MS Internet Exlporer beherrschen die entsprechenden Techniken.
+<p>
+Wenn der WWW-Browser mit dem Dateityp gar nichts anfangen kann, sollte er dem Anwender einen Dialog anbieten, um zu entscheiden, was mit der Datei geschehen soll. Der Anwender sollte die Datei z.B. downloaden k&ouml;nnen.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcff.htm"><b>E-Mail-Verweise</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcfh.htm"><b>Verweise auf Dateien am eigenen Rechner(netz)</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

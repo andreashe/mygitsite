@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.document.forms[ ] / FORMULARNAME.elements[ ] / ELEMENTNAME</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.document.forms[ ] / FORMULARNAME.elements[ ] / ELEMENTNAME</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Hinter <b>FENSTERNAME.document.forms[ ] / FORMULARNAME.elements[ ] / ELEMENTNAME</b> verbergen sich mehrere Objekte. So gibt es Objekte f&uuml;r Eingabefelder, Auswahllisten, verschiedene Arten von Buttons. Alle diese Objekte werden jedoch im sogenannten &quot;elements-Array&quot; zusammengesfa&szlig;t. Alle diese Objekte werden auf die gleiche Art und Weise angesprochen. Sie unterscheiden sich lediglich in ihren Eigenschaften und Methoden. Bei den Eigenschaften und Methoden in diesem Abschnitt ist daher immer vermerkt, f&uuml;r welche Objekte sie gelten. Folgende Angaben werden dabei unterschieden:
+<p>
+<table cellpadding=3><tr>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+<td width=100 bgcolor=#FFCC99><b>Button</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+
+<p>
+Eine Objektinstanz des Formularelement-Objekts wird automatisch erzeugt, wenn der WWW-Browser mindestens ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a> mit mindestens einem Element in der HTML-Datei vorfindet. 
+
+
+<h4><font color=#6666CC>Schema 1 / Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.forms[#].elements[#].Eigenschaft/Methode();
+window.document.forms[0].elements[2].checked = true;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Schema 2 / Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.Eigenschaft/Methode()
+x = window.document.Anmeldung.Anschrift.text;
+window.document.Anmeldung.Geschlecht[1].checked = true;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Elemente in Formularen k&ouml;nnen Sie auf zwei Arten ansprechen:
+<ul>
+<li>mit einer Indexnummer (wie in Schema 1 / Beispiel 1)<br>
+Bei Verwendung von Indexnummern geben Sie <b>elements</b> an und dahinter in eckigen Klammern, das wievielte Element innerhalb des zuvor bestimmten Formulars innerhalb der HTML-Datei Sie meinen. Beachten Sie, da&szlig; der Z&auml;hler bei 0 beginnt, d.h. das erste Formularelement sprechen Sie mit <b>elements[0]</b> an, das zweite Formular mit <b>elements[1]</b> usw. Beim Z&auml;hlen gilt die Reihenfolge, in der die Formularelemente definiert sind. Bei mehreren zusammengeh&ouml;rigen Elementen wie Radio- oder Checkbuttons hat jedes ankreuzbare Element eine fortlaufende Indexnummer.
+<p>
+<li>mit dem Namen des Formularelements (wie in Schema 2 / Beispiel 2)<br>
+Dabei geben Sie den Namen an, der bei der Definition des Formularelements in der Zusatzangabe <b>name=</b> definiert worden ist. Wenn Sie Formularelemente mit Namen ansprechen, m&uuml;ssen Sie bei Elementen, die eine geschlossene Gruppe bilden, wie Radio- oder Checkbuttons oder auch Optionen einer Auswahlliste, eine Indexnummer hinter dem Elementnamen angeben (siehe unterstes der obigen Beispiele). Das ist auch logisch, da solche Elemente ja jeweils den gleichen Namen haben. Das erste Element einer solchen Gruppe sprechen Sie mit Elementname[0] an, das zweite mit Elementname[1] usw.
+</ul>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das Ansprechen &uuml;ber Indexnummern und Namen k&ouml;nnen Sie selbstverst&auml;ndlich auch mischen. So ist es beispielsweise m&ouml;glich, das Formular selbst &uuml;ber seine Indexnummer anzusprechen, einzelne Elemente dieses Formulars dagegen mit ihren Namen. Es dient lediglich der Einfachheit, da&szlig; hier entweder alles mit Indexnummern oder alles mit Namen angesprochen wird.
+<p>
+Zu den Fensternamen lesen Sie den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm#a1"><b>Allgemeines zur Verwendung des window-Objekts</b></a>. Bei Verwendung von Frames lesen Sie auch den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm#a1"><b>Allgemeines zur Verwendung des Frame-Objekts</b></a>. Das den Formularelementen &uuml;bergeordnete Formularobjekt wird im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcf.htm"><b>FENSTERNAME.document.forms[#] / FORMULARNAME</b></a> beschrieben.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].checked</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME[<tt>#</tt>].checked</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+Ermittelt bzw. bestimmt, ob bzw. da&szlig; ein Radio- oder Checkbutton aktiviert ist oder nicht. M&ouml;gliche Werte sind <b>true</b> bzw. <b>1</b> oder <b>false</b> bzw. <b>0</b>. Beispiel: <i>if(document.Favoritenformular.Alter[0].checked == true) alert(&quot;Sind Sie wirklich so jung?&quot;);</i>. In dem Beispiel ist <i>Alter</i> der gemeinsame Name einer Gruppe von Radiobuttons im HTML-Formular. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].defaultChecked</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME[<tt>#</tt>].defaultChecked</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+Ermittelt bzw. bestimmt, ob bzw. da&szlig; ein Radio- oder Checkbutton per Voreinstellung aktiviert ist oder nicht. M&ouml;gliche Werte sind <b>true</b> bzw. <b>1</b> oder <b>false</b> bzw. <b>0</b>. Beispiel: <i>document.forms[0].Zutaten[3].defaultChecked = true;</i>. In dem Beispiel ist <i>Zutaten</i> der gemeinsame Name einer Gruppe von Checkbuttons im HTML-Formular.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].defaultValue</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.defaultValue</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+</tr></table>
+Ermittelt oder bestimmt den voreingestellten Text eines Eingabefeldes. Beispiel: <i>document.Favoritenformular.Kommentar.defaultValue = &quot;Lassen Sie sich was einfallen!&quot;);</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements.length</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.elements.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+</tr></table>
+Anzahl der Elemente in dem entsprechenden Formular.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].name</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.name</font></b>
+<b><font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME[<tt>#</tt>].name</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+<td width=100 bgcolor=#FFCC99><b>Button</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+Der Name des Formularelements, wie er in HTML bei der Definition des Elements mit der Zusatzangabe <b>name=</b> zugewiesen wurde. Wenn Sie beispielsweise in einer HTML-Datei <i>&lt;form name=TestForm&gt;&lt;input name=Eingabefeld onFocus=&quot;window.status=TestForm.Eingabefeld.name; return true&quot;&gt;&lt;/form&gt;</i> notieren, wird dem Anwender w&auml;hrend der Eingabe in dem Feld der Name des Elements angezeigt.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options[<tt>#</tt>].index</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options[<tt>#</tt>].index</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt den Index einer Auswahlm&ouml;glichkeit. Beispielsweise wird bei <i>var x = document.forms[0].favorit.options[3].index</i> in der Variablen <i>x</i> der Wert 3 gespeichert, weil dies bei <i>...options[3]</i> der Index ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options.length</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt die Anzahl der Auswahlm&ouml;glichkeiten in einer Auswahlliste.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options[<tt>#</tt>].defaultSelected</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options[<tt>#</tt>].defaultSelected</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt bzw. bestimmt, ob bzw. da&szlig; eine Auswahlm&ouml;glichkeit in einer Auswahlliste per Voreinstellung aktiviert ist oder nicht. M&ouml;gliche Werte sind <b>true</b> bzw. <b>1</b> oder <b>false</b> bzw. <b>0</b>. Beispiel: <i>document.Musikform.Favoriten.options[2].defaultSelected = true;</i>. In dem Beispiel ist <i>Favoriten</i> der Name einer Auswahlliste mit Musikern.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options.selectedIndex</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options.selectedIndex</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt oder bestimmt, welche Auswahlm&ouml;glichkeit in einer Auswahlliste aktiviert ist. Beispiel: <i>document.Musikform.Favoriten.options.selectedIndex = 3;</i>. In dem Beispiel ist <i>Favoriten</i> der Name einer Auswahlliste mit Musikern.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options[<tt>#</tt>].selected</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options[<tt>#</tt>].selected</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt oder bestimmt, welche Auswahlm&ouml;glichkeit in einer Auswahlliste aktiviert ist. M&ouml;gliche Werte sind <b>true</b> bzw. <b>1</b> oder <b>false</b> bzw. <b>0</b>. Beispiel: <i>document.Musikform.Favoriten.options[3].selected = true;</i>. In dem Beispiel ist <i>Favoriten</i> der Name einer Auswahlliste mit Musikern. Mit <i>options[3].selected = true</i> wird die vierte Auswahlm&ouml;glichkeit ausgew&auml;hlt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].options[<tt>#</tt>].text</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.options[<tt>#</tt>].text</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Ermittelt oder bestimmt den Text einer Auswahlm&ouml;glichkeit in einer Auswahlliste. Beispiel: <i>alert(document.Musikform.Favoriten.options[3].text)</i>. Das Beispiel gibt den Text zur vierten Auswahlm&ouml;glichkeit in der Auswahlliste <i>Favoriten</i> innerhalb des Formulars <i>Musikform</i> am Bildschirm aus.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].value</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.value</font></b>
+<b><font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME[<tt>#</tt>].value</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+<td width=100 bgcolor=#FFCC99><b>Button</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+Wert, den der Anwender in einem Formularelement eingegeben bzw. diesem zugewiesen hat. Wenn Sie beispielsweise in einer HTML-Datei <i>&lt;form name=TestForm&gt;&lt;input name=Eingabefeld&gt;&lt;input type=submit name=OK value=&quot;Anzeigen&quot; onClick=&quot;alert(document.TestForm.Eingabefeld.value)&quot;&gt;&lt;/form&gt;</i> notieren, kann der Anwender in einem Eingabefeld etwas eingeben. Wenn er anschlie&szlig;end auf den Button &quot;Anzeigen&quot; klickt, wird der eingegebene Text in einem Meldungsfenster am Bildschirm angezeigt.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].blur()</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.blur()</font></b>
+<table cellpadding=3><tr>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Die Methode entfernt den Cursor bzw. den Focus von dem betreffenden Feld bzw. der Auswahlliste. Wenn Sie beispielsweise ein Formular mit Namen <i>TesteDeinWissen</i> mit einem Eingabefeld <i>WannStarbGoethe</i> haben, dann k&ouml;nnen Sie z.B. mit  <i>CountDown=window.setTimeout("document.TesteDeinWissen.WannStarbGoethe.blur()",10000);</i></i> den Cursor nach 10 Sekunden automatisch aus dem Feld entfernen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].click()</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.click()</font></b>
+<b><font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME[<tt>#</tt>].click()</font></b>
+<table cellpadding=3><tr>
+<td width=100 bgcolor=#FFCC99><b>Button</b></td>
+<td width=100 bgcolor=#FFCC99><b>Gruppen-Button[#]</b></td>
+</tr></table>
+Die Methode erzeugt einen automatischen Klick auf den betreffenden Button. Wenn Sie beispielsweise ein Formular mit Namen <i>TesteDeinWissen</i> haben, bei dem der Submit-Button das 9. Element ist, dann k&ouml;nnen Sie z.B. mit  <i>CountDown=window.setTimeout("document.TesteDeinWissen.elements[8].click()",60000);</i> nach einer Minute ein automatisches Abschicken des Formulars erzwingen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].focus()</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.focus()</font></b>
+<table cellpadding=3><tr>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+<td width=100 bgcolor=#FFCC99><b>Auswahlliste</b></td>
+</tr></table>
+Die Methode setzt den Cursor bzw. den Focus auf das betreffende Feld bzw. die Auswahlliste. Wenn Sie beispielsweise ein Formular mit Namen <i>TesteDeinWissen</i> mit einem Eingabefeld <i>WannStarbGoethe</i> haben, dann k&ouml;nnen Sie z.B. mit  <i>document.TesteDeinWissen.WannStarbGoethe.focus();</i> den Cursor in dieses Feld setzen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.forms[<tt>#</tt>].elements[<tt>#</tt>].select()</font><br>
+<font color=#6666CC>FENSTERNAME.document.FORMULARNAME.ELEMENTNAME.select()</font></b>
+<table cellpadding=3><tr>
+<td width=100 bgcolor=#FFCC99><b>Eingabefeld</b></td>
+</tr></table>
+Die Methode selektiert den gesamten in dem Feld enthaltenen Text. Wenn Sie beispielsweise ein Formular mit Namen <i>TesteDeinWissen</i> mit einem Eingabefeld <i>WannStarbGoethe</i> mit dem Default-Text <i>1996</i> haben, dann k&ouml;nnen Sie z.B. mit <i>document.TesteDeinWissen.WannStarbGoethe.select();</i> den Default-Text selektieren, um dem Anwender zu signalisieren, da&szlig; er den Default-Text mit der richtigen Jahreszahl &uuml;berschreiben soll.
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcf.htm"><b>FENSTERNAME.document.forms[ ] / FORMULARNAME</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdch.htm"><b>FENSTERNAME.document.images[ ] / BILDNAME</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

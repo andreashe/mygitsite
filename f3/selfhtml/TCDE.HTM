@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>SELFHTML: Aufz&auml;hlungslisten (Bullet-Listen)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Aufz&auml;hlungslisten (Bullet-Listen)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Aufz&auml;hlungslisten definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Bullet-Typ festlegen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Liste kompakt darstellen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Men&uuml;- und Verzeichnis-Listen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Aufz&auml;hlungslisten definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdea.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Aufz&auml;hlungslisten sind z.B. von Bedeutung, um Produkteigenschaften oder Argumente f&uuml;r eine These &uuml;bersichtlich darzustellen. Bei einer numerierten Liste werden alle Listeneintr&auml;ge mit einem Aufz&auml;hlungszeichen (Bullet) versehen. 
+
+<a name="iul"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<a name="iulli"><table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ul&gt;
+&lt;li&gt;Listeneintrag&lt;/li&gt;
+&lt;li&gt;anderer Listeneintrag&lt;/li&gt;
+&lt;li&gt;letzter Listeneintrag&lt;/li&gt;
+&lt;/ul&gt;
+</pre></td></tr></table></a><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;ul&gt;</b> leitet eine Aufz&auml;hlungsliste ein (<i>ul&nbsp;=&nbsp;unordered list&nbsp;=&nbsp;unsortierte Liste</i>). Mit <b>&lt;li&gt;</b> beginnt ein neuer Punkt innerhalb der Liste (<i>li&nbsp;=&nbsp;list item&nbsp;=&nbsp;Listeneintrag</i>). Das End-Tag <b>&lt;/li&gt;</b> am Ende eines Listeneintrags ist nicht zwingend erforderlich, im Sinne SGML-konformer Kodierung jedoch sauberer. <b>&lt;/ul&gt;</b> beendet die Liste. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wie das Bullet dargestellt wird, bestimmt der WWW-Browser. Mosaic verwendet 
+z.B. ein eigenes grafisches Bullet-Symbol. Netscape verwendet Bullet-Symbole, die im Zeichensatz der vom Anwender eingestellten Schriftart vorkommen.
+<p>
+Das Verschachteln von Aufz&auml;hlungslisten ist ebenfalls m&ouml;glich.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Bullet-Typ festlegen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"></a><br>
+<a href="tcdea.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie können für Aufzählungslisten bestimmen, wie das Aufzählungszeichen (Bullet) aussehen soll. Ob und wie der Bullet-Typ am Bildschirm angezeigt wird, h&auml;ngt jedoch letztlich vom Zeichensatz der Schriftart ab, die der Anwender eingestellt hat.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ul type=circle&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+  
+&lt;ul type=square&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+  
+&lt;ul type=disc&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;ul type=circle&gt;</b> bestimmen Sie ein rundes 
+Bullet (<i>circle = Kreis</i>).<br>
+Mit <b>&lt;ul type=square&gt;</b> bestimmen Sie ein eckiges 
+Bullet  (<i>sqare = Rechteck</i>).<br>
+Mit <b>&lt;ul type=disc&gt;</b> bestimmen Sie ein Dateisymbol 
+als Bullet  (<i>disc = Datentr&auml;ger wie Disketten oder Festplatten</i>).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Liste kompakt darstellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdea.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen angeben, da&szlig; die Liste in einer kompakteren Darstellungsform als normaler Text angezeigt wird.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ul compact&gt;
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;/ul&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Zusatzangabe <b>compact</b> innerhalb des einleitenden Tags von <b>&lt;ul&gt;</b> k&ouml;nnen Sie die kompaktere Darstellung bestimmen. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+WWW-Browser ignorieren diese Angabe in der Regel noch. 
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Men&uuml;- und Verzeichnis-Listen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdea.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Men&uuml;- und Verzeichnis-Listen werden in der Praxis kaum verwendet, sind aber HTML-Standard seit langem verankert. Sie werden von den heutigen Browsern entweder nicht mehr oder nicht anders dargestellt als gew&ouml;hnliche Aufz&auml;hlungslisten. Dennoch k&ouml;nnten diese Befehle f&uuml;r k&uuml;nftige Anwendungsbereiche von HTML wieder an Bedeutung gewinnen.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;menu&gt;
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;/menu&gt;
+
+&lt;dir&gt;
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;/dir&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;menu&gt;</b> leitet eine Men&uuml;-Liste ein, <b>&lt;/menu&gt;</b> beendet die Men&uuml;-Liste. Eine Verzeichnisliste leiten Sie mit <b>&lt;dir&gt;</b> ein und beenden sie durch <b>&lt;/dir&gt;</b> (<i>dir = directory = Verzeichnis</i>). Mit <b>&lt;li&gt;</b> beginnt in beiden Listentypen ein neuer Punkt innerhalb der Liste (<i>li&nbsp;=&nbsp;list item&nbsp;=&nbsp;Listeneintrag</i>). Das End-Tag <b>&lt;/li&gt;</b> am Ende eines Listeneintrags ist nicht zwingend erforderlich, im Sinne SGML-konformer Kodierung jedoch sauberer.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Men&uuml;-Listen d&uuml;rfen - im Gegensatz zu Aufz&auml;hlungslisten - keine absatzerzeugenden Elemente im Men&uuml;text enthalten. Sie sind nur f&uuml;r zeilenartige Listen gedacht. Verzeichnis-Listen d&uuml;rfen dagegen mehrzeilige Listeneintr&auml;ge haben.
+<p>
+Mit der Angabe <b>compact</b> k&ouml;nnen Sie eine kompaktere Darstellung der Men&uuml;- oder Verzeichnis-Liste erzwingen. WWW-Browser ignorieren diese Angabe jedoch in der Regel noch.<br>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdd.htm"><b>Numerierte Listen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdf.htm"><b>Definitionslisten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

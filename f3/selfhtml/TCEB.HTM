@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>SELFHTML: Rahmendicke, Gitternetzlinien, Randabstand</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Rahmendicke, Gitternetzlinien, Randabstand</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Dicke des Au&szlig;enrahmens</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Dicke der Gitternetzlinien</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Randabstand von Zelleninhalt zum Zellenrand</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Kopf, K&ouml;rper, Fu&szlig; und Regeln f&uuml;r Gitternetzlinien</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Regeln f&uuml;r Tabellenrahmen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Dicke des Au&szlig;enrahmens</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceba.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen die Dicke des Au&szlig;enrahmens einer Tabelle in Pixeln bestimmen.
+
+<a name="itable_border_"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border=8&gt;
+   &lt;!--hier folgt der Tabelleninhalt--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Damit die Tabelle &uuml;berhaupt einen Rahmen erh&auml;lt, m&uuml;ssen Sie den Zusatz <b>border</b> mit angeben. Mit <b>border=</b>&nbsp;[Pixel] bestimmen Sie die Dicke des Au&szlig;enrahmens. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Dicke der Gitternetzlinien</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceba.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen die Dicke der Gitternetzlinien zwischen den Zeilen und Spalten einer Tabelle in Pixeln bestimmen.
+
+<a name="itable_cellspacing"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border=8 cellspacing=10&gt;
+   &lt;!--hier folgt der Tabelleninhalt--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Damit die Tabelle &uuml;berhaupt Gitternetzlinien erh&auml;lt, m&uuml;ssen Sie den Zusatz <b>border</b> bzw. <b>border=</b> (Au&szlig;enrahmendicke) angeben. Mit  <b>cellspacing=</b>&nbsp;[Pixel] bestimmen Sie die Dicke der Gitternetzlinien innerhalb der Tabelle (<i>cellspacing = Zellenbema&szlig;ung</i>).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Randabstand von Zelleninhalt zum Zellenrand</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceba.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+In vielen F&auml;llen sieht ein gewisser Abstand der Zellendaten zum Zellenrand besser aus. Sie k&ouml;nnen den Randabstand in Pixeln bestimmen.
+
+<a name="itable_cellpading"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border=8 cellpadding=12&gt;
+   &lt;!--hier folgt der Tabelleninhalt--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit  <b>cellpadding=</b>&nbsp;[Pixel] bestimmen Sie den Randabstand zwischen Zellenrand und Zelleninhalt (<i>cellpadding = Zelleninhaltbema&szlig;ung</i>). Dies gilt sowohl f&uuml;r Tabellen mit Gitternetzlinien als auch f&uuml;r blinde Tabelle (ohne Gitternetzlinien).
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> <img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Kopf, K&ouml;rper, Fu&szlig; und Regeln f&uuml;r Gitternetzlinien</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceba.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der MS Internet Explorer interpretiert eine F&uuml;lle zus&auml;tzlicher Angaben zur Gestaltung einer Tabelle, die jedoch nicht im HTML-Standard 3.2 festgeschrieben sind. Dazu geh&ouml;rt auch die Aufteilung in einen Tabellenkopf, einen Tabellenk&ouml;rper und einen Tabellenfu&szlig;. 
+
+
+<a name="itable_cellpading"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border rules=basic&gt;
+   &lt;thead&gt;
+     &lt;!--Tabellenzellen--&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+     &lt;!--Tabellenzellen--&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+     &lt;!--Tabellenzellen--&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Voraussetzung f&uuml;r all diese Angaben ist die Angabe <b>border</b> im einleitenden <b>&lt;table&gt;</b>-Tag.
+<p>
+Mit  <b>rules=</b> k&ouml;nnen Sie im einleitenten <b>&lt;table&gt;</b>-Tag  Regeln f&uuml;r die Gitternetzlinien bestimmen (<i>rules = Regeln</i>). Die Regel <b>rules=basic</b> im obigen Beispiel bedeutet: es werden Linien zwischen dem Tabellenkopf, dem Tabellenk&ouml;rper und Tabellenfu&szlig; gezogen, nicht jedoch zwischen den &uuml;brigen Tabellenzeilen. Der Tabellenrahmen wird angezeigt.
+<p>
+Weitere Angaben sind dabei m&ouml;glich:<br>
+Mit <b>rules=none</b> (<i>none = keine</i>) werden &uuml;berhaupt keine Linien gezogen, der Tabellenrahmen wird jedoch angezeigt.<br>
+Mit <b>rules=rows</b> (<i>rows = Reihen</i>) werden Linien zwischen allen Tabellenzeilen gezogen, nicht jedoch zwischen den Spalten der Tabelle.<br>
+Mit <b>rules=cols</b> (<i>cols = cloumns = Spalten</i>) werden Linien zwischen allen Tabellenspalten gezogen, nicht jedoch zwischen den Zeilen der Tabelle.<br>
+Mit <b>rules=all</b> (<i>all = alle</i>) werden Linien zwischen allen Tabellenzellen gezogen (identisch mit der Angabe <b>border</b>).
+<p>
+Den Tabellenkopf leiten Sie mit <b>&lt;thead&gt;</b> ein (<i>thead = table head = Tabellenkopf</i>). Daran anschlie&szlig;end k&ouml;nnen Sie eine oder mehrere Zeilen der Tabelle notieren, die zum Kopfbereich geh&ouml;ren sollen. Mit <b>&lt;/thead&gt;</b> schlie&szlig;en Sie die den Tabellenkopf ab.<br>
+Den Tabellenk&ouml;rper leiten Sie mit <b>&lt;tbody&gt;</b> ein (<i>tbody = table body = Tabellenk&ouml;rper</i>). Daran anschlie&szlig;end notieren Sie den eigentlichen Datenbereich der Tabelle. Mit <b>&lt;/tbody&gt;</b> schlie&szlig;en Sie die den Tabellenk&ouml;rper ab.<br>
+Den Tabellenfu&szlig; leiten Sie mit <b>&lt;tfoot&gt;</b> ein (<i>tfoot = table foot = Tabellenfu&szlig;</i>). Daran anschlie&szlig;end k&ouml;nnen Sie eine oder mehrere Zeilen der Tabelle notieren, die zum Fu&szlig;bereich geh&ouml;ren sollen. Mit <b>&lt;/tfoot&gt;</b> schlie&szlig;en Sie die den Tabellenfu&szlig; ab.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC> <img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Regeln für Tabellenrahmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceba.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der MS Internet Explorer interpretiert zusätzliche Angaben zum Aussehen des Rahmens einer Tabelle. 
+
+
+<a name="itable_cellpading"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border frame=box&gt;
+     &lt;!--Inhalt der Tabelle--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Voraussetzung f&uuml;r all diese Angaben ist die Angabe <b>border</b> im einleitenden <b>&lt;table&gt;</b>-Tag.
+<p>
+Mit der Angabe <b>frame=</b> im einleitenden <b>&lt;table&gt;</b>-Tag können Sie bestimmen, an welchen Seiten der Tabellenrahmen gezogen werden soll (<i>frame = Rahmen</i>).
+<p>
+Mit der Angabe <b>frame=box</b> (<i>box  = Rechteck</i>) - so wie im obigen Beispiel - erreichen Sie, daß der Tabellenrahmen oben, links, rechts und unten sichtbar dargestellt wird (die Angabe ist identisch mit dem, was die Angabe <b>border</b> bewirkt).<br>
+Weitere Angaben sind dabei m&ouml;glich:<br>
+Mit <b>frame=void</b> (<i>void = nichts</i>) wird &uuml;berhaupt keine Tabellenrahmen angezeigt. Wenn Sie border angeben, werden jedoch die Gitternetzlinien der Tabelle sichtbar angezeigt. Die Tabelle sieht dann also aus wie ein an allen Seiten offenes Gitter.<br>
+Mit <b>frame=above</b> (<i>above = oberhalb</i>) wird nur am oberen Rand der Tabelle eine Rahmenlinie angezeigt.<br>
+Mit <b>frame=below</b> (<i>below = unterhalb</i>) wird nur am unteren Rand der Tabelle eine Rahmenlinie angezeigt.<br>
+Mit <b>frame=hsides</b> (<i>hsides = horizontal sides = horizontale Seiten</i>) wird nur am oberen und am unteren Rand der Tabelle eine Rahmenlinie angezeigt.<br>
+Mit <b>frame=vsides</b> (<i>vsides = vertical sides = vertikale Seiten</i>) wird nur am linken und am rechten Rand der Tabelle eine Rahmenlinie angezeigt.<br>
+Mit <b>frame=lhs</b> (<i>lhs = left hand side = links</i>) wird nur am linken Rand der Tabelle eine Rahmenlinie angezeigt.<br>
+Mit <b>frame=rhs</b> (<i>rhs = right hand side = rechts</i>) wird nur am rechten Rand der Tabelle eine Rahmenlinie angezeigt.
+<p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcea.htm"><b>Aufbau einer Tabelle</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcec.htm"><b>H&ouml;he und Breite erzwingen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

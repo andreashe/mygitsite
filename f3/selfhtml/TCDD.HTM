@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>SELFHTML: Numerierte Listen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Numerierte Listen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Numerierte Listen definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Listen alphabetisch numerieren</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Listen r&ouml;misch numerieren</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Numerierung beeinflussen</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Liste kompakt darstellen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Numerierte Listen definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdda.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Numerierte Listen sind z.B. von Bedeutung, um nacheinander auszuf&uuml;hrende Aktionen oder Rangfolgen &uuml;bersichtlich darzustellen. Bei einer numerierten Liste werden alle Listeneintr&auml;ge automatisch durchnumeriert. 
+
+<a name="iol"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<a name="iolli"><table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ol&gt;
+&lt;li&gt;Listeneintrag, bekommt &quot;1.&quot; vorangestellt&lt;/li&gt;
+&lt;li&gt;Listeneintrag, bekommt &quot;2.&quot; vorangestellt&lt;/li&gt;
+&lt;li&gt;Listeneintrag, bekommt &quot;3.&quot; vorangestellt&lt;/li&gt;
+&lt;/ol&gt;
+</pre></td></tr></table></a><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;ol&gt;</b> leitet eine numerierte Liste ein (<i>ol&nbsp;=&nbsp;ordered list&nbsp;=&nbsp;numerierte Liste</i>). Mit <b>&lt;li&gt;</b> beginnt ein neuer Punkt innerhalb der Liste (<i>li&nbsp;=&nbsp;list item&nbsp;=&nbsp;Listeneintrag</i>). Das End-Tag <b>&lt;/li&gt;</b> am Ende eines Listeneintrags ist nicht zwingend erforderlich, im Sinne SGML-konformer Kodierung jedoch sauberer. <b>&lt;/ol&gt;</b> beendet die Liste. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Verschachteln von numerierten Listen bewirkt keine Gesamtnumerierung. Automatische Numerierungshierarchien wie 1., 1.1., 1.1.1., sind in HTML (noch) nicht m&ouml;glich.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Listen alphabetisch numerieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdda.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen Listen alphabetisch numerieren. Die Listen werden dabei nicht mit 1., 2., 3. usw. durchnumieriert, sondern mit A., B., C. (oder auch a., b., c.) usw.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ol type=A&gt;
+&lt;li&gt;Listeneintrag, bekommt ein &quot;A.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;B.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;C.&quot; vorangestellt
+&lt;/ol&gt;
+
+&lt;ol type=a&gt;
+&lt;li&gt;Listeneintrag, bekommt ein &quot;a.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;b.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;c.&quot; vorangestellt
+&lt;/ol&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;ol type=A&gt;</b> werden die Listeneintr&auml;ge mit 
+A., B., C. usw. numeriert.<br>
+Mit <b>&lt;ol type=a&gt;</b> werden die Listeneintr&auml;ge mit 
+a., b., c. usw. numeriert.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Listen r&ouml;misch numerieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdda.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen Listen r&ouml;misch numerieren. Die Listen werden dabei nicht mit 1., 2., 3. usw. durchnumieriert, sondern mit I., II., III., IV. (oder auch i., ii., iii., iv.) usw.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ol type=I&gt;
+&lt;li&gt;Listeneintrag, bekommt ein &quot;I.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;II.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;III.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;IV.&quot; vorangestellt
+&lt;/ol&gt;
+  
+&lt;ol type=i&gt;
+&lt;li&gt;Listeneintrag, bekommt ein &quot;i.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;ii.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;iii.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt ein &quot;iv.&quot; vorangestellt
+&lt;/ol&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;ol type=I&gt;</b> werden die Listeneintr&auml;ge mit 
+I., II., III., IV. usw. numeriert.<br>
+Mit <b>&lt;ol type=i&gt;</b> werden die Listeneintr&auml;ge mit 
+i., ii., iii., iv. usw. numeriert.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Numerierung beeinflussen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdda.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen die Listen Startnummer einer numerierten Liste frei festsetzen. Die Liste beginnt dann z.B. nicht mit 1, sondern mit 7, oder nicht mit A., sondern mit G. Ferner k&ouml;nnen Sie innerhalb der numerierten Liste bei jedem Listeneintrag eine neue  Startnummer festlegen.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ol start=7&gt;
+&lt;li&gt;Listeneintrag, bekommt &quot;7.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt &quot;8.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt &quot;9.&quot; vorangestellt
+&lt;li value=10000&gt;Listeneintrag, bekommt &quot;10000.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt &quot;10001.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt &quot;10002.&quot; vorangestellt
+&lt;li&gt;Listeneintrag, bekommt &quot;10003.&quot; vorangestellt
+&lt;/ol&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Zusatzangabe <b>start=</b> innerhalb des einleitenden Tags von <b>&lt;ol&gt;</b> k&ouml;nnen Sie einen beliebigen Startwert setzen, z.B. <b>&lt;ol start=7&gt;</b>. Die Numerierung beginnt dann bei 7. 
+<p>
+Mit der Zusatzangabe <b>value=</b> innerhalb des Tags von <b>&lt;li&gt;</b> in einer numerierten Liste k&ouml;nnen Sie den Startwert beliebig neu setzen, z.B. auf <b>&lt;ol value=15&gt;</b>. Die Numerierung f&auml;hrt dann bei 15 fort. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Liste kompakt darstellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdda.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen angeben, daß die Liste in einer kompakteren Darstellungsform als normaler Text angezeigt wird.
+
+<a name="ioltype"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;ol compact&gt;
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;li&gt;Listeneintrag
+&lt;/ol&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Zusatzangabe <b>compact</b> innerhalb des einleitenden Tags von <b>&lt;ol&gt;</b> k&ouml;nnen Sie die kompaktere Darstellung bestimmen. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+WWW-Browser ignorieren diese Angabe in der Regel noch. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdc.htm"><b>Zeilenumbruchkontrolle</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcde.htm"><b>Aufz&auml;hlungslisten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

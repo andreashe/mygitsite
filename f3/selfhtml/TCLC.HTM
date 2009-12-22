@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>SELFHTML: Layer &uuml;bereinander anordnen und kontrollieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> <font color=#6666CC>Layer &uuml;bereinander anordnen und kontrollieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Angaben zur Layer-&Uuml;berlappung mit Hilfe von Layer-Namen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Angaben zur Layer-&Uuml;berlappung mit Hilfe von Nummern</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Layer verstecken und anzeigen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666cc>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Angaben zur Layer-&Uuml;berlappung mit Hilfe von Layer-Namen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclca.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie mehrere Layer in einer HTML-Datei definieren, deren Anzeigebereiche sich &uuml;berlappen, werden die Layer normalerweise in der Reihenfolge &uuml;bereinander angezeigt, in der sie definiert werden. Sie k&ouml;nnen jedoch die Reihenfolge &auml;ndern und angeben, welcher andere Layer unmittelbar &uuml;ber oder unter dem aktuellen Layer liegen soll. Auf diese Weise k&ouml;nnen Sie das &Uuml;berdecken von Layern kontrollieren. Voraussetzung ist, da&szlig; Sie f&uuml;r jeden Layer einen Namen vergeben.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Erster&quot; left=100 top=100&gt;
+&lt;img src=&quot;datei1.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+&lt;layer name=&quot;Zweiter&quot; left=150 top=150 above=&quot;Erster&quot;&gt;
+&lt;img src=&quot;datei2.gif&quot; alt=&quot;Ein anderes Bild&quot;&gt;
+&lt;/layer&gt;
+&lt;layer name=&quot;Dritter&quot; left=200 top=200 below=&quot;Erster&quot;&gt;
+&lt;img src=&quot;datei3.gif&quot; alt=&quot;Ein ganz anderes Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>above=</b> im einleitenden <b>&lt;layer&gt;</b>- oder <b>&lt;ilayer&gt;</b>-Tag k&ouml;nnen Sie bestimmen, da&szlig; ein zuvor definierter, benannter Layer unmittelbar &uuml;ber dem aktuellen Layer liegt (<i>avove = oberhalb</i>). Das hei&szlig;t, der aktuelle Layer soll bei &Uuml;berschneidung von dem genannten Layer &uuml;berdeckt werden.<br>
+Mit der Angabe <b>below=</b> im einleitenden <b>&lt;layer&gt;</b>- oder <b>&lt;ilayer&gt;</b>-Tag k&ouml;nnen Sie bestimmen, da&szlig; ein zuvor definierter, benannter Layer unmittelbar unter dem aktuellen Layer liegt (<i>below = unterhalb</i>). Das hei&szlig;t, der aktuelle Layer soll bei &Uuml;berschneidung den genannten Layer &uuml;berdecken.<br>
+Die Layernamen hinter <b>above=</b> und <b>below=</b> sollten in Anf&uuml;hrungszeichen stehen.
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Bei <b>above=</b> und <b>below=</b> d&uuml;rfen Sie nur Namen von Layern angeben, die in der Datei bereits zuvor definiert wurden. Die Angabe von Layern, die erst nach dem aktuellen Layer definiert werden, kann zu Anzeigefehlern f&uuml;hren. Im ersten definierten Layer einer HTML-Datei sollten deshalb keine Angaben zu <b>above=</b> oder <b>below=</b> vorkommen.
+<p>
+Es ist nur je eine Angabe f&uuml;r <b>above=</b> und <b>below=</b> bei der Definition eines Layers erlaubt. Denn mit diesen Angaben legen Sie immer nur fest, welcher andere Layer direkt unter oder &uuml;ber dem aktuellen Layer angezeigt werden soll.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Angaben zur Layer-&Uuml;berlappung mit Hilfe von Nummern</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclcb.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie mehrere Layer in einer HTML-Datei definieren, deren Anzeigebereiche sich &uuml;berlappen, werden die Layer normalerweise in der Reihenfolge &uuml;bereinander angezeigt, in der sie definiert werden. Sie k&ouml;nnen die Reihenfolge &auml;ndern, indem Sie f&uuml;r die einzelnen Layer Nummern vergeben. Layer mit h&ouml;herer Nummer &uuml;berdecken Layer mit niedrigerer Nummer.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Erster&quot; left=100 top=100 z-index=2&gt;
+&lt;img src=&quot;datei1.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+&lt;layer name=&quot;Zweiter&quot; left=150 top=150 z-index=1&gt;
+&lt;img src=&quot;datei2.gif&quot; alt=&quot;Ein anderes Bild&quot;&gt;
+&lt;/layer&gt;
+&lt;layer name=&quot;Dritter&quot; left=200 top=200 z-index=3&gt;
+&lt;img src=&quot;datei3.gif&quot; alt=&quot;Ein ganz anderes Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>z-index=</b> im einleitenden <b>&lt;layer&gt;</b>- oder <b>&lt;ilayer&gt;</b>-Tag bestimmen Sie die Reihenfolge der Layer bei &Uuml;berlappungen (<i>z-index = Reihenfolge</i>). Geben Sie bei jedem definierten Layer <b>z-index=</b> und dahinter eine Nummer an. Der Layer mit der h&ouml;chsten Nummer &uuml;berdeckt alle anderen. Der Layer mit der niedrigsten Nummer wird von allen anderen &uuml;berdeckt.
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Bei den Angaben zu <b>z-index=</b> sind auch negative Werte erlaubt. Dadurch bewirken Sie bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a5"><b>verschachtelten Layern</b></a>, da&szlig; Layer, die innerhalb eines anderen Layers definiert werden, von ihren &quot;Eltern&quot;-Layern &uuml;berdeckt werden. Bei positiven Zahlen ist dies umgekehrt. Negative Werte waren jedoch mit Netscape 4.0 beta 1 noch nicht realisierbar.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Layer verstecken und anzeigen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclcc.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen bei der Definition von Layern festlegen, ob diese zun&auml;chst angezeigt werden sollen oder nicht. Das ist von Bedeutung, wenn Sie die Anzeige der Layer mit Hilfe von JavaScript dynamisch ein-/ausschalten wollen.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Erster&quot; left=100 top=100 visibility=show&gt;
+&lt;img src=&quot;datei1.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+&lt;layer name=&quot;Zweiter&quot; left=120 top=200 visibility=hide&gt;
+&lt;img src=&quot;datei2.gif&quot; alt=&quot;Ein anderes Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>visibility=</b> im einleitenden <b>&lt;layer&gt;</b>- oder <b>&lt;ilayer&gt;</b>-Tag k&ouml;nnen Sie die Anzeige des Layers explizit erzwingen oder verhindern (<i>visibility = Sichtbarkeit</i>).<br>
+Mit <b>visibility=show</b> legen Sie fest, da&szlig; der Layer in jedem Fall angezeigt wird (<i>show = zeigen</i>).<br>
+Mit <b>visibility=hide</b> legen Sie fest, da&szlig; der Layer nicht angezeigt, also versteckt wird (<i>hide = verstecken</i>).<br>
+Mit <b>visibility=inherit</b> legen Sie fest, da&szlig; der Layer nur dann angezeigt wird, wenn sein &quot;Eltern&quot;-Element ebenfalls angezeigt wird (<i>inherit = erben</i>). Diese Angabe ist nur bei inneren Layern in <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a5"><b>verschachtelten Layern</b></a> von Bedeutung.<br>
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tclb.htm"><b>Hintergrundfarbe / Hintergrundbild f&uuml;r Layer</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcm.htm"><b>Guter HTML-Stil</b></a></td>
+</tr>
+</table>
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

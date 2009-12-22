@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>SELFHTML: Projektverweise zu anderen HTML-Dateien</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Projektverweise zu anderen HTML-Dateien</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Verweis zu Datei im gleichen Verzeichnis</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweis zu Datei in anderem Verzeichnis (relativ)</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Verweis zu Anker innerhalb einer anderen Datei</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Datei im gleichen Verzeichnis</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfca.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei kleineren Projekten, zum Beispiel bei pers&ouml;nlichen Homepages, befinden sich alle Projektdateien zumeist im gleichen Verzeichnis, auch nach dem Upload auf einen WWW-Server. In diesem Fall gen&uuml;gt bei Verweisen zwischen den Dateien einfach die Angabe der anderen Datei.
+
+<a name="ia_href"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;datei.htm&quot;&gt;Verweistext&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist der Dateiname der anderen HTML-Datei.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei der Angabe des Dateinamens m&uuml;ssen Sie unbedingt zwischen Gro&szlig;- und Kleinschreibung unterscheiden. Einige Systeme, allen voran MS Windows, sind bis heute entweder &uuml;berhaupt nicht in der Lage, dies zu unterscheiden (bis Windows 3.11), oder sie unterscheiden es, aber nicht konsequent genug (Windows 95). Notieren Sie die Dateinamen in Ihren dennoch Verweisen exakt so, wie Sie die Dateinamen geschrieben haben wollen. Evtl. m&uuml;ssen Sie die Dateien nach dem Upload auf einen WWW-Server (h&auml;ufig Unix-Rechner, die penibel zwischen Gro&szlig;- und Kleinschreibung unterscheiden) alle Dateien noch mal mit FTP-Befehlen umbenennen und dabei Gro&szlig;- und Kleinschreibung so verwenden, wie es in Ihren Verweisen steht.
+<p>
+Legen Sie bereits beim lokalen Erstellen von HTML-Dateien, die sp&auml;ter mal im WWW in einem gemeinsamen Verzeichnis stehen sollen, alle Dateien in einem gemeinsamen Verzeichnis ab. Nur so funktionieren die Verweise zwischen den Dateien.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Datei in anderem Verzeichnis (relativ)</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei gr&ouml;&szlig;eren Projekten ist es sinnvoll, die Dateien auf mehrere Verzeichnisse zu verteilen. Dies dient der besseren &Uuml;bersicht. Damit die Projekte auf andere Rechner mit anderen Verzeichnisstrukturen &uuml;bertragbar bleiben, sollten Sie aber bei Verweisen zwischen Dateien, die zu Dateien in anderen Verzeichnissen f&uuml;hren, mit relativen Pfadnamen arbeiten. 
+<p>
+
+<a name="ia_href_rel"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;verzeichnis/datei.htm&quot;&gt;Verweis zu Datei in Verzeichnis unterhalb&lt;/a&gt;
+&lt;a href=&quot;verzeichnis/unterverz/datei.htm&quot;&gt;Verweis zu Datei in Verzeichnis weit unterhalb&lt;/a&gt;
+&lt;a href=&quot;../datei.htm&quot;&gt;Verweis zu Datei ein Verzeichnis h&ouml;her&lt;/a&gt;
+&lt;a href=&quot;../../../datei.htm&quot;&gt;Verweis zu Datei drei Verzeichnisse h&ouml;her&lt;/a&gt;
+&lt;a href=&quot;../woanders/datei.htm&quot;&gt;Verweis zu Datei in Verzeichnis unterhalb des n&auml;chsth&ouml;heren&lt;/a&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die relative Pfadangabe und der Dateiname der anderen HTML-Datei.
+<p>
+Bei relativen Pfadnamen ist das Verzeichnis, in dem die Datei steht, die den Verweis enth&auml;lt, der Bezugspunkt (im folgenden &quot;akutelles Verzeichnis&quot; genannt). 
+<p>
+Wenn sich die HTML-Datei, auf die der Verweis f&uuml;hren soll, in einem Verzeichnis unterhalb des aktuellen Verzeichnisses befindet, notieren Sie den Namen des Unterverzeichnisses, dann einen Schr&auml;gstrich, dann den Namen der Zieldatei. Wenn sich die Zieldatei im n&auml;chsth&ouml;heren Verzeichnis zu dem aktuellen Verzeichnis befindet, notieren Sie zwei Punkte, einen Schr&auml;gstrich und dahinter den Namen der Zieldatei. Bei weiter entfernten Dateien m&uuml;ssen Sie mehrere Verzeichnisse aneinanderreihen, so wie in den obigen Beispielen.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Verwenden Sie zum Trennen der Verzeichnisnamen immer den einfachen Schr&auml;gstrich, auch, wenn Sie Ihr Projekt innerhalb einer DOS-/Windows-Umgebung erstellen. Der WWW-Browser ben&ouml;tigt die Angabe in Form von einfachen Schr&auml;gstrichen.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Anker innerhalb einer anderen Datei</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfca.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie innerhalb einer anderen als einer aktuellen HTML-Datei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>Anker definiert</b></a> haben, k&ouml;nnen Sie auch Verweise setzen, die direkt zu einem Anker innerhalb einer anderen Datei f&uuml;hren.
+
+
+<a name="ia_href_rel"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;datei.htm#Zieldef&quot;&gt;Verweistext&lt;/a&gt;
+&lt;a href=&quot;verzeichnis/datei.htm#Zieldef&quot;&gt;Verweistext&lt;/a&gt;
+&lt;a href=&quot;../datei.htm#Zieldef&quot;&gt;Verweistext&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist der Name der anderen HTML-Datei (gegebenenfalls mit relativem Pfadnamen), und dahinter, durch ein <b>#</b> getrennt, der Name des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>definierten Ankers</b></a>. Beachten Sie, da&szlig; Gro&szlig;- und Kleinschreibung bei Definition und Aufruf eines Ankers &uuml;bereinstimmen m&uuml;ssen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcfb.htm"><b>Projektverweise innerhalb einer HTML-Datei</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcfd.htm"><b>Verweise zu anderen WWW-Adressen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

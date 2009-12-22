@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.document.images[ ] / BILDNAME</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.document.images[ ] / BILDNAME</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Mit dem Objekt <b>FENSTERNAME.document.images[ ] / BILDNAME</b> haben Sie Zugriff auf alle Grafiken, 
+die in eine HTML-Datei eingebunden sind. Dabei k&ouml;nnen Sie auch vorhandene Grafiken dynamisch durch andere ersetzen.
+<p>
+Eine Objektinstanz des Grafik-Objekts wird automatisch erzeugt, wenn der WWW-Browser mindestens eine <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcg.htm"><b>Grafik</b></a> in der HTML-Datei vorfindet. Daneben k&ouml;nnen Sie f&uuml;r dynamisch einzubindende Grafiken selbst neue Instanzen des Grafik-Objekts definieren.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Vorhandene Grafiken ansprechen</font></h3>
+Sie k&ouml;nnen Grafiken, die mit HTML eingebunden sind, mit JavaScript ansprechen.
+
+<h4><font color=#6666CC>Schema 1 / Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.images[#].Eigenschaft/Methode()
+var Grafikdatei = window.document.images[4].src;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Schema 2 / Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.BILDNAME.Eigenschaft/Methode()
+var Grafikdatei = window.document.HomeButton.src;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In eine HTML-Datei eingebundene Grafik k&ouml;nnen Sie auf zwei Arten ansprechen:
+<ul>
+<li>mit einer Indexnummer (wie in Schema 1 / Beispiel 1)<br>
+Bei Verwendung von Indexnummern geben Sie <b>images</b> an und dahinter in eckigen Klammern, die wievielte Grafik innerhalb der HTML-Datei Sie meinen. Beachten Sie, da&szlig; der Z&auml;hler bei 0 beginnt, d.h. die erste Grafik sprechen Sie mit <b>images[0]</b> an, die zweite Grafik mit <b>images[1]</b> usw. Beim Z&auml;hlen gilt die Reihenfolge, in der die Grafiken in der HTML-Datei eingebunden sind.
+<p>
+<li>mit dem Namen der Grafik (wie in Schema 2 / Beispiel 2)<br>
+Dabei geben Sie den Namen an, der beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a6"><b>Referenzieren der Grafik</b></a> in der Zusatzangabe <b>name=</b> definiert worden ist.
+</ul>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Zu den Fensternamen lesen Sie den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm#a1"><b>Allgemeines zur Verwendung des window-Objekts</b></a>. Bei Verwendung von Frames lesen Sie auch den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm#a1"><b>Allgemeines zur Verwendung des Frame-Objekts</b></a>.
+
+<spacer type=vertical size=30>
+<a name="a11"><h3><font color=#6666CC>Neue Objektinstanz erzeugen / Grafik dynamisch einbinden</font></h3></a>
+Sie k&ouml;nnen neue Instanzen des Grafik-Objekts definieren. Mit deren Hilfe k&ouml;nnen Sie Grafiken mit JavaScript anzeigen, die zuvor noch nicht in der HTML-Datei referenziert waren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+Zweitbild = new Image();
+Zweitbild.src = &quot;blau.gif&quot;;
+document.images[0].src = Zweitbild.src;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine neue Instanz des Grafik-Objekts speichern Sie in einem selbst vergebenen Objektnamen, im obigen Beispiel in dem Namen <i>Zweitbild</i>. Hinter dem Namen folgt ein Istgleichzeichen. Dahinter folgt das reservierte Wort <b>new</b> und der Aufruf der Objektfunktion <b>Image()</b>.
+<p>
+Anschlie&szlig;end k&ouml;nnen Sie mit der neu erzeugten Instanz arbeiten. So k&ouml;nnen Sie der Instanz &uuml;ber die Objekteigenschaft <b>src</b> eine Grafikdatei zuordnen, im Beispiel die Datei &quot;blau.gif&quot;. Die dritte Zeile im obigen Beispiel zeigt eine Anweisung, wie Sie dynamisch eine vorhandene Grafik ersetzen k&ouml;nnen. Angenommen, in der HTML-Datei wurde als erste Grafik in der Datei mit <b>&lt;img src=&quot;rot.gif&quot;&gt;</b> ein rotes Bild eingebunden. Mit Hilfe von JavaScript k&ouml;nnen Sie nun, beispielsweise in Abh&auml;ngigkeit vom Klicken auf einen Verweis, dieses rote Bild durch ein anderes, blaues Bild ersetzen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Ein Anwendungsbeispiel f&uuml;r den Einsatz dynamischer Grafiken finden Sie in diesem Dokument: <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdde.htm"><b>dynamische grafische Buttons</b></a>.
+
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+Eigenschaften von Grafiken, die in HTML referenziert wurden, k&ouml;nnen Sie nur lesen, nicht &auml;ndern. Eine Anweisung wie <i>window.document.images[0]=&quot;blau.gif&quot;</i> ist <b>falsch</b>. Sie k&ouml;nnen Eigenschaften von HTML-definierten Grafiken allerdings gleichartige Eigenschaften von eigenen Grafikobjekten zuweisen. Eine Anweisung wie <i>window.document.images[0].src=Neubild.src</i> ist also <b>erlaubt, wenn</b> zuvor eine neue Objektinstanz <i>Neubild</i> erzeugt wurde.
+Eigenschaften einer neuen Instanz des Grafik-Objekts k&ouml;nnen Sie jederzeit &auml;ndern.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].border</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.border</font></b><br>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a5"><b>Rahmen um eine Grafik</b></a>. Mit <i>var Rahmen = window.document.images[3].border</i> beispielsweise speichern Sie die Dicke des definierten Rahmens um eine Grafik  in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].complete</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.complete</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Gibt an, ob eine Grafik vollst&auml;ndig eingelesen ist oder nicht. Mit <i>alert(&quot;Zustand von Grafik 1: &quot; + window.document.images[0].complete)</i> k&ouml;nnen Sie beispielsweise in einem Meldungsfenster ausgeben, ob eine Grafik vollst&auml;ndig geladen ist oder nicht.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].height</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.height</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>H&ouml;he einer Grafik</b></a>. Mit <i>var Hoehe = window.document.images[1].height</i> beispielsweise speichern Sie die in der zweiten Grafik definierte H&ouml;he in einer Variablen.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].hspace</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.hspace</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm#a1"><b>horizontale Abstand einer Grafik zu ihrer Umgebung</b></a>. Mit <i>var HAbstand = window.document.images[0].hspace</i> beispielsweise speichern Sie den in der ersten Grafik definierten horizontalen Abstand in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Ermittelt die Anzahl in einer HTML-Datei referenzierten Grafiken. Mit <i>alert(&quot;Diese Datei enth&auml;lt isg. &quot; + window.document.images.length + &quot; Grafiken&quot;)</i> geben Sie beispielsweise die Anzahl der referenzierten Grafiken in einem Meldungsfenster aus.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].lowsrc</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.lowsrc</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a2"><b>niedriger aufl&ouml;sende Grafikdatei bei Grafiken in zwei Versionen</b></a>. Mit <i>var Schlechtbild = window.document.images[3].lowsrc</i> beispielsweise speichern Sie die Angabe zu der in der vierten Grafik mit <b>lowsrc=</b> definierten Datei in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].name</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.name</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a6"><b>Name einer Grafik</b></a>. Mit <i>var Bildname = window.document.images[2].name</i> beispielsweise speichern den vergebenen Namen der dritten Grafik mit <b>lowsrc=</b> definierten Datei in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].prototype</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.prototype</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Erlaubt die Definition eigener Eigenschaften für eine Grafik. Ein Beispiel war leider nicht auftreibbar.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].src</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.src</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a1"><b>Angabe zur Grafikdatei</b></a>. Mit <i>var Grafik = window.document.images[0].src</i> beispielsweise speichern den Namen der ersten im der Datei referenzierten Grafikdatei in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].vspace</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.vspace</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm#a1"><b>vertikale Abstand einer Grafik zu ihrer Umgebung</b></a>. Mit <i>var VAbstand = window.document.images[0].height</i> beispielsweise speichern Sie den in der ersten Grafik definierten vertikalen Abstand in einer Variablen. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.images[<tt>#</tt>].width</font><br>
+<font color=#6666CC>FENSTERNAME.document.BILDNAME.width</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Breite einer Grafik</b></a>. Mit <i>var Breite = window.document.images[1].width</i> beispielsweise speichern Sie die in der zweiten Grafik definierte Breite in einer Variablen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<b>FENSTERNAME.document.images[ ] / BILDNAME</b> hat keine eigenen Methoden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcg.htm"><b>FENSTERNAME.document.forms[ ] / FORMULARNAME.elements[ ] / ELEMENTNAME</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdci.htm"><b>FENSTERNAME.document.layers[ ] / LAYERNAME</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

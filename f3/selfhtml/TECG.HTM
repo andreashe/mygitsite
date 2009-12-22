@@ -1,0 +1,352 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Regul&auml;re Ausdr&uuml;cke</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Regul&auml;re Ausdr&uuml;cke</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu regul&auml;ren Ausdr&uuml;cken</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Regul&auml;re Ausdr&uuml;cke anwenden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Regul&auml;re Ausdr&uuml;cke f&uuml;r einzelne Zeichen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Regul&auml;re Ausdr&uuml;cke f&uuml;r Zeichenketten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Regul&auml;re Ausdr&uuml;cke mit Alternativen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Rangfolge und Klammerung in regul&auml;ren Ausdr&uuml;cken</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a7"><b>Teilausdr&uuml;cke mit Klammerung</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu regul&auml;ren Ausdr&uuml;cken</font></h2></a>
+
+Regul&auml;re Ausdr&uuml;cke sind genau definierte Suchmuster f&uuml;r Zeichen und Zeichenketten. Mit Hilfe dieser Suchmuster k&ouml;nnen Sie beispielsweise Variableninhalte durchsuchen und bearbeiten. F&uuml;r CGI-Aufgaben sind regul&auml;re Ausdr&uuml;cke enorm wichtig. Zum Beispiel l&auml;&szlig;t sich der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebf.htm#a2"><b>Datenstrom eines HTML-Formulars</b></a>, der an ein CGI-Programm beim Absenden des Formulars &uuml;bergeben wird, mit Hilfe von regul&auml;ren Ausdr&uuml;cken in seine einzelnen Bestandteile zerlegen. Genauso k&ouml;nnen Sie mit Hilfe von regul&auml;ren Ausdr&uuml;cken beim Einlesen von Dateien (z.B. einer Datei mit Eintr&auml;gen eines G&auml;stebuchs) anhand der Konventionen, nach denen die Datei aufgebaut ist, die einzelnen Eintr&auml;ge geordnet einlesen und als HTML-Code an den aufrufenden WWW-Browser &uuml;bertragen. Und schlie&szlig;lich sind regul&auml;re Ausdr&uuml;cke ein m&auml;chtiges Mittel, um gro&szlig;e Datenbest&auml;nde nach komplexen Suchausdr&uuml;cken zu durchforsten.
+<p>
+Regul&auml;re Ausdr&uuml;cke sind allerdings f&uuml;r Neulinge sehr ungewohnt und der Hauptgrund daf&uuml;r, warum in manchen Perl-Scripts ziemlich merkw&uuml;rdige, kryptisch anmutende Zeichenfolgen vorkommen. Wer allerdings mit dem Unix-Befehl <b>grep</b> vertraut ist, kommt auch mit den regul&auml;ren Ausdr&uuml;cken in Perl sofort zurecht.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Regul&auml;re Ausdr&uuml;cke anwenden</font></h2></a>
+
+Um regul&auml;re Ausdr&uuml;cke anzuwenden, m&uuml;ssen Sie wissen, welche M&ouml;glichkeiten es dazu gibt. 
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Daten = $ENV{'PATH'};
+if($Daten =~ /PERL/)    # Ob darin wohl die Zeichenfolge 'PERL' vorkommt?
+ { print &quot;Aha, in Ihrer PATH-Variablen kommt PERL vor!\n&quot;; }
+else   
+ { print &quot;in Ihrer PATH-Variablen kommt PERL leider nicht vor!\n&quot;; }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Orte = (&quot;Berlin&quot;,&quot;Paris&quot;,&quot;London&quot;,&quot;Madrid&quot;,&quot;Athen&quot;,&quot;Rom&quot;,&quot;Lissabon&quot;,&quot;Stockholm&quot;,&quot;Kopenhagen&quot;);
+
+for(@Orte)
+ {
+  if(/[MKS]/)   # Alle Orte, in denen 'M', 'K' oder 'S' vorkommt
+   { print &quot;Die Stadt &quot;, $_, &quot; entspricht dem Suchmuster\n&quot;; }
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+open(LOGDATEI,&quot;&lt;access.log&quot;);
+$Zugriffe = 0;
+
+while(&lt;LOGDATEI&gt;)
+ {
+  /index.htm/ ? $Zugriffe = $Zugriffe + 1 : $Zugriffe = $Zugriffe;
+ }
+print $Zugriffe, &quot; Zugriffe auf Datei index.htm!\n&quot;;
+close(LOGDATEI);
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+
+Einen regul&auml;ren Ausdruck erkennen Sie in Perl an zwei Schr&auml;gstrichen <b>/.../</b>. Zwischen den Schr&auml;gstrichen steht jeweils der regul&auml;re Ausdruck.
+<p>
+Wenn Sie einen regul&auml;ren Ausdruck einsetzen wollen, brauchen Sie zun&auml;chst etwas, das Sie durchsuchen wollen. Das kann beispielsweise der Wert sein, der in einem Skalar gespeichert ist, so wie im obigen Beispiel 1, oder die Werte, die in den Elementen einer Liste vorkommen, so wie im obigen Beispiel 2, oder auch die einzelnen Zeilen einer Datei, so wie im obigen Beispiel 3.
+<p>
+In Beispiel 1 wird in der Umgebungsvariablen PATH nach der Zeichenfolge &quot;PERL&quot; gesucht. Beachten Sie, da&szlig; eine solche Zeichenfolge innerhalb eines regul&auml;ren Ausdrucks ohne Anf&uuml;hrungszeichen notiert wird. Im Beispiel wird der Inhalt von <b>$ENV{'PATH'}</b> in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <i>$Daten</i> gespeichert. Mit <i>if($Daten =~ /PERL/)</i> wird der Wert dieses Skalars nach der Zeichenfolge &quot;PERL&quot; durchsucht. Wichtig ist dabei der Abfrage-Operator <b>=~</b>. Mit if-Ausdr&uuml;cken von der Art <i>if($Skalarname =~ /reg.Ausdruck/)</i> k&ouml;nnen Sie also beliebige Skalare nach beliebigen Inhalten durchsuchen.
+<p>
+In Beispiel 2 wird eine Liste mit St&auml;dtenamen definiert. Innerhalb der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tece.htm#a3"><b>for-Schleife</b></a> werden alle Listenelemente, also die Stadtenamen, danach durchsucht, ob in ihnen einer der Gro&szlig;buchstaben M, K oder S vorkommt. Die Suche wird mit <i>if(/[MKS]/)</i> formuliert. In diesem Fall wird im Gegensatz zu Beispiel 1 kein Abfrage-Operator eingesetzt. Die Abfrage bezieht sich ja aufgrund der Schleife immer auf das aktuelle Element der Liste. Sie k&ouml;nnten die Abfrage auch mit der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecc.htm"><b>vordefinierten Variablen</b></a> <b>$_</b> in der Form <i>if($_ =~ /[MKS]/)</i> notieren. Da es aber klar ist, da&szlig; deren Wert gemeint ist, gen&uuml;gt die Kurzform <i>if(/[MKS]/)</i>.
+<p>
+In Beispiel 3 wird eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tge.htm#a2"><b>Logdatei</b></a> zeilenweise eingelesen. In dieser Datei wird nach dem Vorkommen von &quot;index.htm&quot; gesucht. Wenn eine Zeile mit dieser Zeichenfolge gefunden wird, wird ein Zugriffsz&auml;hler erh&ouml;ht, wenn nicht, bleibt der Zugriffsz&auml;hler unver&auml;ndert. Am Ende wird die so ermittelte Anzahl der Zugriffe auf index.htm ausgegeben. Der regul&auml;re Ausdruck kommt in diesem Beispiel in einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecd.htm#a2"><b>einfachen Entweder-Oder-Abfrage</b></a> vor. Der regul&auml;re Ausdruck wird dabei einfach danach bewertet, ob er wahr oder falsch ist. Wenn er wahr ist (wenn &quot;index.htm&quot; in der aktuellen Zeile vorkommt), wird die Anweisung links vom Doppelpunkt ausgef&uuml;hrt, wenn er falsch ist, die Anweisund rechts vom Doppelpunkt.<br>
+(Zum Thema Dateien siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecj.htm"><b>Dateien lesen und schreiben</b></a>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Ein wichtiger Anwendungsbereich f&uuml;r regul&auml;re Ausdr&uuml;cke ist auch das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teck.htm#a6"><b>Suchen und Ersetzen bei Zeichenketten</b></a>. Regul&auml;re Ausdr&uuml;cke k&ouml;nnen ferner in einigen Perl-Funktionen als zu &uuml;bergebender Parameter vorkommen. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Regul&auml;re Ausdr&uuml;cke f&uuml;r einzelne Zeichen</font></h2></a>
+<ul>
+Sie k&ouml;nnen<br>
+<li>nach einem bestimmten Zeichen suchen
+<li>nach mehreren bestimmten Zeichen suchen
+<li>nach einem Zeichen aus einem bestimmten Bereich suchen
+</ul>
+Die folgenden Beispiele sind numeriert, z.B. mit ( 1). Diese Numerierungen geh&ouml;ren nicht zu den regul&auml;ren Ausdr&uuml;cken, sie dienen nur als Bezug f&uuml;r die Erl&auml;uterungen zu den Beispielen.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+( 1) /a/            # findet 'a'
+( 2) /[ab]/         # findet 'a' oder 'b'
+( 3) /[A-Z]/        # findet Grossbuchstaben
+( 4) /[0-9]/        # findet Ziffern
+( 5) /\d/           # findet Ziffern - genau wie ( 4)
+( 6) /\D/           # findet alles ausser Ziffern
+( 7) /[0-9]\-/      # findet Ziffern oder Minuszeichen
+( 8) /[\[\]]/       # findet alles, worin eckige Klammern vorkommen
+( 9) /[a-zA-Z0-9_]/ # findet Buchstaben, Ziffern oder Unterstrich
+(10) /[\w]/         # findet Buchstaben, Ziffern oder Unterstrich - genau wie ( 9)
+(11) /[\W]/         # findet alles ausser Buchstaben, Ziffern oder Unterstrich
+(12) /[\r]/         # findet das Steuerzeichen f&uuml;r Wagenr&uuml;cklauf (DOS-typisch)
+(13) /[\n]/         # findet das Steuerzeichen f&uuml;r Zeilenvorschub
+(14) /[\t]/         # findet das Steuerzeichen f&uuml;r Tabulator
+(15) /[\f]/         # findet das Steuerzeichen f&uuml;r Seitenvorschub
+(16) /[\s]/         # findet Leerzeichen sowie Steuerzeichen aus (12-15) 
+(17) /[\S]/         # findet alles ausser Leerzeichen und Steuerzeichen aus (12-15) 
+(18) /[^&auml;&ouml;&uuml;&Auml;&Ouml;&Uuml;]/    # findet alles, worin keine deutschen Umlaute vorkommen
+(19) /[^a-zA-Z]/    # findet alles, worin keine Buchstaben vorkommen
+(20) /[ab]/s        # findet 'a' oder 'b' auch zeilen&uuml;bergreifend
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Wenn Sie in einem regul&auml;ren Ausdruck nach einzelnen Zeichen suchen sollen, m&uuml;ssen Sie den Suchausdruck in Schr&auml;gstriche und zus&auml;tzlich in eckige Klammern setzen. Nur wenn Sie nach einem einigen einzelnen Zeichen suchen, wie im Beispiel (1), k&ouml;nnen Sie die eckigen Klammern weglassen. Wenn Sie mehrere Zeichen ohne eckige Klammern notieren, werden diese als <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Zeichenkette</b></a> interpretiert.
+<p>
+Wenn Sie nach einer Gruppe bestimmter Zeichen suchen wollen, notieren Sie diese einfach innerhalb der eckigen Klammern, so wie in Beispiel (2).
+<p>
+Wenn Sie nach Zeichenbereichen suchen wollen, z.B. nach Buchstaben der ersten H&auml;lfte des Alphabets oder nach Ziffern, markieren Sie den gew&uuml;nschten Bereich durch das Anfangszeichen, ein Minuszeichen als Bindestrich, und das Endzeichen, so wie in den Beispielen (3) und (4).
+<p>
+Wenn Sie nach einem der Zeichen +-?.*^$()[]{}|\ suchen wollen, notieren Sie vor dem Zeichen einen umgekehrten Schr&auml;gstrich <b>\</b>, so wie in den Beispielen (7) und (8).
+<p>
+Perl stellt einige spezielle Suchmuster zur Verf&uuml;gung, die aus einem umgekehrten Schr&auml;gstrich und einem Schl&uuml;sselbuchstaben bestehen. Die Beispiele (5)/(6), (10) bis (17) zeigen diese Suchmuster.
+<p>
+Sie k&ouml;nnen auch eine Negativsuche veranlassen. Dazu notieren Sie das Dachzeichen <b>^</b> vor den gew&uuml;nschten Zeichen oder Zeichenbereichen. Eine solche Suche bewirkt, das nur Stellen gefunden werden, die die angegebenen Zeichen nicht enthalten. Die Beispiele (18) und (19) zeigen Anwendungsf&auml;lle daf&uuml;r.
+<p>
+F&uuml;r mehrzeilige Suchen m&uuml;ssen Sie an den regul&auml;ren Ausdruck hinter dem beendenden Schr&auml;gstrich ein <b>s</b> notieren - siehe Beispiel (20).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Regul&auml;re Ausdr&uuml;cke f&uuml;r Zeichenketten</font></h2></a>
+
+<ul>
+Sie k&ouml;nnen<br>
+<li>nach einer bestimmten Zeichenkette suchen
+<li>nach einer Zeichenketten mit Gruppierungsoperatoren (Platzhalter, Wildcards) suchen
+<li>nach Zeichenketten am Anfang oder Ende eines Wortes suchen
+<li>nach Zeichenketten am Anfang oder Ende einer Zeile suchen
+</ul>
+Die folgenden Beispiele sind numeriert, z.B. mit ( 1). Diese Numerierungen geh&ouml;ren nicht zu den regul&auml;ren Ausdr&uuml;cken, sie dienen nur als Bezug f&uuml;r die Erl&auml;uterungen zu den Beispielen.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+( 1) /aus/          # findet 'aus' - auch in 'Haus' oder 'Mausi'
+( 2) /aus?/         # findet 'aus' usw. - aber auch 'au' und 'auf'
+( 3) /a./           # findet 'ab' und 'an'
+                    # (ein beliebiges Zeichen hinter 'a')
+( 4) /a+/           # findet 'a' und 'aa' und 'aaaaa'
+                    # (ein oder beliebig viele 'a')
+( 5) /a*/           # findet 'a' und 'aa' und 'aaaaa' und 'b'
+                    # (kein oder beliebig viele 'a')
+( 6) /Ha.s/         # findet 'Haus' und 'Hans' aber nicht 'Hannes'
+( 7) /Ha.+s/        # findet 'Haus' und 'Hans' und 'Hannes'
+                    # (ein oder beliebig viele beliebige Zeichen)
+( 8) /Ha.s/         # findet 'Haus' und 'Hans' aber nicht 'Hase'
+( 9) /Ha.?s/        # findet 'Haus' und 'Hans' und 'Hase'
+(10) /x{10,20}/     # findet zwischen 10 und 20 'x' in Folge
+(11) /x{10,}/       # findet 10 und mehr 'x' in Folge
+(12) /x.{2}y/       # findet nur 'xxxy'
+(13) /Hans\b/       # findet 'Hans' aber nicht 'Hansel'
+(14) /\baus/        # findet 'aus' oder 'aussen' aber nicht 'Haus'
+(15) /\baus\b/      # findet 'aus' aber nicht 'Haus' und auch nicht 'aussen'
+(16) /\baus\B/      # findet 'aussen' aber nicht 'aus' und auch nicht 'Haus'
+(17) /^Hans/        # findet 'Hans' nur am Anfang des zu durchsuchenden Bereichs
+(18) /Hans$/        # findet 'Hans' nur am Ende des zu durchsuchenden Bereichs
+(19) /^\s*$/        # findet Zeilen, die nur aus Leerzeichen und &auml;hnlichem bestehen
+(20) /$Name/        # findet den Inhalt des Skalars $Name
+(21) /aus/s         # findet 'aus' auch zeilen&uuml;bergreifend
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Wenn Sie in einem regul&auml;ren Ausdruck nach einer bestimmten Zeichenkette suchen wollen, notieren Sie die Zeichenkette einfach zwischen den beiden Schr&auml;gstrichen des regul&auml;ren Ausdrucks, so wie in Beispiel (1).
+<p>
+Es gibt in Perl verschiedene sogenannte Gruppierungsoperatoren. Untereinander verkn&uuml;pft oder in komplexere Ausdr&uuml;cke gestellt, k&ouml;nnen Sie mit Gruppierungsoperatoren Platzhaltersuchen durchf&uuml;hren:<br>
+Der Punkt <b>.</b> steht f&uuml;r genau ein beliebiges Zeichen an der betreffenden Stelle - siehe dazu Beispiel (3). Wenn Sie aus der DOS/Windows-Welt kommen - der Punkt in einem regul&auml;ren Ausdruck entspricht dort dem Fragezeichen-Platzhalter, etwa bei Dateinamen.<br>
+Das Fragezeichen <b>?</b> dagegen bedeutet in einem regul&auml;ren Ausdruck: das Zeichen vor dem Fragezeichen oder auch nicht. Siehe dazu Beispiel (2).<br>
+Das Sternzeichen <b>+</b> bedeutet: eine oder mehrere Wiederholungen des Zeichens, das vor dem Sternzeichen steht. Siehe dazu Beispiel (4).<br>
+Das Sternzeichen <b>*</b> bedeutet: keine, eine oder mehrere Wiederholungen des Zeichens, das vor dem Sternzeichen steht. Siehe dazu Beispiel (5).<br>
+Wenn Sie vor den Zeichen <b>+</b> oder <b>*</b> einen Punkt notieren (der f&uuml;r ein beliebiges Zeichen steht, erzeugen Sie einen Platzhalter, der dem <b>*</b> in der DOS/Windows-Welt, etwa bei Dateinamen, entspricht. Siehe dazu Beispiele (6) bis (9).<br>
+Geschweifte Klammern mit einer Zahl oder zwei Zahlen n darin <b>{n}</b> stehen f&uuml;r n Wiederholungen des Zeichens vor der geschweiften Klammer an der betreffenden Stelle - siehe dazu Beispiele (10) bis (12). Dabei k&ouml;nnen Sie auch das Punktzeichen vor der geschweiften Klammer notieren. In diesem Fall bedeutet die Angabe innerhalb der geschweiften Klammer: so viele beliebige Zeichen wie angegeben - siehe dazu Beispiel (12)<br>
+<p>
+Sie k&ouml;nnen nach Zeichenketten suchen, die nur dann gefunden werden, wenn sie am Anfang oder am Ende eines Wortes vorkommen. Auch die Umkehrung davon ist m&ouml;glich: Sie k&ouml;nnen nach Zeichenketten suchen, die nur dann gefunden werden, wenn sie nicht am Anfang oder am Ende eines Wortes vorkommen.<br>
+Mit <b>\b</b> vor einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort damit anf&auml;ngt.<br>
+Mit <b>\b</b> nach einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort damit endet.<br>
+Mit <b>\B</b> vor einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort nicht damit anf&auml;ngt.<br>
+Mit <b>\B</b> nach einer Zeichenkette wird die Zeichenkette nur gefunden, wenn ein Wort nicht damit endet.<br>
+Zu diesen M&ouml;glichkeiten siehe Beispiele (13) bis (16).
+<p>
+Sie k&ouml;nnen Zeichenketten suchen, die nur dann gefunden werden, wenn sie am Anfang oder am Ende einer Zeile im zu durchsuchenden Bereich vorkommen. Dies ist vor allem im Zusammenhang mit Zeilen in Textdateien interessant.<br>
+Mit dem H&uuml;tchenzeichen <b>^</b> am Beginn des Suchausdrucks wird die Zeichenkette nur gefunden, wenn sie am Anfang der Zeile steht.<br>
+Mit dem Dollarzeichen <b>$</b> am Ende des Suchausdrucks wird die Zeichenkette nur gefunden, wenn sie am Ende der Zeile steht.<br>
+Zu diesen M&ouml;glichkeiten siehe Beispiele (17) bis (19).
+<p>
+Innerhalb von regul&auml;ren Ausdr&uuml;cken k&ouml;nnen Sie auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm"><b>Variablen</b></a> verwenden. Auf diese Weise k&ouml;nnen Sie dynamische Daten als Suchmuster einsetzen. Im Zusammenhang mit CGI k&ouml;nnte Sie z.B. die Anwendereingabe in einem Formularfeld in das Suchmuster &uuml;bernehmen. Siehe dazu Beispiel (20).
+<p>
+F&uuml;r mehrzeilige Suchen m&uuml;ssen Sie an den reul&auml;ren Ausdruck hinter dem beendenden Schr&auml;gstrich ein <b>s</b> notieren - siehe Beispiel (21).
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Regul&auml;re Ausdr&uuml;cke mit Alternativen</font></h2></a>
+
+Sie k&ouml;nnen mehrere Suchausdr&uuml;cke angeben. Dann werden alle Stellen gefunden, in denen wenigstens eine der Alternativen vorkommt.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+/a|b/          # findet 'a' oder 'b' - identisch mit /[ab]/
+/mit|ohne/     # findet 'mit' und 'Schmitt' aber auch 'ohne' und 'Bohne'
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Alternativen markieren Sie durch das Zeichen <b>|</b>. Im ersten der obigen Beispiele wird eine Alternative mit zwei einzelnen Zeichen formuliert. Dies wird in der Praxis jedoch nur selten verwendet, da die Schreibweiste <i>/[ab]/</i>, die das gleiche bedeutet, &uuml;blicher daf&uuml;r ist.<br>
+Im zweiten der Beispiele wird nach zwei alternativen Zeichenketten gesucht. Jede Fundstelle mit einer der beiden Alternativen geh&ouml;rt zu den Suchtreffern. Sie k&ouml;nnen nat&uuml;rlich auch mehr als zwei Alternativen notieren.<br>
+Bei den einzelnen Alternativen sind alle &uuml;brigen M&ouml;glichkeiten regul&auml;rer Ausdr&uuml;cke erlaubt.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Rangfolge und Klammerung in regul&auml;ren Ausdr&uuml;cken</font></h2></a>
+
+Die Sonderzeichen innerhalb von regul&auml;ren Ausdr&uuml;cken werden vom Perl-Interpreter nach einer bestimmten Rangfolge bewertet. 
+<ol>
+<li>Rangstufe: <tt><b>()</b></tt> (Klammerung)
+<li>Rangstufe: <tt><b>+ * ? {#,#}</b></tt> (Gruppierungsoperatoren)
+<li>Rangstufe: <tt><b>abc ^ $ \b \B</b></tt> (Zeichen/Zeichenketten, Zeilenanfang/-ende, Wortanfang/-ende)
+<li>Rangstufe: <tt><b>|</b></tt> (Alternativen)
+</ol>
+Dadurch ist jeder regul&auml;re Ausdruck eindeutig bewertbar. Wenn Sie in einem Ausdruck jedoch anders bewerten m&ouml;chten, als es nach der Rangfolge geschieht, k&ouml;nnen Sie innerhalb des Ausdrucks Klammern setzen, um eine andere Bewertung zu erzwingen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+/a|bc|d/       # findet 'a' oder 'bc' oder 'd'
+/(a|b)(c|d)/   # findet 'ac' oder 'ad' oder 'bc' oder 'bd'
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Laut der Rangfolge haben Zeichen bzw. Zeichenketten Vorrang vor dem Trennzeichen f&uuml;r Alternativen. Mit Hilfe von Klammern k&ouml;nnen Sie eine andere Bewertung erzwingen (siehe Beispiel).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a7"><h2><font color=#6666CC>Teilausdr&uuml;cke mit Klammerung</font></h2></a>
+
+F&uuml;r komplexe regul&auml;re Ausdr&uuml;cke k&ouml;nnen Sie mit Hilfe von Klammerung einzelne Teile des regul&auml;ren Ausdrucks speichern und an einer sp&auml;teren Stelle innerhalb des gleichen Ausdrucks referenzieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Satz = &quot;Was denn wohl der Mann mit der Frau da unter der Bettdecke macht?&quot;;
+print $1;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In dem Beispiel wird &uuml;berpr&uuml;ft, ob in <i>$Satz</i> das Wort 'der' mehr als einmal vorkommt.
+<p>
+Dazu wird zun&auml;chst das, wonach &quot;eigentlich&quot; gesucht werden soll, in Klamern gesetzt. Im Beispiel soll nach einem separaten Wort 'der' gesucht werden, daher lautet die Formulierung im regul&auml;ren Ausdruck <i>\bder\b</i>. Dieser Teilausdruck wird in Klammern gesezt. Dadurch merkt sich der Perl-Interpreter diesen Teilausdruck. Dahinter folgt mit <b>.*</b> die Anweisung: hinter dem Wort 'der' kann folgen, was will. Die Syntax <b>\1</b> schlie&szlig;lich referenziert die zuvor definierte Klammer. Das hei&szlig;t: wenn der Perl-Interpreter das Wort 'der' findet, schaut er nach, ob das Wort schon einmal gefunden wurde.<br>
+Wenn Sie zwei oder mehr solcher Klammern in einem regul&auml;ren Ausdruck haben, k&ouml;nnen Sie diese Klammern mit <b>\1</b>, <b>\2</b>, <b>\3</b> usw. referenzieren. Dazu gibt es dann entsprechende vordefinierte Variablen in Perl, n&auml;mlich <b>$1</b>, <b>$2</b>, <b>$3</b> usw.
+<p>
+Die Ausgabe <i>print $1</i> im obigen Beispiel gibt den Inhalt von <b>$1</b> aus. Darin ist im Beispiel das Wort 'der' gespeichert, aber nur, weil es in dem Satz mehr als einmal vorkommt.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tecf.htm"><b>Operatoren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tech.htm"><b>Steuerzeichen und besondere Notationen</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

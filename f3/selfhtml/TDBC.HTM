@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>SELFHTML: Objekte, Eigenschaften und Methoden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Objekte, Eigenschaften und Methoden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Vordefinierte JavaScript-Objekte</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Vordefinierte JavaScript-Objekte verwenden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Eigene Objekte definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a 
+href="#a4"><b>Eigenschaften von Objekten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a 
+href="#a5"><b>Objekt-Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Vordefinierte JavaScript-Objekte</font></h2></a>
+Objekte sind fest umgrenzte Datenelemente mit Eigenschaften und oft auch mit objektgebundenen Funktionen (Methoden).
+<p> 
+Da&szlig; JavaScript eine Erweiterung von HTML darstellt, liegt vor allem an den vordefinierten Objekten, die Ihnen in JavaScript zur Verf&uuml;gung stehen. &Uuml;ber diese vordefinierten Objekte k&ouml;nnen Sie beispielsweise einzelne Elemente eines HTML-Formulars abfragen oder &auml;ndern.
+<p>
+Ein Objekt kann eine Teilmenge eines &uuml;bergeordneten Objekts sein. Die JavaScript-Objekte sind deshalb in einer Hierarchie geordnet. Das hierarchieh&ouml;chste Objekt ist in JavaScript das Fenster-Objekt (<b>window</b>). Fenster haben Eigenschaften wie einen Titel, eine Gr&ouml;&szlig;e usw. Der Inhalt eines Fensters ist das n&auml;chstniedrigere Objekt, n&auml;mlich das im Fenster angezeigte Dokument (in JavaScript das Objekt <b>document</b>). In der Regel ist der Fensterinhalt eine HTML-Datei. Eine solche Datei kann bestimmte, durch HTML-Tags definierte Elemente enthalten, wie zum Beispiel Formulare, Verweise, Grafikreferenzen usw. F&uuml;r solche untergeordneten Elemente gibt es wieder eigene JavaScript-Objekte, zum Beispiel das Objekt <b>forms</b> f&uuml;r Formulare. Ein Formular besteht seinerseits aus verschiedenen Elementen, zum Beispiel aus Eingabefeldern, Auswahllisten oder Buttons zum Absenden bzw. Abbrechen. In JavaScript gibt es daf&uuml;r ein Objekt <b>elements</b>, mit dem Sie einzelne Felder und andere Elemente innerhalb eines Formulars ansprechen k&ouml;nnen.
+<p>
+Neben den hierarchisch geordneten JavaScript-Objekten gibt es auch solche, die nicht direkt in die Hierarchie passen. Das sind zum Beispiel Objekte f&uuml;r Datums- und Zeitrechnung, f&uuml;r mathematische Aufgaben oder f&uuml;r Zeichenkettenverarbeitung.
+<p>
+Eine &Uuml;bersicht der vordefinierten JavaScript-Objekte finden Sie in der <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tdc.htm"><b>JavaScript Objekt-Referenz</b></a>. Dort werden zu jedem Objekt die verf&uuml;gbaren <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>
+Eigenschaften</b></a> und <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>
+Methoden</b></a> vorgestellt. Im folgenden wird ein Beispiel vorgestellt, wie Sie ein vordefiniertes JavaScript-Objekt typischerweise verwenden k&ouml;nnen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Vordefinierte JavaScript-Objekte verwenden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+JavaScript-Objekte k&ouml;nnen Sie jederzeit verwenden.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Datum und Zeit&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  function SagDatumUndZeit()
+   {
+    var Jetzt = new Date();
+    var Tag = Jetzt.getDate();
+    var Monat = Jetzt.getMonth() + 1;
+    var Jahr = Jetzt.getYear();
+    var Stunden = Jetzt.getHours();
+    var Minuten = Jetzt.getMinutes();
+    var NachVoll  = ((Minuten &lt; 10) ? &quot;:0&quot; : &quot;:&quot;);
+    alert("Guten Tag!\nHeute ist der "
+    + Tag + &quot;.&quot; + Monat + &quot;.&quot; + Jahr + &quot;\nEs ist jetzt &quot;
+    + Stunden + NachVoll + Minuten + &quot; Uhr&quot;);
+   }
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;SagDatumUndZeit()&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel wird innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereichs</b></a> mit Hilfe des vordefinierten JavaScript-Objekts <b>Date</b> das aktuelle Datum und die aktuelle Uhrzeit ermittelt. Beim Einlesen der Datei wird das Ergebnis zusammen mit einem Begr&uuml;&szlig;ungstext sauber formatiert in einem Meldungsfenster ausgegeben.
+<p>
+Zuerst mu&szlig; eine dazu neue <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variable</b></a> angelegt werden. Im Beispiel ist dies die Variable <i>Jetzt</i>. Diese Variable soll auf Daten des <b>Date</b>-Objekts zugreifen k&ouml;nnen. Dies geschieht durch ein Istgleichzeichen hinter dem Variablennamen. Dahinter folgt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbi.htm"><b>reservierte JavaScript Wort</b></a> <b>new</b> und dahinter, durch ein Leerzeichen getrennt, der Aufruf der von <b>Date()</b> zum Erzeugen einer neuen Instanz des Objekts <i>Date</i>.
+<p>
+Um die einzelnen Daten der Objektinstanz von <i>Date</i>, also Tag, Monat, Jahr usw. anzusprechen, stehen entsprechende <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Methoden</b></a> zur Verf&uuml;gung. Diese Methoden, z.B. <b>getDate()</b> oder <b>getHours()</b>, haben als R&uuml;ckgabewert jeweils einen Datums/Uhrzeit-Bestandteil. So liefert <b>getDate()</b> beispielsweise den aktuellen Tag des Monats und <b>getHours()</b> die aktuelle Stundenzahl des Tages. Im Beispiel wird f&uuml;r jeden der ben&ouml;tigten Bestandteile eine Variable definiert. In der Variablen <i>Tag</i> wird beispielsweise durch Aufruf von <i>Jetzt.getDate()</i> der aktuelle Tag des Monats gespeichert. 
+<p>
+Die Anweisung im Beispiel, die mit <i>NachVoll ...</i> beginnt, kann an dieser Stelle nicht n&auml;her erl&auml;utert werden. Die Anweisung ist eine Vorbereitung zur sauberen Formatierung der Uhrzeit.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die einzelnen Methoden des im Beispiel verwendeten Objekts <b>Date</b>, wie zum Beispiel <b>getDate()</b>, werden bei der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdco.htm"><b>Referenz des Objekts <i>Date</i></b></a> beschrieben.
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Eigene Objekte definieren</font></h2></a>
+Sie k&ouml;nnen eigene Objekte definieren, wenn Sie streng objektorientiert in JavaScript programmieren wollen.
+<p>
+Um ein eigenes Objekt anzulegen, sind zwei Schritte n&ouml;tig. Zuerst m&uuml;ssen Sie das Objekt selbst und seine Eigenschaften &quot;deklarieren&quot;. Im zweiten Schritt k&ouml;nnen Sie anschlie&szlig;end eine Instanz dieses Objekts definieren. Mit dieser Objekt-Instanz k&ouml;nnen Sie dann Programmprozeduren durchf&uuml;hren.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Beispiel mit JavaScript&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  function Farbe(Farbwert_R, Farbwert_G, Farbwert_B)
+   {
+    this.Farbwert_R = Farbwert_R;
+    this.Farbwert_G = Farbwert_G;
+    this.Farbwert_B = Farbwert_B;
+   }
+
+  function TestObjekt()
+   {
+    Test = new Farbe("33","99","C0");
+    alert(&quot;Der Rotwert meiner Farbe ist Hexadezimal &quot; + Test.Farbwert_R);
+   }
+  // --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="TestObjekt()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Um ein neues Objekt und seine Eigenschaften anzulegen, m&uuml;ssen Sie innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereichs</b></a> oder innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a4"><b>separaten JavaScript-Datei</b></a> eine eigene <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a1"><b>Funktion</b></a> definieren, die so aussieht wie im Beispiel die Funktion <b>Farbe(...)</b>. Der Name, den Sie der Funktion geben (im Beispiel der Name <i>Farbe</i>) ist zugleich der Name des Objekts, das Sie mit dieser Funktion anlegen. Als Parameter, die die Funktion erwartet, notieren Sie die Eigenschaften, die Ihr Objekt haben soll. Die Parameternamen sind zugleich die Namen der Objekteigenschaften. Im Beispiel sind das die Eigenschaften <b>Farbwert_R</b>, <b>Farbwert_G</b> und <b>Farbwert_B</b>, denn es soll ein Objekt angelegt werden, das Rot-, Gr&uuml;n- und Blauwert einer Farbe speichern kann. Innerhalb der Funktion notieren Sie alle Anweisungen so wie im Beispiel: f&uuml;r jede Eigenschaft, die bei den Funktionsparametern festgelegt wurde, notieren Sie eine Anweisung, beginnend mit dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbi.htm"><b>reservierte JavaScript Wort</b></a> <b>this</b>, gefolgt von einem Punkt und dem Parameternamen. Dahinter notieren Sie ein Istgleichzeichen, und hinter dem Istgleichzeichen nochmals den Parameternamen. Am Ende jeder Anweisung mu&szlig; ein Strichpunkt stehen.
+<p>
+Nachdem das Objekt angelegt ist, k&ouml;nnen Sie an anderen Stellen innerhalb Ihres JavaScripts Instanzen dieses Objekt definieren. Dies geschieht mit Hilfe einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variablen</b></a> und dem reservierte JavaScript Wort <b>new</b>. Im Beispiel wird zu Testzwecken eine zweite Funktion <i>TestObjekt()</i> definiert. Darin wird zun&auml;chst eine Variable <b>Test</b> angelegt. Diese Variable soll Daten des angelegten Objekts <b>Farbe</b> enthalten. Dies geschieht durch ein Istgleichzeichen hinter dem Variablennamen. Dahinter folgt das reservierte JavaScript Wort <b>new</b> und dahinter, durch ein Leerzeichen getrennt, der Name der Funktion, mit der das gleichnamige Objekt angelegt wurde, im Beispiel <b>Farbe</b>. Als Parameter werden dieser Funktion irgendwelche brauchbaren Werte &uuml;bergeben, im Beispiel <i>&quot;33&quot;</i>, <i>&quot;99&quot;</i> und <i>&quot;C0&quot;</i> (typische hexadezimale Farbwerte, wie sie in HTML zum Einsatz kommen). Der Rot-Wert der Farbe wird beim Einlesen der HTML-Datei in einem Meldungsfenster ausgegeben.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Eigenschaften von Objekten</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbcb.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Objekte k&ouml;nnen Eigenschaften haben. Ein selbst definiertes Objekt &quot;Mensch&quot; k&ouml;nnte zum Beispiel die Eigenschaften Name, Alter, Geschlecht und Muttersprache haben. Vordefinierte JavaScript-Objekte haben ebenfalls Eigenschaften. So hat das Objekt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcp.htm"><b>Math</b></a> zum Beispiel eine Eigenschaft &quot;PI&quot; (<b>Math.PI</b>). Auf diese Weise l&auml;&szlig;t sich mit der mathematischen Konstante PI rechnen, ohne deren genauen Wert zu kennen.
+<p>
+Eigenschaften von Objekten k&ouml;nnen Sie innerhalb Ihres JavaScript-Codes jederzeit auslesen, und in vielen F&auml;llen k&ouml;nnen Sie die Werte von Eigenschaften auch &auml;ndern. So k&ouml;nnen Sie beispielsweise dem im Browser-Fenster angezeigten Dokument eine neue, g&uuml;ltige URL-Adresse zuweisen. Dadurch bewirken Sie, da&szlig; der WWW-Browser einen Sprung zu der zugewiesenen URL-Adresse ausf&uuml;hrt, genau so, wie wenn der Anwender auf einen entsprechenden Verweis klicken w&uuml;rde.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Browser des Anwenders auslesen&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+var BrowserName = navigator.appName;
+var BrowserVersion = navigator.appVersion;
+alert(&quot;Ah ja, Sie verwenden also den &quot; + BrowserName + 
+&quot;, und zwar in der Version &quot; + BrowserVersion);
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel werden innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereichs</b></a> zwei Eigenschaften des vordefinierten JavaScript-Objekts <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcq.htm"><b>navigator</b></a> in zwei entsprechenden Variablen gespeichert. Das <b>navigator</b>-Objekt stellt Ihnen &uuml;ber seine Eigenschaften verschiedene Informationen &uuml;ber den verwendeten WWW-Browser des Anwenders zur Verf&uuml;gung. Im obigen Beispiel werden die Eigenschaften des Browser-Namens (gespeichert in der Objekteigenschaft <b>navigator.appName</b>) und der Browser-Version (gespeichert in der Objekteigenschaft <b>navigator.appVersion</b>) ermittelt. Anschlie&szlig;end werden die ermittelten Daten in einem Meldungsfenster am Bildschirm ausgegeben.
+<p>
+Objekteigenschaften sprechen Sie an, indem Sie zuerst den Namen des Objekts notieren, dahinter einen Punkt, und dahinter den Namen der Eigenschaft. Dabei sind keine Leerzeichen erlaubt!
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Da im obigen Beispiel keine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> definiert worden ist, wird der JavaScript-Code beim Einlesen der Datei einfach ausgef&uuml;hrt. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Objekt-Methoden</font></h2></a>
+
+Objekten k&ouml;nnen Methoden zugeordnet sein. Das sind Funktionen, die Aktionen ausf&uuml;hren, aber im Gegensatz zu alleinstehenden <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktionen</b></a> an ein bestimmtes Objekt gebunden sind. Viele vordefinierte JavaScript-Objekte haben Methoden. So gibt es zum Beispiel das vordefinierte JavaScript-Objekt [window].<b>history</b>, in dem die bereits besuchten URL-Adressen eines Browser-Fensters gespeichert sind. Dazu gibt es eine Methode <b>history.back()</b>, mit der Sie in JavaScript einen R&uuml;cksprung zu einer bereits besuchten URL-Adresse erzwingen k&ouml;nnen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Geh hin wo Du herkommst&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;javascript:history.back();&quot;&gt;Geh hin wo Du herkommst&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel enth&auml;lt einen Verweis mit einer speziellen Syntax. Diese Syntax erlaubt Ihnen, beim Anklicken des Verweises JavaScript-Code aufzurufen. Im Beispiel ist das ein Aufruf der Methode <b>back()</b> des Objekts <b>history</b>. 
+<p>
+Objektmethoden sprechen Sie an, indem Sie zuerst den Namen des Objekts notieren, dahinter einen Punkt, dahinter den Namen der Methode, und dahinter eine &ouml;ffnende und eine schlie&szlig;ende Klammer. Dabei sind keine Leerzeichen erlaubt! Einige Methoden k&ouml;nnen auch Parameter beim Aufruf erwarten. Diese Parameter m&uuml;ssen Sie dann zwischen der &ouml;ffnenden und der schlie&szlig;enden Klammer &uuml;bergeben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Mehr zu der Aufrufsyntax bei Verweisen erfahren Sie im Abschnitt &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a>.
+<p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbb.htm"><b>Funktionen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbd.htm"><b>Variablen und Werte</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

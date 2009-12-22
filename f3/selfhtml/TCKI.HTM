@@ -1,0 +1,211 @@
+<html>
+<head>
+<title>SELFHTML: Java-Applets einbinden (Netscape, Sun)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<h1><font color=#6666CC>Java-Applets einbinden (Netscape, Sun)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Java-Applets nach Netscape-Syntax einbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Java-Applets nach Sun-Syntax einbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Breite und H&ouml;he der Anzeige des Java-Applets bestimmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Angaben zum Positionieren von Applets</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Java-Applets nach Netscape-Syntax einbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckia.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Java-Applets m&uuml;ssen in <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbbb.htm"><b>Java</b></a> geschrieben und mit dem Java-Applet-Compiler zu einem ausf&uuml;hrbaren Programm zusammengebunden sein.
+<p>
+Sun, der Entwickler von Java, hatte zun&auml;chst eine eigene HTML-Syntax zum Einbinden von Java-Applets in seinen WWW-Browser HotJava integriert (siehe dazu <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>weiter unten</b></a>). Doch Netscape implementierte eine andere Syntax, die heute wegen der Verbreitung des Netscape-Browsers auch die bekanntere Syntax ist. Wenn Sie unsicher sind, welche Syntax Sie verwenden sollen, binden Sie das Java-Applet einfach nach beiden Methoden ein.
+<p>
+In Zukunft wird auch die Netscape-Syntax erstetzt, n&auml;mlich durch das Einbinden von <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a4"><b>Java-Applets als Objekt</b></a>.
+<p>
+Die hier beschriebene Netscape-Syntax wird vom HTML-3.2-Standard unterst&uuml;tzt.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;applet code=&quot;AnimText.class&quot; alt=&quot;Text&quot;&gt; 
+   &lt;param name=text value=&quot;Dieser Text wird animiert dargestellt&quot;&gt;
+    &lt;param name=type value=wave&gt;
+    &lt;param name=bgcolor value=255:10:30&gt;
+    &lt;param name=fgcolor value=white&gt;
+    &lt;param name=style value=bold&gt;
+    &lt;param name=min value=14&gt;
+    &lt;param name=max value=48&gt;
+&lt;/applet&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;applet ... &gt;</b> leiten Sie die Referenz eines Java-Programms ein (<i>applet = application snippet = Anwendungsschnipsel</i>). 
+<p>
+Mit der Angabe <b>code=</b> referenzieren Sie das ausf&uuml;hrbare Java-Applet, das normalerweise die Dateinamenerweiterung <b>.class</b> hat. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Wenn sich das Applet in einem anderen Verzeichnis oder auf einem anderen Internet-Server befindet, gelten bei der Angabe die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> (dort mit <b>src=</b>).
+<p>
+F&uuml;r den Fall, da&szlig; das Java-Applet beim Anwender nicht ausf&uuml;hrbar ist, k&ouml;nnen Sie mit der Angabe <b>alt=</b> einen Alternativtext definieren. Der Text mu&szlig; in Anf&uuml;hrungszeichen stehen. Er wird nur dann angezeigt, wenn das Applet nicht anzeigbar ist.
+<p>
+Zwischen dem einleitenden Tag <b>&lt;applet...&gt;</b> und dem abschlie&szlig;enden <b>&lt;/applet&gt;</b> notieren Sie in vielen F&auml;llen Parameter, die dem Programm beim Aufruf &uuml;bergeben werden. Welche Parameter ein Java-Applet erwartet, entnehmen Sie der Dokumentation zu dem Applet. Jeder Parameter wird durch <b>&lt;param name= value=&gt;</b> angegeben (<i>param = parameter = Parameter, value = Wert</i>). Hinter <b>name=</b> geben Sie den Namen des Parameters an. Hinter <b>value=</b> geben Sie den gew&uuml;nschten Wert des Parameters an, der dem Programm &uuml;bergeben werden soll. Beachten Sie dabei die Regeln f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaa.htm#a3"><b>zus&auml;tzliche Angaben in HTML-Tags</b></a>
+<p>
+Im einleitenden <b>&lt;applet&gt;</b>-Tag ist au&szlig;erdem noch die Angabe <b>src=</b> m&ouml;glich, die jedoch nicht zum HTML-Standard 3.2 geh&ouml;rt. Sie ist optional und nur dann von Bedeutung, wenn der Java-Interpreter aus irgendeinem Grund den Quellcode des Java-Applets ben&ouml;tigt (<i>src = source = Quelle</i>). Verwenden Sie diese Angabe nur, wenn es in der Dokumentation zu dem Java-Applet ausdr&uuml;cklich angegeben ist, und exakt so, wie es dort angegeben ist.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Java-Applets nach Sun-Syntax einbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckia.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Die folgende Syntax wird von Sun's HotJava-Browser interpretiert.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;app class=&quot;AnimText" src=&quot;animtext.java&quot; 
+text=&quot;Dieser Text wird animiert dargestellt&quot;
+type=wave bgcolor=255:10:30 fgcolor=white style=bold
+min=14 max=48&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r HotJava definieren Sie die Referenz mit dem Befehl <b>&lt;app ... &gt;</b> (<i>app = applet = application snippet = Anwendungsschnipsel</i>). 
+<p>
+Mit der Angabe <b>class=</b> geben Sie die Objektklasse an, im Beispiel also <b>class=&quot;AnimText&quot;</b>. Es handelt sich dabei um den Dateinamen der ausf&uuml;hrbaran Applet-Datei ohne die obligatorische Dateinamenerweiterung <b>.class</b>. Der Name sollte in Anf&uuml;hrungszeichen stehen. 
+<p>
+Die Angabe <b>src=</b> ist optional und nur dann von Bedeutung, wenn der Java-Interpreter aus irgendeinem Grund den Quellcode des Java-Applets ben&ouml;tigt (<i>src = source = Quelle</i>). Verwenden Sie diese Angabe nur, wenn es in der Dokumentation zu dem Java-Applet ausdr&uuml;cklich angegeben ist.
+<p>
+<b>&lt;app ... &gt;</b> hat kein abschlie&szlig;endes Tag. Parameterangaben werden in Form von Zusatzangaben innerhalb des <b>&lt;app&gt;</b>-Tags
+notiert.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Breite und H&ouml;he der Anzeige des Java-Applets bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckia.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei Java-Applets, die direkt im Anzeigefenster des WWW-Browsers innerhalb einer HTML-Datei eingebettet sind, ist es sinnvoll, die Breite und H&ouml;he der Anzeigefl&auml;che des Java-Applets anzugeben.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;applet code=&quot;AnimText.class&quot; width=300 height=50&gt; 
+   &lt;param name=text value=&quot;Dieser Text wird animiert dargestellt&quot;&gt;
+    &lt;param name=type value=wave&gt;
+    &lt;param name=bgcolor value=255:10:30&gt;
+    &lt;param name=fgcolor value=white&gt;
+    &lt;param name=style value=bold&gt;
+    &lt;param name=min value=14&gt;
+    &lt;param name=max value=48&gt;
+&lt;/applet&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>width=</b> [Pixel] bestimmen Sie die Anzeigebreite, mit <b>height=</b> [Pixel] die Anzeigeh&ouml;he des Objekts (<i>width= Breite, height = H&ouml;he</i>). Die Angaben erfolgen im einleitenden <b>&lt;applet&gt;</b>-Tag (Netscape-Syntax) oder im <b>&lt;app&gt;</b>-Tag (HotJava-Syntax).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe von Breite und H&ouml;he eines eingebetteten Applets hat die gleichen Vorteile wie die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Angabe von Breite und H&ouml;he bei Grafiken</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Angaben zum Positionieren von Applets</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckia.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen bestimmen, wie gro&szlig; der Abstand zwischen einem Java-Applet und seiner 
+Umgebung sein soll. Das funktioniert genau so wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm"><b>Abstand von Grafiken zum umgebenden Text</b></a>. 
+Ferner k&ouml;nnen Sie links und rechts Text und andere Elemente um Applets flie&szlig;en lassen. Das funktioniert genau so, wie wenn Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm"><b>Text um Grafiken flie&szlig;en lassen</b></a>.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;applet code=&quot;spieler.class&quot; width=100 height=200 hspace=30 vspace=50 align=left&gt;
+&lt;/applet&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>hspace=</b> [Pixel] bestimmen Sie den Abstand zwischen dem Applet und anderen Elementen links bzw. rechts davon (<i>hspace = horizontal space = horizontaler Abstand</i>).<br>
+Mit <b>vspace=</b> [Pixel] bestimmen Sie den Abstand zwischen dem Applet und anderen Elementen dar&uuml;ber bzw. darunter (<i>vspace = vertical space = vertikaler Abstand</i>).<br>
+Beide Angaben sind sowohl einzeln als auch gleichzeitg m&ouml;glich, so wie im obigen Beispiel.
+<p>
+Mit <b>align=left</b> wird das Applet links ausgerichtet. Danach notierte Elemente flie&szlig;en rechts um das Applet. Mit dem Befehl <b>&lt;br clear=all&gt;</b> kann der Flu&szlig; abgebrochen werden (analog zu: <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm#a2"><b>Textfortsetzung unterhalb der Grafik erzwingen</b></a>).<br>
+Mit <b>align=right</b> wird das Applet rechts ausgerichtet. Danach notierte Elemente flie&szlig;en links um das Applet. Dabei gelten die gleichen Regeln wie bei <b>align=left</b>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tckh.htm"><b>Videos einbinden (Microsoft)</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tckj.htm"><b>Mime-Typen f&uuml;r Dateiformate</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

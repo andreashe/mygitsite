@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>SELFHTML: Pr&auml;formatierter Text</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Pr&auml;formatierter Text</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Textabschnitt mit pr&auml;formatiertem Text definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Andere Befehle f&uuml;r pr&auml;formatierten Text</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Textabschnitt mit pr&auml;formatiertem Text definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdha.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+F&uuml;r Programmlistings ist es wichtig, da&szlig; sie in  <tt>dicktengleicher Schrift</tt> dargestellt werden, und da&szlig; Einr&uuml;ckungen so wiedergegeben werden, wie sie beim Editieren eingegeben wurden. Zu diesem Zweck bietet HTML die M&ouml;glichkeit der &quot;pr&auml;formatierten Textabschnitte&quot; an. Auch wenn Sie tabellarische Daten darstellen m&uuml;ssen und auf <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tce.htm"><b>Tabellen</b></a> verzichten wollen, k&ouml;nnen Sie pr&auml;formatierten Text benutzen. Schlie&szlig;lich ist pr&auml;formatierter Text ist auch dazu geeignet, um andere Elemente, beispielsweise Grafiken, auszurichten.
+
+<a name="ipre"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;pre&gt;
+  FUNCTION Osterberechnung(year : INTEGER) : INTEGER;
+  VAR  a, b, c, d, e, f, g, h, i, k, l, m : INTEGER;
+  BEGIN
+     a  :=  year MOD 19;
+     b  :=  year DIV 100;
+     c  :=  year MOD 100;
+     d  :=  b DIV 4;
+     e  :=  b MOD 4;
+     f  :=  ( b + 8 ) DIV 25;
+     g  :=  ( b  f + 1 ) DIV 3;
+     h  :=  ( 19 * a + b  d  g + 15 ) MOD 30;
+     i  :=  c DIV 4;
+     k  :=  c MOD 4;
+     l  :=  ( 32 + 2 * e + 2 * i  h  k ) MOD 7;
+     m  :=  ( a + 11 * h + 22 * l ) DIV 451;
+     Easter :=  h + l  7 * m + 22;
+  END{FUNC};
+&lt;/pre&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;pre&gt;</b> leitet einen Textabschnitt mit pr&auml;formatiertem Text ein (<i>pre = preformatted = vorformatiert</i>). <b>&lt;/pre&gt;</b> beendet den Abschnitt. Alles, was dazwischen steht, wird so angezeigt, wie es eingegeben wurde, und zwar in dicktengleicher Schrift.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Innerhalb von <b>&lt;pre&gt;</b> und <b>&lt;/pre&gt;</b> gelten wie in anderen Textabschnitten die Besonderheiten f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcad.htm"><b>Umlaute, Sonderzeichen und HTML-eigene Zeichen</b></a>. HTML-Befehle innerhalb von <b>&lt;pre&gt;</b> und <b>&lt;/pre&gt;</b> werden interpretiert. Das hat den Vorteil, da&szlig; Sie innerhalb von pr&auml;formatiertem Text beispielsweise an beliebigen Stellen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafiken einbinden</b></a> k&ouml;nnen (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdha.htm#a12"><b>Beispiel</b></a>).
+<p>
+Beim Editieren von Text, der mit <b>&lt;pre&gt;</b> und <b>&lt;/pre&gt;</b> in HTML wiedergegeben werden soll, ist es empfehlenswert, einen Editor zu verwenden, der dicktengleiche Schrift unterst&uuml;tzt.
+<p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Andere Befehle f&uuml;r pr&auml;formatierten Text</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdha.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Neben <b>&lt;pre&gt;</b> ... <b>&lt;/pre&gt;</b> gibt es weitere HTML-Tags, die einen eigenen Absatz in dicktengleicher Schrift bewirken.
+
+<a name="ixmp"><h4><font color=#6666CC>Beispiel:  &lt;xmp&gt;</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;xmp&gt;Textabsatz in dicktengleicher Schrift&lt;/xmp&gt;
+</pre></td></tr></table><p>
+
+<a name="ilisting"><h4><font color=#6666CC>Beispiel:  &lt;listing&gt;</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;listing&gt;Textabsatz in dicktengleicher Schrift&lt;/listing&gt;
+</pre></td></tr></table><p>
+
+<a name="iplaintext"><h4><font color=#6666CC>Beispiel:  &lt;plaintext&gt;</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;plaintext&gt;Textabsatz in dicktengleicher Schrift&lt;/plaintext&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Alle drei Befehle bewirken einen eigenen Textabsatz mit dicktengleicher Schriftdarstellung:<br>
+<b>&lt;xmp&gt;...&lt;/xmp&gt;</b> (<i>xmp = example = Beispiel</i>) ist als logischer Befehl f&uuml;r Quellcode-Beispiele gedacht.<br>
+<b>&lt;plaintext&gt;...&lt;/plaintext&gt;</b> (<i>plaintext = nackter Text</i>) ist als logischer Befehl zum Darstellen von reinem Text gedacht, etwa zum Zitieren aus einer unformatierten Textdatei.<br>
+<b>&lt;listing&gt;...&lt;/listing&gt;</b> (<i>listing = zeilenorientierter Quelltext</i>) ist als logischer Befehl f&uuml;r Quelltext von Programmen gedacht.<br>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Alle drei Befehle finden in der Praxis kaum mehr Verwendung. Wenn Sie keine besonderen Gr&uuml;nde haben, sollten Sie <b>&lt;pre&gt;</b> ... <b>&lt;/pre&gt;</b> zur Darstellung von pr&auml;formatiertem Text verwenden.
+<p>
+Der Unterschied zwischen <b>&lt;xmp&gt;...&lt;/xmp&gt;</b> und <b>&lt;listing&gt;...&lt;/listing&gt;</b> liegt in der Schriftweite. <b>&lt;xmp&gt;...&lt;/xmp&gt;</b> bewirkt eine weitere Schrift (ausgehend von 80 Zeichen/Zeile beim Ausdruck), <b>&lt;listing&gt;...&lt;/listing&gt;</b> eine engere Schrift (ausgehend von 132 Zeichen/Zeile beim Ausdruck). <b>&lt;listing&gt;...&lt;/listing&gt;</b> wird von Netscape etwa auch anders dargestellt als <b>&lt;pre&gt;...&lt;/pre&gt;</b> und kann daher in einzelnen F&auml;llen eine interessante Alternative sein.
+<p>
+<b>&lt;plaintext&gt;... </b> ist mit Vorsicht zu verwenden. Denn Netscape akzeptiert zu diesem Tag kein abschlie&szlig;endes Tag <b>&lt;/plaintext&gt;</b>, w&auml;hrend andere Browser das End-Tag interpretieren. Netscape stellt alles in dicktengleicher Schrift dar, was Sie bis zum n&auml;chsten Absatz-Befehl (z.B.  &Uuml;berschrift, Absatzschaltung, Hinweisabsatz, Liste usw.) an Text eingeben.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdg.htm"><b>Zitate und Adressen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdi.htm"><b>Logische Textauszeichnung</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

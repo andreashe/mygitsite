@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>SELFHTML: Versteckte Elemente in Formularen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Versteckte Elemente in Formularen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Versteckte Elemente definieren</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Versteckte Elemente definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchfa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen Felder in einem Formular definieren, die dem Anwender nicht angezeigt werden. Versteckte Felder k&ouml;nnen Daten enthalten. Beim Absenden des Formulars werden die Daten versteckter Felder mit &uuml;bertragen. Auf diese Weise k&ouml;nnen Sie beispielsweise zus&auml;tzliche Informationen an CGI-Programme &uuml;bergeben oder erl&auml;uternden Text einf&uuml;gen, der bei der E-Mail-&Uuml;bertragung der Formulardaten in der E-Mail mit enthalten ist.
+
+
+<a name="iinput_type_hidden"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Vor- und Zuname: &lt;input name=&quot;username&quot; size=40&gt; 
+&lt;input type=hidden name=&quot;Name&quot; value=&quot;(Vor- und Zuname des Anwenders)&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;input type=hidden ...&gt;</b> definieren Sie versteckte Daten in einem Formular (<i>input = Eingabe, hidden = versteckt</i>). Die Daten selbst bestimmen sie mit der Zusatzangabe <b>value=</b> (<i>value = Wert</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen.
+<p>
+Im obigen Beispiel wird beim Absenden des Formulars <i>username=[eingegebene Daten des Anwenders]</i> und der nicht sichtbare Text <i>(Vor- und Zuname des Anwenders)</i> &uuml;bertragen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tche.htm"><b>Freie Buttons und Datei-Buttons</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tchg.htm"><b>Buttons zum Absenden oder Abbrechen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

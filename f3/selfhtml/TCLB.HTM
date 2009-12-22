@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>SELFHTML: Hintergrundfarben / Hintergrundbilder f&uuml;r Layer</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> <font color=#6666cc>Hintergrundfarben / Hintergrundbilder f&uuml;r Layer</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Hintergrundfarbe f&uuml;r  Layer</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Hintergrundbild (Wallpaper) f&uuml;r Layer</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666cc>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Hintergrundfarbe f&uuml;r  Layer</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclba.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen f&uuml;r jeden definierten fest positionierten oder flie&szlig;enden Layer eine eigene Hintergrundfarbe definieren. 
+
+<h4><font color=#6666cc>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Beispiel&quot; left=300 top=250 width=150 bgcolor=#FFFFCC&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+<h4><font color=#6666cc>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;ilayer name=&quot;Beispiel&quot; width=400 bgcolor=#000066&gt;
+&lt;h1&gt;&lt;font color=#FFFFFF&gt;Eine &amp;Uuml;berschrift&lt;/font&gt;&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/ilayer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>bgcolor=</b> im einleitenden Tag von <b>&lt;layer...&gt;</b> oder <b>&lt;ilayer...&gt;</b> bestimmen Sie die Hintergrundfarbe (<i>bgcolor = background color = Hintergrundfarbe</i>). Dabei gelten die Regeln zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Definieren von Farben in HTML</b></a>.
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Wenn Sie eine Hintergrundfarbe f&uuml;r einen Layer definieren, sollten Sie f&uuml;r Text, der in den Layern erscheint, eine kontrastierende Schriftfarbe w&auml;hlen. Dies kann zum Beispiel wie im zweiten der obigen Beispiele durch <b>&lt;font color=...&gt;</b>...<b>&lt;/font&gt;</b> geschehen (siehe auch Abschnitt &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarben</b></a>).
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Hintergrundbild (Wallpaper) f&uuml;r Layer</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclbb.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen f&uuml;r ein f&uuml;r jeden definierten fest positionierten oder flie&szlig;enden Layer ein eigenes Hintergrundmuster (Wallpaper) definieren. Das funktioniert genauso wie bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tccb.htm"><b>Hintergrundbildern (Wallpapers)</b></a> f&uuml;r den gesamten Dateik&ouml;rper. 
+
+<h4><font color=#6666cc>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Beispiel&quot; left=300 top=250 width=150 background=&quot;datei.gif&quot;&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+<h4><font color=#6666cc>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;ilayer name=&quot;Beispiel&quot; width=400 background=&quot;datei.gif&quot;&gt;
+&lt;h1&gt;&lt;font color=#FFFFFF&gt;Eine &amp;Uuml;berschrift&lt;/font&gt;&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/ilayer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>background=</b> im einleitenden Layer-Tag k&ouml;nnen Sie ein Hintergrundbild f&uuml;r den Layer bestimmen (<i>background = Hintergrund</i>). 
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+In den obigen Beispielen wird vorausgesetzt, da&szlig; sich die Grafikdatei im gleichen Verzeichnis befindet wie die HTML-Datei. Wenn die Grafik in einem anderen Verzeichnis steht, m&uuml;ssen Sie den relativen oder absoluten Pfadnamen angeben. Das funktioniert genau so wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+<p>
+Inerhalb dieses Dokuments finden Sie im Abschnitt &uuml;ber typische Grafiksorten f&uuml;r WWW-Seiten ein paar  <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfc.htm#a4"><b>typische Hintergrundbilder</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcla.htm"><b>Layer definieren und positionieren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tclc.htm"><b>Layer &uuml;bereinander anordnen und kontrollieren</b></a></td>
+</tr>
+</table>
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

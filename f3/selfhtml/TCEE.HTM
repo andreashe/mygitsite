@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>SELFHTML: Zellen verbinden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zellen verbinden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Zellen in einer Zeile spaltenweise verbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Zellen in einer Spalte zeilenweise verbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Zellen spalten- und zeilenweise zugleich verbinden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zellen in einer Zeile spaltenweise verbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceea.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen mehrere Zellen innerhalb einer Zeile verbinden, so da&szlig; sich eine Spalte in dieser Zeile &uuml;ber mehrere Spalten hinweg erstreckt. 
+
+<h4><font color=#6666CC>Schema:</font></h4>
+<img src="xcolspan.gif" width=150 height=50 border=0 alt="Schema: colspan">
+
+<a name="itable_colspan"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th colspan=2&gt;Inhalt einer Zelle, die sich &uuml;ber 2 Spalten erstreckt
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inhalt der ersten Zelle unter der erstreckten Zelle
+      &lt;td&gt;Inhalt der zweiten Zelle unter der erstreckten Zelle
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>colspan=</b> [Anzahl Spalten] erreichen Sie, da&szlig; sich eine Zelle &uuml;ber mehrere Spalten hinweg erstreckt (<i>colspan = column span = Spalten spannen</i>).  Die Angabe ist nur wirksam, wenn die Tabelle mindestens so viele Spalten besitzt wie angegeben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie in einer Tabellenzeile eine Zelle beispielsweise &uuml;ber vier Spalten hinweg &quot;spannen&quot;, sollten Sie in den anderen Zeilen der Tabelle anstelle dieser einen Zelle vier eigene Zellen definieren. Die Summe der Zellen sollte in jeder Zeile der Tabelle gleich sein.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zellen in einer Spalte zeilenweise verbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceea.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen mehrere Zellen in einer Spalte verbinden, so da&szlig; sich eine Zeile in dieser Spalte &uuml;ber mehrere Zeilen hinweg erstreckt. 
+
+<h4><font color=#6666CC>Schema:</font></h4>
+<img src="xrowspan.gif" width=150 height=50 border=0 alt="Schema: rowspan">
+
+<a name="itable_rowspan"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=2&gt;Inhalt einer Zelle, die sich &uuml;ber 2 Zeilen erstreckt
+      &lt;td &gt;Inhalt der ersten Zelle neben der erstreckten Zelle
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inhalt der zweiten Zelle neben der erstreckten Zelle
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>rowspan=</b> [Anzahl Zeilen] erreichen Sie, da&szlig; sich eine Zelle in einer Spalte &uuml;ber mehrere Zeilen hinweg erstreckt (<i>rowspan = Zeilen spannen</i>). Die Angabe ist nur wirksam, wenn die Tabelle mindestens so viele Zeilen besitzt wie angegeben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie in einer Tabellenzeile eine Zelle beispielsweise &uuml;ber vier Zeilen hinweg &quot;spannen&quot;, sollten Sie in der gleichen Zeile den Inhalt der ersten danebenstehen Zelle definieren. In den drei folgenden Zeilen sollten Sie an gleicher Stelle die drei &uuml;brigen Zellen definieren, die neben der gestreckten Zelle stehen sollen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zellen spalten- und zeilenweise zugleich verbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceea.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen Zellen definieren, die sich gleichzeitig &uuml;ber mehrere Zeilen und Spalten hinweg erstrecken. 
+
+<h4><font color=#6666CC>Schema:</font></h4>
+<img src="xcolrow.gif" width=225 height=114 border=0>
+
+<a name="itable_rowspan"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th colspan=2 rowspan=2&gt;Inhalt Zelle &uuml;ber 2 Zeilen und 2 Spalten
+      &lt;td&gt;Inhalt der ersten Zelle neben der erstreckten Zelle
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inhalt der zweiten Zelle neben der erstreckten Zelle
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Inhalt der ersten Zelle unter der erstreckten Zelle
+      &lt;td&gt;Inhalt der zweiten Zelle unter der erstreckten Zelle
+      &lt;td&gt;Inhalt der dritten Zelle unter der erstreckten Zelle
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Sie k&ouml;nnen die Angaben <b>colspan=</b> [Anzahl Spalten] und <b>rowspan=</b> [Anzahl Zeilen] in einer Zelle kombinieren. Dadurch erreichen Sie, da&szlig; sich die Zelle &uuml;ber mehrere Spalten und Zeilen zugleich erstreckt.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tced.htm"><b>Zelleninhalte ausrichten</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcef.htm"><b>Farbige Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

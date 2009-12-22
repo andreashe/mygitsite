@@ -1,0 +1,276 @@
+<html>
+<head>
+<title>SELFHTML: Browser-interne Verweise</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b> Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Browser-interne Verweise</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Browser-interne Verweise definieren</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"> Browser-interne Verweise definieren</font></h2></a>
+Die folgenden Spezial-Referenzen werden nur von Netscape interpretiert. Es handelt sich zum Teil um n&uuml;tzliche, zum Teil um weniger n&uuml;tzliche Verweise einige Verweise f&uuml;hren zu internen, in der Browser-Software gespeicherten Zielen, andere zu Zielen im WWW. 
+<p>
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Verweise zu softtware-internen Zielen</font></h3>
+
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="javascript:"><b>javascript:</b></a> - Dieser Verweis ruft eine interne Browser-Seite von Netscape auf, in der man JavaScripts Zeile f&uuml;r Zeile interpretieren und auf Richtigkeit pr&uuml;fen lassen kann. Um einen solchen Verweis zu 
+setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;javascript:&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="livescript:"><b>livescript:</b></a> - Dieser Verweis ruft eine interne Browser-Seite von Netscape auf, in der man LiveScripts (Vorg&auml;nger-Version von JavaScript) Zeile f&uuml;r Zeile interpretieren und auf Richtigkeit pr&uuml;fen lassen kann. Um einen solchen Verweis zu 
+setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;livescript:&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="mocha:"><b>mocha:</b></a> - Dieser Verweis ruft eine interne Browser-Seite von Netscape auf, in der man Mocha-Code Zeile f&uuml;r Zeile interpretieren und auf Richtigkeit pr&uuml;fen lassen kann. Um einen solchen Verweis zu 
+setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;mocha:&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:"><b>about:</b></a> - Dieser Verweis ruft die interne Browser-Seite mit Versionshinweisen auf (bei Netscape 4.0 nicht mehr - dort f&uuml;hrt dieser Befehl zu einem Ziel im WWW). Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:mozilla"><b>about:mozilla</b></a> - Dieser Verweis ruft eine nicht ganz
+so ernstzunehmende, interne Browser-Seite von Netscape auf. Um einen solchen Verweis zu
+setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:mozilla&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:logo"><b>about:logo</b></a> - Dieser Verweis ruft eine interne
+Browser-Seite auf, die das Netscape-Logo in voller Gr&ouml;&szlig;e darstellt. Um
+einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:logo&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:plugins"><b>about:plugins</b></a> - Dieser Verweis ruft eine interne
+Browser-Seite auf, in der angezeigt wird, welche Netscape-Plugins (z.B. Live-Chat)
+beim Anwender installiert sind. Wenn keine Pugins installiert sind, bleibt die Seite leer. Um einen solchen Verweis zu setzen, notieren Sie
+folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:plugins&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:license"><b>about:license</b></a> - Dieser Verweis erzeugt eine interne
+Browser-Seite, in der die Lizenzvereinbarungen angezeigt werden, die beim Erstaufruf von
+Netscape einmalig erscheinen. Um einen solchen Verweis zu setzen, notieren Sie
+folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:license&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="about:rsalogo"><b>about:rsalogo</b></a> - Dieser Verweis ruft eine interne
+Browser-Seite auf, die das RSA-Logo f&uuml;r den von Netscape unterst&uuml;tzten
+Security-Standard darstellt. Um einen solchen Verweis zu setzen, notieren Sie
+folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:rsalogo&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+(wobei Sie als &quot;Verweistext&quot; notieren k&ouml;nnen, was Sie wollen)
+<p>
+
+
+
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Verweise zu Zielen im WWW</font></h3>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:ami"><b>about:ami</b></a> - Dieser Verweis ruft die Homepage von Ari Luotonen auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:ami&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:atotic"><b>about:atotic</b></a> - Dieser Verweis ruft die Homepage von Aleks Totic auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:atotic&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:blythe"><b>about:blythe</b></a> - Dieser Verweis ruft die Homepage von Garrett Blythe auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:blythe&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:chouck"><b>about:chouck</b></a> - Dieser Verweis ruft die Homepage von Chris Houk auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:chouk&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:dmose"><b>about:dmose</b></a> - Dieser Verweis ruft die Homepage von Dan Mosedale auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:dmose&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:dp"><b>about:dp</b></a> - Dieser Verweis ruft die Homepage von dp Suresh auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:dp&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:ebina"><b>about:ebina</b></a> - Dieser Verweis ruft die Homepage von Eric Bina auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:ebina&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:hagan"><b>about:hagan</b></a> - Dieser Verweis ruft die Homepage von Hagan Heller auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:hagan&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:jwz"><b>about:jeff</b></a> - Dieser Verweis ruft die Homepage von Jeffrey M.Treuhaft auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:jeff&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:jg"><b>about:jg</b></a> - Dieser Verweis ruft die Homepage von John Giannandrea auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:jg&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:jsw"><b>about:jsw</b></a> - Dieser Verweis ruft die Homepage von Jeff Weinstein auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:JWZ&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:jwz"><b>about:jwz</b></a> - Dieser Verweis ruft die Homepage von Jamie Zawinski auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:jwz&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:karlton"><b>about:karlton</b></a> - Dieser Verweis ruft die Homepage von Philip Karlton auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:karlton&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:kipp"><b>about:kipp</b></a> - Dieser Verweis ruft die Homepage von Kipp E.B. Hickman auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:kipp&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:marca"><b>about:marca</b></a> - Dieser Verweis ruft die Homepage von Marc Andreessen, dem Mitbegr&uuml;nder und kreativen Genie von Netscape, auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:marca&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:mlm"><b>about:mlm</b></a> - Dieser Verweis ruft die Homepage von Mike McCool auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:mlm&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:montulli"><b>about:montulli</b></a> - Dieser Verweis ruft die Homepage von Lou Montulli auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:montulli&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:mtoy"><b>about:mtoy</b></a> - Dieser Verweis ruft die Homepage von Michael Toy auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:mtoy&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:paquin"><b>about:paquin</b></a> - Dieser Verweis ruft die Homepage von Tom Paquin auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:paquin&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:robm"><b>about:robm</b></a> - Dieser Verweis ruft die Homepage von Rob McCool auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:robm&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:sharoni"><b>about:sharoni</b></a> - Dieser Verweis ruft die Homepage von Sharon Iimura auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:sharoni&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:terry"><b>about:terry</b></a> - Dieser Verweis ruft die Homepage von Terry Weissman auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:terry&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="about:timm"><b>about:timm</b></a> - Dieser Verweis ruft die Homepage von Tim McClarren auf. Um einen solchen Verweis zu setzen, notieren Sie folgenden Befehl:<br>
+<tt><font color=#6666CC><b>&lt;a
+href=&quot;about:timm&quot;&gt;Verweistext&lt;/a&gt;</b></font></tt><br>
+<p>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcfi.htm"><b>Verweise bei Frames</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcga.htm"><b>Grafiken einbinden</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b> Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,387 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Operatoren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Operatoren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Zuweisungsoperator</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Vergleichsoperatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Berechnungsoperatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Logische Operatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Bit-Operatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Operator zur Zeichenkettenverkn&uuml;pfung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a7"><b>Operator zur Zeichenkettenwiederholung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a8"><b>Operatorenrangfolge</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Zuweisungsoperator</font></h2></a>
+
+Sie k&ouml;nnen zum Beispiel einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> einen Wert zuweisen. Der Zuweisungsoperator daf&uuml;r ist ein Istgleichzeichen.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Name = "Josua Piesepampel";
+$Code = 4711;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Den Skalaren wird mit dem Zuweisungsoperator <b>=</b> jeweils ein Wert zugewiesen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Vergleichsoperatoren</font></h2></a>
+
+Vergleichsoperatoren brauchen Sie, wenn Sie zwei Werte vergleichen wollen, z.B. den aktuellen Inhalt eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdeb.htm#a1"><b>Skalars</b></a> mit einem fixen Wert.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+if($SinnDesLebens == 42)
+ { print &quot;Sie haben das Leben verstanden!\n&quot; };
+if($SinnDesLebens != 42)
+ { print &quot;Sie haben nix kapiert vom Leben!\n&quot; };
+if($SinnDesLebens &gt; 42)
+ { print &quot;Sind Sie wahnsinnig?\n&quot; };
+if($SinnDesLebens &lt; 42)
+ { print &quot;Sie sind eine Nummer zu klein f&uuml;r das Leben!\n&quot; };
+if($Alter &gt;= 18)
+ { print &quot;Sie d&uuml;rfen selbst diesen Schwachsinn hier sehen!\n&quot; };
+if($Alter &lt;= 17)
+ { print &quot;Sie sind nicht mal alt genug f&uuml;r diesen Schwachsinn!\n&quot; };
+ 
+if($Passwort eq &quot;Hexasex&quot;)
+ { print &quot;Sie haben Zugang zum Sex im hexadezimalen Raum!\n&quot; };
+if($Passwort ne &quot;Hexasex&quot;)
+ { print &quot;Haben Sie lieber eindimensionalen Sex daheim im Bett!\n&quot; };
+if($Name gt &quot;Y&quot;)
+ { print &quot;Sie sind aber auch immer der Letzte!\n&quot; };
+if($Name lt &quot;B&quot;)
+ { print &quot;Sie sind aber auch immer der Erste!\n&quot; };
+if($Name ge &quot;ZZ Top&quot;)
+ { print &quot;Ihre Lieblingsband ist ZZ Top oder was ganz Perverses!\n&quot; };
+if($Name le &quot;Abba&quot;)
+ { print &quot;Ihre Lieblingsband ist Abba oder was ganz Perverses!\n&quot; };
+
+if($Alter =~ /[^0-9]/)
+ { print &quot;Das ist ja gar keine Zahl!\n&quot; };
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Perl unterscheidet Vergleichsoperatoren f&uuml;r Zahlen und f&uuml;r Zeichenketten. Ferner gibt es einen speziellen Operator f&uuml;r Vergleiche mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>regul&auml;ren Ausdr&uuml;cken</b></a>.
+<p>
+Um abzufragen, ob zwei Zahlen gleich sind, notieren Sie zwei Istgleichzeichen <b>==</b> nebeneinander.<br>
+Um abzufragen, ob zwei Zahlen unterschiedlich sind, notieren Sie zwischen beiden Werten die Zeichen <b>!=</b>.<br>
+Um abzufragen, ob eine Zahl gr&ouml;&szlig;er oder gleich ist als eine andere, notieren Sie die Zeichen <b>&gt;=</b>.<br>
+Um abzufragen, ob eine Zahl in jedem Fall gr&ouml;&szlig;er ist als eine andere, notieren Sie das Zeichen <b>&gt;</b>.<br>
+Um abzufragen, ob eine Zahl kleiner oder gleich ist als eine andere, notieren Sie die Zeichen <b>&lt;=</b>.<br>
+Um abzufragen, ob eine Zahl in jedem Fall kleiner ist als eine andere, notieren Sie das Zeichen <b>&lt;</b>.
+<p>
+Um abzufragen, ob zwei Zeichenketten gleich sind, notieren Sie <b>eq</b> zwischen den beiden Werten, die verglichen werden sollen (<i>eq = equal = gleich</i>).<br>
+Um abzufragen, ob zwei Zeichenketten unterschiedlich sind, notieren Sie <b>ne</b> zwischen den beiden Werten, die verglichen werden sollen (<i>ne = not equal = nicht gleich</i>).<br>
+Um abzufragen, ob eine erste Zeichenkette alphabetisch weiter hinten liegt als eine zweite, notieren Sie <b>gt</b> zwischen den beiden Werten, die verglichen werden sollen (<i>gt = greater than = gr&ouml;&szlig;er als</i>).<br>
+Um abzufragen, ob eine erste Zeichenkette alphabetisch weiter vorne liegt als eine zweite, notieren Sie <b>lt</b> zwischen den beiden Werten, die verglichen werden sollen (<i>gt = less than = kleiner als</i>).<br>
+Um abzufragen, ob eine erste Zeichenkette alphabetisch gleich ist wie eine zweite oder weiter hinten liegt, notieren Sie <b>ge</b> zwischen den beiden Werten, die verglichen werden sollen (<i>ge = greater or equal = gr&ouml;&szlig;er oder gleich</i>).<br>
+Um abzufragen, ob eine erste Zeichenkette alphabetisch gleich ist wie eine zweite oder weiter vorne liegt, notieren Sie <b>le</b> zwischen den beiden Werten, die verglichen werden sollen (<i>le = less or equal = kleiner oder gleich</i>).<br>
+<p>
+Um den Wert eines Skalars, egal ob Zahl oder Zeichenkette, mit einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>regul&auml;ren Ausdruck</b></a> zu vergleichen, benutzen Sie den Vergleichsoperator <b>=~</b>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Berechnungsoperatoren</font></h2></a>
+
+Um mit numerischen Werten Berechnungen durchzuf&uuml;hren, brauchen Sie Berechnungsoperatoren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Hundertlasser = 83 + 17;
+$Hundertlasser = 113 - 13;
+$Hundertlasser = 4 * 25;
+$Hundertlasser = 450 / 4.5;
+$Hundertlasser = 450 / 2 - 125;
+$Hundertlasser = 10 * (2 + 8);
+$x = $Hundertlasser % 4;
+if($x == 0)
+ { print $Hundertlasser, &quot; ist ein Schaltjahr\n&quot; }
+
+/* Besondere Notationen: */
+
+$Zahl = 100;      
+$Zahl++;      # $Zahl hat jetzt den Wert 101
+$Zahl--;      # $Zahl hat jetzt den Wert 100
+$Zahl += 10;  # $Zahl hat jetzt den Wert 110
+$Zahl -= 10;  # $Zahl hat jetzt den Wert 100
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mathematische Operatoren notieren Sie mit den daf&uuml;r &uuml;blichen Zeichen. Mit <b>+</b> notieren Sie eine Addition, mit <b>-</b> eine Subtraktion, mit <b>*</b> eine Multiplikation, mit <b>/</b> eine Division. Eine Besonderheit stellt der Operator <b>%</b> dar. Damit wird eine sogenannte Modulo-Division durchgef&uuml;hrt. Bei einer Modulo-Division werden zwei Werte dividiert. Das Ergebnis ist jedoch im Gegensatz zur normalen Division nur der Restwert der Division. Wenn Sie z.B. <i>13 % 5</i> notieren, erhalten Sie als Ergebnis 3, weil 13 geteilt durch 5 gleich 2 Rest 3 ergibt. Diese 3 ist es, die als Ergebnis einer Modulo-Division herauskommt.
+<p>
+Sie k&ouml;nnen mehrere Operationen in Reihe notieren. Dabei gilt die &uuml;bliche &quot;Punkt-vor-Strich-Regel&quot;. Wenn Sie eine andere Regel erzwingen wollen, m&uuml;ssen Sie Klammern verwenden, so wie im obigen Beispiel <i>$ImmerGleich = 10 * (2 + 8);</i>.
+<p>
+Die besonderen Notationen, die in den obigen Beispielen vorkommen, k&ouml;nnen Sie verwenden, wenn Sie Additionen oder Subtraktionen abk&uuml;rzen wollen:<br>
+<b>$Zahl++;</b> ist eine Abk&uuml;rzung f&uuml;r <b>$Zahl = $Zahl + 1;</b><br>
+<b>$Zahl--;</b> ist eine Abk&uuml;rzung f&uuml;r <b>$Zahl = $Zahl - 1;</b><br>
+<b>$Zahl += 10;</b> ist eine Abk&uuml;rzung f&uuml;r <b>$Zahl = $Zahl + 10;</b><br>
+<b>$Zahl -= 10;</b> ist eine Abk&uuml;rzung f&uuml;r <b>$Zahl = $Zahl - 10;</b><br>
+<p>
+Der Operator <b>++</b> wird auch als Inkremationsoperator bezeichnet, der Operator <b>--</b> als Dekrementationsoperator.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Logische Operatoren</font></h2></a>
+
+Logische Operatoren brauchen Sie, wenn Sie komplexere Bedingungen f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecd.htm"><b>bedingte Anweisungen</b></a> oder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tece.htm"><b>Schleifen</b></a> formulieren wollen.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Versuche = 1;
+$Wert = 0;
+$min = 66;
+$max = 77;
+
+Eingabe:
+print &quot;Geben Sie eine Zahl zwischen &quot;, $min, &quot; und &quot;, $max, &quot; ein: &quot;;
+$Wert = &lt;STDIN&gt;;
+chop($Wert);
+if($Wert &lt; $min || $Wert &gt; $max)
+ { 
+  if($Wert =~ /[^0-9]/)
+   { 
+     print &quot;Das war keine Zahl.\n\n&quot;; 
+     $Versuche++;
+     goto Eingabe;
+   }
+  if($Versuche &lt; 3 && $Wert &lt; $min)
+   { print &quot;Ihre Zahl war zu klein.\n\n&quot;; }
+  elsif($Versuche &lt; 3 && $Wert &gt; $max)
+   { print &quot;Ihre Zahl war zu gross.\n\n&quot;; }
+  elsif($Versuche &gt;= 3 && $Wert &lt; $min)
+   { print &quot;Ihre Zahl war verdammt noch mal zu klein!\n\n&quot;; }      
+  elsif($Versuche &gt;= 3 && $Wert &gt; $max)
+   { print &quot;Ihre Zahl war verdammt noch mal zu gross!\n\n&quot;; }      
+  $min = abs($Wert - $min);
+  $max = $min + abs($max - $min);
+  $Versuche++;
+  goto Eingabe;
+ }
+if($Versuche > 1)
+ { print &quot;Sehen Sie, so lernt man dazu!\n&quot;; }
+else
+ { print &quot;Sie waren sicher mal ein braves Kind!\n&quot;; }
+ 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit dem logischen Operator <b>&amp;&amp;</b> verkn&uuml;pfen Sie zwei oder mehrere Bedingungen durch &quot;und&quot, d.h. beide bzw. alle Bedingungen m&uuml;ssen erf&uuml;llt sein, damit die gesamte Bedingung erf&uuml;llt ist.<br>
+Mit dem logischen Operator <b>||</b> verkn&uuml;pfen Sie zwei oder mehrere Bedingungen inklusiv durch &quot;oder&quot, d.h. es gen&uuml;gt, wenn eine der Bedingungen erf&uuml;llt ist, damit die gesamte Bedingung erf&uuml;llt ist.<br>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Bit-Operatoren</font></h2></a>
+
+Bit-Operatoren sind nur etwas f&uuml;r Profis. Um Bit-Operatoren richtig einzusetzen, m&uuml;ssen Sie viel von computer-internen Speichervorg&auml;ngen verstehen. Deshalb werden die Bit-Operatoren hier nur kurz erw&auml;hnt.
+
+<p>
+<b>&gt;&gt;</b> verschiebt Bits nach rechts<br>
+<b>&lt;&lt;</b> verschiebt Bits nach links<br>
+<b>&amp;</b> definiert in einer Bitmaske eine Und-Bedingung<br>
+<b>|</b> definiert in einer Bitmaske eine inklusive Oder-Bedingung<br>
+<b>^</b> definiert in einer Bitmaske eine exklusive Oder-Bedingung<br>
+<b>!</b> definiert in einer Bitmaske eine Negations-Bedingung<br>
+<b>~</b> definiert in einer Bitmaske eine Komplement&auml;r-Bedingung<br>
+
+
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Operator zur Zeichenkettenverkn&uuml;pfung</font></h2></a>
+
+Mit einem Punkt <b>.</b> k&ouml;nnen Sie eine Zeichenkette an eine andere anh&auml;ngen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Subjekte = (&quot;Helmut Kohl &quot;,&quot;Theo Waigel &quot;,&quot;Rudolph Scharping &quot;,&quot;Gerhard Schroeder &quot;);
+@Praedikate = (&quot;liebt &quot;,&quot;verehrt &quot;,&quot;umgarnt &quot;,&quot;bereichert &quot;);
+@AkkusativObj = (&quot;den Zauber &quot;,&quot;die Freuden &quot;,&quot;das Prinzip &quot;,&quot;den Rausch &quot;);
+@GenitivObj = (&quot;der Macht.&quot;,&quot;des Bundestags.&quot;,&quot;der neuen Bundeshauptstadt.&quot;,&quot;der Sinneslust.&quot;);
+@Indizes = (0..3);
+
+print &quot;ZUFALLS&quot;.&quot;SAETZE\n\n&quot;;
+while($i &lt; 10)
+ { 
+  $j = 0;
+  sleep(2);
+  $Zufallssatz = &quot;&quot;;
+  srand(time());
+  foreach $j (0..3)
+   {
+    $Indizes[$j] = rand(3);
+   }
+  $Zufallssatz = $Zufallssatz.$Subjekte[$Indizes[0]];
+  $Zufallssatz = $Zufallssatz.$Praedikate[$Indizes[1]];
+  $Zufallssatz = $Zufallssatz.$AkkusativObj[$Indizes[2]];
+  $Zufallssatz = $Zufallssatz.$GenitivObj[$Indizes[3]];
+  print $Zufallssatz, &quot;\n&quot;;
+  $i++;
+ }  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Sie k&ouml;nnen sowohl Zeichenkettenvariablen als auch direkte Zeichenkettenangaben mit <b>.</b> aneinanderh&auml;ngen.
+<p>
+Das obige Beispiel-Script erzeugt Zufallss&auml;tze basierend auf den Listen von Satzelementen, die am Beginn des Scripts definiert werden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a7"><h2><font color=#6666CC>Operator zur Zeichenkettenwiederholung</font></h2></a>
+
+In Perl können Sie mit <b>x</b> Zeichenketten &quot;multiplizieren&quot;.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+print &quot;A&quot;.&quot;h&quot; x 10, &quot;!\n&quot;;
+# erzeugt die Ausgabe &quot;Ahhhhhhhhhh!&quot;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Notieren Sie den <b>x</b>-Operator hinter der Zeichenkette, die Sie multiplizieren wollen. Hinter dem Operator geben Sie an, wie oft die Zeichenkette wiederholt werden soll.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a8"><h2><font color=#6666CC>Operatorenrangfolge</font></h2></a>
+
+Unter den Operatoren von Perl gibt es eine festgelegte Rangordnung. Wenn Sie komplexe Rechenoperationen durchf&uuml;hren oder mehrere Bedingungen miteinander verkn&uuml;pfen, gilt bei der internen Aufl&ouml;sung solcher kompexen Ausdr&uuml;cke die folgende Rangordnung:
+<ol>
+<li>Rangstufe: <tt><b>,</b></tt> (Aneinanderreihung)
+<li>Rangstufe: <tt><b>= += -= &= ^= |= </b></tt>  (Zuweisung)
+<li>Rangstufe: <tt><b>?: </b></tt> (<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm#a2"><b>Entweder-Oder-Bedingung</b></a>)
+<li>Rangstufe: <tt><b>.. </b></tt> (Bereichsdefinition in <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a2"><b>Listen</b></a>)
+<li>Rangstufe: <tt><b>|| </b></tt> (logisches Oder)
+<li>Rangstufe: <tt><b>&& </b></tt> (logisches Und)
+<li>Rangstufe: <tt><b>| ^</b></tt> (bitweises Oder - inklusiv/exklusiv)
+<li>Rangstufe: <tt><b>& </b></tt> (bitweises Und)
+<li>Rangstufe: <tt><b>== != eq ne</b></tt> (Gleichheit/Ungleichheit)
+<li>Rangstufe: <tt><b>&lt; &lt;= &gt; &gt;= lt le gt ge</b></tt> (Vergleich größer/kleiner)
+<li>Rangstufe: <tt><b>&lt;&lt; &gt;&gt; &gt;&gt; </b></tt> (Verschieben von Bits)
+<li>Rangstufe: <tt><b>+ - .</b></tt> (Addition, Subtrakion, Zeichenkettenaddition)
+<li>Rangstufe: <tt><b>* / % x</b></tt> (Multiplikation, Division, Modulo-Division, Zeichenkettenwiederholung)
+<li>Rangstufe: <tt><b>=~ !~</b></tt> (Übereinstimmung bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceg.htm"><b>regulären Ausdrücken</b></a>)
+<li>Rangstufe: <tt><b>**</b></tt> (Potenzierung)
+<li>Rangstufe: <tt><b>! ~ -</b></tt> (Bitoperatoren) 
+<li>Rangstufe: <tt><b>++ --</b></tt> (Inkrementieren, Dekrementieren) 
+</ol>
+Mit Hilfe von Klammern k&ouml;nnen Sie die Rangfolge bei den Operatoren beeinflussen und Ausdr&uuml;cke so bewerten, wie Sie es w&uuml;nschen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$OffizielleStatistik = 3.29 * 3 + 4.71;
+$MeineStatistik = 3.29 * (3 + 4.71);
+print &quot;Die offizielle Statistik sagt &quot;,$OffizielleStatistik&quot;\n&quot;
+print &quot;Meine Statistik sagt &quot;,$MeineStatistik,&quot;\n&quot;;
+</pre></td></tr></table><p>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tece.htm"><b>Schleifen und Sprungbefehle</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecg.htm"><b>Regul&auml;re Ausdr&uuml;cke</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

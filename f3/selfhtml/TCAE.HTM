@@ -1,0 +1,353 @@
+<html>
+<head>
+<title>SELFHTML: Farben definieren in HTML</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Farben definieren in HTML</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Farben in HTML</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Hexadezimale Angabe von Farben</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Farbnamen für die 16 Grundfarben</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Speziellere Farbnamen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Farben in HTML</font></h2></a>
+Farben k&ouml;nnen Sie in HTML in folgenen Zusammenh&auml;ngen definieren:
+<ul>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm"><b>dateiweiten Hinter- und Vordergrundfarben</b></a></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarben f&uuml;r Textabschnitte</b></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm#a2"><b>Farben in Style-Sheet-Angaben</b></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm"><b>Farben in Tabellen</b></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a5"><b>farbigen Trennlinien</b></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a5"><b>farbigen Rahmen f&uuml;r Frames</b></a></a>
+<li>bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclb.htm#a1"><b>Hintergrundfarben  f&uuml;r Layer</b></a></a>
+</ul>
+Obwohl die HTML-Tags der entsprechenden Farbdefinitionen sehr unterschiedlich sind, gilt bei allen Farbdefinitionen ein einheitliches Schema. Grunds&auml;tzlich gibt es zwei M&ouml;glichkeiten, Farben in HTML zu
+definieren:
+<ol>
+<li>durch Angabe der RGB-Werte der gew&uuml;nschten Farbe in Hexadezimalform
+(RGB = Rot/Gr&uuml;n/Blau-Wert der Farbe)
+<li>durch Angabe eines Farbnamens
+</ol>
+Wenn Sie hexadezimale Werte angeben, arbeiten Sie Browser-unabh&auml;ngig, und Sie haben die volle Freiheit zwischen 16,7 Millionen Farben.
+<p>
+Wenn Sie Farbnamen angeben, umgehen Sie die etwas schwierige Definition einer Farbe im Hexadezimal-Modus. Derzeit gibt es jedoch noch keine standardisierten Farbnamen. Farbnamen sind also weitgehend Browser-abh&auml;ngig.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> <font color=#6666CC>Hexadezimale Angabe von Farben</font></h2></a>
+Wenn Sie Farben direkt im Hexadezimal-Modus definieren, m&uuml;ssen Sie die
+gew&uuml;nschte Farbe aus Angaben zu den drei Grundfarben <b>R</b>ot, <b>G</b>r&uuml;n und <b>B</b>lau 
+(RGB-Werte) zusammenstellen.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;body bgcolor=#808080&gt; &lt;!-- dunkelgrauer Dateihintergrund --&gt;
+&lt;font color=#990000&gt;roter Text&lt;/font&gt;
+&lt;table bgcolor=#00C0C0&gt; &lt;!-- blaugrüner Tabellenhintergrund --&gt;
+&lt;hr color=#CC00CC&gt;  &lt;!-- violette Trennlinie --&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erläuterung:</font></h4>
+<img src="xtcae01.gif" width=224 height=104 border=0>
+<p>
+Jede hexadezimale Farbdefinition ist 6stellig und hat das Schema: <b>#XXXXXX</b>.<br>
+Zun&auml;chst notieren Sie also ein Gatter '#'. Dahinter folgen 6 Stellen
+f&uuml;r die Farbdefinition. Die ersten beiden Stellen stellen den Rot-Wert der
+Farbe dar, die zweiten beiden Stellen den Gr&uuml;n-Wert, und die letzten beiden
+Stellen den Blau-Wert.
+<p>
+Hexadezimale Ziffern sind:
+<p>
+<b>0</b> (entspricht dezimal 0)<br>
+<b>1</b> (entspricht dezimal 1)<br>
+<b>2</b> (entspricht dezimal 2)<br>
+<b>3</b> (entspricht dezimal 3)<br>
+<b>4</b> (entspricht dezimal 4)<br>
+<b>5</b> (entspricht dezimal 5)<br>
+<b>6</b> (entspricht dezimal 6)<br>
+<b>7</b> (entspricht dezimal 7)<br>
+<b>8</b> (entspricht dezimal 8)<br>
+<b>9</b> (entspricht dezimal 9)<br>
+<b>A</b> (entspricht dezimal 10)<br>
+<b>B</b> (entspricht dezimal 11)<br>
+<b>C</b> (entspricht dezimal 12)<br>
+<b>D</b> (entspricht dezimal 13)<br>
+<b>E</b> (entspricht dezimal 14)<br>
+<b>F</b> (entspricht dezimal 15)<p>
+<p>
+Eine hexadezimale Ziffer kann also 16 Zust&auml;nde haben. F&uuml;r jeden
+Farbwert (Rot, Gr&uuml;n, Blau) stehen 2 Ziffern zur Verf&uuml;gung. Das macht
+16 x 16 (= 256) m&ouml;gliche Zust&auml;nde pro Farbwert.
+
+<a name="a21"><h4><font color=#6666CC>Beachten Sie:</font></h4></a>
+Es gibt 16 Grundfarben, die von jedem VGA-kompatiblen Bildschirm angezeigt werden k&ouml;nnen.
+<p>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcaea.htm#a21"><b>Anzeigebeispiel: die 16 Grundfarben</b></a>
+<p>
+Es gibt ferner 216 Standardfarben, die Netscape intern und plattformübergreifend zur Verfügung stellt. Diese Farbpalette hat sich im WWW zu einer Art Quasi-Standard entwickelt.
+<p>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcaeb.htm#a21"><b>Anzeigebeispiel: die 216 Standardfarben</b></a>
+<p>
+Mehr über diese Paletten und ihre Bedeutung erfahren Sie im Dokumentabschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfb.htm"><b>Farbpaletten und Farbtiefen</b></a>.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> <font color=#6666CC>Farbnamen für die 16 Grundfarben</font></h2></a>
+Um eine Farbe mit Hilfe eines Farbnamens zu definieren, geben Sie anstelle des hexadezimalen RGB-Werts einfach den gew&uuml;nschten Farbnamen an. Die folgenden Farbnamen sind Bestandteil von HTML 3.2 und werden von vielen WWW-Browsern verstanden.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;body bgcolor=black&gt; &lt;!-- schwarzer Dateihintergrund --&gt;
+&lt;font color=yellow&gt;gelber Text&lt;/font&gt;
+&lt;table bgcolor=aqua&gt; &lt;!-- hellblauer Tabellenhintergrund --&gt;
+&lt;hr color=red&gt;  &lt;!-- rote Trennlinie --&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erläuterung:</font></h4>
+Geben Sie den gewünschten Farbnamen an der erforderlichen Stelle an. 
+Folgende Farbnamen sind erlaubt:
+<p>
+<b>black &#160;&#160;</b><font color=black><b>Schrift in dieser Farbe</b></font><br>
+<b>maroon &#160;&#160;</b><font color=maroon><b>Schrift in dieser Farbe</b></font><br>
+<b>green &#160;&#160;</b><font color=green><b>Schrift in dieser Farbe</b></font><br>
+<b>olive &#160;&#160;</b><font color=olive><b>Schrift in dieser Farbe</b></font><br>
+<b>navy &#160;&#160;</b><font color=navy><b>Schrift in dieser Farbe</b></font><br>
+<b>purple &#160;&#160;</b><font color=purple><b>Schrift in dieser Farbe</b></font><br>
+<b>teal &#160;&#160;</b><font color=teal><b>Schrift in dieser Farbe</b></font><br>
+<b>gray &#160;&#160;</b><font color=gray><b>Schrift in dieser Farbe</b></font><br>
+<b>silver &#160;&#160;</b><font color=silver><b>Schrift in dieser Farbe</b></font><br>
+<b>red &#160;&#160;</b><font color=red><b>Schrift in dieser Farbe</b></font><br>
+<b>lime &#160;&#160;</b><font color=lime><b>Schrift in dieser Farbe</b></font><br>
+<b>yellow &#160;&#160;</b><font color=yellow><b>Schrift in dieser Farbe</b></font><br>
+<b>blue &#160;&#160;</b><font color=blue><b>Schrift in dieser Farbe</b></font><br>
+<b>fuchsia &#160;&#160;</b><font color=fuchsia><b>Schrift in dieser Farbe</b></font><br>
+<b>aqua &#160;&#160;</b><font color=aqua><b>Schrift in dieser Farbe</b></font><br>
+<b>white &#160;&#160;</b><font color=white><b>Schrift in dieser Farbe</b></font><b>weiß</b>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> <font color=#6666CC>Speziellere Farbnamen</font></h2></a>
+Um eine Farbe mit Hilfe eines Farbnamens zu definieren, geben Sie anstelle des 
+hexadezimalen RGB-Werts einfach den gew&uuml;nschten Farbnamen an. Die folgenden Farbnamen werden von Netscape und dem MS Internet Explorer interpretiert, jedoch nicht einheitlich.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;body bgcolor=brown&gt; &lt;!-- brauner Dateihintergrund --&gt;
+&lt;font color=blueviolet&gt;blau-violetter Text&lt;/font&gt;
+&lt;table bgcolor=darkblue&gt; &lt;!-- dunkelblauer Tabellenhintergrund --&gt;
+&lt;hr color=pink&gt;  &lt;!-- pinkfarbene Trennlinie --&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erläuterung:</font></h4>
+Geben Sie den gewünschten Farbnamen an der erforderlichen Stelle an. 
+Folgende Farbnamen sind erlaubt:
+<p>
+<b>aliceblue             &#160;&#160;</b><font color=aliceblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>antiquewhite           &#160;&#160;</b><font color=antiquewhite><b>Das ist Text in dieser Farbe</b></font><br>
+<b>aquamarine             &#160;&#160;</b><font color=aquamarine><b>Das ist Text in dieser Farbe</b></font><br>
+<b>azure                  &#160;&#160;</b><font color=azure><b>Das ist Text in dieser Farbe</b></font><br>
+<b>beige                  &#160;&#160;</b><font color=beige><b>Das ist Text in dieser Farbe</b></font><br>
+<b>bisque                 &#160;&#160;</b><font color=bisque><b>Das ist Text in dieser Farbe</b></font><br>
+<b>blanchedalmond         &#160;&#160;</b><font color=blanchedalmond><b>Das ist Text in dieser Farbe</b></font><br>
+<b>blueviolet             &#160;&#160;</b><font color=blueviolet><b>Das ist Text in dieser Farbe</b></font><br>
+<b>brown                  &#160;&#160;</b><font color=brown><b>Das ist Text in dieser Farbe</b></font><br>
+<b>burlywood              &#160;&#160;</b><font color=burlywood><b>Das ist Text in dieser Farbe</b></font><br>
+<b>cadetblue              &#160;&#160;</b><font color=cadetblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>chartreuse             &#160;&#160;</b><font color=chartreuse><b>Das ist Text in dieser Farbe</b></font><br>
+<b>chocolate              &#160;&#160;</b><font color=chocolate><b>Das ist Text in dieser Farbe</b></font><br>
+<b>coral                  &#160;&#160;</b><font color=coral><b>Das ist Text in dieser Farbe</b></font><br>
+<b>cornflowerblue         &#160;&#160;</b><font color=cornflowerblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>cornsilk               &#160;&#160;</b><font color=cornsilk><b>Das ist Text in dieser Farbe</b></font><br>
+<b>crimson                &#160;&#160;</b><font color=crimson><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkblue               &#160;&#160;</b><font color=darkblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkcyan               &#160;&#160;</b><font color=darkzyan><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkgoldenrod          &#160;&#160;</b><font color=darkgoldenrod><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkgray               &#160;&#160;</b><font color=darkgray><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkgreen              &#160;&#160;</b><font color=darkgreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkkhaki              &#160;&#160;</b><font color=darkkhaki><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkmagenta            &#160;&#160;</b><font color=darkmagenta><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkolivegreen         &#160;&#160;</b><font color=darkolivegreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkorange             &#160;&#160;</b><font color=darkorange><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkorchid             &#160;&#160;</b><font color=darkorchid><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkred                &#160;&#160;</b><font color=darkred><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darksalmon             &#160;&#160;</b><font color=darksalmon><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkseagreen           &#160;&#160;</b><font color=darkseagreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkslateblue          &#160;&#160;</b><font color=darkslateblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkslategray          &#160;&#160;</b><font color=darkslategray><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkturquoise          &#160;&#160;</b><font color=darkturquoise><b>Das ist Text in dieser Farbe</b></font><br>
+<b>darkviolet             &#160;&#160;</b><font color=darkviolet><b>Das ist Text in dieser Farbe</b></font><br>
+<b>deeppink               &#160;&#160;</b><font color=deeppink><b>Das ist Text in dieser Farbe</b></font><br>
+<b>deepskyblue            &#160;&#160;</b><font color=deepskyblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>dimgray                &#160;&#160;</b><font color=dimgray><b>Das ist Text in dieser Farbe</b></font><br>
+<b>dodgerblue             &#160;&#160;</b><font color=dodgerblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>firebrick              &#160;&#160;</b><font color=firebrick><b>Das ist Text in dieser Farbe</b></font><br>
+<b>floralwhite            &#160;&#160;</b><font color=floralwhite><b>Das ist Text in dieser Farbe</b></font><br>
+<b>forestgreen            &#160;&#160;</b><font color=forestgreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>gainsboro              &#160;&#160;</b><font color=gainsboro><b>Das ist Text in dieser Farbe</b></font><br>
+<b>ghostwhite             &#160;&#160;</b><font color=ghostwhite><b>Das ist Text in dieser Farbe</b></font><br>
+<b>gold                   &#160;&#160;</b><font color=gold><b>Das ist Text in dieser Farbe</b></font><br>
+<b>goldenrod              &#160;&#160;</b><font color=goldenrod><b>Das ist Text in dieser Farbe</b></font><br>
+<b>greenyellow            &#160;&#160;</b><font color=greenyellow><b>Das ist Text in dieser Farbe</b></font><br>
+<b>honeydew               &#160;&#160;</b><font color=honeydew><b>Das ist Text in dieser Farbe</b></font><br>
+<b>hotpink                &#160;&#160;</b><font color=hotpink><b>Das ist Text in dieser Farbe</b></font><br>
+<b>indianred              &#160;&#160;</b><font color=indianred><b>Das ist Text in dieser Farbe</b></font><br>
+<b>indigo                 &#160;&#160;</b><font color=indigo><b>Das ist Text in dieser Farbe</b></font><br>
+<b>ivory                  &#160;&#160;</b><font color=ivory><b>Das ist Text in dieser Farbe</b></font><br>
+<b>khaki                  &#160;&#160;</b><font color=khaki><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lavender               &#160;&#160;</b><font color=lavender><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lavenderblush          &#160;&#160;</b><font color=lavenderblush><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lawngreen              &#160;&#160;</b><font color=lawngreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lemonchiffon           &#160;&#160;</b><font color=lemonchiffon><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightblue              &#160;&#160;</b><font color=lightblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightcoral             &#160;&#160;</b><font color=lightcoral><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightcyan              &#160;&#160;</b><font color=lightcyan><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightgoldenrodyellow   &#160;&#160;</b><font color=lightgoldenrodyellow><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightgreen             &#160;&#160;</b><font color=lightgreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightgrey              &#160;&#160;</b><font color=lightgrey><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightpink              &#160;&#160;</b><font color=lightpink><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightsalmon            &#160;&#160;</b><font color=lightsalmon><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightseagreen          &#160;&#160;</b><font color=lightseagreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightskyblue           &#160;&#160;</b><font color=lightskyblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightslategray         &#160;&#160;</b><font color=lightslategray><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightsteelblue         &#160;&#160;</b><font color=lightsteelblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>lightyellow            &#160;&#160;</b><font color=lightyellow><b>Das ist Text in dieser Farbe</b></font><br>
+<b>limegreen              &#160;&#160;</b><font color=limegreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>linen                  &#160;&#160;</b><font color=linen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>magenta                &#160;&#160;</b><font color=magenta><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumaquamarine       &#160;&#160;</b><font color=mediumaquamarine><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumblue             &#160;&#160;</b><font color=mediumblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumorchid           &#160;&#160;</b><font color=mediumorchid><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumpurple           &#160;&#160;</b><font color=mediumpurple><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumseagreen         &#160;&#160;</b><font color=mediumseagreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumslateblue        &#160;&#160;</b><font color=mediumslateblue><b>Das ist Text in dieser Farbe</b></font><br> 
+<b>mediumspringgreen      &#160;&#160;</b><font color=mediumspringgreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumturquoise        &#160;&#160;</b><font color=mediumturquoise><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mediumvioletred        &#160;&#160;</b><font color=mediumvioletred><b>Das ist Text in dieser Farbe</b></font><br>
+<b>midnightblue           &#160;&#160;</b><font color=midnightblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mintcream              &#160;&#160;</b><font color=mintcream><b>Das ist Text in dieser Farbe</b></font><br>
+<b>mistyrose              &#160;&#160;</b><font color=mistyrose><b>Das ist Text in dieser Farbe</b></font><br>
+<b>moccasin               &#160;&#160;</b><font color=moccasin><b>Das ist Text in dieser Farbe</b></font><br>
+<b>navajowhite            &#160;&#160;</b><font color=navajowhite><b>Das ist Text in dieser Farbe</b></font><br>
+<b>oldlace                &#160;&#160;</b><font color=oldlace><b>Das ist Text in dieser Farbe</b></font><br>
+<b>olivedrab              &#160;&#160;</b><font color=olivedrab><b>Das ist Text in dieser Farbe</b></font><br>
+<b>orange                 &#160;&#160;</b><font color=orange><b>Das ist Text in dieser Farbe</b></font><br>
+<b>orangered              &#160;&#160;</b><font color=orangered><b>Das ist Text in dieser Farbe</b></font><br>
+<b>orchid                 &#160;&#160;</b><font color=orchid><b>Das ist Text in dieser Farbe</b></font><br>
+<b>palegoldenrod          &#160;&#160;</b><font color=palegoldenrod><b>Das ist Text in dieser Farbe</b></font><br>
+<b>palegreen              &#160;&#160;</b><font color=palegreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>paleturquoise          &#160;&#160;</b><font color=paleturquoise><b>Das ist Text in dieser Farbe</b></font><br>
+<b>palevioletred          &#160;&#160;</b><font color=palevioletred><b>Das ist Text in dieser Farbe</b></font><br>
+<b>papayawhip             &#160;&#160;</b><font color=papayawhip><b>Das ist Text in dieser Farbe</b></font><br>
+<b>peachpuff              &#160;&#160;</b><font color=peachpuff><b>Das ist Text in dieser Farbe</b></font><br>
+<b>peru                   &#160;&#160;</b><font color=pery><b>Das ist Text in dieser Farbe</b></font><br>
+<b>pink                   &#160;&#160;</b><font color=pink><b>Das ist Text in dieser Farbe</b></font><br>
+<b>plum                   &#160;&#160;</b><font color=plum><b>Das ist Text in dieser Farbe</b></font><br>
+<b>powderblue             &#160;&#160;</b><font color=powderblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>rosybrown              &#160;&#160;</b><font color=rosybrown><b>Das ist Text in dieser Farbe</b></font><br>
+<b>royalblue              &#160;&#160;</b><font color=royalblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>saddlebrown            &#160;&#160;</b><font color=saddelbrown><b>Das ist Text in dieser Farbe</b></font><br>
+<b>salmon                 &#160;&#160;</b><font color=salmon><b>Das ist Text in dieser Farbe</b></font><br>
+<b>sandybrown             &#160;&#160;</b><font color=sandybrown><b>Das ist Text in dieser Farbe</b></font><br>
+<b>seagreen               &#160;&#160;</b><font color=seagreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>seashell               &#160;&#160;</b><font color=seashell><b>Das ist Text in dieser Farbe</b></font><br>
+<b>sienna                 &#160;&#160;</b><font color=sienna><b>Das ist Text in dieser Farbe</b></font><br>
+<b>skyblue                &#160;&#160;</b><font color=skyblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>slateblue              &#160;&#160;</b><font color=slateblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>slategray              &#160;&#160;</b><font color=slategray><b>Das ist Text in dieser Farbe</b></font><br>
+<b>snow                   &#160;&#160;</b><font color=snow><b>Das ist Text in dieser Farbe</b></font><br>
+<b>springgreen            &#160;&#160;</b><font color=springgreen><b>Das ist Text in dieser Farbe</b></font><br>
+<b>steelblue              &#160;&#160;</b><font color=steelblue><b>Das ist Text in dieser Farbe</b></font><br>
+<b>tan                    &#160;&#160;</b><font color=tan><b>Das ist Text in dieser Farbe</b></font><br>
+<b>thistle                &#160;&#160;</b><font color=thistle><b>Das ist Text in dieser Farbe</b></font><br>
+<b>tomato                 &#160;&#160;</b><font color=tomato><b>Das ist Text in dieser Farbe</b></font><br>
+<b>turquoise              &#160;&#160;</b><font color=turquoise><b>Das ist Text in dieser Farbe</b></font><br>
+<b>violet                 &#160;&#160;</b><font color=violet><b>Das ist Text in dieser Farbe</b></font><br>
+<b>wheat                  &#160;&#160;</b><font color=wheat><b>Das ist Text in dieser Farbe</b></font><br>
+<b>whitesmoke             &#160;&#160;</b><font color=whitesmoke><b>Das ist Text in dieser Farbe</b></font><br>
+<b>yellowgreen            &#160;&#160;</b><font color=yellowgreen><b>Das ist Text in dieser Farbe</b></font>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcad.htm"><b>Umlaute, Sonderzeichen und HTML-eigene Zeichen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcaf.htm"><b>Kommentare und Credits</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

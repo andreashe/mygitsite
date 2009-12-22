@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>SELFHTML: Daten und Programme als Objekt einbinden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Daten und Programme als Objekt einbinden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Objekte in HTML</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Datendateien als Objekt einbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Verweis-sensitive Grafiken als Objekt einbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Java-Applets als Objekt einbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>ActiveX-Controls als Objekt einbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Rahmen um Objekte</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Objekte in HTML</font></h2></a>
+Unter &quot;Objekt&quot; wird hier jede Art von Datei verstanden, die sich au&szlig;erhalb einer HTML-Datei befindet und in diese HTML-Datei eingebunden werden soll. Es kann sich um eine Datendatei handeln, also etwa um eine Excel-Tabelle, eine AutoCad-Zeichnung oder eine Midi-Musikdatei. Es kann sich aber auch um eine vom WWW-Browser ausf&uuml;hrbare Datei handeln, also um ein Programm. Das k&ouml;nnen zum Beispiel Java-Applets oder ActiveX-Controls sein.
+<p>
+Damit nicht f&uuml;r jede neue Form der Einbindung anderer Ressourcen ein neues HTML-Tag entsteht, wird es in Zukunft nur noch ein m&auml;chtiges HTML-Tag f&uuml;r alle Multimedia- und Fremdprogrammreferenzen geben: das <b>&lt;object&gt;</b>-Tag. Das <b>&lt;object&gt;</b>-Tag kann zwar nicht das Problem l&ouml;sen, wie eine beliebige Datei beim Anwender angezeigt werden kann, aber es bietet zumindest eine einheitliche Syntax und tr&auml;gt dadurch zur Vereinfachung von HTML bei. 
+<p>
+Das <b>&lt;object&gt;</b>-Tag wird erst ansatzweise von den WWW-Browsern unterst&uuml;tzt. Es wird deshalb noch eine Weile dauern, bis die Mehrzahl der Anwender einen WWW-Browser besitzt, der den neuen Befehl in allen Varianten richtig interpretiert. Das neue <b>&lt;object&gt;</b>-Tag ist jedoch so ausgelegt, da&szlig; es herk&ouml;mmliche Befehle zum Einbinden von Fremddateien alternativ erm&ouml;glicht.
+<p>
+Die folgenden Beschreibungen st&uuml;tzen sich auf den Vorschlag des W3-Konsortiums vom 22. April 1996, niedergelegt in der Spezifikation <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.w3.org/pub/WWW/TR/WD-object"><b>Inserting objects into HTML</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie mit ersten Versuchen, das <b>&lt;object&gt;</b>-Tag zu verwenden, keinen Erfolg haben, probieren Sie folgende M&ouml;glichkeiten:
+<p>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm"><b>Multimedia einbinden (Netscape)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm"><b>Videos einbinden (Microsoft)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm"><b>Java-Applets einbinden</b></a>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE 3.0"><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Datendateien als Objekt einbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckaa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen eine beliebige Datendatei als Objekt in eine HTML-Datei einbinden. 
+Ein WWW-Browser wie Netscape kann solche Dateien anzeigen, wenn der Anwender ein entsprechendes <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbbf.htm"><b>Plugin</b></a> installiert hat. Wenn das Plugin installiert ist, kann der WWW-Browser die Datei so in seinem Anzeigefenster pr&auml;sentieren, wie sie von dem Ursprungsprogramm erstellt wurde. Bei Abspielvorg&auml;ngen, etwa von Videos oder Sound, wird ein entsprechender Player angezeigt - je nachdem, wie das Plugin beschaffen ist.
+<p>
+Wenn dem Browser eine Verkn&uuml;pfung zwischen dem Datentyp und einem Fremdprogramm bekannt ist, kann er das Fremdprogramm mit der betreffenden Datei starten.
+<p>
+
+
+<a name="iobject_data"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object data=&quot;hochzeit.avi&quot; type=&quot;video/x-msvideo&quot;&gt; 
+ &lt;img src=&quot;hochzeit.jpg&quot;&gt; 
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object data=&quot;hochzeit.avi&quot; type=&quot;video/x-msvideo&quot;&gt; 
+ &lt;embed src=&quot;hochzeit.avi&quot;&gt; 
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+mit <b>&lt;object ...&gt;</b> leiten Sie die Referenz ein. 
+<p>
+Mit der Angabe <b>data=</b> referenzieren Sie die gew&uuml;nschte Datei (<i>data = Daten</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. In den obigen Beispielen wird vorausgesetzt, da&szlig; sich die Datei im gleichen Verzeichnis befindet wie die HTML-Datei, in der sie referenziert wird. Die Datei kann sich jedoch auch in einem beliebigen anderen Verzeichnis oder auf einem anderen Internet-Server befinden. In solchen F&auml;llen gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> (dort mit der Angabe <b>src=</b>).
+<p>
+Im Zusammenhang mit dem neuen <b>&lt;object&gt;</b>-Tag k&ouml;nnen Sie den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Type</b></a> der Datei angeben. Bei Datendateien, die mit <b>data=</b> referenziert werden, notieren Sie dazu die Angabe <b>type=</b>. Dahinter folgt, in Anf&uuml;hrungszeichen, ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm#a2"><b>g&uuml;ltiger Mime-Type</b></a>. Die Angabe des Mime-Types sollte in Anf&uuml;hrungszeichen stehen. Wenn Sie den Mime-Typ nicht kennen, lassen Sie die Angabe <b>type=</b> weg. Wenn Sie den Mime-Type kennen und angeben, helfen Sie dem WWW-Browser durch die Angabe, schneller zu reagieren.
+<p>
+Eine <b>&lt;object&gt;</b>-Referenz ben&ouml;tigt ein abschlie&szlig;endes <b>&lt;/object&gt;</b>. Zwischen <b>&lt;object&gt;</b> und <b>&lt;/object&gt;</b> k&ouml;nnen verschiedene Angaben stehen. Im ersten der obigen Beispiele steht dort eine gew&ouml;hnliche <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafikreferenz</b></a>. Diese Grafik wird angezeigt, falls die bei <b>&lt;object...&gt;</b> angegebene Datei nicht angezeigt werden kann, bzw. wenn der WWW-Browser das <b>&lt;object&gt;</b>-Tag nicht kennt. Im zweiten der obigen Beispiele wird an dieser Stelle die gleiche Datei referenziert wie im <b>&lt;object&gt;</b>-Tag selbst, jedoch nach der herk&ouml;mmlichen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm"><b>Netscape-Methode zum Einbinden von Multimedia</b></a>. Mit einem  Konstrukt wie im zweiten der obigen Beispiele stellen Sie sicher, da&szlig; auch &auml;ltere Netscape-Versionen den gew&uuml;nschten Befehl erkennen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn der WWW-Browser trotz installiertem Plugin Schwierigkeiten bei der Anzeige einer Multimedia-Datei macht, zum Beispiel bei Videos oder VRML-Dateien, dann geben Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckb.htm#a1"><b>Breite und H&ouml;he der Anzeige</b></a> explizit an.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> Verweis-sensitive Grafiken als Objekt einbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckab.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Es gibt bereits Methoden, <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgg.htm"><b>Grafiken mit verweis-sensitiven Fl&auml;chen</b></a> in HTML einzubinden. Die hier beschriebene Methode folgt dem Ansatz, zuk&uuml;nftig alle Fremddateien nur noch als Objekt einzubinden. Ob sich dies bei Grafiken mit verweis-sensitiven Fl&auml;chen und bei Grafiken allgemein jedoch so bald durchsetzen wird, ist angesichts der Verbreitung des <b>&lt;img&gt;</b>-Tags eher zweifelhaft.
+
+
+<a name="iobject_data"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object data=&quot;hypgraph.gif&quot; shapes&gt;
+ &lt;a href=&quot;#Anker&quot; shape=rect coords=&quot;1,1,249,49&quot;&gt;Verweistext&lt;/a&gt; 
+ &lt;a href=&quot;datei.htm&quot; shape=rect coords=&quot;1,51,149,299&quot;&gt;Verweistext&lt;/a&gt; 
+ &lt;a href=&quot;../datei.htm&quot; shape=rect coords=&quot;251,1,399,399&quot;&gt;Verweistext&lt;/a&gt; 
+ &lt;a href=&quot;http://www.nix.de/&quot; shape=rect coords=&quot;151,51,249,299&quot;&gt;Verweistext&lt;/a&gt;  
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+mit <b>&lt;object ...&gt;</b> leiten Sie die Referenz ein. 
+<p>
+Mit der Angabe <b>data=</b> referenzieren Sie die gew&uuml;nschte Grafikdatei (<i>data = Daten</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Beim Referenzieren aus anderen Verzeichnissen oder von anderen WWW-Adressen gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> (dort mit der Angabe <b>src=</b>).
+<p>
+Um das Objekt als Grafik mit verweis-sensitiven Fl&auml;chen kenntlich zu machen, m&uuml;ssen Sie im einleitenden <b>&lt;object&gt;</b>-Tag au&szlig;erdem die Angabe <b>shapes</b> notieren (<i>shapes = Schablonen</i>).
+<p>
+Zwischen dem einleitenden <b>&lt;object&gt;</b> und dem abschlie&szlig;enden <b>&lt;/object&gt;</b> definieren Sie die gew&uuml;nschten verweis-sensitven Fl&auml;chen. Mit <b>&lt;a href=&gt;</b> bestimmen Sie, wohin ein Verweis f&uuml;hren soll, wenn der Anwender auf den definierten Bereich in der Grafik klickt. Dabei gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>.
+<p>
+Im einleitenden <b>&lt;a&gt;</b>-Tag bestimmen Sie mit <b>shape=</b> und <b>coords=</b> die verweis-sensitiven Fl&auml;chen der Grafik. Dabei gelten die gleichen Regeln wie bei herk&ouml;mmlichen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgg.htm#a1"><b>Verweis-sensitiven Grafiken (client-sided)</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Der Verweistext, den Sie zwischen <b>&lt;a href= shape= coords=&gt;</b> und <b>&lt;/a&gt;</b> angeben, wird dem Anwender angezeigt, wenn der WWW-Browser den Befehl zum Einbinden der verweis-sensitiven Grafik als Objekt nicht kennt, oder falls die Grafik nicht angezeigt werden kann.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> Java-Applets als Objekt einbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckac.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Java-Applets sind ausf&uuml;hrbare Programme, deren Bildschirmausgaben
+ein WWW-Browser innerhalb seines Anzeigefensters darstellen kann. Applets k&ouml;nnen z.B. bewegte Animationen (Tricksequenzen) enthalten, Echtzeitabl&auml;ufe in bewegten Grafiken darstellen (Stichwort: B&ouml;rsenticker), oder Interaktionen mit dem Anwender austauschen (kleine Spiele wie Hangman oder Mastermind, Taschenrechner, grafische Simulationen aufgrund eingebbarer Parameter usw.).
+<p>
+Java-Programme m&uuml;ssen in compilierter Form vorliegen, um bei der Referenzierung in einer HTML-Datei ausgef&uuml;hrt werden zu k&ouml;nnen. Normalerweise haben compilierte Java-Applets die Dateinamenerweiterung <b>.class</b>.
+
+<a name="iobject_data"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object classid=&quot;java:animation&quot; &quot;codebase=../java/&quot; codetype=&quot;application/java-vm&quot;&gt;
+ &lt;param name=animation_text value=&quot;Mein animierter Text&quot;&gt;
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+mit <b>&lt;object ...&gt;</b> leiten Sie die Referenz ein. 
+<p>
+Mit der Angabe <b>classid=</b> referenzieren die Programmdatei (<i>classid = class identifier = Klassenbezeichner</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. 
+<p>
+Die Angabe besteht aus der festen Zeichenfolge <b>java:</b> - gefolgt von dem Namen der .class-Datei (also der ausf&uuml;hrbaren Java-Programmdatei), jedoch ohne Angabe der Endung .class. Im obigen Beispiel wird auf diese Weise die Datei <b>animation.class</b> in der Form <b>classid=&quot;java:animation&quot;</b> eingebunden.
+<p>
+Wenn sich die Programmatei in einem anderen Verzeichnis befindet als die HTML-Datei, in der sie referenziert wird, oder auf einem anderen Internet-Server, dann m&uuml;ssen Sie den Pfad bzw. die Adresse des Server-Rechners und das Verzeichnis angeben, wo sich die Programmdatei befindet (nur das Verzeichnis, nicht mehr den Namen der Programmdatei). Dazu verwenden Sie die Angabe <b>codebase=</b>. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. F&uuml;r die Angaben gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> (dort mit der Angabe <b>src=</b>). Die Angabe von <b>codebase=</b> kann in einigen F&auml;llen auch erforderlich sein, um Teile eines Java-Applets von einem bestimmten Internet-Server nachzuladen. 
+<p>
+&Auml;hnlich wie f&uuml;r Datendateien gibt es auch f&uuml;r ausf&uuml;hrbare Programmdateien <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Typen</b></a>. Wenn Sie den Mime-Typ eines Programms kennen, k&ouml;nnen Sie mit <b>codetype=</b> den Typ angeben. Dadurch helfen Sie dem WWW-Browser, schneller zu reagieren.
+<p>
+Eine <b>&lt;object&gt;</b>-Referenz ben&ouml;tigt ein abschlie&szlig;endes <b>&lt;/object&gt;</b>. Zwischen <b>&lt;object&gt;</b> und <b>&lt;/object&gt;</b> k&ouml;nnen  Sie im Zusammenhang mit Java-Applets Aufrufparameter notieren. Viele Java-Applets erwarten einen oder mehrere solche Parameter beim Aufruf. Jeder Parameter wird durch <b>&lt;param name= value=&gt;</b> angegeben. Hinter <b>name=</b> geben Sie den Namen des Parameters an. Hinter <b>value=</b> geben Sie den gew&uuml;nschten Wert des Parameters an, der dem Programm &uuml;bergeben werden soll. Zahlen werden ohne Anf&uuml;hrungszeichen, Zeichenketten mit Anf&uuml;hrungszeichen angegeben. 
+<p>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei Java-Programmen, die aus mehreren ausf&uuml;hrbaren Dateien bestehen, m&uuml;ssen Sie die Datei angeben, die den Programmstart enth&auml;lt. N&auml;heres dazu entnehmen Sie der Dokumentation, die solchen Java-Programmen beigef&uuml;gt sein sollte. Auch die genauen Anweisungen zum Einbinden eines Java-Applets finden Sie normalerweise in der Dokumentation zu dem Java-Applet. 
+<p>
+Wenn der WWW-Browser Schwierigkeiten bei der Anzeige eines Java-Applets macht, dann geben Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckb.htm#a1"><b>Breite und H&ouml;he der Anzeige</b></a> explizit an.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC> <img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE 3.0"> ActiveX-Controls als Objekt einbinden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckad.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+ActiveX-Controls k&ouml;nnen &auml;hnliche Aufgaben wahrnehmen wie Java-Applets. Jedoch sind sie st&auml;rker als Java-Applets in der Windows-Welt und der Welt von Microsoft verankert und werden nur vom Microsoft Internet Explorer interpretiert.
+
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object &quot;classid=clsid:663C8FEF-1EF9-11CF-A3DB-080036F12502&quot; 
+data=&quot;clock.stm&quot; codebase=&quot;http://www.acme.com/ole/&quot; id=&quot;clock&quot;&gt;
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+mit <b>&lt;object ...&gt;</b> leiten Sie die Referenz ein. 
+<p>
+Mit der Angabe <b>classid=</b> referenzieren das ActiveX-Control (<i>classid = class identifier = Klassenbezeichner</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Die Angabe besteht aus der festen Zeichenfolge <b>clsid:</b> - gefolgt von der Bezeichner-ID. Diese ID m&uuml;ssen Sie kennen.
+<p>
+ActiveX-Controls ben&ouml;tigen in einigen F&auml;llen Initialisierungsdaten, die in einer entsprechenden Datei stehen. Die Datei mit solchen Initialisierungsdaten k&ouml;nnen Sie mit <b>data=</b> angeben. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Dabei gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> (dort mit der Angabe <b>src=</b>).
+<p>
+Mit der Angabe <b>codebase=</b> geben Sie die Internet-Adresse an, von der das ActiveX-Control geladen werden kann, wenn der WWW-Browser es auf dem Rechner des Anwenders nicht findet (ActiveX-Controls werden nach dem Laden normalerweise in einem Windows-Unterverzeichnis abgespeichert - Dateien *.ocx - und beim erneuten Aufruf auch wieder von dort geladen.
+<p>
+ActiveX bietet die M&ouml;glichkeit, da&szlig; Controls, die in einer HTML-Datei referenziert sind, andere Controls, die in der gleichen Datei referenziert sind, aufrufen k&ouml;nnen. Um ein referenziertes ActiveX-Control f&uuml;r andere ActiveX-Controls aufrufbar zu machen, mu&szlig; es innerhalb der HTML-Datei eine Ankeradresse haben. Eine solche Ankeradresse k&ouml;nnen Sie mit <b>id=</b> vergeben. Dahinter vergeben Sie einen Namen f&uuml;r die Ankeradresse. Der Name mu&szlig; in Anf&uuml;hrungszeichen stehen. Er sollte maximal 32 Zeichen haben und nur aus Buchstaben, Ziffern und dem Unterstrich bestehen. Deutsche Umlaute und scharfes S sind nicht erlaubt.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Rahmen um Objekte</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckae.htm#a6"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen festlegen, da&szlig; der Browser einen Rahmen um ein eingebundenes Objekt zeichnet. Diese Angabe ist jedoch nur von Bedeutung, wenn die Anzeige mit Hilfe eines Plugins erfolgt und direkt im Anzeigefenster des WWW-Browsers m&ouml;glich ist.  
+
+<h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object data=&quot;hochzeit.avi&quot; border=5&gt; 
+&lt;/object&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>border=</b> innerhalb des einleitenden <b>&lt;object&gt;</b>-Tags wird ein Rahmen um das Objekt definiert (<i>border = Rand</i>). Die Angabe erfolgt in Pixeln und bedeutet die Rahmendicke.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tckb.htm"><b>Breite und H&ouml;he von Objekten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

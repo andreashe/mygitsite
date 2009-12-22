@@ -1,0 +1,452 @@
+<html>
+<head>
+<title>SELFHTML: Mime-Typen für Dateiformate</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Mime-Typen für Dateiformate</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Mime-Typen angeben</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Übersicht: Mime-Typen</b></a> <br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Mime-Typen angeben</font></h2></a>
+Die Abk&uuml;rzung MIME steht f&uuml;r &quot;<b>M</b>ultipurpose <b>I</b>nternet <b>M</b>ail <b>E</b>xtensions&quot;. MIME-Typen sind ein Internet-Standard, um Dateitypen anzugeben. Im Zusammenhang mit multimedialen Elementen auf WWW-Seiten werden diese Angaben in Zukunft immer wichtiger.
+<p>
+MIME-Typen werden bei der Kommunikation zwischen WWW-Server und WWW-Browser eingesetzt. Sowohl der WWW-Server als auch der WWW-Browser unterh&auml;lt eine Liste mit ihm bekannten Dateitypen. In vielen WWW-Browsern (z.B. bei Netscape) ist das die Liste der sogenannten &quot;Helper Applications&quot;. Beim &Uuml;bertragen vom Server zum Browser wird &uuml;ber das HTTP-Protokoll der MIME-Type mit &uuml;bertragen. Aufgrund seiner Liste mit MIME-Typen wei&szlig; der WWW-Browser, wie er die Datei zu behandeln hat.
+<p>
+Zwar untersützen viele Plattformen wie zum Beispiel Windows Standardverknüpfungen zwischen Dateinamenerweiterungen und Dateitypen. Doch ist diese Verknüpfung nicht eindeutig genug. So kann die Dateinamenerweiterung <b>.doc</b> beispielsweise ein Word-Dokument, ein FrameMaker-Dokument oder eine einfache Textdatei bedeuten. Das System der Mime-Typen hat die Aufgabe, solche Zweideutigkeiten zu beseitigen und den beteiligten Programmen (WWW-Server-Software, WWW-Browser) ein eindeutiges Identifizierungsschema für den Datentyp von Dateien bereitzustellen.
+<p>
+MIME-Typen werden nach folgendem Schema angegeben:<br>
+<b>Kategorie/Unterkategorie</b>
+<p>
+Kategorien sind z.B. &quot;text&quot;, &quot;image&quot;, &quot;audio&quot;. Unterkategorien von &quot;text&quot; sind beispielsweise &quot;plain&quot; (Datei ist eine reine Textdatei) oder &quot;html&quot; (Datei ist eine HTML-Datei). Unterkategorien von &quot;image&quot; ist beispielsweise &quot;gif&quot; (Datei ist eine Grafik im GIF-Format).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Übersicht: Mime-Typen</font></h2></a>
+Die folgenden MIME-Typen werden von den beiden g&auml;ngigen WWW-Server-Typen CERN und NCSA unterst&uuml;tzt:
+<p>
+
+
+<table border cellpadding=3>
+ <tr height=30>
+<th bgcolor=#CCCCC align=left>Dateiart</th>
+<th bgcolor=#CCCCC align=left>Dateinamenerweiterung(en)</th>
+<th bgcolor=#CCCCC align=left>Mime-Typ</th>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Datei</td>
+<td bgcolor=#FFCC99 valign=top nowrap>*.dat</td>
+<td bgcolor=#FFFFCC valign=top nowrap>application/xy</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF>4.3BSD tar-Archivdatei</td>
+<td bgcolor=#FFCC99>*.tar</td>
+<td bgcolor=#FFFFCC>application/x-tar</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Adobe Acrobat</td>
+<td bgcolor=#FFCC99>*.pdf</td>
+<td bgcolor=#FFFFCC>application/pdf</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>AIFF-Audio-Format</td>
+<td bgcolor=#FFCC99>*.aif,*.aiff</td>
+<td bgcolor=#FFFFCC>audio/x-aiff</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Audio-Datei</td>
+<td bgcolor=#FFCC99>*.au,*.snd</td>
+<td bgcolor=#FFFFCC>audio/basic</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>AutoCAD</td>
+<td bgcolor=#FFCC99>*.dwg,*.DWG</td>
+<td bgcolor=#FFFFCC>application/acad (nur NCSA)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>AutoCAD</td>
+<td bgcolor=#FFCC99>*.dxf,*.DXF</td>
+<td bgcolor=#FFFFCC>application/dxf (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Bin&auml;rdateien</td>
+<td bgcolor=#FFCC99>*.bin</td>
+<td bgcolor=#FFFFCC>application/octet-stream</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Bourne-Shellscript</td>
+<td bgcolor=#FFCC99>*.sh</td>
+<td bgcolor=#FFFFCC>application/x-sh</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>C-Shellscript</td>
+<td bgcolor=#FFCC99>*.csh</td>
+<td bgcolor=#FFFFCC>application/x-csh</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>ClarisCAD</td>
+<td bgcolor=#FFCC99>*.CCAD</td>
+<td bgcolor=#FFFFCC>application/clariscad (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>CMU-Raster</td>
+<td bgcolor=#FFCC99>*.ras</td>
+<td bgcolor=#FFFFCC>image/cmu-raster</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>CPIO-Datei (alt bin&auml;r)</td>
+<td bgcolor=#FFCC99>*.bcpio</td>
+<td bgcolor=#FFFFCC>application/x-bcpio</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>CPIO-Datei (POSIX)</td>
+<td bgcolor=#FFCC99>*.cpio</td>
+<td bgcolor=#FFFFCC>application/x-cpio</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>CPIO-Datei (SVR4)</td>
+<td bgcolor=#FFCC99>*.sv4cpio</td>
+<td bgcolor=#FFFFCC>application/x-sv4cpio</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>CPIO-Datei (SVR4 mit CRC)</td>
+<td bgcolor=#FFCC99>*.sv4crc</td>
+<td bgcolor=#FFFFCC>application/x-sv4crc</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>FrameMaker MIF-Format</td>
+<td bgcolor=#FFCC99>*.mif</td>
+<td bgcolor=#FFFFCC>application/x-mif (nur NCSA)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>GIF-Grafik</td>
+<td bgcolor=#FFCC99>*.gif</td>
+<td bgcolor=#FFFFCC>image/gif</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>GNU tar-Archivdatei</td>
+<td bgcolor=#FFCC99>*.gtar</td>
+<td bgcolor=#FFFFCC>application/x-gtar</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>GNU ZIP-Archivdatei</td>
+<td bgcolor=#FFCC99>*.gzip</td>
+<td bgcolor=#FFFFCC>multipart/x-gzip (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>HTML-Datei</td>
+<td bgcolor=#FFCC99>*.html,*.htm</td>
+<td bgcolor=#FFFFCC>text/html</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>I-DEAS-Dateien</td>
+<td bgcolor=#FFCC99>*.unv,*.UNV</td>
+<td bgcolor=#FFFFCC>application/i-deas (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>IGES-Dateien</td>
+<td bgcolor=#FFCC99>*.igs,*.iges,*.IGS,*.IGES</td>
+<td bgcolor=#FFFFCC>application/iges (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Image Exchange Format</td>
+<td bgcolor=#FFCC99>*.ief</td>
+<td bgcolor=#FFFFCC>image/ief</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>ISO-10303 STEP</td>
+<td bgcolor=#FFCC99>*.stp,*.STP,*.step,*.STEP</td>
+<td bgcolor=#FFFFCC>application/STEP (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>JPEG-Grafik</td>
+<td bgcolor=#FFCC99>*.jpeg,*.jpg,*.jpe</td>
+<td bgcolor=#FFFFCC>image/jpeg</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>LaTeX-Quelldatei</td>
+<td bgcolor=#FFCC99>*.latex</td>
+<td bgcolor=#FFFFCC>application/x-latex</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>MATRA-Prelude</td>
+<td bgcolor=#FFCC99>*.DRW</td>
+<td bgcolor=#FFFFCC>application/drafting (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>MATRA Prelude Solids</td>
+<td bgcolor=#FFCC99>*.SOL</td>
+<td bgcolor=#FFFFCC>application/solids (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>MIME Richtext</td>
+<td bgcolor=#FFCC99>*.rtx</td>
+<td bgcolor=#FFFFCC>text/richtext</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>MPEG Videodatei</td>
+<td bgcolor=#FFCC99>*.mpeg,*.mpg,*.mpe</td>
+<td bgcolor=#FFFFCC>video/mpeg</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>NCSA HDF Data File</td>
+<td bgcolor=#FFCC99>*.hdf</td>
+<td bgcolor=#FFFFCC>application/x-hdf</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PBM Anymap-Datei</td>
+<td bgcolor=#FFCC99>*.pnm</td>
+<td bgcolor=#FFFFCC>image/x-portable-anymap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PBM Bitmap-Datei</td>
+<td bgcolor=#FFCC99>*.pbm</td>
+<td bgcolor=#FFFFCC>image/x-portable-bitmap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PBM Graymap-Datei</td>
+<td bgcolor=#FFCC99>*.pgm</td>
+<td bgcolor=#FFFFCC>image/x-portable-graymap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PBM Pixmap-Datei</td>
+<td bgcolor=#FFCC99>*.ppm</td>
+<td bgcolor=#FFFFCC>image/x-portable-pixmap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>POSIX-tar-Archivdatei</td>
+<td bgcolor=#FFCC99>*.ustar</td>
+<td bgcolor=#FFFFCC>application/x-ustar</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PostScript</td>
+<td bgcolor=#FFCC99>*.ps,*.PS,*.ai,*.eps</td>
+<td bgcolor=#FFFFCC>application/postscript (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>PTC Pro/Engineer</td>
+<td bgcolor=#FFCC99>*.prt,*.PRT</td>
+<td bgcolor=#FFFFCC>application/pro_eng (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>RBG-Grafik</td>
+<td bgcolor=#FFCC99>*.rgb</td>
+<td bgcolor=#FFFFCC>image/x-rgb</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>QuickTime Videodatei</td>
+<td bgcolor=#FFCC99>*.qt,*.mov</td>
+<td bgcolor=#FFFFCC>video/quicktime</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Rich Text Format</td>
+<td bgcolor=#FFCC99>*.rtf</td>
+<td bgcolor=#FFFFCC>application/rtf</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>SET (CAD)</td>
+<td bgcolor=#FFCC99>*.set,*.SET</td>
+<td bgcolor=#FFFFCC>application/set (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>SGI Movieplayer-Datei</td>
+<td bgcolor=#FFCC99>*.movie</td>
+<td bgcolor=#FFFFCC>video/x-sgi-movie</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Shell-Archiv</td>
+<td bgcolor=#FFCC99>*.shar</td>
+<td bgcolor=#FFFFCC>application/x-shar</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Stereolithografie</td>
+<td bgcolor=#FFCC99>*.stl,*.STL</td>
+<td bgcolor=#FFFFCC>application/sla (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Struct.erw. Text</td>
+<td bgcolor=#FFCC99>*.etx</td>
+<td bgcolor=#FFFFCC>text/x-setext</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>VDA-FS Surface data</td>
+<td bgcolor=#FFCC99>*.vda,*.VDA</td>
+<td bgcolor=#FFFFCC>application/vda (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>TCL-Script</td>
+<td bgcolor=#FFCC99>*.tcl</td>
+<td bgcolor=#FFFFCC>application/x-tcl</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>TeX dvi</td>
+<td bgcolor=#FFCC99>*.dvi</td>
+<td bgcolor=#FFFFCC>application/x-dvi</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Texinfo (emacs)</td>
+<td bgcolor=#FFCC99>*.texinfo,*.texi</td>
+<td bgcolor=#FFFFCC>application/x-texinfo</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Textdatei</td>
+<td bgcolor=#FFCC99>*.txt,*.g,*.h,*.C,*.cc,*.hh,*.m,*.f90</td>
+<td bgcolor=#FFFFCC>text/plain</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Textdatei mit Tabulatoren</td>
+<td bgcolor=#FFCC99>*.tsv</td>
+<td bgcolor=#FFFFCC>text/tab-separated-values</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>TIFF-Grafik</td>
+<td bgcolor=#FFCC99>*.tif,*.tiff</td>
+<td bgcolor=#FFFFCC>image/tiff</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>troff-Dateien</td>
+<td bgcolor=#FFCC99>*.t,*.tr,*.roff</td>
+<td bgcolor=#FFFFCC>application/x-troff</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>troff mit MAN-Makros</td>
+<td bgcolor=#FFCC99>*.man</td>
+<td bgcolor=#FFFFCC>application/x-troff-man</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>troff mit ME-Makros</td>
+<td bgcolor=#FFCC99>*.me</td>
+<td bgcolor=#FFFFCC>application/x-troff-me</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>troff mit MS-Makros</td>
+<td bgcolor=#FFCC99>*.ms</td>
+<td bgcolor=#FFFFCC>application/x-troff-ms</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Unidata netCDF</td>
+<td bgcolor=#FFCC99>*.nc,*.cdf</td>
+<td bgcolor=#FFFFCC>application/x-netcdf</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>WAIS-Quelldatei</td>
+<td bgcolor=#FFCC99>*.src</td>
+<td bgcolor=#FFFFCC>application/x-wais-source</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Windows Videodatei</td>
+<td bgcolor=#FFCC99>*.avi</td>
+<td bgcolor=#FFFFCC>video/ms-video</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>Windows Wave Audio-Datei</td>
+<td bgcolor=#FFCC99>*.wav</td>
+<td bgcolor=#FFFFCC>audio/x-wav</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>X-Bitmap</td>
+<td bgcolor=#FFCC99>*.xbm</td>
+<td bgcolor=#FFFFCC>image/x-xbitmap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>X-Pixmap</td>
+<td bgcolor=#FFCC99>*.xpm</td>
+<td bgcolor=#FFFFCC>image/x-xpixmap</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>X-Windows Dump</td>
+<td bgcolor=#FFCC99>*.xwd</td>
+<td bgcolor=#FFFFCC>image/x-windowdump</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>ZIP-Archivdatei</td>
+<td bgcolor=#FFCC99>*.zip</td>
+<td bgcolor=#FFFFCC>multipart/x-zip (nur CERN)</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF>ZIP-Archivdatei</td>
+<td bgcolor=#FFCC99>*.zip</td>
+<td bgcolor=#FFFFCC>application/zip (nur NCSA)</td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcki.htm"><b>Java-Applets einbinden (Netscape, Sun)</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcla.htm"><b>Layer definieren und positionieren</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

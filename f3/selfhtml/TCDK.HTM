@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>SELFHTML: Schriftgr&ouml;&szlig;e, Schriftfarbe, Schriftart</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Schriftgr&ouml;&szlig;e, Schriftfarbe, Schriftart</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schriftgr&ouml;&szlig;e</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Schriftfarbe</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Schriftart</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Schriftgr&ouml;&szlig;e</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdka.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen f&uuml;r beliebige Textabschnitte eine bestimmte Schriftgr&ouml;&szlig;e bestimmen.
+
+<a name="ifont_size"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;font size=7&gt;Ziemlich riesiger Text&lt;/font&gt;
+&lt;font size=1&gt;Ziemlich winziger Text&lt;/font&gt;
+&lt;font size=+1&gt;Text etwas gr&ouml;&szlig;er als normal&lt;/font&gt;
+&lt;font size=-2&gt;Text deutlich kleiner als normal&lt;/font&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;font size=...&gt;</b> bestimmt die Schriftgr&ouml;&szlig;e (<i>font size = Schriftgr&ouml;&szlig;e</i>). Sie k&ouml;nnen den 
+Wert absolut in Zahlen zwischen 1 und 7 angeben, oder relativ im Verh&auml;ltnis zur 
+Normalschriftgr&ouml;&szlig;e mit +(Zahl) bzw. -(Zahl). Die Normalschriftgr&ouml;&szlig;e ist 3. Mit <b>&lt;/font&gt;</b> beenden Sie den Abschnitt mit anderer Schriftgr&ouml;&szlig;e.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei den Angaben zu <b>&lt;font size=...&gt;</b> handelt es sich um relative Werte. Wenn der Anwender eine 12-Punkt-Schrift eingestellt hat, hat beispielsweise <b>&lt;font size=5&gt;</b> eine andere Wirkung, als wenn der Anwender eine 9-Punkt-Schrift eingestellt hat.
+<p>
+Die Schriftgr&ouml;&szlig;e, die Sie mit <b>&lt;font size=...&gt;</b> bestimmen k&ouml;nnen, ist relativ zu der Schriftgr&ouml;&szlig;e des Absatztyps. Wenn Sie <b>&lt;font size=...&gt;</b> z.B. innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm"><b>&Uuml;berschrift</b></a> 1. Ordnung verwenden, gilt der Befehl relativ zur Schriftgr&ouml;&szlig;e f&uuml;r &Uuml;berschriften 1. Ordnung.
+<p>
+Die Zusatzangabe <b>size=</b> ist mit Angaben zur <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Schriftfarbe</b></a> und <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Schriftart</b></a> im gleichen Einleitungs-Tag <b>&lt;font...&gt;</b> kombinierbar.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a11"><h3><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Normalschriftgr&ouml;&szlig;e bestimmen</font></h3></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdka.htm#a11"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+In dem relativen Schriftgr&ouml;&szlig;enschema von 1 bis 7 ist 3 die Normalschriftgr&ouml;&szlig;e. Sie k&ouml;nnen f&uuml;r einen beliebigen Textabschnitt eine andere Normalschriftgr&ouml;&szlig;e einstellen.
+<p>
+<a name="ibasefont_size"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;basefont size=2&gt;Text kleiner als &lt;font size=3&gt;normal&lt;/font&gt; au&szlig;er bei &quot;normal&quot;
+&lt;basefont size=3&gt;Text ab hier wieder normal
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;basefont size=...&gt;</b> bestimmt die Normalgr&ouml;&szlig;e der Schrift (<i>basefont size = Basisschriftgr&ouml;&szlig;e</i>). Sie k&ouml;nnen den 
+Wert in Zahlen zwischen 1 und 7 angeben. Die voreingestellte Normalschriftgr&ouml;&szlig;e ist 3. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+<b>&lt;basefont size=...&gt;</b> hat kein abschlie&szlig;endes HTML-Tag.
+<p>
+<b>&lt;basefont size=...&gt;</b> betrifft normalen Flie&szlig;text und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm"><b>pr&auml;formatierten Text</b></a>, aber keine &Uuml;berschriften.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Schriftfarbe</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdka.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen f&uuml;r beliebige Textabschnitte Schriftfarben bestimmen. Diese Farben gelten
+unabh&auml;ngig von den Farben, die Sie ggfs. als <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a2"><b>dateiweite Textvordergrundfarbe</b></a> festgelegt haben.
+
+<a name="ifont_size"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;font color=#FFFFFF&gt;Wei&szlig;er Text&lt;/font&gt;
+&lt;font color=#FF0000&gt;Knallroter Text&lt;/font&gt;
+&lt;font color=#00C000&gt;Gr&uuml;ner Text&lt;/font&gt;
+&lt;font color=#0000FF&gt;Blauer Text&lt;/font&gt;
+
+&lt;font color=&quot;white&quot;&gt;Wei&szlig;er Text&lt;/font&gt;
+&lt;font color=&quot;red&quot;&gt;Knallroter Text&lt;/font&gt;
+&lt;font color=&quot;green&quot;&gt;Gr&uuml;ner Text&lt;/font&gt;
+&lt;font color=&quot;blue&quot;&gt;Blauer Text&lt;/font&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;font color=...&gt;</b> bestimmt die Schriftfarbe (<i>font color = Schriftfarbe</i>). Sie k&ouml;nnen den 
+Wert absolut in Hexadezimalschreibweise oder als Farbnamen angeben. Mit <b>&lt;/font&gt;</b> beenden Sie den Abschnitt mit anderer Schriftfarbe. Zur Bedeutung der Farben und f&uuml;r Hinweise zur Farbauswahl lesen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren in HTML</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die definierten Textfarben sollten mit der dateiweit definierten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a1"><b>Hintergrundfarbe</b></a> kontrastieren.
+<p>
+Die Zusatzangabe <b>color=</b> ist mit Angaben zur <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schriftgr&ouml;&szlig;e</b></a> und <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Schriftart</b></a> im gleichen Einleitungs-Tag <b>&lt;font...&gt;</b> kombinierbar.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"> Schriftart</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdka.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen f&uuml;r beliebige Textabschnitte Schriftarten bestimmen. 
+
+<a name="ifont_size"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;font face=&quot;Avalon,Wide Latin&quot;&gt;Das ist Text in Schriftart Avalon,
+oder, falls Avalon nicht darstellbar, in Wide Latin&lt;/font&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;font face=...&gt;</b> bestimmt die Schriftart (<i>font face = Schriftart</i>). Dahinter folgt, in Anf&uuml;hrungszeichen, die Angabe einer oder mehrerer Schriftarten. Wenn Sie mehrere Schriftarten angeben, trennen Sie die Schriftartnamen durch Kommata. Mit <b>&lt;/font&gt;</b> beenden Sie den Abschnitt mit anderer Schriftfarbe. 
+<p>
+Bei mehreren angegebenen Schriftarten versucht der WWW-Browser zuerst, den Text in der ersten angegebenen Schriftart darzustellen (im Beispiel in Avalon). Wenn diese Schrift beim Anwender nicht installiert ist, wird versucht, die zweite angegebene Schrift (im Beispiel Wide Latin) zu nehmen. Wenn keine der angegebenen Schriftarten beim Anwender darstellbar ist, bleibt die Angabe wirkungslos, d.h. der Text wird in der vom Anwender eingestellten Schrift angezeigt.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Verwenden Sie exakte Schriftartnamen. Unter MS-Windows k&ouml;nnen Sie eingestellte Schriftarten und ihre genauen Namen beispielsweise &uuml;ber die Systemsteuerung ermitteln.
+<p>
+Bedenken Sie, da&szlig; Anwender im WWW ganz verschiedene Rechnertypen, Betriebssysteme und Software verwenden, um auf Ihre Seiten zuzugreifen. Eine korrekte Anzeige von angegebenen Schriftarten k&ouml;nnen Sie nur im Idealfall erwarten. Vermeiden Sie deshalb, Schriftarten als zentrales Gestaltungsmittel zu verwenden.
+<p>
+Die Zusatzangabe <b>face=</b> ist mit Angaben zur <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schriftgr&ouml;&szlig;e</b></a> und <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Schriftfarbe</b></a> im gleichen Einleitungs-Tag <b>&lt;font...&gt;</b> kombinierbar.
+
+
+<h4><font color=#6666CC>Tip:</font></h4>
+Mit der Angabe <b>&lt;font face=&quot;Symbol&quot;&gt;</b>...<b>&lt;/font&gt;</b> bestimmen Sie die relativ weit verbreitete Schriftart &quot;Symbol&quot;. Mit Hilfe dieser Schriftart k&ouml;nnen Sie mathematisch/technische bzw. griechische Zeichen erzeugen, die sonst in HTML nicht dargestellt werden k&ouml;nnen. Zu diesem Thema gibt es ein interessantes Dokument im Internet: 
+<p>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.sozialwiss.uni-hamburg.de/phil/ag/symbole.html"><b>Die Verwendung logischer Symbole in HTML-Seiten</b></a> von Stefan M&uuml;ller. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdj.htm"><b>Physische Textauszeichnung</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdl.htm"><b>Gr&ouml;&szlig;ere Textabschnitte ausrichten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

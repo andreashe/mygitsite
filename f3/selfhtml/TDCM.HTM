@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.location</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.<i>location</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Das Objekt <b>FENSTERNAME.location</b> speichert die vollst&auml;ndige URL-Adresse einer Datei. &Uuml;ber das Objekt <b>FENSTERNAME.location</b> k&ouml;nnen Sie die URL-Adresse oder Teile davon zur Weiterverarbeitung abfragen und &auml;ndern. Beim &Auml;ndern f&uuml;hrt der WWW-Browser einen Sprung zu der neuen URL-Adresse aus, genau so wie bei einem Verweis.
+<p>
+Eine Instanz von <b>FENSTERNAME.location</b> brauchen Sie nicht eigens erzeugen. Sie k&ouml;nnen Eigenschaften und Methoden von <b>FENSTERNAME.location</b> direkt verwenden. Zu den Fensternamen lesen Sie den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm#a1"><b>Allgemeines zur Verwendung des window-Objekts</b></a>. Bei Verwendung von Frames lesen Sie auch den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm#a1"><b>Allgemeines zur Verwendung des Frame-Objekts</i></b></a>.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+var Domain = window.location.hostname;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel wird in einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm"><b>Variablen</b></a> <i>Domain</i> der Domain-Name der URL-Adresse gespeichert. Dazu wird die Objekteigenschaft <b>location.href</b> auf das aktuelle Browser-Fenster angewendet. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<b><font color=#6666CC>FENSTERNAME.location.hash</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>Anker</b></a> (Verweisziel) innerhalb der aktuellen HTML-Datei oder einer HTML-Datei in einem referenzierten Fenster. Mit <i>location.hash=&quot;Teil4&quot;</i> positionieren Sie beispielsweise innerhalb einer HTML-Datei auf ein Verweisziel mit dem Ankernamen <i>Teil4</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.hostname</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der Name des Server-Rechners innerhalb der aktuellen oder fensterspezifischen URL-Adresse, innerhalb der URL-Adresse <i>http://www.netzwelt.com/selfhtml/tdcn.htm</i> z.B. der Name <i>www.netzwelt.com</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.href</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die komplette aktuelle oder fensterspezifische URL-Adresse. Mit <i>var FrameSetURL =  parent.location.href</i> beispielsweise speichern Sie innerhalb eines Frame-Sets in der Variablen <i>FrameSetURL</i> die vollst&auml;ndige URL-Adresse der HTML-Datei, in der das Frame-Set definiert ist. Mit einer Anweisung wie <i>window.document.location.href = &quot;index.htm&quot;</i> erzwingen Sie einen Sprung des WWW-Browsers zu der angegebenen Adresse. Bei der Adressierung gelten die gleichen Regeln wie bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.pathname</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der Pfadname innerhalb der aktuellen oder fensterspezifischen URL-Adresse, innerhalb der URL-Adresse <i>http://www.hway.net/teamone/spanien/index.html</i> z.B. <i>/teamone/spanien/</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.port</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der Port innerhalb der aktuellen oder fensterspezifischen URL-Adresse, innerhalb der URL-Adresse <i>http://www.hamburg.pop.de:800/bda/int/zeit/aktion/index.html</i> z.B. <i>800</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.protocol</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Das Internet-Protokoll innerhalb der aktuellen oder fensterspezifischen URL-Adresse, innerhalb der URL-Adresse <i>http://www.hamburg.pop.de:800/bda/int/zeit/aktion/index.html</i> z.B. <i>http</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.search</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Der CGI-Script-Abfrageteil innerhalb der aktuellen oder fensterspezifischen URL-Adresse, innerhalb der URL-Adre&szlig;-Konstruktion <i>http://guide-p.infoseek.com/WW/NS/Titles?qt=RFC+1738+&col=WW</i> z.B. <i>qt=RFC+1738+&col=WW</i>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.target</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Das Zielfenster innerhalb der aktuellen oder fensterspezifischen URL-Adresse bei Frames oder mehreren Fenstern, wie es bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a1"><b>Verweisen zu anderen Frame-Fenstern</b></a> angegeben wird.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<b><font color=#6666CC>FENSTERNAME.location.reload()</font></b><br>
+Erzwingt ein erneutes Laden einer URL-Adresse vom Server. Als JavaScript-Anweisung notiert, hat etwa <i>window.location.reload()</i> die gleiche Wirkung, wie wenn der Anwender im Browser den Reload-Befehl w&auml;hlt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.location.replace(&quot;URL-Adresse&quot;)</font></b><br>
+Erzwingt einen Sprung des WWW-Browsers zu einer anderen URL-Adresse. Als JavaScript-Anweisung notiert, hat etwa <i>window.location.replace(&quot;index.htm&quot;)</i> die gleiche Wirkung, wie wenn der Anwender einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm"><b>Verweis</b></a> <i>&lt;a href=&quot;index.htm&quot;&gt;...&lt;/a&gt;</i> anklicken w&uuml;rde.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcl.htm"><b>FENSTERNAME.history</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcn.htm"><b>Array</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

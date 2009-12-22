@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>SELFHTML: Formulare verarbeiten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Formulare verarbeiten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Formulare als E-Mail</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Formulare und CGI</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Formulare als E-Mail</font></h2></a>
+Viele Anwender, die von gro&szlig;en Discount-Anbietern wie CompuServe, AOL oder T-Online Speicherplatz f&uuml;r eigene WWW-Seiten erhalten, haben keine M&ouml;glichkeit, eigene CGI-Scripts zur Datenverarbeitung auf dem Server-Rechner einzusetzen. Dazu kommt, da&szlig; die meisten modernen Seitenanbieter keine Informatiker sind, die sich in Programmiersprachen, fremde Betriebssystemumgebungen, Umgebungsvariablen und Daten&uuml;bertragungsprotokolle einarbeiten m&ouml;chten. Dennoch m&ouml;chten viele Seitenanbieter die M&ouml;glichkeit nutzen, mit Hilfe von HTML-Formularen gezielte und einheitlich strukturierte Daten von Besuchern ihrer WWW-Seiten einzuholen. Zu diesem Zweck besteht die M&ouml;glichkeit, sich ausgef&uuml;llte Formulare als E-Mail zuschicken zu lassen.
+<p>
+Ein Problem stellt bei dieser L&ouml;sung in letzter Zeit der MS Internet Explorer dar. Dieser WWW-Browser wird zwar von immer mehr Anwendern eingesetzt, aber er ist nicht in der Lage, die <b>mailto</b>-Anweisung in einem einleitenden <b>&lt;form&gt;</b>-Tag richtig zu interpretieren. Von Anwendern, die diesen WWW-Browser benutzen, k&ouml;nnen Sie keine Formulardaten per E-Mail erhalten (oder Sie erhalten leere E-Mails ohne Formulardaten). Um dieses Problem zu umgehen, können Sie einen öffentlichen CGI-Service wie den <img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.cwak.com/mailservice/"><b>CWAK Mailservice</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0> in Anspruch nehmen. Dort werden die Formulardaten von einem CGI-Programm verarbeitet und Ihnen dann als E-Mail zugeschickt.
+<p>
+Ein anderes Problem besteht darin, da&szlig; die Formulardaten beim Abschicken per Voreinstellung nach einem bestimmten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Type</b></a> kodiert werden, dem Mime-Typ <b>application/x-www-form-urlencoded</b>. Dabei werden alle Leerzeichen, verschiedene Sonderzeichen und Umlaute durch spezielle Zeichenfolgen ersetzt. So lautet beispielsweise der Satz <i>Danke f&uuml;r die Hilfe!</i> nach der Umwandlung: <i>Danke+f%FCr+die+Hilfe%21</i>. F&uuml;r Menschen ist das ziemlich ungenie&szlig;barer Lesestoff. Um die Kodierung zu verhindern, k&ouml;nnen Sie im einleitenden <b>&lt;form&gt;</b>-Tag zwar die Angabe <b>enctype=&quot;text/plain&quot;</b> angeben. Von Anwendern, deren WWW-Browser diese Angabe jedoch nicht interpretiert, werden Sie dennoch kodierte Formulardaten erhalten. Um kodierte Formulardaten nachtr&auml;glich in lesbaren Text zu dekodieren, k&ouml;nnen Sie ein Hilfsprogramm wie <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://users.aol.com:80/informatik/webparse.html"><b>WebParse f&uuml;r Windows</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0> verwenden.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Formulare und CGI</font></h2></a>
+Viele Anwendungsf&auml;lle f&uuml;r Formulare in HTML ben&ouml;tigen eine Datenverarbeitung auf dem Server-Rechner im WWW. Wenn Sie beispielsweise Ihr gesamtes WWW-Projekt nach einem Begriff durchsuchbar machen wollen, k&ouml;nnen Sie dem Anwender ein Formular anbieten, in dem er den Suchbegriff eingeben kann. Nach dem Abschicken des Formulars mu&szlig; ein Programm auf dem Server-Rechner alle Dateien des Projekts nach dem gew&uuml;nschten Begriff absuchen und eine dynamische HTML-Datei erzeugen, in der Verweise auf alle Seiten enthalten sind, die den Suchbegriff enthalten. 
+<p>
+F&uuml;r solche F&auml;lle, aber auch f&uuml;r Anwendungsf&auml;lle wie automatische G&auml;steb&uuml;cher, Diskussionsforen, elektronische Einkaufsk&ouml;rbe usw. ben&ouml;tigen Sie ein Programm auf dem Server-Rechner, das die in einem Formular eingegebenen oder ausgew&auml;hlten Daten sofort verarbeitet und dem Anwender echte Interaktion bietet.
+<p>
+Die Standard-Programmierschnittstelle auf WWW-Servern hierf&uuml;r ist CGI (Common Gateway Interface). Manche WWW-Server haben - je nach installierter HTTP-Software - auch noch andere Programmierschnittstellen. Der Provider, bei dem Sie Ihre WWW-Seiten speichern, mu&szlig; Ihnen Zugriff auf diese Programmierschnittstelle erlauben, damit Sie solche Anwendungen selbst realisieren k&ouml;nnen. Viele Discount-Provider wie CompuServe, AOL oder T-Online erlauben ihren Mitgliedern keinen solchen Zugriff. 
+<p>
+Die meist verwendete Programmiersprache f&uuml;r CGI-Scripts ist Perl. Fragen Sie jedoch vor dem Programmieren eines eigenen CGI-Scripts Ihren Provider, welche Art von Programmen auf dem Server ausf&uuml;hrbar sind. Wenn Sie in Perl programmieren wollen, fragen Sie den Provider, ob der Server &uuml;ber einen Perl-Interpreter verf&uuml;gt, und wo genau der Interpreter auf dem Server liegt. In diesem Dokument finden Sie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="te.htm"><b>Dokumentation: CGI/Perl</b></a>. 
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tchg.htm"><b>Buttons zum Absenden oder Abbrechen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcia.htm"><b>Frame-Sets und Frames definieren</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

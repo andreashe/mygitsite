@@ -1,0 +1,348 @@
+<html>
+<head>
+<title>SELFHTML: Style-Sheet-Angaben definieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Style-Sheet-Angaben definieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Formate f&uuml;r HTML-Tags definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Unterklassen von HTML-Tags mit Formaten definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Formate f&uuml;r verschachtelte HTML-Tags definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Pseudo-Elemente definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Tag-unabh&auml;ngige Formate mit Bezeichnernamen definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Freie Formate mit <b>&lt;span&gt;</b>-Tag definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a7"><b>Kommentare in Style-Sheet-Definitionen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Formate f&uuml;r HTML-Tags definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjba.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen gew&ouml;hnliche HTML-Tags f&uuml;r <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a> mit Hilfe von Style-Sheet-Angaben &quot;umdefinieren&quot;.  Wenn Sie das entsprechende HTML-Tag dann in der HTML-Datei verwenden, werden alle Formate angewendet, die Sie f&uuml;r das betreffende HTML-Tag definiert haben. So k&ouml;nnen Sie beispielsweise f&uuml;r &Uuml;berschriften 1. Ordnung, definieren, da&szlig; diese in Helvetica, 20 Punkt, rot, fett und kursiv mit einem Absatznachabstand von 16 Punkt angezeigt werden. Wenn Sie dann im Text der HTML-Datei eine &Uuml;berschrift 1. Ordnung wie gewohnt definieren, werden die definierten  Formateigenschaften bei der Anzeige im WWW-Browser ber&uuml;cksichtigt.
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+h1 { font-size: 48 pt; color: blue; font-style: italic }
+p,li  { font-size: 12 pt;
+     line-height: 14 pt; 
+     font-family: helvetica; 
+     font-variant: normal;
+     font-style: normal; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&amp;Uuml;berschrift 1. Ordnung mit Formaten&lt;/h1&gt;
+&lt;p&gt;Normaler Textabsatz, ebenfalls mit Formaten&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>).
+<p>
+Dazu notieren Sie zuerst das gew&uuml;nschte HTML-Tag, und zwar ohne spitze Klammern. Im obigen Beispiel werden die HTML-Tags <b>h1</b> (&Uuml;berschrift 1. Ordnung), <b>p</b> (Textabsatz) und <b>li</b> (Listeneintrag) auf diese Weise notiert. Wenn Sie gleichartige Formate f&uuml;r mehrere HTML-Tags definieren wollen, geben Sie alle gew&uuml;nschten Tags an und trennen Sie diese durch Kommata, so wie im obigen Beispiel <b>p, li</b>.
+<p>
+Dahinter folgen die dazugeh&ouml;rigen, gew&uuml;nschten Formatdefinitionen, und zwar in geschweiften Klammern <b>{</b> und <b>}</b>. Innerhalb solcher geschweifter Klammern k&ouml;nnen Sie eine oder mehrere Formateigenschaften definieren. Jede Eigenschaftszuweisung besteht aus einem Namen, z.B. <b>color</b> und einem Wert, z.B. <b>blue</b>. Zwischen Name und Wert der Eigenschaft steht ein Doppelpunkt. Wenn Sie mehrere Eigenschaften zuweisen wollen, wie im obigen Beispiel, trennen Sie die Eigenschaften jeweils durch einen Strichpunkt.
+<p>
+Im obigen Beispiel wird dem HTML-Tag f&uuml;r &Uuml;berschriften 1. Ordnung auf diese Weise eine Schriftgr&ouml;&szlig;e von 48 Punkt (<b>font-size: 48 pt;</b>), die Schriftfarbe blau (<b>color: blue;</b>) und der Schriftstil kursiv (<b>font-style: italic</b>) zugewiesen.  Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Unterklassen von HTML-Tags mit Formaten definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjbb.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen mit Hilfe von Style-Sheetes Unterklassen von gew&ouml;hnlichen HTML-Tags f&uuml;r <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a> erzeugen. So k&ouml;nnen Sie beispielsweise vom HTML-Tag f&uuml;r &Uuml;berschriften 1. Ordnung zwei Varianten erzeugen, etwa eine mit schwarzer und eine mit roter Schrift. Dazu vergeben Sie Namen f&uuml;r die entsprechenden Unterklassen.  
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+p.normal { font-size: 10 pt; color: black }
+p.gross { font-size: 12 pt; color: black }
+p.klein { font-size: 8 pt; color: black }
+p.rot { font-size: 10 pt; color: red }
+p.blau { font-size: 10 pt; color: blue }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Beispiele&lt;/h1&gt;
+&lt;p class=normal&gt;Normaler Textabsatz mit Schrift 10 Punkt schwarz&lt;/p&gt;
+&lt;p class=gross&gt;Textabsatz mit Schrift 12 Punkt schwarz&lt;/p&gt;
+&lt;p class=klein&gt;Textabsatz mit Schrift 8 Punkt schwarz&lt;/p&gt;
+&lt;p class=rot&gt;Textabsatz mit Schrift 10 Punkt rot&lt;/p&gt;
+&lt;p class=blue&gt;Textabsatz mit Schrift 10 Punkt blau&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>).
+<p>
+Unterklassen von HTML-Tags bilden Sie dort, indem Sie zuerst das Tag notieren, im obigen Beispiel <b>p</b>. Dahinter folgt ein Punkt und dahinter ein Name f&uuml;r die Unterklasse. Diese Namen k&ouml;nnen Sie frei vergeben. Die Namen d&uuml;rfen keine Leerzeichen enthalten. Gro&szlig;- und Kleinschreibung werden unterschieden. Die Namen sollten nicht zu lang sein und das Format treffend beschreiben.
+<p>
+Innerhalb der HTML-Datei k&ouml;nnen Sie solche Unterklassen dann anwenden. Dazu notieren Sie im einleitenden HTML-Tag die Angabe <b>class=</b> und dahinter den Namen, der Unterklasse, den Sie zuvor vergeben haben.
+<p>
+Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Formate f&uuml;r verschachtelte HTML-Tags definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjbc.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen bestimmen, da&szlig; ein HTML-Tag eine bestimmte Eigenschaft dann und nur dann hat, wenn es innerhalb eines anderen HTML-Tags vorkommt. 
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    h1 { color: red }
+    h1 i { color: red }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Wir lernen &lt;i&gt;Style-Sheets&lt;/i&gt;&lt;/h1&gt;
+&lt;h1&gt;Wir lernen &lt;em&gt;Style-Sheets&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Wir lernen &lt;i&gt;Style-Sheets&lt;/i&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>).
+<p>
+Im obigen Beispiel wird dort festgelegt, da&szlig; Textabschnitte, die mit dem Tag <b>&lt;i&gt;</b> ... <b>&lt;/i&gt;</b> (kursive Schrift) formatiert werden, rot dargestellt werden, aber nur dann, wenn das Tag innerhalb einer &Uuml;berschrift erster Ordnung vorkommt. In allen anderen F&auml;llen wird die normale Schriftfarbe verwendet. Dazu notieren Sie zuerst das &uuml;bergeordnete Tag, im Beispiel <b>h1</b>, und dahinter, durch ein Leerzeichen getrennt, das untergeordnete Tag, im Beispiel <b>i</b>.
+<p>
+Da im Beispiel oben f&uuml;r &Uuml;berschriften 1. Ordnung und f&uuml;r kursiven, mit <b>&lt;i&gt;</b> ... <b>&lt;/i&gt;</b> formatierten Text innerhalb solcher &Uuml;berschriften die Farbe Rot definiert wurde, wird der kursive Teil bei Verwendung dieses Tags in der gleichen Farbe dargestellt wie der &uuml;brige &Uuml;berschriftentext. Im zweiten Befehl dagegen, wo das Tag <b>&lt;em&gt;</b> ... <b>&lt;/em&gt;</b> zur Formatierung angewendet wird, wird der Textteil &quot;Style-Sheets&quot; in normaler Schriftfarbe angezeigt, da f&uuml;r <b>em</b> nichts anderes definiert wurde. 
+<p>
+Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Pseudo-Elemente definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjbd.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Pseudo-Elemente sind in diesem Zusammenhang Textbestandteile, die sich nicht durch ein eindeutiges HTML-Tag ausdr&uuml;cken lassen, z.B. ein &quot;noch nicht besuchter Verweis&quot;. Auch solchen Elementen k&ouml;nnen Sie in Style-Sheets Eigenschaften zuweisen.
+
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    a:link { color: red; font-weight: bold }
+    a:visited { color: green; font-weight: bold }
+    a:active { color: blue; font-weight: bold }
+    p:firstline { text-transform: uppercase; color: blue }
+    p:firstletter { font-size: 300%; float: left }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Erste Zeile&lt;br&gt;
+&lt;a href=&quot;selfhtml.htm&quot;&gt;Verweis&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Pseudo-Elemente betreffen vor allem die Sprachelemente Verweis und Absatz. In den Beispielen werden drei Pseudo-Elemente zu Verweisen vorgestellt, beginnend mit <b>a:</b>, und zwei Pseudo-Elemente zu Abs&auml;tzen, beginnend mit <b>p:</b>. 
+<p>
+Bei Pseudo-Elemente bedeuten: <br>
+<b>a:link</b> = Verweise zu noch nicht besuchten Seiten <br>
+<b>a:visited</b> = Verweise zu bereits besuchten Seiten <br>
+<b>a:active</b> = Verweise, die gerade angeklickt werden <br>
+<b>p:firstline</b> = Erste Zeile eines Absatzes <br>
+<b>p:firstletter</b> = Erster Buchstaben eines Absatzes <br>
+<p>
+Bei Verweisen haben Sie dadurch erweiterte M&ouml;glichkeiten als bei den Angaben im einleitenden <b>&lt;body&gt;</b>-Tag. So k&ouml;nnen Sie nicht nur Verweisfarben festlegen, sondern auch Schriftgr&ouml;&szlig;en, Schriftarten, Schriftstile usw.
+<p>
+Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Tag-unabh&auml;ngige Formate mit Bezeichnernamen definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjbe.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen Formate definieren, die keinem HTML-Tag oder einer Unterklasse davon zugeordnet sind. Die freien Formate erhalten einen eindeutigen Bezeichnernamen. Mit dem Bezeichnernamen k&ouml;nnen Sie ein solches Format dann jederzeit im Text einer HTML-Datei anwenden.
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  #a001 { color: blue }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=a001&gt;&amp;Uuml;berschrift 1. Ordnung blau&lt;/h1&gt;
+&lt;p id=a001&gt;Normaler Textabsatz, ebenfalls blau&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>).
+<p>
+Tag-unabh&auml;ngige Formate mit Bezeichnernamen werden innerhalb erlaubter Definitionsbereiche mit dem Gatter <b>#</b> eingeleitet. Dahinter folgt der Bezeichnernamen. Im Anschlu&szlig; daran notieren Sie wie gewohnt die gew&uuml;nschten Formateigenschaften. Im obigen Beispiel wird mit dem Bezeichnernamen <b>a001</b> ein tag-unabh&auml;ngiges Format mit der Formateigenschaft &quot;blauer Text&quot; definiert. 
+<p>
+Im Text der HTML-Datei kann so ein Format in den einleitenden Tags verschiedener Elemente vorkommen. Im obigen Beispiel wird das Format zum Beispiel im Einleitungs-Tag einer &Uuml;berschrift 1. Ordnung und im Einleitungs-Tag eines Textabsatzes verwendet. Die entsprechenden Abs&auml;tze erhalten dadurch eine blaue Textfarbe, behalten aber sonst ihre typischen Eigenschaften (Schriftgr&ouml;&szlig;e usw.) bei. Um ein solches Format einzubinden, m&uuml;ssen Sie im einleitenden HTML-Tag die Angabe <b>id=</b> notieren. Dahinter folgt der Bezeichnername. Unter diesem Bezeichnernamen mu&szlig; das Format zuvor definiert worden sein.
+<p>
+Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Bezeichnernamen k&ouml;nnen Sie frei vergeben. Das erste Zeichen mu&szlig; jedoch ein Buchstabe sein. Ferner sind Ziffern, Bindestriche und Punkte darin erlaubt. Als Buchstaben d&uuml;rfen nur A-Z und a-z verwendet werden, also keine deutschen Umlaute. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Freie Formate mit <b>&lt;span&gt;</b>-Tag definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcjbf.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen freie Formate definieren, die keinem herk&ouml;mmlichen HTML-Tag oder einer Unterklasse davon zugeordnet sind. Daf&uuml;r steht ein neues HTML-Tag zur Verf&uuml;gung, da&szlig; sonst keine eigene Bedeutung hat und nur zum Definieren von Style-Sheet-Angaben dient. 
+
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;h1&gt;&amp;Uuml;berschrift 1. Ordnung mit &lt;span style=&quot;color: blue&quot;&gt;blauem Text&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Normaler Textabsatz mit 
+&lt;span style=&quot;font-style: small-caps&quot; color: red&gt;kleinen roten Grossbuchstaben&lt;/span&gt;&lt;/p&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>). Sinnvoll ist dabei vor allem die Verwendung direkt im Textk&ouml;rper der HTML-Datei.
+<p>
+Im obigen Beispiel werden mit <b>&lt;span style=...&gt;</b> ... <b>&lt;/span&gt;</b> Textabschnitte auf die gew&uuml;nschte Art formatiert. Hinter der Angabe <b>style=</b> notieren Sie das oder die gew&uuml;pnschten Formateigenschaften wie gewohnt. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen.
+<p>
+Zu den einzelnen Formateigenschaften und ihren m&ouml;glichen Werten siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a>.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a7"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Kommentare in Style-Sheet-Definitionen</font></h2></a>
+Um Ihre Formatdefinitionen intern auszukommentieren, steht eine spezielle, an die Programmiersprache C angelehnte Syntax zur Verf&uuml;gung. 
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  #a001 { color: blue } /* freies Format f&uuml;r blauen Text, kreiert am 4.1.1997 */
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=a001&gt;&amp;Uuml;berschrift 1. Ordnung blau&lt;/h1&gt;
+&lt;p id=a001&gt;Normaler Textabsatz, ebenfalls blau&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+An erlaubten Stellen k&ouml;nnen Sie Style-Sheets in HTML einbinden (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Arten, Style-Sheets zu definieren</b></a>). An solchen Stellen sind auch die hier beschriebenen Kommentare erlaubt.
+<p>
+Mit <b>/*</b> - also einem Schr&auml;gstrich und einem Sternzeichen in Folge - leiten Sie einen Kommentar ein. Mit der umgekehrten Zeichenfolge - also mit <b>*/</b> - beenden Sie den Kommentar.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcja.htm"><b>Style-Sheets in HTML einbinden</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcjc.htm"><b>Kurzreferenz: Style-Sheet-Angaben</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

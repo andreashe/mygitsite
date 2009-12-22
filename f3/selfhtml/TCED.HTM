@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>SELFHTML: Zelleninhalte ausrichten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zelleninhalte ausrichten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Ausrichtung links, zentriert und rechts</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Ausrichtung oben, mittig und unten</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Ausrichtung links, zentriert und rechts</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceda.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Kopfzellen (<b>&lt;th&gt;</b>) werden zentriert ausgerichtet, wenn Sie nichts anderes angeben, Datenzellen (<b>&lt;td&gt;</b>) linksb&uuml;ndig. Sie k&ouml;nnen die Zellen jedoch auch anders ausrichten.
+
+<a name="itable_align"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th align=left&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 2. Spalte
+      &lt;th align=right&gt;Kopfzelle: 1. Zeile, 3. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte 
+      &lt;td align=center&gt;Datenzelle: 2. Zeile, 2. Spalte
+      &lt;td align=right&gt;Datenzelle: 2. Zeile, 1. Spalte
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>align=left</b> k&ouml;nnen Sie eine Kopfzelle in ihrem einleitenden Tag links ausrichten, durch die Angabe <b>align=right</b> rechts. Datenzellen k&ouml;nnen Sie in ihrem einleitenden Tag durch die Angabe <b>align=center</b> zentriert ausrichten und durch <b>align=right</b> rechts. Die Angaben <b>align=center</b> bei Kopfzellen und <b>align=left</b> bei Datenzellen sind nat&uuml;rlich auch erlaubt, bewirken aber lediglich die Voreinstellung und sind deshalb nicht n&ouml;tig. (<i>align = Ausrichtung, left = links, center = zentriert, right = rechts</i>)
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Um alle Zellen einer Zeile gleich auszurichten, k&ouml;nnen Sie die Angaben zur Ausrichtung, also <b>align=left</b>, <b>align=center</b> und <b>align=right</b>, auch im einleitenden Tag der Zeile <b>&lt;tr&gt;</b> notieren. So richten Sie beispielsweise mit <b>&lt;tr align=right&gt;</b> alle folgenden Zellen der Zeile rechts aus.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Ausrichtung oben, mittig und unten</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceda.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Innerhalb einer Tabellenzeile bestimmt die Zelle mit dem meisten Inhalt die H&ouml;he der Tabelle. Die Inhalte der &uuml;brigen Zellen in der gleichen Zeile werden mittig dazu ausgerichtet. Auch bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a3"><b>erzwungenen Zeilenh&ouml;hen</b></a> werden alle Zelleninhalte mittig ausgerichtet, wenn Sie nichts anderes angeben. Sie k&ouml;nnen Zelleninhalte aber auch oben- und untenb&uuml;ndig ausrichten.
+
+<a name="itr"><a name="itable_valign"><a name="itd"><h4><font color=#6666CC>Beispiel:</font></h4></a></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th valign=top&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 2. Spalte
+      &lt;th valign=bottom&gt;Kopfzelle: 1. Zeile, 3. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td valign=top&gt;Datenzelle: 2. Zeile, 1. Spalte &lt;!-- Breite 300 gilt auch hier --&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 2. Spalte
+      &lt;td valign=bottom&gt;Datenzelle: 2. Zeile, 1. Spalte
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>valign=top</b> k&ouml;nnen Sie eine Zelle in ihrem einleitenden Tag obenb&uuml;ndig ausrichten, durch die Angabe <b>valign=bottom</b> untenb&uuml;ndig. Auch die Angabe <b>valign=middle</b> ist m&ouml;glich. Dies ist jedoch die Voreinstellung ist und deshalb nicht n&ouml;tig. (<i>valign = vertical align = vertikale Ausrichtung, top = oben, bottom = unten</i>)
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Um alle Zellen einer Zeile gleich auszurichten, k&ouml;nnen Sie die Angaben zur Ausrichtung, also <b>valign=top</b>, <b>valign=middle</b> und <b>valign=bottom</b>, auch im einleitenden Tag der Zeile <b>&lt;tr&gt;</b> notieren. So richten Sie beispielsweise mit <b>&lt;tr valign=top&gt;</b> alle folgenden Zellen der Zeile obenb&uuml;ndig aus.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcec.htm"><b>H&ouml;he und Breite erzwingen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcee.htm"><b>Zellen verbinden</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>SELFHTML: &Uuml;berschriften</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> &Uuml;berschriften</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Überschriften definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Überschriften ausrichten</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> &Uuml;berschriften definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel">><br>
+<a href="tcdaa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+
+HTML unterscheidet 6 &Uuml;berschriftenebenen, um 
+Hierarchieverh&auml;ltnisse in Dokumenten abzubilden.
+
+<a name="ih"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;h1&gt;&Uuml;berschrift 1. Ordnung&lt;/h1&gt;
+&lt;h3&gt;&Uuml;berschrift 3. Ordnung&lt;/h3&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;h[1-6]&gt;</b> (<i>h&nbsp;=&nbsp;heading&nbsp;=&nbsp;&Uuml;berschrift</i>) leitet eine &Uuml;berschrift ein. Die Nummer steht 
+f&uuml;r die &Uuml;berschriftenebene. 1 ist die h&ouml;chste Ebene, 6 die niedrigste. 
+Dahinter folgt der Text der &Uuml;berschrift.<br>
+<b>&lt;/h[1-6]&gt;</b> beendet die &Uuml;berschrift und steht am Ende des 
+&Uuml;berschriftentextes.
+<p>
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Nummern bei einleitendem und abschlie&szlig;endem Tag m&uuml;ssen gleich sein.
+<p>
+Jede &Uuml;berschrift ist ein eigener Absatz, d.h. vor und nach 
+&Uuml;berschriften sind keine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm#a1"><b>Absatzschaltungen</b></a> 
+n&ouml;tig. Beim &Uuml;berschriftentext gelten die Besonderheiten f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcad.htm"><b>Umlaute, Sonderzeichen und HTML-eigene Zeichen</b></a>. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> &Uuml;berschriften ausrichten</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdaa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+&Uuml;berschriften werden linksb&uuml;ndig ausgerichtet, wenn Sie 
+nichts anderes angeben. Sie k&ouml;nnen eine &Uuml;berschrift auch 
+zentriert oder rechtsb&uuml;ndig ausrichten. Sogar Blocksatz ist möglich.
+
+<a name="ih_align"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;h1 align=center&gt;&Uuml;berschrift 1. Ordnung&lt;/h1&gt;
+&lt;h3 align=right&gt;&Uuml;berschrift 3. Ordnung&lt;/h3&gt;
+&lt;h4 align=justify&gt;&Uuml;berschrift 4. Ordnung&lt;/h3&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>align=center</b> im 
+einleitenden Tag erreichen Sie, da&szlig; die &Uuml;berschrift zentriert 
+ausgerichtet wird (<i>align&nbsp;=&nbsp;Ausrichtung, center&nbsp;=&nbsp;zentriert</i>). Mit der Angabe<b> align=right</b> 
+wird die &Uuml;berschrift rechtsb&uuml;ndig ausgerichtet (<i>right&nbsp;=&nbsp;rechts</i>). Mit <b> align=justify</b> 
+erzwingen Sie den Blocksatz für die Überschrift (<i>justify&nbsp;=&nbsp;justieren</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Nicht alle Browser beherrschen den Blocksatz
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tccc.htm"><b>Seitenr&auml;nder</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdb.htm"><b>Textabs&auml;tze</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

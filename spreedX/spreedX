@@ -1,0 +1,21 @@
+#!/bin/bash
+##      spreedX
+
+if [ `id -u` -eq 0 ]; then
+	echo "You should not launch spreedX as root."
+fi
+
+basefolder=`dirname $0`
+PYTHON_EXEC=/usr/bin/python
+
+LANG="C"
+export LANG
+
+cd ${basefolder}
+
+# selinux context
+chcon -t texrel_shlib_t tools/vnc2spreed/flvcodec24/flvcodec.so 2>/dev/null
+chcon -t texrel_shlib_t tools/vnc2spreed/flvcodec25/flvcodec.so 2>/dev/null
+
+export PYTHONPATH="$PYTHONPATH:$basefolder"
+exec -a spreedX ${PYTHON_EXEC} -OO spreedX.py $@ 

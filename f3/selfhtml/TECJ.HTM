@@ -1,0 +1,251 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Dateien lesen und schreiben</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Dateien lesen und schreiben</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Dateien &ouml;ffnen und schlie&szlig;en</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Dateien lesen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Daten in Dateien schreiben</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Dateien &ouml;ffnen und schlie&szlig;en</font></h2></a>
+
+Mit Perl-Scripts k&ouml;nnen Sie Dateien verwalten. Im Zusammenhang mit CGI-Scripts k&ouml;nnen Perl-Scripts Dateien auf dem Server-Rechner lesen und schreiben. Erst dadurch werden so bekannte CGI-Anwendungen wie Zugriffsz&auml;hler oder G&auml;steb&uuml;cher m&ouml;glich.
+<p>
+Jede Datei, die Sie mit einem Perl-Script lesen oder in die Sie Daten schreiben wollen, m&uuml;ssen Sie zuerst &ouml;ffnen. Nachdem Sie eine Datei ausgelesen oder alle gew&uuml;nschten Inhalte in die Datei geschrieben haben, sollten Sie die Datei stets wieder schlie&szlig;en.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+open(NEUIGKEITENDATEI, &quot;&lt;news.txt&quot;);    # Datei zum Lesen &ouml;ffnen
+close(NEUIGKEITENDATEI);
+
+open(NEUIGKEITENDATEI, &quot;&gt;news.txt&quot;);    # Datei zum Schreiben &ouml;ffnen
+close(NEUIGKEITENDATEI);
+
+open(NEUIGKEITENDATEI, &quot;&gt;&gt;news.txt&quot;);    # Datei zum anh&auml;ngenden Schreiben &ouml;ffnen
+close(NEUIGKEITENDATEI);
+
+if(open(COUNTERDATEI, &quot;&lt;counter/counter.dat&quot;) == false)
+ { print &quot;Counter-Datei nicht gefunden\n&quot;; }
+
+open(COUNTERDATEI, &quot;&lt;counter/counter.dat&quot;) || die &quot;Counter-Datei nicht gefunden\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Datei wird mit der Perl-Funktion <b>open</b> ge&ouml;ffnet. Die Funktion erwartet zwei Parameter.
+<p>
+Als ersten Parameter vergeben Sie einen Datei-Handler. Das ist ein Name, der ben&ouml;tigt wird, um auf die Datei zugreifen zu k&ouml;nnen. Den Namen f&uuml;r den Datei-Handler k&ouml;nnen Sie frei vergeben. Es ist &uuml;blich und geh&ouml;rt zum guten Ton, f&uuml;r solche Namen ausschlie&szlig;lich Gro&szlig;buchstaben zu verwenden. In den obigen Beispielen sind NEUIGKEITENDATEI und COUNTERDATEI solche Namen.
+<p>
+Als zweiten Parameter erwartet die <b>open</b>-Funktion die Angabe eines Dateinamens. Wenn die gew&uuml;nschte Datei sich in einem anderen Verzeichnis befindet, benutzen Sie das gleichen Adressierungs-Schema wie bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm#a2"><b>HTML-Verweise zu Dateien in anderen Verzeichnissen</b></a>. Wichtig ist der einfache Schr&auml;gstrich zum Trennen von Verzeichnissen, auch wenn Sie das Perl-Script in einer DOS/Windows-Umgebung laufen lassen.
+<p>
+Vor dem Dateinamen und ggfs. der Pfadangabe notieren Sie noch mit Hilfe von Sonderzeichen, in welchem Modus Sie die Datei &ouml;ffnen m&ouml;chten:
+<p>
+<b>&lt;datei.dat</b> bedeutet: Datei <i>datei.dat</i> nur zum Lesen &ouml;ffnen. Die Datei mu&szlig; existieren, ansonsten gibt es einen Fehler.<br>
+<b>&gt;datei.dat</b> bedeutet: Datei <i>datei.dat</i> zum Schreiben von Daten &ouml;ffnen. Wenn die Datei bereits existiert, wird ihr bisheriger Inhalt &uuml;berschrieben. Wenn die Datei noch nicht existiert, wird sie automatisch angelegt.<br>
+<b>&gt;&gt;datei.dat</b> bedeutet: Datei <i>datei.dat</i> zum Schreiben von Daten &ouml;ffnen. Wenn die Datei bereits existiert, wird der neue Inhalt an den alten Inhalt angeh&auml;ngt, d.h. der alte Inhalt wird nicht gel&ouml;scht. Wenn die Datei noch nicht existiert, wird sie automatisch angelegt.<br>
+<b>+&gt;datei.dat</b> bedeutet: Datei <i>datei.dat</i> zum Lesen und zum Schreiben von Daten.<br>
+<b>|such.exe</b> bedeutet: Datei <i>wuch.exe</i> ist eine ausf&uuml;hrbare Programmdatei. Das Programm wird ge&ouml;ffnet, um es auszuf&uuml;hren.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es ist guter Programmierstil, m&ouml;gliche Fehler beim &Ouml;ffnen von Dateien abzufangen und im Perl-Script entsprechend darauf zu reagieren. Die beiden letzten der obigen Beispiele zeigen Anweisungskonstruktionen f&uuml;r solche Fehlerreaktionen. Die erste der beiden Anweisungskonstruktionen arbeitet mit einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecd.htm"><b>bedingten Anweisung</b></a> und gibt mit Hilfe der <b>print</b>-Funktion eine Fehlermeldung aus, falls das &Ouml;ffnen der Datei fehlschl&auml;gt. Die zweite Anweisungskonstruktion ist ein einfacher logischer Oder-Ausdruck, den der Perl-Interpreter bewertet. Zun&auml;chst wird der erste Teil des 
+Ausdrucks (vor dem Oder-Zeichen <b>||</b>) bewertet. Das ist der Befehl zum &Ouml;ffnen der Datei. Gelingt es, die Datei zu &ouml;ffnen, gibt die <b>open</b>-Funktion den Wert &quot;wahr&quot; zur&uuml;ck, und damit ist auch der gesamte logische Ausdruck wahr. Wenn das &Ouml;ffnen der Datei nicht gelingt, wird der zweite Teil des Ausdrucks bewertet. Dort wird einfach mit Hilfe der <b>die</b>-Funktion das Script vorzeitig beendet. Die Funktion <b>die</b> (= <i>sterben</i>) beendet ein Perl-Script und gibt auf Wunsch noch einen Text aus, so wie im obigen Beispiel.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Dateien lesen</font></h2></a>
+
+Es gibt verschiedene M&ouml;glichkeiten, eine Datei einzulesen. Welche M&ouml;glichkeit Sie benutzen sollten, h&auml;ngt von den Aufgaben ab, die das Perl-Script erf&uuml;llen soll. Voraussetzung f&uuml;r das Einlesen einer Datei ist, da&szlig; die Datei zuvor zum Lesen ge&ouml;ffnet wird.
+
+<h4><font color=#6666CC>Beispiel 1 (Datei zeilenweise einlesen):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Zeilen = (&quot;&quot;);
+open(MAILDAT, &quot;&lt;inbox.dat&quot;) || die "Datei mit E-Mails nicht gefunden\n";
+while(&lt;MAILDAT&gt;)
+ {
+  push(@Zeilen,$_);
+ }
+close(MAILDAT);
+for(@Zeilen)
+ {
+  if(/HTML/)
+   { 
+    print $_;
+   }
+  }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2 (Datei zeichenweise einlesen):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Vokale = (&quot;a&quot;,&quot;e&quot;,&quot;i&quot;,&quot;o&quot;,&quot;u&quot;);
+@Anzahl = (0,0,0,0,0);
+open(DATEI, &quot;&lt;$ARGV[0]&quot;) || die &quot;$_[1] nicht gefunden\n&quot;;
+while(($AktuellesZeichen = getc(DATEI)) ne &quot;&quot;)
+ {
+  for($i=0;$i&lt;=4;++$i)
+   {
+    if($AktuellesZeichen eq $Vokale[$i])
+     {
+      $Anzahl[$i]++;
+     }
+   }
+ }
+close(DATEI);
+for($i=0;$i&lt;=4;++$i)
+ {
+  print &quot;$Vokale[$i] kommt in $ARGV[0] isg. $Anzahl[$i] mal vor\n&quot;;
+ } 
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die &uuml;blichste Art und Weise, in Perl eine Datei einzulesen, ist das zeilenweise Einlesen, so wie im obigen Beispiel 1. Das funktioniert bei allen Dateien, die man auch in einem Texteditor gut lesen kann, also alle Arten von Textdateien, Konfigurationsdateien oder zeilenartig aufgebaute Datendateien mit Begrenzerzeichen f&uuml;r Felder. Daf&uuml;r gibt es gar keinen eigenen Lesebefehl in Perl. Sie notieren einfach eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tece.htm#a1"><b>while-Schleife</b></a> mit der Syntax <b>while(&lt;DATEIHANDLER&gt;)</b>, wobei DATEIHANDLER derjenige Name sein mu&szlig;, den Sie bei <b>open</b> vergeben haben. Innerhalb der Schleife k&ouml;nnen Sie die aktuelle, eingelesene Zeile der Datei &uuml;ber die vordefinierte Variable <b>$_</b> ansprechen. Um die Daten im Arbeitsspeicher f&uuml;r die Weiterverarbeitung zu halten, k&ouml;nnen Sie die Zeilen beispielsweise in eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> einlesen, so wie im obigen Beispiel 1.
+<p>
+Bin&auml;rdateien, also z.B. Dateien mit Dateiformaten bestimmter Anwendungsprogramme, die auch numerische Werte und Steuerzeichen enthalten, lassen sich besser zeichenweise einlesen, so wie im obigen Beispiel 2. Die Perl-Funktion zum Einlesen des jeweils n&auml;chsten Zeichens aus einer Datei hei&szlig;t <b>getc</b>. Diese Funktion gibt jeweils das eingelesene Zeichen zur&uuml;ck, das Sie in einer geeigneten Variablen speichern k&ouml;nnen. Wenn das Dateiende erreicht wurde, gibt die Funktion ein leeres Zeichen (hexadezimal 0) zur&uuml;ck. Deshalb wird im obigen Beispiel 2 in der while-Schleife zum Einlesen der Datei die Abbruchbedingung mit dem folgenden <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecf.htm#a2"><b>Vergleichsoperator</b></a> formuliert: <i>ne &quot;&quot;</i>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das obige Beispiel 2 zeigt nebenbei, wie Sie in einem Perl-Script eine Datei einlesen k&ouml;nnen, die dem Script nicht bekannt ist, sondern ihm beim Aufruf als Parameter mit &uuml;bergeben wird. Die Argumente, die dem Script &uuml;bergeben werden, sind in Perl in der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecc.htm#a3"><b>vordefinierten Liste</b></a> <b>@ARGV</b> gespeichert.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Daten in Dateien schreiben</font></h2></a>
+Je nachdem, in welchem Modus Sie eine Datei zum Schreiben ge&ouml;ffnet haben (siehe <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Dateien &ouml;ffnen</b></a>), wird eine bereits vorhandene Datei beim Schreiben von Daten in die Datei &uuml;berschrieben, oder die neuen Daten werden hinten angeh&auml;ngt.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+# Dieses Beispiel liest eine kommabegrenzte Datei mit Adressen ein
+# und schreibt sie HTML-formatiert in eine neue Datei
+
+@Adressen = (&quot;&quot;);    # Speicher f&uuml;r alle Datensaetze
+@Datensatz = (&quot;&quot;);   # Speicher f&uuml;r alle Felder des aktuellen Datensatzes
+$Felder = &quot;&quot;;        # Speicher f&uuml;r die Namen der Felder (stehen in der ersten Dateizeile
+$i = 0;
+open(ADRESSEN, &quot;&lt;adressen.csv&quot;) || die &quot;Adressendatei nicht gefunden\n&quot;;
+while(&lt;ADRESSEN&gt;)              # Kommabegrenzte Datei einlesen
+ {
+  if($i == 0)                  # erste Zeile der Datei einlesen
+   {
+    $Felder = $_;              # Feldnamen ermitteln
+   }
+  else
+   {
+    $Adressen[$i] = $_;        # ab zweiter Zeile in @Adressen einlesen
+   }
+  $i++;                        # Datensatzz&auml;hler erh&ouml;hen
+ }
+close(ADRESSEN);
+$Anzahl = $i - 1;              # Anzahl Datens&auml;tze merken
+chop($Felder);
+@Datenfelder = split(/,/,$Felder);    # Erste Zeile mit Feldnamen aufdr&ouml;seln
+
+open(ADRESSENDAT, &quot;&gt;adressen.htm&quot;);   # HTML-Datei zum Schreiben &ouml;ffnen
+print ADRESSENDAT &quot;&lt;html&gt;\n&lt;head&gt;\n&quot;;  # HTML-Datei schreiben
+print ADRESSENDAT &quot;&lt;title&gt;Adressen&lt;/title&gt;\n&quot;;
+print ADRESSENDAT &quot;&lt;/head&gt;\n&lt;body bgcolor=#FFFFFF&gt;\n&quot;;
+for(@Adressen)                        # solange Daten in der Adressenliste sind
+ {
+  @Datensatz = split(/,/,$_);         # Aktuellen Datensatz aufdr&ouml;seln
+  $i = 0;
+  for(@Datensatz)
+   {
+    print ADRESSENDAT &quot;&lt;b&gt;$Datenfelder[$i]:&lt;/b&gt; $Datensatz[$i]&lt;br&gt;\n&quot;;   # Aktuellen Datensatz schreiben
+    $i++;
+   }
+ }
+print ADRESSENDAT &quot;&lt;/body&gt;\n&lt;/html&gt;\n&quot;;
+close(ADRESSENDAT);
+print $Anzahl,&quot; Datensaetze geschrieben\n&quot;;   # Nur zur Kontrolle: auf Standardausgabe
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Um Daten in Dateien zu schreiben, wird in Perl normalerweise die <b>print</b>-Funktion verwendet. Im Gegensatz zu Ausgaben auf die Standardausgabe mu&szlig; beim Schreiben in eine Datei jedoch hinter <b>print</b> der Name des Dateihandlers notiert werden, der beim &Ouml;ffnen der Datei vergeben wurde. Im obigen Beispiel wird im unteren Teil die Datei <i>adressen.htm</i> zum Schreiben ge&ouml;ffnet. Dabei erh&auml;lt Sie als Dateihandler den Namen ADRESSENDAT. Mit <i>print ADRESSENDAT &quot;Daten...&quot;</i> werden Daten in die Datei <i>adressen.htm</i> geschrieben.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="teci.htm"><b>Unterprogramme und Perl-Funktionen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="teck.htm"><b>Zeichenketten und Listen manipulieren</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

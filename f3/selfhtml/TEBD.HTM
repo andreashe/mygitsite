@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>SELFHTML: CGI-Umgebungsvariablen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>CGI-Umgebungsvariablen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu CGI-Umgebungsvariablen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>&Uuml;bersicht der CGI-Umgebungsvariablen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu CGI-Umgebungsvariablen</font></h2></a>
+
+Zur sogenannten &quot;CGI-Schnittstelle&quot; geh&ouml;ren auch die CGI-Umgebungsvariablen. Ein installierter <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm"><b>WWW-Server</b></a> stellt solche Variablen auf Betriebssystemebene zur Verf&uuml;gung. Bei jedem Aufruf eines CGI-Scripts f&uuml;llt er einige dieser Variablen mit Informationen. Das CGI-Script kann den Inhalt dieser Variablen auslesen und f&uuml;r eigene Zwecke nutzen. Das CGI-Script kann einige dieser Variablen auch selbst mit Inhalt f&uuml;llen oder einen dort gespeicherten Inhalt &auml;ndern. CGI-Umgebungsvariablen existieren unabh&auml;ngig von den Variablen, die Sie in einem CGI-Script selbst definieren k&ouml;nnen. 
+<p>
+In CGI-Umgebungsvariablen ist w&auml;hrend der Ausf&uuml;hrung eines CGI-Scripts beispielsweise der Namen des Server-Rechners gespeichert, oder Information zum verwendeten Browser des Anwenders, der den Aufruf des CGI-Programms verursacht hat. Wenn zum Aufruf des CGI-Scripts aus einem <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a> die GET-Methode verwendet wurde, stehen die Daten, die der Anwender in das Formular eingegeben hat, in einer CGI-Umgebungsvariablen (siehe auch den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebf.htm#a1"><b>Formulardaten &uuml;bertragen mit GET oder POST</b></a>).
+<p>
+Um CGI-Umgebungsvariablen aus einem CGI-Programm heraus zu nutzen, m&uuml;ssen Sie in der verwendeten Programmiersprache die Techniken zum Auslesen von Umgebungsvariablen nutzen. So k&ouml;nnen Sie in Perl &uuml;ber <b>$ENV{'UMGEBUNGS_VARIABLENNAME'}</b> auf CGI-Umgebungsvariablen zugreifen. Mit einer Anweisung wie <b>print $ENV{'SERVER_NAME'};</b> k&ouml;nnen Sie beispielsweise den Namen des Servers ausgeben. Da die Umgebungsvariablen aus Sicht von Perl in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a3"><b>Hash</b></a> gespeichert sind, k&ouml;nnen Sie mit einer Anweisung wie <b>print %ENV</b> alle verf&uuml;gbaren Umgebungsvariablen ausgeben.
+<p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>&Uuml;bersicht der CGI-Umgebungsvariablen</font></h2></a>
+
+Die folgende Liste ist nach Variablennamen alphabetisch sortiert.
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Variablenname</th>
+<th bgcolor=#CCCCCC align=left>Erl&auml;uterung</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>CONTENT_LENGTH</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Anzahl der Zeichen, die beim Aufruf des CGI-Scripts &uuml;ber die POST-Methode &uuml;bergeben wurden. Wenn das CGI-Script beispielsweise beim Absenden eines HTML-Formulars aufgerufen wurde und dort als &Uuml;bertragungsmethode POST angegeben ist, steht in dieser Umgebungsvariablen, wie viele Zeichen das Script von der Standardeingabe lesen mu&szlig;, um die &uuml;bermittelten Formulardaten vollst&auml;ndig einzulesen.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>CONTENT_TYPE</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt beim Aufruf &uuml;ber die POST-Methode den Mime-Type der &uuml;bergebenen Daten. Wenn das CGI-Script beispielsweise beim Absenden eines HTML-Formulars aufgerufen wurde und dort als &Uuml;bertragungsmethode POST angegeben ist, steht in dieser Umgebungsvariablen der f&uuml;r HTML-Formulare typische Mime-Type <i>application/x-www-form-urlencoded</i>.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>GATEWAY_INTERFACE</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Version der CGI-Schnittstelle, die von dem installierten Server unterst&uuml;tzt wird, z.B. CGI/1.1, wenn die gegenw&auml;rtig &uuml;bliche Version 1.1 der Schnittstellendefinition unterst&uuml;tzt wird.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>HTTP_ACCEPT</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Liste der Mime-Types, die der aufrufende WWW-Browser akzeptiert. Die Angabe */* bedeutet: der WWW-Browser akzeptiert alles.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>HTTP_REFERER</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die URL-Adresse der WWW-Seite, von der aus das CGI-Script aufgerufen wurde. Der Wert wird jedoch nicht von allen WWW-Browsern &uuml;bermittelt, ist also nicht in jedem Fall verf&uuml;gbar.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>HTTP_USER_AGENT</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt Produkt- und Versionsinformationen zum aufrufenden WWW-Browser. Ein CGI-Script kann auf diese Weise ermitteln, welchen Browser ein Anwender verwendet.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>PATH_INFO</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt spezielle Pfadinformationen, wenn das Script &uuml;ber die GET-Methode aufgerufen wurde, und zwar relativ zu den im WWW-Server eingestellten Root-Verzeichnissen.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>PATH_TRANSLATED</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt spezielle Pfadinformationen, wenn das Script &uuml;ber die GET-Methode aufgerufen wurde - im Unterschied zu PATH_INFO jedoch Pfadangaben entsprechend der Verzeichnisstruktur des Server-Rechners.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>QUERY_STRING</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt beim Aufruf &uuml;ber die GET-Methode eine Zeichenkette mit Daten, die dem Script &uuml;bergeben wurden. Wenn ein Anwender ein HTML-Formular ausgef&uuml;llt hat, bei dessen Absenden das CGI-Script aufgerufen wurde, stehen in dieser Umgebungsvariablen die aufsgef&uuml;llten Formulardaten. Die Daten sind nach den Regeln des Mime-Types <i>application/x-www-form-urlencoded</i> kodiert.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>REMOTE_ADDR</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die IP-Adresse des Server-Rechners, &uuml;ber den das CGI-Script aufgerufen wurde, wenn es ein anderer Server ist als der, auf dem das CGI-Script liegt. Dieser Wert wird jedoch nicht in allen F&auml;llen gesetzt.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>REMOTE_HOST</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Domain-Adresse des Server-Rechners, &uuml;ber den das CGI-Script aufgerufen wurde, wenn es ein anderer Server ist als der, auf dem das CGI-Script liegt. Dieser Wert wird jedoch nicht in allen F&auml;llen gesetzt.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>REMOTE_IDENT</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt Protokollinformation, wenn auf dem Server das Protokoll <i>ident</i> f&uuml;r gesch&uuml;tzte Zugriffe l&auml;uft.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>REMOTE_USER</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den Benutzernamen, der das CGI-Script aufgerufen hat. Dieser Wert wird nur gesetzt, wenn die Server-Authentifizierung eingeschaltet ist.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>REQUEST_METHOD</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den HTTP-Befehl, mit dem das CGI-Programm aufgerufen wurde. Entweder GET oder POST. Ein CGI-Script kann beispielsweise diese Variable auslesen und danach entscheiden, wie es Formulardaten einlesen kann: entweder von der Standardeingabe (bei Methode POST) oder aus der Umgebungsvariablen QUERY_STRING (bei Methode GET).</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>SCRIPT_NAME</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die URL-Adresse des aufgerufenen CGI-Scripts realtiv zur Domain-Adresse, also z.B. /cgi-bin/search.pl.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>SERVER_NAME</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den Namen des Servers (z.B. www.xy.com) oder die IP-Adresse (z.B. 127.0.0.1).</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>SERVER_PORT</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Portnummer, die f&uuml;r den WWW-Server eingerichtet wurde. Normalerweise ist dies f&uuml;r WWW-Server die Nummer 80.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>SERVER_PROTOCOL</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Version des HTTP-Protokolls, das der installierte WWW-Server unterst&uuml;tzt, z.B. HTTP/1.0, wenn die gegenw&auml;rtig &uuml;bliche Version 1.0 des HTTP-Protokolls unterst&uuml;tzt wird.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>SERVER_SOFTWARE</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Produktbezeichnung der installierten Server-Software, z.B. OmniHTTPd/2.0a1 (Win32; i386)</td>
+</tr>
+</table>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tebc.htm"><b>CGI-Scripts auf &ouml;ffentlichem WWW-Server installieren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tebe.htm"><b>Server Side Includes in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

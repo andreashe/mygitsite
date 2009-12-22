@@ -1,0 +1,223 @@
+<html>
+<head>
+<title>SELFHTML: Eigenschaften von Frames definieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Eigenschaften von Frames definieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Scrollbars (Bildlaufleisten) erzwingen/verhindern</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Mindestabst&auml;nde zwischen Fensterrand und Fensterinhalt</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Unver&auml;nderbare Fenstergr&ouml;&szlig;e</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Rahmendicke bzw. unsichtbare Fensterrahmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Farbige Fensterrahmen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Scrollbars (Bildlaufleisten) erzwingen/verhindern</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tciba.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der WWW-Browser verwaltet die Scrollbars (Bildlaufleisten) eines jeden Frame-Fensters normalerweise automatisch. Wenn kein Bl&auml;ttern erforderlich ist, um den gesamten Fensterinhalt anzuzeigen, erh&auml;lt das Fenster keine Scrollbars. Wenn der Inhalt gr&ouml;&szlig;er ist, werden die Frame-Fenster automatisch mit Scrollbars ausgestattet. Sie k&ouml;nnen jedoch erzwingen, da&szlig; ein Frame-Fenster in jedem Fall Scrollbars bzw. keine Scrollbars hat.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;200,*&quot;&gt;
+  &lt;frame src=&quot;verweise.htm&quot; name=&quot;links&quot; scrolling=no&gt;
+  &lt;frame src=&quot;titel.htm&quot; name=&quot;rechts&quot; scrolling=yes&gt;
+&lt;/frameset&gt; 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>scrolling=yes</b> im Definitions-Tag eines Frames erzwingen Sie, da&szlig; das Anzeigefenster des Frames in jedem Fall Scrollbars besitzt. Durch die Angabe <b>scrolling=no</b> verhindern Sie dies. Ebenfalls m&ouml;glich ist die Angabe <b>scrolling=auto</b>, die jedoch mit der Voreinstellung identisch ist und daher weggelassen werden kann.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie das Scrollen des Fensterinhalts verhindern, k&ouml;nnen Inhalte, die gr&ouml;&szlig;er sind als das Fenster, nicht vollst&auml;ndig angezeigt werden. Verwenden Sie <b>scrolling=no</b> daher nur, wenn Sie sicher sind, da&szlig; der Fensterinhalt vollst&auml;ndig in das Frame-Fenster pa&szlig;t. Die Angabe ist zum Beispiel sinnvoll, wenn in einem Frame-Fenster dauerhaft ein Logo angezeigt werden soll und sonst nichts. Bei gr&ouml;&szlig;eren Inhalten sollten Sie mit dem Ausschalten der Scrollbars vorsichtig sein - bedenken Sie, da&szlig; noch immer viele Anwender eine Bildschirmaufl&ouml;sung von 640x480 Pixeln haben.
+<p>
+Sie k&ouml;nnen alle in diesem Abschnitt beschriebenen Eigenschaften von Frame-Fenstern so weit sinnvoll kombinieren. Notieren Sie einfach alle gew&uuml;nschten Eigenschaften eines Frame-Fensters in dem Definitions-Tag des entsprechenden Frame-Fensters.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Mindestabst&auml;nde zwischen Fensterrand und Fensterinhalt</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcibd.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie haben die M&ouml;glichkeit, den Abstand zwischen Fensterrand und dem angezeigten Inhalt eines Frame-Fensters genau zu justieren. Auf diese Weise k&ouml;nnen Sie zum Beispiel breitere Seitenr&auml;nder in einem Frame-Fenster erzeugen. Wenn Sie einen festen Inhalt, etwa ein Logo, in einem Frame-Fenster anzeigen wollen, k&ouml;nnen Sie das Logo durch Justage der Abst&auml;nde exakt in einem Frame-Fenster plazieren.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;200,*&quot;&gt;
+  &lt;frame src=&quot;verweise.htm&quot; name=&quot;links&quot; marginwidth=0 marginheight=0&gt;
+  &lt;frame src=&quot;titel.htm&quot; name=&quot;rechts&quot; marginwidth=30&gt;
+&lt;/frameset&gt; 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>marginwidth=</b> [Pixel] im Definitions-Tag eines Frames bestimmen Sie den Abstand zwischen rechtem bzw. linkem Fensterrand und dem Fensterinhalt (<i>margin = Rand, width = Breite</i>). Durch die Angabe <b>marginheight=</b> [Pixel] bestimmen Sie den Abstand zwischen oberem bzw. unterem Fensterrand und dem Fensterinhalt (<i>height = H&ouml;he</i>). Linke und rechte R&auml;nder sind immer gleich gro&szlig;, ebenso obere und untere. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Sie k&ouml;nnen zu beiden Werten Angaben machen, aber auch nur zu einem der beiden. 
+<p>
+Mit den Angaben <b>marginwidth=0 marginheight=0</b> sollte der Fensterinhalt exakt in der linken oberen Ecke beginnen. Leider f&uuml;gt Netscape bei der Anzeige doch immer noch ein Pixel &quot;Seitenrand&quot; ein. 
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Unver&auml;nderbare Fenstergr&ouml;&szlig;e</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcibg.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Normalerweise kann der Anwender in einem angezeigten Frame-Set die Gr&ouml;&szlig;e der einzelnen Frame-Fenster ver&auml;ndern, indem er mit der Maus auf die Rahmen zwischen Frame-Fenstern positioniert und durch &quot;Ziehen&quot; die Gr&ouml;&szlig;enverh&auml;ltnisse der Frame-Fenster einstellt. In vielen F&auml;llen ist das auch sinnvoll, und Sie sollten dem Anwender diese Freiheit lassen. Wenn Sie aber beispielsweise ein Frame-Fenster mit einem fixen Inhalt, etwa einem Logo, haben, k&ouml;nnen Sie verhindern, da&szlig; der Anwender die Fenstergr&ouml;&szlig;e ver&auml;ndern kann.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;200,*&quot;&gt;
+  &lt;frame src=&quot;verweise.htm&quot; name=&quot;links&quot; noresize&gt;
+  &lt;frame src=&quot;titel.htm&quot; name=&quot;rechts&quot;&gt;
+&lt;/frameset&gt; 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>noresize</b> im Definitions-Tag eines Frames verhindern Sie, da&szlig; der Anwender die Gr&ouml;&szlig;e des Frame-Fensters ver&auml;ndern kann (<i>noresize = no resize = keine Gr&ouml;&szlig;enver&auml;nderung</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Nicht nur das Frame-Fenster, in dem die Angabe gemacht wird, kann dann nicht mehr in der Gr&ouml;&szlig;e ver&auml;ndert werden, sondern auch alle benachbarten Frame-Fenster nicht. Im obigen Beispiel kann der Anwender also weder das linke noch das rechte Frame-Fenster ver&auml;ndern. Das ist eigentlich logisch, aber Sie sollten diese Folgewirkung ber&uuml;cksichtigen, wenn Sie erw&auml;gen, in einem Frame-Fenster das Ver&auml;ndern der Gr&ouml;&szlig;e zu verhindern.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Rahmendicke bzw. unsichtbare Fensterrahmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcibj.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+MS Internet Explorer und Netscape unterst&uuml;tzen beide ab Version 3.0 Frames ohne sichtbare Fensterrahmen, der MS Internet Explorer auch mit flachen Zwischenr&auml;umen von frei bestimmbarer Dicke. Bei unsichtbaren Fensterrahmen wirken die Frame-Fenster wie nahtlos aneinander gef&uuml;gte Fl&auml;chen am Bildschirm. Leider ist die Syntax hierf&uuml;r noch uneinheitlich, so da&szlig; Sie zur Zeit noch mehrere Angaben ben&ouml;tigen, um in beiden Browsern den gew&uuml;nschten Effekt zu erzielen. 
+
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;frameset cols=&quot;40%,60%&quot; border=0 frameborder=0 framespacing=0&gt;
+     &lt;frame src=&quot;verweise.htm&quot;&gt;
+     &lt;frame src=&quot;titel.htm&quot;&gt;
+  &lt;/frameset&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Angaben zur Darstellung der Rahmen k&ouml;nnen im einleitenden <b>&lt;frameset&gt;</b>-Tag vorkommen. <br>  
+<ul>
+<li><b>border=</b> [Pixel] ist Netscape-Syntax und bestimmt die Breite der Rahmen in Pixel. Erlaubt sind Zahlenwerte von 0 (keine Rahmen anzeigen) und gr&ouml;&szlig;er (<i>border = Rahmen</i>).
+<li> <b>frameborder=</b> [1/0 <i>oder</i> yes/no] ist Microsoft-Syntax und bestimmt, ob 3D-Rahmen angezeigt werden sollen oder nicht.
+<li> <b>framespacing=</b> [Pixel] ist Microsoft-Syntax und bestimmt den Abstand zwischen Frame-Fenstern, mithin also die Breite der Rahmen in Pixel (<i>spacing = Abstand</i>). 
+</ul>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Nur mit <b>frameborder=0 framespacing=0</b> (also mit beiden Angaben) unterdr&uuml;cken Sie beim MS Internet Explorer die Rahmen konsequent. Wenn Sie nur <b>frameborder=0</b> angeben, zeigt der Internet Explorer sichtbare Abst&auml;nde zwischen den Frame-Fenstern an, allerdings nicht die &uuml;blichen 3D-Rahmen, sondern flache Zwischenr&auml;ume. Um die Rahmen beim Internet Explorer und bei Netscape zu unterdr&uuml;cken, m&uuml;ssen Sie alle drei Angaben <b>frameborder=0 framespacing=0 border=0</b> notieren (wie im obigen Beispiel).
+<p>
+Wenn Sie die Rahmen zwischen den Frame-Fenstern unterdr&uuml;cken, hat der Anwender keine M&ouml;glichkeit, die Gr&ouml;&szlig;e der Frame-Fenster zu ver&auml;ndern. Testen Sie Projekte mit rahmenlosen Frames deshalb m&ouml;glichst unter mehreren Bildschirmaufl&ouml;sungen und mit unterschiedlich gro&szlig;em Anzeigefenster.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"> Farbige Fensterrahmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcibm.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Netscape interpretiert ab Version 3.0 auch farbige Fensterrahmen. 
+
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;40%,60%&quot; bordercolor=#FF0000&gt;
+   &lt;frame src=&quot;verweise.htm&quot; border=10&gt;
+   &lt;frame src=&quot;titel.htm&quot;&gt;
+&lt;/frameset&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>bordercolor=</b> im obersten <b>&lt;frameset&gt;</b>-Tag k&ouml;nnen Sie eine Rahmenfarbe f&uuml;r alle Fensterrahmen bestimmen. Dabei gelten die Regeln zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Definieren von Farben in HTML</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcia.htm"><b>Frame-Sets und Frames definieren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcic.htm"><b>Verweise zu Frames und zum Beenden von Frame-Sets</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>SELFHTML: window / FENSTERNAME</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><i>window / FENSTERNAME</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Das Objekt <b>window</b> ist das oberste Objekt in der Objekthierarchie von JavaScript, denn es ist gewisserma&szlig;en der &quot;Container&quot; f&uuml;r alles, was in einem Anzeigefenster des WWW-Browsers angezeigt werden kann. &Uuml;ber das Objekt <b>window</b> k&ouml;nnen Sie das Dokumentfenster abfragen und kontrollieren. Ferner k&ouml;nnen Sie neue Fenster definieren. Dabei k&ouml;nnen Sie auch die Fenstereigenschaften frei bestimmen.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Vorhandenes Haupt-Anzeigefenster ansprechen</font></h3>
+
+Das nicht selbst erzeugte, vorhandene Hauptanzeigefenster des WWW-Browsers k&ouml;nnen Sie &uuml;ber den Namen <b>window</b> oder <b>self</b> ansprechen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+window.close();
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel wird die <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methode</b></a> <b>close()</b> aufgerufen. Ihre Wirkung (L&ouml;schen des Fensters) betrifft das aktuelle Anzeigefenster des WWW-Browsers. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+<b>window</b> bzw. <b>self</b> k&ouml;nnen auch weggelassen werden. So hat <i>close();</i> die gleiche Wirkung wie <i>window.close();</i>. Im Hinblick auf k&uuml;nftige Erweiterungen von JavaScript ist es jedoch besser, den vordefinierten Fensternamen mit anzugeben.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Bei Frames: bestimmtes Frame-Fenster ansprechen</font></h3>
+Lesen Sie hierzu den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm"><b><i>frames[ ] bzw. (Frame-Fenstername)</i></b></a>.
+
+<spacer type=vertical size=30>
+<a name="a11"><h3><font color=#6666CC>Neues Fenster / Objektinstanz von <i>window</i> erzeugen</font></h3></a>
+Eine Objektinstanz von <b>window</b>, also ein neues Fenster, erzeugen Sie, indem Sie eine der Methoden von <b>window</b> aufrufen, n&auml;mlich die Methode <b>open</b>.
+<p>
+<h4><font color=#6666CC>Schema:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+var Fenstervariable = window.open(URL, Fenstername, [Optionen])
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<i>URL</i> ist die Adresse einer Datei, die in dem Fenster angezeigt werden soll. Dabei gelten die &uuml;blichen Regeln f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Verweise in HTML</b></a>. Die Adresse mu&szlig; in Anf&uuml;hrungszeichen stehen. Wenn Sie ein leeres Fenster erzeugen wollen, notieren Sie anstelle einer URL-Adresse einfach &quot;&quot; (ohne Inhalt dazwischen).
+<p>
+<i>Fenstername</i> ist ein frei w&auml;hlbarer Name. Bei der Namensvergabe gelten die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a3"><b>Regeln f&uuml;r selbst vergebene Namen</b></a> in JavaScript. Der Name des Fensters mu&szlig; in Anf&uuml;hrungszeichen stehen.
+<p>
+<i>Optionen</i> sind nicht erforderlich, in vielen F&auml;llen aber zur Kontrolle &uuml;ber das Erscheinungsbild des Fensters sehr interessant. Der gesamte &quot;Optionen-Ausdruck&quot; mu&szlig; in Anf&uuml;hrungszeichen stehen. Angaben zu einzelnen Optionen werden innerhalb davon durch Kommata getrennt. Folgende Optionen sind erlaubt:
+<ul>
+<li><i>width=</i>(Pixel) - erzwungene Fensterbreite
+<li><i>height=</i>(Pixel) - erzwungene Fensterh&ouml;he
+<li><i>resizable=yes/no</i> - Gr&ouml;&szlig;e fest oder ver&auml;nderbar
+<li><i>scrollbars=yes/no</i> - fenstereigene Scrollbalken
+<li><i>toolbar=yes/no</i> - fenstereigene Buttonleiste
+<li><i>status=yes/no</i> - fenstereigene Statuszeile
+<li><i>directories=yes/no</i> - fenstereigene Directory-Buttons (Netscape)
+<li><i>menubar=yes/no</i> - fenstereigene Men&uuml;leiste
+<li><i>location=yes/no</i> - fenstereigenes Eingabe-/Auswahlfeld f&uuml;r URLs
+</ul>
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+var InfoWin = window.open(&quot;&quot;, &quot;Zweitfenster&quot;, &quot;scrollbars=yes,width=300,height=300&quot;)
+</pre></td></tr></table><p>
+Nachdem Sie mit <b>window.open()</b> ein Fenster erzeugt haben, k&ouml;nnen Sie das &uuml;ber den Namen der Fenstervariablen referenzieren, im obigen Beispiel etwa &uuml;ber die Variable <i>InfoWin</i>. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das Objekt <b>window</b> ist sehr allgemein. Die im folgenden beschriebenen Eigenschaften und Methoden m&uuml;ssen Sie sich vorstellen wie Dateien, die sich im Wurzelverzeichnis eines Festplattenlaufwerks befinden. Um auf bestimmte Elemente innerhalb eines Fensters zuzugreifen, stehen die dem <b>window</b>-Objekt untergeordneten Objekte zur Verf&uuml;gung. In der <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tdc.htm"><b>&Uuml;bersicht der JavaScript Objektreferenz</b></a> k&ouml;nnen Sie gut erkennen, welche JavaScript-Objekte dem <b>window</b>-Objekt untergeordnet sind.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.defaultStatus</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Die Standardanzeige in der Statuszeile des WWW-Browsers. Diese Standardanzeige steht in der Statuszeile, solange kein &quot;Ereignis&quot; eintritt. Ereignis ist alles, was z.B. im Zusammenhang mit Verweisen und Formularen &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> steuerbar ist. Wenn Sie beispielsweise im Kopf einer HTML-Datei innerhalb eines JavaScript-Bereichs au&szlig;erhalb einer Funktion die Anweisung <i>window.defaultStatus = &quot;Dies ist die Homepage von Rumpelstielz&quot;; return true;</i> notieren, erscheint dieser Text beim Aufruf der Seite in der Statuszeile des WWW-Browsers.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Ermittelt die Anzahl von offenen Fenstern in der aktuellen Instanz des WWW-Browsers. Sinnvoll, um die Anzahl von Frame-Fenstern in einem Frameset zu ermitteln. Wenn Sie beispielsweise in einer HTML-Datei, die innerhalb eines Framesets aufgerufen wird, die Anweisung <i>var Fenster = parent.length</i> notieren, steht hinterher in der Variablen <i>Fenster</i> die Anzahl der Fenster im aktuellen Frameset.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.name</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Ermittelt den Namen eines Fensters. Wenn Sie beispielsweise ein neues Fenster definieren mit <i>var Win2 = window.open(&quot;homepage.htm&quot;, &quot;Zweitfenster&quot;, &quot;width=300 height=300,scrollbars=yes&quot;)</i>, w&uuml;rde die Anweisung <i>window.alert(Win2.name)</i> den Fensternamen &quot;Zweitfenster&quot; am Bildschirm ausgeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.status</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Ermittelt oder setzt die aktuelle Anzeige der Statuszeile eines Fensters. Wenn Sie beispielsweise einen Verweis notieren <i>&lt;a href=&quot;javascript:ZuffallsURL()&quot; onMouseOver=&quot;self.status='Lassen Sie sich ueberraschen'; return true&quot;&gt;Zufalls-URL ermitteln!&lt;/a&gt;</i>, wird in der Statuszeile des Fensters, in dem der Verweis steht, beim Dar&uuml;berfahren mit der Maus die Meldung <i>Lassen Sie sich ueberraschen</i> angezeigt.
+<p>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.alert(<i>Meldungstext</i>)</font></b><br>
+Gibt in einer Message-Box eine Meldung aus. Wenn Sie beispielsweise <i>&lt;body onLoad=&quot;window.alert('Enter at your own risk!')&quot;&gt;</i> in einer HTML-Datei notieren, erscheint beim Aufruf der Datei die Meldung &quot;Enter at your own risk!&quot; in einer Message-Box am Bildschirm. Sie k&ouml;nnen auch festen Text und Variablen durch Zeichenkettenverkn&uuml;pfung mischen. Wenn eine Variable <i>Ergebnis</i> z.B. den Wert 42 enth&auml;lt, k&ouml;nnen Sie mit <i>window.alert(&quot;Der Sinn des Lebens ist &quot; + Ergebnis);</i> etwa die Meldung &quot;Der Sinn des Lebens ist 42&quot; erzeugen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.close()</font></b><br>
+Schlie&szlig;t ein Fenster. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.open(<i>Fenstername, URL, [Optionen]</i>)</font></b><br>
+&Ouml;ffnet ein neues Fenster. Die Methode, um eine neue Objektinstanz von <b>window</b> zu erzeugen. Genaue Beschreibung siehe <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a11"><b>weiter oben</b></a>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.prompt(<i>Aufforderungstext,Feldvorbelegung</i>)</font></b><br>
+Fordert den Anwender in einem Dialogfenster zu einer Eingabe auf. Wenn Sie beispielsweise <i>var UserName = prompt(&quot;Geben Sie Ihren Namen ein:&quot;, &quot;&quot;)</i> notieren, wird der Anwender aufgefordert, seinen Namen einzugeben. Die Eingabe wird im Beispiel in der Variablen <i>UserName</i> gespeichert. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.setTimeout(<i>Anweisung,Millisekunden</i>)</font></b><br>
+F&uuml;hrt eine beliebige Anweisung, z.B. auch den Aufruf einer Funktion mit anderen Anweisungen, nach so viel Millisekunden aus wie angegeben. Wenn Sie beispielsweise in einer HTML-Datei <i>&lt;body onLoad=&quot;CountDown=window.setTimeout('window.close()',10000)&quot;&gt;</i> notieren, bewirken Sie, da&szlig; Fenster und Datei 10 Sekunden lang angezeigt und danach geschlossen werden.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.clearTimeout(<i>TimeoutVariable</i>)</font></b></br>
+Macht den Aufruf von <b>Fenstername.setTimeout(...)</b> r&uuml;ckg&auml;ngig, sofern dieser in der      Form <i>TimeoutVariable = setTimeout()</i> erfolgte, also in einer Variablen gespeichert wurde. Denn diese Variable ist beim Aufruf von <i>clearTimeout()</i> als Parameter zu &uuml;bergeben.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdca.htm"><b>Hinweise zur JavaScript-Objektreferenz</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcc.htm"><b>FENSTERNAME.<i>document</i></b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

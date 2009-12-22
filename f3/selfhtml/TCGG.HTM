@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>SELFHTML: Grafiken mit verweis-sensitiven Fl&auml;chen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Grafiken mit verweis-sensitiven Fl&auml;chen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Verweis-sensitive Grafiken (client-sided)</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweis-sensitive Grafiken (server-sided)</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Verweis-sensitive Grafiken (client-sided)</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgga.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Verweis-sensitive Grafiken sind Grafiken, in denen der Anwender mit der Maus auf ein Detail klicken kann. Daraufhin wird ein Verweis ausgef&uuml;hrt. Auf diese Weise kann der Anwender in einigen F&auml;llen wesentlich intuitiver und schneller zu Information gelangen als durch lange verbale Verweislisten.
+<p>
+Ab HTML 3.2 ist die M&ouml;glichkeit vorgesehen, die Befehle zum Definieren verweis-sensitiver Grafiken direkt in HTML zu notieren und dem WWW-Browser die korrekte Interpretation zu &uuml;berlassen. Daher spricht man hiebei von &quot;client-sided&quot;, denn der WWW-Browser ist im Internet ein Client, also ein &quot;Kunde&quot;, der einen WWW-Server besucht.
+
+<a name="iimg_width_height"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;map name="Testbild"&gt; 
+&lt;area shape=rect coords=&quot;1,1,249,49&quot; href=&quot;#Anker&quot;&gt; 
+&lt;area shape=rect coords=&quot;1,51,149,299&quot; href=&quot;#datei.htm&quot;&gt;
+&lt;area shape=rect coords=&quot;251,1,399,399&quot; href=&quot;../datei.htm&quot;&gt;
+&lt;area shape=rect coords=&quot;151,51,249,299&quot; href=&quot;http://www.nix.de/&quot;&gt; 
+&lt;area shape=rect coords=&quot;1,301,249,399&quot; nohref&gt; 
+&lt;/map&gt;
+&lt;img src=&quot;hypgraph.gif&quot; usemap=&quot;#Testbild&quot; border=0&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;map name=&gt;</b> leiten Sie die Definition der verweis-sensitiven Fl&auml;chen einer Grafik ein. Hinter dem Istgleichzeichen vergeben
+Sie einen Namen f&uuml;r die verweis-sensitive Grafik. Dieser Name mu&szlig;
+nichts mit dem Dateinamen der Grafik zu tun haben. Es handelt sich vielmehr um
+einen Ankernamen, der die gleiche Bedeutung hat wie der Name in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>Verweisanker innerhalb einer HTML-Datei</b></a>. Vergeben Sie 
+keine zu langen Namen. Namen d&uuml;rfen keine Leerzeichen und keine deutschen 
+Umlaute enthalten. Benutzen Sie als Sonderzeichen h&ouml;chstens den Unterstrich 
+&quot;_&quot;. Der Name mu&szlig; in Anf&uuml;hrungszeichen stehen. 
+Hinter dem Namen endet das einleitende <b>&lt;map&gt;</b>-Tag mit <b>&gt;</b>.
+<p>
+Die <b>&lt;map&gt;</b>-Anweisung kann an einer beliebigen Stelle innerhalb des
+K&ouml;rpers einer HTML-Datei (also zwischen Die <b>&lt;body&gt;</b> und
+<b>&lt;/body&gt;</b>) stehen. Die Angaben dieser Anweisung erzeugen keine
+Bildschirmausgabe. Es empfiehlt sich jedoch, die Anweisung an einer markanten,
+gesonderten Stelle innerhalb der Datei zu notieren, z.B am Anfang oder am Ende
+des Dateik&ouml;rpers.
+<p>
+Zwischen dem einleitenden <b>&lt;map...&gt;</b> und dem abschlie&szlig;enden 
+<b>&lt;/map&gt;</b> definieren Sie die verweis-sensitiven Fl&auml;chen. 
+Mit <b>&lt;area...&gt;</b> definieren Sie einzelne verweis-sensitive
+Fl&auml;chen einer bestimmten Grafik, die Sie an einer anderen Stelle einbinden.
+<p>
+Durch die Angabe <b>shape=rect</b> bestimmen Sie eine viereckige
+Fl&auml;che, mit <b>shape=circle</b> einen Kreis, und mit <b>shape=polygon</b> k&ouml;nnen Sie ein beliebiges Vieleck als verweis-sensitiv definieren.
+<p>
+Bei der Angabe <b>coords=</b> geben Sie die Koordinaten der verweis-
+sensitiven Fl&auml;chen an. Die Pixelangaben bedeuten absolute Werte innerhalb
+der Grafik, die verweis-sensitiv sein soll. Die Angaben sollten in Anf&uuml;hrungszeichen stehen. Trennen Sie alle Pixelwerte durch Kommata.
+<ul>
+<li>Ein Viereck (<b>shape=rect</b>) definieren Sie mit den Koordinaten f&uuml;r x1,y1,x2,y2<br>
+wobei bedeuten:<br>
+x1 = linke obere Ecke, Pixel von links<br>
+y1 = linke obere Ecke, Pixel von oben<br>
+x2 = rechte untere Ecke, Pixel von links<br>
+y2 = rechte untere Ecke, Pixel von oben
+<p>
+<li>Einen Kreis (<b>shape=circle</b>) definieren Sie mit den Koordinaten f&uuml;r x,y,r<br>
+wobei bedeuten:<br>
+x = Mittelpunkt, Pixel von links<br>
+y = Mittelpunkt, Pixel von oben<br>
+r = Radius in Pixel
+<p>
+<li>Ein Polygon (<b>shape=polygon</b>) definieren Sie mit den
+Koordinaten x1,y1,x2,y2 ... 
+x<small><sub>n</sub></small>,y<small><sub>n</sub></small>&quot;</b><br>
+wobei bedeuten:<br>
+x = Pixel einer Ecke von links<br>
+y = Pixel einer Ecke von oben<br>
+Sie k&ouml;nnen so viele Ecken definieren wie Sie wollen. Von der letzten definierten 
+Ecke m&uuml;ssen Sie sich eine Linie zur ersten definierten Ecke hinzudenken. Diese 
+schlie&szlig;t das Polygon.
+</ul>
+Mit der Angabe <b>href=</b> bestimmen Sie das Ziel, also die Datei, die aufgerufen werden soll, wenn der Anwender die verweis-sensitive Fl&auml;che anklickt. Dabei gelten die gleichen Regeln wie bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>. Wenn Sie eine Fl&auml;che explizit als nicht anklickbar ausweisen wollen, k&ouml;nnen Sie dies mit der Angabe <b>nohref</b> tun. Wenn Sie solche Angaben weglassen, sind Fl&auml;chen, die nicht durch <b>href=</b> abgedeckt sind, allerdings automatisch nicht anklickbar.
+<p>
+Die Grafik, die verweis-sensitive Fl&auml;chen haben soll, referenzieren Sie
+auf herk&ouml;mmliche Weise mit Hilfe des <b>&lt;img&gt;</b>-Tags (mehr
+hierzu siehe unter <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafiken einbinden</b></a>). Um 
+die Grafik als verweis-sensitiv zu kennzeichnen, m&uuml;ssen Sie die 
+Zusatzangabe <b>usemap=</b> (siehe obiges Beispiel) notieren. 
+Hinter dem Istgleichzeichen geben Sie den Namen an, den Sie bei der Definition der
+verweis-sensitiven Fl&auml;chen im einleitenden <b>&lt;map&gt;</b>-Tag
+vergeben haben. Der Name mu&szlig; in Anf&uuml;hrungszeichen stehen und ein 
+<b>#</b> vorangestellt bekommen.
+
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Um die gew&uuml;nschten Pixelkoordinaten f&uuml;r verweis-sensitive Fl&auml;chen einer Grafik zu erhalten, m&uuml;ssen Sie ein Grafikprogramm benutzen, bei dem Sie mit der Maus in der angezeigten Grafik herumfahren k&ouml;nnen und dabei die genauen Pixelkoordinaten des Mauszeigers angezeigt bekommen.
+<p>
+Sie k&ouml;nnen die verweis-sensitiven Fl&auml;chen auch in einer anderen HTML-
+Datei definieren als in derjenigen, in der Sie die Grafik referenzieren. Dann
+m&uuml;ssen Sie in der Grafikreferenz bei <b>usemap=</b> den
+Dateinamen und das Sprungziel innerhalb der Datei angeben, wo die verweis-
+sensitiven Fl&auml;chen definiert werden. Das funktioniert genauso wie bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis-sensitive Grafiken (server-sided)</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgga.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei dieser Methode ist zum Verwalten von verweis-sensitiven Grafiken eine Kommunikation zwischen WWW-Browser und Server-Rechner erforderlich. Das bedeutet, da&szlig; verweis-sensitive Grafiken mit dieser Mehtode nur online im WWW realisierbar sind (also nicht auf dem lokalen Rechner), und 
+da&szlig; Sie in jedem Fall mit Ihrem Provider das genaue &quot;Procedere&quot; kl&auml;ren m&uuml;ssen. Der Vorteil ist, da&szlig; solche verweis-sensitiven Grafiken auch mit &auml;lteren WWW-Browsern ausf&uuml;hrbar sind. Der Nachteil ist die umst&auml;ndliche Handhabung.
+<p>
+Das Prinzip funktioniert folgenderma&szlig;en: aufgrund eines HTML-Befehls wei&szlig; der WWW-Browser, da&szlig; es sich bei einer Grafik um eine verweis-sensitive Grafik handelt. Wenn der Anwender dann irgendwo auf die angezeigte Grafik klickt, &uuml;bertr&auml;gt der WWW-Browser die Pixelkoordinaten des Mausklicks (relativ zur oberen linken Ecke der Grafik) an eine spezielle &quot;Imagemap&quot;-Software auf dem Server-Rechner. Diese Software ermittelt, ob die Pixelkoordinaten innerhalb einer als verweis-sensitiv definierten Fl&auml;che der Grafik liegen. Wenn ja, ermittelt die Software, welcher Verweis dieser sensitiven Fl&auml;che zugeordnet ist. Die entsprechende Verweisadresse wird dem WWW-Browser gesendet. Dieser f&uuml;hrt den Verweis dann aus.
+<p>
+Wenn Sie eine verweis-sensitive Grafik nach diesem Schema einsetzen m&ouml;chten, fragen Sie bei Ihrem Provider nach, welche Software zum Verarbeiten verweis-sensitiver Grafiken auf diesem Server im Einsatz ist, und was genau Sie brauchen. In der Regel brauchen Sie eine sog. &quot;Map-Datei&quot; und einen Eintrag in einer Konfigurationsdatei. In der Map-Datei ordnen Sie verweis-sensitive Fl&auml;chen und 
+gew&uuml;nschte Verweise einander zu. In der Konfigurationsdatei ist ein Eintrag f&uuml;r die Server-Software n&ouml;tig.
+<p>
+Bei der Syntax der Map-Dateien gibt es mehrere Varianten. Fragen Sie ggfs. Ihren Provider nach Beispieldateien und nach Dokumentation zu der von ihm angebotenen Variante.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Verweis-sensitive Grafik in der HTML-Datei einbinden</font></h3>
+Das folgende Beispiel zeigt den Teil, den Sie in der HTML-Datei notieren m&uuml;ssen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;MapName&quot;&gt;&lt;img src=&quot;datei.gif&quot; ismap>&lt;/a&gt;
+</pre></td></tr></table><p>
+
+In der Mitte des Befehls zur Verarbeitung einer verweis-sensitiven Grafik steht der HTML-Befehl zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden einer Grafik</b></a>. Im Beispiel wird die Datei &quot;datei.gif&quot; eingebunden. Der Befehl mu&szlig; au&szlig;er der Angabe <b>src=</b> noch die Angabe 
+<b>ismap</b> enthalten. Hierdurch wird dem Server-Rechner mitgeteilt, da&szlig; es sich um eine verweis-sensitive Grafik handelt.
+<p>
+Das ganze Kontrukt ist eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgf.htm"><b>Grafik als Verweis</b></a>. Dabei steht der Befehl f&uuml;r die Grafikeinbindung an der Stelle, wo bei einem normalen Textverweis der Text steht, der dem Anwender als Verweistext angeboten wird.
+<p>
+Das Ziel des Verweises ist jedoch keine Datei, sondern ein symbolischer Name, der zuvor in der oben angesprochenen Konfigurationsdatei des Server-Rechners vergeben wurde. Im Beispiel ist das der symbolische Name &quot;MapName&quot;.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcgf.htm"><b>Grafiken als Verweise</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcgh.htm"><b>Browser-interne Grafik-Ressourcen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

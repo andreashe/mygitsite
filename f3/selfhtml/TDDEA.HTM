@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>SELFHTML: Anzeigebeispiele: Dynamische grafische Buttons</title>
+<script language="JavaScript">
+<!--
+Normal1 = new Image(); 
+Normal1.src = "xtddea1.jpg"; /* Hier erste Standard-Grafik angeben */
+Highlight1 = new Image(); 
+Highlight1.src = "xtddea2.jpg"; /* Hier erste Highlight-Grafik angeben */
+
+Normal2 = new Image(); 
+Normal2.src = "xtddea3.jpg"; /* Hier zweite Standard-Grafik angeben */
+Highlight2 = new Image(); 
+Highlight2.src = "xtddea4.jpg"; /* Hier zweite Highlight-Grafik angeben */
+
+/* usw. fuer alle weiteren zu benutzenden Grafiken */
+
+function Bildwechsel(Bildnr,Bildobjekt)
+{
+ window.document.images[Bildnr].src = Bildobjekt.src;
+}
+//-->
+</script>
+
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+
+<h1><font color=#6666CC>Anzeigebeispiel: Dynamische grafische Buttons</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xshow.gif" width=33 height=14 border=0 alt="Beschreibung"><br>
+<a href="tdde.htm#a2"><b>Beschreibung: so wird's gemacht</b></a>
+<p>
+<table>
+<tr>
+<td>
+<a href="http://www.altavista.digital.com/" onMouseOver="Bildwechsel(1,Highlight1)" onMouseOut="Bildwechsel(1,Normal1)"><img src="xtddea1.jpg" width=186 height=99 border=0 alt="AltaVista besuchen"></a>
+</td>
+<td>
+<a href="http://www.lycos.de/" onMouseOver="Bildwechsel(2,Highlight2)" onMouseOut="Bildwechsel(2,Normal2)"><img src="xtddea3.jpg" width=186 height=99 border=0 alt="Lycos besuchen"></a>
+</td>
+</tr>
+</table>
+<p>
+Fahren Sie mit der Maus über die beiden Finger-Buttons - Achtung: wenn Sie auf einen der Finger-Buttons klicken, verlassen Sie &quot;HTML-Dateien selbst erstellen&quot;!
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

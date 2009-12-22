@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>SELFHTML: Gr&ouml;&szlig;ere Textabschnitte ausrichten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Gr&ouml;&szlig;ere Textabschnitte ausrichten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Gr&ouml;&szlig;ere Textabschnitte zentrieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Gr&ouml;&szlig;ere Textabschnitte ausrichten (allgemein)</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Gr&ouml;&szlig;ere Textabschnitte zentrieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdla.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen mehrere Abs&auml;tze, bestehend aus ganz verschiedenen Elementen wie Text,
+Grafiken, Tabellen usw. gemeinsam zentriert ausrichten.
+
+<a name="icenter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;center&gt;
+&lt;h1&gt;Der Mond - eine &Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;mond.jpg&quot; align=middle&gt; Ein Bild vom Mond
+&lt;p&gt;
+Ein erkl&auml;render Text zum Mond, und alles wird zentriert
+&lt;/center&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit dem Tag <b>&lt;center&gt;</b> wird alles, was folgt, zentriert ausgerichtet (<i>center = zentriert</i>). Das k&ouml;nnen &Uuml;berschriften, Text, Grafiken oder Tabellen sein. Mit dem abschie&szlig;enden Tag <b>&lt;/center&gt;</b> beenden Sie die Zentrieranweisung.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Gr&ouml;&szlig;ere Textabschnitte ausrichten (allgemein)</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdla.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen mehrere Abs&auml;tze, bestehend aus ganz verschiedenen Elementen wie Text,
+Grafiken, Tabellen usw. gemeinsam ausrichten, und zwar linksb&uuml;ndig, zentriert oder rechtsb&uuml;ndig.
+
+<a name="idiv_align"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;div align=center&gt;
+&lt;h1&gt;Der Mond - eine &Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;mond.jpg&quot; align=middle&gt; Ein Bild vom Mond
+&lt;p&gt;
+Ein erkl&auml;render Text zum Mond, und alles wird zentriert
+&lt;/div&gt;
+&lt;div align=right&gt;
+&lt;i&gt;&amp;copy 1997 by Josua Piesepampel&lt;/i&gt;
+&lt;/div&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;div ...&gt;</b> leiten Sie einen Abschnitt ein, den Sie gesondert ausrichten wollen (<i>div = division = Abschnitt</i>). Hinter dem einleitenden Tag folgt die Zusatzangabe <b>align=</b> und dahinter die gew&uuml;nschte Ausrichtung. Mit <b>align=center</b> richten Sie folgende Elemente zentriert aus (<i>align = Ausrichtung, center = zentriert</i>), mit <b>align=right</b> rechtsb&uuml;ndig (<i>right = rechts</i>). Mit <b>align=left</b> erzwingen Sie die linksb&uuml;ndige Ausrichtung von Elementen (Voreinstellung). 
+<p>
+Zwischen dem einleitenden <b>&lt;div&gt;</b>-Tag und dem abschlie&szlig;enden Tag <b>&lt;/div&gt;</b> notieren Sie die Elemente, die von der Formatierung betroffen sein sollen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das <b>&lt;div&gt;</b>-Tag ist eine Erweiterung des <b>&lt;center&gt;</b>-Tags. Das <b>&lt;div&gt;</b>-Tag ist leistungsf&auml;higer, wird jedoch von weniger WWW-Browsern unterst&uuml;tzt als das &auml;ltere <b>&lt;center&gt;</b>-Tag. Netscape und Microsoft Internet Explorer beherrschen die Anweisung in den neueren Versionen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdk.htm"><b>Schriftgr&ouml;&szlig;e, Schriftfarbe, Schriftart</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdm.htm"><b>Trennlinien</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

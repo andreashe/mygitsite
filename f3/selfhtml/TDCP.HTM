@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>SELFHTML: Math</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Math</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Mit dem Objekt <b>Math</b> k&ouml;nnen Sie Berechnungen, auch komplexe wissenschaftlicher oder kaufm&auml;nnischer Art, durchf&uuml;hren. Dazu stehen Ihnen verschiedene m&auml;chtige Methoden und Funktionen sowie einige Eigenschaften zur Verf&uuml;gung.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Instanz des Objekts <i>Math</i> erzeugen</font></h3>
+Eine Instanz von <b>Math</b> brauchen Sie nicht eigens erzeugen. Sie k&ouml;nnen Eigenschaften und Methoden von <b>Math</b> direkt verwenden.
+
+<h4><font color=#6666CC>Schema:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+Math.Eigenschaft/Methode(...)
+</pre></td></tr></table><p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<b><font color=#6666CC>Math.E</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Die Eulersche Konstante - Wert ca. 2,718.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.LN2</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Der nat&uuml;rliche Logarithmus von 2 - Konstante mit einem Wert von ca. 0,693.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.LN10</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Der nat&uuml;rliche Logarithmus von 10 - Konstante mit einem Wert von ca. 2,302.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.LOG2E</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Logarithmus von 2 - Konstante mit einem Wert von ca. 1,442.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.LOG10E</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Logarithmus von 10 - Konstante mit einem Wert von ca. 0,434.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.PI</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Konstante Pi f&uuml;r Kreiberechnungen mit einem Wert von ca. 3,14159.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.SQRT1_2</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Konstante f&uuml;r Quadratwurzel aus 0,5 - Wert von ca. 0,707.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.SQRT2</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Konstante f&uuml;r Quadratwurzel aus 2 - Wert von ca. 1,414.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.abs(Zahl)</font></b><br>
+Liefert in jedem Fall den positiven Wert des &uuml;bergebenen Parameters, einer beliebigen Zahl, zur&uuml;ck. War dieser vorher negativ, wird er positiv. Der übergebene Parameter &quot;Zahl&quot; kann wie auch bei den folgenden Methoden eine feste Zahl (z.B. <i>25</i> oder <i>0.123</i>), eine numerische Variable (z.B. <i>x</i>) oder ein Rechenausdruck (z.B. <i>7 * 5+ 0.3</i>) sein. Auch Rechenausdrücke mit Variablen sind erlaubt (z.B. <i>x * i + 1</i>).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.acos(Zahl)</font></b><br>
+Liefert den Arcus Cosinus des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.asin(Zahl)</font></b><br>
+Liefert den Arcus Sinus des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.atan(Zahl)</font></b><br>
+Liefert den Arcus Tangens des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.ceil(Zahl)</font></b><br>
+Liefert die n&auml;chsth&ouml;here Ganzzahl des &uuml;bergebenen Parameters, einer beliebigen Zahl, zur&uuml;ck. Falls die Zahl selbst ganzzahlig ist, wird sie nicht ver&auml;ndert.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.cos(Zahl)</font></b><br>
+Liefert den Cosinus des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.exp(Zahl)</font></b><br>
+Liefert den Exponentialwert des &uuml;bergebenen Parameters, einer beliebigen Zahl, zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.floor(Zahl)</font></b><br>
+Liefert die n&auml;chstniedrigere Ganzzahl des &uuml;bergebenen Parameters, einer beliebigen Zahl, zur&uuml;ck. Falls die Zahl selbst ganzzahlig ist, wird sie nicht ver&auml;ndert.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.log(Zahl)</font></b><br>
+Liefert die Anwendung des nat&uuml;rlichen Logarithmus auf den &uuml;bergebenen Parameter, einer beliebigen Zahl, zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.max(Zahl1,Zahl2)</font></b><br>
+Liefert von zwei beliebigen, als Parameter &uuml;bergebenen Zahlen die gr&ouml;&szlig;ere davon zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.min(Zahl1,Zahl2)</font></b><br>
+Liefert von zwei beliebigen, als Parameter &uuml;bergebenen Zahlen die kleinere davon zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.pow(Zahl,Exponent)</font></b><br>
+Liefert den Wert von &quot;Zahl&quot; hoch &quot;Exponent&quot; zur&uuml;ck, wobei Zahl und Exponent als Parameter &uuml;bergeben werden.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.random()</font></b><br>
+Liefert per Zufall entweder 1 oder 0 zur&uuml;ck. Achtung: Nur auf Unix-Systemen ausf&uuml;hrbar.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.round(Zahl)</font></b><br>
+Liefert die n&auml;chste Ganzzahl des &uuml;bergebenen Parameters, einer beliebigen Zahl, zur&uuml;ck und wendet dabei die kaufm&auml;nnische Rundung an. Falls die Zahl selbst ganzzahlig ist, wird sie nicht ver&auml;ndert.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.sin(Zahl)</font></b><br>
+Liefert den Sinus des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.sqrt(Zahl)</font></b><br>
+Liefert die Quadratwurzel des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Math.tan(Zahl)</font></b><br>
+Liefert den Tangens des &uuml;bergebenen Parameters, einer beliebigen Zahl,  zur&uuml;ck.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdco.htm"><b>Date</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcq.htm"><b>navigator</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

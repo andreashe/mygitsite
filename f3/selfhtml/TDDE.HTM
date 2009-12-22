@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>SELFHTML: Dynamische grafische Buttons</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Dynamische grafische Buttons</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Kurzbeschreibung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Quellcode</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Erl&auml;uterungen zum Quellcode</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddea.htm"><b>Beispiel testen: so sieht's aus</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Kurzbeschreibung</font></h2></a>
+Auf WWW-Seiten kommen h&auml;ufig grafische Buttonleisten zum Einsatz, die Verweise zu bestimmten Seiten des Projekts enthalten. Wenn der Anwender mit der Maus &uuml;ber solche Grafiken f&auml;hrt, erkennt er am ver&auml;nderten Mauscursor und an den Verweiszielanzeigen in der Statuszeile des WWW-Browsers, da&szlig; es sich um Verweise handelt. Mit Hilfe von JavaScript k&ouml;nnen Sie solche grafischen Verweise jedoch noch deutlicher kenntlich machen und der Benutzerf&uuml;hrung gleichzeitig ein wenig mehr Pep verleihen.
+<p>
+Dazu brauchen Sie je zwei gleichartige, farblich unterschiedliche Grafiken f&uuml;r je einen Grafikbutton. Im Anzeigebeispiel zu diesem Abschnitt sind das die beiden folgenden Button-Paare:
+<p>
+<table><tr>
+<td><img src="xtddea1.jpg" width=186 height=99 border=0 alt="Altavista normal"></td>
+<td><img src="xtddea2.jpg" width=186 height=99 border=0 alt="Altavista aktiviert"></td>
+</tr><tr>
+<td><img src="xtddea3.jpg" width=186 height=99 border=0 alt="Lycos normal"></td>
+<td><img src="xtddea4.jpg" width=186 height=99 border=0 alt="Lycos aktiviert"></td>
+</tr></table>
+<p>
+Mit Hilfe von JavaScript l&auml;&szlig;t sich nun eine Grafik durch eine andere ersetzen, zum Beispiel, wenn die Grafik als Verweises dient und der Anwender mit der Maus &uuml;ber die Grafik f&auml;hrt. Wie das im einzelnen funktioniert, wird im folgenden beschrieben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Dieses Beispiel funktioniert derzeit nur mit Netscape ab Version 3.x und MS Internet Explorer ab Version 4.x. 
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Quellcode</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tddea.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Studieren Sie das Beispiel aufmerksam und lesen Sie anschlie&szlig;end die Erl&auml;uterungen dazu. Zur besseren Orientierung enth&auml;lt das Beispiel Verweise zu den entsprechenden Erl&auml;uterungen, z.B. <a href="#a511"><b>(1)</b></a>. Diese Verweise geh&ouml;ren nicht zum Quellcode. Falls Sie das Beispiel in einen Editor kopieren, m&uuml;ssen Sie diese Verweise l&ouml;schen. Andernfalls erhalten Sie JavaScript-Fehlermeldungen.
+
+<h4><font color=#6666CC>Quellcode:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hier den Titel der Datei eingeben&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+<a href="#a511"><b>(1)</b></a>
+Normal1 = new Image(); 
+Normal1.src = "button1a.gif"; /* Hier erste Standard-Grafik angeben */
+Highlight1 = new Image(); 
+Highlight1.src = "button1b.gif"; /* Hier erste Highlight-Grafik angeben */
+
+Normal2 = new Image(); 
+Normal2.src = "button2a.gif"; /* Hier zweite Standard-Grafik angeben */
+Highlight2 = new Image(); 
+Highlight2.src = "button2b.gif"; /* Hier zweite Highlight-Grafik angeben */
+
+/* usw. fuer alle weiteren zu benutzenden Grafiken */
+
+<a href="#a512"><b>(2)</b></a>
+function Bildwechsel(Bildnr,Bildobjekt)
+{
+ window.document.images[Bildnr].src = Bildobjekt.src;
+}
+ //--&gt;
+ &lt;/script&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+
+<a href="#a513"><b>(3)</b></a>
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;
+&lt;a href=&quot;index.htm&quot; onMouseOver=&quot;Bildwechsel(0,Highlight1)&quot;
+onMouseOut=&quot;Bildwechsel(0,Normal1)&quot;&gt;
+&lt;img src=&quot;button1a.gif&quot;&gt;&lt;/a&gt; 
+&lt;/td&gt;&lt;td&gt;
+&lt;a href=&quot;verweise.htm&quot; onMouseOver=&quot;Bildwechsel(1,Highlight2)&quot;
+onMouseOut=&quot;Bildwechsel(1,Normal2)&quot;&gt;
+&lt;img src=&quot;button2a.gif&quot;&gt;&lt;/a&gt; 
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Erl&auml;uterungen zum Quellcode</font></h2></a>
+
+
+<p><a name ="a511"><font color=#6666CC><b>(1) Neue Grafikobjekte f&uuml;r Highlight-Grafiken erzeugen</b></font></a><br>
+
+F&uuml;r jede Grafik, die Sie dynamisch anzeigen m&ouml;chten, m&uuml;ssen Sie eine Instanz des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdch.htm"><b>Grafik-Objekts</b></a> erzeugen. Das gilt sowohl f&uuml;r die Grafiken, die zun&auml;chst in der HTML-Datei referenziert werden, als auch f&uuml;r diejenigen, die beim &Uuml;berfahren mit der Maus dynamisch angezeigt werden sollen.
+<p>
+Dazu wird im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> mit Anweisungen wie <i>Normal1 = new Image(); </i> eine Objektinstanz erzeugt. Nachdem die Objektinstanz erzeugt ist, sind unter dem gew&auml;hlten Objektnamen, im ersten Fall <i>Normal1</i>, alle Eigenschaften des Objekts ansprechbar. Zun&auml;chst enth&auml;lt das Objekt noch gar keine Daten. Mit der Anweisung <i>Normal1.src = &quot;button1a.gif&quot;;</i> wird dem neuen Grafikobjekt eine Grafikdatei zugewiesen. 
+<p>
+Wiederholen Sie die beiden beschriebenen Anweisungen f&uuml;r jede Grafikdatei, die von dynamischen &Auml;nderungen betroffen sein wird - und zwar sowohl f&uuml;r Grafiken, die im &quot;Normalfall&quot; angezeigt werden, als auch f&uuml;r Grafiken, die beim Dar&uuml;berfahren mit der Maus dynamisch angezeigt werden. Vergeben Sie dabei jedesmal einen neuen Objektnamen. 
+
+
+<p><a name ="a512"><font color=#6666CC><b>(2) Funktion <i>Bildwechsel()</i> zum dynamischen Austauschen von Grafiken</b></font></a><br>
+Der bisherige Code im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> wird beim Einlesen der HTML-Datei direkt ausgef&uuml;hrt, da er nicht in einer Funktion gebunden ist. Die Ausf&uuml;hrung dieses Codes bewirkt aber keine sichtbaren Ausgaben und wird vom Anwender gar nicht bemerkt. Das, was am Bildschirm mit Hilfe von JavaScript passieren soll, n&auml;mlich das dynamische Austauschen eines Bildes, geschieht in der definierten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> <i>Bildwechsel()</i>.
+<p>
+Die Funktion soll aufgerufen werden, wenn der Anwender mit der Maus &uuml;ber einen grafischen Verweis f&auml;hrt, und wenn er den Verweisbereich mit der Maus wieder verl&auml;&szlig;t. Dazu ben&ouml;tigt die Funktion zwei Parameter: die wievielte Grafik in der Datei ausgetauscht werden soll (Parameter <i>Bildnr</i>), und durch welches zuvor definierte Grafikobjekt das Bild ersetzt werden soll (Parameter <i>Bildobjekt</i>). Die Funktion kommt dann mit einer einzigen Anweisung aus. Diese Anweisung ersetzt das vorhandene Bild durch das neue. Beachten Sie hier den wichtigen Zusammenhang: das dynamische Ersetzen einer Grafik ist nur m&ouml;glich, wenn f&uuml;r die neue Grafik zuvor eine Instanz des Grafikobjekts erzeugt wurde. Im Beispiel geschah dies ja ganz am Anfang des Scripts. 
+
+
+<p><a name ="a513"><font color=#6666CC><b>(3) Grafische Verweise mit Event-Handlern f&uuml;r Mausbewegungen des Anwenders</b></font></a><br>
+Damit der gew&uuml;nschte Effekt zustande kommt, m&uuml;ssen Sie in der HTML-Datei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgf.htm"><b>Grafiken als Verweise</b></a> definieren. Bei Buttons, die nebeneinander liegen sollen, empfiehlt sich eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceh.htm"><b>blinde Tabelle</b></a>, wie sie auch im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> verwendet wird.
+<p>
+Im einleitenden Verweis-Tag werden die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <i>onMouseOver=</i> und <i>onMouseOut=</i> notiert. Bei <i>onMouseOver=</i> (wenn der Anwender mit der Maus &uuml;ber den verweis-sensitiven Bereich, hier eine Grafik f&auml;hrt) wird die im Script-Bereich definierte Funktion <i>Bildwechsel()</i> aufgerufen, ebenso bei <i>onMouseOut=</i> (wenn der Mauszeiger den verweis-sensitiven Bereich wieder verl&auml;&szlig;t).
+<p>
+Beim Aufruf von <i>Bildwechsel()</i> werden jeweils die beiden ben&ouml;tigten Parameter &uuml;bergeben. Z&auml;hlen Sie dazu die referenzierten Grafikdateien in der HTML-Datei, aber fangen Sie bei 0 an zu z&auml;hlen, d.h. 0 f&uuml;r die erste Grafik in der Datei, 1 f&uuml;r die zweite Grafik usw. &Uuml;bergeben Sie den Indexwert der Grafik, die in den Verweis eingebettet ist. Im Beispiel sind in der gesamten HTML-Datei keine anderen als die dynamisch zu tauschenden Grafiken referenziert. Deshalb wird im ersten Fall 0 (erste Grafik der Datei) &uuml;bergeben, im zweiten Fall 1 (zweite Grafik der Datei).<br>
+Beim zweiten Parameter &uuml;bergeben Sie den Objektnamen f&uuml;r das gew&uuml;nschte Grafikobjekt. Das ist einer der Namen, die Sie am Anfang des Script-Bereichs vergeben haben. Im Beispiel wird im ersten Fall z.B. <i>Highlight1</i> bei <i>onMouseover</i> &uuml;bergeben, und <i>Normal1</i> bei <i>onMouseout</i>. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tddd.htm"><b>Pers&ouml;nliche Seitenbesuche z&auml;hlen mit Cookies</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tfa.htm"><b>WWW-gerechte Grafiken</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

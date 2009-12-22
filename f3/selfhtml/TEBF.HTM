@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>SELFHTML: HTML-Formulare und CGI</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>HTML-Formulare und CGI</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Formulardaten &uuml;bertragen mit GET oder POST</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Datenstrom bei &Uuml;bertragung von Formulardaten</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Formulardaten &uuml;bertragen mit GET oder POST</font></h2></a>
+
+Das Hypertext Transfer Protocol (HTTP) ist das &Uuml;bertragungsprotokoll, mit dem WWW-Browser und WWW-Server Daten austauschen. Daf&uuml;r gibt es HTTP-Befehle. Zwei HTTP-Befehle sind im Zusammenhang mit der &Uuml;bertragung von Formulardaten von Bedeutung:
+<ul>
+<li><b>GET</b><br>
+In einem HTML-Formular erzwingen Sie diesen Befehl durch die Angabe von <b>method=get</b> im einleitenden <b>&lt;form&gt;</b>-Tag. Bei dieser Angabe werden die ausgef&uuml;llten Formulardaten zuerst an die Server-Software &uuml;bertragen und von dieser in einer bestimmten Umgebungsvariablen mit dem Namen QUERY_STRING zwischenspeichert. Ein CGI-Script, das durch die Angabe <b>action=</b> im einleitenden Formular-Tag aufgerufen wird, mu&szlig; den Inhalt dieser Umgebungsvariablen auslesen, um an die Formulardaten heranzukommen (siehe auch den Abschnitt &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tead.htm"><b>Umgebungsvariablen</b></a>). In Perl ist das beispielsweise mit einer Anweisung wie <b>$form_daten = $ENV{'QUERY_STRING'};</b> m&ouml;glich. Wenn ein HTML-Formular die GET-Methode verwendet, wird der Formulardatenstrom, getrennt durch ein Fragezeichen, direkt hinter die URL-Adresse des CGI-Programmaufrufs geh&auml;ngt. Im WWW-Browser des Anwenders ist dies nach dem Absenden des Formulars in der URL-Zeile sichtbar.
+<p>
+<li><b>POST</b><br>
+In einem HTML-Formular erzwingen Sie diesen Befehl durch die Angabe von <b>method=post</b> im einleitenden <b>&lt;form&gt;</b>-Tag. Die Angabe bewirkt, da&szlig; die  ausgef&uuml;llten Formulardaten direkt an die Adresse &uuml;bertragen werden, die bei <b>action=</b> angegeben ist. Ein CGI-Script, das bei <b>action=</b> aufgerufen wird, mu&szlig; die Standardeingabe auslesen, um an die Formulardaten heranzukommen. In Perl geht das beispielsweise mit einer Anweisung wie <b>read(STDIN, $Daten, $ENV{'CONTENT_LENGTH'});</b>. Beachten Sie dabei, da&szlig; das Programm die Umgebungsvariable CONTENT_LENGTH auslesen mu&szlig;, um zu ermitteln, wie viele Zeichen es von der Standardeingabe lesen soll. Das ist erforderlich, da der &uuml;bergebene Datenstrom kein Datenendekennzeichen enth&auml;lt!
+</UL> 
+Wenn Sie ein vorhandenes CGI-Script einsetzen wollen, m&uuml;ssen Sie wissen, nach welcher der beiden Methoden das betreffende Script die Daten erwartet. Normalerweise ist das vom Autor des CGI-Scripts dokumentiert. Einige Scripts sind auch so intelligent, beide M&ouml;glichkeiten abzufragen - in diesem Fall ist es egal, welche &Uuml;bertragungsmethode Sie im HTML-Formular w&auml;hlen. Wenn Sie eigene Scripts schreiben, m&uuml;ssen Sie eine &Uuml;bertragungsmethode festlegen oder ebenfalls so intelligent programmieren, da&szlig; es egal ist, welche Methode im HTML-Formular angegeben wird.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Datenstrom bei &Uuml;bertragung von Formulardaten</font></h2></a>
+
+Ein typisches HTML-Formular besteht aus benannten Feldern (z.B. f&uuml;r Name, E-Mail-Adresse und Kommentartext). Bei der &Uuml;bertragung eines ausgef&uuml;llten Formulars an den Server-Rechner bzw. ein CGI-Programm m&uuml;ssen die Daten so &uuml;bertragen werden, da&szlig; es dem CGI-Script m&ouml;glich ist zu erkennen, aus welchen Feldern das Formular besteht, und welche Daten der Anwender in welches Feld eingetragen hat. Deshalb gibt es eine bestimmte Kodierungsmethode, die Formularfelder und deren Daten voneinander trennt. Diese Kodierungsmethode benutzt folgende Regeln:
+<ul>
+<li>Die einzelnen Formularelemente inclusive ihrer Daten werden durch ein kaufm&auml;nnisches <b>&amp;</b> voneinander getrennt.
+<li>Name und Daten eines Formularelements werden durch ein Istgleichzeichen <b>=</b> voneinander getrennt.
+<li>Leerzeichen in den eingegebenen Daten (z.B. bei mehreren W&ouml;rtern) werden durch ein Pluszeichen <b>+</b> ersetzt.
+<li>Alle Zeichen mit den ASCII-Werden 128 bis 255 (hexadezimal 80 bis FF) werden durch eine Hexadezimalzeichenfolge umschrieben, eingeleitet durch ein Prozentzeichen <b>%</b> und dahinter der Hexadezimalwert des Zeichens (z.B. wird der deutsche Umlaut <b>&ouml;</b> durch <b>%F6</b> umschrieben.
+<li>Alle Zeichen, die in diesen Regeln als Steuerzeichen vorkommen (also &amp;, +, = und %) werden ebenfalls hexadezimal umschrieben, und zwar genau so wie h&ouml;herwertige ASCII-Zeichen.
+</ul>
+Das folgende Beispiel zeigt zun&auml;chst den HTML-Quelltext eines HTML-Formulars und darunter ein Bild, wie das Formular im WWW-Browser mit Anwendereingaben aussieht. Unterhalb des Bildes sehen Sie, wie der Formulardatenstrom entsprechend der Kodierungsregeln aussieht, nachdem der Anwender das Formular absendet.
+
+<h4><font color=#6666CC>Beispiel: HTML-Formular (HTML-Quelltext)</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;form action=&quot;/cgi-bin/comments.pl&quot; method=post&gt;
+&lt;pre&gt;
+Name:   &lt;input name=&quot;AnwenderName&quot; size=40&gt;
+E-Mail: &lt;input name=&quot;AnwenderMail&quot; size=40&gt;
+Text:   &lt;textarea rows=5 cols=34&gt;&lt;/textarea&gt;
+             &lt;input type=submit value=&quot;Formulardaten absenden&quot;&gt;
+&lt;/pre&gt;
+&lt;/form&gt;
+
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel: Abbildung des HTML-Formulars im WWW-Browser mit Anwendereingaben</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+<img src="xtea1.gif" width=366 height=191 border=1>
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel: Formulardatenstrom aufgrund dieser Formulareingaben</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+AnwenderName=Stefan+M%FCnz&amp;AnwenderMail=s.muenz@euromail.com&amp;Text=Das+ist+ein+kleiner+Text
+</pre></td></tr></table><p>
+
+So kodiert der WWW-Browser die Formulardaten beim Absenden des Formulars. Diese Zeichenkette wird mit einer der erlaubten Methoden POST oder GET an das aufgerufene CGI-Script &uuml;bergeben. Das CGI-Script kann diesen Datenstrom in Kenntnis der Kodierungsregeln auseinanderdividieren, um die Formulardaten beispielsweise feldweise zu verarbeiten.
+<p>
+
+
+Es gibt auch einen eigenen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Type</b></a> f&uuml;r dieses Kodierungs-Schema: den Mime-Type <b>application/x-www-form-urlencoded</b>. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tebe.htm"><b>Server Side Includes</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="teca.htm"><b>Grunds&auml;tzliches zu Perl-Scripts</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

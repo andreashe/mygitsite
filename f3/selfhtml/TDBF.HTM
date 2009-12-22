@@ -1,0 +1,292 @@
+<html>
+<head>
+<title>SELFHTML: Operatoren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Operatoren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Zuweisungsoperator</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Vergleichsoperatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Berechnungsoperatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Logische Operatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Bit-Operatoren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Operator zur Zeichenkettenverkn&uuml;pfung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a7"><b>Operatorenrangfolge</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Zuweisungsoperator</font></h2></a>
+
+Sie k&ouml;nnen zum Beispiel einer Variablen einen Wert zuweisen. Der Zuweisungsoperator daf&uuml;r ist ein Istgleichzeichen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var SinnDesLebens = 42;
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel wird eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variable</b></a> <i>SinnDesLebens</i> definiert. Der Variablen wird mit dem Zuweisungsoperator <b>=</b> der Wert 42 zugewiesen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Vergleichsoperatoren</font></h2></a>
+Vergleichsoperatoren brauchen Sie, wenn Sie zwei Werte vergleichen wollen, z.B. den aktuellen Inhalt einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm"><b>Variablen</b></a> mit einem fixen Wert.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  if(SinnDesLebens == 42) return 1;
+  if(SinnDesLebens != 42) return 0;
+  if(SinnDesLebens &gt; 42) return 0;
+  if(SinnDesLebens &lt; 42) return 0;
+  if(Alter &gt;= 18) alert("SIE duerfen das hier sehen!");
+  if(Alter &lt;= 17) alert("SIE duerfen das hier NICHT sehen!");
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Um abzufragen, ob zwei Werte gleich sind, notieren Sie zwei Istgleichzeichen <b>==</b> nebeneinander.<br>
+Um abzufragen, ob zwei Werte unterschiedlich sind, notieren Sie zwischen beiden Werten die Zeichen <b>!=</b>.<br>
+Um abzufragen, ob ein Wert gr&ouml;&szlig;er oder gleich ist als ein anderer, notieren Sie die Zeichen <b>&gt;=</b>.<br>
+Um abzufragen, ob ein Wert in jedem Fall gr&ouml;&szlig;er ist als ein anderer, notieren Sie das Zeichen <b>&gt;</b>.<br>
+Um abzufragen, ob ein Wert kleiner oder gleich ist als ein anderer, notieren Sie die Zeichen <b>&lt;=</b>.<br>
+Um abzufragen, ob ein Wert in jedem Fall kleiner ist als ein anderer, notieren Sie das Zeichen <b>&lt;</b>.<br>
+N&auml;here Information zu der If-Abfrage erhalten Sie im Abschnitt &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingte Anweisungen</b></a>.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Berechnungsoperatoren</font></h2></a>
+
+Um mit numerischen Werten Berechnungen durchzuf&uuml;hren, brauchen Sie Berechnungsoperatoren.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var Zwei = 1 + 1;
+  var GarNix = 1 - 1;
+  var AuchNix = 81 / 3 - 27;
+  var WenigerAlsNix = 81 / (3 - 27);
+  var SinnDesLebens = 6 * 7;
+  var MachtAuchSinn = 84 / 2;
+  x = Jahr % 4;
+  if(x == 0)
+   Schaltjahr = true;
+
+  /* Besondere Notationen: */
+
+  var Zahl;
+  Zahl+=3;
+  Zahl++;
+  Zahl-=2;
+  Zahl--;
+  Zahl*=4;
+  Zahl/=3;
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mathematische Operatoren notieren Sie mit den daf&uuml;r &uuml;blichen Zeichen. Mit <b>+</b> notieren Sie eine Addition, mit <b>-</b> eine Subtraktion, mit <b>*</b> eine Multiplikation, mit <b>/</b> eine Division. Eine Besonderheit stellt der Operator <b>%</b> dar. Damit wird eine sogenannte Modulo-Division durchgef&uuml;hrt. Bei einer Modulo-Division werden zwei Werte dividiert. Das Ergebnis ist jedoch im Gegensatz zur normalen Division nur der Restwert der Division. Wenn Sie z.B. <i>13 % 5</i> notieren, erhalten Sie als Ergebnis 3, weil 13 geteilt durch 5 gleich 2 Rest 3 ergibt. Diese 3 ist es, die als Ergebnis einer Modulo-Division herauskommt.
+<p>
+Sie k&ouml;nnen mehrere Operationen in Reihe notieren. Dabei gilt die &uuml;bliche &quot;Punkt-vor-Strich-Regel&quot;. Wenn Sie eine andere Regel erzwingen wollen, m&uuml;ssen Sie Klammern verwenden, so wie im vierten der obigen Beispiele.
+<p>
+Die besonderen Notationen, die in den obigen Beispielen vorkommen, k&ouml;nnen Sie verwenden, wenn Sie Additionen oder Subtraktionen abk&uuml;rzen wollen:<br>
+<b>Zahl+=3;</b> ist eine Abk&uuml;rzung f&uuml;r <b>Zahl = Zahl + 3;</b><br>
+<b>Zahl++;</b> ist eine Abk&uuml;rzung f&uuml;r <b>Zahl = Zahl + 1;</b><br>
+<b>Zahl-=2;</b> ist eine Abk&uuml;rzung f&uuml;r <b>Zahl = Zahl - 2;</b><br>
+<b>Zahl--;</b> ist eine Abk&uuml;rzung f&uuml;r <b>Zahl = Zahl - 1;</b>
+<p>
+Der Operator <b>++</b> wird auch als Inkremationsoperator bezeichnet, der Operator <b>--</b> als Dekrementationsoperator.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Logische Operatoren</font></h2></a>
+
+Logische Operatoren brauchen Sie, wenn Sie komplexere Bedingungen f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingte Anweisungen</b></a> oder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm"><b>Schleifen</b></a> formulieren wollen.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  if(PLZ &gt;= 80000 &amp;&amp; PLZ &lt;= 82000)
+   alert("Sie wohnen wohl in Muenchen oder Umgebung!")
+
+  if(x &gt; 100 || y == 0)
+   break;
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit dem logischen Operator <b>&amp;&amp;</b> verkn&uuml;pfen Sie zwei oder mehrere Bedingungen durch &quot;und&quot, d.h. beide bzw. alle Bedingungen m&uuml;ssen erf&uuml;llt sein, damit die gesamte Bedingung erf&uuml;llt ist.<br>
+Mit dem logischen Operator <b>||</b> verkn&uuml;pfen Sie zwei oder mehrere Bedingungen inklusiv durch &quot;oder&quot, d.h. es gen&uuml;gt, wenn eine der Bedingungen erf&uuml;llt ist, damit die gesamte Bedingung erf&uuml;llt ist.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Bit-Operatoren</font></h2></a>
+
+Bit-Operatoren sind nur etwas f&uuml;r Profis. Um Bit-Operatoren richtig einzusetzen, m&uuml;ssen Sie viel von computer-internen Speichervorg&auml;ngen verstehen. Deshalb werden die Bit-Operatoren hier nur kurz erw&auml;hnt.
+
+<p>
+<b>&gt;&gt;</b> verschiebt Bits nach rechts<br>
+<b>&lt;&lt;</b> verschiebt Bits nach links<br>
+<b>&amp;</b> definiert in einer Bitmaske eine Und-Bedingung<br>
+<b>|</b> definiert in einer Bitmaske eine inklusive Oder-Bedingung<br>
+<b>^</b> definiert in einer Bitmaske eine exklusive Oder-Bedingung<br>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Operator zur Zeichenkettenverkn&uuml;pfung</font></h2></a>
+
+Mit einem einfachen Pluszeichen <b>+</b> k&ouml;nnen Sie eine Zeichenkette an eine andere anh&auml;ngen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+ var Vorname = &quot;Stefan &quot;
+ var Zuname = &quot;Muenz&quot;
+ var Name = Vorname + Zuname + &quot;, der Autor dieses Dokuments&quot;
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Sie k&ouml;nnen sowohl Zeichenkettenvariablen als auch direkte Zeichenkettenangaben mit <b>+</b> aneinanderh&auml;ngen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a7"><h2><font color=#6666CC>Operatorenrangfolge</font></h2></a>
+
+Unter den Operatoren von JavaScript gibt es eine festgelegte Rangordnung. Wenn Sie komplexe Rechenoperationen durchf&uuml;hren oder mehrere Bedingungen miteinander verkn&uuml;pfen, gilt bei der internen Aufl&ouml;sung solcher kompexen Ausdr&uuml;cke die folgende Rangordnung:
+<ol>
+<li>Rangstufe: <tt><b>,</b></tt> (Aneinanderreihung)
+<li>Rangstufe: <tt><b>= += -= &lt;&lt;= &gt;&gt;= &= ^= |= </b></tt>
+<li>Rangstufe: <tt><b>?: </b></tt> (<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm#a2"><b>Entweder-Oder-Bedingung</b></a>)
+<li>Rangstufe: <tt><b>|| </b></tt>
+<li>Rangstufe: <tt><b>&& </b></tt>
+<li>Rangstufe: <tt><b>| </b></tt>
+<li>Rangstufe: <tt><b>^ </b></tt>
+<li>Rangstufe: <tt><b>& </b></tt>
+<li>Rangstufe: <tt><b>== != </b></tt>
+<li>Rangstufe: <tt><b>&lt; &lt;= &gt; &gt;= </b></tt>
+<li>Rangstufe: <tt><b>&lt;&lt; &gt;&gt; &gt;&gt;&gt; </b></tt>
+<li>Rangstufe: <tt><b>+ - </b></tt>
+<li>Rangstufe: <tt><b>* / % </b></tt>
+<li>Rangstufe: <tt><b>! ~ - ++ -- </b></tt>
+<li>Rangstufe: <tt><b>() [] . </b></tt> (Klammerung und Vektoren)
+</ol>
+Mit Hilfe von Klammern, die absichtlich die unterste Rangstufe in der Priorit&auml;tshierarchie darstellen, k&ouml;nnen Sie die Rangfolge bei den Operatoren beeinflussen und Ausdr&uuml;cke so bewerten, wie Sie es w&uuml;nschen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+var OffizielleStatistik = 3.29 * 3 + 4.71;
+var MeineStatistik = 3.29 * (3 + 4.71);
+
+if( x &lt; y || (x &gt; z && z != y))
+  HaengDichAuf();
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbe.htm"><b>Steuerzeichen und besondere Notationen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbg.htm"><b>Bedingte Anweisungen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

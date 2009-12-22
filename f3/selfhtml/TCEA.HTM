@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>SELFHTML: Aufbau einer Tabelle</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Aufbau einer Tabelle</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Tabelle definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Zeilen und Spalten definieren</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Tabelle definieren</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceaa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen in HTML Tabellen definieren, um tabellarische Daten darzustellen, oder um Text und Grafik attraktiver am Bildschirm zu verteilen. Dazu wird grunds&auml;tzlich unterschieden zwischen Tabellen, die Gitternetzlinien haben (f&uuml;r tabellarische Daten), und Tabellen ohne sichtbare Gitternetzlinien (&quot;<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceh.htm"><b>blinde Tabellen</b></a>&quot; - etwa f&uuml;r mehrspaltigen Text oder f&uuml;r sauberes Beieinanderstehen von Text und Grafik).
+
+<a name="itable"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+   &lt;!--hier folgt der Tabelleninhalt einer Tabelle mit Gitternetzlinien--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<a name="itable"><h4><font color=#6666CC>Beispiel 2:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table&gt;
+   &lt;!--hier folgt der Tabelleninhalt einer blinden Tabelle--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;table&gt;</b> leitet eine Tabelle ein (<i>table = Tabelle</i>). Wenn die Tabelle sichtbare Gitternetzlinien enthalten soll, m&uuml;ssen Sie den Zusatz <b>border</b> mit angeben - wie in Beispiel 1 (<i>border = Rand</i>).
+<p>
+Um die Tabelle mit Inhalten zu f&uuml;llen, m&uuml;ssen Sie Zeilen und Spalten definieren wie im folgenden beschrieben.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zeilen und Spalten definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceaa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Eine Tabelle besteht aus mindestens einer, normalerweise aus mehreren Zeilen. Eine Zeile besteht aus mindestens einer, normalerweise aus mehreren Zellen. Dadurch ergeben sich die Spalten der Tabelle.
+
+<a name="itr"><a name="ith"><a name="itd"><h4><font color=#6666CC>Beispiel:</font></h4></a></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 2. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 3. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte
+      &lt;td&gt;Datenzelle: 2. Zeile, 2. Spalte
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datenzelle: 3. Zeile, 1. Spalte
+      &lt;td&gt;Datenzelle: 3. Zeile, 2. Spalte
+      &lt;td&gt;Datenzelle: 3. Zeile, 3. Spalte
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;tr&gt;</b> leitet eine neue Tabellenzeile ein (<i>tr = table row = Tabellenzeile</i>). Im Anschlu&szlig; daran werden die Zellen (Spalten) der betreffenden Reihe definiert. Am Ende einer Tabellenzeile wird ein abschlie&szlig;endes Tag <b>&lt;/tr&gt;</b> notiert.
+<p>
+Eine Tabelle kann Kopfzellen und gew&ouml;hnliche Datenzellen enthalten. Text in Kopfzellen wird hervorgehoben (bei Netscape: fett und zentriert ausgerichtet). <b>&lt;th&gt;</b> definiert eine Kopfzelle, <b>&lt;td&gt;</b> eine normale Datenzelle (<i>th = table header = Tabellenkopf, td = table data = Tabellendaten</i>). Der Inhalt einer Zelle wird jeweils hinter dem Tag notiert. In einer Tabellenzelle k&ouml;nnen beliebige Elemente stehen, d.h. au&szlig;er normalem Text z.B. auch <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweise</b></a> oder <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcg.htm"><b>Grafik in HTML</b></a>. Sogar eine weitere Tabelle k&ouml;nnen Sie innerhalb einer Zelle definieren.
+<p>
+Normalerweise k&ouml;nnen die Tags <b>&lt;th&gt;</b> und <b>&lt;td&gt;</b> alleine stehen. Bei gr&ouml;&szlig;eren Zelleninhalten ist es jedoch sicherer, am Ende der Zelle ein abschlie&szlig;endes Tag <b>&lt;/th&gt;</b> bzw. <b>&lt;/td&gt;</b> zu notieren.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Anzahl der Zellen sollte bei jeder Zeile gleich sein, so da&szlig; die Tabelle durchweg die gleiche Anzahl Spalten hat. In der ersten Zeile, die Sie definieren, legen Sie deshalb durch die Anzahl der dort definierten Zellen die Anzahl der Spalten Ihrer Tabelle fest.
+<p>
+Beim Text innerhalb von Zellen gelten die Besonderheiten f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcad.htm"><b>Umlaute, Sonderzeichen und HTML-eigene Zeichen</b></a>. 
+<p>
+Gr&ouml;&szlig;ere Tabellen k&ouml;nnen im Quelltext schnell un&uuml;berschichtlich werden. W&auml;hlen Sie deshalb eine 
+&uuml;bersichtliche Darstellungsform mit Einr&uuml;ckungen und Zeilenumbr&uuml;chen (&auml;hnlich wie im Beispiel oben). Auf die 
+Pr&auml;sentation im Browser hat die Darstellung im Quelltext keinen Einflu&szlig;, da innerhalb von Tabellenzellen die &uuml;blichen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcac.htm"><b>Regeln beim Editieren von HTML</b></a> gelten.
+<p>
+Tabellenzellen d&uuml;rfen auch leer sein. Wenn Sie in einer Zeile f&uuml;r eine Spalte keine Daten eingeben wollen, notieren Sie ein einfaches <b>&lt;td&gt;</b><b>&lt;/td&gt;</b>. Beachten Sie dabei jedoch, da&szlig; viele WWW-Browser die Zelle in diesem Fall als &quot;nicht vorhanden&quot; darstellt. Probieren Sie deshalb auch mal die Befehlsfolge <b>&lt;td&gt;&amp;#160;&lt;/td&gt;</b> f&uuml;r leere Tabellenzellen aus.
+<p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdp.htm"><b>Lauftext (Marquee)</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tceb.htm"><b>Rahmendicke, Gitternetzlinien, Randabstand</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

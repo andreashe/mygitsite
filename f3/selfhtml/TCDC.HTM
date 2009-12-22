@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>SELFHTML: Zeilenumbruchkontrolle</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC> Zeilenumbruchkontrolle</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Zeilenumbruch erzwingen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Automatischen Zeilenumbruch verhindern</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Gesch&uuml;tzte Leerzeichen</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Zeilenumbruch erlauben</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Zeilenumbruch erzwingen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdca.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Text innerhalb von normalen Abs&auml;tzen, aber auch in speziellen Absatzformen wie Listen, 
+sowie in &Uuml;berschriften oder Tabellenzellen wird vom WWW-Browser bei der Anzeige automatisch umgebrochen. Sie k&ouml;nnen jedoch an einer gew&uuml;nschten Stelle einen Zeilenumbruch erzwingen.<br>
+(Siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcac.htm"><b>Regeln beim Editieren von HTML</b></a>)
+
+<a name="ibr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Hier ist eine Zeile zu ende.&lt;br&gt;
+Hier beginnt eine neue Zeile.
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;br&gt;</b> (<i>br&nbsp;=&nbsp;break&nbsp;=&nbsp;Umbruch</i>) f&uuml;gt an der gew&uuml;nschten Stelle einen 
+Zeilenumbruch ein. Dabei ist es egal, ob das Tag am Ende der vorherigen Zeile 
+steht (wie im Beispiel), oder in einer eigenen Zeile, oder am Anfang der folgenden Zeile.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xibm.gif" width=30 height=30 border=0 alt="IBM WebExplorer 1.03"> Automatischen Zeilenumbruch verhindern</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen einen Textbereich bestimmen, in dem kein automatischer Zeilenumbruch erfolgt. Alles, was innerhalb dieses Bereichs steht, wird in einer langen Zeile angezeigt. Der Anwender kann dann mit der horizontalen Scroll-Leiste die &uuml;berlangen Textzeile anzeigen. 
+
+<a name="inobr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;nobr&gt;Dies ist eine sehr lange Zeile. Der Anwender mu&szlig; bei der Anzeige die horizontale Scroll-Leiste benutzen, um den gesamten Text dieser Zeile anzuzeigen. Sinnvoll ist dieses Feature nur in Ausnahmef&auml;llen.&lt;/nobr&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;nobr&gt;</b> bewirkt, da&szlig der auf das Tag folgende Text nicht umgebrochen wird (<i>nobr&nbsp;=&nbsp;no&nbsp;break&nbsp;=&nbsp;kein&nbsp;Umbruch</i>). Am Ende des Textabschnitts, der nicht umgebrochen werden soll, notieren Sie das Tag <b>&lt;/nobr&gt;</b>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xibm.gif" width=30 height=30 border=0 alt="IBM WebExplorer 1.03"> Gesch&uuml;tzte Leerzeichen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdca.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen verhindern, da&szlig; bei einem Leerzeichen ein automatischer Zeilenumbruch erfolgen darf. 
+
+<a name="inbsp"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Wenn man z.&amp;nbsp;B. Abk&uuml;rzungen wie d.&amp;nbsp;h. auseinander schreibt...
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Zeichenfolge <b>&amp;nbsp;</b> erzeugt ein gesch&uuml;tztes Leerzeichen (<i>nbsp&nbsp;=nonbreaking space&nbsp;=&nbsp;nicht umbrechbares Leerzeichen</i>). Es wird ein normales Leerzeichen  angezeigt, doch an dieser Stelle kann kein Zeilenumbruch erfolgen.  Notieren Sie die Zeichenfolge inclusive dem kaufm&auml;nnischen Und am Beginn und dem Strichpunkt am Ende.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xibm.gif" width=30 height=30 border=0 alt="IBM WebExplorer 1.03"> Zeilenumbruch erlauben</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"></a><br>
+<a href="tcdca.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+WWW-Browser brechen Text normalerweise nur bei Leerzeichen um, weil durch Leerzeichen W&ouml;rter voneinander abgegrenzt werden. Sie k&ouml;nnen dem WWW-Browser explizit weitere Stellen markieren, an denen er den Text umbrechen darf. Dies gilt f&uuml;r alle Absatzarten in HTML. 
+
+<a name="iwbr"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Das Wort Donaudampfschiffahrts-&lt;wbr&gt;Kapit&amp;auml;nsm&amp;uuml;tze ist ein langes Wort.
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;wbr&gt;</b> markieren Sie eine Stelle, an der getrennt werden darf, falls diese Stelle bei der Bildschirmanzeige am Ende der Zeile steht (<i>wbr&nbsp;=&nbsp;word&nbsp;break&nbsp;=&nbsp;Umbruch innerhalb eines Wortes</i>). Sinnvoll ist dies bei langen W&ouml;rtern oder aus Bindestrichen bestehenden Ausdr&uuml;cken.
+<p>
+Innerhalb von <img src="xgoup.gif">&nbsp;<a href="#a2"><b>Abschnitten mit verhindertem Zeilenumbruch</b></a> bewirkt <b>&lt;wbr&gt;</b>, da&szlig; an der betreffenden Stelle trotzdem ein Umbruch erfolgen darf.
+
+<h4><font color=#6666CC>Hinweis:</font></h4>
+Wenn Sie Textzeilen unabh&auml;ngig vom Anzeigefenster des Anwenders genau kontrollieren wollen und nach HTML-3.2-Standard arbeiten wollen, k&ouml;nnen Sie 
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm"><b>pr&auml;formatierten Text</b></a> einsetzen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdb.htm"><b>Textabs&auml;tze</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdd.htm"><b>Numerierte Listen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

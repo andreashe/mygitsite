@@ -1,0 +1,277 @@
+<html>
+<head>
+<title>SELFHTML: Frame-Sets und Frames definieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Frame-Sets und Frames definieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Frames</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Grundger&uuml;st einer HTML-Datei mit Frame-Sets</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Frame-Sets definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Frames definieren</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu Frames</font></h2></a>
+Mit Hilfe von Frames k&ouml;nnen Sie den Anzeigebereich des Browsers in 
+verschiedene, frei definierbare Segmente aufteilen. Jedes Segment kann 
+eigene Inhalte enthalten. Die einzelnen Anzeigesegmente (also die Frames) 
+k&ouml;nnen wahlweise einen statischen Inhalt 
+(= &quot;non scrolling regions&quot;) oder einen wechselnden Inhalt 
+haben. Verweise in einem Frame k&ouml;nnen Dateien aufrufen, die dann in einem anderen Frame angezeigt werden.
+<p>
+Frames stellen einen Quantensprung in HTML dar. Frames sind kein 
+weiteres Element, um typische Aufgaben der Textverarbeitung zu 
+bew&auml;ltigen, sondern ein Element, das die spezifischen 
+Eigenschaften der Bildschirmanzeige konsequent nutzt. Frames 
+er&ouml;ffnen v&ouml;llig neue M&ouml;glichkeiten, um Information 
+hypertextuell (d.h. nicht-linear) aufzubereiten.
+<p>
+Frames werden ab Netscape 2.0 und ab MS Internet Explorer 3.0 unterst&uuml;tzt. Das Frame-Konzept ist mit dem WWW-Konsortium abgesprochen und als k&uuml;nftiger offizieller Bestandteil von HTML vorgesehen.
+<p>
+<img src="xtcia1.gif" width=300 height=200 border=0 align=left hspace=10>Die nebenstehende Abbildung zeigt ein typisches Beispiel f&uuml;r Frames. Sie stellt den Inhalt des gesamten Anzeigefensters des Browsers schematisch dar. Das Anzeigefenster ist in drei unabh&auml;ngige Bereiche aufgeteilt. Die Verweise links und unten k&ouml;nnen beispielsweise immer eingeblendet bleiben, w&auml;hrend sich der Inhalt des Hauptfensters je nach ansgew&auml;hltem Verweis &auml;ndern kann. Dabei werden im Beispiel der Abbildung immer drei verschiedene HTML-Dateien gleichzeitig angezeigt: links und unten immer die gleiche Datei, im Hauptfenster jeweils eine wechselnde Datei, je nach ausgew&auml;hltem Verweis.
+<p>
+In jedem Frame stehen alle Anzeige-Features zur Verf&uuml;gung - so ist es z.B. denkbar, in einem Frame Textinformation anzuzeigen, w&auml;hrend in einem anderen Frame gleichzeitig ein passendes Video abl&auml;uft. 
+<p>
+Durch den Einsatz von Frames wachsen die Gestaltungsm&ouml;glichkeiten au&szlig;erordentlich. Frames stellen an das Design von HTML-Seiten aber auch besonders hohe Anspr&uuml;che. Einige Tips, die Sie beachten sollten, finden Sie im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcie.htm"><b>Tips zum Umgang mit Frames</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Grundger&uuml;st einer HTML-Datei mit Frame-Sets</font></h2></a>
+Wenn Sie in einer HTML-Datei ein Frame-Set definieren, sieht das 
+Grundger&uuml;st der HTML-Datei folgenderma&szlig;en aus:
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Frame-Test&lt;/title&gt;
+&lt;/head&gt;
+&lt;frameset ...&gt;
+... Frame-Definitionen ...
+&lt;/frameset&gt;
+&lt;body&gt;
+Dieser Text wird angezeigt, wenn der Browser keine Frames kennt
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Grundger&uuml;st einer HTML-Datei, in der Frame-Sets definiert werden, weicht vom <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm#a1"><b>Grundger&uuml;st einer gew&ouml;hnlichen HTML-Datei</b></a> ab. Hinter dem abschlie&szlig;enden <b>&lt;/head&gt;</b> beginnt die Frame-Set-Definition. <b>&lt;frameset ...&gt;</b> leitet die Definition eines 
+Frame-Sets ein. Dahinter folgen die Definitionen der einzelnen Frames oder verschachtelter Frame-Sets. <b>&lt;/frameset&gt;</b> schlie&szlig;t die Definition des Frame-Sets ab.
+<p>
+Hinter dem letzten <b>&lt;/frameset&gt;</b> sollten Sie immer einen normalen Dateik&ouml;rper definieren. Dies geschieht wie &uuml;blich durch <b>&lt;body&gt;</b> und <b>&lt;/body&gt;</b>. Innerhalb dieses Dateik&ouml;rpers k&ouml;nnen Sie alle &uuml;blichen HTML-Elemente notieren. So k&ouml;nnen Sie dem Anwender in diesem Bereich mitteilen, da&szlig; sein WWW-Browser keine Frames unterst&uuml;tzt und Ihr Projekt deshalb nicht anzeigen kann.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Netscape und andere Browser interpretieren auch das HTML-Tag <b>&lt;noframe&gt;</b>, um den Bereich jenseits der Frame-Set-Definitionen zu markieren. Dies ist jedoch &uuml;berfl&uuml;ssig, wenn Sie sich an obige Syntax halten.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Frame-Sets definieren</font></h2></a>
+
+Beim Definieren von Frame-Sets bestimmen Sie, wie das Anzeigefenster 
+aufgeteilt werden soll. Dabei m&uuml;ssen Sie sich das Anzeigefenster wie 
+den leeren Rahmen einer Tabelle vorstellen. Damit die Tabelle Gestalt 
+annimmt, m&uuml;ssen Sie zun&auml;chst Reihen und Spalten definieren. 
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset rows=&quot;20%,80%&quot;&gt;
+... Dadurch ergeben sich zwei Frames, deren Inhalt hier bestimmt wird...
+&lt;/frameset&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<img src="xtcia2.gif" width=160 height=120 border=0 align=left hspace=10>Die nebenstehende Abbildung zeigt den Effekt des obigen Beispiels 1. Im einleitenden Tag <b>&lt;frameset...&gt;</b> bestimmen Sie die Aufteilung. Durch <b>rows=</b> teilen Sie das Anzeigefenster in Reihen auf (<i>rows = Reihen</i>). Dahinter bestimmen Sie, wie die Aufteilung genau aussehen soll. Im Beispiel wird mit Hilfe von <b>rows=&quot;20%,80%&quot;</b> eine Aufteilung in zwei Reihen erzwungen, wobei die obere Reihe 20% des Anzeigefensters in Anspruch nimmt, die untere 80%.<br>
+Die Angaben f&uuml;r die Aufteilung m&uuml;ssen in Anf&uuml;hrungszeichen stehen. Trennen Sie die Angaben durch Kommata.<br>
+Zum Definieren der einzelnden Frames siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>weiter unten</b></a>.
+<br clear=all>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset rows=&quot;100,*,60&quot;&gt;
+... Dadurch ergeben sich drei Frames, deren Inhalt hier bestimmt wird...
+&lt;/frameset&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<img src="xtcia3.gif" width=160 height=120 border=0 align=left hspace=10>Die nebenstehende Abbildung zeigt den Effekt des obigen Beispiels 2. Mit der Angabe <b>rows=&quot;100,*,60&quot;</b> wird die obere Reihe genau 100 Pixel hoch, die untere Reihe genau 60 Pixel hoch, und die mittlere Reihe erh&auml;lt den Rest des Anzeigefensters, abh&auml;ngig von der Gr&ouml;&szlig;e des Anzeigefensters beim Anwender.<br>
+Mit Zahlenangaben, die ein Prozentzeichen enthalten, wird die Aufteilung also prozentual (relativ zur Gr&ouml;&szlig;e des Anzeigefensters) interpretiert. Bei Zahlenngaben ohne Prozentzeichen wird die Angabe als absoluter Pixelwert interpretiert. Mit dem Sternzeichen <b>*</b> definieren Sie Bereiche von relativer Gr&ouml;&szlig;e, abh&auml;ngig von den &uuml;brigen Angaben.<br>
+Sie k&ouml;nnen auch vier oder mehrere Reihen definieren. So definieren Sie beispielsweise mit <b>rows=&quot;10%,25%,30%,25%,10%&quot;</b> f&uuml;nf Reihen.<br>
+Zum Definieren der einzelnden Frames siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>weiter unten</b></a>.
+<br clear=all>
+
+
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;200,*&quot;&gt;
+... Dadurch ergeben sich zwei Frames, deren Inhalt hier bestimmt wird...
+&lt;/frameset&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<img src="xtcia4.gif" width=160 height=120 border=0 align=left hspace=10>Die nebenstehende Abbildung zeigt den Effekt des obigen Beispiels 3. Durch <b>cols=</b> teilen Sie das Anzeigefenster in Spalten auf (<i>cols = columns = Spalten</i>). Dahinter bestimmen Sie, wie die Aufteilung genau aussehen soll. Im Beispiel wird mit Hilfe von <b>cols=&quot;200,*&quot;</b> eine Aufteilung in zwei Spalten erzwungen, wobei die links Spalte 200 Pixel des Anzeigefensters in Anspruch nimmt, die rechte den Rest. Bei <b>cols=</b> sind die gleichen Angaben m&ouml;glich wie bei <b>rows=</b>.<br>
+Zum Definieren der einzelnden Frames siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>weiter unten</b></a>.
+<br clear=all>
+
+
+<h4><font color=#6666CC>Beispiel 4:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;40%,60%&quot;&gt;
+... Zwei Frames, wobei der Inhalt des ersten Frames hier bestimmt wird...
+  &lt;frameset rows=&quot;20%,80%&quot;&gt;  
+  ... Noch mal zwei Frames, deren Inhalt hier bestimmt wird...
+  &lt;/frameset&gt;   
+&lt;/frameset&gt; 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<img src="xtcia5.gif" width=160 height=120 border=0 align=left hspace=10>Die nebenstehende Abbildung zeigt den Effekt des obigen Beispiels 4. In diesem Beispiel werden Reihen und Spalten f&uuml;r eine komplexe Bildschirmaufteilung definiert. Bei solchen Aufteilungen m&uuml;ssen Sie zun&auml;chst das gesamte Fenster im Auge behalten. Dieses Fenster wird im Beispiel zun&auml;chst in zwei Spalten aufgeteilt. Die rechte der beiden Spalten wird dann in zwei Reihen aufgeteilt. Deshalb wird zun&auml;chst die Spaltenaufteilung definiert, n&auml;mlich mit der Angabe <b>cols=&quot;40%,60%&quot;</b>. Statt aber einfach zwei Frames zu definieren, wird anstelle des zweiten Frames ein untergeordnetes Frame-Set definiert, das den rechten Anzeigebereich mit <b>rows=&quot;20%,80%&quot;</b> in zwei Reihen aufteilt.
+<br>
+Zum Definieren der einzelnden Frames siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>weiter unten</b></a>.<br clear=all>
+
+
+<h4><font color=#6666CC>Beispiel 5:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset rows=&quot;50%,50%&quot;&gt;
+  &lt;frameset cols=&quot;50%,50%&quot;&gt;  
+  ... zwei Frames, deren Inhalt hier bestimmt wird...
+  &lt;/frameset&gt;   
+  &lt;frameset cols=&quot;50%,50%&quot;&gt;  
+  ... zwei Frames, deren Inhalt hier bestimmt wird...
+  &lt;/frameset&gt;   
+&lt;/frameset&gt; 
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<img src="xtcia6.gif" width=160 height=120 border=0 align=left hspace=10>Das Beispiel zeigt eine komplexere Aufteilung in vier Bereiche. Da in einem solchen Fall alle Bereiche gleich gro&szlig; sind, ist es egal, ob Sie mit der Definition der Spalten oder Reihen beginnen. Wichtig ist die durchg&auml;ngige Logik. Wenn Sie - wie im Beispiel - mit der Definition der Reihen beginnen, m&uuml;ssen Sie anstelle von Frames untergeordnete Frame-Sets definieren, in denen Sie jede der beiden Reihen in zwei Spalten aufteilen. Erst innerhalb dieser untergeordneten Frame-Sets werden die eigentlichen Frames definiert.<br>
+Zum Definieren der einzelnden Frames siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>weiter unten</b></a>.
+<br clear=all>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Frame-Sets sollten immer so definiert sein, da&szlig; das gesamte Anzeigefenster abgedeckt wird. Verwenden Sie dazu entweder Pozentangaben, die in der Summe 100 ergeben, oder das Sternzeichen <b>*</b>.
+<p>
+Im Zusammenhang mit JavaScript kann in einem einleitenden Tag <b>&lt;frameset ... &gt;</b> auch der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <b>onLoad=</b> vorkommen.
+<p>
+Der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcba.htm"><b>Titel</b></a> (<b>&lt;title&gt;</b>...<b>&lt;/title&gt;</b>), den Sie in der Datei mit der Frame-Set-Definition angeben, wird w&auml;hrend der gesamten Dauer des Frame-Sets angezeigt, auch wenn andere Dateien innerhalb des Frame-Sets aufgerufen werden. Leider gibt es bislang keine M&ouml;glichkeit, den Titel zu aktualisieren. W&auml;hlen Sie in der Datei, die die Frame-Set-Definitionen enth&auml;lt, deshalb einen allgemeinen, aussagekr&auml;ftigen Titel, der f&uuml;r das gesamte Projekt G&uuml;ltigkeit hat.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Frames definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tciaa.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Nachdem Sie durch die Definition von Frame-Sets geeignete Bereiche des 
+Anzeigefensters bestimmt haben, geben Sie mit der Definition der Frames an, 
+was in den einzelnen Bereichen angezeigt werden soll.
+
+
+<a name="iframe"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;frameset cols=&quot;40%,60%&quot;&gt;
+  &lt;frame src=&quot;verweise.htm&quot; name=&quot;LinkesFenster&quot;&gt;
+  &lt;frameset rows=&quot;20%,80%&quot;&gt;  
+    &lt;frame src=&quot;titel.htm&quot; name=&quot;HauptFenster&quot;&gt;
+    &lt;frame src=&quot;control.htm&quot; name=&quot;UnteresFenster&quot;&gt;
+  &lt;/frameset&gt;   
+&lt;/frameset&gt; 
+
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;frame src=...&gt;</b> &quot;Dateiname&quot; definieren 
+Sie innerhalb eines Frame-Sets den Inhalt des bzw. der zugeh&ouml;rigen 
+Frames (<i>frame = Rahmen, src = source = Quelle</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Bei der Adressierung der Dateien, die in einem Frame angezeigt werden sollen, gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+<p>
+Ferner sollten Sie f&uuml;r jeden definierten Frame mit <b>name=</b> einen Namen vergeben. Diese Namen brauchen Sie, um <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a1"><b>Verweise zu anderen Frames</b></a> zu definieren. Namen f&uuml;r Frames m&uuml;ssen in Anf&uuml;hrungszeichen stehen, d&uuml;rfen nicht zu lang sein und nur aus Buchstaben, Ziffern und Unterstrichen bestehen. Folgende Namen haben eine spezielle Bedeutung und dürfen nicht als normale Fensternamen verwendet werden: <b>_self</b>, <b>_new</b>, <b>_parent</b> und <b>_top</b>. Mehr hierzu im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm"><b>Verweise zu Frames und zum Beenden von Frame-Sets</b></a>
+<p>
+Definieren Sie f&uuml;r jede &quot;Zelle&quot; Ihrer gedachten Tabelle 
+einen Frame (wie im Beispiel).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie zu Beginn oder &uuml;berhaupt keinen Inhalt in einem Frame anzeigen wollen, notieren Sie einfach ein nacktes <b>&lt;frame&gt;</b>. 
+<p>
+In HTML-Dateien, die innerhalb eines Frames angezeigt werden, sind alle HTML-Befehle erlaubt. Besondere Bedingungen gelten lediglich f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a1"><b>Verweise zu Frames</b></a>, d.h. f&uuml;r Verweise zu Dateien, die in einem anderen Frame-Fenster angezeigt werden sollen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tchh.htm"><b>Formulare verarbeiten</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcib.htm"><b>Eigenschaften von Frames definieren</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

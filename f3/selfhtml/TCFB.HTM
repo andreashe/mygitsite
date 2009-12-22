@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>SELFHTML: Projektverweise innerhalb einer HTML-Datei</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Projektverweise innerhalb einer HTML-Datei</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Anker f&uuml;r Verweise definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweis zu Anker setzen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Anker f&uuml;r Verweise definieren</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfba.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen von jeder beliebigen Stelle in einer HTML-Datei zu einer anderen beliebigen Stelle innerhalb der gleichen Datei einen Verweis setzen. Dazu brauchen Sie zwei Befehle:
+<ul>
+<li>einen Befehl, um ein Verweisziel (Anker) zu definieren
+<li>einen Befehl, um einen Verweis zu einem definierten Verweisziel zu setzen
+</ul>
+Um einen Anker f&uuml;r m&ouml;gliche Verweise zu definieren, gehen Sie beim Editieren an die Stelle, zu der ein Verweis f&uuml;hren soll (Verankerungsstelle f&uuml;r den Verweis). Es kann sich um ein einzelnes Wort mitten im Text handeln, um eine &Uuml;berschrift, um eine referenzierte Grafik, egal was Sie wollen. 
+
+
+<a name="ia_name"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a name=&quot;Zieldef&quot;&gt;&lt;h3&gt;Verweisziel definieren&lt;/h3&gt;&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Definition eines Verweisziels (Ankers) beginnt mit <b>&lt;a name=</b> (<i>a = anchor = Anker</i>). Hinter dem Istgleichzeichen vergeben Sie einen dateiweit eindeutigen Namen f&uuml;r das Verweisziel (im Beispiel: &quot;Zieldef&quot;). Vergeben Sie keine zu langen Namen. Namen d&uuml;rfen keine Leerzeichen und keine deutschen Umlaute enthalten. Benutzen Sie als Sonderzeichen h&ouml;chstens den Unterstrich &quot;_&quot;. Der Name des Verweisziels mu&szlig; in Anf&uuml;hrungszeichen stehen. Hinter dem Verweiszielnamen endet das einleitende Tag mit <b>&gt;</b>. Dahinter folgt ein Inhalt, zu dem der Verweis f&uuml;hren soll. Im Beispiel ist das eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm"><b>&Uuml;berschrift</b></a> 3. Ordnung. 
+Dahinter wird das abschlie&szlig;ende Tag <b>&lt;/a&gt;</b> notiert. 
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Der Bereich zwischen <b>&lt;a name=&gt;</b> und <b>&lt;/a&gt;</b> darf nicht leer sein. In den meisten F&auml;llen werden Sie Anker bei &Uuml;berschriften setzen (so wie im Beispiel oben). Wenn nicht, markieren Sie irgendein Wort im Flie&szlig;text mit <b>&lt;a name=&quot;Ziel&quot;&gt;Wort&lt;/a&gt;</b> oder etwa eine eingebundene Grafik (<b>&lt;a name=&quot;Ziel&quot;&gt;&lt;img src=&quot;datei.gif&quot;&gt;&lt;/a&gt;</b>). <br>
+(Das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a> wird an anderer Stelle beschrieben).
+<p>
+Sie k&ouml;nnen auch von einer anderen HTML-Datei aus einen Verweis zu einem Anker in der aktuellen Datei setzen. Der WWW-Browser ruft dann die aktuelle Datei auf und springt direkt an die verankerte Stelle. (siehe hierzu <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm#a3"><b>Verweis zu Anker innerhalb einer anderen Datei</b></a>).
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Anker setzen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfba.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie in einer HTML-Datei einen Anker definiert haben, k&ouml;nnen Sie einen Verweis auf die verankerte Stelle setzen.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  Erst m&uuml;ssen Sie ein &lt;a href="#Zieldef"&gt;Ziel f&uuml;r Verweise definieren&lt;/a&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist der Name eines zuvor <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>definierten Ankers</b></a>. Dem Namen m&uuml;ssen Sie ein <b>#</b> voranstellen (im Beispiel: &quot;#Zieldef&quot;, wobei &quot;Zieldef&quot; der Name eines zuvor definierten Ankers ist). Beachten Sie, da&szlig; Gro&szlig;- und Kleinschreibung bei Definition und Aufruf eines Ankers &uuml;bereinstimmen m&uuml;ssen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcfa.htm"><b>Aufbau von Verweisen und Allgemeines</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcfc.htm"><b>Projektverweise zu anderen Dateien</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,324 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Schleifen und Sprungbefehle</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Schleifen und Sprungbefehle</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schleifen mit while/until</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Schleifen mit do..while/until</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Schleifen mit for/foreach</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Sprungbefehle in Perl</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Schleifen mit while/until</font></h2></a>
+Mit Hilfe von while-Schleifen k&ouml;nnen Sie Programmanweisungen solange wiederholen, wie die Bedingung, die in der Schleife formuliert wird, erf&uuml;llt ist. Mit until-Schleifen k&ouml;nnen Sie Programmanweisungen wiederholen, bis die Bedingung, die in der Schleife formuliert wird, erf&uuml;llt ist.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$i = 1;
+print &quot;zuerst die Wurzeln von 1 bis 10...\n\n&quot;;
+while($i &lt;= 10)
+ {
+  print &quot;Die Wurzel von &quot;, $i, &quot; ist &quot;, sqrt($i), &quot;\n&quot;;   
+  $i++;
+ }
+$i = 1;
+print &quot;und jetzt die Quadratzahlen von 1 bis 10...\n\n&quot;;
+until($i > 10)
+ {
+  print &quot;Das Quadrat von &quot;, $i, &quot; ist &quot;, $i * $i, &quot;\n&quot;;   
+  $i++;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$AccessDatei = &quot;../../docs/access.log&quot;;
+$Zugriffe = 0;
+$Erfolge = 0;
+open(DATEI, &quot;&lt;&quot;.$AccessDatei) || die &quot;Datei nicht gefunden!\n&quot;;
+ {
+  while(&lt;DATEI&gt;)
+   {
+    if(/HTTP\/1.0&quot; 200/)  # nach 'HTTP/1.0&quot; 200' suchen (= erfolgreicher Zugriff)
+     {
+      $Erfolge++;
+     }
+    $Zugriffe++;
+   }
+ }
+print &quot;Von &quot;, $Zugriffe, &quot; Zugriffen waren &quot;, $Erfolge, &quot; erfolgreich\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine while-Schleife (wie im obigen Beispiel 1, erster Teil) beginnt mit dem Wort <b>while</b> (<i>while = solange</i>). Dahinter folgt, in Klammern stehend, die Bedingung. Um eine Bedingung zu formulieren, brauchen Sie in der Regel <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecf.htm#a2"><b>Vergleichsoperatoren</b></a>. Der Inhalt der Schleife wird solange wiederholt, wie die Schleifenbedingung wahr ist.
+<p>
+Eine until-Schleife (wie im obigen Beispiel 1, zweiter Teil) beginnt mit dem Wort <b>until</b> (<i>until = bis</i>). Dabei handelt es sich um eine andere logische Formulierung als bei <b>while</b>. Der Inhalt der Schleife wird solange wiederholt, bis die Schleifenbedingung wahr ist. Ansonsten gelten f&uuml;r until-Schleifen die gleichen Regeln wie f&uuml;r while-Schleifen. Achten Sie jedoch auf eine genaue logische Formulierung der Schleifenbedingung! So bedeuten im Beispiel die Schleifenbedingungen <i>while($i &lt;= 10)</i> und <i>until($i > 10)</i> genau das gleiche.
+<p>
+Das obige Beispiel 2 zeigt einen speziellen, Perl-typischen Anwendungsfall der Schleife mit <b>while</b>. In dem Beispiel wird eine Datei zeilenweise eingelesen. Es handelt sich um eine Log-Datei, wie sie ein WWW-Server zum Protokollieren der Zugriffe erzeugt. In diesem speziellen Fall ist f&uuml;r die Schleifenbedingung kein Vergleichsoperator n&ouml;tig. Die Schleife bricht automatisch ab, wenn alle Zeilen der Datei gelesen wurden (zu diesem Beispiel siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecj.htm"><b>Dateien lesen und schreiben</b></a> sowie f&uuml;r das Suchen nach Zeichenketten den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>Regul&auml;re Ausdr&uuml;cke</b></a>). 
+<p>
+Notieren Sie Anweisungen innerhalb der Schleifen immer in geschweiften Klammern <b>{</b> und <b>}</b>, auch wenn es nur eine einzige Anweisung ist.
+<p>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Achten Sie bei Schleifen mit Vergleichsoperatoren in der Schleifenbedingung immer darauf, da&szlig; es mindestens eine M&ouml;glichkeit gibt, um die Schleife nach einer angemessenen Zeit zu beenden. Andernfalls erzeugen Sie eine sogenannte &quot;Endlosschleife&quot;, die zu Systemabst&uuml;rzen f&uuml;hren kann!
+<p>
+Um Endlosschleifen zu vermeiden, brauchen Sie irgendetwas, das irgendwann zu einem Ausweg aus der Schleife f&uuml;hrt. Meistens werden zu diesem Zweck sogenannte &quot;Z&auml;hler&quot; definiert, im Beispiel 1 etwa der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <i>$i</i>. Dieser Skalar hat im Beispiel einen Anfangswert von 1 und wird innerhalb der Schleife bei jedem Durchgang mit der Anweisung <i>$i++;</i> um 1 erh&ouml;ht, so da&szlig; die Schleifenbedingung irgendwann erreicht wird.
+<p>
+Eine andere M&ouml;glichkeit, Schleifen zu kontrollieren und abzubrechen, bieten die <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4.htm"><b>Sprungbefehle</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Schleifen mit do..while/until</font></h2></a>
+
+Bei dieser Art von Schleife wird nicht zuerst die Schleifenbedingung ausgewertet und davon abh&auml;ngig der Anweisungsblock innerhalb der Schleife ausgef&uuml;hrt, sondern es wird zuerst der Anweisungsblock ausgef&uuml;hrt, und anschlie&szlig;end wird erst die Schleifenbedingung ausgewertet. Die Schleife wird also in jedem Fall mindestens einmal durchlaufen, egal wie die Schleifenbedingung lautet. Das kann sinnvoll sein, wenn Sie in der Schleifenbedingung mit Variablen arbeiten, deren genauen Wert Sie zum Zeitpunkt des Schleifenbeginns nicht kennen. 
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Name = &quot;Stefan&quot;;
+do
+ {
+  print $Name, &quot;\n&quot;;
+  $Name = &quot;Virtuella&quot;;
+ }
+while($Name ne &quot;Virtuella&quot;)
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Name = &quot;Stefan&quot;;
+do
+ {
+  print $Name, &quot;\n&quot;;
+  $Name = &quot;Virtuella&quot;;
+ }
+until($Name eq "Virtuella")
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Schleife dieses Typs beginnt mit dem Schl&uuml;sselwort <b>do</b>. Anschlie&szlig;end folgt der Anweisungsblock der Schleife, wie &uuml;blich markiert durch geschweifte Klammern <b>{</b> bzw. <b>}</b>. Nach der schlie&szlig;enden geschweiften Klammer folgt die Schleifenbedingung. Die Schleifenbedingung k&ouml;nnen Sie mit <b>while</b> (<i>solange</i>) oder mit until (<i>bis</i>) formulieren. Dabei gelten die gleichen Regeln wie bei <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schleifen mit while/until</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Achten Sie auch bei do..while/until-Schleifen darauf, da&szlig; keine Endlosschleifen entstehen. Die beiden obigen Beispiele bewirken jeweils das gleiche, n&auml;mlich die einmalige Ausgabe des Namens &quot;Stefan&quot;. Beide Beispiele unterscheiden sich nur durch die unterschiedlich formulierte Schleifenbedingung. Wenn Sie in diesen beiden Beispielen die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecf.htm#a2"><b>Vergleichsoperatoren</b></a> <b>eq</b> und <b>ne</b> umgekehrt einsetzen w&uuml;rden, w&uuml;rde in beiden F&auml;llen eine Endlosschleife entstehen!
+<p>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Schleifen mit for/foreach</font></h2></a>
+
+Schleifen mit <b>for</b> oder <b>foreach</b> unterscheiden sich von Schleifen mit <b>while</b> oder <b>until</b> dadurch, da&szlig; sie bereits in der Schleifenbedingung eine feste Abbruchbedingung vorsehen. Solche Schleifen eignen sich deshalb vor allem f&uuml;r F&auml;lle, in denen &quot;Anfangswert&quot; und &quot;Endwert&quot; von vorneherein feststehen.
+
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+for($i=0;$i&lt;=255;$i++)
+ {
+  printf(&quot;%4d = %2X&quot;,$i, $i);
+  if($i % 8 == 0)
+   { print &quot;\n&quot;; }
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Alphabet = (A..Z);
+for(@Alphabet)
+ {
+  print $_, &quot; ist der &quot;, $i+1, &quot;. Buchstabe im Alphabet\n&quot;;
+  $i++;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+foreach $i (1..100)
+ {
+  next if $i % 2 == 0;
+  print $i, &quot;\n&quot; if $i % 3 == 0;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine for-Schleife beginnt mit dem Wort <b>for</b>. Dahinter wird, in Klammern stehend, die Schleifenbedingung formuliert. Bei der &quot;klassischen&quot;, C-konformen for-Schleife werden innerhalb der Schleifenbedingung drei Anweisungen notiert. In der ersten Anweisung wird ein Schleifenz&auml;hler definiert und initialisiert. Im obigen Beispiel 1 wird ein Z&auml;hler <i>$i</i> definiert und mit dem Wert 0 initialisiert. Die zweite Anweisung enth&auml;lt die Bedingung, ab der die Schleife beendet wird. Dazu brauchen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecf.htm#a2"><b>Vergleichsoperatoren</b></a>. In der dritten Anweisung wird der Schleifenz&auml;hler so ver&auml;ndert, da&szlig; er irgendwann die in der zweiten Anweisung notierte Bedingung erf&uuml;llt. Im Beispiel wird <i>$i</i> bei jedem Schleifendurchgang um 1 erh&ouml;ht, so da&szlig; der Wert irgendwann gr&ouml;&szlig;er 255 ist und damit die Bedingung der zweiten Anweisung erf&uuml;llt.<br>
+Das Beispiel 1 benutzt den Schleifenz&auml;hler, um bei jedem Schleifendurchgang die umgerechnete Hexadezimalzahl zum aktuellen Wert von $i auszugeben. Die Abfrage <i>if($i % 8 == 0)</i> enth&auml;lt eine Modulodivision und bewirkt, da&szlig; nach 8 Ausgaben eine neue Zeile bei der Ausgabe begonnen wird. Die Ausgabe selbst erfolgt mit Hilfe der <b>printf</b>-Funktion (C-konform), die sauber formatierte Ausgaben auf die Standardausgabe erlaubt. Diese Funktion ist allerdings f&uuml;r CGI-Zwecke (also f&uuml;r Ausgaben in HTML-Form) nicht so sehr geeignet.
+<p>
+Das obige Beispiel 2 zeigt einen speziellen, Perl-typischen Anwendungsfall der for-Schleife. Diese Form ist sehr praktisch, um Elemente einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> oder eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tevb.htm#a3"><b>Hashs</b></a> der Reihe nach abzuarbeiten. Im Beispiel 2 wird eine Liste <i>@Alphabet</i> mit allen Gro&szlig;buchstaben des Alphabets definiert. Mit der Anweisung <i>for(@Alphabet)</i> wird eine Schleife &uuml;ber diese Liste gelegt. Die Schleife wird automatisch so oft durchlaufen, wie die Liste Elemente hat. Um das jeweils aktuelle Listenelement anzusprechen, wird innerhalb der Schleife die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecc.htm"><b>vordefinierte Variable</b></a> <b>$_</b> verwendet. In ihr ist der Inhalt des jeweils aktuellen Listenelements gespeichert.
+<p>
+Eine weitere Perl-typische Konstruktion ist eine Schleife mit <b>foreach</b>. Im obigen Beispiel 3 kommt eine solche Schleife zum Einsatz. Bei diesem Schleifentyp wird als Schleifenbedingung in Klammern ein eindeutiger Bereich definiert, z.B. (von Zahl..bis Zahl) oder Buchstaben (von Buchstabe..bis Buchstabe). Die Schleife wird automatisch so oft durchlaufen, bis alle Elemente innerhalb des definierten Bereichs abgearbeitet sind.<br>
+Wenn Sie einen Z&auml;hler innerhalb der Schleife f&uuml;r die gew&uuml;nschte Prozedur einsetzen wollen, k&ouml;nnen Sie eine Z&auml;hlervariable zwischen <b>foreach</b> und der Schleifenbedingung definieren, so wie in Beispiel 3 oben der Skalar <i>$i</i>.<br>
+Das obige Beispiel 3 gibt alle Zahlen zwischen 1 und 100 aus, die ungerade und durch 3 teilbar sind. Dabei hilft der <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Sprungbefehl</b></a> <b>next</b>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Sprungbefehle in Perl</font></h2></a>
+
+Perl wird nachgesagt, da&szlig; man damit nicht ordentlich strukturiert programmieren kann. Zwar stellt Perl mittlerweile alles zur Verf&uuml;gung, was zu einem sauber strukturierten und sogar objektorientierten Programmieren geh&ouml;rt, doch Perl ist und bleibt eine Sprache f&uuml;r Scripts, bei denen sich Programmierer oft nicht die M&uuml;he machen, den Programmablauf auf einzelne <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm"><b>Unterprogramme</b></a> zu verteilen. Eine h&auml;ufig benutzte Alternative zu strukturierter Programmierung sind Sprungbefehle zu einer beliebigen anderen Stelle im Programm. Auch innerhalb von Schleifen sind Sprungbefehle sehr beliebt, um zum Beispiel den n&auml;chsten Schleifendurchlauf vorzeitig zu erzwingen, oder um eine Schleife abzubrechen.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+# Raten Sie mal, welche Zahl $i am Ende als Ergebnis ausgibt
+
+$i = 1;
+goto Ergebnis;
+while($i &lt; 1000)
+ {
+  ++$i;
+  if($i % 3 == 0)
+   {
+    redo;    
+   }
+  elsif($i % 7 == 0)
+   {
+    next;    
+   }
+  elsif($i % 13 == 0)
+   {
+    last;    
+   }
+  elsif($i % 17 == 0)
+   {
+    continue;    
+   }
+ }
+Ergebnis:
+print &quot;Ergebnis: &quot;, $i;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+while($i &lt; 10)
+ {
+  ++$i;
+  if($i % 2 != 0)
+   {
+    redo;
+   }
+ }
+continue
+ {
+   print $i, &quot;\n&quot;;    
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Folgende Sprungbefehle stehen in Perl zur Verf&uuml;gung:
+<p>
+<b>goto</b> springt zu einer beliebigen anderen Stelle im Programm. Dazu mu&szlig; diese Stelle jedoch ein &quot;Label&quot; erhalten (vergleichbar mit einem Verweisanker innerhalb einer HTML-Datei). Ein Label definieren Sie, indem Sie einen Namen notieren und dahinter einen Doppelpunkt. Im obigen Beispiel wird in der vorletzten Zeile ein Label mit dem Namen <i>Ergebnis:</i> definiert. Mit einem <b>goto</b>-Befehl wie am Beginn des Beispiels k&ouml;nnen Sie zu einem solchen Label springen.
+<p>
+<b>redo</b> ist zur Verwendung innerhalb von Schleifen gedacht. Der aktuelle Schleifendurchgang wird abgebrochen. Der n&auml;chste Schleifendurchgang wird gestartet, allerdings ohne da&szlig; die Schleifenbedingung neu bewertet wird. Wenn Sie also beispielsweise einen Z&auml;hler in einer Schleifenbedingung hochz&auml;hlen, wird die Schleife bei <b>redo</b> erneut durchlaufen, ohne da&szlig; der Z&auml;hler weiter hochgez&auml;hlt wird.
+<p>
+<b>next</b> ist ebenfalls zur Verwendung innerhalb von Schleifen gedacht. Der aktuelle Schleifendurchgang wird abgebrochen. Der n&auml;chste Schleifendurchgang wird gestartet, und die Schleifenbedingung wird dabei ebenfalls ausgewertet.
+<p>
+<b>last</b> bricht eine Schleife sofort ab.
+<p>
+<b>continue</b> ist in Perl ein Spezialfall und anders zu behandeln als etwa in C. Das obige Beispiel 2 zeigt eine typische Verwendungsweise. <b>continue</b> leitet einen eigenen Anweisungsblock ein, genauso wie eine Schleife. Innerhalb dieses Anweisungsblocks, der wie &uuml;blich mit geschweiften Klammern <b>{</b> und <b>}</b> markiert wird, k&ouml;nnen Sie beliebige Anweisungen notieren. Wenn ein solcher <b>continue</b>-Block unmittelbar hinter einem Schleifenblock steht, wird er mit jedem Schleifendurchlauf mit durchlaufen. Mit einem Sprungbefehl wie <b>redo</b> innerhalb des Schleifenblocks k&ouml;nnen Sie verhindern, da&szlig; der <b>continue</b>-Block ausgef&uuml;hrt wird. Im obigen Beispiel 2 wird mit dieser Konstruktion erreicht, da&szlig; alle geraden Zahlen zwischen 1 und 10 ausgegeben werden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tecd.htm"><b>Bedingte Anweisungen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecf.htm"><b>Operatoren</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

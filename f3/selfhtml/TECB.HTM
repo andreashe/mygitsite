@@ -1,0 +1,288 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Variablen und Datentypen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Variablen und Datentypen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Skalare - einfache Variablen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Listen - Arrays</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Hashs - assoziative Listen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Referenzen - Zeiger auf Variablen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Skalare - einfache Variablen</font></h2></a>
+
+Variablen sind Speicherbereiche, in denen Sie Daten, die Sie im Laufe Ihrer Programmprozeduren ben&ouml;tigen, speichern k&ouml;nnen. Der Inhalt, der in einer Variablen gespeichert ist, wird als "Wert" bezeichnet. Sie k&ouml;nnen den Wert einer Variablen jederzeit &auml;ndern. 
+<p>
+In Perl wird eine einfache Variable, die eine Zahl oder eine Zeichenkette speichern kann, als Skalar bezeichnet.
+
+<h4><font color=#6666CC>Einzelbeispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Name = &quot;Methusalem&quot;;
+$Alter = 625;
+$Name_2 = &quot;Junger Hansel&quot;;
+$JungAlter = sqrt($Alter);
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel eines kleinen Perl-Scripts:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+$Wert = 123456;
+$Teilwert = substr($Wert,1,3);
+print $Teilwert;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Ein Skalar, also eine einfache Variable, beginnt mit dem Dollarzeichen <b>$</b>, gefolgt von dem Namen der Variablen. Das Dollarzeichen mu&szlig; immer angegeben werden, wenn die Variable verwendet wird, egal ob ihr ein Wert zugewiesen wird, oder ob sie in einer Operation vorkommt (so wie im letzten der obigen Einzelbeispiele die Variable <i>$Alter</i> innerhalb der Funktion <b>sqrt()</b> vorkommt, die die Quadratwurzel einer Zahl errechnet).
+<p>
+Sie k&ouml;nnen Skalare f&uuml;r numerische Inhalte und Skalare f&uuml;r Zeichenketten definieren. Ob ein Skalar numerisch oder eine Zeichenkette ist, entscheiden Sie, wenn Sie dem Skalar einen Wert zuweisen oder indem Sie ihn in einer Anweisung verwenden. Eine angegebene Zeichenkette mu&szlig; dabei in Anf&uuml;hrungszeichen stehen. Normalerweise sind das doppelte Anf&uuml;hrungszeichen, es sind aber auch einfache Anf&uuml;hrungszeichen (zum Unterschied siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tech.htm#a1"><b>Konventionen f&uuml;r Zeichenketten</b></a>).
+<p>
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Daten in Perl sind nicht &quot;getypt&quot;. Wenn Sie eine Zeichenkette haben, die nur aus g&uuml;ltigen numerischen Zeichen besteht (z.B. &quot;7423.13&quot;), k&ouml;nnen Sie damit problemlos numerische Operationen durchf&uuml;hren. Ebenso k&ouml;nnen Sie numerische Werte wie Zeichenketten behandeln. Zur Demonstration dazu dient das obige Beispiel eines kleinen Perl-Scripts. In dem Script wird ein numerischer Skalar <i>$Wert</i> definiert. Darunter wird jedoch eine typische Zeichenkettenfunktion auf diesen Skalar angewendet, n&auml;mlich das Extrahieren einer Teilzeichenkette mit Hilfe der Funktion <b>substr()</b>. Die Parameter der Funktion bedeuten: aus <i>$Wert</i> wird ab dem 2. Zeichen eine Zeichenkette von 3 Zeichen L&auml;nge extrahiert (das 2. Zeichen wird durch die Angabe von 1 bezeichnet, da in Perl, wie in den meisten anderen Programmiersprachen, immer bei 0 zu z&auml;hlen begonnen wird). Das Ergebnis wird in einem Skalar <i>$Teilwert</i> gespeichert. Das Ergebnis lautet &quot;234&quot; und wird anschlie&szlig;end ausgegeben. Wenn Sie andere Programmiersprachen kennen, werden Sie hieran ermessen k&ouml;nnen, welche Freiheiten Sie in Perl beim Umgang mit Variablen haben.
+<p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Listen - Arrays</font></h2></a>
+
+Listen sind Ketten zusammengeh&ouml;riger Skalare. In Perl haben solche Listen zentrale Bedeutung, weil es sehr einfach ist, Daten in Listen einzulesen und Listen zu manipulieren. Listen werden h&auml;ufig auch als Arrays bezeichnet.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+@Daten = (&quot;Jana&quot;,23,&quot;Berlin&quot;,&quot;Abitur&quot;); 
+print $Daten[0], &quot; ist &quot;, $Daten[1], &quot; Jahre alt, wohnt in &quot;, $Daten[2], &quot; und hat &quot;, $Daten[3];
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+for($i = 1;$i &lt;= 9;$i++)
+ {
+  $Wert = $i * $i;
+  push(@Quadrate, $Wert);  
+ } 
+for(@Quadrate)
+ {
+  print $_, &quot;\n&quot;;
+ } 
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+@Buchstaben = (&quot;a&quot;..&quot;z&quot;);
+print $Buchstaben[2], &quot;\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Liste wird in Perl durch das Klammeraffenzeichen <b>@</b> eingeleitet. Dahinter folgt der Name der Liste. Sie k&ouml;nnen eine Liste mit Daten vorbelegen, wie etwa in Beispiel 1 oben  die Liste <i>@Daten</i>. Achten Sie dabei darauf, da&szlig; die Daten durch Klammern eingeschlossen werden. Die einzelnen Listenelemente trennen Sie durch Kommata.
+<p>
+Sie k&ouml;nnen die Liste aber auch dynamisch erzeugen, wie es oben in Beispiel 2 innerhalb einer Schleife geschieht. In dem Beispiel wird innerhalb einer Schleife, die von 1 bis 9 z&auml;hlt, die Liste <i>@Quadrate</i> dynamisch mit den Quadratzahlen zu den Zahlen 1 bis 9 gef&uuml;llt. Das geht jedoch nur mit Unterst&uuml;tzung von Funktionen zur Listenmanipulation, im Beispiel durch die Funktion <b>push()</b>, die Elemente an das Ende einer Liste anf&uuml;gt.
+<p>
+Das obige Beispiel 3 zeigt eine besondere Variante, um eine Liste mit Daten zu f&uuml;llen. Um eine Liste mit Zahlen (von - bis) oder mit Buchstaben (von - bis) aufzuf&uuml;llen, gen&uuml;gt es, beim Definieren der Liste das erste und das letzte Listenelement anzugeben und dazwischen einfach zwei Punkte zu notieren (im Beispiel werden auf diese Weise alle Kleinbuchstaben von a bis z in eine Liste mit entsprechend vielen Elementen geschrieben - <i>@Buchstaben = (&quot;a&quot;..&quot;z&quot;);</i>.
+<p>
+Wenn Sie eine Liste mit Daten vorbelegen oder f&uuml;llen, gelten die gleichen Regeln wie bei einfachen Skalaren: Zeichenketten werden in Anf&uuml;hrungszeichen notiert, Zahlen ohne Anf&uuml;hrungszeichen. Anstelle von Daten k&ouml;nnen Sie nat&uuml;rlich auch Skalare in eine Liste einf&uuml;gen. Dann wird der Wert des betreffenden Skalars in die Liste &uuml;bernommen.
+<p>
+Um ein bestimmtes Element innerhalb einer Liste anzusprechen, verwenden Sie den Variablennamen der Liste, setzen jedoch ein Dollarzeichen <b>$</b> davor, genau so wie bei einem einfachen Skalar. Hinter dem Listennamen notieren Sie in eckigen Klammern, das wievielte Element der Liste Sie meinen. Dabei wird bei 0 zu z&auml;hlen begonnen, d.h. das erste Listenelement einer Liste mit dem Namen <i>@Listenname</i> wird mit <i>$Listenname[0]</i> angesprochen, das zweite Element durch <i>$Listenname[1]</i> usw. Im ersten der obigen Beispiele k&ouml;nnen Sie das sehr gut studieren.
+<p>
+Die folgende Abbildung bezieht sich nochmals auf die obigen Beispiele 1 bis 3 und verdeutlicht, was jeweils in den Listen gespeichert ist, und wie die entsprechenden Listenelemente ansprechbar sind. 
+<p>
+<img src="xtecb1.gif" width=627 height=216 border=0>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es ist problemlos m&ouml;glich, einen einfachen Skalar und ein Element einer Liste einander zuzuweisen. So k&ouml;nnen Sie beispielsweise eine Anweisung notieren wie:<br> <i>$Vorname = $Daten[0];</i><br>
+Ebenso ist es problemlos m&ouml;glich, eine ganze Liste zu kopieren und einer anderen Liste zuzuweisen, etwa so:<br>
+<i>@SpeicherDaten = @Daten;</i><br>
+Es ist jedoch nicht erlaubt, Listen und Skalare einander zuzuweisen. Ein Zuweisung wie <i>$Wert = @Daten</i> ist unzul&auml;ssig.
+<p>
+Sie k&ouml;nnen Zeichenketten und Zahlen ohne Probleme in derselben Liste speichern, wie im Beispiel 1 oben. Es gibt auch keine Vorschriften daf&uuml;r, wie lang ein einzelnes Listenelement maximal sein darf. So k&ouml;nnen Sie auch eine komplette andere Liste als Element in einer Liste speichern. Ein Element in einer Liste innerhalb einer Liste sprechen Sie dann beispielsweise mit <i>$Daten[2][4]</i> an (das hei&szlig;t: das 3. Element der Liste <i>@Daten</i> ist selbst eine Liste, z.B. mit dem Namen <i>@Eigenschaften</i>, die selbst wieder mehrere Elemente enth&auml;lt, und das 5. Element dieser Liste soll angesprochen werden).
+<p>
+Sie d&uuml;rfen ohne vorherige Listendefinition eine Anweisung notieren wie:<br>
+<i>$Zahlen[5] = 43298;</i><br>
+Dabei wird dann automatisch eine Liste namens @Zahlen erzeugt, die zum Zeitpunkt des Erzeugens 6 Elemente hat, n&auml;mlich $Zahlen[0] bis $Zahlen[5]. Dabei ist nur $Zahlen[5] mit einem Wert belegt, die anderen Listenelemente sind leer.
+<p>
+Das letzte Element einer Liste k&ouml;nnen Sie immer auch durch <i>$Listenname[-1]</i> ansprechen. Die negative Indexzahl -1 ist f&uuml;r diesen Zweck reserviert.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Hashs - assoziative Listen</font></h2></a>
+
+Gew&ouml;hnliche Listen bestehen aus einer Reihe von Werten, die &uuml;ber Indexnummern, beginnend bei 0, ansprechbar sind. So hat ist das 8. Element einer Liste mit dem Namen <i>@Listenname</i> &uuml;ber <i>$Listenname[7]</i> ansprechbar. Eine assoziative Liste, in Perl als Hash bezeichnet, speichert dagegen pro Listenelement zwei Werte: einen Namen und einen Wert. Werte innerhalb eines Hashs brauchen dann nicht &uuml;ber Indexnummern ansgesprochen zu werden, sondern werden &uuml;ber den zugeh&ouml;rigen Namen &quot;assoziiert&quot;.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+%Daten = (&quot;Name&quot;,&quot;Jana&quot;,&quot;Alter&quot;,23,&quot;Ort&quot;,&quot;Berlin&quot;); 
+print $Daten{'Name'}, &quot; ist &quot;, $Daten{'Alter'}, &quot; Jahre alt und wohnt in &quot;, $Daten{'Ort'};
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Ein Hash wird in Perl durch das Prozentzeichen <b>%</b> eingeleitet. Wenn Sie einen Hash erzeugen und mit Daten vorbelegen, geh&ouml;ren immer jeweils zwei Elemente zusammen: das erste Element stellt den Hash-Namen dar, das zweite Element den gespeicherten Wert, der &uuml;ber den Hash-Namen ansprechbar ist. So bilden im obigen Beispiel die beiden ersten Elemente <i>&quot;Name&quot;</i> und <i>&quot;Jana&quot;</i> das erste Hash-Paar des Hashs <i>%Daten</i>.
+<p>
+Um ein bestimmtes Element innerhalb eines Hashs anzusprechen, verwenden Sie den Variablennamen des Hashs, setzen jedoch ein Dollarzeichen <b>$</b> davor, genau so wie bei einem einfachen Skalar. Hinter dem Namen des Hashs notieren Sie in geschweiften Klammern und einfachen Anf&uuml;hrungszeichen den Hash-Namen des Elements, das Sie meinen. Im obigen Beispiel wird auf diese Weise etwa mit <i>$Daten {'Name'}</i> der zugeh&ouml;rige Wert <i>&quot;Jana&quot;</i> angesprochen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+F&uuml;r Hashs, also f&uuml;r assoziative Listen, gelten ansonsten die gleichen Regeln und M&ouml;glichkeiten wie f&uuml;r gew&ouml;hnliche Listen.
+<p>
+Hashs lassen sich im Zusammenhang mit CGI-Scripts sehr sinnvoll einsetzen. So ist es beispielsweise m&ouml;glich, den Datenstrom eines vom Anwender ausgef&uuml;llten HTML-Formulars in einen Hash einzulesen, wobei als Hash-Name jeweils der Name gespeichert wird, den ein Formularelement in der HTML-Datei hat, und als Wert der Wert, den der Anwender in dem betreffenden Formularelement eingegeben oder ausgew&auml;hlt hat.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Referenzen - Zeiger auf Variablen</font></h2></a>
+Wenn Sie sich in der Sprache C auskennen, wissen Sie, was Zeiger sind, und wie effizient das Programmieren dadurch werden kann. Referenzen sind Zeiger auf zuvor definierte Datentypen (egal ob Skalare, Listen oder Hashs). &Uuml;ber Referenzen k&ouml;nnen Sie den Inhalt eines Skalars, einer Liste oder eines Hashs genau so ansprechen wie &uuml;ber den Originalnamen. 
+<p>
+Das Besondere an Referenzen in Perl ist, da&szlig; der Wert einer Variablen so lange erhalten bleibt, wie es Referenzen dieser Variablen gibt. Das ist von Bedeutung, wenn Sie mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a2"><b>Unterprogrammen</b></a> arbeiten, in denen lokal g&uuml;ltige Datentypen definiert werden.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+&amp;A();
+
+sub B()
+{
+print $$TextReferenz, &quot;\n&quot;;   # Wert ist nur noch in der Referenz enthalten!
+}
+
+sub A()
+{
+my $Text = &quot;Das ist ein kleiner Text&quot;;
+$TextReferenz = \$Text;   # Hier wird eine Referenz definiert
+&amp;B();
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel verdeutlicht die Wirkungsweise einer Referenz. Das kleine Perl-Script im Beispiel enth&auml;lt zwei selbst definierte Unterprogramme <i>A()</i> und <i>B()</i>. Zuerst wird mit <i>&amp;A()</i> das entsprechende Unterprogramm aufgerufen. Dort wird ein Skalar <i>$Text</i> definiert, dessen &quot;Lebensdauer&quot; sich auf die Unterroutine <i>A()</i> beschr&auml;nkt. Erreicht wird das durch Voranstellen des W&ouml;rtchens <b>my</b>.<br>
+Im Anschlu&szlig; an die Skalardefinition wird eine Referenz auf diesen Skalar definiert. Die Referenz wird genau so definiert wie der Skalar selbst. Bei der Zuweisung des Skalars zu der Referenz steht jedoch ein umgekehrter Schr&auml;gstrich <b>\</b>. Dadurch wird der Referenz <i>$TextReferenz</i> nicht der Wert von <i>$Text</i> zugewiesen, sondern lediglich die Speicheradresse, an der der Wert von <i>$Text</i> steht. Dadurch ben&ouml;tigt die Referenz selbst deutlich weniger Speicher als der Skalar.<br>
+Zuletzt wird innerhalb des Unterprogramms <i>A()</i> das Unterprogramm <i>B()</i> aufgerufen.<br>
+Im Unterprogramm <i>B()</i> wird der zugeh&ouml;rige Wert der Referenz $Referenztext mit der print-Funktion ausgegeben. W&uuml;rde dort die Anweisung <i>print $Text;</i> stehen, w&uuml;rde nichts ausgegeben, da die Variable <i>$Text</i> aus <i>A()</i> mit ihrem Wert zu diesem Zeitpunkt nicht mehr existiert. Der Wert existiert aber trotzdem noch, da er noch &uuml;ber die Referenz <i>$TextReferenz</i> ansprechbar ist.<br>
+Um den Wert einer Referenz auf einen Skalar anzusprechen, m&uuml;ssen Sie zwei Dollarzeichen vor dem Namen der Referenz notieren, so wie in der print-Anweisung im obigen Beispiel.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie - zum Beispiel mit der print-Anweisung - nicht den Wert der Referenz ansprechen, sondern einfach die Referenz selbst, wird einfach in Hexadezimalform die Speicheradresse ausgegeben, an der der Inhalt der Referenz im Arbeitsspeicher steht.
+<p>
+Sie k&ouml;nnen nicht nur Referenzen auf Skalare, sondern auch Referenzen auf Listen und Hashs oder Referenzen auf einzelne Elemente innerhalb von Listen oder Hashs definieren. Die folgende Tabelle bietet dazu eine &Uuml;bersicht, wie die entsprechende Notation aussehen mu&szlig;.
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC valign=top align=left>Referenz auf...</th>
+<th bgcolor=#CCCCCC valign=top align=left>Referenz definieren</th>
+<th bgcolor=#CCCCCC valign=top align=left>Referenz-Wert ansprechen</th>
+<th bgcolor=#CCCCCC valign=top align=left>Referenz-Wert ansprechen<br>
+(alternative Notation)</th>
+</tr>
+<tr>
+<th bgcolor=#FFCC99 valign=top align=left>Skalar</th>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$Skalarreferenz = \$Skalar</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>$$Skalarreferenz</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>${$Skalarreferenz}</tt></td>
+</tr>
+<tr>
+<th bgcolor=#FFCC99 valign=top align=left>Liste</th>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$Listenreferenz = \@Liste</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>@$Listenreferenz</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>@{$Listenreferenz}</tt></td>
+</tr>
+<tr>
+<th bgcolor=#FFCC99 valign=top align=left>Element in Liste</th>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$Listenreferenz = \@Liste</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>@{$Listenreferenz}[0]</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>$Listenreferenz-&gt;[0]</tt></td>
+</tr>
+<tr>
+<th bgcolor=#FFCC99 valign=top align=left>Hash</th>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$Hashreferenz = \%Hash</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>%$Hashreferenz</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>%{$Hashreferenz}</tt></td>
+</tr>
+<tr>
+<th bgcolor=#FFCC99 valign=top align=left>Element in Hash</th>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$Hashreferenz = \%Hash</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>%{$Hashreferenz}{&quot;Hashname&quot;}</tt></td>
+<td bgcolor=#CCFFFF valign=top nowrap><tt>$Hashreferenz-&gt;{&quot;Hashname&quot;}</tt></td>
+</tr>
+</table>
+<p>
+Beachten Sie, da&szlig; Referenzen erst ab der Perl-Version 5.0 interpretiert werden. &Auml;ltere Perl-Interpreter bringen Syntaxyfehlermeldungen, wenn sie auf Referenzen sto&szlig;en.
+<p>
+Benutzen Sie Referenzen immer nur dann, wenn Sie einen Grund dazu haben!
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="teca.htm"><b>Grunds&auml;tzliches zu Perl-Scripts</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecc.htm"><b>Vordefinierte Variablen in Perl</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

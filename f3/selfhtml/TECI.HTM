@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Unterprogramme und Perl-Funktionen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Unterprogramme und Perl-Funktionen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Unterprogramme</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Unterprogramme mit Parameter&uuml;bergaben und R&uuml;ckgabewert</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Lokale Variablen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Perl-Funktionen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Unterprogramme</font></h2></a>
+
+Bei komplexeren Perl-Scripts ist es empfehlenswert, bestimmte Programmteile in selbst definierte Unterprogramme zu verlagern. Auf diese Weise k&ouml;nnen Sie das Script besser strukturieren. Sinnvoll ist das vor allem bei Programmteilen, die im Laufe des Scripts mehrmals ausgef&uuml;hrt werden. Bevor Sie also eine gr&ouml;&szlig;ere Prozedur mehrmals im Script notieren, sollten Sie die entsprechende Prozedur in ein Unterprogramm stecken und dieses Unterprogramm an der gew&uuml;nschten Stelle aufrufen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Ergebnis = 1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9;
+&Ausgabe;
+$Ergebnis = sqrt(sqrt(81));
+&Ausgabe;
+
+sub Ausgabe
+{
+ print "Das Ergebnis lautet: ", $Ergebnis, "\n";
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Ein Unterprogramm definieren Sie mit dem Schl&uuml;sselwort <b>sub</b>. Dahinter folgt ein frei w&auml;hlbarer Name, der den Namenskonventionen von Perl entsprechen mu&szlig;. Im obigen Beispiel wird auf diese Weise ein Unterprogramm <i>sub Ausgabe</i> definiert. Der gesamte Inhalt des Unterprogramms mu&szlig; in geschweiften Klammern stehen. Sie k&ouml;nnen beliebige und beliebig viele Anweisungen innerhalb des Unterprogramms notieren.
+<p>
+Mit einem kaufm&auml;nnischen Und-Zeichen <b>&</b> und anschlie&szlig;endem Unterprogrammnamen rufen Sie ein Unterprogramm auf. Der Aufruf ist eine eigene Anweisung, mu&szlig; also wie andere Anweisungen mit einem Strichpunkt abgeschlossen werden. Im obigen Beispiel kommt zwei mal die Anweisung <i>&Ausgabe;</i> vor. Dadurch wird das Unterprogramm mit dem Namen <i>Ausgabe</i> aufgerufen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es ist egal, an welcher Stelle innerhalb des Scripts ein Unterprogramm steht. Bei der Interpretation f&uuml;hrt der Perl-Interpreter zuerst diejenigen Anweisungen der Reihe aus, die au&szlig;erhalb der Unterprogramme stehen.
+<p>
+Die Unterprogramme werden beim Aufruf automatisch gesucht.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Unterprogramme mit Parameter&uuml;bergaben und R&uuml;ckgabewert</font></h2></a>
+
+Sie k&ouml;nnen ein Unterprogramm aufrufen, das einen Wert ermittelt und diesen an die aufrufende Anweisung zur&uuml;ckgibt.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$x = &Rechne(1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9);
+print $x, &quot;\n&quot;;
+
+sub Rechne
+{
+ return eval($_[0]);
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Gegensatz zu anderen Programmiersprachen wie etwa C oder auch Java und JavaScript brauchen Sie bei einem Unterprogramm, dem Parameter &uuml;bergeben werden sollen, bei der Definition des Unterprogramms keine Parameterdeklarationen anzugeben. Im obigen Beispiel wird das Unterprogramm <i>Rechne</i> mit einem Parameter aufgerufen: <i>(1 + 2 * 3 + 4 * 5 + 6 * 7 + 8 * 9)</i>. Das Unterprogramm <i>Rechne</i> verarbeitet diesen Parameter mit dem Konstrukt <b>$_[0]</b>. Dahinter steckt eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecc.htm"><b>vordefinierte Variablen</b></a>, n&auml;mlich die Liste <b>@_</b>. Es handelt sich um die Liste der &uuml;bergebenen Parameter. <b>$_[0]</b> greift auf den ersten &uuml;bergebenen Parameter zu, <b>$_[1]</b> auf den zweiten Parameter usw. Mit einer Anweisung wie <i>for(@_) { print $_, "\n"; }</i> k&ouml;nnen Sie beispielsweise auch alle &uuml;bergebenen Parameter abarbeiten, ohne wissen zu m&uuml;ssen, wie viele Parameter &uuml;bergeben wurden. So einfach ist das sonst in kaum einer Programmiersprache.
+<p>
+Der lange Rechenausdruck, der im obigen Beispiel an das Unterprogramm <i>Rechne</i> &uuml;bergeben wird, ist ein einziger Parameter. Wenn Sie mehrere Parameter &uuml;bergeben wollen, trennen Sie diese durch Kommata.
+<p>
+Um aus einem Unterprogramm einen Wert an eine aufrufende Anweisung zur&uuml;ckzugeben, benutzen Sie am besten die <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Perl-Funktion</b></a> <b>return</b>. Dahinter k&ouml;nnen Sie z.B. eine Variable angeben, deren aktuellen Wert Sie zur&uuml;ckgeben wollen. Im obigen Beispiel gibt <b>return</b> direkt den R&uuml;ckgabewert einer Perl-Funktion weiter, n&auml;mlich den R&uuml;ckgabewert der Funktion <b>eval()</b>. Diese Funktion bewertet eine Zeichenkette als Rechenoperation und gibt das errechnete Ergebnis zur&uuml;ck.
+<p>
+Im obigen Beispiel wird der von <i>Rechne</i> zur&uuml;ckgegebene Wert in dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <i>$x</i> gespeichert. Dazu wird diesem Skalar einfach der Aufruf des Unterprogramms <i>Rechne</i> zugewiesen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Lokale Variablen</font></h2></a>
+Im Gegensatz zu den meisten anderen Programmiersprachen behalten Variablen, die innerhalb eines Unterprogramms definiert werden, nach Beenden des Unterprogramms ihre G&uuml;ltigkeit. Das bedeutet, da&szlig; Sie keine zwei gleichnamigen Variablen im gesamten Script definieren k&ouml;nnen. Denn sobald Sie mit der zweiten Variablen irgendetwas anstellen, ver&auml;ndern Sie einfach den aktuellen Inhalt der ersten, bereits vorhandenen. Diese Eigenschaft hat Perl den Ruf eingetragen, da&szlig; man damit nicht sauber strukturiert programmieren k&ouml;nne. Es gibt jedoch l&auml;ngst die M&ouml;glichkeit, die Lebensdauer einer Variablen innerhalb von Unterprogrammen auf das Unterprogramm zu beschr&auml;nken.
+
+
+
+<h4><font color=#6666CC>Beispiel 1 (Variable beh&auml;lt ihren Wert):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+&Rechne(3*12);
+print $x, "\n";
+
+sub Rechne
+{
+ $x = eval($_[0]);
+}
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 2 (Variable verliert ihren Wert):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+&Rechne(3*12);
+print $x, "\n";
+
+sub Rechne
+{
+ my $x = eval($_[0]);
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In Beispiel 1 wird zuerst das Unterprogramm <i>Rechne</i> aufgerufen. Dort wird ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a1"><b>Skalar</b></a> <i>$x</i> definiert, der den ersten &uuml;bergebenen Parameter errechnet. Sonst tut das Unterprogramm nichts weiter. Im Hauptprogramm geht es anschlie&szlig;end damit weiter, da&szlig; der Inhalt von <i>$x</i> ausgegeben wird. Das funktioniert - <i>$x</i> hat seinen Wert nach Beenden des Unterprogramms <i>Rechne</i> also nicht verloren.<br>
+Beispiel 2 unterscheidet sich von Beispiel 1 nur durch ein einziges W&ouml;rtchen, n&auml;mlich das W&ouml;rtchen <b>my</b> vor der Definition von <i>$x</i>. Durch Voranstellen von <b>my</b> wird ein Skalar, eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a>, ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a3"><b>Hash</b></a> usw. innerhalb eines Unterprogramms als lokal definiert. Im obigen Beispiel 2 bleibt der im Hauptprogramm definierte Skalar <i>$x</i> leer, und es wird nichts ausgegeben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Ein weiteres Wort, um eine Variable als lokal zu markieren, ist <b>local</b>. Es hat die gleiche Bedeutung wie <b>my</b>, jedoch ist <b>my</b> verbreiteter.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Perl-Funktionen</font></h2></a>
+Perl ist unter anderem deshalb so m&auml;chtig, weil der Perl-Interpreter etliche vordefinierte Unterprogramme - hier Perl-Funktionen genannt - kennt. Es gibt Perl-Funktionen f&uuml;r die unterschiedlichsten Aufgaben. Viele davon lernen Sie in den Abschnitten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecj.htm"><b>Dateien lesen und schreiben</b></a>, <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teck.htm"><b>Zeichenketten und Listen manipulieren</b></a> und Mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecl.htm"><b>Zahlen und Zeit arbeiten</b></a> kennen.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+print &quot;Geben Sie eine Reihe von Begriffen, getrennt durch Kommata, ein:\n&quot;;
+$Eingabe = &lt;STDIN&gt;;
+@Liste = split(/,/, $Eingabe);
+@SortierteListe = sort(@Liste);
+print &quot;Danke! Und hier die Ausgabe der alphabetisch sortierten Begriffe:\n&quot;;
+for(@SortierteListe)
+ {
+  if(/\n/)
+   {
+    chop($_);
+   }
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die erste Perl-Funktion, die im obigen Beispiel vorkommt, ist <b>print</b>. Meistens werden Perl-Funktionen zwar wie in C oder deren Verwandten mit Klammern () aufgerufen, aber erforderlich ist das nicht. Bei so h&auml;ufig benutzten Funktionen wie <b>print</b> ist das Verwenden der Klammer daher mittlerweile der Schreibfaulheit zum Opfer gefallen. Wenn Sie beispielsweise statt des Funktionsaufrufs <i>sort(@Liste)</i> (siehe obiges Beispiel) <i>sort @Liste</i> notieren, erkennt Perl das auch an.
+<p>
+Eine Perl-Funktion bekommt in der Regel Parameter &uuml;bergeben, mit denen sie irgendetwas tut. So ist im Beispiel <i>&quot;Geben Sie eine Reihe von Begriffen,  getrennt durch Kommata, ein:\n&quot;;</i> ein Parameter, der der <b>print</b>-Funktion &uuml;bergeben wird. Weiter unten im Beispiel wird der Funktion <b>sort</b> als Parameter die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> mit dem Namen <i>@Liste</i> &uuml;bergeben. Wenn Sie einer Funktion mehrere Parameter &uuml;bergeben, trennen Sie diese durch Kommata. 
+<p>
+Perl-Funktionen haben in der Regel auch einen R&uuml;ckgabewert. Im obigen Beispiel &uuml;bernimmt etwa die Perl-Funktion <b>sort</b> die Sortierung der &uuml;bergebenen Liste. Zur&uuml;ck gibt die Funktion eine neue Liste, n&auml;mlich mit den sortierten Elementen. 
+<p>
+Zwei weitere Perl-Funktionen im obigen Beispiel sind <b>split</b> und <b>chop</b>.<br>
+Die <b>split</b>-Funktion kann in einer Zeichenkette nach Zeichen oder Zeichenketten suchen, die Sie mit Hilfe eines regul&auml;ren Ausdrucks als Parameter &uuml;bergeben. Au&szlig;erdem mu&szlig; noch die Zeichenkette oder der Skalar &uuml;bergeben werden, der eine entsprechende Zeichenkette enth&auml;lt. Dann liefert <b>split</b> eine Liste mit Elementen zur&uuml;ck, die durch die angegebene Trennregel voneinander getrennt wurden.<br>
+Die <b>chop</b>-Funktion beseitigt das letzte Zeichen einer Zeichenkette. Das ist h&auml;ufig sinnvoll, da Zeichenketten in Perl oft automatisch ein Steuerzeichen f&uuml;r Zeilenumbruch (\n) angeh&auml;ngt bekommen. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tech.htm"><b>Steuerzeichen und besondere Notationen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecj.htm"><b>Dateien lesen und schreiben</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

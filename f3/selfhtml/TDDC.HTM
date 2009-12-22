@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>SELFHTML: Taschenrechner</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Taschenrechner</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Kurzbeschreibung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Quellcode</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Erl&auml;uterungen zum Quellcode</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddca.htm"><b>Beispiel testen: so sieht's aus</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Kurzbeschreibung</font></h2></a>
+Das Beispiel baut mit Hilfe eines HTML-Formulars einen einigerma&szlig;en &quot;echt&quot; aussehenden Taschenrechner auf. Der Anwender kann diesen Taschenrechner wie &uuml;blich bedienen. Dazu kommen noch einige besonders bequeme Eingabemethoden.
+<p>
+Anhand dieses Beispiels k&ouml;nnen Sie studieren, wie man Formulareingaben mit JavaScript verarbeiten kann.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Quellcode</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tddca.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Das Beispiel zeigt die HTML-Datei mit dem Taschenrechner und dem zugeh&ouml;rigen JavaScript-Code.<br>
+Studieren Sie das Beispiel aufmerksam und lesen Sie anschlie&szlig;end die Erl&auml;uterungen dazu. Zur besseren Orientierung enth&auml;lt das Beispiel Verweise zu den entsprechenden Erl&auml;uterungen, z.B. <a href="#a311"><b>(1)</b></a>. Diese Verweise geh&ouml;ren nicht zum Quellcode. Falls Sie das Beispiel in einen Editor kopieren, m&uuml;ssen Sie diese Verweise l&ouml;schen. Andernfalls erhalten Sie JavaScript-Fehlermeldungen.
+
+
+<h4><font color=#6666CC>Quellcode:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Taschenrechner&lt;/title&gt;
+  &lt;script language=&quot;JavaScript&quot;&gt;
+  &lt;!--
+  <a href="#a311"><b>(1)</b></a>  function Ergebnis()
+ {
+   var x = 0;
+   x = eval(window.document.Rechner.Display.value);
+   window.document.Rechner.Display.value = x;   
+ }
+
+ <a href="#a312"><b>(2)</b></a> function Hinzufuegen(Zeichen)
+ {
+   window.document.Rechner.Display.value = 
+   window.document.Rechner.Display.value + Zeichen;   
+ }
+
+ <a href="#a313"><b>(3)</b></a>  function Sonderfunktion(Funktion)
+ {
+   if(Funktion == &quot;sqrt&quot;)
+    {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = Math.sqrt(x);   
+	}
+   if(Funktion == &quot;pow&quot;)
+    {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = x * x;   
+	}
+   if(Funktion == &quot;log&quot;)
+    {
+     var x = 0;
+     x = eval(window.document.Rechner.Display.value);
+     window.document.Rechner.Display.value = Math.log(x);   
+	}
+ }
+  //--&gt;
+  &lt;/script&gt;
+  &lt;/head&gt;
+  
+  &lt;body bgcolor=#CCCCCC text=#000000 link=#0000CC vlink=#000099 alink=#0000FF&gt;
+  &lt;h1&gt;Taschenrechner&lt;/h1&gt;
+  &lt;form name=&quot;Rechner&quot;&gt;
+  &lt;table border=10 cellpadding=10&gt;
+  &lt;tr&gt;
+  &lt;td bgcolor=#C0C0C0&gt;&lt;input name=&quot;Display&quot; size=30 maxlength=30&gt;&lt;/td&gt; 
+  &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;table&gt;
+  &lt;tr&gt;
+  <a href="#a314"><b>(4)</b></a> &lt;td width=50&gt;&lt;input type=button value=&quot;   7   &quot; onClick=&quot;Hinzufuegen('7')&quot;&gt;&lt;/td&gt;   
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   8   &quot; onClick=&quot;Hinzufuegen('8')&quot;&gt;&lt;/td&gt;
+  &lt;td width=70&gt;&lt;input type=button value=&quot;   9   &quot; onClick=&quot;Hinzufuegen('9')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   +    &quot; onClick=&quot;Hinzufuegen('+')&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   4   &quot; onClick=&quot;Hinzufuegen('4')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   5   &quot; onClick=&quot;Hinzufuegen('5')&quot;&gt;&lt;/td&gt;
+  &lt;td width=70&gt;&lt;input type=button value=&quot;   6   &quot; onClick=&quot;Hinzufuegen('6')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;    -    &quot; onClick=&quot;Hinzufuegen('-')&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   1   &quot; onClick=&quot;Hinzufuegen('1')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   2   &quot; onClick=&quot;Hinzufuegen('2')&quot;&gt;&lt;/td&gt;
+  &lt;td width=70&gt;&lt;input type=button value=&quot;   3   &quot; onClick=&quot;Hinzufuegen('3')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;    *    &quot; onClick=&quot;Hinzufuegen('*')&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;    =    &quot; onClick=&quot;Ergebnis()&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;   0   &quot; onClick=&quot;Hinzufuegen('0')&quot;&gt;&lt;/td&gt;
+  &lt;td width=70&gt;&lt;input type=button value=&quot;   .    &quot; onClick=&quot;Hinzufuegen('.')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;    /    &quot; onClick=&quot;Hinzufuegen('/')&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;tr&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot;sqrt &quot; onClick=&quot;Sonderfunktion('sqrt')&quot;&gt;&lt;/td&gt;
+  &lt;td width=50&gt;&lt;input type=button value=&quot; pow &quot; onClick=&quot;Sonderfunktion('pow')&quot;&gt;&lt;/td&gt;
+  &lt;td width=70&gt;&lt;input type=button value=&quot; log &quot; onClick=&quot;Sonderfunktion('log')&quot;&gt;&lt;/td&gt;
+  <a href="#a315"><b>(5)</b></a> &lt;td width=50&gt;&lt;input type=reset value=&quot;   C   &quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+  &lt;/form&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</pre></td></tr></table><p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Erl&auml;uterungen zum Quellcode</font></h2></a>
+Der HTML-Aufbau des Taschenrechners erscheint etwas kompliziert, da er sich einer Tabelle innerhalb einer Tabelle bedient. Dadurch wird jedoch eine halbwegs saubere Ausrichtung der einzelnen Buttons erreicht, und das Rechen- bzw. Ergebnisfeld erscheint in einem eigenen, andersfarbigen Bereich (die farbliche Abstufung ist jedoch nur bei moderneren WWW-Browsern sichtbar).<br>
+Der Taschenrechner funktioniert absichtlich so, da&szlig; Sie sowohl die Buttons als auch direkt das Rechenfeld zur Eingabe benutzen k&ouml;nnen. Das hei&szlig;t, Sie k&ouml;nnen beispielsweise in dem Rechenfeld eine Rechenoperation mit Grundrechenarten direkt eingeben, z.B. <i>5 * 6 + 7 - 4</i>. Wenn Sie dann auf den Button &quot;=&quot; klicken, wird im selben Feld das Ergebnis angezeigt.<br>
+Mit dem Button &quot;C&quot; k&ouml;nnen Sie den aktuellen Inhalt des Rechenfeldes jederzeit l&ouml;schen.
+<p>
+<a name ="a311"><font color=#6666CC><b>(1) Funktion zur Berechnung des Inhalts des Rechenfelds</b></font></a><br>
+Im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> werden im Kopf der HTML-Datei alle <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktionen</b></a> notiert, die die Funktionalit&auml;t des Taschenrechners erm&ouml;glichen. Die Funktion <i>Ergebnis()</i> errechnet den aktuellen Inhalt des Rechenfeldes. Innerhalb der Funktion wird eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variable</b></a> <i>x</i> definiert, in der das Ergebnis der Berechnung gespeichert wird. Um das Ergebnis zu erhalten, wird die Rechenoperation, die in dem &uuml;bergebenen Formularfeld (dem Rechenfeld des Taschenrechners) steht, an die m&auml;chtige <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcs.htm"><b>objektunabh&auml;ngige JavaScript-Funktion</b></a> <b>eval()</b> &uuml;bergeben. Diese Funktion &uuml;bernimmt automatisch die gesamte Berechnung der Rechenoperation. Voraussetzung ist nat&uuml;rlich, da&szlig; die Rechenoperation keine ung&uuml;ltigen Zeichen enth&auml;lt. Ansonsten erzeugt JavaScript eine Fehlermeldung.<br>
+Um das errechnete Ergebnis, das in der Variablen <i>x</i> gespeichert wird, im Rechenfeld des Taschenrechners anzuzeigen, wird dem entsprechenden Formularfeld einfach der Wert von <i>x</i> zugewiesen.
+
+
+<p>
+<a name ="a312"><font color=#6666CC><b>(2) Funktion zum Hinzuf&uuml;gen eines Zeichens in das Rechenfeld</b></font></a><br>
+Die Funktion <i>Hinzufuegen()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> wird aufgerufen, wenn der Anwender auf einen der Buttons im Taschenrechner-Formular klickt. Das k&ouml;nnen Ziffern (0 bis 9) oder Rechenoperatoren (+,-,*,/) oder ein Dezimalpunkt sein. Um das Zeichen hinzuzuf&uuml;gen, wird dem aktuellen Wert des Rechenfeldes einfach der bisherige Wert plus das neue Zeichen zugewiesen. Das neue Zeichen wird der Funktion als Parameter &uuml;bergeben.
+
+
+<p>
+<a name ="a313"><font color=#6666CC><b>(3) Funktion zur Berechnung von Sonderfunktionen</b></font></a><br>
+Die Funktion <i>Sonderfunktion()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> ist f&uuml;r die Berechnung von drei mathematischen Funktionen zust&auml;ndig, f&uuml;r die es im Taschenrechner entsprechende Buttons gibt: die Funktionen &quot;sqrt&quot; (Quadratwurzel), &quot;pow&quot; (Quadrat) und &quot;log&quot; (nat&uuml;rlicher Logarithmus &uuml;ber 10). Die Funktion erwartet drei Parameter: den Index des Formulars, in dem sich das Rechenfeld befindet, den Index des Feldes innerhalb dieses Formulars, und eine Zeichenkette, die die auszuf&uuml;hrende mathematische Funktion kennzeichnet. Innerhalb der Funktion wird der dritte Parameter abgefragt. Erlaubt sind die &Uuml;bergabewerte &quot;sqrt&quot;, &quot;pow&quot; und &quot;log&quot;. Falls einer dieser Werte &uuml;bergeben wurde, berechnet die Funktion innerhalb des entsprechenden If-Zweigs den gew&uuml;nschten Wert. Dazu wird die Rechenoperation oder die Zahl, die in dem &uuml;bergebenen Formularfeld (dem Rechenfeld des Taschenrechners) steht, an die JavaScript-Standardfunktion <b>eval()</b> &uuml;bergeben. Diese Funktion &uuml;bernimmt automatisch die gesamte Berechnung der Rechenoperation. Das Ergebnis wird in <i>x</i> gespeichert. Falls es sich nur um eine einfache Zahl handelt, wird diese Zahl in <i>x</i> gespeichert. Mit einer entsprechenden JavaScript-Methode, z.B. der Methode <b>sqrt()</b> zur Errechnung der Quadratwurzel, wird das Ergebnis der mathematischen Sonderfunktion berechnet und zugleich dem Rechen-/Ergebnisfeld des Taschenrechner-Formulars zugewiesen.
+
+
+
+<p>
+<a name ="a314"><font color=#6666CC><b>(4) Buttoncklick als Zeichen in Rechenfeld eintragen</b></font></a><br>
+Innerhalb des Taschenrechner-Formulars im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> werden die Buttons f&uuml;r Ziffern, Operatoren usw. definiert. Beim Klicken auf einen solchen Button soll nat&uuml;rlich eine entsprechende Reaktion erfolgen. Dies geschieht mit Hilfe des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handlers</b></a> <b>onClick=</b>. Der Event-Handler wird aktiv, wenn der entsprechende Button angeklickt wird, und ruft dann eine der im Dateikopf definierten Funktionen auf. Bei einer Ziffer wird beispielsweise die Funktion <i>Hinzufuegen()</i> aufgerufen. Dazu wird der Funktion der erwartete Parameter &uuml;bergeben, also das hinzuzuf&uuml;gende Zeichen. Das Taschenrechner-Formular erhält bei der Definition einen Namen, im Beispiel den Namen &quot;Rechner&quot;. Auch das Rechen-/Ergebnisfeld, das im JavaScript-Code sehr oft angesprochen wird, erhält einen Namen - den Namen &quot;Display&quot;. Das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcf.htm"><b>Formular-Objekt</b></a> und das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcg.htm"><b>Formularelement-Objekt</b></a> des Rechen-/Ergebnisfeldes kann deshalb mit <b>window.document.Rechner.Display.</b> adressiert werden.
+
+
+<p>
+<a name ="a315"><font color=#6666CC><b>(5) Inhalt des Rechenfelds l&ouml;schen</b></font></a><br>
+Der Button mit der Aufschrift &quot;C&quot; im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> dient zum L&ouml;schen der bisherigen Eingaben. Dazu braucht man kein JavaScript. Stattdessen gen&uuml;gt es, einen Button vom Typ <b>reset</b> zu definieren.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tddb.htm"><b>Zwei Frames gleichzeitig &auml;ndern</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tddd.htm"><b>Pers&ouml;nliche Seitenbesuche z&auml;hlen mit Cookies</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

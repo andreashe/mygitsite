@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>SELFHTML: Konventionen f&uuml;r Dateinamen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Konventionen f&uuml;r Dateinamen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Dateinamen im Hinblick auf Server-Rechner</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Dateinamen im Hinblick auf Kompatibilit&auml;t</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Dateiendungen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Default-Datei bei WWW-Servern</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Dateinamen im Hinblick auf Server-Rechner</font></h2></a>
+Die meisten Server-Rechner im heutigen WWW sind Unix-Rechner. Unix unterscheidet strikt zwischen Gro&szlig;- und Kleinschreibung bei Dateinamen. Wer sein WWW-Projekt beispielsweise in einer DOS-/Windows-Umgebung erstellt, wo dies keine Rolle spielt, kann bittere Erfahrungen machen, wenn pl&ouml;tzlich die lokal funktionierenden <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweise</b></a> und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafikreferenzen</b></a> nach dem Hochladen auf den Server-Rechner nicht mehr funktionieren. Der Grund ist in solchen F&auml;llen, da&szlig; beispielsweise in den HTML-Dateien kleingeschriebene Verweisziele oder Grafikdateinamen notiert wurden, w&auml;hrend das DOS-/Windows-System gro&szlig;geschriebene Dateinamen an den Server &uuml;bertragen hat.
+<p>
+Wenn Sie mit Windows 3.x oder DOS 6.x und niedriger arbeiten, bleibt Ihnen in einem solchen Fall kaum eine andere M&ouml;glichkeit, als die Dateien auf dem Server-Rechner mit Hilfe von FTP-Befehlen so umzubenennen, wie sie in den Verweisen und Grafikreferenzen notiert sind. Wenn Sie mit einem System arbeiten, das Gro&szlig;-/Kleinschreibung bei Dateinamen zwar f&uuml;r die Optik, aber nicht intern unterscheidet (z.B. Windows 95), ist es am sichersten, Sie erzeugen Dateinamen, die nur aus Kleinbuchstaben bestehen, und in Verweisen und Grafikreferenzen notieren Sie ebenfalls alle Dateinamen in Kleinbuchstaben.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Dateinamen im Hinblick auf Kompatibilit&auml;t</font></h2></a>
+Wenn Sie Ihr WWW-Projekt ausschlie&szlig;lich f&uuml;r den Einsatz im WWW erstellen, m&uuml;ssen Sie nur darauf achten, da&szlig; die Dateien vom Server-Rechner akzeptiert werden. Bei modernen Unix-Systemen, wie sie die meisten WWW-Server einsetzen, sind Dateinamen bis zu 256 Zeichen L&auml;nge erlaubt. Vermeiden Sie aber in jedem Fall deutsche Umlaute und scharfes S in den Dateinamen. Als Sonderzeichen ist in jedem Fall der Unterstrich &quot;_&quot; erlaubt. Andere Satzzeichen sollten Sie vermeiden. Fragezeichen &quot;?&quot;, Sternzeichen &quot;*&quot;, Istgleichzeichen &quot;=&quot; d&uuml;rfen Sie auf keinen Fall in Dateinamen verwenden. Auch auf Leerzeichen sollten Sie unbedingt verzichten.
+<p>
+Wenn Sie Ihr Projekt auch anderweitig vertreiben m&ouml;chten, zum Beispiel als Download zum Offline-Lesen (wie das vorliegende Dokument) oder auf CD-ROM, sollten Sie die engen Grenzen von MS-DOS-kompatiblen Dateinamen beachten, damit auch solche Anwender keine Problem mit der Anzeige des Projekts bekommen. Dabei sind maximal 1 Punkt zur Trennung von Dokumentname und Dateiendung, 8 Zeichen vor dem Punkt und 3 Zeichen dahinter (f&uuml;r die Dateiendung) erlaubt. Bei ausf&uuml;hrbaren Java-Applets, die zwingend die Dateiendung .class erfordern, m&uuml;ssen Sie diese Regeln allerdings brechen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Dateiendungen</font></h2></a>
+Hierbei gilt generell: halten Sie unbedingt die &uuml;blichen Dateiendungen ein. Moderne WWW-Browser erkennen einige Dateitypen zwar auch an ihrem Inhalt, aber im Hinblick auf Fehlerfreiheit sollten Sie immer die &uuml;blichen Dateiendungen verwenden.
+<ul>
+<li>HTML-Dateien erhalten entweder die Endung <b>.html</b> oder <b>.htm</b> (DOS-kompatibel).
+<li>GIF-Grafiken erhalten die Endung <b>.gif</b>
+<li>JPEG-Dateien erhalten die Endung <b>.jpg</b>
+<li>Java-Applets erhalten die Endung <b>.class</b>
+<li>Separate JavaScript-Dateien erhalten die Endung <b>.js</b>
+</ul>
+Auch andere Dateitypen sollten ihre Standardendung erhalten. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Default-Datei bei WWW-Servern</font></h2></a>
+Die meisten heutigen WWW-Server sehen einen bestimmten HTML-Dateinamen als Datei f&uuml;r die &quot;Einstiegsseite&quot; vor. Meistens ist das der Name <b>index.html</b> oder <b>index.htm</b>, manchmal auch <b>welcome.html</b> bzw. <b>welcome.htm</b>. Bei einigen Anbietern k&ouml;nnen Sie auch selbst einen beliebigen Dateinamen als Default-Dateinamen bestimmen (z.B. bei Compuserve-Homepages). 
+<p>
+Der Default-Dateiname hat den Vorteil, da&szlig; die WWW-Adresse keinen HTML-Dateinamen mehr braucht und k&uuml;rzer wird. Viele Adressen lauten ja einfach <b>http://www-xy.com/</b> oder <b>http://www.xy.net/verzeichnis/</b> - ohne weitere Angabe einer bestimmten HTML-Datei. Da&szlig; beim Aufruf einer solchen Adresse dennoch eine bestimmte HTML-Datei geladen wird, liegt eben daran, da&szlig; es eine Datei mit einem Namen gibt, die der WWW-Server als Default-Dateiname gespeichert hat.
+<p>
+Erkundigen Sie sich bei Ihrem Provider, ob er einen Default-Dateinamen f&uuml;r Verzeichnisse anbietet, und wenn ja, welchen. Erstellen Sie Ihr Projekt dann so, da&szlig; die Einstiegsseite diesen Dateinamen hat und untergeordnete Seiten auf diese Datei zur&uuml;ckverweisen.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcaf.htm"><b>Kommentare und Credits</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcah.htm"><b>Informationsverteilung auf mehrere Dateien</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>SELFHTML: Schleifen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Schleifen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schleifen mit &quot;while&quot;</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Schleifen mit &quot;for&quot;</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Schleifen mit &quot;while&quot;</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbha.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Mit Hilfe von while-Schleifen k&ouml;nnen Sie Programmanweisungen solange wiederholen, wie die Bedingung, die in der Schleife formuliert wird, erf&uuml;llt ist.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;User checken&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+ var Passwort = &quot;Traumtaenzer&quot;;
+ var UserEingabe = &quot;&quot;;
+ var Zaehler = 0;
+ while((UserEingabe != Passwort)&amp;&amp;(Zaehler &lt;= 3))
+ {
+  UserEingabe = window.prompt(Zaehler + &quot;. Versuch: geben Sie das Passwort ein&quot;,&quot;&quot;);
+  Zaehler++;
+  }  
+ if(UserEingabe != Passwort)
+   history.back();
+ else
+   document.location.href=&quot;geheim.htm&quot;;
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine while-Schleife beginnt mit dem Wort <b>while</b> (<i>while = solange</i>). Dahinter folgt, in Klammern stehend, die Bedingung. Um eine Bedingung zu formulieren, brauchen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbf.htm#a2"><b>Vergleichsoperatoren</b></a>. Der Inhalt der Schleife wird solange wiederholt, wie die Schleifenbedingung wahr ist. <p>
+In der Regel enth&auml;lt eine while-Schleife mehrere Anweisungen, die innerhalb der Schleife stehen. Notieren Sie alle Anweisungen innerhalb geschweifter Klammern <b>{</b> und <b>}</b>, so wie im Beispiel (siehe auch den Abschnitt &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a2"><b>Anweisungsbl&ouml;cke</b></a>).
+<p>
+Das obige Beispiel stellt eine einfache Passwortabfrage dar. Der Anwender hat drei Versuche, das Passwort richtig einzugeben. Dazu wird eine Schleife eingesetzt.
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Achten Sie bei solchen Schleifen immer darauf, da&szlig; es mindestens eine M&ouml;glichkeit gibt, um die Schleife nach einer angemessenen Zeit zu beenden. Andernfalls erzeugen Sie eine sogenannte &quot;Endlosschleife&quot;, aus der der Anwender nur durch gewaltsames Beenden des WWW-Browsers herauskommt. Das ist besonders bei Online-Sitzungen im WWW sehr &auml;rgerlich!
+<p>
+Um Endlosschleifen zu vermeiden, brauchen Sie irgendetwas, das irgendwann zu einem Ausweg aus der Schleife f&uuml;hrt. Meistens werden zu diesem Zweck sogenannte &quot;Z&auml;hler&quot; definiert, im Beispiel die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variable</b></a> <i>Zaehler</i>. Diese Variable hat im Beispiel einen Anfangswert von 0 und wird innerhalb der Schleife bei jedem Durchgang mit der Anweisung <i>Zaehler++;</i> um 1 erh&ouml;ht. Wenn im Beispiel der Z&auml;hlerstand gr&ouml;&szlig;er gleich 3 ist, wird abgebrochen.
+<p>
+Eine andere M&ouml;glichkeit, eine Schleife abzubrechen, bietet das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbi.htm"><b>reservierte Wort</b></a> <b>break</b>. Mit der Anweisung <b>if(Versuche == 10) break;</b> etwa notieren Sie innerhalb einer Schleife eine Abbruchbedingung.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Schleifen mit &quot;for&quot;</font></h2></a>
+
+Mit Hilfe von for-Schleifen vermeiden Sie die Probleme von <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>while-Schleifen</b></a>. Die Schleifenbedingung einer for-Schleife sieht von vorneherein einen Z&auml;hler und eine Abbruchbedingung vor.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+ for(i = 1; i &lt;= 100; i++)
+  {
+   var x = i * i;
+   document.write(&quot;&lt;br&gt;Das Quadrat von &quot; + i + &quot; ist &quot; + x);
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine for-Schleife beginnt mit dem Wort <b>for</b>. Dahinter wird, in Klammern stehend, die Schleifenbedingung formuliert. Bei der for-Schleife gilt dabei eine feste Syntax. Innerhalb der Schleifenbedingung werden drei Anweisungen notiert. In der ersten Anweisung wird ein Schleifenz&auml;hler definiert und initialisiert. Im Beispiel wird ein Z&auml;hler <i>i</i> definiert und mit dem Wert 1 initialisiert. Die zweite Anweisung enth&auml;lt die Bedingung, ab der die Schleife beendet wird. Dazu brauchen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbf.htm#a2"><b>Vergleichsoperatoren</b></a>. In der dritten Anweisung wird der Schleifenz&auml;hler so ver&auml;ndert, da&szlig; er irgendwann die in der zweiten Anweisung notierte Bedingung erf&uuml;llt. Im Beispiel wird <i>i</i> bei jedem Schleifendurchgang um 1 erh&ouml;ht, so da&szlig; der Wert irgendwann gr&ouml;&szlig;er 100 ist und damit die Bedingung der zweiten Anweisung erf&uuml;llt.<br>
+Das Beispiel benutzt den Schleifenz&auml;hler, um bei jedem Schleifendurchgang das Quadrat des aktuellen Werts zu ermitteln. Das Ergebnis wird dann HTML-formatiert ins aktuelle Dokumentfenster geschrieben.
+<p>
+
+Eine spezielle Abart der for-Schleife ist die for-in-Schleife.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  function Objekteigenschaften(Objekt, ObjName)
+   {
+    var Ergebnis = &quot;&quot;;
+    for (var Eigenschaft in Objekt)
+     {
+      Ergebnis += ObjName + &quot;.&quot; + Eigenschaft + &quot; = &quot; + Objekt[Eigenschaft] + &quot;&lt;br&gt;&quot;;
+     }
+    return Ergebnis;
+   }
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In diesem Beispiel ermittelt die Funktion <i>Objekteigenschaften</i> alle Eigenschaften eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a1"><b>JavaScript-Objekts</b></a>. Die ermittelten Eigenschaften sammelt die Funktion in einer HTML-formatierten Zeichenkette und gibt diese an eine aufrufende Funktion zur&uuml;ck.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbg.htm"><b>Bedingte Anweisungen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbi.htm"><b>Reservierte W&ouml;rter</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

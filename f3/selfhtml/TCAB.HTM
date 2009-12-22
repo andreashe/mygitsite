@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>SELFHTML: Grundger&uuml;st einer HTML-Datei</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Grundger&uuml;st einer HTML-Datei</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Schema des Grundger&uuml;sts einer HTML-Datei</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>HTML-Version spezifizieren</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Schema des Grundger&uuml;sts einer HTML-Datei</font></h2></a>
+
+Eine gew&ouml;hnliche HTML-Datei besteht grunds&auml;tzlich aus folgenden zwei Teilen:
+<ul>
+<li><b>Header (Kopf)</b><br>
+(enth&auml;lt Angaben zu Titel u.&auml;.)
+<li><b>Body (K&ouml;rper)</b><br>
+(enth&auml;lt den eigentlichen Text mit &Uuml;berschriften, Verweisen, Grafikreferenzen usw.)
+</ul>
+
+
+<a name="ihtml"><a name="ihead"><a name="ibody"><h4><font color=#6666CC>Schema:</font></h4></a></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Text des Titels&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&Uuml;berschriften, Text, Verweise, Grafikreferenzen usw.
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Der gesamte Inhalt einer HTML-Datei wird in die Tags <b>&lt;html&gt;</b> 
+bzw. <b>&lt;/html&gt;</b> eingeschlossen. Hinter dem einleitenden HTML-Tag folgt das einleitende 
+Tag f&uuml;r den Kopf <b>&lt;head&gt;</b>. Zwischen diesem Tag und seinem 
+Gegenst&uuml;ck <b>&lt;/head&gt;</b> werden allgemeine Angaben zur HTML-Datei notiert. Die 
+wichtigste dieser Angaben ist der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcba.htm"><b>Titel der HTML-Datei</b></a>, markiert 
+durch die Tags <b>&lt;title&gt;</b> bzw. <b>&lt;/title&gt;</b>. Unterhalb davon folgt der 
+Textk&ouml;rper, markiert durch die Tags <b>&lt;body&gt;</b> bzw. <b>&lt;/body&gt;</b>. Im Textk&ouml;rper wird dann der eigentliche Inhalt der Datei notiert, also das, was im Anzeigefenster des WWW-Browsers angezeigt werden soll.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Ganz wichtig ist die Angabe eines Titels. Jede HTML-Datei sollte einen aussagekr&auml;ftigen 
+Titel erhalten, der aber auch nicht zu lang sein darf (m&ouml;glichst nicht mehr als 50 
+Zeichen). Denn der Titel erscheint beim Browser in der Fensterleiste, oft auch noch in einer 
+separaten Statuszeile, und es ist derjenige Eintrag, den der Browser bei Lesezeichen und 
+beim Anzeigen der bereits besuchten Dateien (Historie) verwendet. Auch viele Suchmaschinen 
+im WWW bauen ihre Datenbanken auf den Titeln von Dateien auf.
+<p>
+Im einleitenden <b>&lt;body&gt;</b>-Tag k&ouml;nnen zus&auml;tzlich Anweisungen f&uuml;r 
+<img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcc.htm"><b>Farben und Hintergrundbilder</b></a> stehen, und im Zusammenhang mit JavaScript der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <b>onLoad=</b>.
+<p>
+Wenn Sie <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tci.htm"><b>Frames</b></a> (mehrere Bildschirmfenster) einsetzen wollen, gelten andere Vorschriften f&uuml;r das Grundger&uuml;st von 
+Dateien, in denen ein Frame-Set definiert wird. Lesen Sie hierzu: <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a2"><b>Grundger&uuml;st einer HTML-Datei mit Frame-Sets</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> HTML-Version spezifizieren</font></h2></a>
+Wenn Sie besondere Gr&uuml;nde daf&uuml;r haben, k&ouml;nnen Sie die HTML-Version, die Sie in Ihren Dateien verwenden, spezifizieren. Das ist beispielsweise bei aufwendigen, aus mehrj&auml;hriger Arbeit bestehenden Dokumentationsprojekten sinnvoll. Die Versionsangabe ist ein Hinweis auf eine HTML-Spezifikation der entsprechenden Sprachversion. Diese HTML-Spezifikationen hei&szlig;en &quot;document type definitions&quot; (DTD). Dahinter verbirgt sich ein Ansatz von SGML. In HTML hat dies jedoch bislang wenig Bedeutung, da die entsprechende Angabe von den meisten WWW-Browsern ignoriert wird bzw. keine weiteren Konsequenzen f&uuml;r die Darstellung der HTML-Datei hat.
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 //EN&quot;&gt; 
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Text des Titels&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&Uuml;berschriften, Text, Verweise, Grafikreferenzen usw.
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Notieren Sie die Anweisung zur Angabe der verwendeten HTML-Version immer in der ersten Zeile der HTML-Datei. Derzeit sind zwei M&ouml;glichkeiten sinnvoll:<p>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 2.0 //EN&quot;&gt; 
+</pre></td></tr></table><p>
+Damit spezifizieren Sie den &uuml;berholten HTML-Sprachstandard 2.0 als den Standard, an den Sie sich in der HTML-Datei halten.<p>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 //EN&quot;&gt; 
+</pre></td></tr></table><p>
+Damit spezifizieren Sie den aktuellen HTML-Sprachstandard 3.2 als den Standard Ihrer HTML-Datei.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcaa.htm"><b>Tags (Steuerbefehle in HTML)</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcac.htm"><b>Regeln beim Editieren von HTML</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

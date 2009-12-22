@@ -1,0 +1,2481 @@
+<html>
+<head>
+<title>SELFHTML: HTML-Kurzreferenz</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</a>
+<h1><font color=#6666CC>HTML-Kurzreferenz</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>HTML-Datei</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Dateikopf</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Text und Abs&auml;tze</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Tabellen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Verweise</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Grafik</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a7"><b>Formulare</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a8"><b>Frames</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a9"><b>Style-Sheets</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a10"><b>Multimedia</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a11"><b>Layer</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> HTML-Datei</font></h2></a>
+
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>HTML-Datei<br><b>Grundger&uuml;st</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Inhalt der Datei
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap><img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>HTML-Datei<br><b>Vordergrundfarben</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;body text= link= vlink= alink=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top nowrap>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+text=[#XXXXXX/&quot;Farbname&quot;]<br>
+link=[#XXXXXX/&quot;Farbname&quot;]<br>
+vlink=[#XXXXXX/&quot;Farbname&quot;]<br>
+alink=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a2"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>HTML-Datei<br><b>Hintergrundfarbe</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;body bgcolor=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+bgcolor=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a1"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>HTML-Datei<br><b>Hintergrundbild</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;body background=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+background=&quot;datei.gif&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tccb.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>HTML-Datei<br><b>Hintergrundbild<br>fixiert</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;body background= bgproperties=fixed&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+background=&quot;datei.gif&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tccb.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+
+</table>
+ 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Dateikopf</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Titel</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;title&gt;...&lt;/title&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap><img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcba.htm"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Adre&szlig;basis</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;base href=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+href=&quot;datei.htm&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbb.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Zielfensterbasis</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;base target=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top nowrap>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+target=&quot;Fenstername&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbb.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Durchsuchbarkeit</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;isindex&gt;
+&lt;isindex prompt=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+prompt=&quot;Aufforderungstext&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbc.htm"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Meta-Information</b><br>
+</td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;meta name= content=&gt;
+&lt;meta http-equiv= content=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+name=description content=&quot;...&quot;<br>
+name=author content=&quot;...&quot;<br>
+name=keywords content=&quot;...&quot;<br>
+name=robots content=index<br>
+name=robots content=noindex<br>
+name=robots content=follow<br>
+name=robots content=nofollow<br>
+name=http-equiv=expires...content=&quot;...&quot;<br>
+name=http-equiv=&quot;refresh... content=...;URL=...&quot;<br>
+name=http-equiv=content-type... content=&quot;...&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbd.htm"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Standardverweise</b><br>
+</td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;link rel= href=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+rel=home, toc, index, glossary,<br>
+copyright, next, previous, help, bookmark<br>
+href=&quot;datei.htm&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbe.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Dateikopf<br><b>Standardverweise<br>
+R&uuml;ckverweise</b><br>
+</td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;link rev= href=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+rev=made, relation<br>
+href=&quot;mailto:&quot;, &quot;datei.htm&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbe.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Text und Abs&auml;tze</font></h2></a>
+
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>&Uuml;berschrift</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;h[1-6]&gt;...&lt;/h[1-6]&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>&Uuml;berschrift ausrichten </b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;h[1-6] align=&gt;...&lt;/h[1-6]&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+align=[left/center/right/justify]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Textabsatz</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;p&gt;
+&lt;p&gt;...&lt;/p&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Absatz ausrichten </b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;p align=&gt;
+&lt;p align=&gt;...&lt;/p&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+align=[left/center/right/justify]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Zeilenumbruch</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;br&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Zeilenumbruch<br>verhindern</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;nobr&gt;...&lt;/nobr&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0><img src="xmsie2.gif" width=30 height=30 border=0><img src="xibm.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Gesch&uuml;tzte<br>Leerzeichen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&amp;nbsp;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0><img src="xmsie2.gif" width=30 height=30 border=0><img src="xibm.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a3"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Zeilenumbruch<br>erlauben</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;wbr&gt;...&lt;/wbr&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0><img src="xmsie2.gif" width=30 height=30 border=0><img src="xibm.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a4"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Numerierte Liste</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ol&gt;
+&lt;li&gt;...
+&lt;/ol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdd.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Numerierte Liste<br>Numerierunsart</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ol type=&gt;
+&lt;li&gt;...
+&lt;/ol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+type=[a/A/i/I]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdd.htm#a2"><b>Beschreibung (alphabetisch)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdd.htm#a3"><b>Beschreibung (r&ouml;misch)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Numerierte Liste<br>Startwert</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ol start=&gt;
+&lt;li&gt;...
+&lt;/ol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdd.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Numerierte Liste<br>kompakt</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ol compact&gt;
+&lt;li&gt;...
+&lt;/ol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdd.htm#a5"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Aufz&auml;hlungsliste</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ul&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcde.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Aufz&auml;hlungsliste<br>Bullet-Typ</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ul type=&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+type=[circle/square/disk]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcde.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Aufz&auml;hlungsliste<br>kompakt</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ul compact&gt;
+&lt;li&gt;...
+&lt;/ul&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcde.htm#a3"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Men&uuml;-Liste</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;menu&gt;
+&lt;li&gt;...
+&lt;/menu&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcde.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Verzeichnis-Liste</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;dir&gt;
+&lt;li&gt;...
+&lt;/dir&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcde.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Definitionsliste</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;dl&gt;
+&lt;dt&gt;...&lt;/dt&gt;
+&lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdf.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Zitat</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;blockquote&gt;...&lt;/blockquote&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdg.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Adresse</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;address&gt;...&lt;/address&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdg.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Pr&auml;formatierter Text</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;pre&gt;...&lt;/pre&gt;
+&lt;xmp&gt;...&lt;/xmp&gt;
+&lt;listing&gt;...&lt;/listing&gt;
+&lt;plaintext&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm#a1"><b>Beschreibung (pre)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm#a2"><b>Beschreibung (xmp)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm#a2"><b>Beschreibung (listing)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdh.htm#a2"><b>Beschreibung (plaintext)</b></a><br>
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Logische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;strong&gt;...&lt;/strong&gt;
+&lt;em&gt;...&lt;/em&gt;
+&lt;cite&gt;...&lt;/cite&gt;
+&lt;var&gt;...&lt;/var&gt;
+&lt;kbd&gt;...&lt;/kbd&gt;
+&lt;samp&gt;...&lt;/samp&gt;
+&lt;code&gt;...&lt;/code&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+strong = betont<br>
+em = emphatisch<br>
+cite = Zitat<br>
+var = Variable<br>
+kbd = Tastatureingabe<br>
+samp = Beispiel<br>
+code = Quelltext<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdi.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Logische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;dfn&gt;...&lt;/dfn&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+dfn = Definition<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdi.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Physische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;b&gt;...&lt;/b&gt;
+&lt;i&gt;...&lt;/i&gt;
+&lt;tt&gt;...&lt;/tt&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+b = fett<br>
+i = kursiv<br>
+tt = dicktengleich<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdj.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Physische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;u&gt;...&lt;/u&gt;
+&lt;strike&gt;...&lt;/strike&gt;
+&lt;big&gt;...&lt;/big&gt;
+&lt;small&gt;...&lt;/small&gt;
+&lt;sub&gt;...&lt;/sub&gt;
+&lt;sup&gt;...&lt;/sup&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+u = unterstrichen<br>
+strike = durchgestrichen<br>
+big = gr&ouml;&szlig;erer Text<br>
+small = kleinerer Text<br>
+sub = tiefgestellt<br>
+sup = hochgestellt<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdj.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Physische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;blink&gt;...&lt;/blink&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+blink = blinkend<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdj.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Physische<br>Textauszeichnung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;s&gt;...&lt;/s&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+s = durchgestrichen<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdj.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Schriftgr&ouml;&szlig;e</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;font size=&gt;...&lt;/font&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+size=[1/2/3/4/5/6/7]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Normalschriftgr&ouml;&szlig;e</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;basefontsize=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+basefontsize=[1/2/3/4/5/6/7]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a11"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Schriftfarbe</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;font color=&gt;...&lt;/font&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+color=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Schriftart</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;font face=&gt;...&lt;/font&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0><img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+face=&quot;Schriftartname&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a11"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Textabschnitt zentrieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;center&gt;...&lt;/center&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdl.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Textabschnitt ausrichten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;div align=&gt;...&lt;/div&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+align=[left/center/right]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdl.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Trennlinie</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;hr&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Trennlinie Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;hr noshade&gt;
+&lt;hr width=&gt;
+&lt;hr size=&gt;
+&lt;hr align=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+noshade (nicht schattieren)<br>
+width=[Pixel/%] (Breite)<br>
+size=[Pixel] (Gr&ouml;&szlig;e)<br>
+align=[left/center/right] (Ausrichtung)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a2"><b>Beschreibung (noshade)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a3"><b>Beschreibung (width=)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a3"><b>Beschreibung (size=)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a4"><b>Beschreibung (align=)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Trennlinie Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;hr color=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+color=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdm.htm#a5"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Mehrspaltiger<br>Textflu&szlig;</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;multicol cols=&gt;...&lt;/multicol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+cols=[Spaltenzahl]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdn.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Mehrspaltiger<br>Textflu&szlig;<br>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;multicol width= gutter=&gt;...&lt;/multicol&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+width=[Pixel/%] (Gesamtbreite)<br>
+gutter=[Pixel] (Spaltenzwischenraum)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdn.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Freies Plazieren<br>von Text<br>vertikal</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;spacer type=vertical size=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+size=[Pixel] (Gr&ouml;&szlig;e)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdo.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Freies Plazieren<br>von Text<br>horizontal</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;spacer type=horizontal size=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+size=[Pixel] (Gr&ouml;&szlig;e)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdo.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Unsichtbare<br>Bilder</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;spacer type=block width= height= align=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+width=[Pixel] (Breite)<br>
+height=[Pixel] (H&ouml;he)<br>
+align=[left/center/right] (Ausrichtung)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdo.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Text und Abs&auml;tze<br><b>Lauftext (Marquee)</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;marquee&gt;...&lt;/marquee&gt;
+&lt;marquee direction=&gt;...&lt;/marquee&gt;
+&lt;marquee scrollamount=&gt;...&lt;/marquee&gt;
+&lt;marquee scrolldelay=&gt;...&lt;/marquee&gt;
+&lt;marquee behavior=&gt;...&lt;/marquee&gt;
+&lt;marquee scrolldelay=&gt;...&lt;/marquee&gt;
+&lt;marquee height=&gt;...&lt;/marquee&gt;
+&lt;marquee hspace=&gt;...&lt;/marquee&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top>
+Optionen:<br>
+direction=[left/right] (Richtung)<br>
+scrollamount=[Millisekunden] (Geschwindigkeit)<br>
+scrolldelay=[Millisekunden] (Geschwindigkeit)<br>
+behavior=[alternate] (wechselnd)<br>
+height=[Pixel] (H&ouml;he)<br>
+hspace=[Pixel] (Abstand)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a1"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a2"><b>Beschreibung (Richtung)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a3"><b>Beschreibung (Geschwindigkeit)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a4"><b>Beschreibung (Wechsel)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a6"><b>Beschreibung (H&ouml;he)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdp.htm#a6"><b>Beschreibung (Abstand)</b></a>
+</td>
+</tr>
+
+
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Tabellen</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Aufbau</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table [border]&gt;
+&lt;tr&gt;
+&lt;th&gt;Kopfzelle&lt;/th&gt;
+&lt;th&gt;Kopfzelle&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Datenzelle&lt;/td&gt;
+&lt;td&gt;Datenzelle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+border (mit Gitternetzlinien)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcea.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Rahmen<br>und Abst&auml;nde</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table border=&gt; &lt;/table&gt;
+&lt;table cellpadding=&gt; &lt;/table&gt;
+&lt;table cellspacing=&gt; &lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+border=[Pixel] (Rahmendicke)<br>
+cellpadding=[Pixel] (Innenabstand Zelle)<br>
+cellspacing=[Pixel] (Gitternetzliniendicke)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a1"><b>Beschreibung (Rahmendicke)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a3"><b>Beschreibung (Innenabstand)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a3"><b>Beschreibung (Gitternetzliniendicke)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Teile<br>und Regeln</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table border rules=&gt; 
+&lt;thead&gt; &lt;/thead&gt;
+&lt;tbody&gt; &lt;/tbody&gt;
+&lt;tfoot&gt; &lt;/tfoot&gt;
+&lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+rules=[none/rows/cols/all] (Regeln f. Gitternetzlinien)<br>
+thead (Tabellenkopf)<br>
+tbody (Tabellenk&ouml;rper)<br>
+tfoot (Tabellenfu&szlig;)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Regeln<br>Tabellenrahmen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table border frame=&gt; &lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+frame=[box/void/avove/below/hsides/vsides/lhs/rhs]<br> 
+(Regeln f. Tabellenrahmen)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a5"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Breite und H&ouml;he</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table width= height=&gt; &lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel/%] (Breite der Tabelle)<br> 
+height=[Pixel/%] (H&ouml;he der Tabelle)<br> 
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Spaltenbreite</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;th width=&gt; &lt;/th&gt;
+&lt;td width=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel/%] (Breite)<br> 
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Zeilenh&ouml;he</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;th height=&gt; &lt;/th&gt;
+&lt;td height=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+height=[Pixel/%] (H&ouml;he)<br> 
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a3"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Zeilenumbruch in<br>Zelle verhindern</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;th nowrap&gt; &lt;/th&gt;
+&lt;td nowrap&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Zelleninhalt<br>ausrichten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;tr align=&gt; &lt;/tr&gt;
+&lt;tr valign=&gt; &lt;/tr&gt;
+&lt;th align=&gt; &lt;/th&gt;
+&lt;th valign=&gt; &lt;/th&gt;
+&lt;td align=&gt; &lt;/td&gt;
+&lt;td valign=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[left/center/right] (horizontal)<br>
+valign=[top/middle/bottom] (vertikal)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a1"><b>Beschreibung (horizontal)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a2"><b>Beschreibung (vertikal)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Zellen<br>verbinden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;th colspan=&gt; &lt;/th&gt;
+&lt;th rowspan=&gt; &lt;/th&gt;
+&lt;td colspan=&gt; &lt;/td&gt;
+&lt;td rowspan=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+colspan=[Spaltenzahl] (Spalten verbinden)<br>
+rowspan=[Zeilenzahl] (Zeilen verbinden)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcee.htm#a1"><b>Beschreibung (Spalten verbinden)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcee.htm#a2"><b>Beschreibung (Zeilen verbinden)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Hintergrundfarbe</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table bgcolor=&gt; &lt;/table&gt;
+&lt;tr bgcolor=&gt; &lt;/tr&gt;
+&lt;th bgcolor=&gt; &lt;/th&gt;
+&lt;td bgcolor=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0><img src="xnetsi3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+bgcolor=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm#a1"><b>Beschreibung (ganze Tabelle)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm#a2"><b>Beschreibung (Zeilen/Zellen)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Farbe f&uuml;r Rand und<br>Gitternetzlinien</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table bordercolor=&gt; &lt;/table&gt;
+&lt;table bordercolorlight= bordercolordark=&gt; 
+&lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+bordercolor=[#XXXXXX/&quot;Farbname&quot;] (Farbe)<br>
+bordercolorlight=[#XXXXXX/&quot;Farbname&quot;]<br>
+bordercolordark=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm#a3"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Hintergrundbild</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table background=&gt; &lt;/table&gt;
+&lt;th background=&gt; &lt;/th&gt;
+&lt;td background=&gt; &lt;/td&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+background=&quot;datei.gif&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>Tabellen&uuml;berschrift<br>Tabellenunterschrift</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table&gt; 
+&lt;caption align=&gt; &lt;/caption&gt;
+&lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[top/bottom]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceg.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Tabellen<br><b>ausrichten<br>(Text daneben)</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;table align=&gt; 
+&lt;/table&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[left/right]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceg.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Verweise</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Verweis<br><b>Verweis / Verweisanker</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;a name=&quot;Anker&quot;&gt;...&lt;/a&gt;
+&lt;a href=&quot;#Anker&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;datei.htm&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;[Pfad]/datei.htm&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;http://...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;ftp://...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;gopher://...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;telnet://...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;news:...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;mailto:...&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;mailto:...?subject=&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;file://localhost/...&quot;&gt;Text&lt;/a&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>Beschreibung (Anker)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a2"><b>Beschreibung (#Anker)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm#a1"><b>Beschreibung (datei.htm)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm#a2"><b>Beschreibung ([Pfad]/datei.htm)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfd.htm#a2"><b>Beschreibung (http://...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfe.htm#a1"><b>Beschreibung (ftp://...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfe.htm#a2"><b>Beschreibung (gopher://...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfe.htm#a3"><b>Beschreibung (telnet://...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfe.htm#a4"><b>Beschreibung (news:...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcff.htm#a1"><b>Beschreibung (mailto:...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcff.htm#a2"><b>Beschreibung (mailto:...?subject=)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfh.htm#a1"><b>Beschreibung (file://localhost/...)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfg.htm#a1"><b>Beschreibung (Downloadverweise)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfg.htm#a2"><b>Beschreibung (beliebige Dateien)</b></a><br>
+Hinweis: <i>mailto:...?subject=</i><br>
+nur mit Netscape ab V2.0
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Verweise<br><b>browser-intern</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;a href=&quot;...&quot;&gt;Text&lt;/a&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfj.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Grafik</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>einbinden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src=&quot;datei.gif&quot;&gt;
+&lt;img src=&quot;[Pfad]/datei.gif&quot;&gt;
+&lt;img src=&quot;http://.../datei.gif&quot;&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a1"><b>Beschreibung (datei.gif)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a2"><b>Beschreibung ([Pfad]/datei.gif)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a3"><b>Beschreibung (http:.../datei.gif)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= alt=&gt;
+&lt;img src= border=&gt;
+&lt;img src= name=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+alt=&quot;Alternativtext&quot;<br>
+border=[Pixel] (Rahmendicke)<br>
+name=&quot;Text&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a4"><b>Beschreibung (Alternativtext)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a5"><b>Beschreibung (border/Rahmen)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a6"><b>Beschreibung (Name)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>beschriften</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= align=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[top/middle/bottom]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgb.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>beschriften (spezieller)</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= align=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[texttop/absmiddle/absbottom]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgb.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>Text um Grafik<br>flie&szlig;en lassen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= align=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[left/right]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>Abstand Grafik<br>zu Text</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= hspace= vspace=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+hspace=[Pixel] (horizontaler Abstand)<br>
+vspace=[Pixel] (vertikaler Abstand)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>Breite und H&ouml;he<br>angeben</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= width= height=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel] (Breite)<br>
+height=[Pixel] (H&ouml;he)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>in zwei Versionen<br>laden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src= lowsrc=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+lowsrc=&quot;datei.gif&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>mit verweis-sensitiven<br>Fl&auml;chen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;map name=&quot;Mapname&quot;&gt;
+&lt;area shape= coords= href=&gt;
+&lt;area shape= coords= nohref&gt;
+&lt;/map&gt;
+&lt;img src= usemap=&quot;#Mapname&quot;&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+shape=[rect/circle/polygon] (Bereichsart)<br>
+coords=[x1,y1,x2,y2] (bei rect)<br>
+coords=[x,y,r] (bei circle)<br>
+coords=[x1,y1,x2,y2,...,x#,y#] (bei polygon)<br>
+href= (wei bei Verweisen)<br>
+nohref (kein Verweis)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgg.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Grafik<br><b>browser-intern</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img src=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0><img src="xibm.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgh.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a7"><h2><font color=#6666CC>Formulare</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;form action= method=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+action=[&quot;CGI-Programm&quot;/&quot;mailto:...&quot;]<br>
+method=[get/post]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcha.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>mit Mime-Type<br>definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;form action= method= enctype=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+enctype=&quot;text/plain&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcha.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Einzeilige<br> Eingabefelder</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input name= type=text 
+    size= maxlength=&gt;
+&lt;input name= type=password 
+    size= maxlength=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+size=[Feldl&auml;nge Anzeige]<br>
+maxlength=[Feldgr&ouml;&szlig;e intern]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a1"><b>Beschreibung (Text)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a3"><b>Beschreibung (Passwort)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Einzeilige<br> Eingabefelder</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input name= type=text 
+    size= maxlength= value=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+value=&quot;vorbelegter Text&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Mehrzeilige<br>Eingabefelder</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;textarea name= rows= cols=&gt; 
+Vorbelegungstext (optional)
+&lt;/textarea&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+rows=[Zeilenanzahl Anzeige]<br>
+cols=[Breite Anzeige]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Mehrzeilige<br>Eingabefelder<br>Umbruchkontrolle</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;textarea name= rows= cols= wrap=&gt; 
+&lt;/textarea&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+wrap=[virtual/physical]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a6"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Auswahllisten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;select name= size=&gt; 
+&lt;option&gt; Auswahltext
+&lt;/select&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+size=[Anzahl Eintr&auml;ge Anzeige]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Auswahllisten<br>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;select name= size= multiple&gt; 
+&lt;option selected&gt; Auswahltext
+&lt;option value=&gt; Auswahltext
+&lt;/select&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+multiple (Mehrfachauswahl)<br>
+selected (vorselektiert)<br>
+value=&quot;Text&quot; (Absendewert)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm#a2"><b>Beschreibung (Mehrfachauswahl)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm#a3"><b>Beschreibung (vorselektiert)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm#a4"><b>Beschreibung (Absendewert)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Radio-Buttons</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=radio name= value=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchd.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Check-Buttons</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=checkbox name= value=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xok.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchd.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Freie Buttons</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=button name= value= onClick=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+onClick= (JavaScript)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tche.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Datei-Buttons</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input name= type=file
+  size= maxlength= accept=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+accept= (Mime-Type, auch Wildcards)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tche.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Versteckte<br>Elemente</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=hidden name= value=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+value=&quot;Zu &uuml;bertragender Text&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchf.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Absende-Button<br>Abbrechen-Button</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=submit value=&gt; 
+&lt;input type=reset value=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+submit (absenden)<br>
+reset (abbrechen)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Formulare<br><b>Absende-Button<br>grafisch</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;input type=image src=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+src= (wie bei Grafiken)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a8"><h2><font color=#6666CC>Frames</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>HTML-Datei mit Frames<br>Grundger&uuml;st</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel&lt;/title&gt;
+&lt;/head&gt;
+&lt;frameset&gt;
+Frame-Definitionen...
+&lt;/frameset&gt;
+&lt;body&gt;
+Text f. Browser ohne Frames
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap><img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Frame-Sets definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;frameset rows=&gt;
+Frame-Definitionen...
+&lt;/frameset&gt;
+
+&lt;frameset cols=&gt;
+Frame-Definitionen...
+&lt;/frameset&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+rows=&quot;[Pixel/%,*]&quot; (Zeilen)<br>
+cols=&quot;[Pixel/%,*]&quot; (Spalten)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a3"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Frames definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;frameset rows=&gt;
+  &lt;frame src= name=&gt;
+&lt;/frameset&gt;
+
+&lt;frameset cols=&gt;
+  &lt;frame src= name=&gt;
+&lt;/frameset&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+src=&quot;datei.htm&quot;<br>
+name=&quot;Fenstername&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a4"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Eigenschaften von<br>Frames definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;frame src= name= scrolling=&gt;
+&lt;frame src= name= marginwidth=&gt;
+&lt;frame src= name= marginheight=&gt;
+&lt;frame src= name= noresize&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+scrolling=[yes/no/auto] (Scrollbars)<br>
+marginwidth=[Pixel] (Rand links/rechts)<br>
+marginheight=[Pixel] (Rand oben/unten)<br>
+noresize (Fenstergr&ouml;&szlig;e unver&auml;nderbar)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a1"><b>Beschreibung (Scrollbars)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a2"><b>Beschreibung (Rand)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a3"><b>Beschreibung (unv. Fenstergr&ouml;&szlig;e)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Eigenschaften von<br>Frame-Sets</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;frameset rows/cols= border=&gt;
+&lt;frameset rows/cols= frameborder=&gt;
+&lt;frameset rows/cols= framespacing=&gt;
+&lt;frameset rows/cols= bordercolor=&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+border=[Pixel] (Rahmendicke, Netscape)<br>
+frameborder=[yes/no] (Rahmen, MS IE)<br>
+framespacing=[Pixel] (Rahmenabstand, MS IE)<br>
+bordercolor=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a4"><b>Beschreibung (Rahmen)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a5"><b>Beschreibung (Rahmenfarbe)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Verweise zu<br>Frames und zum<br>Beenden des Frame-Sets</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;a href=&quot;datei.htm&quot; 
+  target=&quot;Fenstername&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;datei.htm&quot;  
+  target=&quot;_new&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;datei.htm&quot;  
+  target=&quot;_parent&quot;&gt;Text&lt;/a&gt;
+&lt;a href=&quot;datei.htm&quot;  
+  target=&quot;_top&quot;&gt;Text&lt;/a&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+&quot;_new&quot; (Neues Browser-Fenster)<br>
+&quot;_parent&quot; (Frame-Set beenden)<br>
+&quot;_top&quot; (Frame-Set beenden)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a1"><b>Beschreibung (Verweis zu Frames)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a2"><b>Beschreibung (Beenden Frame-Set)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Eingebettete<br>Frames definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;iframe src= name=&gt;&lt;/iframe&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+src=&quot;datei.htm&quot;<br>
+name=&quot;Fenstername&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcid.htm#a1"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Eingebettete<br>Frames<br>Eigenschaften</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;iframe width=&gt;&lt;/iframe&gt;
+&lt;iframe height=&gt;&lt;/iframe&gt;
+&lt;iframe align=&gt;&lt;/iframe&gt;
+&lt;iframe hspace=&gt;&lt;/iframe&gt;
+&lt;iframe vspace=&gt;&lt;/iframe&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel] (Fensterbreite)<br>
+height=[Pixel] (Fensterh&ouml;he)<br>
+align=[left/right] (Ausrichtung f&uuml;r Textumflu&szlig;)<br>
+hspace=[Pixel] (horizontaler Textabstand)<br>
+vspace=[Pixel] (vertikaler Textabstand)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcid.htm#a2"><b>Beschreibung</b></a></td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Frames<br><b>Verweise zu<br>eingebetteten<br>Frames</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;a href=&quot;datei.htm&quot; 
+  target=&quot;Fenstername&quot;&gt;Text&lt;/a&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a3"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a9"><h2><font color=#6666CC>Style-Sheets</font></h2></a>
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Style-Sheets<br><b>ein-/ausschaltbar<br>aus separater Datei</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;head&gt; 
+&lt;link rel=stylesheet type=&quot;text/css&quot; 
+ href= title=&gt;
+&lt;/head&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+href=&quot;datei.css&quot;<br>
+title=&quot;Button-Text&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Style-Sheets<br><b>in Dateikopf</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;head&gt; 
+&lt;style type=&quot;text/css&quot;&gt;
+ Style-Sheet-Angaben
+&lt;/style&gt;
+&lt;/head&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjb.htm"><b>Beschreibung (Style-Sheet-Angaben)</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Style-Sheets<br><b>im Text</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;[Element] style=&gt; &lt;/[Element]&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+[Element] (Text/Absatz-Element, z.B. &lt;p&gt;)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcja.htm#a2"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjb.htm"><b>Beschreibung (Style-Sheet-Angaben)</b></a><br>
+</td>
+</tr>
+
+
+
+
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a10"><h2><font color=#6666CC>Multimedia</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Datei als Objekt<br>einbinden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object data= type=&gt; 
+Alternativen
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+data=&quot;datei.*&quot;<br>
+Alternativen (Grafik, Text usw.)<br>
+data=&quot;Type/Subtype&quot; (Mime-Type)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Verweis-sensitive<br>Grafik als Objekt</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object data= shapes&gt; 
+&lt;a href= shape= coords=&gt;Text&lt;/a&gt;
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+href= (wie bei Verweisen)<br>
+shape=[rect/circle/polygon] (Bereichsart)<br>
+coords=[x1,y1,x2,y2] (bei rect)<br>
+coords=[x,y,r] (bei circle)<br>
+coords=[x1,y1,x2,y2,...,x#,y#] (bei polygon)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a3"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Java-Applets<br>als Objekt</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object classid= codebase= codetype=&gt; 
+&lt;param name= value=&gt;
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+classid=java:[Datei ohne Endung]<br>
+codebase=&quot;datei.java&quot;<br>
+codetype= (Java-Mime-Type)<br>
+name= (Parametername)<br>
+value= (Parameterwert)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a4"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>ActiveX<br>als Objekt</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object classid= data= codebase= id=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+classid=clsid:[ID]<br>
+data=&quot;datei.*&quot; (INI-Daten)<br>
+codebase=&quot;datei.ocx&quot;<br>
+id=&quot;Ankername&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a5"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Rahmen um<br>Objekte</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... border=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+border=[Pixel] (Rahmendicke)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm#a6"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Breite und H&ouml;he<br>von Objekten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... width= height=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel] (Breite)<br>
+height=[Pixel] (H&ouml;he)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckb.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Beschriftung<br>von Objekten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... align=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[top/middle/bottom]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckc.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Spezielle Beschriftung<br>von Objekten</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... align=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[texttop/absmiddle/absbottom]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckc.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Text um Objekte<br>flie&szlig;en lassen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... align=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+align=[left/right]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckd.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Abstand Objekt<br>zu Text</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... hspace= vspace=&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie3.gif" width=30 height=30 border=0><img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+hspace=[Pixel] (horizontal)<br>
+vspace=[Pixel] (vertikal)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcke.htm#a1"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Spezielle<br>Objekteigenschaften</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;object ... standby=&gt; 
+&lt;/object&gt;
+
+&lt;object ... declare&gt; 
+&lt;/object&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+standby=&quot;Text beim Laden&quot;<br>
+declare (Anzeige nur auf Wunsch)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckf.htm#a1"><b>Beschreibung (Meldetext)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckf.htm#a1"><b>Beschreibung (Anzeige auf Wunsch)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Netscape-Syntax</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;embed src=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi11.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+src=&quot;datei.*&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Netscape-Syntax<br>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;embed src= width= height=&gt; 
+&lt;embed src= autostart=&gt; 
+&lt;embed src= loop=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi2.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel] (Anzeigebreite)<br>
+height=[Pixel] (Anzeigeh&ouml;he)<br>
+autostart=true (beim Aufruf abspielen)<br>
+loop=true (Endloswiederholung)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm#a2"><b>Beschreibung (Breite, H&ouml;he)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm#a3"><b>Beschreibung (Start)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckg.htm#a4"><b>Beschreibung (Wiederholung)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Videos<br>Microsoft-Syntax</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img dynsrc=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+src=&quot;datei.avi&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Videos<br>Microsoft-Syntax<br>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;img dynsrc= loop=&gt; 
+&lt;img dynsrc= width= height=&gt; 
+&lt;img dynsrc= src=&gt; 
+&lt;img start= src=&gt; 
+&lt;img dynsrc= controls&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xmsie2.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+loop=[true/Anzahl] (Wiederholung)<br>
+width=[Pixel] (Anzeigebreite)<br>
+height=[Pixel] (Anzeigeh&ouml;he)<br>
+src=&quot;datei.gif&quot; (Alternativgrafik)<br>
+start=mouseover (Start beim Ber&uuml;hren)<br>
+controls (Play-Buttons anzeigen)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a2"><b>Beschreibung (Wiederholung)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a3"><b>Beschreibung (Breite/H&ouml;he)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a4"><b>Beschreibung (Alternativgrafik)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a5"><b>Beschreibung (Start)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckh.htm#a6"><b>Beschreibung (Play-Buttons)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Java-Applets<br>einbinden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;applet code= alt= src=&gt; 
+&lt;param name= value=&gt; 
+&lt;/applet&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+code=&quot;datei.class&quot;<br>
+alt=&quot;Alternativtext&quot;<br>
+src=&quot;datei.java&quot;<br>
+name= (Parametername)<br>
+value= (Parameterwert)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm#a1"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Java-Applets<br>nach Sun-Syntax<br>einbinden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;app class= src=&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>&#160;
+<td bgcolor=#CCFFFF valign=top nowrap>
+class=&quot;Datei&quot; (ohne .class)<br>
+src=&quot;datei.java&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm#a2"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Multimedia<br><b>Java-Applets<br>Optionen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;applet code= width= height=&gt; 
+&lt;/applet&gt; 
+&lt;applet code= hspace= vspace=&gt; 
+&lt;/applet&gt; 
+&lt;applet code= align=&gt; 
+&lt;/applet&gt; 
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xhtml32.gif" width=30 height=30 border=0><b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+width=[Pixel] (Anzeigebreite)<br>
+height=[Pixel] (Anzeigeh&ouml;he)<br>
+hspace=[Pixel] (Textabstand horizontal)<br>
+vspace=[Pixel] (Textabstand vertikal)<br>
+align=[left/right] (Ausrichtung f. Textumflu&szlig;)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm#a3"><b>Beschreibung (Breite/H&ouml;he)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm#a4"><b>Beschreibung (Textabstand)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcki.htm#a4"><b>Beschreibung (Ausrichtung)</b></a>
+</td>
+</tr>
+
+
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a11"><h2><font color=#6666CC>Layer</font></h2></a>
+
+
+<table border cellpadding=3>
+
+<tr>
+<th bgcolor=#CCCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCCC align=left>HTML</th>
+<th bgcolor=#CCCCCC align=left>Standard</th>
+<th bgcolor=#CCCCCC align=left>N&auml;here Infos</th>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>fest positionierte Layer<br>definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer name= left= top= width=&gt; 
+Inhalt
+&lt;/layer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+left=[Pixel] (linke obere Ecke: links)<br>
+top=[Pixel] (linke obere Ecke: oben)<br>
+width=[Pixel] (Anzeigebreite)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>flie&szlig;ende Layer<br>definieren</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;ilayer name= left= top= width=&gt; 
+Inhalt
+&lt;/ilayer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+left=[Pixel] (Abstand von links)<br>
+top=[Pixel] (unterhalb anderer Elemente)<br>
+width=[Pixel] (Anzeigebreite)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a3"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>Anzeigebereich<br>beschneiden</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer ... clip=&gt; 
+Inhalt
+&lt;/layer&gt;
+
+&lt;ilayer ... clip=&gt; 
+Inhalt
+&lt;/ilayer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+clip=[links,oben,rechts,unten] (relativ zur Layerposition)<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a4"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>Hintergrundfarbe</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer ... bgcolor=&gt; 
+Inhalt
+&lt;/layer&gt;
+
+&lt;ilayer ... bgcolor=&gt; 
+Inhalt
+&lt;/ilayer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+bgcolor=[#XXXXXX/&quot;Farbname&quot;]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclb.htm#a1"><b>Beschreibung</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Farben definieren</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>Hintergrundbild</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer ... background=&gt; 
+Inhalt
+&lt;/layer&gt;
+
+&lt;ilayer ... background=&gt; 
+Inhalt
+&lt;/ilayer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+background=&quot;datei.gif&quot;<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclb.htm#a2"><b>Beschreibung</b></a><br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>&Uuml;berlappung</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer ... above= below=&gt; 
+Inhalt
+&lt;/layer&gt;
+
+&lt;layer ... z-index=&gt; 
+Inhalt
+&lt;/layer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+above=&quot;Layername&quot; (&uuml;ber aktuellem Layer)<br>
+below=&quot;Layername&quot; (unter aktuellem Layer)<br>
+z-index=[Nummer in Rangfolge]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a1"><b>Beschreibung (above/below)</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a2"><b>Beschreibung (z-index)</b></a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=#CCFFFF valign=top>Layer<br><b>verstecken/anzeigen</b></td>
+<td bgcolor=#FFFFCC valign=top nowrap><pre>
+&lt;layer ... visibility=&gt; 
+Inhalt
+&lt;/layer&gt;
+</pre></td>
+<td bgcolor=#FFFFCC valign=top>
+<img src="xnetsi4.gif" width=30 height=30 border=0>
+<b></b></td>
+<td bgcolor=#CCFFFF valign=top nowrap>
+visibility=[show/hide/inherit]<br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a3"><b>Beschreibung</b></a>
+</td>
+</tr>
+
+
+</table>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

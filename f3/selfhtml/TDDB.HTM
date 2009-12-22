@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>SELFHTML: Zwei Frames gleichzeitig &auml;ndern</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Zwei Frames gleichzeitig &auml;ndern</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Kurzbeschreibung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Quellcode</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Erl&auml;uterungen zum Quellcode</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddba.htm"><b>Beispiel testen: so sieht's aus</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Kurzbeschreibung</font></h2></a>
+Wer schon einmal ein HTML-Projekt mit mehreren <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tci.htm"><b>Frames</b></a> erstellt hat, kann nachvollziehen, da&szlig; es manchmal w&uuml;nschenswert ist, beim Ausf&uuml;hren eines Verweises nicht nur den Inhalt eines, sondern zweier oder mehrerer Frame-Fenster gleichzeitig zu &auml;ndern. Nun kann man in solchen Fällen zwar auf eine Datei verweisen, die ein neues, entsprechendes Frame-Set definiert. Aber wenn Sie viele solcher Verweise haben, wird dieses Verfahren schnell aufwendig. Als Alternative dazu k&ouml;nnen Sie sich mit einem JavaScript behelfen.
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Quellcode</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tddba.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Das Beispiel betrifft eine Schauspielerinfothek. Es zeigt zwei HTML-Dateien: die Datei, in der das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a3"><b>Frame-Set definiert</b></a> wird, und eine Datei mit Verweisen, bei deren Anklicken sich zwei andere Frames gleichzeitig &auml;ndern.<br>
+Studieren Sie das Beispiel aufmerksam und lesen Sie anschlie&szlig;end die Erl&auml;uterungen dazu. Zur besseren Orientierung enth&auml;lt das Beispiel Verweise zu den entsprechenden Erl&auml;uterungen, z.B. <a href="#a211"><b>(1)</b></a>. Diese Verweise geh&ouml;ren nicht zum Quellcode. Falls Sie das Beispiel in einen Editor kopieren, m&uuml;ssen Sie diese Verweise l&ouml;schen. Andernfalls erhalten Sie JavaScript-Fehlermeldungen.
+
+<h4><font color=#6666CC>Datei <i>rahmen.htm</i>:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;FrameTest&lt;/title&gt;
+  &lt;/head&gt;
+  <a href="#a211"><b>(1)</b></a> &lt;frameset cols=&quot;30%,*&quot;&gt;
+   &lt;frame src=&quot;verweise.htm&quot;&gt;
+   &lt;frameset rows=&quot;25%,*&quot;&gt;
+     &lt;frame src=&quot;welcome1.htm&quot;&gt;
+     &lt;frame src=&quot;welcome2.htm&quot;&gt;
+   &lt;/frameset&gt;
+  &lt;/frameset&gt;
+  &lt;/html&gt;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Datei <i>verweise.htm</i>:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Verweise&lt;/title&gt;
+  &lt;script language=&quot;JavaScript&quot;&gt;
+  &lt;!--
+   <a href="#a212"><b>(2)</b></a> function ZweiFrames(URL1,F1,URL2,F2)
+   {  
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //--&gt;
+  &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body text=#000000 link=#0000CC vlink=#000099 alink=#0000FF&gt;
+  &lt;h1&gt;Verweise&lt;/h1&gt;
+  <a href="#a213"><b>(3)</b></a> &lt;a href=&quot;javascript:ZweiFrames('susan1.htm',1,'susan2.htm',2)&quot;&gt;Susan Sarandon&lt;/a&gt;
+  &lt;br&gt;
+  &lt;a href=&quot;javascript:ZweiFrames('jack1.htm',1,'jack2.htm',2)&quot;&gt;Jack Nickelson&lt;/a&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</pre></td></tr></table><p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Erl&auml;uterungen zum Quellcode</font></h2></a>
+
+<a name ="a211"><font color=#6666CC><b>(1) Frame-Set definieren</b></font></a><br>
+Im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> wird eine Datei <i>rahmen.htm</i> erstellt, die das Frame-Set f&uuml;r eine Schauspielerinfothek bereitstellt. Das Frame-Set bewirkt folgende Konstellation:
+<p>
+<img src="xtddb01.gif" width=160 height=120 border=0 align=left hspace=10>Links gibt es eine Spalte mit Verweisen zu einzelnen Schauspielern. Die Verweise stehen in der Datei <i>verweise.htm</i>. Rechts gibt es zwei Frames. Der obere, kleinere soll jeweils ein Bild des Schauspielers und die wichtigsten Lebensdaten enthalten. Der untere, gr&ouml;&szlig;ere soll ausf&uuml;hrliche Infos bieten, z.B. eine Lebensbeschreibung und Informationen dar&uuml;ber, in welchen Filmen der Schauspieler mitgewirkt hat. Beim Aufruf des Frame-Sets wird links die Datei <i>verweise.htm</i> angezeigt. Rechts werden Projektbegr&uuml;&szlig;ungsdateien mit den Namen <i>welcome1.htm</i> und <i>welcome2.htm</i> angezeigt.<br clear=all>
+<p>
+<a name ="a212"><font color=#6666CC><b>(2) JavaScript-Funktion zum &Auml;ndern zweier Frames definieren</b></font></a><br>
+Im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> enth&auml;lt die Datei <i>verweise.htm</i> jene Verweise, bei deren Anklicken sich der Inhalt der beiden rechten Frames gleichzeitig &auml;ndern soll. Deshalb wird in dieser Datei der erforderliche JavaScript-Code notiert. Im Kopf der HTML-Datei, also zwischen <b>&lt;head&gt;</b> und <b>&lt;/head&gt;</b> wird mit dem daf&uuml;r vorgesehenen HTML-Tag <b>&lt;script language=&quot;JavaScript&quot;&gt;</b> .... <b>&lt;/script&gt;</b> ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>Programmbereich definiert</b></a>. Innerhalb dieses Bereichs wird eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> mit Namen <i>ZweiFrames()</i> definiert. Diese Funktion erwartet vier Parameter:
+<ul>
+<li>die URL-Adresse des gew&uuml;nschten Inhalts des ersten Frame-Fensters (URL1)
+<li>den Index des gew&uuml;nschten ersten Frame-Fensters innerhalb des Frame-Sets (F1)
+<li>die URL-Adresse des gew&uuml;nschten Inhalts des zweiten Frame-Fensters (URL2)
+<li>den Index des gew&uuml;nschten zweiten Frame-Fensters innerhalb des Frame-Sets (F2)
+</ul>
+Dadurch ist die Funktion allgemein gehalten, d.h. Sie k&ouml;nnen diese Funktion auch in ganz anderen Frame-Sets zum gleichen Zweck verwenden.<br>
+Innerhalb der Funktion stehen zwei Anweisungen. In der ersten Anweisung wird dem ersten gew&uuml;nschten Frame-Fenster die gew&uuml;nschte URL-Adresse zugewiesen, in der zweiten Anweisung wird dem zweiten gew&uuml;nschten Frame-Fenster die zweite gew&uuml;nschte URL-Adresse zugewiesen. &Uuml;ber <i>parent</i> kann innerhalb eines Frame-Sets das gesamte Frame-Set-Fenster angesprochen werden. Mit <i>parent.frames[n]</i> lassen sich bestimmte einzelne Frame-Fenster innerhalb des Frame-Sets ansprechen. Der Index beginnt bei 0 zu z&auml;hlen, d.h. das erste im Frame-Set definierte Frame-Fenster l&auml;&szlig;t sich mit <i>parent.frames[0]</i> ansprechen, das zweite Frame-Fenster mit <i>parent.frames[1]</i> usw. Die Funktion <i>ZweiFrames</i> bekommt die Fenster-Indizes als Parameter &uuml;bergeben. Deshalb steht z.B in der ersten Anweisung <i>parent.frames[F1]</i>. &Uuml;ber <i>location.href</i> kann eine URL-Adresse angesprochen werden, z.B. eine beliebige HTML-Datei im gleichen Projekt. Mit dem gesamten Ausdruck <i>parent.frames[F1].location.href=URL1;</i> wird einem Frame-Fenster innerhalb des Frame-Sets eine beliebige URL-Adresse zugewiesen. Da zwei Frames gleichzeitig ge&auml;ndert werden sollen, gibt es zwei solcher Anweisungen.
+<p>
+<a name ="a213"><font color=#6666CC><b>(3) Verweis zum &Auml;ndern zweier Frames notieren</b></font></a><br>
+Die Datei <i>verweise.htm</i> enth&auml;lt im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> Verweise zu Infos &uuml;ber Susan Sarandon und Jack Nickelson. Damit sich beim Klicken auf einen dieser Verweise beide anderen Frame-Fenster gleichzeitig &auml;ndern, wird bei der Angabe <b>href=</b> nicht wie &uuml;blich eine URL-Adresse angegeben, sondern zuerst das Schl&uuml;sselwort <b>javascript</b>, dahinter ein Doppelpunkt, und dahinter der Aufruf der im Dateikopf definierten Funktion <i>ZweiFrames()</i>. Dabei werden die vier erwarteten Parameter &uuml;bergeben. <br>
+Gehen Sie bei weiteren Verweisen analog dazu vor.
+
+
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdda.htm"><b>Lauftext in der Statuszeile</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tddc.htm"><b>Taschenrechner</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

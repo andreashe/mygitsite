@@ -1,0 +1,250 @@
+<html>
+<head>
+<title>SELFHTML: Grunds&auml;tzliches zu Perl-Scripts</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Grunds&auml;tzliches zu Perl-Scripts</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Aufrufm&ouml;glichkeiten des Perl-Interpreters</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Regeln f&uuml;r Perl-Scripts und Kommentare in Perl</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Anweisungen notieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Anweisungsbl&ouml;cke notieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Selbstvergebene Namen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Aufrufm&ouml;glichkeiten des Perl-Interpreters</font></h2></a>
+
+Um eigene Perl-Scripts auszuf&uuml;hren bzw. zu testen, m&uuml;ssen Sie den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebb.htm"><b>Perl-Interpreter installiert</b></a> haben. Um Perl als Sprache f&uuml;r CGI-Scripts einzusetzen, mu&szlig; au&szlig;erdem ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm"><b>WWW-Server installiert</b></a> sein.
+<p>
+Aufrufen k&ouml;nnen Sie den Perl-Interpreter mit einem Perl-Script, also einer Datei mit Perl-Code. Solche Dateien haben die Standard-Dateinamenendung <b>.pl</b>. Der Perl-Interpreter wird normalerweise einfach mit <b>perl</b> gestartet. Wenn Sie beispielsweise ein Perl-Script namens <b>hallowelt.pl</b> haben, k&ouml;nnen Sie dieses Script mit <b>perl hallowelt.pl</b> starten. Gegebenenfalls m&uuml;ssen Sie beide Dateien mit ihren korrekten Pfadnamen aufrufen, also z.B. <b>c:\www\bin\perl.exe c:\scripts\perl\hallowelt.pl</b> (im Beispiel: Pfadsyntax nach MS-Windows). 
+<p>
+Daneben gibt es etliche Optionen beim Aufruf des Perl-Interpreters. Die Optionen folgen unmittelbar hinter dem Programmdateinamen und vor dem Namen des Perl-Scripts, also etwa <b>perl -c test.pl</b>. Sie k&ouml;nnen auch mehrere Optionen aneinanderh&auml;ngen. Notieren Sie dazu nur ein Minuszeichen mit allen gew&uuml;nschten Optionsbuchstaben hintereinander, z.B. <b>perl -cwT test.pl</b>
+
+Die folgende Liste enth&auml;lt wichtige Optionen beim Aufruf des Perl-Interpreters.
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Option</th>
+<th bgcolor=#CCCCCC align=left>Bedeutung</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-c</b></td>
+<td bgcolor=#CCFFFF valign=top>Das Perl-Script wird nicht ausgef&uuml;hrt, sondern nur auf syntaktische Richtigkeit &uuml;berpr&uuml;ft</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-d</b></td>
+<td bgcolor=#CCFFFF valign=top>Das Perl-Script wird im Debug-Modus ausgef&uuml;hrt. Der Debug-Modus erlaubt das Austesten des Perl-Scripts.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-S</b></td>
+<td bgcolor=#CCFFFF valign=top>Das Script braucht nur als Dateiname ohne Pfad angegeben werden. Wenn es in einem der Verzeichnisse liegt, die in der path-Variablen des Betriebssystems genannt sind, findet der Perl-Interpreter das Script auch ohne Pfadangabe.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-T</b></td>
+<td bgcolor=#CCFFFF valign=top>Das Script wird w&auml;hrend der Ausf&uuml;hrung streng auf Fehlerfreiheit &uuml;berpr&uuml;ft.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-v</b></td>
+<td bgcolor=#CCFFFF valign=top>Gibt die Version und den genauen Stand des Perl-Interpreters aus.</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top><b>-w</b></td>
+<td bgcolor=#CCFFFF valign=top>Bewirkt, da&szlig; der Perl-Interpreter nicht nur offensichtliche Fehlermeldungen bei Syntaxfehlern ausgibt, sondern auch Warnungen bei m&ouml;glichen Fehlern und logisch zweifelhaften Anweisungsfolgen.</td>
+</tr>
+</table>
+<p>
+<h4><font color=#6666CC>Tip:</font></h4>
+Wenn Sie die Beispiele, die in den Perl-Beschreibungen in diesem Dokument vorkommen, selbst ausprobieren m&ouml;chten, kopieren Sie sich die Beispiele aus dem WWW-Browser &uuml;ber die Zwischenablage Ihres Betriebssystems in einen Texteditor. Speichern Sie den Inhalt in einer Perl-Datei ab, z.B. unter dem Namen <B>test.pl</B>. Rufen Sie den Perl-Interpreter mit dieser Datei auf. Das sollten Sie m&ouml;glichst auf der Kommandozeilenebene (DOS oder Unix-Shell beispielsweise) tun, da viele der Beispiele ihre Ergebnisse auf die Standardausgabe schreiben. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Regeln f&uuml;r Perl-Scripts und Kommentare in Perl</font></h2></a>
+
+Perl-Scripts k&ouml;nnen Sie mit jedem ASCII-Editor erstellen und bearbeiten. Ideal ist ein leistungsf&auml;higer Programmierer-Editor, der sich so konfigurieren l&auml;&szlig;t, da&szlig; er das Programmieren in Perl optimal unterst&uuml;tzt, etwa durch gespeicherte Sprachbausteine.
+<p>
+Speichern Sie Perl-Scripts unter einem Dateinamen mit der Endung <b>.pl</b> ab. 
+<p>
+Zum Aufbau eines Perl-Scripts gibt es nur eine feste Regel: in der ersten Zeile sollte eine Anweisung stehen, die angibt, in welchem Verzeichnis sich die ausf&uuml;hrbare Datei des Perl-Interpreters befindet.
+
+<h4><font color=#6666CC>Beispiel eines vollst&auml;ndigen Perl-Scripts:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+print &quot;Hallo Welt\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Anweisung zur Lage des Perl-Interpreters auf dem Rechner beginnt mit den Zeichen <b>#!</b> - gefolgt von der Pfadangabe. Ab der n&auml;chsten Zeile k&ouml;nnen Sie <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Anweisungen</b></a> in der Sprache Perl notieren, wie im Beispiel die Ausgabe der beiden W&ouml;rter &quot;Hallo Welt&quot; auf die Standardausgabe.
+<p>
+Die Anweisung zur Lage des Perl-Interpreters auf dem Rechner wird vor allem von Unix- und Unix-kompatiblen Systemen verwertet, und zwar dann, wenn die Perl-Datei auf den Modus &quot;ausf&uuml;hrbar&quot; gesetzt ist. Die Datei kann dann direkt aufgerufen werden und startet den Perl-Interpreter. Wenn Sie unter anderen Umgebungen als Unix arbeiten, notieren Sie einfach die &uuml;bliche Zeile mit der &uuml;blichen Pfadangabe (<b>#!/usr/bin/perl</b>) in der ersten Zeile Ihres Perl-Scripts. Sollte das Script dann nicht ausgef&uuml;hrt werden, notieren Sie den genauen Pfad der auf&uuml;hrbaren Datei des Perl-Interpreters. Benutzen Sie dabei immer einfache Schr&auml;gstriche zur Trennung von Verzeichnissen, auch wenn es sich um einen DOS-/Windows-Rechner handelt.
+<p>
+Die Zeile mit der Anweisung zur Lage des Perl-Interpreters ist zugleich ein <b>Kommentar</b> laut Perl-Syntax. Kommentare beginnen mit dem Gatterzeichen <b>#</b>. Alles zwischen diesem Zeichen und dem Ende der gleichen Zeile wird vom Perl-Interpreter ignoriert. F&uuml;r mehrzeilige Kommentare m&uuml;ssen Sie alle betroffenen Zeilen mit einem <b>#</b> beginnen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie Perl im Zusammenhang mit einem modernen WWW-Server mit CGI-Unterst&uuml;tzung installiert haben, ist die Zeile f&uuml;r die Lage des Perl-Interpreters h&auml;ufig auch nicht von Bedeutung. Denn zur <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm#a3"><b>Konfiguration des WWW-Servers</b></a> geh&ouml;rt mittlerweile auch die Angabe des Pfades zum Perl-Interpreter. Wenn dann bei eingeschaltetem WWW-Server ein Perl-Script &uuml;ber das HTTP-Protokoll ausgef&uuml;hrt wird, ruft der WWW-Server den Perl-Interpreter entsprechend seiner Konfiguration auf.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Anweisungen notieren</font></h2></a>
+
+Perl besteht wie andere Programmiersprachen aus einer kontrollierten Anordnung von Anweisungen. Das sind Befehle, die der Perl-Interpreter bewertet und in Maschinencode umsetzt, der auf dem Rechner des Anwenders ausf&uuml;hrbar ist.
+<p>
+Es gibt einfache und komplexere Anweisungen.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Zahl = 42;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Quadrat = $Zahl * $Zahl;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+print &quot;Das Quadrat von &quot;, $Zahl, &quot; = &quot;, $Quadrat, &quot;\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Anweisung in Perl besteht immer aus einem Befehl, der mit einem Strichpunkt <b>;</b> abgeschlossen wird.
+<p>
+Eine Anweisung ist es zum Beispiel: 
+<ul>
+<li>wenn Sie einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm"><b>Variablen</b></a> einen Wert zuweisen, wie oben in Beispiel 1. 
+<li>wenn Sie mit Variablen oder Werten eine Operation durchf&uuml;hren, wie oben in Beispiel 2.
+<li>wenn Sie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> aufrufen, wie oben in Beispiel 3.
+</ul>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Anweisungsbl&ouml;cke notieren</font></h2></a>
+
+Ein Anweisungsblock besteht aus <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>
+Anweisungen</b></a>, die innerhalb einer &uuml;bergeordneten Anweisung stehen. So k&ouml;nnen Anweisungsbl&ouml;cke beispielsweise innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecd.htm#a1"><b>bedingten Anweisung</b></a> oder innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tece.htm"><b>Schleife</b></a> stehen. Auch alle Anweisungen, die innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a1"><b>Unterprogramms</b></a> stehen, bilden einen Anweisungsblock.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+if($Zahl &gt; 1000)
+ {
+  $Zahl = 0;
+ }  
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+while($i &lt;= 99)
+ {
+  print "Das Quadrat von ", $i, " ist ", $i * $i, "\n";
+  $i = $i + 1;
+ }  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Ein Anweisungsblock wird durch eine &ouml;ffnende geschweifte Klammer <b>{</b> begonnen und durch eine schlie&szlig;ende geschweifte Klammer <b>}</b> beendet. 
+<p>
+Bei bedingten Anweisungen (wie in Beispiel 1 oben) oder bei Schleifen (wie in Beispiel 2 oben) m&uuml;ssen Sie solche Anweisungsbl&ouml;cke <b>immer</b> notieren, auch wenn nur eine einzige Anweisung von der Bedingung oder der Schleifenbedingung abh&auml;ngig ausgef&uuml;hrt werden soll. 
+<p>
+Anweisungsbl&ouml;cke k&ouml;nnen nat&uuml;rlich auch verschachtelt sein.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Selbstvergebene Namen</font></h2></a>
+
+An vielen Stellen in Perl m&uuml;ssen Sie selbst Namen vergeben, zum Beispiel f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm"><b>Variablen</b></a>.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Daten = $ENV{'QUERY_STRING'};
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Bei selbst vergebenen Namen gelten folgende Regeln:
+<ul>
+<li>sie d&uuml;rfen keine Leerzeichen enthalten
+<li>sie sollten maximal 32 Zeichen L&auml;nge haben
+<li>sie d&uuml;rfen nur aus Buchstaben und Ziffern bestehen - das erste Zeichen sollte ein Buchstabe sein; es sind Gro&szlig;- und Kleinbuchstaben erlaubt
+<li>sie d&uuml;rfen keine deutschen Umlaute oder scharfes S enthalten
+<li>sie d&uuml;rfen als einziges Sonderzeichen den Unterstrich &quot;_&quot; enthalten
+</ul>
+Vergeben Sie sprechende Namen, die Ihnen auch ein halbes Jahr, nachdem Sie das Perl-Script geschrieben haben, noch signalisieren, welche Bedeutung sie haben. Es d&uuml;rfen ruhig auch deutschsprachige W&ouml;rter sein, solange die genannten Regeln eingehalten werden.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tebf.htm"><b>HTML-Formulare und CGI</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecb.htm"><b>Variablen und Datentypen</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

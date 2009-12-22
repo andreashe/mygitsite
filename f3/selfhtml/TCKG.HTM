@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>SELFHTML: Multimedia einbinden (Netscape-Syntax)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<h1><font color=#6666CC>Multimedia einbinden (Netscape-Syntax)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Multimedia-Datei einbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Breite und H&ouml;he der Anzeige definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Automatischen Start bestimmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Endloswiederholung bestimmen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"> Multimedia-Datei einbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckga.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Unter Multimedia ist hier zu verstehen: Datendateien, die in Fremdformaten vorliegen und Ausgaben erzeugen, die &uuml;ber Text und www-gerechte Grafik hinausreichen. Also zum Beispiel Sound, Video, Animation, Tabellen, Pr&auml;sentations,- Vektor- und CAD-Grafik, 3D-Grafik, VRML-Dateien usw.
+<p>
+Ein WWW-Browser wie Netscape kann solche Dateien anzeigen, wenn der Anwender ein entsprechendes <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbbf.htm"><b>Plugin</b></a> installiert hat. Wenn das Plugin installiert ist, kann der WWW-Browser die Datei so in seinem Anzeigefenster pr&auml;sentieren, wie sie von dem Ursprungsprogramm erstellt wurde. Bei Abspielvorg&auml;ngen, etwa von Videos oder Sound, wird ein entsprechender Player angezeigt - je nachdem, wie das Plugin beschaffen ist.
+<p>
+Wenn dem Browser eine Verkn&uuml;pfung zwischen der Dateiendung und einem Fremdprogramm bekannt ist, kann er das Fremdprogramm mit der betreffenden Datei starten.
+<p>
+
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;embed src=&quot;tabelle.xls&quot;&gt;
+&lt;embed src=&quot;../video.avi&quot;&gt;
+&lt;embed src=&quot;multimedia/virtuelleWelt.wrl&quot;&gt;
+&lt;embed src=&quot;http://www.netzwelt.com/selfhtml/yrag.mid&quot;&gt;
+&lt;embed src=&quot;file://localhost/c:/windows/progman.hlp&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;embed src=&gt;</b> definieren Sie Plugin-Referenz (<i>embed = einbetten, src = source = Quelle</i>). Hinter dem Istgleichzeichen notieren Sie die gew&uuml;nschte Datei. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Sie k&ouml;nnen auch Dateien in anderen Verzeichnissen und weltweit auf anderen Internet-Servern einbinden. Dabei gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Ob und wie die Datei letztendlich beim Anwender &quot;angezeigt&quot; wird, h&auml;ngt von vielen Faktoren ab, zum Beispiel von der Art der Datei, von den Hardware-Voraussetzungen des Anwenders, von den installierten Plugins und von vorhandenen, dem Browser bekannten Fremdprogrammen. Binden Sie Multimedia-Dateien daher niemals kommentarlos in Ihre HTML-Dateien ein, sondern weisen Sie den Anwender darauf hin, um welche Art von Daten es sich handelt, und unter welchen Voraussetzungen eine korrekte Anzeige m&ouml;glich ist.
+<p>
+Viele Multimedia-Dateien, vor allem Videos und 3D-Grafiken, sind vom Umfang her ungeeignet f&uuml;r die heutige &uuml;blichen &Uuml;bertragungsraten im WWW. Wenn Sie gr&ouml;&szlig;ere Dateien einbetten, weisen Sie den Anwender im umgebenden Text auf die Gr&ouml;&szlig;e der Datei hin.
+<p>
+Bei Dateitypen, zu denen der Netscape-Browser ein Plugin kennt, fragt er den Anwender, falls dieser das Plugin nicht hat, ob er das Plugin haben m&ouml;chte, und ruft auf Wunsch die &Uuml;bersichtsseiten auf dem Netscape-WWW-Server auf, von wo aus der Anwender sich das Plugin downloaden kann.
+<p>
+Wenn der WWW-Browser die Datei nicht verarbeiten kann, sollte er eine Fehlermeldung ausgeben und anstelle der Datei ein Symbol f&uuml;r nicht darstellbare Daten anzeigen.
+<p>
+Wenn Netscape auf einen Dateityp st&ouml;&szlig;t, den er nicht unmittelbar verarbeiten kann, zu dem er aber eine Verkn&uuml;pfung mit einem Fremdprogramm kennt, wird im Anzeigefenster an der Stelle, wo die Datei angezeigt werden soll, zun&auml;chst ein Icon des Fremdprogramms dargestellt, das beim Doppelklick das Programm mit der eingebundenen Datei startet.
+<p>
+Sie k&ouml;nnen auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfg.htm#a2"><b>Verweise auf beliebige Dateien</b></a> setzen. Der Unterschied ist, da&szlig; die Datei bei einem Verweis erst nach dem Anklicken des Verweises separat aufgerufen wird, w&auml;hrend sie beim Einbinden der Multimedia-Datei so gut wie m&ouml;glich direkt in die Bildschirmanzeige einer HTML-Datei integriert wird.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"> Breite und H&ouml;he der Anzeige definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckgb.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen die Anzeigebreite und die Anzeigeh&ouml;he einer eingebetteten Datei festlegen. Die Angaben sind jedoch jedoch nur von Bedeutung, wenn die Anzeige mit Hilfe eines Plugins erfolgt, also direkt im Anzeigefenster des WWW-Browsers m&ouml;glich ist.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;embed src=&quot;video.avi&quot; width=240 height=160&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>width=</b> [Pixel] bestimmen Sie die Anzeigebreite, mit <b>height=</b> [Pixel] die Anzeigeh&ouml;he der eingebetteten Datei (<i>width= Breite, height = H&ouml;he</i>). 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe von Breite und H&ouml;he einer eingebetteten Datei hat die gleichen Vorteile wie die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Angabe von Breite und H&ouml;he bei Grafiken</b></a>.
+<p>
+Manche Daten, zum Beispiel Videos, haben eine Originalbreite und Originalh&ouml;he. Um etwa so ein Video optimal einzubetten, sollten Sie dessen genaue Breite und H&ouml;he kennen und mit <b>width=</b> und <b>height=</b> beim Einbetten der Videodatei angeben. 
+<p>
+Manche Plugins, zum Beispiel Sound-Player, haben eine bestimmte Gr&ouml;&szlig;e. Wenn Sie die genaue Gr&ouml;&szlig;e kennen, sollten Sie beim Einbinden von Sound-Dateien, die mit dem betreffenden Plugin wiedergegeben werden sollen, die genaue H&ouml;he und Breite des Players angeben. So k&ouml;nnen Sie den Player vollst&auml;ndig und optimal innerhalb der Bildschirmanzeige der HTML-Datei plazieren. Die Gr&ouml;&szlig;enangaben sind bei solchen Plugins normalerweise bei der Software dokumentiert. 
+<p>
+Mit den Angaben <b>width=0 height=0</b> k&ouml;nnen Sie die sichtbare Anzeige auch ganz unterdr&uuml;cken. Das kann zum Beispiel bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbf.htm#a3"><b>Hintergrundmusik</b></a> erw&uuml;nscht sein. Anstelle von <b>width=0 height=0</b> k&ouml;nnen Sie auch <b>hidden=true</b> probieren.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"> Automatischen Start bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckgc.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Normalerweise werden die eingebetteten Daten beim Laden aufgerufen und angezeigt bzw. abgespielt. Wenn ein Plugin nicht beim Aufruf startet, k&ouml;nnen Sie den Start erzwingen.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;embed src=&quot;musik.wav&quot; autostart=true&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>autostart=true</b> k&ouml;nnen Sie einen Start der Plugin-Datei direkt nach dem Laden erzwingen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"> Endloswiederholung bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckgd.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bei Musikst&uuml;cken oder Videos k&ouml;nnen Sie eine Endloswiederholung erzwingen. Das Abspielen der Datei wird dann so oft wiederholt, bis der Anwender die Anzeige der HTML-Datei mit der eingebetteten Datei verl&auml;&szlig;t.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;embed src=&quot;musik.wav&quot; loop=true&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>loop=true</b> k&ouml;nnen Sie einen Start der Plugin-Datei direkt nach dem Laden erzwingen.
+
+
+
+
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tckf.htm"><b>Speziellere Objekteigenschaften</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tckh.htm"><b>Videos einbinden (Microsoft)</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

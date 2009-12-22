@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.document</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.<i>document</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Eine Objektinstanz von <b>FENSTERNAME.document</b> wird automatisch erzeugt, wenn der WWW-Browser ein einleitendes <b>&lt;body&gt;</b>-Tag in der HTML-Datei vorfindet (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm#a1"><b>Grundger&uuml;st einer HTML-Datei</b></a>). Deshalb gibt es bei diesem Objekt auch keine selbst definierbaren Namen. Die in einem Fenster angezeigte Datei sprechen Sie einfach mit <b>FENSTERNAME.document</b> an. Den Fensternamen k&ouml;nnen Sie auch weglassen, wenn es sich um eine einfache HTML-Datei handelt, die nicht in einem Frame-Set steht. Bei Frame-Sets m&uuml;ssen Sie einen Fensternamen angeben. Lesen Sie hierzu den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm"><b><i>frames[ ] bzw. (Frame-Fenstername)</i></b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.alinkColor</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Farbe f&uuml;r Verweise, w&auml;hrend sie angeklickt werden, wie sie bei der Zusatzangabe <b>alink=</b> im <b>&lt;body&gt;</b>-Tag oder vom Anwender in seinen Browser-Einstellungen festgelegt wurde. Der R&uuml;ckgabewert bzw. Zuweisungswert ist eine Zeichenkette, die die Farbe in der HTML-&uuml;blichen Hexadezimalschreibweise enth&auml;lt (siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a2"><b>Farbe f&uuml;r Text und Verweise</b></a>). Mit <i>window.document.alinkColor=#FFFFFF;</i> k&ouml;nnen Sie z.B. nachtr&auml;glich eine wei&szlig;e Farbe zuweisen. Anstelle einer festen Angabe k&ouml;nnen Sie nat&uuml;rlich auch eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm"><b>Variable</b></a> zuweisen, deren Wert der Anwender beispielsweise in einem <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a> selbst bestimmen kann.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.bgColor</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Hintergrundfarbe der HTML-Datei, wie sie bei der Zusatzangabe <b>bgcolor=</b> im <b>&lt;body&gt;</b>-Tag oder vom Anwender in seinen Browser-Einstellungen festgelegt wurde. Der R&uuml;ckgabewert bzw. der Zuweisungswert ist eine Zeichenkette, die die Farbe in der HTML-&uuml;blichen Hexadezimalschreibweise enth&auml;lt.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.cookie</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Cookies (<i>cookies = Kekse - die Herkunft des Namens ist unbekannt</i>) bieten Ihnen als Anbieter von WWW-Seiten die M&ouml;glichkeit, direkt aus einer HTML-Datei heraus Daten auf dem Rechner des Anwenders zu speichern und beim erneuten Aufruf der gleichen HTML-Datei wieder auszulesen. So kann eine WWW-Seite dynamisch auf gespeicherte Daten reagieren. Bei jedem Versuch, einen Cookie zu setzen, fragt der WWW-Browser den Anwender, ob er den Cookie setzen darf. Cookies sind ein hei&szlig; umstrittenes Thema. Viele Anwender reagieren emp&ouml;rt auf den Versuch, da&szlig; eine WWW-Seite Daten auf ihre Festplatte schreiben will. Dabei sind Cookies v&ouml;llig ungef&auml;hrlich und weitaus unkritischer f&uuml;r den Anwender als etwa der Download eines Programms aus dem Internet. Es ist nur m&ouml;glich, diejenigen Cookies auszulesen, die man selbst gesetzt hat. Eine Viren&uuml;bertragung mit Cookies ist ausgeschlossen. Ein Cookie ist in etwa das gleiche wie ein Eintrag in einer INI-Datei unter MS-Windows. Es wird als Klartext eine Variable mit einem zugewiesenen Wert abgespeichert, zum Beispiel Datum und Uhrzeit des letzten Besuchs der WWW-Seite. Es k&ouml;nnen keine Rechnerdaten des Anwenders ausgelesen werden. Angesichts des vorherrschenden Mi&szlig;trauens bei Anwendern, die einfach nicht wissen, was so ein Cookie ist und was er tut, sollten Sie Cookies jedoch nur verwenden, wenn Sie einen besonderen Grund dazu haben. Netscape verwaltet Cookies in einer Datei namens COOKIES.TXT auf dem Rechner des Anwenders. Der MS Internet Explorer verwaltet die Cookies in einem Unterverzeichnis des Windows-Verzeichnisses. Ein Anwendungsbeispiel f&uuml;r Cookies finden Sie in diesem Dokument im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddd.htm"><b>Anzahl Besuche eines Anwenders</b></a>. Auf den WWW-Seiten von Netscape erhalten Sie weitere <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://home.netscape.com/newsref/std/cookie_spec.html"><b>Informationen zu Cookies</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.fgColor</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Farbe f&uuml;r Text, wie sie bei der Zusatzangabe <b>text=</b> im <b>&lt;body&gt;</b>-Tag oder vom Anwender in seinen Browser-Einstellungen festgelegt wurde. Der R&uuml;ckgabewert bzw. Zuweisungswert ist eine Zeichenkette, die die Farbe in der HTML-&uuml;blichen Hexadezimalschreibweise enth&auml;lt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.lastModified</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Datum und Uhrzeit der letzten &Auml;nderung an der HTML-Datei. Mit einer Anweisung wie <i>window.document.write(document.lastModified);</i> k&ouml;nnen Sie Datum und Uhrzeit der letzten &Auml;nderung direkt in die HTML-Datei schreiben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.linkColor</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Farbe f&uuml;r Verweise zu noch nicht besuchten Seiten, wie sie bei der Zusatzangabe <b>link=</b> im <b>&lt;body&gt;</b>-Tag oder vom Anwender in seinen Browser-Einstellungen festgelegt wurde. Der R&uuml;ckgabewert bzw. Zuweisungswert ist eine Zeichenkette, die die Farbe in der HTML-&uuml;blichen Hexadezimalschreibweise enth&auml;lt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.referrer</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></table>
+Die vollst&auml;ndige URL-Adresse der HTML-Datei, von der aus die aktuelle HTML-Datei aufgerufen wurde. So k&ouml;nnen Sie beispielsweise mit <i>window.document.write(&quot;&lt;a href=&quot; + document.referrer +&quot;&gt;&quot; +  document.referrer +&quot;&lt;/a&gt;&quot;);</i> in das aktuelle Dokumentfenster dynamisch einen Verweis zu der WWW-Seite schreiben, von der aus der Anwender die aktuelle Datei aufgerufen hat.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.title</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></table>
+Der Titel der HTML-Datei, wie er bei <b>&lt;title&gt;</b> ... <b>&lt;/title&gt;</b> angegeben ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.vlinkColor</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Farbe f&uuml;r Verweise zu bereits besuchten Seiten, wie sie bei der Zusatzangabe <b>vlink=</b> im <b>&lt;body&gt;</b>-Tag oder vom Anwender in seinen Browser-Einstellungen festgelegt wurde. Der R&uuml;ckgabewert bzw. Zuweisungswert ist eine Zeichenkette, die die Farbe in der HTML-&uuml;blichen Hexadezimalschreibweise enth&auml;lt.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.clear()</font></b><br>
+Leert den Inhalt des Fensters. Das Fenster selbst wird nicht geschlossen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.close()</font></b><br>
+Schlie&szlig;t ein Dokument. Wird typischerweise in Verbindung mit <b>document.open()</b> und <b>document.write()</b> bzw. <b>document.writeln()</b> verwendet.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.open(<i>Mime-Type</i>)</font></b><br>
+&Ouml;ffnet ein Dokument zum Schreiben. Wird typischerweise in Verbindung mit <b>document.open()</b> und <b>document.write()</b> bzw. <b>document.writeln()</b> verwendet. Optional k&ouml;nnen Sie den Dateityp als Parameter &uuml;bergeben. Erlaubt sind die Angaben &quot;text/html&quot;, &quot;text/plain&quot;, &quot;image/gif&quot;, &quot;image/jpeg&quot;, &quot;image/x-bitmap&quot; oder PlugIn-Typen (z.B. &quot;x-world/vrml&quot; oder &quot;application/x-director&quot;).
+
+<a name="a31"><p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.write(<i>Inhalt</i>)</font></b></a><br>
+Schreibt HTML-formatierten Text und von JavaScript verwaltete Variableninhalte in das Dokumentfenster. So k&ouml;nnen Sie z.B. mit <i>Zweitfenster.document.open(&quot;text/html&quot;); Zweitfenster.document.write(&quot;&lt;h2&gt;Sie benutzen den Browser &quot; + navigator.appName + navigator.appVersion + &quot;&lt;/h2&gt;&quot;);</i> in einem zuvor definierten zweiten Fenster (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm#a11"><b>Neues Fenster / Objektinstanz von window erzeugen</b></a>) HTML-formatiert Name und Version des vom Anwender benutzten WWW-Browsers ausgeben. Beachten Sie im Zusammenhang mit <b>document.write()</b> auch die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcr.htm#a3"><b>Methoden des string-Objekts</b></a>.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.writeln(<i>Inhalt</i>)</font></b><br>
+Wie <b>document.write()</b>. F&uuml;gt jedoch im Unterschied zu <b>document.write()</b> noch ein Zeilenumbruchzeichen am Ende ein.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcb.htm"><b>window</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcd.htm"><b>FENSTERNAME.<i>document</i>.anchors</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

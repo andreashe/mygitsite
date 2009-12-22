@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>SELFHTML: Videos einbinden (Microsoft)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<h1><font color=#6666CC>Videos einbinden (Microsoft)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Videodateien einbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Wiederholungsrate des Videos einstellen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Anzeigegr&ouml;&szlig;e des Videos bestimmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Alternative Grafikanzeige, falls Video nicht angezeigt werden kann</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Startbeginn des Videos festlegen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Kontroll-Buttons f&uuml;r Videoablauf anzeigen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Videodateien einbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der im fogenden beschriebene HTML-Befehl ist ein proprietäres Microsoft-Tag, das aber vom Internet Explorer seit der Programmversion 2.0 interpretiert wird. Es gilt nur für Videodateien des Microsoft-Typs AVI und ist infsofern weitgehend auf die Windows-Welt beschränkt. Das HTML-Tag und seine Varianten werden hier nur noch der Vollständigkeit halber beschrieben. Bitte verwenden Sie dieses Tag nur noch in begründeten Ausnahmefällen.
+<p>
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;img dynsrc=&quot;hochzeit.avi&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;img dynsrc=...&gt;</b> notieren Sie eine Video-Referenz (<i>img = image = Bild, dynsrc = dynamic source = dynamische Quelle</i>). Hinter dem Istgleichzeichen folgt die Angabe der Videodatei. Es mu&szlig; eine Datei vom Typ AVI sein. Der Dateiname mu&szlig; in Anf&uuml;hrungszeichen stehen.
+<p>
+Im Beispiel wird vorausgesetzt, da&szlig; sich die Video-Datei im gleichen
+Verzeichnis befindet wie die HTML-Datei, in der sie referenziert wird. Sie
+k&ouml;nnen auch Video-Dateien in anderen Verzeichnissen referenzieren. Das
+funktioniert genau so wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Wiederholungsrate des Videos einstellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Normalerweise wird das Video genau einmal abgespielt. Sie k&ouml;nnen eine
+bestimmte Wiederholungsanzahl von Abspielvorg&auml;ngen festlegen oder
+erzwingen, da&szlig; das Video unbegrenzt oft wiederholt wird.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img dynsrc=&quot;hochzeit.avi&quot; loop=infinite&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Zusatzangabe <b>loop=</b> k&ouml;nnen Sie die
+Wiederholungsanzahl der Abspielvorg&auml;nge beeinflussen (<i>loop = Schleife</i>). Mit
+<b>loop=infinite</b> bewirken Sie, da&szlig; das Video solange
+abgespielt wird, wie sich der Anwender die HTML-Datei anzeigen l&auml;&szlig;t. Wenn Sie die Anzahl der Abspielvorg&auml;nge genau angeben wollen, geben Sie anstelle von &quot;infinite&quot; die gew&uuml;nschte Zahl ein, z.B. <b>loop=4</b>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Anzeigegr&ouml;&szlig;e des Videos bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie hierzu keine Angaben machen, wird das Video in seinem normalen Format angezeigt. Sie k&ouml;nnen die Anzeigegr&ouml;&szlig;e ver&auml;ndern.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img dynsrc=&quot;hochzeit.avi&quot; width=640 height=480&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der zus&auml;tzlichen Angabe <b>width=</b> dehnen bzw.
+komprimieren Sie die Anzeigebreite des Videos, mit <b>height=</b> die
+Anzeigeh&ouml;he des Videos (<i>width = Breite, height = Höhe</i>). Die Wertangabe erfolgt in Pixeln. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe von Breite und Höhe hat hier die gleichen Vorteile wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Angeben von Breite und Höhe einer Grafik</b></a>.
+<p>
+Das Dehnen eines Videos kann eine gr&ouml;bere Aufl&ouml;sung bei der Anzeige bewirken. Wenn Sie Breite und H&ouml;he ohne Kenntnis des normalen Videoformats festlegen, kann dies zur Verzerrung des Videos f&uuml;hren. In manchen F&auml;llen (z.B. f&uuml;r Cartoon-Effekte) kann dies sogar w&uuml;nschenswert sein. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Alternative Grafikanzeige, falls Video nicht angezeigt werden kann</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+F&uuml;r den Fall, da&szlig; das Video nicht angezeigt werden kann (z.B. weil
+ein anderer Browser verwendet wird), k&ouml;nnen Sie eine Grafikdatei angeben, die anstelle des Videos angezeigt wird.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img dynsrc=&quot;hochzeit.avi&quot; src=&quot;party.gif&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der zus&auml;tzlichen Angabe <b>src=</b> bestimmen Sie ein Bild,
+das alternativ angezeigt wird (<i>src = source = Quelle</i>). Das Bild wird nur dann angezeigt, wenn das bei <b>dynsrc=</b> referenzierte Video nicht angezeigt werden kann. Auf diese Weise k&ouml;nnen Sie z.B. bewirken, da&szlig; Anwender des MS Internet Explorers ein Video angezeigt bekommen, w&auml;hrend Anwender mit anderen Browsern anstelle des Videos die angegebene Grafik sehen.
+<p>
+Der Dateiname der Grafik mu&szlig; in Anf&uuml;hrungszeichen stehen. Im Beispiel wird vorausgesetzt, da&szlig; sich die Grafikdatei im gleichen Verzeichnis befindet wie die HTML-Datei, in der sie referenziert wird. Sie k&ouml;nnen auch Grafikdateien in anderen Verzeichnissen referenzieren. Das funktioniert genau so wie beim gew&ouml;hnlichen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Referenzieren von Grafiken</b></a>.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Startbeginn des Videos festlegen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Normalerweise wird das eingebundene Video sofort beim Aufruf der HTML-Datei abgespielt. Sie k&ouml;nnen bestimmen, da&szlig; der MS Internet Explorer erst dann mit dem Abspielen des Videos beginnt, wenn der Anwender mit dem Mauscursor &uuml;ber den Anzeigebereich des Videos f&auml;hrt.
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img dynsrc=&quot;hochzeit.avi&quot; start=mouseover&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der zus&auml;tzlichen Angabe <b>start=mouseover</b> legen Sie
+fest, da&szlig; das Video erst dann abgespielt wird, wenn sich die Maus im Anzeigebereich des Videos befindet. Mit der Angabe <b>start=fileopen</b> stellen Sie dagegen ein, da&szlig; das Video gleich beim Aufrufen der Datei abgespielt wird. Letztere Angabe ist jedoch in der Praxis nicht erforderlich, da sie der Voreinstellung entspricht.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Kontroll-Buttons f&uuml;r Videoablauf anzeigen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckha.htm#a6"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen dem Anwender unterhalb des Anzeigebereichs des Videos Kontroll-Buttons zur Verf&uuml;gung stellen, falls der Browser solche Elemente nicht automatisch anzeigt. Mit diesen Buttons kann der Anwender das Video z.B. anhalten und fortsetzen, schnell vorw&auml;rts und r&uuml;ckw&auml;rts laufen lassen oder abbrechen. Diese Funktionen m&uuml;ssen von der Browser-Software zur Verf&uuml;gung gestellt werden. 
+
+<a name="iembed"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img dynsrc=&quot;hochzeit.avi&quot; controls&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Zusatzangabe <b>controls</b> bewirken Sie, da&szlig; dem
+Anwender die Kontrollfunktionen zur Verf&uuml;gung stehen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tckg.htm"><b>Multimedia einbinden (Netscape)</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcki.htm"><b>Java-Applets einbinden (Netscape, Sun)</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

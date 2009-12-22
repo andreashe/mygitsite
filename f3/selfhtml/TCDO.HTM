@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>SELFHTML: Freies Plazieren von Text</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0"> Freies Plazieren von Text</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Vertikale Abst&auml;nde</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Horizontale Einr&uuml;ckungen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Treppeneffekte</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Unsichtbare Bilder</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+</a><spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Vertikale Abst&auml;nde</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdoa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Ein neues HTML-Tag, das von Netscape ab V3.0 interpretiert wird, erlaubt es, horizontale und vertikale Leerr&auml;ume einzuf&uuml;gen. Dadurch lassen sich beispielsweise Absatzabst&auml;nde manuell vergr&ouml;&szlig;ern.
+
+<a name="ispacer_vertical"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Hier ist ein Absatz zu ende.
+&lt;p&gt;   &lt;!-- Ein neuer Absatz wird eingef&uuml;gt --&gt;
+&lt;spacer type=vertical size=30&gt;
+Ein neuer Absatz beginnt hier. Der Abstand zum vorherigen Absatz ist 
+deutlich gr&ouml;&szlig;er als gew&ouml;hnlich
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;spacer ...&gt;</b> leiten Sie einen Zwischenraum ein (<i>spacer = &quot;Raumschaffer&quot;</i>). Notieren Sie das Tag genau an der Stelle, wo Sie den Zwischenraum w&uuml;nschen. Mit der Zusatzangabe <b>type=vertical</b> geben Sie an, da&szlig; es ein vertikaler Zwischenraum sein soll, wie es f&uuml;r Absatzabst&auml;nde erforderlich ist. Mit der Angabe <b>size=</b> bestimmen Sie die Gr&ouml;&szlig;e des Abstands. die Angabe erfolgt in Pixeln (<i>size=Gr&ouml;&szlig;e</i>).  
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Horizontale Einr&uuml;ckungen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdoa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen beispielsweise die erste Zeile eines Absatzes einr&uuml;cken, so wie es in vielen B&uuml;chern und Zeitschriften &uuml;blich ist. 
+
+<a name="ispacer_horizontal"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Hier ist ein Absatz zu ende.
+&lt;p&gt;   &lt;!-- Ein neuer Absatz wird eingef&uuml;gt --&gt;
+&lt;spacer type=horizontal size=12&gt;Ein neuer Absatz beginnt hier. 
+Die erste Zeile des Absatzes wird einger&uuml;ckt.
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;spacer ...&gt;</b> leiten Sie die Einr&uuml;ckung ein. Notieren Sie das Tag am besten vor dem ersten Wort des Absatzes, also dem Wort, das einger&uuml;ckt werden soll. Mit der Zusatzangabe <b>type=horizontal</b> erzwignen Sie einen horizontalen Zwischenraum, wie es f&uuml;r Einr&uuml;ckungen erforderlich ist. Mit <b>size=</b> geben Sie an, um wieviel Pixel die Zeile einger&uuml;ckt wird.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Treppeneffekte</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdoa.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen mehrere Zeilen stufenweise horizontal einr&uuml;cken und auf diese Weise Treppeneffekte erzielen. Da die horizontale Einr&uuml;ckung auch innerhalb von Zeilen erlaubt ist, sind sogar &quot;mehrspaltige Treppen&quot; m&ouml;glich.
+
+<a name="ispacer_horizontal_2"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Die erste Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+&lt;spacer type=horizontal size=20&gt;Die zweite Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+&lt;spacer type=horizontal size=40&gt;Die dritte Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+&lt;spacer type=horizontal size=60&gt;Die vierte Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+&lt;spacer type=horizontal size=40&gt;Die f&uuml;nfte Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+&lt;spacer type=horizontal size=20&gt;Die sechste Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+Die siebte Zeile&lt;spacer type=horizontal size=50&gt;Mit Abstand&lt;br&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel k&ouml;nnen Sie sehen, wie das <b>&lt;spacer&gt;</b>-Tag sowohl vor Textzeilen als auch innerhalb von Textzeilen sinnvoll verwendet werden kann. Die Zeilen zwei bis sechs im Beispiel werden am Zeilenanfang durch <b>&lt;spacer type=horizontal ...&gt;</b> um so viel Pixel einger&uuml;ckt wie bei <b>width=</b> angegeben. Die Angaben sind so gew&auml;hlt, da&szlig; sich ein Treppeneffekt ergibt. Innerhalb jeder der sieben Zeilen des Beispiels wird nochmals ein horizontaler Abstand mit fester Breite von 50 Pixeln eingef&uuml;gt. Dadurch ergibt sich eine zweite &quot;Treppe&quot; mit festem horizontalen Abstand zur ersten Treppe.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Unsichtbare Bilder</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdoa.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen &quot;unsichtbare Bilder&quot; definieren, d.h. Rechtecke von frei w&auml;hlbarer Gr&ouml;&szlig;e. Diese unsichtbaren Bilder haben auf den umgebenden Text die gleiche Auswirkung wie referenzierte Grafiken (siehe hierzu <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm"><b>Text um Grafiken flie&szlig;en lassen</b></a>).
+
+<a name="ispacer_block"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;spacer type=block width=100 height=50 align=left&gt;Der hier stehende Text
+flie&szlig;t links um ein unsichtbares Rechteck.  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangaben <b>type=block</b> (<i>block = Rechteck</i>), <b>width=</b> (<i>width=Breite</i>) und <b>height=</b> (<i>height=H&ouml;he</i>) definieren Sie ein Rechteck f&uuml;r den gew&uuml;nschten Leerraum. Mit <b>width=</b> bestimmen Sie die Breite des Rechtecks, mit <b>height=</b> die H&ouml;he. Beide Angaben erfolgen in Pixeln. Wenn Text um das Rechteck flie&szlig;en soll, sollten Sie die Ausrichtung festlegen. Mit der Angabe <b>align=left</b> flie&szlig;t der folgende Text rechts um das links ausgerichtete Rechteck, mit der Angabe <b>align=right</b> flie&szlig;t er links um das rechts ausgerichtete Rechteck.
+<p>
+Wenn Sie diesen Befehl gleich hinter dem einleitenden &lt;body&gt;-Tag notieren und die H&ouml;he hinreichend gro&szlig; w&auml;hlen (z.B. <b>height=10000</b>), k&ouml;nnen Sie auf diese Weise Seitenr&auml;nder erzwingen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdn.htm"><b>Mehrspaltiger Textflu&szlig;</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdp.htm"><b>Lauftext (Marquee)</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

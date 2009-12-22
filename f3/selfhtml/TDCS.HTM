@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>SELFHTML: Objektunabh&auml;ngige Funktionen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Objektunabh&auml;ngige Funktionen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu objektunabh&auml;ngigen Funktionen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Liste der objektunabh&auml;ngigen Funktionen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu objektunabh&auml;ngigen Funktionen</font></h2></a>
+Objektunabh&auml;ngige Funktionen sind im Gegensatz zu selbst definierten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktionen</b></a> in JavaScript bereits vordefiniert. Das hei&szlig;t, Sie k&ouml;nnen diese Funktionen jederzeit aufrufen.
+<p>
+Es handelt sich um bestimmte, zum Teil mächtige JavaScript-Befehle, die in keines der JavaScript-Objekte passen und deshalb nicht der objektorientierten Richtung von JavaScript folgen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Liste der objektunabh&auml;ngigen Funktionen</font></h2></a>
+
+<b><font color=#6666CC>eval(Zeichenkette)</font></b><br>
+Berechnet die zu &uuml;bergebende Zeichenkette und gibt das Ergebnis zur&uuml;ck. Wenn Sie beispielsweise <i>alert(x = eval('3 + 4 * 6'))</i> notieren, wird am Bildschirm das Ergebnis des Rechenausdrucks ausgegeben, im Beispiel 27.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>parseFloat(Zeichenkette)</font></b><br>
+Wandelt eine zu &uuml;bergebende Zeichenkette in eine Kommazahl um und gibt diese als Ergebnis zur&uuml;ck. Sinnvoll, um z.B. Anwendereingaben in Zahlen umzuwandeln, mit denen man anschlie&szlig;end rechnen kann. Beispielsweise wird bei <i>x = parseFloat('3.14') * 2</i> in der Variablen <i>x</i> der Wert 6.28 gespeichert, obwohl '3.14' zun&auml;chst nur als Zeichenkette und nicht als Zahl vorliegt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>parseInt(Zeichenkette)</font></b><br>
+Wandelt eine zu &uuml;bergebende Zeichenkette in eine Ganzzahl um und gibt diese als Ergebnis zur&uuml;ck. Sinnvoll, um z.B. Anwendereingaben in Zahlen umzuwandeln, mit denen man anschlie&szlig;end rechnen kann. Beispielsweise wird bei <i>x = parseInt('84') / 2</i> in der Variablen <i>x</i> der Wert 42 gespeichert, obwohl '84' zun&auml;chst nur als Zeichenkette und nicht als Zahl vorliegt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>isNaN(Wert)</font></b><br>
+Ermittelt, ob ein zu &uuml;bergebender Wert eine ung&uuml;ltige Zahl ist (NaN = Not a Number). Achtung: Funktioniert nicht unter MS Windows. Wenn Sie beispielsweise <i>if isNaN(x) break;</i> notieren, bricht eine Berechnungsfunktion ab, falls der Wert <i>x</i> keine g&uuml;ltige Zahl ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>escape(Zeichenkette)</font></b><br>
+Wandelt alle Zeichen der zu &uuml;bergebenden Zeichenkette in ihre ASCII-Zahlenwerte um, setzt vor jeden Wert das Trennzeichen &quot;%&quot; und gibt die so erzeugte Zeichenkette zur&uuml;ck. Wenn Sie beispielsweise <i>var ASCIIWerte = escape('&amp;')</i> notieren, wird in der Variablen <i>ASCIIWerte</i> der R&uuml;ckgabewert <i>%26</i> gespeichert. Es handelt sich um den Hexadezimalwert des Zeichens in der ASCII-Zeichentabelle.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>unescape(Zeichenkette)</font></b><br>
+Wandelt alle Zeichen der zu &uuml;bergebenden Zeichenkette in normale ASCII-Zeichen um und gibt die so erzeugte Zeichenkette zur&uuml;ck. Die zu &uuml;bergebende Zeichenkette mu&szlig; f&uuml;r jedes umzuwandelnde Zeichen ein Prozentzeichen (%) und den Hexadezimalwert des Zeichens in der ASCII-Zeichentabelle enthalten. Wenn Sie beispielsweise <i>var Zeichen = escape('%26')</i> notieren, wird in der Variablen <i>Zeichen</i> der R&uuml;ckgabewert <i>&amp;</i> gespeichert. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcr.htm"><b>string</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdda.htm"><b>Lauftext in der Statuszeile</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

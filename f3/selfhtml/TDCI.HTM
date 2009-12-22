@@ -1,0 +1,210 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.document.layers[ ] / LAYERNAME</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.document.layers[ ] / LAYERNAME</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Mit dem Objekt <b>FENSTERNAME.document.layers[ ] / LAYERNAME</b> haben Sie Zugriff auf alle Layer, 
+die in einer HTML-Datei definiert sind. Layer und die hier behandelten JavaScript-Elemente werden derzeit nur von Netscape ab Version 4.0 interpretiert.
+<p>
+Eine Objektinstanz des Layer-Objekts wird automatisch erzeugt, wenn der WWW-Browser mindestens einen <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcl.htm"><b>Layer</b></a> in der HTML-Datei vorfindet. 
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Layer ansprechen</font></h3>
+Sie k&ouml;nnen definierte Layer mit JavaScript ansprechen.
+
+<h4><font color=#6666CC>Schema 1 / Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.layers[#].Eigenschaft/Methode()
+window.document.layers[1].moveTo(100,200);
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Schema 2 / Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+FENSTERNAME.document.LAYERNAME.Eigenschaft/Methode()
+window.document.Zweitlayer.moveTo(100,200);
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Layer einer HTML-Datei k&ouml;nnen Sie auf zwei Arten ansprechen:
+<ul>
+<li>mit einer Indexnummer (wie in Schema 1 / Beispiel 1)<br>
+Bei Verwendung von Indexnummern geben Sie <b>layers</b> an und dahinter in eckigen Klammern, den wievielten Layer innerhalb der HTML-Datei Sie meinen. Beachten Sie, da&szlig; der Z&auml;hler bei 0 beginnt, d.h. den ersten Layer sprechen Sie mit <b>layers[0]</b> an, den zweiten Layer mit <b>layers[1]</b> usw. Beim Z&auml;hlen gilt die Reihenfolge, in der die Layer in der HTML-Datei eingebunden sind.
+<p>
+<li>mit dem Namen des Layers (wie in Schema 2 / Beispiel 2)<br>
+Dabei geben Sie den Namen an, der beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a2"><b>Definieren des Layers</b></a> in der Zusatzangabe <b>name=</b> definiert worden ist.
+</ul>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die hier beschriebenen JavaScript-Elemente gelten vorerst nur f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a2"><b>Fest positionierte Layer</b></a>.
+<p>
+Zu den Fensternamen lesen Sie den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm#a1"><b>Allgemeines zur Verwendung des window-Objekts</b></a>. Bei Verwendung von Frames lesen Sie auch den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdck.htm#a1"><b>Allgemeines zur Verwendung des Frame-Objekts</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].clip.left/top/right/bottom/width/height</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.clip.left/top/right/bottom/width/height</font></b><br>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Ein Rechteck zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a4"><b>Beschneiden des Anzeigebereichs von Layern</b></a>. Mit zwei Anweisungen wie <i>window.document.layers[0].clip.left=50; window.document.layers[0].clip.top=30;</i> k&ouml;nnen Sie beispielsweise die linke obere Ecke des beschneidenden Rechtecks f&uuml;r den ersten Layer in der Datei &auml;ndern.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].left</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.left</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Innerhalb der Definition der linken oberen Ecke eines Layers der Wert f&uuml;r &quot;links&quot;. Mit zwei Anweisungen wie <i>window.document.KleinerLayer.left=80; window.document.KleinerLayer.top=40;</i> k&ouml;nnen Sie beispielsweise den kompletten Layer mit dem Namen &quot;KleinerLayer&quot; an eine andere Stelle verschieben.
+
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].name</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.name</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Der Name eines Layers, sofern ein Name vergeben wurde. Mit einer Anweisung wie var <i>L1Name = window.document.layers[3].name;</i> k&ouml;nnen Sie beispielsweise den Namen des vierten in der Datei definierten Layers in einer Variable speichern. Die Variable k&ouml;nnen Sie dann weiterverarbeiten.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].siblingAbove</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.siblingAbove</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Der Layer, der aufgrund der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a2"><b>numerischen Ordnung</b></a>, die mit <b>z-index=</b> festgelegt wurde, &uuml;ber dem angesprochenen Layer liegt. Es handelt sich dabei um ein Layer-Objekt, f&uuml;r das seinerseits alle verf&uuml;gbaren Eigenschaften und Methoden gelten. So k&ouml;nnen Sie beispielsweise mit <i>var x = window.document.GrosserLayer.siblingAbove.name</i> den Namen des Layers in einer Variablen speichern, der sich in der Reihenfolge &uuml;ber dem angesprochenen Layer, also im Beispiel unter dem Layer mit dem Namen &quot;GrosserLayer&quot; befindet.
+ 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].siblingBelow</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.siblingBelow</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Der Layer, der aufgrund der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a2"><b>numerischen Ordnung</b></a>, die mit <b>z-index=</b> festgelegt wurde, unter dem angesprochenen Layer liegt. Analog zu <b>...siblingAbove</b>.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].top</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.top</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Innerhalb der Definition der linken oberen Ecke eines Layers der Wert f&uuml;r &quot;oben&quot;. Mit zwei Anweisungen wie <i>window.document.KleinerLayer.left=80; window.document.KleinerLayer.top=40;</i> k&ouml;nnen Sie beispielsweise den kompletten Layer mit dem Namen &quot;KleinerLayer&quot; an eine andere Stelle verschieben.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers[<tt>#</tt>].visibility</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.visibility</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td>
+<td width=100 bgcolor=#FFFFCC><b>&Auml;ndern</b></td></tr></table>
+Angabe zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tclc.htm#a3"><b>Anzeigen oder Verstecken eines Layers</b></a>. M&ouml;gliche Werte sind &quot;show&quot; (anzeigen), &quot;hide&quot;(verstecken) oder &quot;inherit&quot; (wie Eltern-Layer). Wenn ein Layer beispielsweise in der HTML-Datei zun&auml;chst auf &quot;show&quot; eingestellt ist, k&ouml;nnen Sie ihn mit einer Anweisung wie <i>FENSTERNAME.document.layers[0].visibility=&quot;hide&quot;</i> verstecken.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers.[<tt>#</tt>].moveAbove(Layername)</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.moveAbove(Layername)</font></b><br>
+Legt den angesprochenen Layer &uuml;ber den mit &quot;Layername&quot; benannten Layer.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers.[<tt>#</tt>].moveBelow(Layername)</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.moveBelow(Layername)</font></b><br>
+Legt den angesprochenen Layer unter den mit &quot;Layername&quot; benannten Layer.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers.[<tt>#</tt>].moveTo(x,y)</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.moveTo(x,y)</font></b><br>
+Verschiebt den angesprochenen Layer so, da&szlig; die neue left-Position (=links) bei x beginnt und die neue top-Position (=oben) bei y.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers.[<tt>#</tt>].offset(x,y)</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.offset(x,y)</font></b><br>
+Verschiebt den angesprochenen Layer so, da&szlig; die neue left-Position (=links) x Pixel weiter oder weniger links beginnt als zuvor und die neue top-Position (=oben) y Pixel weiter unten oder oben als zuvor. F&uuml;r Verschiebung nach links bzw. oben m&uuml;ssen Sie negative Werte benutzen.
+
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>FENSTERNAME.document.layers.[<tt>#</tt>].resize(rechts,unten)</font><br>
+<font color=#6666CC>FENSTERNAME.document.LAYERNAME.resize(Breite,H&ouml;he)</font></b><br>
+Verändert die Größe eines Rechtecks zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcla.htm#a4"><b>Beschneiden des Anzeigebereichs von Layern</b></a>. Mit rechts bzw. unten geben Sie die Pixelkoordinaten der neuen gewünschten rechten unteren Ecke an.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdch.htm"><b>FENSTERNAME.document.images[ ] / BILDNAME</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcj.htm"><b>FENSTERNAME.document.links[ ]</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>SELFHTML: Server Side Includes in HTML</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Server Side Includes in HTML</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Server Side Includes</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>&Uuml;bersicht der Server Side Includes</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu Server Side Includes</font></h2></a>
+
+Mit Hilfe von Server Side Includes (auch unter der Abk&uuml;rzung SSI bekannt) k&ouml;nnen Sie direkt innnerhalb von HTML-Dateien dynamische Information, z.B. Datum und Uhrzeit, einbinden. Sie k&ouml;nnen auch CGI-Programme starten und deren Ausgaben, beispielsweise einen Z&auml;hlerstand mit Anzahl Zugriffen auf die aktuelle Datei, in die HTML-Datei einbinden. Oder Sie geben den aktuellen Inhalt diverser <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebd.htm"><b>CGI-Umgebungsvariablen</b></a> direkt in HTML aus - ohne Umweg &uuml;ber ein separates CGI-Script.
+<p>
+Server Side Includes werden nur ausgef&uuml;hrt, wenn der WWW-Browser die HTML-Datei &uuml;ber einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm"><b>installierten WWW-Server</b></a> aufruft, also mit einer URL-Adresse vom Typ <b>http://...</b>. Voraussetzung ist ferner, da&szlig; der installierte WWW-Server die Server Side Includes unterst&uuml;tzt. Nicht alle WWW-Server tun das, andere interpretieren nur einen Teil der m&ouml;glichen Angaben. Wenn der Server keine Server Side Includes kennt, funktionieren die entsprechenden Anweisungen in der HTML-Datei nicht. Beim Austesten mit einem lokal installierten WWW-Server lesen Sie hierzu bitte in der Dokumentation des Servers nach. Beim Einsatz auf einem &ouml;ffentlichen WWW-Server fragen Sie Ihren Provider, ob dessen WWW-Server die Server Side Includes unterst&uuml;tzt.
+<p>
+Damit ein WWW-Server sofort erkennt, da&szlig; eine HTML-Datei Server Side Include Anweisungen enth&auml;lt, ist es wichtig, solche HTML-Dateien mit einer speziellen Dateinamenendung zu kennzeichnen. &Uuml;blich sind die Dateiendungen <b>.shtml</b>, <b>.shtm</b> oder <b>.sht</b>. Die meisten Server ignorieren Server Side Include Anweisungen, wenn diese in einer gew&ouml;hnlichen HTML-Datei mit der Endung .htm oder .html stehen!
+
+<h4><font color=#6666CC>Beispiel: HTML-Datei <i>test.shtml</i> mit Server Side Includes</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Dynamisches HTML mit Server Side Includes&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Dynamisches HTML mit Server Side Includes&lt;/h1&gt;
+Datum/Uhrzeit auf dem Server-Rechner: &lt;!-- #echo var="DATE_LOCAL" --&gt;&lt;br&gt;
+Name dieser HTML-Datei: &lt;!-- #echo var="DOCUMENT_NAME" --&gt;&lt;br&gt;
+Installierte Server-Software: &lt;!-- #echo var="SERVER_SOFTWARE" --&gt;&lt;br&gt;
+Ihr WWW-Browser: &lt;!-- #echo var="HTTP_USER_AGENT" --&gt;
+&lt;h3&gt;Weitere Informationen:&lt;/h3&gt;
+&lt;!-- #exec cgi="/cgi-bin/plapper.pl" --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Server Side Includes m&uuml;ssen Sie in einer HTML-Datei innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaf.htm#a1"><b>Kommentars</b></a> notieren. Es gibt verschiedene Server Side Include Anweisungen, beginnend mit einem Gatterzeichen <b>#</b>. Im obigen Beispiel kommen die Anweisungen <b>#echo</b> und <b>#exec</b> vor. Hinter der Anweisung folgt in der Regel eine Angabe der Art <b>Typ=&quot;Wert&quot;</b>. Im Zusammenhang mit der Anweisung <b>#echo</b> ist beispielsweise die Angabe <b>var=&quot;Variablenname&quot;</b> erlaubt, wobei &quot;Variablenname&quot; ein bestimmter, erlaubter Name sein mu&szlig;. Es kann sich um Namen von <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebd.htm"><b>CGI-Umgebungsvariablen</b></a> handeln oder um spezielle Server Sie Include Variablennamen (siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Liste weiter unten</b></a>). Bei der Anweisung <b>#exec</b>, die ein Programm auf dem Server-Rechner ausf&uuml;hrt, m&uuml;ssen Sie den Typ des Programms (im obigen Beispiel: <b>cgi</b>) und als Wert die Adresse des ausf&uuml;hrbaren Programms (im obigen Beispiel: <b>&quot;/cgi-bin/plapper.pl&quot;</b>), angeben.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>&Uuml;bersicht der Server Side Includes</font></h2></a>
+
+Die Liste ist nach Anweisungen alphabetisch sortiert.
+
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Anweisung</th>
+<th bgcolor=#CCCCCC align=left>Parameter/Wert</th>
+<th bgcolor=#CCCCCC align=left>Beispiele</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#config</b></td>
+<td bgcolor=#CCFFFF valign=top><b>errmsg = &quot;[Fehlermeldung]&quot;</b><br>
+<b>sizefmt = &quot;[Wert]&quot;</b><br>
+<b>timefmt = &quot;[Wert]&quot;</b><p>
+<b>errmsg</b> ist sinnvoll, um bei nicht anzeigbaren Server Side Includes eine verst&auml;ndliche Fehlermeldung auszugeben.<p>
+<b>sizefmt</b> bestimmt das Format f&uuml;r Dateigr&ouml;&szlig;enangaben, z.B. sinnvoll vor dem Gebrauch von <b>#fsize</b>.<br>
+Erlaubte Werte:<br>
+<b>&quot;abbrev&quot;</b> (Dateigr&ouml;&szlig;enangaben erfolgen in Kbyte).<br>
+<b>&quot;bytes&quot;</b> (Dateigr&ouml;&szlig;enangaben erfolgen in Byte).<br><p>
+<b>timefmt</b> bestimmt das Ausgabeformat f&uuml;r Datum/Uhrzeit, z.B. sinnvoll vor dem Gebrauch von <b>#echo var= &quot;LOCAL_TIME&quot;</b>.<br>
+Erlaubte Platzhalter:<br>
+<b>%a</b> = Wochentag kurz, z.B. sat<br>
+<b>%A</b> = Wochentag lang, z.B. Saturday<br>
+<b>%b</b> = Monat kurz, z.B. Apr<br>
+<b>%B</b> = Monat lang, z.B. April<br>
+<b>%d</b> = Tag im Monat 2stellig, z.B. 09<br>
+<b>%e</b> = Tag im Monat, z.B. 9<br>
+<b>%H</b> = Uhrzeit 24st&uuml;ndig, z.B. 15<br>
+<b>%I</b> = Uhrzeit 12st&uuml;ndig, z.B. 03<br>
+<b>%j</b> = julianisches Datum, z.B. 278<br>
+<b>%m</b> = Monat als Zahl, z.B. 05<br>
+<b>%M</b> = Minuten nach Stunde, z.B. 07<br>
+<b>%p</b> = bei%I: AM/PM, z.B. PM<br>
+<b>%S</b> = Sekunden, z.B. 01<br>
+<b>%U</b> = Kalenderwoche, z.B. 52<br>
+<b>%w</b> = n-ter Tag der Woche, z.B. 5<br>
+<b>%y</b> = Jahr 2stellig, z.B. 97<br>
+<b>%Y</b> = Jahr 4stellig, z.B. 1997<br>
+<b>%Z</b> = Zeitzone, z.B. MEZ
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #config errmsg = &quot;SSI nicht anzeigbar!&quot; --&gt;<br>
+&lt;!-- #config sizefmt = &quot;bytes&quot; --&gt;<br>
+&lt;!-- #config timefmt = &quot;%d.%m.%Y, %H.%M&quot; --&gt;
+</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#echo</b></td>
+<td bgcolor=#CCFFFF valign=top><b>var = &quot;[Variablenname]&quot;</b><p>
+Bei [Variablenname] sind <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebd.htm"><b>CGI-Umgebungsvariablen</b></a> erlaubt oder die folgenden, speziellen Variablennamen:
+<ul>
+<li>DOCUMENT_NAME (Name der HTML-Datei)
+<li>DOCUMENT_URI (Pfad der HTML-Datei)
+<li>LAST_MODIFIED (Zeitstempel der HTML-Datei)
+<li>QUERY_STRING_UNESCAPED (Unkodierter GET-&Uuml;bergabestring)
+<li>DATE_LOCAL (Datum/Uhrzeit, lokal nach Server)
+<li>DATE_GMT (Datum/Uhrzeit, nach Greenwich-Zeit)
+</ul>
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #echo var = &quot;SERVER_NAME&quot; --&gt;<br>
+&lt;!-- #echo var = &quot;DATE_LOCAL&quot; --&gt;
+</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#exec</b></td>
+<td bgcolor=#CCFFFF valign=top><b>cmd = &quot;[Pfad/Programmdatei]&quot;</b><br>
+<b>cgi = &quot;[CGI-Pfad/CGI-Programm/Script]&quot;</b><p>
+Benutzen Sie <b>cmd</b>, um ein beliebiges Programm auf dem Server-Rechner zu starten.<br>
+Benutzen Sie <b>cgi</b>, um ein CGI-Programm/CGI-Script auf dem Server-Rechner auszuf&uuml;hren.<p>
+Es sollte sich um Programme handeln, die Daten auf die Standardausgabe schreiben. Diese Datenausgaben werden dann direkt in die HTML-Datei geschrieben.
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #exec cmd = &quot;/prog/search.exe *.htm&quot; --&gt;<br>
+&lt;!-- #exec cgi = &quot;/cgi-bin/counter.pl&quot; --&gt;
+</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#fsize</b></td>
+<td bgcolor=#CCFFFF valign=top><b>file = &quot;[Pfad/Datei]&quot;</b>
+<p>
+Gibt die Gr&ouml;&szlig;e der angegebenen Datei aus.
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #fsize file = &quot;/download/selfhtml.zip&quot; --&gt;
+</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#flastmod</b></td>
+<td bgcolor=#CCFFFF valign=top><b>file = &quot;[Pfad/Datei]&quot;</b>
+<p>
+Gibt den Zeitstempel der angegebenen Datei aus.
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #flastmod file = &quot;/index.htm&quot; --&gt;
+</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><b>#include</b></td>
+<td bgcolor=#CCFFFF valign=top><b>file = &quot;[Pfad/Datei]&quot;</b><br>
+<b>virtual = &quot;[Pfad/Datei]&quot;</b><p>
+Gibt den Inhalt der angegebenen Datei aus.<p>
+Verwenden Sie <b>file</b> f&uuml;r absolute Pfadangaben auf dem Server-Rechner und <b>virtual</b> f&uuml;r relative Pfadangaben bezogen auf das Wurzelverzeichnis f&uuml;r Dokumente des WWW-Servers.
+</td>
+<td bgcolor=#FFCC99 valign=top nowrap>
+&lt;!-- #include virtual = &quot;/news/news.htm&quot; --&gt;
+</td>
+</tr>
+</table>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tebd.htm"><b>CGI-Umgebungsvariablen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tebf.htm"><b>HTML-Formulare und CGI</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>SELFHTML: Allgemeine Notationsregeln</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Allgemeine Notationsregeln</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Anweisungen notieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Anweisungsbl&ouml;cke notieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Selbstvergebene Namen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Kommentare in JavaScript</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Anweisungen notieren</font></h2></a>
+
+JavaScript besteht letztendlich aus einer kontrollierten Anordnung von Anweisungen. Das sind Befehle, die der JavaScript-Interpreter des WWW-Browsers bewertet und in Maschinencode umsetzt, der auf dem Rechner des Anwenders ausf&uuml;hrbar ist.
+<p>
+Es gibt einfache und komplexere Anweisungen.
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Zahl = 42;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Quadrat = Zahl * Zahl;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+if(Zahl &gt; 1000)
+  Zahl = 0;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 4:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+alert(&quot;Das Quadrat von &quot; + Zahl + &quot; = &quot; + Ergebnis);
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Anweisung in JavaScript besteht immer aus einem Befehl, der mit einem Strichpunkt <b>;</b> abgeschlossen wird.
+<p>
+Eine Anweisung ist es zum Beispiel: 
+<ul>
+<li>wenn Sie einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm"><b>Variablen</b></a> einen Wert zuweisen, wie oben in Beispiel 1. 
+<li>wenn Sie mit Variablen oder Werten eine Operation durchf&uuml;hren, wie oben in Beispiel 2.
+<li>wenn Sie einen Befehl nur unter bestimmten Bedingungen ausf&uuml;hren, wie oben in Beispiel 3 (siehe hierzu die Abschnitte &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingte Anweisungen</b></a> und &uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm"><b>Schleifen</b></a>). 
+<li>wenn Sie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a2"><b>selbst definierte Funktion</b></a> oder eine Objektmethode aufrufen, bzw. wenn Sie eine Objekteigenschaft auslesen oder &auml;ndern (siehe hierzu den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm"><b>Objekte, Eigenschaften und Methoden</b></a>).
+</ul>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Anweisungsbl&ouml;cke notieren</font></h2></a>
+
+Ein Anweisungsblock besteht aus zwei oder mehreren <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>
+Anweisungen</b></a>, die innerhalb einer &uuml;bergeordneten Anweisung oder innerhalb einer Funktion stehen. So k&ouml;nnen Anweisungsbl&ouml;cke beispielsweise innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingten Anweisung</b></a> oder innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm"><b>Schleife</b></a> stehen. Auch alle Anweisungen, die innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a1"><b>selbst definierten Funktion</b></a> stehen, bilden einen Anweisungsblock
+
+<h4><font color=#6666CC>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+if(Zahl &gt; 1000)
+ {
+  Zahl = 0;
+  Neustart();
+ }  
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+while(i &lt;= 99)
+ {
+  Quadrat(i);
+  i = i + 1;
+ }  
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 3:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+function SageQuadrat(x)
+ {
+  var Ergebnis = x * x;
+  alert(Ergebnis);
+ }  
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel 4:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+function SageEinmaleinsQuadrat(x)
+ {
+  var Ergebnis = x * x;
+  if(Ergebnis &gt; 100)
+   {
+    Ergebnis = 0;
+    Neustart();
+   }  
+  alert(Ergebnis);
+ }  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Ein Anweisungsblock wird durch eine &ouml;ffnende geschweifte Klammer <b>{</b> begonnen und durch eine schlie&szlig;ende geschweifte Klammer <b>}</b> beendet. 
+<p>
+Bei bedingten Anweisungen (wie in Beispiel 1 oben) oder bei Schleifen (wie in Beispiel 2 oben) m&uuml;ssen Sie solche Anweisungsbl&ouml;cke notieren, sobald mehr als zwei Anweisungen von der Bedingung oder der Schleifenbedingung abh&auml;ngig ausgef&uuml;hrt werden sollen. Bei Funktionen (wie in Beispiel 3 oben) m&uuml;ssen Sie Anfang und Ende der Funktion durch geschweifte Klammern markieren. Alles, was innerhalb der Funktion steht, ist daher ein Anweisungsblock.
+<p>
+Anweisungsbl&ouml;cke k&ouml;nnen nat&uuml;rlich auch verschachtelt sein, so wie in Beispiel 4 oben.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Selbst vergebene Namen</font></h2></a>
+
+An vielen Stellen in JavaScript m&uuml;ssen Sie selbst Namen vergeben, zum Beispiel f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a1"><b>selbst definierten Funktionen</b></a>, <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a3"><b>eigene Objekte</b></a> oder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variablen</b></a>.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+function MachDasFensterZu(Fensternummer)
+ {
+  parent.frames[Fensternummer].close();
+ }  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Bei selbst vergebenen Namen gelten folgende Regeln:
+<ul>
+<li>sie d&uuml;rfen keine Leerzeichen enthalten
+<li>sie d&uuml;rfen maximal 32 Zeichen L&auml;nge haben
+<li>sie d&uuml;rfen nur aus Buchstaben und Ziffern bestehen - das erste Zeichen sollte ein Buchstabe sein; es sind Gro&szlig;- und Kleinbuchstaben erlaubt
+<li>sie d&uuml;rfen keine deutschen Umlaute oder scharfes S enthalten
+<li>sie d&uuml;rfen als einziges Sonderzeichen den Unterstrich &quot;_&quot; enthalten
+<li>sie d&uuml;rfen nicht mit einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbi.htm"><b>reservierten Wort</b></a> identisch sein.
+</ul>
+Vergeben Sie sprechende Namen, die Ihnen auch ein halbes Jahr, nachdem Sie das Script geschrieben haben, noch signalisieren, welche Bedeutung sie haben. Es d&uuml;rfen ruhig auch deutschsprachige W&ouml;rter sein, solange die genannten Regeln eingehalten werden. 
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Kommentare in JavaScript</font></h2></a>
+
+Bei komplexeren Programmteilen k&ouml;nnen Sie Kommentare benutzen, um einzelne Anweisungen zu erkl&auml;ren. Auch wenn Sie Ihre Copyrightangaben innerhalb eines selbst geschriebenen JavaScript-Codes unterbringen wollen, k&ouml;nnen Sie dies mit Hilfe eines Kommentars tun. Kommentare werden vom JavaScript-Interpreter des WWW-Browsers ignoriert.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+while(i &lt;= 99) 
+ {
+  Quadrat = i * i;   /* solange i kleiner gleich 99, Quadrat von i bilden */
+  i = i + 1;        /* i um eins erhoehen, damit es irgendwann 99 ist */
+ }  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Einen Kommentar leiten Sie mit <b>/*</b>, also einem Schr&auml;gstrich, gefolgt von einem Sternzeichen, ein. Mit der umgekehrten Folge <b>*/</b>, also einenm Sternzeichen, gefolgt von einem Schr&auml;gstrich, beenden Sie den Kommentar.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tda.htm"><b>JavaScript in HTML einbinden</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbb.htm"><b>Funktionen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

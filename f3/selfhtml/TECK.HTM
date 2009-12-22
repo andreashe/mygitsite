@@ -1,0 +1,359 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Zeichenketten und Listen manipulieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Zeichenketten und Listen manipulieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Teile aus Zeichenketten extrahieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Zeichenketten in Listen verwandeln</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Listenelemente zu Zeichenkette verbinden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Listenelemente hinzuf&uuml;gen, ersetzen und l&ouml;schen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Listenelemente sortieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Suchen und Ersetzen von Zeichen oder Zeichenketten</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Teile aus Zeichenketten extrahieren</font></h2></a>
+Sie k&ouml;nnen aus einer gr&ouml;&szlig;eren Zeichenkette ein einzelnes Zeichen oder eine Zeichenfolge entnehmen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Url = &quot;http://www.teamone.de/selfhtml/teck.htm&quot;;
+
+$Stop = index($Url,&quot;:&quot;);
+$Protokoll = substr($Url,0,$Stop);
+$Start = index($Url,&quot;//&quot;) + 2;
+$Domain = substr($Url,$Start);
+$Stop = index($Domain,&quot;/&quot;);
+$Domain = substr($Domain,0,$Stop);
+$Start = rindex($Url,&quot;/&quot;) + 1;
+$Dateiname = substr($Url,$Start);
+$Url_Laenge = length($Url);
+
+print &quot;Das verwendete Internet-Protokoll der URL-Adresse lautet: &quot;, $Protokoll, "\n";
+print &quot;Die Domain-Adresse der URL-Adresse lautet: &quot;, $Domain, "\n";
+print &quot;Der Dateiname der URL-Adresse lautet: &quot;, $Dateiname, "\n";
+print &quot;Die URL-Adresse hat eine Laenge von: &quot;, $Url_Laenge, " Zeichen\n";
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im obigen Beispiel wird aus einer URL-Adresse, die in dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <I>$Url</I> gespeichert wird, das Internet-Protokoll (im Beispiel: http), die Domain-Adresse (im Beispiel: www.teamone.de) und der Dateiname (im Beispiel teck.htm) extrahiert. Alle drei Teile der URL-Adresse werden in eigenen Skalaren gespeichert. Das Internet-Protokoll wird in <I>$Protokoll</I> gespeichert, die Domain-Adresse in <I>$Domain</I> und der Dateiname in <I>$Dateiname</I>. Am Ende des Scripts werden die ermittelten Teile mit der <B>print</B>-Funktion ausgegeben.
+<p>
+Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a>, mit deren Hilfe Sie eine Teilzeichenkette aus einer gr&ouml;&szlig;eren Zeichenkette extrahieren k&ouml;nnen, hei&szlig;t <B>substr</B> (= <I>Unterzeichenkette</I>). Diese Funktion erwartet zwei oder drei Parameter. Der erste Parameter ist die Zeichenkette, von der ein Teil extrahiert werden soll. Der zweite Parameter ist eine Zahl. Die Zahl gibt an, ab dem wievielten Zeichen der Zeichenkette die Teilzeichenkette extrahiert werden soll. Dabei wird bei 0 (f&uuml;r das erste Zeichen) zu z&auml;hlen begonnen. Wenn Sie beispielsweise <I>substr(Stefan,2)</I> notieren, gibt die Funktion <I>efan</I> zur&uuml;ck. Als dritten Parameter k&ouml;nnen Sie <B>substr</B> noch mitteilen, wieviele Zeichen ab dem angegebgenen Startzeichen extrahiert werden sollen. Wenn Sie etwa <I>substr(Stefan,2,3)</I> notieren, erhalten Sie als Ergebnis <i>efa</i>.
+<p>
+H&auml;ufig wissen Sie jedoch nicht, an der wievielten Stelle einer Zeichenkette ein gew&uuml;nschter, sinnvoller Teil beginnt. Daf&uuml;r wissen Sie, da&szlig; die Zeichenkette einen bestimmten Aufbau hat. So ist es auch im obigen Beispiel. Die Zeichenkette stellt eine URL-Adresse dar. URL-Adressen haben bekanntlich einen einheitlichen Aufbau. Wenn Sie, wie im Beispiel, etwa die Domainadresse aus einer URL extrahieren wollen, wissen Sie, da&szlig; die Domainadresse hinter dem doppelten Schr&auml;gstrich // beginnt. Perl bietet dazu die Funktionen <B>index</B> und <B>rindex</B> an. Mit <B>index</B> ermitteln Sie, an der wievielten Stelle einer Zeichenkette ein bestimmtes Zeichen oder eine bestimmte Zeichenfolge zum <B>n&auml;chsten mal</B> vorkommt. Mit <B>rindex</B> ermitteln Sie, an der wievielten Stelle einer Zeichenkette ein bestimmtes Zeichen oder eine bestimmte Zeichenfolge zum <B>letzten mal</B> vorkommt. Beide Funktionen erwarten zwei Parameter. Als ersten Parameter &uuml;bergeben Sie die Zeichenkette, in der nach dem Vorkommen eines Zeichens oder einer Zeichenfolge gesucht werden soll. Als zweiten Parameter bekommt die Funktion das Zeichen oder die Zeichenfolge &uuml;bergeben, nach der gesucht werden soll. Beide Funktionen geben dann eine Zahl zur&uuml;ck. Diese Zahl k&ouml;nnen Sie dann in <B>substr</B> als zweiten Parameter &uuml;bergeben. Wenn Sie beispielsweise <I>index(&quot;Opa nahm Opium&quot;,&quot;Op&quot;)</I> notieren, erhalten Sie 0 zur&uuml;ck, weil &quot;Op&quot; gleich am Anfang zum ersten mal vorkommt. Wenn Sie dagegen <I>rindex(&quot;Opa nahm Opium&quot;,&quot;Op&quot;)</I> notieren, erhalten Sie 9 zur&uuml;ck, da in diesem Fall das letzte Vorkommen von &quot;Op&quot; ermittelt wird.
+<p>
+Es ist sinnvoll, die R&uuml;ckgabewerte der all dieser Perl-Funktionen in eigens daf&uuml;r definierten Skalaren zu speichern, so wie im obigen Beispiel. Diese Skalare k&ouml;nnen Sie anschlie&szlig;end bequem weiterverarbeiten.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Eine weitere interesante Funktion f&uuml;r Zeichenketten ist <B>length</B> (siehe Beispiel). Diese Funktion gibt die Anzahl Zeichen in einer Zeichenkette zur&uuml;ck.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Zeichenketten in Listen verwandeln</font></h2></a>
+
+Wenn Sie Zeichenketten haben, die bestimmte, regelm&auml;&szlig;ig vorkommende Zeichen enthalten, k&ouml;nnen Sie diese Zeichen als Trennzeichen behandeln und die Zeichenkette in eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Liste</b></a> &uuml;bertragen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$CSV_Zeile = &quot;Wilhemine Sauerapfel,Schlundstr. 13,90001 Neunhausen,099/12345&quot;;
+@Adresse = split(/,/,$CSV_Zeile,4);
+$i = 0;
+for(@Adresse)
+ {
+  print $i+1, &quot;. Feld der Adresse: &quot;, $Adresse[$i], &quot;\n&quot;;
+  $i++;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im obigen Beispiel ist in dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <I>$CSV_Zeile</I> eine typische Zeile aus einer kommabegrenzten Datei gespeichert. Viele Datenbank- und Tabellenkalkulationsprogramme bieten die M&ouml;glichkeit, strukturierte Daten in Form solcher kommabegrenzter Dateien abzuspeichern. Dateien dieser Art werden &uuml;blicherweise mit der Dateiendung <B>.csv</B> abgespeichert. Wenn Sie so eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecj.htm#a2"><b>Datei zeilenweise einlesen</b></a>, erhalten Sie in jeder Zeile einen Inhalt von der Art, wie er im obigen Beispiel in <I>$CSV_Zeile</I> gespeichert ist.
+<p>
+Mit der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> <B>split</B> k&ouml;nnen Sie solche Inhalte in Felder aufteilen und in einer Liste speichern. Definieren Sie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> wie im Beispiel die Liste <I>@Adresse</I>. Dieser Liste weisen Sie den R&uuml;ckgabewert von <B>split</B> zu. Die Funktion <B>split</B> erwartet zwei, optional auch drei Parameter. Als ersten Parameter &uuml;bergeben Sie einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>regul&auml;ren Ausdruck</b></a>, mit dessen Hilfe der Feldtrenner ermittelt wird. Im obigen Beispiel ist das einfach das Kommazeichen. Als zweiten Parameter &uuml;bergeben Sie die Zeichenkette, aus der die Liste erzeugt werden soll. Im Beispiel ist das der Skalar <I>$CSV_Zeile</I>. Als dritten Parameter k&ouml;nnen Sie der <B>split</B>-Funktion noch angeben, wie viele Felder sie maximal erzeugen soll. Im obigen Beispiel ist das eigentlich nicht n&ouml;tig, aber der Vollst&auml;ndigkeit halber wird 4 &uuml;bergeben, denn so viele Datenfelder enth&auml;lt die Adressenzeile.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Listenelemente zu Zeichenkette verbinden</font></h2></a>
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Adresse = (&quot;Wilhemine Sauerapfel&quot;,&quot;Schlundstr. 13&quot;,&quot;90001 Neunhausen&quot;,&quot;099/12345&quot;);
+$CSV_Zeile = join(&quot;,&quot;,@Adresse);
+print &quot;Die erzeugte Zeichenkette lautet: &quot;, $CSV_Zeile, &quot;\n&quot;;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im obigen Beispiel haben Sie eine Adresse in einer Liste <I>@Adresse</I> mit Feldern f&uuml;r die einzelnen Daten gespeichert. Diese Liste k&ouml;nnen Sie mit Hilfe der Mit der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> <B>join</B> in eine Zeichenkette verwandeln. Dabei geben Sie au&szlig;erdem an, durch welches Zeichen oder welche Zeichenfolge die Felder in der zu erzeugenden Zeichenkette voneinander getrennt werden sollen. Die Funktion <B>join</B> ist also die Umkehrfunktion zu <B>split</B>. 
+<p>
+Definieren Sie einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> wie im Beispiel den Skalar <I>$CSV_Zeile</I>. Diesem Skalar weisen Sie den R&uuml;ckgabewert von <B>join</B> zu. Die Funktion <B>join</B> erwartet zwei Parameter. Als ersten Parameter &uuml;bergeben Sie das Zeichen oder die Zeichenfolge, durch die die Felder in der zu erzeugenden Zeichenkette voneinander getrennt sein sollen. Im Beispiel ist das einfach ein Kommazeichen. Als zweiten Parameter &uuml;bergeben Sie die Liste, aus der die Zeichenkette erzeugt werden soll. Im Beispiel ist das die Liste <I>@Adresse</I>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Listenelemente hinzuf&uuml;gen, ersetzen l&ouml;schen</font></h2></a>
+Eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> mu&szlig; keinen festen Inhalt und keine feste L&auml;nge haben. Sie k&ouml;nnen beispielsweise w&auml;hrend des Programmlaufs zu einer Liste Elemente an eine Liste anh&auml;ngen oder Elemente aus der Liste l&ouml;schen.
+
+
+<h4><font color=#6666CC>Beispiel 1: Element hinzuf&uuml;gen</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Adresse = (&quot;Wilhemine Sauerapfel&quot;,&quot;Schlundstr. 13&quot;,&quot;90001 Neunhausen&quot;,&quot;099/12345&quot;);
+push(@Adresse,&quot;sauerapfel\@finster.de&quot;);
+for(@Adresse)
+ {
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2: Element entfernen</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Adresse = (&quot;Wilhemine Sauerapfel&quot;,&quot;Schlundstr. 13&quot;,&quot;90001 Neunhausen&quot;,&quot;099/12345&quot;);
+pop(@Adresse);
+for(@Adresse)
+ {
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 3: Element ersetzen</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Adresse = (&quot;Wilhemine Sauerapfel&quot;,&quot;Schlundstr. 13&quot;,&quot;90001 Neunhausen&quot;,&quot;099/12345&quot;);
+$Adresse[1] = &quot;Hasenschartenstr. 7&quot;;
+for(@Adresse)
+ {
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 4: Elemente umsortieren</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Adresse = (&quot;Wilhemine Sauerapfel&quot;,&quot;Schlundstr. 13&quot;,&quot;90001 Neunhausen&quot;,&quot;099/12345&quot;);
+for($i=1;$i&lt;3;$i++)
+ {
+  $Temp = shift(@Adresse);
+  push(@Adresse,$Temp);
+ }
+for(@Adresse)
+ {
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit Hilfe der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> <B>push</B> k&ouml;nnen Sie ein Element an eine Liste anh&auml;ngen. Im obigen Beispiel 1 wird an die Liste <I>@Adresse</I> ein Element angeh&auml;ngt, das eine E-Mail-Adresse enth&auml;lt. Die Funktion <B>push</B> bekommt beim aufruf im ersten Parameter die Liste &uuml;bergeben, an die Sie ein oder mehrere Elemente anh&auml;ngen m&ouml;chten. Dahinter geben Sie ein oder mehrere Elemente an, die Sie anh&auml;ngen m&ouml;chten. Das k&ouml;nnen Zeichenketten oder Zahlen sein. Im obigen Beispiel wird nur ein Element angeh&auml;ngt, n&auml;mlich die E-Mail-Adresse. Wenn Sie mehrere Elemente anh&auml;ngen wollen, trennen Sie diese durch Kommata.<br>
+Der Schr&auml;gstrich in der E-Mail-Adresse geh&ouml;rt &uuml;brigens nicht zu der Adresse, sondern ist ein Maskierungszeichen f&uuml;r das Klammeraffenzeichen @, da dieses Zeichen in Perl eine eigene Bedeutung hat (es markiert Listen).
+<p>
+Mit Hilfe der Funktion <B>pop</B> k&ouml;nnen Sie das letzte Element einer Liste entfernen. Dazu &uuml;bergeben Sie beim Aufruf der Funktion einfach die Liste, deren letztes Element Sie entfernen wollen. Im obigen Beispiel 2 ist das die Liste <I>@Adresse</I>. In dem Beispiel wird die Telefonnummer aus der Liste entfernt.
+<p>
+Um in einer Liste ein bestimmtes Element zu ersetzen, sprechen Sie einfach das betreffende Listenelement an und weisen ihm einen anderen Wert zu, so wie im obigen Beispiel 3.
+<p>
+Das obige Beispiel 4 zeigt, wie Sie die Elemente einer Liste &quot;h&auml;ndisch&quot; umsortieren k&ouml;nnen. Dazu eignet sich die Perl-Funktion <B>shift</B>. Diese Funktion entfernt das erste Element aus einer Liste und gibt es zur&uuml;ck. Alle weiteren Elemente r&uuml;cken eins nach vorne, so da&szlig; das bislang zweite Element nun das erste wird usw. Damit das entfernte erste Element nicht verloren geht, k&ouml;nnen Sie es in einem Skalar zwischenspeichern. Im obigen Beispiel 4 wird das entfernte Element im Skalar <I>$Temp</I> zwischengespeichert. Mit der Funktion <I>push</I> wird dieses Element anschlie&szlig;end wieder ans Ende der Liste angeh&auml;ngt. Im Beispiel findet dieser Austausch innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tece.htm#a3"><b>for-Schleife</b></a> statt. Auf diese Weise lassen sich mehrere Elemente nacheinander umsortieren. In dem Beispiel stehen am Ende Ort und Telefonnummer der Adresse am Anfang der Liste, gefolgt von Name und Stra&szlig;e.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>Listenelemente sortieren</font></h2></a>
+Eine sehr leistungsstarke Funktion in Perl ist die M&ouml;glichkeit, Listen zu sortieren. 
+
+<h4><font color=#6666CC>Beispiel 1: Zeichenketten sortieren</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Freundinnen = (&quot;Nina&quot;,&quot;Martina&quot;,&quot;Annina&quot;,&quot;Christina&quot;,&quot;Ina&quot;,&quot;Sabrina&quot;);
+@Ordnung = sort(@Freundinnen);
+for(@Ordnung)
+ {
+  print $_, &quot;\n&quot;;
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2: Zahlen sortieren</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@HighscoreListe = (9834,9837,5989,4509,4329,6509,2837,8289,10845);
+@SortierteListe = sort NummernSort @HighscoreListe;
+@AbsteigendSortierteListe = reverse @SortierteListe; 
+for(@AbsteigendSortierteListe)
+ {
+  print $_, &quot;\n&quot;;
+ }
+
+sub NummernSort
+{
+ if($a &lt; $b)
+  { return -1; }
+ elsif($a == $b)
+  { return 0; }
+ else
+  { return 1; }
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Zum automatischen Sortierung von Listen steht die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> <B>sort</B> zur Verf&uuml;gung. Diese Funktion sortiert die Elemente einer Liste, die der Funktion als Parameter &uuml;bergeben wird, automatisch alphabetisch in aufsteigender Reihenfolge. Wenn Sie genau das erreichen wollen, brauchen Sie nur einen Befehl wie im obigen Beispiel 1 der Befehl <I>@Ordnung = sort(@Freundinnen)</I>. In diesem Beispiel wird die Liste <I>@Freundinnen</I> sortiert. Die sortierte Liste wird in <I>@Ordnung</I> gespeichert.
+<p>
+Schwieriger wird es, wenn Sie numerische Werte sortieren wollen, so wie im obigen Beispiel 2. Dazu brauchen Sie ein eigenes <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a1"><b>Unterprogramm</b></a>, das ein bestimmtes Aussehen haben mu&szlig;, da die <B>sort</B>-Funktion dieses Unterprogramm auf Wunsch aufruft. Das Unterprogramm <I>NummernSort</I> aus Beispiel 2 k&ouml;nnen Sie f&uuml;r all solche Zwecke verwenden. Mit der Anweisung <I>@SortierteListe = sort NummernSort @HighscoreListe;</I> wird im Beispiel die Liste <I>@HighscroreListe</I> numerisch sortiert. Lassen Sie bei diesem Funktionsaufruf am besten die Klammern weg und notieren Sie hinter <B>sort</B> den Namen des Unterprogramms f&uuml;r den Sortiervorgang, im Beispiel also <I>NummernSort</I>. Dahinter folgt die Angabe der Liste, die auf diese Weise sortiert werden soll, im Beispiel <I>@HighscoreListe</I>.
+<p>
+Wenn Sie eine Liste nicht aufsteigend, sondern absteigend sortiert haben wollen, k&ouml;nnen Sie die Perl-Funktion <B>reverse</B> anwenden. Im obigen Beispiel 2 wird die Liste <I>@SortierteListe</I>, die zun&auml;chst aufsteigend sortiert ist, mit der Anweisung <I>@AbsteigendSortierteListe = reverse @SortierteListe;</I> in eine neue Liste mit dem Namen <I>@AbsteigendSortierteListe</I> gespeichert. Diese Liste ist absteigend sortiert.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC>Suchen und Ersetzen von Zeichenketten</font></h2></a>
+Das m&auml;chtige Werkzeug der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>regul&auml;ren Ausdr&uuml;cke</b></a> wird in Perl auch oft dazu benutzt, um in Zeichenketten bestimmte Zeichen oder Zeichenfolgen durch andere zu ersetzen, oder um bestimmte Zeichen oder Zeichenfolgen aus Zeichenketten zu entfernen. Dazu gibt es eine spezielle Syntax.
+
+<h4><font color=#6666CC>Beispiel 1: Alle Buchstaben und Leerzeichen entfernen</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Text = &quot;Franz jagt im komplett verwahrlosten Taxi quer durch Bayern 1234567890&quot;;
+$Text =~ s/[a-z]| //gi;
+print $Text;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2: Deutsche Umlaute HTML-gerecht ersetzen</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Text = &quot;In M&uuml;nchen steht ein Hofbr&auml;uhaus, dort gibt es Bier in Ma&szlig;en&quot;;
+$Text =~ s/&auml;/\&amp;auml\;/g;
+$Text =~ s/&ouml;/\&amp;ouml\;/g;
+$Text =~ s/&uuml;/\&amp;uuml\;/g;
+$Text =~ s/&Auml;/\&amp;Auml\;/g;
+$Text =~ s/&Ouml;/\&amp;Ouml\;/g;
+$Text =~ s/&Uuml;/\&amp;Uuml\;/g;
+$Text =~ s/&szlig;/\&amp;szlig\;/g;
+print $Text;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 3: Fehlerhafte Angaben entfernen und unterdr&uuml;cken</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+@Schulnoten = (1,4,7,2,X,3,0,1,6,3,3,8,R,G,9,2,3,4,1,1,3);
+$Notenkette = join(&quot;,&quot;,@Schulnoten);
+$Notenkette =~ s/[7-9]|0|[A-Z]//gi;
+@NeueNoten = split(/,|,,/,$Notenkette);
+for(@NeueNoten)
+ {
+  unless($_ eq &quot;&quot;)
+   {
+    print $_, &quot;\n&quot;;
+   }
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Schema f&uuml;r alle Suche-Ersetze-Vorg&auml;nge in Perl lautet:<br>
+<I>Zeichenkette</I> <B>=~</B> <B>s/</B><I>Suchmuster</I><B>/</B><I>Ersetzmuster</I><B>/</B>[Optionen]
+<p>
+<I>Zeichenkette</I> ist meistens ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a>, in dem eine Zeichenkette gespeichert ist, so wie etwa <I>$Text</I> im obigen Beispiel 1. Dahinter notieren Sie die Zuweisung <B>=~</B>, gefolgt von einem Leerzeichen und dem kleinen Buchstaben <B>s</B>. Unmittelbar hinter dem kleinen <B>s</B> folgt ein reul&auml;rer Ausdruck, markiert durch die Schr&auml;gstriche <B>/.../</B>. In diesem Suchausdruck definieren Sie nach den Regeln f&uuml;r regul&auml;re Ausdr&uuml;cke, wonach in der Zeichenkette gesucht werden soll. Hinter dem abschlie&szlig;enden Schr&auml;gstrich folgt ein zweiter Ausdruck. In diesem Ausdruck notieren Sie das Zeichen oder die Zeichenfolge, durch die Fundstellen ersetzt werden sollen. Dahinter folgt nochmals ein abschlie&szlig;ender Schr&auml;gstrich. Hinter diesem Schr&auml;gstrich k&ouml;nnen Sie mit Hilfe von erlaubten Kleinbuchstaben Optionen f&uuml;r den Suche-Ersetze-Vorgang definieren. Dabei sind folgende Buchstaben wichtig:<br>
+<B>g</B> sucht/ersetzt alle Fundstellen (ansonsten wird nur die erste Fundstelle ersetzt)<br>
+<B>i</B> sucht/ersetzt Buchstaben unabh&auml;ngig davon, ob sie gro&szlig; oder klein geschrieben sind (ansonsten wird Gro&szlig;-/Kleinschreibung unterschieden)<br>
+<p>
+Im obigen Beispiel 1 werden aus <I>$Text</I> alle Buchstaben (gro&szlig; und klein) und alle Leerzeichen entfernt. Es bleiben anschlie&szlig;end also nur noch die Ziffern am Ende stehen.
+<p>
+Im obigen Beispiel 2 werden in <I>$Text</I> alle deutschen Umlaute und scharfes S durch ihre HTML-gerechten Umschreibungen ersetzt.
+<p>
+Im obigen Beispiel 3 werden aus der Liste <I>@Schulnoten</I> alle Werte entfernt, die nicht zwischen 1 und 6 liegen. Dazu wird die <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Liste zu einer Zeichenkette verbunden</b></a>. Aus dieser Zeichenkette <I>$Notenkette</I> werden alle Ziffern entfernt, die nicht zwischen 1 und 6 liegen, sowie alle Buchstaben. Das Ersetzmuster bleibt dabei leer, was dazu führt, das die Fundstellen einfach entfernt werden. Anschlie&szlig;end wird die behandelte <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Zeichenkette in eine Liste verwandelt</b></a>. Dabei werden mit dem regul&auml;ren Ausdruck <I>/,|,,/</I> auch alle leeren Elemente, die der Suche-Ersetze-Vorgang zur&uuml;ckgelassen hat, &uuml;bergangen. Die neue Liste enth&auml;lt nur noch g&uuml;ltige Schulnoten zwischen 1 und 6.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tecj.htm"><b>Dateien lesen und schreiben</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecl.htm"><b>Mit Zahlen und Zeit arbeiten</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

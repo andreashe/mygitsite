@@ -1,0 +1,204 @@
+<html>
+<head>
+<title>SELFHTML: CGI: Server-Datenspeicherung und dynamisches HTML</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einf&uuml;hrung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tbb.htm"><b>Erg&auml;nzungen und Alternativen zu HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>CGI: Server-Datenspeicherung und dynamisches HTML</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>CGI: Common Gateway Interface</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Aufrufbarkeit von CGI-Programmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>&Ouml;ffentliche CGI-Dienste</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Informationen zu CGI im WWW</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>CGI-Scripts als Free- und Shareware im WWW</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>CGI: Common Gateway Interface</font></h2></a>
+Das Common Gateway Interface (<i>Allgemeine Vermittlungsrechner-Schnittstelle</i>) ist eine M&ouml;glichkeit, Programme im WWW bereitzustellen, die von HTML-Dateien aus aufgerufen werden k&ouml;nnen, und die selbst HTML-Code erzeugen und an einen WWW-Browser senden k&ouml;nnen.
+<p>
+Wenn Sie im WWW eine Suchdatenbank benutzen, Pizza oder B&uuml;stenhalter bestellen, sich in ein G&auml;stebuch eintragen, oder einen Z&auml;hler mit Zugriffszahlen sehen, dann steckt CGI oder eine CGI vergleichbare Schnittstelle dahinter. 
+<p>
+GCI - das sind Programme, die auf einem Server-Rechner im Internet liegen und bei Aufruf bestimmte Daten verarbeiten. Die Datenverarbeitung geschieht auf dem Server-Rechner. CGI-Programme k&ouml;nnen auf dem Server-Rechner Daten speichern, zum Beispiel, wie oft auf eine WWW-Seite zugegriffen wurde, oder, was ein Anwender in ein G&auml;stebuch geschrieben hat. Bei entsprechendem Aufruf kann ein CGI-Programm gespeicherte Daten auslesen und daraus HTML-Code generieren. Dieser &quot;dynamisch&quot; erzeugte HTML-Code wird an den aufrufenden WWW-Browser eines Anwenders &uuml;bertragen und kann dort individuelle Daten in HTML-Form anzeigen, zum Beispiel den aktuellen Zugriffsz&auml;hlerstand einer WWW-Seite oder die bisherigen Eintr&auml;ge in einem G&auml;stebuch.
+<p>
+Die sogenannte CGI-Schnittstelle mu&szlig; von der WWW-Server-Software unterst&uuml;tzt werden. Aus Sicht des Mieters von Speicherplatz auf einem WWW-Server steht die CGI-Schnittstelle in Form eines bestimmten Verzeichnisses zur Verf&uuml;gung. Meistens hat dieses Verzeichnis den Namen <b>cgi-bin</b>. In diesem Verzeichnis k&ouml;nnen Programme abgelegt werden, die CGI-Aufgaben &uuml;bernehmen. Falls Sie unsicher sind, fragen Sie Ihren Provider, ob er Ihnen eine CGI-Schnittstelle zur Verf&uuml;gung stellt. Bei preiswerten oder gar kostenlosen Homepage-Vermittlern wie CompuServe, AOL usw. steht Ihnen normalerweise keine CGI-Schnittstelle zur Verf&uuml;gung.
+<p>
+Es gibt keine Vorschriften daf&uuml;r, in welcher Programmiersprache ein CGI-Programm geschrieben ist. Damit das Programm auf dem Server-Rechner ausf&uuml;hrbar ist, mu&szlig; es entweder f&uuml;r die Betriebssystem-Umgebung des Servers als ausf&uuml;hrbares Programm kompiliert worden sein, oder es mu&szlig; auf dem Server ein Laufzeit-Interpreter vorhanden sein, der das Programm ausf&uuml;hrt. Wenn der Server zum Beispiel ein Unix-Rechner ist, f&uuml;hrt er C-Programme aus, die mit einem Unix-C-Compiler zu einer ausf&uuml;hrbaren Datei kompiliert wurden. Wenn der Server ein Windows-NT-Rechner ist, k&ouml;nnen CGI-Scripts auch EXE-Dateien sein, die mit 32-Bit-Compilern f&uuml;r C, Pascal, Visual Basic usw. erzeugt wurden. Die meisten heutigen CGI-Programme sind in der Unix-Shell-Sprache oder in Perl geschrieben. Die Unix-Shell-Sprache wird von allen Unix-Rechnern interpretiert. F&uuml;r Perl mu&szlig; ein entsprechender Interpreter installiert sein. Fragen Sie hierzu Ihren Provider.
+<p>
+Das folgende Beispiel zeigt eine typische CGI-Situation, wie sie zum Beispiel f&uuml;r Suchdienste im WWW erforderlich ist.
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<img src="xtbba01.gif" width=612 height=278 border=0 alt="CGI-Beispiel">
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In dem Beispiel kann der Anwender in einer angezeigten HTML-Datei in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a> Daten eingeben, zum Beispiel eine Suche in einer Datenbank formulieren. Nach dem Abschicken des Formulars an den Server-Rechner wird ein CGI-Programm aufgerufen. Das CGI-Programm setzt die vom Anwender eingegebenen Daten in eine Datenbankabfrage um. Wie das genau funktioniert, h&auml;ngt von der Datenbank ab. Es gibt eine international standardisierte Datenbankabfragesprache, SQL, die hierbei sehr h&auml;ufig zum Einsatz kommt. Die Datenbankanwendung liefert die Suchergebnisse an das aufrufende CGI-Programm zur&uuml;ck (oder schreibt sie in eine Datei, die das CGI-Programm dann auslesen kann). Das CGI-Programm erzeugt nun HTML-Code, wobei es die Suchergebnisse als Daten in den HTML-Code einbaut. Den HTML-Code sendet das CGI-Programm an den WWW-Browser, der die Suchabfrage gestartet hat. Am Bildschirm des Anwenders verschwindet die WWW-Seite mit dem Suchformular. Stattdessen erscheint eine neue Seite mit den Suchergebnissen, dynamisch generiert von dem CGI-Programm.
+<p>
+Mehr &uuml;ber CGI-Programmierung erfahren Sie im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="te.htm"><b>Dokumentation: CGI/Perl</b></a>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Aufrufbarkeit von CGI-Programmen</font></h2></a>
+Sie k&ouml;nnen jedes CGI-Programm aufrufen, dessen Aufruf Sie kennen. Dabei ist es egal, auf welchem Server-Rechner das CGI-Programm liegt. So k&ouml;nnen Sie auch CGI-Programme aud fremden Server-Rechnern nutzen, wenn Sie deren Aufruf kennen. 
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<form method=get action="http://altavista.digital.com/cgi-bin/query">
+<table cellpadding=12 width=100%><tr><td bgcolor=#FFFFCC>
+<h4>Suchen Sie wonach Sie wollen!</h4>
+<input type=hidden name=pg value=q>
+<input name=q size=55 maxlength=200 value="">
+<input type=submit value="Suche starten">
+</td></tr></table>
+</form>
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Formular durchsucht einen Datenbestand von weit &uuml;ber 30 Gigabyte Gr&ouml;&szlig;e (= &uuml;ber 50 prall gef&uuml;llte CD-ROMs) mit weit mehr als 10 Millionen gespeicherten WWW-Seiten. Es handelt sich um eine der gr&ouml;&szlig;ten Suchdatenbanken im WWW, um <img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.altavista.digital.com/"><b>Altavista</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>. 
+<p>
+Geben Sie in das Eingabefeld ein einzelnes Wort ein, zum Beispiel <b>Zaubertricks</b> oder <b>G&uuml;tersloh</b>, oder geben Sie zusammengeh&ouml;rige W&ouml;rter in Anf&uuml;hrungszeichen ein, zum Beispiel <b>&quot;Stefan M&uuml;nz&quot;</b> oder <b>&quot;Rolling Stones&quot;</b>. Mit dem Starten der Suche rufen Sie das CGI-Programm von Altavista auf, das die Suche verarbeitet. Dazu ist allerdings eine Online-Verbindung ins Internet erforderlich. Das CGI-Programm hat die WWW-Adresse <i>http://altavista.digital.com/cgi-bin/query</i>. Dabei ist <i>query</i> der Dateiname des ausf&uuml;hrbaren CGI-Programms. Wenn das Programm erfolgreich aufgerufen wurde, erhalten Sie als n&auml;chstes die Ergebnisse Ihrer Suche am Bildschirm
+<p>
+Das CGI-Programm wird im obigen Beispiel beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcha.htm"><b>Definieren eines Formulars</b></a> aufgerufen.
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Um eigene Daten, etwa die Zugriffszahlen auf die eigenen WWW-Seiten anzuzeigen, ben&ouml;tigen Sie entweder eigene CGI-Programme, oder Sie nehmen einen <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>&ouml;ffentlichen CGI-Dienst</b></a> in Anspruch. Fremde CGI-Programme sollten Sie immer nur zum Nutzen der Anwender aufrufen, zum Beispiel, indem Sie eine deutschsprachige Version eines im Original engslischsprachigen Formulars anbieten und beim Absenden des Formulars das fremde CGI-Programm aufrufen.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>&Ouml;ffentliche CGI-Dienste</font></h2></a>
+Um Anbietern von WWW-Seiten, die sich mit CGI nicht auskennen oder kein CGI zur Verf&uuml;gung haben, CGI-M&ouml;glichkeiten zur Verf&uuml;gung zu stellen, gibt es mittlerweile viele &ouml;ffentliche CGI-Dienste im WWW. Bei diesen Diensten m&uuml;ssen Sie sich registrieren lassen. Daf&uuml;r erhalten Sie dann einen HTML-Code, den Sie in Ihre eigenen HTML-Dateien einbauen k&ouml;nnen, und der ein entsprechendes CGI-Programm auf dem Server-Rechner des &ouml;ffentlichen CGI-Anbieters aufruft.
+<p>
+Einige dieser Dienste sind kostenlos, andere k&ouml;nnen Sie nur gegen Geb&uuml;hr in Anspruch nehmen. Die Geb&uuml;hren sind jedoch meist sehr gering (z.B. DM 20.-/Jahr f&uuml;r Zugriffsz&auml;hler und Statistik f&uuml;r die eigene Homepage).
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://icount.com/"><b>ICount</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Zugriffsz&auml;hler f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.digits.com/"><b>Digits</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Zugriffsz&auml;hler und Statistik f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.b-online.de/webhits/"><b>WebHits</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0><br>
+Zugriffsz&auml;hler und Statistik f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.fxweb.com/"><b>FixWeb</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Zugriffsz&auml;hler und Statistik f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.lpage.com/"><b>LPage</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+G&auml;steb&uuml;cher f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.GuestPAD.com/"><b>GuestPAD</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+G&auml;steb&uuml;cher f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.spin.de/gb.html"><b>Spin</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+G&auml;steb&uuml;cher f&uuml;r eigene WWW-Seiten
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.cwak.com/mailservice/"><b>CWAK Mailservice</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0><br>
+Formulare per CGI verarbeiten und zuschicken lassen (so k&ouml;nnen Sie das mailto-Problem des MS Internet Explorer umgehen!)
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.netmind.com/"><b>NetMind</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Anwender automatisch per E-Mail &uuml;ber &Auml;nderungen auf einer WWW-Seite informieren
+<p>
+Jederzeit aktuelle Informationen zu kostenlosen Service-Diensten im Internet bieten die <img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.infostar.de/webindex/tip.htm"><b>Webindex-Tips</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0> von Wilfried Arimont. Diese Seite sollten Sie unbedingt besuchen, wenn Sie Ihre Homepage bei einem Discount-Provider haben und nach preiswerten Erweiterungsm&ouml;glichkeiten suchen. &Auml;hnliche Informationen bietet das Projekt <img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.buschi.com/"><b>Internet f&uuml;r Geizige</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0> von Markus Buschmann.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Informationen zu CGI im WWW</font></h2></a>
+
+Es gibt eine F&uuml;lle von Informationen rund um das Thema CGI im WWW. Die folgende Verweisliste stellt eine kleine Auswahl ausf&uuml;hrlicher Dokumentationen dar.
+<p>
+
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://lpage.com/cgiexample.html"><b>CGI-Tutorial von LPage</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>
+<br>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.jmarshall.com/easy/cgi/german/"><b>CGI leicht gemacht - von Friedemann Wachsmuth</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0>
+<br>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://hoohoo.ncsa.uiuc.edu/cgi/overview.html"><b>The Common Gateway Interface - NCSA-Spezifikation und Dokumentation</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>
+<br>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.mcp.com/zdpress/features/3970/"><b>CGI Manual of Style - von Robert McDaniel</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>
+<br>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="news:comp.infosystems.www.authoring.cgi"><b>comp.infosystems.www.authoring.cgi (Newsgroup)</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC>CGI-Scripts als Free- und Shareware im WWW</font></h2></a>
+
+Wenn Sie eine eigene CGI-Schnittstelle haben, aber kein Interesse, keine Zeit oder nicht die n&ouml;tige Geduld haben, um sich selbst in die CGI-Programmierung einzuarbeiten, k&ouml;nnen Sie fertige CGI-Scripts aus dem WWW downloaden. In der Regel m&uuml;ssen die Scripts noch auf die Umgebung Ihres Servers angepa&szlig;t werden. Die Scripts sind jedoch in den meisten F&auml;llen dokumentiert. Dabei wird genau beschrieben, was Sie tun m&uuml;ssen, um das Script auf Ihrem Server zum Laufen zu bringen. Die meisten Angebote sind jedoch englischsprachig.
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.worldwidemart.com/scripts/"><b>Matt's Perl CGI Scripts</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Zugriffsz&auml;hler, G&auml;stebuch, Nachrichtenforum, Kreditkartenkauf, Suchmaschine usw. - Freeware-Scripts in Perl von Matt Wright
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.selah.net/cgi.html"><b>Script Archive</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+E-Mail-Verarbeitung, G&auml;stebuch, Zugriffsz&auml;hler, Digitaluhr, Pa&szlig;wortschutz, Chat-Programm - Freeware-Scripts in Perl von Robert Niles
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.eff.org/~erict/Scripts/"><b>Selena Sol's CGI Script Archive</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+G&auml;stebuch, Einkaufskorb, Suchmaschine, Nachrichtenforum, Pa&szlig;wortschutz usw.  - Public Domain Scripts 
+<p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tbad.htm"><b>Infos zu HTML im Internet</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tbbb.htm"><b>Java: Animation und Interaktion</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einf&uuml;hrung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tbb.htm"><b>Erg&auml;nzungen und Alternativen zu HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+
+
+
+
+
+
+

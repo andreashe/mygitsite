@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>SELFHTML: Standardverweise</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="3.2"> Standardverweise</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Standardverweise definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Standard-R&uuml;ckverweise definieren</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die auf dieser Seite beschriebenen M&ouml;glichkeiten sind zwar Bestandteil von HTML 3.2, werden aber leider von keinem der popul&auml;ren heutigen WWW-Browser unterst&uuml;tzt und sind von daher eigentlich wertlos. Sie werden hier eher der Vollst&auml;ndigkeit halber beschrieben.
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="3.2"> Standardverweise definieren</font></h2></a>
+<p>
+Sie k&ouml;nnen im Kopf einer HTML-Datei Anweisungen notieren, die dem Anwender das Navigieren in gro&szlig;en Informationsbest&auml;nden erleichtern sollen. Diese Anweisungen sind dazu gedacht, da&szlig; der WWW-Browser, wenn er sie vorfindet, eine entsprechende Button-Leiste oder vergleichbare Bedienelemente anzeigt. Mit dem Anklicken der Buttons kann der Anwender dann 
+bestimmte Sprungverweise zu anderen Dateien ausf&uuml;hren.
+<p>
+Dabei sind folgende Verweisarten vorgesehen:
+<ul>
+<li>Button mit Sprungverweis zur Home-Page
+<li>Button mit Sprungverweis zum Inhaltsverzeichnis
+<li>Button mit Sprungverweis zum Stichwortverzeichnis
+<li>Button mit Sprungverweis zum Glossar
+<li>Button mit Sprungverweis zu einer Copyright-Angabe
+<li>Button mit Sprungverweis zur n&auml;chsten Datei in einer &quot;Guided tour&quot;
+<li>Button mit Sprungverweis zur vorherigen Datei in einer &quot;Guided tour&quot;
+<li>Button mit Sprungverweis zu einem Hilfekontext
+<li>Button mit Sprungverweis zu einer beliebigen Textmarke
+</ul>
+Sie k&ouml;nnen pro HTML-Datei ein Set solcher Angaben notieren. Sie k&ouml;nnen alle, aber auch nur einzelne, gerade ben&ouml;tigte dieser Befehle verwenden.
+
+<a name="imeta_name"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;link rel=home href=&quot;homepage.htm&quot; title=&quot;Einstiegsseite&quot;&gt;
+&lt;link rel=toc href=&quot;inhalt.htm&quot; title=&quot;Inhaltsverzeichnis&quot;&gt;
+&lt;link rel=index href=&quot;stichwrt.htm&quot; title=&quot;Stichwortverzeichnis&quot;&gt;
+&lt;link rel=glossary href=&quot;glossar.htm&quot; title=&quot;Begriffs-Glossar&quot;&gt;
+&lt;link rel=copyright href=&quot;rechte.htm&quot; title=&quot;Copyright&quot;&gt;
+&lt;link rel=next href=&quot;augsburg.htm&quot; title=&quot;n&auml;chste Seite&quot;&gt;
+&lt;link rel=previous href=&quot;aachen.htm&quot; title=&quot;vorherige Seite&quot;&gt;
+&lt;link rel=help href=&quot;hilfe.htm&quot; title=&quot;Orientierungshilfe&quot;&gt;
+&lt;link rel=bookmark href=&quot;hinweis.htm&quot; title=&quot;Neuorientierung&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;link rel=</b> leiten Sie einen Standardverweis ein. Dahinter folgt der Typ des Verweises (<i>link = Verweis, rel = relationship = Verwandtschaft</i>). Erlaubte Typen sind: 
+<p>
+<b>rel=home</b> steht f&uuml;r: Sprungverweis zur Home-Page<br>
+<b>rel=toc</b> steht f&uuml;r: Sprungverweis zum Inhaltsverzeichnis (<i>toc = table of contents = Inhaltsverzeichnis</i>)<br>
+<b>rel=index</b> steht f&uuml;r: Sprungverweis zum Stichwortverzeichnis<br>
+<b>rel=glossary</b> steht f&uuml;r: Sprungverweis zum Glossar<br>
+<b>rel=copyright</b> steht f&uuml;r: Sprungverweis zur Copyright-Angabe<br>
+<b>rel=next</b> steht f&uuml;r: Sprungverweis zur n&auml;chsten Datei in der &quot;Guided tour&quot; (<i>next = n&auml;chste Seite</i>)<br>
+<b>rel=previous</b> steht f&uuml;r: Sprungverweis zur vorherigen Datei in der &quot;Guided tour&quot; (<i>previous = vorherige Seite</i>)<br>
+<b>rel=help</b> steht f&uuml;r: Sprungverweis zum Hilfekontext (<i>help = Hilfe</i>)<br>
+<b>rel=bookmark</b> steht f&uuml;r: Sprungverweis zu einem allgemeinen Orientierungspunkt (<i>bookmark = Lesezeichen</i>)<br>
+<p>
+Hinter dem Verweistyp folgt die Angabe <b>href=</b> zur Bestimmung, wohin der jeweilige Verweis f&uuml;hren soll. Die Angabe sollte in Anf&uuml;hrungszeichen stehen. Bei der Angabe gelten die gleichen Regeln wie bei normalen <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>.
+<p>
+Mit der Angabe <b>title=</b> k&ouml;nnen Sie die Beschriftung der Verweis-Buttons bestimmen. Die Angabe sollte in Anf&uuml;hrungszeichen stehen und das Verweisziel nennen.
+<p>
+Mit einem abschließenden <b>&gt;</b> wird der Befehl beendet.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Machen Sie sich nicht die M&uuml;he, mit diesen eigentlich sehr praktischen Befehlen Ihre Projektdateien zu &quot;verlinken&quot;. Da kein namhafter WWW-Browser diese Befehle unterst&uuml;tzt, bleiben sie wirkungslos.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><img src="xhtml32.gif" width=30 height=30 border=0 alt="3.2"> <font color=#6666CC><b>Standard-R&uuml;ckverweise definieren</b></font></h2></a>
+Ebenso wie Standardverweise sollen Standard-R&uuml;ckverweise als Buttons oder in vergleichbarer Form dargestellt werden. Bei Standard-R&uuml;ckverweisen handelt es sich in der Regel um Verweise auf die E-Mail-Adresse des Dokumentautors und auf die Internet-Adresse seiner privaten Homepage.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;link rev=made href=&quot;mailto:s.muenz@euromail.com&quot; title=&quot;Autor&quot;&gt;
+&lt;link rev=relation href=&quot;http://www.autorshome.de/&quot; title=&quot;Autoren-Homepage&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;link rev=</b> leiten Sie einen Standard-R&uuml;ckverweis ein. Dahinter folgt der Typ des Verweises (<i>link = Verweis, rev = reverse = umgedreht</i>). Erlaubte Typen sind: 
+<p>
+<b>rev=made</b> steht f&uuml;r: Verweis zum Autor, in der Regel eine E-Mail-Adresse<br>
+<b>rev=relation</b> steht f&uuml;r: Sprungverweis zur Autoren-Homepage (<i>rel = relationship = Verwandtschaft</i>)
+<p>
+Hinter dem Verweistyp folgt die Angabe <b>href=</b> zur Bestimmung, wohin der jeweilige Verweis f&uuml;hren soll. Die Angabe sollte in Anf&uuml;hrungszeichen stehen. Bei der Angabe gelten die gleichen Regeln wie bei normalen <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a> bzw. speziell bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcff.htm"><b>E-Mail-Verweisen</b></a>.
+<p>
+Mit der Angabe <b>title=</b> k&ouml;nnen Sie die Beschriftung der Verweis-Buttons bestimmen. Die Angabe sollte in Anf&uuml;hrungszeichen stehen und das Verweisziel nennen.
+<p>
+Mit einem abschließenden <b>&gt;</b> wird der Befehl beendet.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Auch hierbei gilt: vergessen Sie diese Angaben, solange kein bekannter WWW-Browser diese Angaben interpretiert.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcbd.htm"><b>Meta-Information für verschiedene Zwecke</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcbf.htm"><b>Scripts, Style-Sheets und Hintergrundmusik</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

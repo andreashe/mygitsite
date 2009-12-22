@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>SELFHTML: Meta-Informationen f&uuml;r verschiedene Zwecke</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Meta-Informationen f&uuml;r verschiedene Zwecke</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Meta-Informationen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>F&uuml;r Suchprogramme: Beschreibung, Autor, Stichworte einer HTML-Datei</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Suchprogrammen das Auslesen erlauben/verbieten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Datei von Original-Server, nicht von Proxy-Server laden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Automatisch eine andere Datei laden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Mime-Type und Zeichensatz erzwingen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu Meta-Informationen</font></h2></a>
+In Meta-Informationen k&ouml;nnen Sie verschiedene n&uuml;tzliche Anweisungen f&uuml;r WWW-Server, WWW-Browser und automatische Suchprogramme im Internet notieren.
+<p>
+Einige der Meta-Informationen sind speziell f&uuml;r automatische Suchprogramme im Internet gedacht. Das sind Programme, die regelm&auml;&szlig;ig durch den gesamten Informationsraum Internet wandern, Verweisen folgen, aufgerufene Dateien lesen und die gelesenen Daten an die heimische Suchdatenbank &uuml;bermitteln. Dadurch wird eine HTML-Datei in dem entsprechenden Suchdienst auffindbar. Durch bestimmte Meta-Informationen k&ouml;nnen Sie bestimmen, welche Daten das Suchprogramm an seine Suchdatenbank &uuml;bertr&auml;gt. Sie k&ouml;nnen auch verbieten, da&szlig; ein Suchprogramm &uuml;berhaupt Daten aus der Datei &uuml;bertr&auml;gt. 
+<p>
+Wenn ein WWW-Browser eine Datei anfordert, die auf einem WWW-Server abgelegt ist, kann der Server-Rechner dem aufrufenden WWW-Browser verschiedene Befehle erteilen. Die &Uuml;bermittlung der Befehle geschieht mit Hilfe des HTTP-Protokolls. Als Autor einer HTML-Datei haben Sie durch Meta-Informationen die M&ouml;glichkeit, solche Befehle vom Server-Rechner an den aufrufenden WWW-Browser zu formulieren. So k&ouml;nnen Sie etwa erzwingen, da&szlig; beispielsweise 10 Sekunden nach dem Anzeigen der HTML-Datei automatisch eine andere Datei aufgerufen wird. Oder Sie k&ouml;nnen erzwingen, da&szlig; die HTML-Datei immer direkt vom Server-Rechner geladen wird, niemals von Proxy-Servern (Zwischenspeicher f&uuml;r h&auml;ufig abgerufene WWW-Seiten). Letzteres ist wichtig, wenn sich die Inhalte der Datei h&auml;ufig &auml;ndern und Sie auf alle F&auml;lle verhindern wollen, da&szlig; Anwender veraltete Versionen der Datei angezeigt bekommen.
+<p>
+Meta-Informationen sind nicht f&uuml;r pers&ouml;nliche Anmerkungen oder interne Angaben, etwa zu Autor und Erstelldatum, gedacht. F&uuml;r solche Angaben k&ouml;nnen Sie einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaf.htm#a1"><b>Kommentar</b></a> definieren. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><b>F&uuml;r Suchprogramme: Beschreibung, Autor, Stichworte einer HTML-Datei</b></font></h2></a>
+Die meisten automatischen Suchprogramme im Internet lesen nur die Anf&auml;nge einer Datei aus, zum Beispiel die ersten 250 Zeichen, und &uuml;bertragen diese an ihre Suchdatenbank. Dann steht in der Suchdatenbank nur das &uuml;ber die Datei, was zuf&auml;llig in den ersten 250 Zeichen steht. In Form einer Meta-Information k&ouml;nnen Sie selbst einen Beschreibungstext definieren, den das Suchprogramm an seine Datenbank &uuml;bermittelt. Ebenso k&ouml;nnen Sie dem Suchprogramm Ihre Autorenschaft und charakteristische Stichw&ouml;rter zur HTML-Datei mitteilen.
+
+<a name="imeta_name"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Dieser Beschreibungstext soll einem 
+Anwender im Suchdienst bei Auffinden dieser Datei erscheinen&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Ihr Name&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, Meta-Informationen, 
+Suchprogramme, HTTP-Protokoll&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;meta name=&quot;description&quot; content=&quot;Beschreibungstext&quot;&gt;</b> bestimmen Sie einen Beschreibungstext (<i>meta = &quot;&uuml;ber&quot;, name = Name, description = Beschreibung,  content = Inhalt</i>). <br> 
+Mit <b>&lt;meta name=&quot;author&quot; content=&quot;Autorenname&quot;&gt;</b> teilen Sie den Namen des Autors (d.h.: des inhaltlich Verantwortlichen) f&uuml;r die HTML-Datei mit (<i>author = Autor</i>). <br> 
+Mit <b>&lt;meta name=&quot;keywords&quot; content=&quot;[Wortliste]&quot;&gt;</b> bestimmen Sie Stichw&ouml;rter f&uuml;r ein Suchprogramm. Ein Anwender, der in der Suchdatenbank des Suchprogramms nach einem dieser Stichw&ouml;rter sucht, soll die aktuelle HTML-Datei als Suchtreffer angezeigt bekommen, da das Stichwort in dieser Datei ein zentrales Thema ist (<i>keywords = Schl&uuml;sselw&ouml;rter</i>). 
+<p>
+Alle Angaben hinter den Istgleichzeichen m&uuml;ssen in Anf&uuml;hrungszeichen stehen. Trennen Sie bei den Schl&uuml;sselw&ouml;rtern die einzelnen W&ouml;rter durch Kommata. Sie k&ouml;nnen alle drei Angaben notieren, aber auch nur eine oder zwei davon.
+
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Diese Angaben funktionieren nur bei Suchprogrammen, die ihrerseits die betreffenden HTML-Befehle kennen und entsprechend reagieren. Im Hinblick auf Standardisierung sollten nur noch Suchprogramme erlaubt sein, die solche Meta-Informationen korrekt auslesen. Dann n&auml;mlich sind die entsprechenden Angaben im Dateikopf einer HTML-Datei in jedem Fall empfehlenswert. Denn sie k&ouml;nnen mithelfen, den Output von Suchdiensten zu optimieren und f&uuml;r Anwender die Schwierigkeiten bei der Informationssusche im WWW zu verringern.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><b>Suchprogrammen das Auslesen erlauben/verbieten</b></font></h2></a>
+Wenn Sie eine HTML-Datei zwar im Internet anbieten, aber trotzdem verhindern m&ouml;chten, da&szlig; die Datei &uuml;ber &ouml;ffentliche Suchdienste auffindbar sein soll, k&ouml;nnen Sie eine entsprechende Anweisung als Meta-Information f&uuml;r automatische Suchprogramme notieren. Sie k&ouml;nnen solchen Suchprogrammen aber auch mit einer entsprechenden Eingabe signalisieren, da&szlig; Sie ein Auslesen der Datei und aller Dateien, die darin &uuml;ber Verweise erreichbar sind, ausdr&uuml;cklich w&uuml;nschen.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</b> verbieten Sie einem Suchprogramm, Inhalte aus der HTML-Datei an seine Suchdatenbank zu &uuml;bermitteln (<i>robots = Suchprogramme, content =  Inhalt, noindex = keine Indizierung</i>). Anstelle von <b>noindex</b> k&ouml;nnen Sie auch <b>none</b> notieren (<i>none = keine</i>).
+<p>
+Daneben sind folgende weitere Angaben m&ouml;glich:
+<p>
+<b>&lt;meta name=&quot;robots&quot; content=&quot;index&quot;&gt;</b>. Damit erlauben Sie einem Suchprogramm ausdr&uuml;cklich, Inhalte aus der aktuellen HTML-Datei an seine Suchdatenbank zu &uuml;bermitteln (<i>index = Indizierung</i>).<br>
+<b>&lt;meta name=&quot;robots&quot; content=&quot;nofollow&quot;&gt;</b>. Damit erlauben Sie einem Suchprogramm, Inhalte aus der aktuellen HTML-Datei an seine Suchdatenbank zu &uuml;bermitteln (<i>nofollow = nicht folgen</i>). Sie verbieten dem Suchprogramm jedoch, untergeordnete Dateien Ihres Projekts, zu denen Verweise f&uuml;hren, zu besuchen.<br>
+<b>&lt;meta name=&quot;robots&quot; content=&quot;follow&quot;&gt;</b>. Damit erlauben Sie einem Suchprogramm ausdr&uuml;cklich, Inhalte aus der aktuellen HTML-Datei und aus untergeordneten Dateien Ihres Projekts, zu denen Verweise f&uuml;hren, zu besuchen und an seine Suchdatenbank zu &uuml;bermitteln (<i>follow = folgen</i>).<br>
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Diese Angaben funktionieren nur bei Suchprogrammen, die ihrerseits den betreffenden HTML-Befehle kennen und sich daran halten. Leider ist dies im WWW noch nicht selbstverst&auml;ndlich.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><b>Datei von Original-Server, nicht von Proxy-Server laden</b></font></h2></a>
+H&auml;ufig abgerufene WWW-Seiten werden von vielen Providern im WWW auf sogenannten Proxy-Servern gespeichert. Anwender, die einen solchen Proxy-Server kennen, k&ouml;nnen diesen in ihrem WWW-Browser einstellen. Dadurch holt sich der WWW-Browser WWW-Seiten, die auf dem Proxy-Server gespeichert sind, gleich von dort und nicht vom Original-Server. Das spart in vielen F&auml;llen Leitungswege und Ressourcen, und die &Uuml;bertragung der Daten an den aufrufenden WWW-Browser geht meist schneller. Ein Nachteil dabei ist jedoch, da&szlig; dem Anwender noch Daten vom Proxy-Server angezeigt werden, w&auml;hrend auf dem WWW-Server, wo die Daten im Original liegen, bereits neue Updates liegen. Sie k&ouml;nnen mit Hilfe einer Meta-Information erzwingen, da&szlig; der Server-Rechner dem WWW-Browser befiehlt, sich die Daten nicht von einem Proxy-Server zu holen, sondern immer vom Original-Server. Das ist allerdings nur dann zu empfehlen, wenn Sie die Daten einer HTML-Datei h&auml;ufig &auml;ndern und neu ins WWW hochladen.
+
+<a name="imeta_equiv"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;</b> veranlassen Sie den Server-Rechner, einem aufrufenden WWW-Browser zu befehlen, diese HTML-Datei in jedem Fall von der Original-Adresse auf dem Server-Rechner zu laden (<i>http-equiv = http equivalent = gem&auml;&szlig; HTTP-Befehl, expires = f&auml;llig werden</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei <b>content=</b> k&ouml;nnen Sie anstelle der <b>0</b> in diesem Zusammenhang auch ein bestimmtes Datum und eine bestimmte Uhrzeit angeben. Dadurch bewirken Sie, da&szlig; der WWW-Browser bis zu dem definierten Zeitpunkt die Daten auch von einem Proxy-Server holen darf, danach aber vom Original-Server holen mu&szlig;. Datum und Uhrzeit m&uuml;ssen Sie im internationalen Format angeben. Beispiel: <b>content=&quot;Sat, 14 Dec 1996 12:00:00 GMT&quot;</b>.  Au&szlig;erdem k&ouml;nnen Sie anstelle der <b>0</b> auch eine andere Zahl angeben. Diese Zahl bedeutet dann die Anzahl Sekunden, nach deren Ablauf der WWW-Browser eine Datei, die er im Cache hat, auf jeden Fall wieder vom Server l&auml;dt. Mit <b>content=43200</b> stellen Sie beispielsweise einen Wert von 12 Stunden ein.
+
+<h4><font color=#6666CC>Tip f&uuml;r Netscape-Anwender:</font></h4>
+Um einen gew&uuml;nschten Zeitpunkt im internationalen Format zu erhalten, geben Sie in der Adre&szlig;zeile von Netscape <b>javascript:</b> ein und schlie&szlig;en Sie mit der Eingabetaste ab. Geben Sie dann in dem angezeigten Eingabefeld im unteren Bildschirmbereich folgendes ein: <b>Zeitpunkt&nbsp;=&nbsp;new&nbsp;Date(<i>Jahr,Monat,Tag,Stunden,Minuten,Sekunden</i>);&nbsp;Zeitpunkt.toGMTString();</b> und schlie&szlig;en Sie mit der Eingabetaste ab. Anstelle von <i>Jahr,Monat,Tag,Stunden,Minuten,Sekunden</i> m&uuml;ssen Sie die gew&uuml;nschten Zahlen eingeben, z.B. <i>1997,05,30,01,00,00</i>. Im oberen Bildschirmbereich wird dann der gew&uuml;nschte Zeitpunkt im internationalen Format angezeigt. Beachten Sie, da&szlig; f&uuml;r Monate nur Werte zwischen 0 (Januar) und 11 (Dezember) erlaubt sind. Bei der Ausgabe wird die Greenwich-Time angezeigt, die zeitlich 1 Stunde nach der mitteleurop&auml;ischen Zeit folgt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><b>Automatisch eine andere Datei laden</b></font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcbda.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+F&uuml;r besondere Effekte, etwa eine automatisch verschwindende Begr&uuml;&szlig;ungsseite, oder f&uuml;r das Weiterleiten eines Anwenders von einer alten Adresse Ihres Projekts zu der neuen Adresse k&ouml;nnen Sie das automatische Laden einer anderen Datei veranlassen. Wenn die HTML-Datei dann aufgerufen wird, ruft der WWW-Browser sofort oder nach einem frei w&auml;hlbaren Timeout eine andere gew&uuml;nschte Datei auf.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5; URL=http://www.netzwelt.com/selfhtml/&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;...&quot;&gt;</b> veranlassen Sie den Start einer anderen Datei. Mit <b>content=&quot;5;</b> bestimmen Sie die Anzeigedauer
+der Datei in Sekunden. Die 5 im Beispiel bedeutet also, da&szlig; die Datei 5
+Sekunden lang angezeigt wird. Danach wird die n&auml;chste Datei aufgerufen,
+die mit <b>url=...&quot;</b> spezifiziert wird. Notieren Sie den gesamten Befehl inclusive der etwas ungewohnten Stellung der Anf&uuml;hrungszeichen so wie im Beispiel oben angegeben. Setzen Sie jeweils Ihre gew&uuml;nschte Anzeigedauer und den Namen der n&auml;chsten aufzurufenden Datei ein. F&uuml;r die Adressierung der Datei gelten die gleichen Regeln wie bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>. Bei einem Timeout von <b>0</b> wird die angegebene n&auml;chste Datei sofort geladen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Dieser HTML-Befehl funktioniert auch ohne HTTP-Protokoll, also lokal auf jedem Rechner.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC><b>Mime-Type und Zeichensatz erzwingen</b></font></h2></a>
+
+Sie k&ouml;nnen den Mime-Type der HTML-Datei sowie den darin verwendeten Zeichensatz explizit angeben, um den WWW-Browser zu zwingen, die Datei korrekt zu interpretieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;CHARSET=iso8859-1&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit dem im Beispiel angegebenen Befehl erzwingen Sie den Mime-Type &quot;text/html&quot; und den Zeichensatz iso8859-1 (Western Latin). Falls der Anwender einen anderen Zeichensatz in seinem WWW-Browser eingestellt hat, stellen Sie auf diese Weise sicher, da&szlig; der Inhalt der Datei entsprechend dem genannten Zeichensatz interpretiert wird, inklusive der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcad.htm#a2"><b>Sonderzeichen</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcbc.htm"><b>Durchsuchbarkeit mit Serverkommunikation</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcbe.htm"><b>Standardverweise</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

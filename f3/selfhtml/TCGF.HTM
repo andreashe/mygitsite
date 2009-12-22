@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>SELFHTML: Grafiken als Verweise</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Grafiken als Verweise</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Grafik in einen Verweis einbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweis-Rahmen unterdr&uuml;cken</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Grafik in einen Verweis einbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgfa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie Verweise setzen, m&uuml;ssen Sie immer auch einen Verweistext definieren, also den Text, der dem Anwender als anklickbar dargestellt wird. Anstelle eines Verweistextes k&ouml;nnen Sie jedoch auch eine beliebige Grafik angeben. Dann ist die gesamte Grafik anklickbar, und beim Anklicken der Grafik wird der Verweis ausgef&uuml;hrt.
+
+<a name="iimg_width_height"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;datei.htm&quot;&gt;&lt;img src=&quot;datei.gif&quot;&gt;&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel kann ein beliebiges erlaubtes Ziel sein. Mehr hierzu finden Sie im Dokumentabschnitt &uuml;ber <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweise</b></a>.
+<p>
+Anstelle des Verweistextes wird einfach eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafik eingebunden</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Der WWW-Browser kennzeichnet die Grafik als Verweis, indem er einen Rahmen in der eingestellten Farbe f&uuml;r Verweise um die Grafik zieht. Wenn Sie den Rahmen nicht w&uuml;nschen, m&uuml;ssen Sie ihn unterdr&uuml;cken. Mehr dazu im folgenden Abschnitt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Verweis-Rahmen unterdr&uuml;cken</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgfa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der Rahmen, den der WWW-Browser per Voreinstellung um eine Grafik zieht, wenn diese als Verweis eingebunden wird, ist in vielen F&auml;llen st&ouml;rend. Sie k&ouml;nnen den Rahmen unterdr&uuml;cken.
+
+<a name="iimg_lowsrc"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;datei.htm&quot;&gt;&lt;img src=&quot;datei.gif&quot; border=0&gt;&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die zus&auml;tzliche Angabe <b>border=0</b> unterdr&uuml;cken Sie den Rahmen. Die Grafik bleibt weiterhin als Verweis anklickbar.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie Rahmen um Grafiken unterdr&uuml;cken, die als Verweise dienen, kann der Anwender die Grafik nicht mehr unmittelbar als Verweis erkennen. Nur wenn er mit dem Mauszeiger &uuml;ber die Grafik f&auml;hrt, kann er an dem Mauszeigersymbol erkennen, da&szlig; es sich um einen Verweis handelt. Deshalb sollten Sie den verweiskennzeichnenden Rahmen nur dann unterdr&uuml;cken, wenn die Grafik auf den ersten Blick als Verweis erkennbar ist. Das kann zum Beispiel ein beschrifteter Button sein, der dem Anwender intuitiv als Verweis erscheint.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcge.htm"><b>Ladevorgang f&uuml;r Grafiken optimieren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcgg.htm"><b>Grafiken mit verweis-sensitiven Fl&auml;chen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

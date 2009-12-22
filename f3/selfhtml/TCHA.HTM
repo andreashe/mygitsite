@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>SELFHTML: Formulare definieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Formulare definieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Formularen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Formular definieren</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> Allgemeines zu Formularen</font></h2></a>
+HTML stellt die M&ouml;glichkeit zur Verf&uuml;gung, mit Hilfe spezieller Befehle Formulare zu erstellen. In Formularen kann der Anwender Eingabefelder ausf&uuml;llen, in mehrzeiligen Textfeldern Text eingeben, aus Listen Eintr&auml;ge ausw&auml;hlen und Buttons anklicken. Wenn das Formular fertig ausgef&uuml;llt ist, kann der Anwender auf einen Button klicken, um das Formular abzusenden.
+<p>
+Dazu geben Sie beim Erstellen eines Formulars an, was mit den Daten des ausgef&uuml;llten Formulars passieren soll. Sie k&ouml;nnen sich die ausgef&uuml;llten Daten besipielsweise per E-Mail zuschicken lassen oder von einem CGI-Programm auf dem Server-Rechner weiterverarbeiten lassen.
+<p>
+Formulare k&ouml;nnen sehr unterschiedliche Aufgaben haben. So werden sie zum Beispiel eingesetzt:
+<ul>
+<li>um bestimmte, gleichartig strukturierte Ausk&uuml;nfte von Anwendern einzuholen,
+<li>um Anwendern das Suchen in Datenbanken zu erm&ouml;glichen,
+<li>um Anwendern die M&ouml;glichkeit zu geben, selbst Daten f&uuml;r eine Datenbank beizusteuern,
+<li>um dem Anwender die M&ouml;glichkeit individueller Interaktion zu bieten, etwa um aus einer Produktpalette etwas Bestimmtes zu bestellen.
+</ul>
+Ein Software-Hersteller k&ouml;nnte z.B. ein Formular zur Verf&uuml;gung stellen, in dem der Anwender angeben kann, welche Produkte der Firma er besitzt, wie er Kenntnis von den Produkten erhalten hat, welchen Beruf er aus&uuml;bt, auf welchem Rechnertyp die Software bei ihm l&auml;uft usw. Auf diese Weise k&ouml;nnte er gleichartig strukturiertes und daher gut vergleichbares Feedback von Anwendern einholen. 
+<p>
+Viele Suchdienste im Internet bieten dem aufrufenden WWW-Browser in HTML geschriebene Eingabe-Formulare an, in denen der Anwender seinen Suchwunsch spezifizieren kann. Ohne solche Formulare w&auml;re das Durchsuchen gar nicht m&ouml;glich. Die meisten Suchdienste bieten dar&uuml;ber hinaus auch die M&ouml;glichkeit an, eigene Internet-Adressen in die Datenbank einzuspeisen. Das Einholen der dazu n&ouml;tigen Information geschieht ebenfalls mit Hilfe von Formularen.
+<p>
+Immer zahlreicher werden auch die Bestell-Services im Internet. Egal ob Tickets, Pizza oder Unterw&auml;sche - um solche Bestell-Services zu realisieren, sind Formulare erforderlich, in denen der Anwender seine Bestellw&uuml;nsche genau angeben kann.
+<p>
+Wenn Sie dem Anwender auf Ihren WWW-Seiten einfach nur eine M&ouml;glichkeit anbieten wollen, direkt mit Ihnen in Kontakt zu treten, gen&uuml;gt allerdings auch ein einfacher <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcff.htm"><b>E-Mail-Verweis</b></a> an die eigene Email-Adresse.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Formular definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchaa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+
+<a name="iform_mailto"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;form action=&quot;mailto:s.muenz@euromail.com&quot; method=post enctype=&quot;text/plain&quot;&gt;
+... Elemente des Formulars wie Eingabefelder, Auswahllisten, Buttons usw. ...
+&lt;/form&gt;
+</pre></td></tr></table><p>
+
+<a name="iform_mailto"><h4><font color=#6666CC>Beispiel 2:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;form action=&quot;../cgi-bin/suche.pl&quot; method=get&gt;
+... Elemente des Formulars wie Eingabefelder, Auswahllisten, Buttons usw. ...
+&lt;/form&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;form ...&gt;</b> definieren Sie ein Formular (<i>form = Formular</i>). Alles, was zwischen diesem einleitenden Tag und dem abschlie&szlig;enden Tag <b>&lt;/form&gt;</b> steht, geh&ouml;rt zum Formular. Das sind haupts&auml;chlich Elemente des Formulars wie Eingabefelder, Auswahllisten oder Buttons. Um die Elemente zu plazieren, brauchen Sie jedoch auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm"><b>Textabs&auml;tze</b></a> (Absatzschaltungen) und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a1"><b>erzwungene Zeilenumbr&uuml;che</b></a>. Dar&uuml;ber hinaus k&ouml;nnen Sie zwischen <b>&lt;form...&gt;</b> und <b>&lt;/form&gt;</b> auch Text eingeben und diesen Text wie &uuml;blich mit HTML-Befehlen formatieren. Auch Grafiken, Verweise, Tabellen, Multimedia-Elemente sind mitten im Formular erlaubt. So k&ouml;nnen Sie Ihr Formular optisch aufwerten und mit erkl&auml;rendem Text usw. versehen.
+<p>
+Im einleitenden <b>&lt;form&gt;</b>-Tag geben Sie mit <b>action=</b> an, was mit den ausgef&uuml;llten Formulardaten passieren soll, wenn der Anwender das Formular abschickt (<i>action = Aktion</i>). Die Angabe sollte in Anf&uuml;hrungszeichen stehen. 
+<p>
+Die Angabe bei <b>action=</b> ist entweder eine E-Mail-Adresse (normalerweise Ihre eigene) mit vorangestelltem <b>mailto:</b> - so wie im ersten der obigen Beispiele (<i>mailto = sende an</i>). Dann werden die ausgef&uuml;llten Formulardaten an diese E-Mail-Adresse geschickt.<br>
+Oder Sie rufen ein CGI-Programm auf, das die Daten weiterverarbeitet - so wie im zweiten der obigen Beispiele. Bei der Adressierung des CGI-Programms gelten die gleichen Regeln wie bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweisen</b></a>.<br>
+Weitere Hinweise hierzu in den Abschnitten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchh.htm#a1"><b>Formulare als E-Mail</b></a> und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchh.htm#a2"><b>Formulare und CGI</b></a>.<br>
+Allgemeines zum Thema CGI finden Sie au&szlig;erdem im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbba.htm"><b>CGI: Server-Datenspeicherung und dynamisches HTML</b></a>. Und schlie&szlig;lich enth&auml;lt dieses Dokument eine einf&uuml;hrende <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="te.htm"><b>Dokumentation: CGI/Perl</b></a>.
+<p>
+Bei der Formulardefinition m&uuml;ssen Sie als n&auml;chstes die &Uuml;bertragungsmethode angeben. Dabei gibt es zwei M&ouml;glichkeiten:
+<ul>
+<li>Wenn Sie <b>method=get</b> w&auml;hlen, werden die Daten des ausgef&uuml;llten Formulars auf WWW-Servern mit installiertem HTTP-Protokoll in der Standard-Umgebungsvariablen QUERY_STRING gespeichert (<i>method = Methode, get = bekommen</i>). Das CGI-Programm mu&szlig; den Inhalt dieser Umgebungsvariablen auslesen und verarbeiten. 
+<li>Wenn Sie <b>method=post</b> w&auml;hlen, werden die Daten des augef&uuml;llten Formulars auf dem Server-Rechner von &quot;stdin&quot; zur Verf&uuml;gung gestellt, und das CGI-Programm mu&szlig; sie behandeln wie eine Benutzereingabe, die auf der Kommandozeile gemacht wurde (<i>post = verschicken</i>). Da in diesem Fall kein EndOfFile-Signal (EOF) gesendet wird, mu&szlig; das CGI-Programm die Standard-Umgebungsvariable CONTENT_LENGTH auslesen, um die L&auml;nge der &uuml;bermittelten Daten und damit deren Ende zu ermitteln.
+</ul>
+Wenn Sie sich Formulardaten per E-Mail zuschicken lassen, benutzen Sie immer <b>method=post</b>. Au&szlig;erdem sollten Sie bei E-Mail-Empfang von Formulardaten immer die Angabe <b>enctype=&quot;text/plain&quot;</b> mit angeben. Denn Formulardaten sind normalerweise nach einem bestimmten Schema formatiert, das f&uuml;r auswertende Programme recht gut geeignet ist, aber f&uuml;r Menschen keine Freude zu lesen ist. Mit der enctype-Angabe erhalten Sie zumindest von Anwendern, die Ihr Formular mit einem modernen WWW-Browser wie Netscape ausf&uuml;llen, ordentlich formatierte E-Mails.
+<p>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Mit Hilfe von <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="td.htm"><b>JavaScript</b></a> k&ouml;nnen Sie Eingaben in Formularen steuern und kontrollieren. Bereits im einleitenden <b>&lt;form&gt;</b>-Tag ist der JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <b>onSubmit=</b> erlaubt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcgh.htm"><b>Browser-interne Grafik-Ressourcen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tchb.htm"><b>Eingabefelder</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

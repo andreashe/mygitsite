@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>SELFHTML: Farbige Tabellen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Farbige Tabellen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Hintergrundfarbe f&uuml;r gesamte Tabelle</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Hintergrundfarbe f&uuml;r einzelne Zeilen oder Zellen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Farben f&uuml;r Rand und Gitternetzlinien</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Hintergrundbild (Wallpaper) für Tabelle oder Tabellenzellen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+<h4><font color=#6666CC>Hinweis:</font></h4>
+Einige WWW-Browser, darunter die neueren Versionen von Netscape und MS Internet Explorer, unterst&uuml;tzen teilweise oder ganz die hier beschriebenen farbigen Tabellen. Farbige Tabellen geh&ouml;ren jedoch noch nicht zum HTML-Standard 3.2.
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"> Hintergrundfarbe f&uuml;r gesamte Tabelle</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcefa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen f&uuml;r alle Zellen einer Tabelle eine einheitliche Hintergundfarbe definieren.
+
+<a name="itable_bgcolor"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border bgcolor=#CCFFFF&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 1 Spalte 1 = hellblau
+      &lt;td&gt;Zeile 1 Spalte 2 = hellblau
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 2 Spalte 1 = hellblau
+      &lt;td&gt;Zeile 2 Spalte 2 = hellblau
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>bgcolor=</b> im einleitenden Tag der Tabelle k&ouml;nnen Sie eine Hintergrundfarbe f&uuml;r die gesamte Tabelle bestimmen (<i>bgcolor = background color = Hintergrundfarbe</i>). Beim Angeben der Farbe gelten die Regeln zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Definieren von Farben in HTML</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie eine Hintergrundfarbe definieren, sollten Sie f&uuml;r den Text eine geeignete Kontrastfarbe definieren. Falls Sie hierzu den HTML-Befehl zum &Auml;ndern von <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarben</b></a> innerhalb des Textes verwenden wollen, m&uuml;ssen Sie diesen Befehl in jeder einzelnen Tabellenzelle erneut eingeben. Falls Ihre HTML-Datei im wesentlichen aus einer farbigen Tabelle besteht, sollten Sie geeignete <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a2"><b>dateiweite Farben f&uuml;r Text und Verweise</b></a> bestimmen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"> Hintergrundfarbe f&uuml;r einzelne Zeilen oder Zellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcefa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen f&uuml;r eine Zeile oder eine einzelne Zelle innerhalb einer Tabelle eine Hintergrundfarbe definieren. 
+
+<a name="itr_bgcolor"><a name="ithtd_bgcolor"><h4><font color=#6666CC>Beispiel:</font></h4></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr bgcolor=#CCFFFF&gt;
+      &lt;td&gt;Zeile 1 Spalte 1 = hellblau (gilt f&uuml;r Zeile)
+      &lt;td&gt;Zeile 1 Spalte 2 = hellblau (gilt f&uuml;r Zeile)
+    &lt;/tr&gt;
+    &lt;tr bgcolor=#CCFFCC&gt;
+      &lt;td bgcolor=#CCFFCC&gt;Zeile 2 Spalte 1 = hellgr&uuml;n (gilt f&uuml;r diese Zelle)
+      &lt;td bgcolor=#FFCCFF&gt;Zeile 2 Spalte 2 = hellviolett (gilt f&uuml;r diese Zelle)
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>bgcolor=</b> im einleitenden Tag einer Zeile (&lt;<b>tr</b>&gt;) k&ouml;nnen Sie eine Hintergrundfarbe f&uuml;r alle Zellen in dieser Zeile bestimmen (<i>bgcolor = background color = Hintergrundfarbe</i>). Wenn Sie <b>bgcolor=</b> im einleitenden Tag einer Datenzelle (&lt;<b>td</b>&gt;) oder Kopfzelle (&lt;<b>th</b>&gt;) angeben, gilt die Hintergrundfarbe f&uuml;r diese eine Zelle. Beim Angeben der Farbe gelten die Regeln zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Definieren von Farben in HTML</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Im Konfliktfall hat die Fabangabe in einzelnen Zellen Vorrang vor der Angabe f&uuml;r ganze Zeilen oder Tabellen. Die Angabe f&uuml;r eine Zeile hat im Konfliktfall Vorrang vor der Angabe f&uuml;r die ganze Tabelle.
+<p>
+Wenn Sie für eine Zelle eine Hintergrundfarbe definieren, sollten Sie f&uuml;r den Text einer Zelle eine geeignete Kontrastfarbe definieren. Hierzu können Sie den HTML-Befehl zum &Auml;ndern von <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarben</b></a> verwenden. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Farben f&uuml;r Rand und Gitternetzlinien</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcefa.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie können auch für Rahmen und Gitternetzlinien Farbangaben machen. Diese Angaben werden bislang jedoch nur vom MS Internet Explorer interpretiert.
+
+<a name="itable_"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border bgcolor=#CCFFFF bordercolor=#000099&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 1 Spalte 1 = hellblau, Rahmen und Gitternetz dunkelblau
+      &lt;td&gt;Zeile 1 Spalte 2 = hellblau, Rahmen und Gitternetz dunkelblau
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 2 Spalte 1 = hellblau, Rahmen und Gitternetz dunkelblau
+      &lt;td&gt;Zeile 2 Spalte 2 = hellblau, Rahmen und Gitternetz dunkelblau
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<a name="itable_"><h4><font color=#6666CC>Beispiel 2:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border=4 bgcolor=#CCFFCC bordercolordark=#660000 bordercolorlight=#FF0000&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 1 Spalte 1 = hellgr&uuml;n, Rahmen und Gitternetz dunkelrot/rot
+      &lt;td&gt;Zeile 1 Spalte 2 = hellgr&uuml;n, Rahmen und Gitternetz dunkelrot/rot
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Zeile 2 Spalte 1 = hellgr&uuml;n, Rahmen und Gitternetz dunkelrot/rot
+      &lt;td&gt;Zeile 2 Spalte 2 = hellgr&uuml;n, Rahmen und Gitternetz dunkelrot/rot
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>bordercolor=</b> im einleitenden Tag der Tabelle k&ouml;nnen Sie eine einheitliche Farbe f&uuml;r den Tabellenrahmen und die Gitternetzlinien bestimmen (<i>bordercolor = Randfarbe</i>). 
+<p>
+Anstelle der einfachen Rahmenfarbe k&ouml;nnen Sie auch einen Schattier-Effekt in den Rahmen bringen, indem Sie zwei verschiedene Farben definieren - eine dunklere und eine hellere. Dazu notieren Sie im einleitenden Tag der Tabelle die beiden Zusatzangaben <b>bordercolordark=</b> (<i>bordercolordark = dunkle Randfarbe</i>) und <b>bordercolorlight=</b> (<i>bordercolorlight = helle Randfarbe</i>).
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Hintergrundbild (Wallpaper) für Tabelle oder Tabellenzellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcefb.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie können für eine Tabelle ein eigenes Hintergrundmuster (Wallpaper) definieren. Das funktioniert genauso wie bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tccb.htm"><b>Hintergrundbildern (Wallpapers)</b></a> für den gesamten Dateikörper. 
+<p>
+Hintergrundbilder für Tabellen werden jedoch nur vom MS Internet Explorer interpretiert.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border=4 background=&quot;datei.gif&quot;&gt;
+    &lt;tr&gt;
+      &lt;td background=&quot;datei2.gif&quot;&gt;Zeile 1 Spalte 1
+      &lt;td&gt;Zeile 1 Spalte 2
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td background=&quot;datei2.gif&quot;&gt;Zeile 2 Spalte 1
+      &lt;td&gt;Zeile 2 Spalte 2
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>background=</b> im einleitenden Tag der Tabelle k&ouml;nnen Sie ein Hintergrundbild für die gesamte Tabelle bestimmen (<i>background = Hintergrund</i>). Wenn Sie die Angabe im einleitenden Tag einer Tabellenzelle (<b>&lt;th&gt;</b> oder <b>&lt;td&gt;</b>)notieren, ist die Tabellenzelle der Bereich für das Hintergrundbild.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Im Beispiel wird vorausgesetzt, da&szlig; sich die Grafikdatei im gleichen Verzeichnis befindet wie die HTML-Datei. Wenn die Grafik in einem anderen Verzeichnis steht, m&uuml;ssen Sie den relativen oder absoluten Pfadnamen angeben. Das funktioniert genau so wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+<p>
+Wenn Sie ein Hintergrundbild definieren, sollten Sie auch passende 
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm#a2"><b>Textvordergrundfarben</b></a> definieren. 
+<p>
+Inerhalb dieses Dokuments finden Sie im Abschnitt &uuml;ber typische Grafiksorten f&uuml;r WWW-Seiten ein paar  <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfc.htm#a4"><b>typische Hintergrundbilder</b></a>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcee.htm"><b>Zellen verbinden</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tceg.htm"><b>Tabellen beschriften und umgebender Text</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

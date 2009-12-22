@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>SELFHTML: CGI-Scripts auf &ouml;ffentlichem WWW-Server installieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>CGI-Scripts auf &ouml;ffentlichem WWW-Server installieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>CGI-Verzeichnis mit FTP-Zugriff verwalten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Tips f&uuml;r die Praxis</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>CGI-Verzeichnis mit FTP-Zugriff verwalten</font></h2></a>
+
+Wenn Sie nicht gerade einen eigenen &ouml;ffentlichen WWW-Server betreiben, den Sie direkt an der Konsole bedienen k&ouml;nnen, sind Sie darauf angewiesen, Ihre Daten auf dem Server-Rechner per Fernbedienung zu verwalten. Normalerweise geschieht das heutzutage mit Hilfe des FTP-Protokolls, vereinzelt auch noch mit Hilfe des Telnet-Protokolls. F&uuml;r die FTP-Verwaltung von eigenen Daten auf einem Server-Rechner sollten Sie ein gutes <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbdd.htm"><b>FTP-Programm</b></a> besitzen. 
+<p>
+CGI-Scripts k&ouml;nnen Sie mit Hilfe eines FTP-Programms in das daf&uuml;r vorgesehene Verzeichnis hochladen. Meistens hat dieses Verzeichnis einen entsprechenden Namen, z.B. <b>cgi-bin</b> oder <b>cgi-local</b>. Ihr Webmaster oder Provider mu&szlig; Ihnen ein solches Verzeichnis eingerichtet haben. Das bedeutet, er mu&szlig; auf dem &ouml;ffentlichen Server-Rechner in den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm#a3"><b>Einstellungen des WWW-Servers</b></a> ein solches Verzeichnis angegeben und Ihnen den Zugriff darauf erlaubt haben. Fragen Sie im Zweifelsfall Ihren Webmaster oder Provider danach! (Allgemeines zu diesem Thema finden Sie auch im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tgc.htm"><b>WWW-Projekte publizieren</b></a>).
+<p>
+Beim Hochladen von CGI-Scripts oder CGI-Programmen in das CGI-Verzeichnis m&uuml;ssen Sie folgendes beachten:
+<ul>
+<li>Perl-Scripts m&uuml;ssen immer im ASCII-Modus &uuml;bertragen werden. Achten Sie vor dem Hochladen von Perl-Dateien darauf, da&szlig; in Ihrem FTP-Programm der ASCII-Modus als &Uuml;bertragungsmodus eingestellt ist.
+<p>
+<li>Compilierte Programme m&uuml;ssen dagegen immer im Bin&auml;r-Modus &uuml;bertragen werden. Achten Sie im FTP-Programm darauf, da&szlig; der Bin&auml;r-Modus eingestellt ist. Beachten Sie bei compilierten Programmen auch, da&szlig; diese auf dem Server-Rechner nur ausf&uuml;hrbar sind, wenn sie f&uuml;r das Betriebssystem des Server-Rechners compiliert wurden. So hat es keinen Sinn, wenn Sie ein unter DOS/Windows zu einer EXE-Datei compiliertes C-Programm in das CGI-Verzeichnis eines Unix-Rechners hochladen. 
+<p>
+<li>Einige WWW-Server sind so eingerichtet, daß CGI-Scripts die Dateinamenendung <b>.cgi</b> erhalten müssen. Fragen Sie gegebenenfalls Ihren Provider danach! Wenn dies bei Ihnen der Fall ist, benennen Sie beispielsweise ein Perl-Script namens <b>counter.pl</b> einfach in <b>counter.cgi</b> um.
+<p>
+<li>Wenn der Server-Rechner ein Unix-Rechner ist, m&uuml;ssen Sie au&szlig;erdem noch angeben, von wem die Programmdatei bzw. die Scriptdatei ausgef&uuml;hrt werden darf. Damit alle Besucher Ihrer WWW-Seiten Ihr CGI-Script oder CGI-Programm ausf&uuml;hren k&ouml;nnen, m&uuml;ssen Sie das Lese- und Ausf&uuml;hrrecht &quot;f&uuml;r alle&quot; einstellen. Dies geschieht mit dem Unix-Befehl <b>chmod 755 datei.ext</b>. Wenn Sie beispielsweise ein Perl-Script namens <b>counter.pl</b> hochladen, m&uuml;ssen Sie es mit <b>chmod 755 counter.pl</b> allgemein ausf&uuml;hrbar machen. Lesen Sie im Zweifelsfall in der Dokumentation Ihres FTP-Programms nach, wie Sie damit die Zugriffsrechte f&uuml;r Dateien auf dem fernen Rechner einstellen k&ouml;nnen.
+<p>
+
+</ul>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Tips f&uuml;r die Praxis</font></h2></a>
+
+Die folgenden Hinweise und organisatorischen &Uuml;berlegungen sollten Sie beachten:
+<ul>
+<li>Testen Sie Ihre CGI-Scripts bzw. CGI-Programme vor dem &ouml;ffentlichen Einsatz im WWW. Am besten tun Sie das offline und in aller Ruhe an Ihrem lokalen Rechner. Dazu m&uuml;ssen Sie sich einen eigenen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm"><b>lokalen WWW-Server einrichten</b></a>. Wenn Sie Perl-Scripts einsetzen wollen, m&uuml;ssen Sie au&szlig;erdem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebb.htm"><b>Perl lokal installieren</b></a>.
+<p>
+<li>Rufen Sie neu ins WWW hochgeladene CGI-Scripts/CGI-Programme nicht gleich von einer viel besuchten WWW-Seite aus auf, sondern laden Sie erst mal eine Test-HTML-Datei mit einem Aufruf des CGI-Programms hoch. So k&ouml;nnen Sie auch online erst mal testen, ob alles einwandfrei funktioniert. Wenn es sich um wichtige Anwendungen wie elektronische Einkaufsk&ouml;rbe usw. handelt, sollten Sie das Script in so einer Testumgebung von verschiedenen Personen testen lassen, bevor Sie es &ouml;ffentlich zur Verf&uuml;gung stellen.
+<p>
+<li>Die meisten CGI-Scripts speichern Daten in Dateien und/oder lesen diese Dateien aus. Wenn es sich um eine einzige Datendatei handelt, spricht nichts dagegen, diese im CGI-Verzeichnis abzulegen. Bei einem einfachem Seitenzugriffsz&auml;hler, der mit Hilfe eines Perl-Scripts namens <b>counter.pl</b> realisiert ist, ist es beispielsweise sinnvoll, den Z&auml;hlerstand in einer Datei <b>counter.dat</b> zu speichern und diese ebenso wie die Perl-Datei direkt im CGI-Verzeichnis abzulegen. Wenn ein CGI-Script/CGI-Programm jedoch mehrere Dateien verwaltet, ist es sinnvoll, diese in einem eigenen Verzeichnis abzulegen. Dazu k&ouml;nnen Sie z.B. unterhalb des CGI-Verzeichnisses Unterverzeichnisse anlegen. So k&ouml;nnte etwa ein CGI-basiertes Nachrichtenforum (Bulletin-Board) namens <b>bulletin.pl</b> seine verschiedenen Konfigurations- und aktuellen Datendateien in einem entsprechenden Unterverzeichnis <b>bulletin</b> haben.
+<p>
+</ul>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tebb.htm"><b>Perl lokal auf einem PC einrichten</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tebd.htm"><b>Umgebungsvariablen</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

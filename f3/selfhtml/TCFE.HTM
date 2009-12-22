@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>SELFHTML: Verweise zu FTP, Gopher, Telnet, Newsgroups</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweise zu FTP, Gopher, Telnet, Newsgroups</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Verweis zu FTP-Adresse setzen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verweis zu Gopher-Adresse setzen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Verweis zu Telnet-Adresse setzen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Verweis zu Newsgroup setzen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu FTP-Adresse setzen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfea.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+FTP (<i>File Transfer Protocol = Datei&uuml;bertragungs-Protokoll</i>) ist ein Dienst im Internet, der speziell f&uuml;r die &Uuml;bertragung von Dateien gedacht ist. 
+<p>
+Sie k&ouml;nnen in einer HTML-Datei einen Verweis auf eine g&uuml;ltige FTP-Adresse setzen. 
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;ftp://ftp.uni-augsburg.de/&quot;&gt;FTP-Server Augsburg&lt;/a&gt;
+&lt;a href=&quot;ftp://ftp.uni-koeln.de/pc/mirrors/winsock-l/Windows95/Graphics/psp41.txt&quot;>Info zu PSP 4.11&lt;/a&gt;
+&lt;a href=&quot;ftp://ftp.uni-koeln.de/pc/mirrors/winsock-l/Windows95/Graphics/psp41.zip&quot;>PSP 4.11&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die FTP-Adresse. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+FTP-Adressen beginnen immer mit <b>ftp://</b>.
+<p>
+Der Verweis ist bei Anwendern nur ausf&uuml;hrbar, wenn der WWW-Browser das Browsen in FTP-Best&auml;nden unterst&uuml;tzt (z.B. Netscape), oder wenn bei solchen Verweisen automatisch ein FTP-Programm gestartet wird.
+<p>
+Wenn Sie einen Verweis auf einen FTP-Server setzen (wie im ersten der obigen Beispiele), oder auf ein Verzeichnis auf einem FTP-Server, kann der Anwender selbst in dem Datenbestand st&ouml;bern. Wenn der Verweis direkt auf eine bestimmte Datei f&uuml;hrt, passiert das, was im WWW-Browser f&uuml;r Dateien des betreffenden Typs festgelegt ist. Eine Textdatei etwa (wie im zweiten der obigen Beispiele) wird am Bildschirm angezeigt. Eine ZIP-Archivdatei (wie im dritten der obigen Beispiele) wird normalerweise zum Download angeboten. Bei Dateien unbekannten Typs kann der Anwender meist selbst entscheiden, was damit geschehen soll (Anwendung starten, die die Datei anzeigen kann, oder downloaden).
+<p>
+Einige Browser interpretieren auch eine erweiterte Angabe, die es erlaubt, Verweise direkt auf pa&szlig;wortgesch&uuml;tzte FTP-Bereiche zu setzen. So koennten Sie beispielsweise einen Verweis von der Art <b>&lt;a href=&quot;ftp://user:passwort@domain.de/&quot;&gt;Direkt ins Geheimreich&lt;/a&gt;</b> notieren. Setzen Sie f&uuml;r <b>user</b> die User-ID f&uuml;r den FTP-Zugang zu dem gesch&uuml;tzten Bereich ein, f&uuml;r <b>passwort</b> das zugeh&ouml;rige Pa&szlig;wort, und f&uuml;r <b>domain.de</b> die Domain-Adresse. User-ID und Pa&szlig;wort m&uuml;ssen Ihnen nat&uuml;rlich bekannt sein. Diese Syntax sollten Sie jedoch niemals auf &ouml;ffentlichen WWW-Seiten verwenden, sondern h&ouml;chstens, um bequem von einer lokal gespeicherten HTML-Datei aus auf einen solchen FTP-Bereich zugreifen zu k&ouml;nnen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Gopher-Adresse setzen</font></h2></a>
+
+<img src="xvie	w.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfea.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Gopher ist ein Dienst im Internet, bei dem der Anwender - wie im WWW auch - Texte online anzeigen und lesen kann. Im Gegensatz zum WWW gibt es jedoch keine Sprache wie HTML, die die Daten optisch attraktiv aufbereitet. Gopher besteht aus reinen Textdateien und einer auf dem Internet-Server gespeicherten Men&uuml;struktur, durch die sich der Anwender wie durch Verzeichnisse und Unterverzeichnisse hangeln kann, um zu einer Textdatei mit dem gew&uuml;nschten Informationsgehalt zu gelangen. Gopher war vor dem Hereinbrechen des WWW ein vielversprechender Dienst. Heute gibt es jedoch nur noch wenige Gopher-Server. Diese bieten jedoch meist umfangreiche Textarchive an. 
+<p>
+Sie k&ouml;nnen in einer HTML-Datei einen Verweis auf eine g&uuml;ltige Gopher-Adresse setzen.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;gopher://adam.greenpeace.org:70/1&gt;Gopher-Server von Greenpeace&lt;/a&gt;
+&lt;a href=&quot;gopher://gopher.greenpeace.org:70/00/gpi&gt;Textdatei auf Greenpeace-Gopher-Server&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die Gopher-Adresse. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Gopher-Adressen beginnen immer mit <b>gopher://</b>.
+<p>
+Der Verweis ist bei Anwendern nur ausf&uuml;hrbar, wenn der WWW-Browser das Gopher-Protokoll unterst&uuml;tzt (z.B. Netscape), oder wenn bei solchen Verweisen automatisch ein Gopher-Programm gestartet wird.
+<p>
+Wenn Sie einen Verweis auf einen Gopher-Server setzen (wie im ersten der obigen Beispiele), oder auf ein Men&uuml; in einer Gopher-Struktur, kann der Anwender selbst in dem Datenbestand st&ouml;bern. Wenn der Verweis direkt auf eine bestimmte Datei f&uuml;hrt, passiert das, was im WWW-Browser f&uuml;r Dateien des betreffenden Typs festgelegt ist. Eine Textdatei etwa (wie im zweiten der obigen Beispiele) wird am Bildschirm angezeigt. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Telnet-Adresse setzen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfea.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Telnet ist einer der &auml;ltesten Internet-Dienste &uuml;berhaupt. Seine Geschichte reicht in die fr&uuml;hen siebziger Jahre zur&uuml;ck. Hinter Telnet verbergen sich Terminal-orientierte Anwendungen, die sich am besten mit denen von textbasierten Mailboxen vergleichen lassen. Viele Telnet-Server sind pa&szlig;wortgesch&uuml;tzt, so da&szlig; nur autorisierte Anwender Zugang erhalten. 
+<p>
+Sie k&ouml;nnen in einer HTML-Datei einen Verweis auf eine g&uuml;ltige Telnet-Adresse setzen.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;telnet://locis.loc.gov/&quot;&gt;Telnet-Service der Library of Congress&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die Telnet-Adresse. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Telnet-Adressen beginnen immer mit <b>telnet://</b>.
+<p>
+Der Verweis ist bei Anwendern nur ausf&uuml;hrbar, wenn der WWW-Browser das Telnet-Protokoll unterst&uuml;tzt, oder wenn bei solchen Verweisen automatisch ein Telnet-Programm gestartet wird.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Verweis zu Newsgroup setzen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcfea.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Newsgroups - das sind die Diskussionsforen im Internet. Derzeit gibt es an die 20.000 Newsgroups. Jede Newsgroup hat ein bestimmtes Thema, um das sich die Diskussionen dort drehen. Es gibt praktisch nichts auf dieser Welt, zu dem es nicht eine Newsgroup gibt. 
+<p>
+Sie k&ouml;nnen in einer HTML-Datei einen Verweis auf eine Newsgroup setzen.
+
+<a name="ia_href_gatter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;a href=&quot;news:de.comm.infosystems.www.authoring&quot;&gt;Newsgroup zu HTML und Co.&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r das Setzen des Verweises gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Das Verweisziel ist die Adresse der Newsgroup. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Newsgroup-Adressen beginnen immer mit <b>news:</b> (ohne <b>//</b> dahinter!).
+<p>
+Der Verweis ist bei Anwendern nur ausf&uuml;hrbar, wenn der WWW-Browser selbst einen News-Reader enth&auml;lt (z.B. Netscape), oder wenn bei solchen Verweisen automatisch ein News-Reader-Programm gestartet wird.
+<p>
+Nicht jeder Anwender kann jede Newsgroup lesen. Welche Newsgroups er lesen kann, h&auml;ngt davon ab, von welchem News-Server er die Newsgroups empf&auml;ngt. Newsgroups, die der betreffende News-Server nicht abonniert hat, sind f&uuml;r den Anwender nicht aufrufbar - es sei denn, er &auml;ndert in seinen Einstellungen den Server, von dem er die Newsgroups empf&auml;ngt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcfd.htm"><b>Verweise zu anderen WWW-Adressen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcff.htm"><b>E-Mail-Verweise</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcf.htm"><b>Verweise - projektintern und weltweit</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

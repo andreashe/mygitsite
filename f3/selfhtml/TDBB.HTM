@@ -1,0 +1,254 @@
+<html>
+<head>
+<title>SELFHTML: Funktionen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Funktionen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Funktion definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Funktion aufrufen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a 
+href="#a3"><b>Funktion mit R&uuml;ckgabewert und solche Funktion aufrufen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a 
+href="#a4"><b>vordefinierte JavaScript-Funktionen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Funktion definieren</font></h2></a>
+
+Mit Hilfe von Funktionen k&ouml;nnen Sie eigene, in sich abgeschlossene JavaScript-Prozeduren programmieren, die Sie dann &uuml;ber den Aufruf der Funktion ausf&uuml;hren k&ouml;nnen. Dabei k&ouml;nnen Sie bestimmen, bei welchem Ereignis (zum Beispiel, wenn der Anwender einen Button anklickt) die Funktion aufgerufen und ihr Programmcode ausgef&uuml;hrt wird. JavaScript-Code, der nicht innerhalb einer Funktion steht, wird beim Einlesen der Datei vom WWW-Browser sofort ausgef&uuml;hrt!
+<p>
+Eine Funktion ist ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a2"><b>Anweisungsblock</b></a>. Sie k&ouml;nnen eigene Funktionen innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereichs</b></a> oder in einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a4"><b>separaten JavaScript-Datei</b></a> definieren. An erlaubten Stellen, z.B. innerhalb der einleitenden HTML-Tags <b>&lt;body...&gt;</b> und <b>&lt;a href...&gt;</b>, oder in einem Formular-Tag wie <b>&lt;input...&gt;</b>, k&ouml;nnen Sie eine solche selbst definierte Funktion dann mit Hilfe eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handlers</b></a> aufrufen. Oder Sie rufen eine Funktion innerhalb einer anderen Funktion auf.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+function PrimzahlCheck(Zahl)
+ {
+  var Grenzzahl = Zahl / 2;
+  var Check = 1;
+  for(i = 2; i &lt;= Grenzzahl; i++)
+    if(Zahl % i == 0)  
+    {
+     alert(Zahl + &quot; ist keine Primzahl, weil teilbar durch &quot; + i);
+     Check = 0;
+    }
+  if(Check == 1)
+   alert(Zahl + &quot; ist eine Primzahl!&quot;);
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit dem Schl&uuml;sselwort <b>function</b> leiten Sie die Definition einer Funktion ein. Dahinter folgt, durch ein Leerzeichen getrennt, ein frei w&auml;hlbarer Funktionsname, im Beispiel: <i>PrimzahlCheck</i>. Vergeben Sie einen Funktionsnamen, der das, was die Funktion leistet, ungef&auml;hr beschreibt. Beachten Sie dabei die Regeln f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a3"><b>selbst vergebene Namen</b></a>.
+<p>
+Unmittelbar hinter dem Funktionsnamen folgt eine &ouml;ffnende Klammer. Wenn die Funktion keine Parameter erwarten soll, notieren Sie dahinter sofort wieder eine schlie&szlig;ende Klammer. Wenn die Funktion Parameter &uuml;bergeben bekommen soll, notieren Sie innerhalb der Klammer die Namen der Parameter. Die Namen der Parameter sind frei w&auml;hlbar. Bei den Parameternamen gelten die gleichen Regeln wie beim Funktionsnamen. Mehrere Parameter werden durch Kommata voneinander getrennt. Im obigen Beispiel erwartet die Funktion <i>PrimzahlCheck</i> einen Parameter <i>Zahl</i>.
+<p>
+Der gesamte Inhalt der Funktion wird in geschweifte Klammern <b>{</b> und <b>}</b> eingeschlossen. Diese Klammern d&uuml;rfen niemals fehlen!
+<p>
+Die Anweisungen innerhalb der Funktion k&ouml;nnen sehr unterschiedlicher Natur sein. Da k&ouml;nnen Sie z.B. <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a1"><b>Objekte</b></a> manipulieren, &uuml;bergebene Parameter verarbeiten und &auml;ndern, Berechnungen anstellen usw. Sie k&ouml;nnen innerhalb von Funktionen auch andere Funktionen aufrufen. Welche Anweisungen innerhalb einer Funktion stehen, h&auml;ngt davon ab, was die Funktion leisten soll. Im obigen Beispiel wird ermittelt, ob die &uuml;bergebene Zahl eine Primzahl ist. Wenn es keine ist, wird f&uuml;r jede Zahl, durch die sie teilbar ist, eine entsprechende Meldung ausgegeben. Wenn es eine Primzahl ist, wird am Ende ausgegeben, da&szlig; es sich um eine Primzahl handelt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Funktion aufrufen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbba.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen eine selbst definierte Funktion aufrufen, um den darin enthaltenen JavaScript-Code auszuf&uuml;hren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Zahl auf Primzahl checken&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+function PrimzahlCheck(Zahl)
+ {
+  var Grenzzahl = Zahl / 2;
+  var Check = 1;
+  for(i = 2; i &lt;= Grenzzahl; i++)
+    if(Zahl % i == 0)  
+    {
+     alert(Zahl + &quot; ist keine Primzahl, weil teilbar durch &quot; + i);
+     Check = 0;
+    }
+  if(Check == 1)
+   alert(Zahl + &quot; ist eine Primzahl!&quot;);
+ }
+//--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form name=&quot;PrimzahlFormular&quot;&gt;
+Geben Sie eine Zahl ein, die Zahl wird auf Primzahl gecheckt:&lt;br&gt;
+&lt;input type=text name=&quot;Eingabezahl&quot;&gt;
+&lt;input type=button value=&quot;auf Primzahl checken&quot; onClick=&quot;PrimzahlCheck(document.PrimzahlFormular.Eingabezahl.value)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel zeigt eine komplette HTML-Datei. Darin ist ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> definiert, in dem wiederum die Funktion <b>PrimzahlCheck()</b> definiert ist. Im Dateik&ouml;rper der HTML-Datei steht ein Formular mit einem Eingabefeld und einem Button. Im Eingabefeld kann der Anwender eine Zahl eingeben. Wenn er auf den Button klickt, wird die JavaScript-Funktion aufgerufen und ermittelt, ob es sich bei der Eingabe um eine Primzahl handelt.. Dazu enth&auml;lt der Button den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <b>onClick=</b> (<i>= beim Anklicken</i>). Dahinter wird die JavaScript-Funktion mit der eingegebenen Zahl aufgerufen.
+<p>
+Die Funktion rufen Sie mit ihrem Funktionsnamen auf. Dahinter folgt die &ouml;ffnende Klammer. Wenn die Funktion keine Parameter erwartet, notieren Sie hinter der &ouml;ffnenden gleich eine schlie&szlig;ende Klammer. Wenn die Funktion Parameter erwartet, m&uuml;ssen Sie f&uuml;r jeden Parameter einen erlaubten Wert &uuml;bergeben. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Funktion mit R&uuml;ckgabewert und solche Funktion aufrufen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbbb.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Eine Funktion kann einen ermittelten Wert an die aufrufende Instanz zur&uuml;ckgeben.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Bruttobetrag aus Nettobetrag errechnen&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+    function BruttoBetrag(Netto, Prozente)
+     {
+       var Ergebnis = Netto * (1 + (Prozente / 100));
+      return Ergebnis;
+     }
+
+    function SchreibeBrutto(Betrag, Prozentsatz)
+     {
+      var Wert;
+      Wert = BruttoBetrag(Betrag, Prozentsatz);
+      document.BruttoForm.Ergebnisfeld.value = Wert;
+     }
+//--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form name=&quot;BruttoForm&quot;&gt;
+Nettobetrag: &lt;input type=text name=&quot;NettoEingabe&quot;&gt;&lt;br&gt;
+Prozentsatz: &lt;input type=text name=&quot;ProzentEingabe&quot;&gt;&lt;br&gt;
+&lt;p&gt;Kommabetrag mit Punkt eingeben!&lt;/p&gt;
+&lt;input type=button value=&quot;Brutto ermitteln&quot; 
+onClick=&quot;SchreibeBrutto(document.BruttoForm.NettoEingabe.value,document.BruttoForm.ProzentEingabe.value)&quot;&gt;
+&lt;p&gt;
+Ergebnis: &lt;input type=text name=&quot;Ergebnisfeld&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel zeigt eine komplette HTML-Datei. Darin ist ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> definiert, in dem wiederum die zwei Funktionen <b>BruttoBetrag(...)</b> und <b>SchreibeBrutto(...)</b> definiert sind. Im Dateik&ouml;rper der HTML-Datei steht ein Formular mit je einem Eingabefeld f&uuml;r einen Nettobetrag und einen Prozentwert. Wenn der Anwender auf den darunter definierten Button klickt, wird die Funktion <b>SchreibeBrutto(...)</b> aufgerufen. Diese wiederum ruft die Funktion <b>BruttoBetrag(...)</b> auf. 
+<p>
+Da die Funktion <b>BruttoBetrag(...)</b> ihr errechnetes Ergebnis an die aufrufende Instanz zur&uuml;ckgibt, wird in <b>SchreibeBrutto(...)</b> eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variable</b></a> mit dem Namen <b>Wert</b> definiert, die diesen R&uuml;ckgabewert speichert. Das Ergebnis, das in dieser Variablen gespeichert ist, schreibt die Funktion schlie&szlig;lich in ein Feld, das innerhalb des Formulars eigens f&uuml;r diesen Zweck eingerichtet wurde: das Eingabefeld mit dem Namen <b>Ergebnisfeld</b>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>vordefinierte JavaScript-Funktionen</font></h2></a>
+
+Es gibt ein paar Funktionen, die bereits in JavaScript integriert sind. Solche Funktionen k&ouml;nnen Sie aufrufen, ohne sie selbst zu definieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Bruttobetrag aus Nettobetrag errechnen&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+    function Simple()
+     {
+      var Ergebnis = eval("1+1");
+      alert("1 + 1 = " + Ergebnis);
+     }
+//--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;javascript:Simple()&quot;&gt;Wieviel ist 1+1?&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel zeigt eine komplette HTML-Datei. Darin ist ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> definiert, in dem wiederum eine Funktionen <b>Simple()</b> definiert ist. Innerhalb des Dateik&ouml;rpers der HTML-Datei steht ein Verweis. Beim Anklicken dieses Verweises wird die Funktion aufgerufen. Sie gibt das Ergebnis von 1+1 in einem Meldungsfenster aus. Zur Berechnung des Ergebnisses wird zuvor die JavaScript-Standardfunktion <b>eval(...)</b> aufgerufen (<i>eval = evaluate = berechne</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Syntax, um in Verweisen JavaScript-Funktionen aufzurufen, wird bei den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handlern</b></a> n&auml;her beschrieben.
+<p>
+Eine &Uuml;bersicht aller JavaScript-Standardfunktionen finden Sie im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcs.htm"><b>Objektunabh&auml;ngige Funktionen</b></a> (Referenz).
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdba.htm"><b>Allgemeine Notationsregeln</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbc.htm"><b>Objekte, Eigenschaften und Methoden</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

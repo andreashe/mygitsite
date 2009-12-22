@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>SELFHTML: FENSTERNAME.frames[ ] / FRAMENAME</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>FENSTERNAME.<i>frames[ ] / FRAMENAME</i></font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Mit dem Objekt <b>FENSTERNAME.<i>frames[ ] / FRAMENAME</i></b> haben Sie Zugriff auf <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tci.htm"><b>Frames</b></a>, also auf ein Frame-Set und seine Frame-Fenster, die in einer HTML-Datei definiert sind. 
+<p>
+Eine Instanz des Frame-Objekts wird automatisch erzeugt, wenn der WWW-Browser ein Frame-Set anzeigt. Das Frame-Objekt steht in allen Dateien zur Verf&uuml;gung, die in einem Frame-Fenster des Frame-Sets angezeigt werden.
+
+<h4><font color=#6666CC>Schema 1 / Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+parent.frames[#].Eigenschaft/Methode()
+parent.frames[1].location.href = &quot;sport.html&quot;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Schema 2 / Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+parent.FRAMENAME.Eigenschaft/Methode()
+parent.RechtesFenster.location.href = &quot;sport.html&quot;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>parent</b> ist ein reservierter Fenstername, den Sie zum Ansprechen von Fenstern innerhalb eines Frame-Sets verwenden k&ouml;nnen.
+<p>
+Frame-Fenster k&ouml;nnen Sie auf zwei Arten ansprechen:
+<ul>
+<li>mit einer Indexnummer (wie in Schema 1 / Beispiel 1)<br>
+Bei Verwendung von Indexnummern geben Sie <b>frames</b> an und dahinter in eckigen Klammern, das wievielte Frame-Fenster im Frame-Set Sie meinen. Beachten Sie, da&szlig; der Z&auml;hler bei 0 beginnt, d.h. das erste Frame-Fenster sprechen Sie mit <b>frames[0]</b> an, das zweite Frame-Fenster mit <b>frames[1]</b> usw. Beim Z&auml;hlen gilt die Reihenfolge, in der die Frame-Fenster im Frame-Set definiert sind.
+<p>
+<li>mit dem Namen des Frame-Fensters (wie in Schema 2 / Beispiel 2)<br>
+Dabei geben Sie den Namen an, der bei der HTML-Definition des Frame-Fenster bei <b>&lt;frame ...&gt;</b> in der Zusatzangabe <b>name=</b> definiert worden ist.
+</ul>
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das Frame-Objekt ist eigentlich eine Variante des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm"><b>window</b></a>-Objekts. Deshalb k&ouml;nnen Sie nicht nur die im folgenden aufgef&uuml;hrten Eigenschaften und Methoden auf das Frame-Objekt anwenden, sondern auch alle anderen, die in der Hierarchie unterhalb des window-Objekts stehen. Ebenso, wie Sie beispielsweise mit <i>window.document.forms[0].elements[0].value = &quot;Stefan&quot;</i> den Inhalt eines Formular Eingabefelds in einer gew&ouml;hnlichen HTML-Datei &auml;ndern k&ouml;nnen, k&ouml;nnen Sie das gleiche innerhalb eines Frame-Sets etwa mit <i>parent.frames[1].document.forms[0].elements[0].value = &quot;Stefan&quot;</i> erreichen.
+<p>
+Ein typisches Anwendungsbeispiel f&uuml;r den Einsatz des Frame-Objekts finden Sie in diesem Dokument: <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddb.htm"><b>Zwei Frames gleichzeitig &auml;ndern</b></a>.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<b><font color=#6666CC>parent.frames.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></table>
+Anzahl der Frames in einem Frame-Set. Wenn Sie in einer Datei, die in einem Frame-Fenster des Frame-Sets angezeigt wird, beispielsweise die Anweisung <i>alert(&quot;Dieses Frame-Set enthaelt &quot; + parent.frames.length + &quot; Frame-Fenster&quot;)</i> notieren, wird am Bildschirm die Anzahl der Frame-Fenster des Frame-Sets ausgegeben. 
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>parent.frames[<tt>#</tt>].name</font><br>
+<font color=#6666CC>parent.FRAMENAME.name</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></table>
+Der Name eines Frame-Fensters. Wenn Sie in einer Datei, die in einem von zwei Frame-Fenstern eines Frame-Sets angezeigt wird, beispielsweise die Anweisung <i>alert(&quot;Das linke Fenster hat den Namen &quot; + parent.frames[0].name + &quot; und das rechte Fenster den Namen &quot; + parent.frames[1].name)</i> notieren, werden am Bildschirm die Namen der beien Frame-Fenster des Frame-Sets ausgegeben.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+
+<b><font color=#6666CC>parent.frames[<tt>#</tt>].setTimeout(Anweisung,Millisekunden)</font><br>
+<font color=#6666CC>parent.FRAMENAME.setTimeout(Anweisung,Millisekunden)</font></b><br>
+F&uuml;hrt eine beliebige Anweisung, z.B. auch den Aufruf einer Funktion mit anderen Anweisungen, nach so viel Millisekunden aus wie angegeben. Wenn Sie beispielsweise <i>CountDown=parent.Oben.setTimeout(&quot;parent.Unten.close()&quot;,10000)&quot;&gt;</i> notieren, bewirken Sie, da&szlig; Fenster und Datei eines Frames 10 Sekunden lang angezeigt und danach geschlossen werden.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>parent.frames[<tt>#</tt>].clearTimeout(TimeoutVariable)</font><br>
+<font color=#6666CC>parent.FRAMENAME.clearTimeout(TimeoutVariable)</font></b><br>
+Macht den Aufruf von <b>setTimeout()</b> r&uuml;ckg&auml;ngig, sofern dieser in der Form <i>TimeoutVariable = setTimeout()</i> erfolgte, also in einer Variablen gespeichert wurde. Denn diese 	Variable ist beim Aufruf von <i>clearTimeout()</i> als Parameter zu &uuml;bergeben.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcj.htm"><b>FENSTERNAME.document.links[ ]</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcl.htm"><b>FENSTERNAME.history</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>SELFHTML: Lauftext (Marquee)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Lauftext (Marquee)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Lauftext definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Laufrichtung bestimmen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Laufgeschwindigkeit einstellen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Hin- und herwechselnder Lauftext</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Lauftext zus&auml;tzlich hervorheben</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a6"><b>Umgebenden Text ausrichten</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Lauftext definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen erreichen, da&szlig; ein Text mitten im &uuml;brigen Text automatisch horizontal scrollt, so wie in dem von Windows bekannten
+Bildschirmschoner &quot;Marquee&quot;. Diese Angaben werden bislang jedoch nur vom MS Internet Explorer ab Version 2.0 interpretiert.
+
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee&gt;Dieser Text wird horizontal wie am Laufband gescrollt&lt;/marquee&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;marquee&gt;</b> leiten Sie den zu scrollenden Text ein. Dahinter folgt der Text, der gescrollt werden soll. Am Ende des zu scrollenden
+Textes notieren Sie ein abschlie&szlig;endes <b>&lt;/marquee&gt;</b>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Laufrichtung bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Per Voreinstellung werden Marquee-Texte vom Internet Explorer von rechts nach links bewegt. Sie k&ouml;nnen die Laufrichtung umkehren.
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee direction=right&gt;Dieser Text wird von links nach rechts gescrollt&lt;/marquee&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>direction=right</b> im einleitenden Tag von <b>&lt;marquee ... &gt;</b> erzwingen Sie die Laufrichtung von links nach rechts (<i>direction = Richtung, right = rechts</i>). Mit der Zusatzangabe <b>direction=left</b> stellen Sie die Laufrichtung auf rechts nach links (Voreinstellung).
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Laufgeschwindigkeit einstellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der Internet Explorer verwendet intern eine bestimmte Laufgeschwindigkeit. Sie k&ouml;nnen eine eigene Geschwindigkeit bestimmen. Die Geschwindigkeit k&ouml;nnen Sie durch zwei Parameter beeinflussen: 1. durch die Anzahl der Pixel zwischen einem Bewegungszustand und dem n&auml;chsten, und 2. durch die Angabe der Verz&ouml;gerung zwischen zwei Bewegungszust&auml;nden.
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee scrollamount=50 scrolldelay=5&gt;Dieser Text wird ziemlich schnell gescrollt&lt;/marquee&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>scrollamount=</b> im einleitenden Tag von <b>&lt;marquee ... &gt;</b> bestimmen Sie die Pixelanzahl zwischen den Scroll-Zust&auml;nden, und durch die Zusatzangabe <b>scrolldelay=</b> legen Sie die Verz&ouml;gerung zwischen zwei Scroll-Zust&auml;nden in Millisekunden fest (<i>amount = Zustand, delay = Verz&ouml;gerung</i>).
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Hin- und herwechselnder Lauftext</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen bestimmen, da&szlig; der sich der Marquee-Text abwechselnd von rechts nach links und von links nach rechts bewegt. Dabei wird die Laufrichtung des Textes umgekehrt, sobald der Text einen der beiden Fenster- bzw. Seitenr&auml;nder ber&uuml;hrt.
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee behavior=alternate&gt;Dieser Text wird hin- und herbewegt&lt;/marquee&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>behavior=alternate</b> im einleitenden Tag von
+<b>&lt;marquee ... &gt;</b> erzwingen Sie den Wechsel-Effekt (<i>behavior = Verhalten, alternate = wechselnd</i>).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Lauftext zus&auml;tzlich hervorheben</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a5"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen den als Marquee-Effekt definierten Textabschnitt zus&auml;tzlich hervorheben, indem Sie eine eigene Hintergrundfarbe f&uuml;r diesen Textabschnitt definieren. Der Scroll-Effekt findet dann optisch gesehen in einem andersfarbigen Kasten statt.
+
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;font color=#FFFF00&gt;&lt;marquee bgcolor=#990099&gt;Dieser Scroll-Text erscheint gelb auf knallrotem Hintergrund&lt;/marquee&gt;&lt;/font&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>bgcolor=</b> im einleitenden Tag von <b>&lt;marquee ... &gt;</b> erzwingen Sie, da&szlig; der gescrollte Text in einem andersfarbigen Rahmen erscheint (<i>bgcolor = background color = Hintergrundfarbe</i>). F&uuml;r die Farbauswahl gelten die Regeln zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm"><b>Definieren von Farben in HTML</b></a>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie eine Hintergrundfarbe f&uuml;r den Lauftext, sollten Sie auch eine dazu kontrastierende Vordergrundfarbe f&uuml;r den Text bestimmen. Dies erreichen Sie durch Bestimmen der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarbe</b></a> mit <b>&lt;font color=&gt;</b>. Das <b>&lt;font&gt;</b>-Tag sollte dabei au&szlig;erhalb des <b>&lt;marquee&gt;</b>-Tags stehen, andernfalls interpretiert der MS Internet Explorer es falsch. 
+<p>
+Die definierten Farben sollten ferner zu den dateiweiten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcca.htm"><b>Hinter- und Vordergrundfarben</b></a> passen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a6"><h2><font color=#6666CC><img src="xmsie2.gif" width=30 height=30 border=0 alt="MS IE2.0"> Umgebenden Text ausrichten</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdpa.htm#a6"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen bestimmen, da&szlig; Text, der im gleichen Absatz wie der Marquee-Text steht, im Verh&auml;ltnis zu dem Marquee-Text ausgerichtet wird.
+
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee algin=top&gt;Marquee-Text&lt;/marquee&gt; und oben daran ausgerichteter Text
+&lt;marquee algin=middle&gt;Marquee-Text&lt;/marquee&gt; und mittig daran ausgerichteter Text
+&lt;marquee algin=bottom&gt;Marquee-Text&lt;/marquee&gt; und unten daran ausgerichteter Text
+</pre></td></tr></table><p>
+
+Ferner k&ouml;nnen Sie die H&ouml;he des Marquee-Bereichs sowie die Abst&auml;nde
+zwischen dem Marquee-Text und dem Text davor bzw. dahinter festlegen.
+
+<a name="imarquee"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;marquee height=20 hspace=10&gt;Marquee-Text&lt;/marquee&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>align=top</b> im einleitenden Tag von <b>&lt;marquee ... &gt;</b> erreichen Sie, da&szlig; der umgebende Text obenb&uuml;ndig zu dem Marquee-Text ausgerichtet wird. Mit <b>align=middle</b> wird der umgebende Text mittig ausgerichtet, mit <b>align=bottom</b> untenb&uuml;ndig (<i>align = Ausrichtung, top = oben, middle = mittig, bottom = unten</i>).
+<p>
+Durch die Zusatzangabe <b>height=</b> im einleitenden Tag von <b>&lt;marquee ... &gt;</b> bestimmen Sie die H&ouml;he des Marquee-Bereichs (<i>height = H&ouml;he</i>). Diese Angabe ist vor allem interessant, wenn Sie f&uuml;r den Marquee-Bereich eine eigene Hintergrundfarbe bestimmen. Mit der H&ouml;he des Marquee-Bereichs legen Sie dann die H&ouml;he des andersfarbigen Kastens fest, in dem der Marquee-Text gescrollt wird. Die Angabe erfolgt entweder absolut in Pixeln (wie im Beispiel), oder in Prozent relativ zur H&ouml;he des Anzeigefensters. Um einen Prozentwert anzugeben, h&auml;ngen Sie hinter die Wertangabe einfach ein Prozentzeichen % (z.B. <b>height=10%</b>).
+<p>
+Mit <b>hspace=</b> bestimmen Sie den Abstand zwischen Marquee-Text und dem &quot;normalen&quot; Text, der unmittelbar davor bzw. dahinter folgt (<i>hspace = horizontal space = horizontaler Abstand</i>). Diese Angabe ist nur von Bedeutung, wenn Sie den Marquee-Bereich mitten im Text definieren. Wenn Sie den Marquee-Bereich in einem eigenen Absatz definieren, ist die Angabe bedeutungslos. Die Angabe des Abstands zum Text davor bzw. dahinter erfolgt in Pixeln. Der angegebene Abstand gilt sowohl f&uuml;r den Text davor als auch f&uuml;r den Text dahinter.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdo.htm"><b>Freies Plazieren von Text</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcea.htm"><b>Aufbau einer Tabelle</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

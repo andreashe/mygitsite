@@ -1,0 +1,241 @@
+<html>
+<head>
+<title>SELFHTML: Layer definieren und positionieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> <font color=#6666cc>Layer definieren und positionieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Layern</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Fest positionierte Layer definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Flie&szlig;ende Layer definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Anzeigebereich von Layern beschneiden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a5"><b>Layer verschachteln</b></a> <br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666cc>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666cc>Allgemeines zu Layern</font></h2></a>
+Layer (<i>Schichten</i>) sind ein neues Sprachelement von HTML, das Netscape mit der Version 4.0 seines Browsers einf&uuml;hrt. Dieses Sprachelement ist ein Zugest&auml;ndnis an Screen-Designer, die sich am Multimedia-Standard von CD-ROMs orientieren und die entsprechenden M&ouml;glichkeiten auch im WWW-Format HTML verwirklicht sehen wollen. Layer werden jedoch bislang nur von Netscape ab V4.0 interpretiert. Bei ihrem Einsatz im WWW ist deshalb Vorsicht angebracht.
+<p>
+Mit Hilfe von Layern k&ouml;nnen Sie beliebige Teile einer HTML-Datei als zusammengeh&ouml;rige Einheiten definieren. Diese Einheiten k&ouml;nnen Sie mit genauen Pixelangaben frei am Bildschirm positionieren und mit Hilfe von JavaScript dynamisch behandeln. So k&ouml;nnen Sie zum Beispiel eine &Uuml;berschrift, eine Grafik und erkl&auml;renden Text dazu als Layer definieren. Diese definierte Einheit lassen Sie 100 Pixel von links und 50 Pixel von oben - gemessen am Anzeigefenster des Browsers - beginnen. F&uuml;r die gesamte Einheit definieren Sie eine maximale Breite, zum Beispiel 200 Pixel. Ferner k&ouml;nnen Sie entscheiden, ob die Layer-Einheit angezeigt werden soll oder nicht. Mit Hilfe von JavaScript k&ouml;nnen Sie die Anzeige der Layer-Einheit nachtr&auml;glich ein- oder ausschalten.
+<p>
+Sie k&ouml;nnen beliebig viele Layer innerhalb einer HTML-Datei definieren. Layer k&ouml;nnen sich dabei auch &uuml;berlappen. Wenn Sie beispielsweise zwei &Uuml;berschriften mit anschlie&szlig;ender Grafik und erkl&auml;rendem Text zu je einem Layer zusammenfassen, k&ouml;nnen beide Layer die gleichen Pixelpositionen erhalten. Mit Hilfe von JavaScript k&ouml;nnen Sie dann dynamisch einen der Layer ausschalten und den anderen einschalten. Sie k&ouml;nnen aber auch beide Layer gleichzeitig anzeigen und bestimmen, welcher &uuml;ber dem anderen liegen soll. Au&szlig;erdem k&ouml;nnen Sie festlegen, da&szlig; ein Layer &quot;durchsichtig&quot; sein soll oder nicht.
+<p>
+Layer k&ouml;nnen eigene Hintergrundfarben und sogar eigene Hintergrundbilder (Wallpapers) haben. Dadurch ergeben sich viele zus&auml;tzliche Gestaltungsm&ouml;glichkeiten beim Verteilen von Farben und Formen am Bildschirm.
+<p>
+Wenn Sie eine GIF-Grafik mit transparentem Hintergrund als eigenen Layer definieren, k&ouml;nnen Sie diese Grafik &uuml;ber oder unter Texte oder andere Grafiken legen und dadurch faszinierende Effekte erzeugen.
+<p>
+Es gibt festpositionierte und flie&szlig;ende Layer. Fest positionierte Layer haben absolute Pixelkoordinaten und erscheinen genau an der festgelegten Stelle am Bildschirm. Flie&szlig;ende Layer erscheinen innerhalb der HTML-Datei einfach an der Stelle, an der sie definiert werden. 
+
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Zum Redaktionsschlu&szlig; dieses Dokuments stand dem Autor nur die noch nicht ganz ausgereifte Dokumentation von Netscape zur Verf&uuml;gung. Zum Testen stand nur die Beta-1-Version von Netscape 4.0 zur Verf&uuml;gung. Diese Version unterst&uuml;tzte nur fest positionierte Layer, keine flie&szlig;enden Layer. Es kann sein, da&szlig; nicht alle Informationen in diesem Kapitel korrekt sind. Das Kapitel wird angepa&szlig;t, wenn die Layer-Technik ausgereift ist.
+<p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Fest positionierte Layer definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclaa.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen innerhalb des K&ouml;rpers einer HTML-Datei (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm"><b>Grundger&uuml;st einer HTML-Datei</b></a>) fest positionierte Layer definieren. Solche Layer haben eine definierte obere linke Ecke im Anzeigefenster. Au&szlig;erdem k&ouml;nnen Sie eine bestimmte Breite erzwingen.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Beispiel&quot; left=300 top=250 width=150&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;layer ...&gt;</b> leiten Sie die Definition eines Layer-Bereichs innerhalb einer HTML-Datei ein (<i>layer = Schicht</i>). Mit der Angabe <b>name=</b> k&ouml;nnen Sie einen Namen f&uuml;r den definierten Bereich vergeben.
+<p>
+Mit der Angabe <b>left=</b> bestimmen Sie die Anzahl Pixel vom linken Rand des Anzeigefensters, mit <b>top=</b> die Anzahl Pixel vom oberen Rand des Anzeigefensters (<i>left = links, top = oben</i>). Mit <b>width=</b> k&ouml;nnen Sie eine Anzeigebreite f&uuml;r den Layer-Bereich erzwingen (<i>width = Breite</i>). Elemente innerhalb des Layers werden dann so umgebrochen, da&szlig; die angegebene Breite eingehalten wird. 
+<p>
+Zwischen dem einleitenden <b>&lt;layer ...&gt;</b> und dem erforderlichen, abschlie&szlig;enden <b>&lt;/layer&gt;</b> k&ouml;nnen Sie beliebige andere Elemente einer HTML-Datei notieren, also zum Beispiel &Uuml;berschriften, Textabs&auml;tze, Tabellen, Grafik- oder Multimedia-Referenzen, Verweise usw. Alle Elemente, die Sie innerhalb eines Layers definieren, verhalten sich entsprechend der Eigenschaften, die Sie f&uuml;r den entsprechenden Layer definieren. Den Layer selbst m&uuml;ssen Sie sich dabei vorstellen wie ein eigenes Anzeigefenster ohne sichtbare Umrandungen, das in das normale Anzeigefenster des WWW-Browsers eingebettet ist.
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Wenn Sie mit Layern arbeiten und diese absolut im Anzeigebereich positionieren, wird es in den meisten F&auml;llen sinnvoll sein, innerhalb einer HTML-Datei alle anzuzeigenden Elemente innerhalb von fest positionierten Layern zu notieren. Denn andernfalls ger&auml;t Ihnen die Anzeige leicht au&szlig;er Kontrolle.
+<p>
+Eine H&ouml;he f&uuml;r den Layer-Bereich k&ouml;nnen Sie nicht angeben (war in Netscape 4.0 Beta 1 noch nicht vorgesehen, jedoch geplant - daf&uuml;r soll die Angabe <i>height=</i> dienen). Die H&ouml;he ergibt sich ansonsten automatisch durch den Inhalt, also die Elemente, die innerhalb des Layers definiert werden. Zum Redaktionsschlu&szlig; dieses Dokuments war kein Scrollen bei Inhalten m&ouml;glich, die l&auml;nger waren als die H&ouml;he des Anzeigefensters. Das hei&szlig;t, weitere Inhalte waren nicht anzeigbar. 
+<p>
+Wenn es der Inhalt erfordert, werden Angaben zur Breite au&szlig;er kraft gesetzt. Wenn beispielsweise eine Grafik oder eine Tabelle mehr Platz in Anspruch nimmt als die angegebene Breite, wird die Grafik bzw. die Tabelle in jedem Fall in voller Breite angezeigt. Dies k&ouml;nnen Sie allerdings verhindern - siehe <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Anzeigebereich von Layern beschneiden</b></a>.
+<p>
+Die Angaben zu linker und oberer Ecke sowie zur Breite sind zwar in den meisten F&auml;llen erw&uuml;nscht, jedoch nicht zwingend erforderlich. Wenn Sie keine Angaben dazu machen, beginnt der Layer einfach oben links, so wie das erste Element im Dateik&ouml;rper der HTML-Datei.
+
+<h4><font color=#6666cc>Tip:</font></h4>
+Wenn Layer nichts anderes enthalten als <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfe.htm"><b>GIF-Grafiken mit transparentem Hintergrund</b></a>, k&ouml;nnen Sie diese Grafiken mit Hilfe der Layer beliebig &uuml;bereinanderschichten und dadurch interessante Effekte erzeugen.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Flie&szlig;ende Layer positionieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclab.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen innerhalb des K&ouml;rpers einer HTML-Datei (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm"><b>Grundger&uuml;st einer HTML-Datei</b></a>) flie&szlig;ende Layer definieren. Solche Layer beginnen relativ an der Stelle, an der sie innerhalb der HTML-Datei stehen. F&uuml;r flie&szlig;ende Layer k&ouml;nnen Sie wie f&uuml;r <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>fest positionierte Layer</b></a> eine obere linke Ecke definieren. Die Angaben gelten jedoch nicht absolut bezogen auf das Anzeigefenster, sondern relativ zum vorhergehenden Element, also zum Beispiel zum voranstehenden Textabsatz. Au&szlig;erdem k&ouml;nnen Sie eine bestimmte Breite erzwingen.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;ilayer name=&quot;Beispiel&quot; left=30 top=20 width=150&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/ilayer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;ilayer ...&gt;</b> leiten Sie die Definition eines Layer-Bereichs innerhalb einer HTML-Datei ein (<i>ilayer = inflow layer = flie&szlig;ende Schicht</i>). Mit der Angabe <b>name=</b> k&ouml;nnen Sie einen Namen f&uuml;r den definierten Bereich vergeben.
+<p>
+Mit der Angabe <b>left=</b> bestimmen Sie einen Abstand zum Element links des Layers (<i>left = links</i>). Wenn der Layer ganz normal im Flie&szlig;text definiert wird, ist das der Abstand zum linken Rand des Anzeigefensters - Sie definieren dadurch also einen Absatzeinzug. Wenn der Layer beispielsweise innerhalb einer Tabellenzelle definiert wird, ist es der Abstand zum linken Zellenrand. 
+<p>
+Mit <b>top=</b> bestimmen Sie den Abstand des Layer-Bereichs zum vorhergehenden Element (<i>top = oben</i>). Wenn das vorhergehende Element zum Beispiel ein normaler Textabsatz ist, definieren Sie auf diese Weise einen Abstand zu dem Absatz.
+<p>
+Mit <b>width=</b> k&ouml;nnen Sie eine Anzeigebreite f&uuml;r den Layer-Bereich erzwingen (<i>width = Breite</i>). Elemente innerhalb des Layers werden dann so umgebrochen, da&szlig; die angegebene Breite eingehalten wird. 
+<p>
+Zwischen dem einleitenden <b>&lt;ilayer ...&gt;</b> und dem erforderlichen, abschlie&szlig;enden <b>&lt;/ilayer&gt;</b> k&ouml;nnen Sie beliebige andere Elemente einer HTML-Datei notieren.
+
+<h4><font color=#6666cc>Beachten Sie:</font></h4>
+Flie&szlig;ende Layer erzeugen keinen neuen Absatz. Wenn Sie beispielsweise Absatzabst&auml;nde mit Hilfe von flie&szlig;enden Layern erzwingen wollen, m&uuml;ssen Sie zuvor eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm#a1"><b>Absatzschaltung</b></a> einf&uuml;gen. Dies hat jedoch auch Vorteile. So k&ouml;nnen Sie beispielsweise mitten in einem Text eine Anweisung notieren wie &quot;<i>Dieses &lt;ilayer top=3&gt;Wort&lt;/ilayer&gt; erscheint um genau 3 Pixel tiefer als der &uuml;brige Text</i>&quot;.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Anzeigebereich von Layern beschneiden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tclac.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen einen Bereich erzwingen, innerhalb dessen der Inhalt eines Layers angezeigt werden mu&szlig;. Wenn der Inhalt mehr Platz in Anspruch nimmt (z.B. weil eine Grafik breiter ist), wird er abgeschnitten. Mit diesem Merkmal k&ouml;nnen Sie Effekte erzeugen, da&szlig; der Inhalt eines Layers wie durch ein Fenster gesehen erscheint, wobei beim Blick durch das Fenster nur ein Ausschnitt des Inhalts sichtbar ist.
+
+<h4><font color=#6666cc>Beispiel 1:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Beispiel&quot; left=30 top=20 width=260 clip=&quot;20,30,200,300&quot;&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+<h4><font color=#6666cc>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;ilayer name=&quot;Beispiel&quot; width=200 clip=&quot;200,400&quot;&gt;
+&lt;h1&gt;Eine &amp;Uuml;berschrift&lt;/h1&gt;
+&lt;img src=&quot;datei.gif&quot; alt=&quot;Ein Bild&quot;&gt;
+&lt;/ilayer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>clip=</b> k&ouml;nnen Sie einen Anzeigebereich erzwingen (<i>clip = Ausschnitt</i>). Hinter dem Istgleichzeichen notieren Sie zwei oder vier Zahlenwerte zum Bestimmen des gew&uuml;nschten Bereichs. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Trennen Sie die Zahlenwerte durch Kommata.
+<p>
+Wenn Sie vier Zahlenwerte angeben, bedeuten die Zahlen die Koordinaten des gew&uuml;nschten Rechtecks (in dieser Reihenfolge):<br>
+<b>clip=&quot;Pixel f&uuml;r links, Pixel f&uuml;r oben, Pixel f&uuml;r rechts, Pixel f&uuml;r unten&quot;</b><br> - und zwar relativ zur oberen linken Ecke des Layers. Wenn also im ersten der obigen Beispiele etwa durch <b>left=30</b> und <b>top=20</b> eine absolute obere linke Ecke f&uuml;r den Layer definiert wird, so bedeutet etwa die erste Angaben bei <b>clip=</b> - 20 - so viel wie: der erzwungene Anzeigebereich beginnt 20 Pixel links vom linken Rand des Layers (der bei 30 Pixeln liegt), absolut gesehen also bei 50 Pixeln.
+<p>
+Wenn Sie zwei Zahlenwerte angeben, bedeuten die Zahlen die Breite und H&ouml;he des gew&uuml;nschten Rechtecks (in dieser Reihenfolge):<br>
+<b>clip=&quot;Pixel f&uuml;r Breite, Pixel f&uuml;r H&ouml;he&quot;</b><br> - und zwar beginnend bei der oberen linken Ecke des Layers. Wenn Sie etwa wie im zweiten der obigen Beispiele mit <b>width=</b> eine bestimmte Breite des Layers erzwingen und sicherstellen wollen, da&szlig; die Breite auch eingehalten wird, wenn der Inhalt des Layers breiter ist, k&ouml;nnen Sie mit <b>clip=&quot;200,H&ouml;he&quot;</b> erzwingen, da&szlig; die Breite eingehalten wird.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a5"><h2><font color=#6666cc><img src="xnetsi4.gif" width=30 height=30 border=0 alt="Netscape4.0"> Layer verschachteln</font></h2></a>
+
+Sie k&ouml;nnen innerhalb von Layer-Bereichen andere Layer definieren. Positionsangaben in Layern innerhalb von Layern beziehen sich relativ auf die Position des &uuml;bergeordneten Layers.
+
+<h4><font color=#6666cc>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#ffffcc>
+<pre>
+&lt;layer name=&quot;Container&quot; clip=&quot;10,10,600,400&quot;&gt;
+  &lt;layer top=100 left=100&gt;
+     &lt;img src=&quot;bild1.gif&quot;&gt;
+  &lt;/layer&gt;
+  &lt;layer top=200 left=200&gt;
+  &lt;img src=&quot;bild2.gif&quot;&gt;
+  &lt;/layer&gt;
+  &lt;layer top=200 left=200&gt;
+     &lt;img src=&quot;bild3.gif&quot;&gt;
+  &lt;/layer&gt;
+&lt;/layer&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666cc>Erl&auml;uterung:</font></h4>
+Innerhalb eines Layers k&ouml;nnen Sie wie im Beispiel andere Layer definieren. Die Positionsangaben <b>left=</b> und <b>top=</b> des inneren Layers beziehen sich dabei nicht auf die R&auml;nder des Anzeigefensters, sondern auf die linke obere Ecke des &uuml;bergeordneten Layers, die ebenfalls mit <b>left=</b> und <b>top=</b> festgelegt wurde.
+
+<h4><font color=#6666cc>Hinweis:</font></h4>
+Mit Netscape 4.0 beta 1 war dieses Verhalten noch nicht korrekt nachvollziehbar.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666cc>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tckj.htm"><b>Mime-Typen f&uuml;r Dateiformate</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tclb.htm"><b>Hintergundfarben / Hintergrundbilder f&uuml;r Layer</b></a></td>
+</tr>
+</table>
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcl.htm"><b>Layer - variable Schichten</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

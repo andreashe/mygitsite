@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>SELFHTML: Adre&szlig;basis und Zielfensterbasis</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Adre&szlig;basis und Zielfensterbasis</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Adre&szlig;basis</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Zielfensterbasis</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> <font color=#6666CC>Adre&szlig;basis</font></h2></a>
+Sie k&ouml;nnen innerhalb einer HTML-Datei, die Sie auf einem WWW-Server ablegen, nochmals deren internet-weit eindeutige, genaue URL-Adresse notieren. Ein WWW-Browser, der diese Information ausliest, kann in Fehlersituationen besser auf verkn&uuml;pfte oder referenzierte Dateien zugreifen. Bei <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfc.htm"><b>Projektverweisen zu anderen HTML-Dateien</b></a> und bei <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcg.htm"><b>Grafiken</b></a> oder <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tck.htm"><b>Multimedia</b></a> gilt die hier definierbare Basis als Bezug.
+
+<a name="ibase_href"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;base href=&quot;http://www.netzwelt.com/selfhtml/tcbb.htm&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Angabe der Dateibasis erfolgt im Dateikopf (siehe hierzu auch: 
+<img  src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm"><b>Grundger&uuml;st einer HTML-Datei</b></a>) mit <b>&lt;base href= ... &gt;</b> und der genauen URL-Adresse der Datei (<i>base = Basis, href = hyper reference = Hyper(text)-Referenz</i>). Die Adresse mu&szlig; in Anf&uuml;hrungszeichen stehen. 
+<p>
+Wenn nun in der Datei beispielsweise folgende Grafikreferenz steht: <br>
+<b>&lt;img src=&quot;xweb.gif&quot;&gt;</b><br>
+... so ermittelt der WWW-Browser diese Grafik mit der absoluten URL-Adresse:<br>
+<b>&lt;img src=&quot;http://www.netzwelt.com/selfhtml/xweb.gif&quot;&gt;</b><br>
+(siehe auch: <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>)
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn es wichtig f&uuml;r Sie ist, da&szlig; Ihre Projekte leicht auf andere Server-Rechner, in andere Verzeichnisstrukturen usw. &uuml;bertragbar bleiben, sollten Sie auf die Definition einer Adre&szlig;basis verzichten. Denn mit der Angabe  einer absoluten Adre&szlig;basis wird der WWW-Browser stets versuchen, Verweisziele und referenzierte Dateien von der hier angegebenen Adresse zu laden. Dies macht das Austesten der Dateien auf einem lokalen PC unmöglich!
+<p>
+Die Angabe der Adreßbasis ist dagegen ein gewisser Schutz vor HTML-unkundigen Anwendern, die sich eine HTML-Datei lokal abspeichern oder das Cache-Verzeichnis ihres WWW-Browsers durchsuchen. Beim lokalen Aufruf der HTML-Datei wird der WWW-Browser stets eine Online-Verbindung verlangen und die Datei von der angegebenen Adresse laden wollen.
+<p>
+Eine weiterere Möglichkeit, um das Laden einer HTML-Datei von einer bestimmten Adresse im WWW zu erzwingen, ist, die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbd.htm#a4"><b>Datei von Original-Server laden</b></a>.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Zielfensterbasis</font></h2></a>
+Diese Angabe ist nur in Verbindung mit <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tci.htm"><b>Frames</b></a> sinnvoll. Sie k&ouml;nnen f&uuml;r eine HTML-Datei, die innerhalb eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a2"><b>Frame-Sets</b></a> in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a4"><b>Frame</b></a> angezeigt wird, festlegen, da&szlig; alle <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweise</b></a> dieser Datei in einem bestimmten anderen Frame-Fenster angezeigt werden, solange bei einem Verweis kein anderes Frame-Fenster angegeben wird. Da h&auml;ufig alle Verweisziele einer Datei, die in einem Frame-Fenster angezeigt wird, in einem bestimmten anderen Frame-Fenster angezeigt werden sollen, spart diese einmalige Angabe im Dateikopf viel Tipparbeit und hilft, den Dateiumfang zu verkleinern.<br>
+Siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcic.htm#a1"><b>Verweise zu anderen Frames</b></a>.
+
+<a name="ibase_href"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;base target=&quot;RechtesFenster&quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;base target= ... &gt;</b> legen Sie das Default-Fenster fest, in dem Verweisziele angezeigt werden sollen. Der Name des Fensters mu&szlig; in Anf&uuml;hrungszeichen stehen. Voraussetzung ist, da&szlig; Sie ein Frame-Set mit Frame-Fenstern definiert haben. Bei dem gew&uuml;nschten Frame-Fenster m&uuml;ssen Sie mit der Zusatzangabe <b>name=</b> den Fensternamen vergeben haben, den Sie hier bei <b>&lt;base target= ... &gt;</b> angeben.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Diese Anweisung darf nicht in der Datei stehen, die das Frame-Set enth&auml;lt. Sie darf nur in Dateien stehen, die innerhalb des Frame-Sets angezeigt werden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcba.htm"><b>Titel einer HTML-Datei</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcbc.htm"><b>Durchsuchbarkeit mit Serverkommunikation</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

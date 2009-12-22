@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>SELFHTML: Freie Buttons und Datei-Buttons</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Freie Buttons und Datei-Buttons</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Frei definierbare Buttons</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Datei-Buttons</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xnetsi2.gif" width=30 height=30 border=0 alt="Netscape2.0"><img src="xmsie3.gif" width=30 height=30 border=0 alt="MS IE3.0"> Frei definierbare Buttons</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchea.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen Buttons definieren, die wie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm"><b>Buttons zum Absenden oder Abbrechen</b></a> aussehen, jedoch keine spezielle Bedeutung haben. Sinnvoll sind solche frei definierbaren Buttons nur in Verbindung mit Scriptsprachen wie <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="td.htm"><b>JavaScript</b></a>. In der Regel werden sie dazu verwendet, Verweise oder andere JavaScript-gesteuerte Befehle auszuf&uuml;hren.
+
+
+<a name="iinput_button"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Wenn bei Ihnen JavaScript funktioniert, hat der folgende Button die gleiche 
+Bedeutung wie der Back-Button im WWW-Browser:
+&lt;p&gt;
+&lt;input type=button value=&quot;Zur&amp;uuml;ck&quot; onClick=&quot;history.back()&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;input type=button ...&gt;</b> definieren Sie einen Button (<i>input = Eingabe</i>). Die Beschriftung des Buttons bestimmen sie mit der Zusatzangabe <b>value=</b> (<i>value = Wert</i>). Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Um anzugeben, was passieren soll, wenn der Button angeklickt wird, k&ouml;nnen Sie beispielsweise den JavaScript <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a> <b>onClick=</b> verwenden. Hinter dem Istgleichzeiten geben Sie einen JavaScript-Befehl ein, z.B. den Aufruf einer selbstgeschriebenen JavaScript-Funktion, oder - wie im Beispiel - einen einfachen JavaScript-Befehl.
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Datei-Buttons</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchea.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Datei-Buttons erlauben dem Anwender, eine Datei von seinem lokalen Rechner zusammen mit dem Formular zu &uuml;bertragen. Wenn ein CGI-Script die ankommenden Formulardaten auf dem Server-Rechner verarbeitet, ist es dadurch m&ouml;glich, dem Anwender das Uploaden (Hochladen) von Dateien auf den Server-Rechner zu erm&ouml;glichen.
+<p>
+
+<a name="iinput_file"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Senden Sie eine Text- oder HTML-Datei!
+&lt;p&gt;
+&lt;input type=file size=50 maxlength=66 name=&quot;Datei&quot; accept=&quot;text/*&quot;&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;input type=file ...&gt;</b> definieren Sie einen Datei-Button (<i>input = Eingabe, file = Datei</i>). Der WWW-Browser sollte dann ein Eingabefeld anzeigen, das die Eingabe einer Datei (in den meisten F&auml;llen mit Pfadnamen) erlaubt. Rechts daneben sollte der Browser einen Button anzeigen, bei dessen Bet&auml;tigen ein lokaler Dateiauswahl-Dialog am Bildschirm erscheint. Die Gr&ouml;&szlig;e des Eingabefeldes (Anzahl Zeichen) k&ouml;nnen Sie mit <b>size=</b> bestimmen (<i>size = Gr&ouml;&szlig;e</i>). Mit <b>maxlength=</b> k&ouml;nnen Sie die Anzahl der eingebbaren Zeichen begrenzen (<i>maxlength = maximal length = maximale L&auml;nge</i>).
+<p>
+Wenn Sie nur bestimmte Dateitypen zulassen wollen, k&ouml;nnen Sie mit der Angabe <b>accept=</b> die erlaubten Dateitypen eingrenzen (<i>accept = erlauben</i>). Hinter dem Istgleichzeichen k&ouml;nnen Sie einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Typ</b></a> angeben. Dabei ist auch das Wildcardzeichen &quot;*&quot; bei Subtypen erlaubt. Im obigen Beispiel werden alle Textdateien akzeptiert. Dazu geh&ouml;ren reine Textdateien (*.txt), aber auch HTML-Dateien (*.html,*.htm).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie sich die Formulardaten per E-Mail zuschicken lassen, sollten Sie keine anderen Dateitypen als <b>text/*</b> akzeptieren, da Bin&auml;rdateien wie Programme, Grafiken usw. beim E-Mail-Transfer via Internet nicht korrekt &uuml;bertragen werden. 
+<p>
+Wenn Sie hochgeladene Dateien von einem auswertenden CGI-Programm auf dem Server-Rechner ablegen, sollten Sie auf den zur Verf&uuml;gung stehenden Speicherplatz achten und sicherstellen, da&szlig; die ankommenden Dateien automatisch auf Virenfreiheit &uuml;berpr&uuml;ft werden.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tchd.htm"><b>Radio- und Checkbuttons</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tchf.htm"><b>Versteckte Elemente</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

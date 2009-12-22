@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>SELFHTML: Text um Grafiken flie&szlig;en lassen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Text um Grafiken flie&szlig;en lassen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Grafik mit umflie&szlig;endem Text einbinden</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Textfortsetzung unterhalb der Grafik erzwingen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Grafik mit umflie&szlig;endem Text einbinden</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgca.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Grafiken, die Sie mit dem &lt;img&gt;-Tag referenzieren, k&ouml;nnen Sie links oder rechts ausrichten. Der umgebende Text flie&szlig;t dabei um die Grafik. 
+
+<a name="iimg_align_left"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; align=left&gt;Text, der rechts um die links ausgerichtete Grafik flie&szlig;t
+</pre></td></tr></table><p>
+
+<a name="iimg_align_right"><h4><font color=#6666CC>Beispiel 2:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; align=right&gt;Text, der links um die rechts ausgerichtete Grafik flie&szlig;t
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit den Angaben <b>align=left</b> bzw. <b>align=right</b> veranlassen Sie den Browser, die Grafik linksb&uuml;ndig bzw. rechtsb&uuml;ndig auszurichten und den darauffolgenden Flie&szlig;text rechts bzw. links neben der Grafik anzuzeigen und um die Grafik herumflie&szlig;en zu lassen (<i>align = Ausrichtung, left = links, right = rechts</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Der umgebende Text kann verschiedene Elemente enthalten, zum Beispiel auch &Uuml;berschriften oder Listen.
+<p>
+Sie k&ouml;nnen auch den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm"><b>Abstand zwischen Grafik und Text</b></a> kontrollieren.
+<p>
+Um Grafiken auszurichten, ohne den folgenden Text um die Grafik flie&szlig;en zu lassen, notieren Sie vor und hinter der Grafik entsprechende <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdb.htm"><b>Textabs&auml;tze</b></a> (Absatzschaltungen) - zum Beispiel durch <b>&lt;p&gt;&lt;img src=&quot;datei.gif&quot;&gt;&lt;p&gt;</b> oder <b>&lt;p align=center&gt;&lt;img src=&quot;datei.gif&quot;&gt;&lt;p&gt;</b>.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Textfortsetzung unterhalb der Grafik erzwingen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Manchmal m&ouml;chten Sie vielleicht nur zwei oder drei Zeilen kommentierenden Text neben der Grafik haben und den folgenden Text dann unterhalb der Grafik fortsetzen. Dazu m&uuml;ssen Sie einen speziellen Umbruch erzwingen, der den Textflu&szlig; neben der Grafik unterbricht und stattdessen unterhalb der Grafik fortf&auml;hrt. 
+
+<a name="iimg_br_clear"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; align=left&gt;Text, der um die Grafik flie&szlig;t&lt;br clear=all&gt;
+und Text, der unterhalb der Grafik weitergeht
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Wenn Sie mit <b>align=left</b> oder <b>align=right</b> darauffolgenden Text um eine Grafik flie&szlig;en lassen, k&ouml;nnen Sie innerhalb des umflie&szlig;enden Textes die Angabe <b>&lt;br clear=all&gt;</b> notieren, um den Textflu&szlig; zu unterbrechen und unterhalb der Grafik fortzufahren (<i>br = break = Umbruch, clear = l&ouml;schen, all = alles</i>).
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Neben <b>&lt;br clear=all&gt;</b> sind auch die Angaben <b>&lt;br clear=left&gt;</b> und <b>&lt;br clear=right&gt;</b> erlaubt. Experimentieren Sie mit diesen Angaben, wenn <b>&lt;br clear=all&gt;</b> nicht den gew&uuml;nschten Effekt bringt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcgb.htm"><b>Grafiken beschriften</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcgd.htm"><b>Abstand zwischen Grafik und umgebendem Text</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

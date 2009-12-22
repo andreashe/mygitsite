@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>SELFHTML: H&ouml;he und Breite erzwingen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b> Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> H&ouml;he und Breite erzwingen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>H&ouml;he und Breite der gesamten Tabelle erzwingen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Breite von Spalten erzwingen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>H&ouml;he von Zeilen erzwingen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Zeilenumbruch in Zellen verhindern</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> H&ouml;he und Breite der gesamten Tabelle erzwingen</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceca.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen eine Tabelle in Gesamtbreite und Gesamth&ouml;he auf ein bestimmtes Ma&szlig; bringen.
+
+<a name="itable_width_height"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border width=60% height=400&gt;
+   &lt;!--hier folgt der Tabelleninhalt--&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>width=</b> im einleitenden Tag einer Tabelle erreichen Sie, da&szlig; der Browser die Tabelle so breit anzeigt wie angegeben (<i>width = Breite</i>). Sie k&ouml;nnen eine Zahl oder einen Prozentwert angeben. Mit einer Zahl, z.B. 300, erzwingen Sie, da&szlig; die Tabelle so viel Pixel breit dargestellt wird wie angegeben. Mit einem Prozentwert erreichen Sie, da&szlig; die Tabelle maximal vo viel Breite des Anzeigefensters einnimmt wie angegeben. F&uuml;r eine prozentuale Angabe notieren Sie hinter der Zahl einfach ein Prozentzeichen. 
+<p>
+Durch die Angabe <b>height=</b> erreichen Sie, da&szlig; der Browser die Tabelle so hoch anzeigt wird wie angegeben (<i>height = H&ouml;he</i>). Auch hier k&ouml;nnen Sie eine Zahl oder einen Prozentwert angeben. Mit einer Zahl, z.B. 1000, erzwingen Sie eine Tabellenh&ouml;he unabh&auml;ngig von der Gr&ouml;&szlig;e des Anzeigefensters. Mit einem Prozentwert k&ouml;nnen Sie die H&ouml;he der Tabelle relativ zur Gr&ouml;&szlig;e des Anzeigefensters bestimmen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe <b>height=</b> ist im Gegensatz zu <b>width=</b> nicht im HTML-3.2-Standard erw&auml;hnt, wird aber von tabellenf&auml;higen Browsern interpretiert.
+<p>
+Die Angaben zu Breite und H&ouml;he einer Tabelle sind nur wirksam, wenn der Tabelleninhalt kleiner ist, so da&szlig; leerer Raum entsteht. Wenn der Tabelleninhalt gr&ouml;&szlig;er ist, werden die Angaben zu Breite und H&ouml;he au&szlig;er Kraft gesetzt. Die Tabelle wird in diesem Fall vom WWW-Browser so dimensioniert, da&szlig; der gesamte Inhalt angezeigt wird.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Breite von Spalten erzwingen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen die Breite einzelner Spalten einer Tabelle bestimmen.
+
+<a name="itr_width"><a name="itd_width"><a name="itd"><h4><font color=#6666CC>Beispiel:</font></h4></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th width=300&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 2. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 3. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte &lt;!-- Breite 300 gilt auch hier --&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 2. Spalte
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datenzelle: 3. Zeile, 1. Spalte &lt;!-- Breite 300 gilt auch hier --&gt;
+      &lt;td&gt;Datenzelle: 3. Zeile, 2. Spalte
+      &lt;td&gt;Datenzelle: 3. Zeile, 3. Spalte
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>width=</b> im einleitenden Tag einer Kopfzelle (<b>&lt;th&gt;</b>) oder Datenzelle (<b>&lt;td&gt;</b>) erzwingen Sie eine bestimmte Spaltenbreite (<i>width = Breite</i>). Sie k&ouml;nnen eine Zahl oder einen Prozentwert angeben. Mit einer Zahl, z.B. 300, erzwingen Sie, da&szlig; die Spalte so viel Pixel breit dargestellt wird wie angegeben. Mit einem Prozentwert erreichen Sie, da&szlig; die Spalte maximal vo viel Breite des Anzeigefensters einnimmt wie angegeben. F&uuml;r eine prozentuale Angabe notieren Sie hinter der Zahl einfach ein Prozentzeichen. 
+<p>
+Da die Angabe spaltenweit gilt, brauchen Sie sie nur einmal pro Spalte zu notieren. Am sinnvollsten ist es, die Angabe in der ersten Zeile der Tabelle zu notieren. Im obigen Beispiel wird die gesamte erste Spalte der Tabelle, die aus drei Zeilen besteht, auf 300 Pixel Breite gebracht. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe zur Spaltenbreite ist nur wirksam, wenn der Spalteninhalt in jeder Zeile kleiner ist, so da&szlig; leerer Raum entsteht. Wenn der Inhalt gr&ouml;&szlig;er ist, wird die Angabe au&szlig;er Kraft gesetzt. Die Spalte wird in diesem Fall so dimensioniert, da&szlig; der gesamte Inhalt angezeigt wird. Das ist beispielsweise der Fall, wenn in der Spalte eine Grafik vorkommt, die breiter ist als die angegebene Spaltenbreite.
+<p>
+Falls Sie zugleich eine bestimmte <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Breite der gesamten Tabelle </b></a> angeben, hat die Angabe zur Gesamtbreite im Konfliktfall Vorrang gegen&uuml;ber der angegebenen Breite einer einzelnen Spalte.
+<p>
+Erzwungene Spaltenbreiten und erzwungene Zeilenh&ouml;hen (siehe folgender Abschnitt) sind kombinierbar.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> H&ouml;he von Zeilen erzwingen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceca.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen die H&ouml;he einzelner Zeilen einer Tabelle bestimmen.
+
+<a name="itr_height"><a name="itd_height"><h4><font color=#6666CC>Beispiel:</font></h4></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th height = 300&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;th&gt;Kopfzelle: 1. Zeile, 2. Spalte &lt;!-- H&ouml;he 300 gilt auch hier --&gt;
+      &lt;th&gt;Kopfzelle: 1. Zeile, 3. Spalte &lt;!-- H&ouml;he 300 gilt auch hier --&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td height=200&gt;Datenzelle: 2. Zeile, 1. Spalte 
+      &lt;td&gt;Datenzelle: 2. Zeile, 2. Spalte &lt;!-- H&ouml;he 200 gilt auch hier --&gt;
+      &lt;td&gt;Datenzelle: 2. Zeile, 1. Spalte &lt;!-- H&ouml;he 200 gilt auch hier --&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td height=100&gt;Datenzelle: 3. Zeile, 1. Spalte 
+      &lt;td&gt;Datenzelle: 3. Zeile, 2. Spalte &lt;!-- H&ouml;he 100 gilt auch hier --&gt;
+      &lt;td&gt;Datenzelle: 3. Zeile, 3. Spalte &lt;!-- H&ouml;he 100 gilt auch hier --&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>height=</b> im einleitenden Tag einer Kopfzelle (<b>&lt;th&gt;</b>) oder Datenzelle (<b>&lt;td&gt;</b>) erzwingen Sie eine bestimmte Zeilenh&ouml;he (<i>height = H&ouml;he</i>). Sie k&ouml;nnen eine Zahl oder einen Prozentwert angeben. Mit einer Zahl, z.B. 300, erzwingen Sie, da&szlig; die Zeile so viel Pixel hoch dargestellt wird wie angegeben. Mit einem Prozentwert erreichen Sie, da&szlig; die Spalte maximal vo viel H&ouml;he des Anzeigefensters einnimmt wie angegeben. F&uuml;r eine prozentuale Angabe notieren Sie hinter der Zahl einfach ein Prozentzeichen. 
+<p>
+Da die Angabe f&uuml;r die gesamte Zeile gilt, brauchen Sie sie nur einmal pro Zeile zu notieren. Am sinnvollsten ist es, die Angabe in der ersten Spalte einer Zeile zu notieren. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angabe zur Zeilenh&ouml;he ist nur wirksam, wenn der Inhalt in jeder Spalte der Zeile kleiner ist, so da&szlig; leerer Raum entsteht. Wenn der Inhalt gr&ouml;&szlig;er ist, wird die Angaben au&szlig;er Kraft gesetzt. Die Zeile wird in diesem Fall so dimensioniert, da&szlig; der gesamte Inhalt angezeigt wird. Das ist beispielsweise der Fall, wenn in der Zeile eine Grafik vorkommt, die h&ouml;her ist als die angegebene Zeilenh&ouml;he.
+<p>
+Falls Sie zugleich eine bestimmte <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>H&ouml;he der gesamten Tabelle </b></a> angeben, hat die Angabe zur Gesamth&ouml;he im Konfliktfall Vorrang gegen&uuml;ber der angegebenen H&ouml;he einer einzelnen Zeile.
+<p>
+Erzwungene Zeilenh&ouml;hen und <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>erzwungene Spaltenbreiten</b></a> sind kombinierbar.
+<p>
+Zelleninhalte werden bei erzwungener Zeilenh&ouml;he mittig ausgerichtet, wenn Sie nichts anderes angeben. Sie k&ouml;nnen den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a2"><b>Zelleninhalt oben oder unten ausrichten</b></a>.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Zeilenumbruch in Zellen verhindern</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceca.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen festlegen, da&szlig; beim Inhalt einer Zelle kein automatischer Zeilenumbruch erfolgen darf. Die Spalte der Tabelle wird bei der Anzeige entsprechend breit dimensioniert.
+
+<a name="itr_height"><a name="itd_height"><h4><font color=#6666CC>Beispiel:</font></h4></a></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kopfzelle: 1. Zeile, 1. Spalte
+      &lt;td nowrap&gt;Datenzelle: 1. Zeile, 2. Spalte - Text wird nicht umgebrochen!
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Angabe <b>nowrap</b> im einleitenden Tag einer Kopfzelle (<b>&lt;th&gt;</b>) oder Datenzelle (<b>&lt;td&gt;</b>) verhindern Sie einen automatischen Zeilenumbruch beim folgenden Zelleninhalt.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Diese Angabe ist nur bei relativ kurzen und bestimmten Zellinhalten sinnvoll, zum Beispiel bei Quellcode-Zeilen eines Programms.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tceb.htm"><b>Rahmendicke, Gitternetzlinien, Randabstand</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tced.htm"><b>Zelleninhalte ausrichten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

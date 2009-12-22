@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>SELFHTML: Durchsuchbarkeit mit Server-Kommunikation</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Durchsuchbarkeit mit Server-Kommunikation</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Datei als durchsuchbar definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Voranstehende Eingabeaufforderung definieren</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> <font color=#6666CC>HTML-Datei als durchsuchbar definieren</font></h2></a>
+Heute spielt dieser Befehl in der Praxis keine Rolle mehr, da moderne WWW-Browser bequemes und schnelles Suchen nach Text in einer angezeigten HTML-Datei erlauben. Die folgenden Informationen haben daher eher &quot;historischen&quot; Charakter.
+<p>
+Eine HTML-Datei kann eine durchsuchbare Datei sein. Das bedeutet, da&szlig; ihr Inhalt auf dem Server-Rechner nach allen vorkommenden W&ouml;rtern indexiert wurde. Es hat jedoch nur einen Sinn, eine HTML-Datei als durchsuchbar zu definieren, wenn ihr Inhalt tats&auml;chlich in indexierter Form, also in einer Suchindexdatei auf dem Server-Rechner vorliegt. 
+<p>
+Bei einer als durchsuchbar definierten HTML-Datei erscheint bei der Anzeige im WWW-Browser am Anfang der Datei ein Eingabefeld, das dem Anwender die Eingabe eines Suchbegriffs erlaubt.
+<p>
+<a name="iisindex"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;isindex&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;isindex&gt;</b> deklarieren Sie eine HTML-Datei als durchsuchbar. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> <b>Voranstehende Eingabeaufforderung definieren</b></font></h2></a>
+Wenn Sie nichts anderes angeben, erscheint beim Definieren einer durchsuchbaren Datei ein nacktes Eingabefeld am Anfang der angezeigten Datei. Sie k&ouml;nnen einen Eingabeaufforderungstext hinzuf&uuml;gen.
+
+<a name="iisindex_prompt"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;head&gt;
+&lt;isindex prompt=&quot;Geben Sie einen Suchbegriff ein: &quot;&gt;
+... andere Angaben im Dateikopf ...
+&lt;/head&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>prompt=</b> bestimmen Sie einen Eingabeaufforderungstext. Der Text mu&szlig; in Anf&uuml;hrungszeichen stehen (<i>prompt = Aufforderung</i>).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcbb.htm"><b>Adre&szlig;basis und Zielfensterbasis f&uuml;r Verweise</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcbd.htm"><b>Meta-Informationen f&uuml;r verschiedene Zwecke</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcb.htm"><b> Angaben im Dateikopf</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

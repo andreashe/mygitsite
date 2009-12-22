@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>SELFHTML: Tips zum Umgang mit blinden Tabellen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Tips zum Umgang mit blinden Tabellen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Mehrspaltigkeit</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Text und Grafik</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Seitenr&auml;nder erzwingen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Farbfl&auml;chen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+Wenn Sie bei WWW-Seiten auf sauber ausgerichtete, aber relativ frei verteilte Elemente sto&szlig;en, wurde in vielen F&auml;llen mit der Technik der &quot;blinden Tabellen&quot; gearbeitet. Blinde Tabellen haben keine sichtbaren Gitternetzlinien. Dadurch merkt der Betrachter gar nicht, da&szlig; es sich in Wirklichkeit um eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcea.htm"><b>Tabelle</b></a> handelt.
+<p>
+Einen Nachteil sollten Sie jedoch beachten, wenn Sie beabsichtigen, den gesamten anzuzeigenden Inhalt einer WWW-Seite mit Hilfe einer blinden Tabelle anzuordnen: Tabellen werden vom WWW-Browser erst angezeigt, nachdem ihr kompletter Inhalt eingelesen wurde bzw. erst in dem Augenblick, wo der WWW-Browser genau wei&szlig;, wie gro&szlig; und wie breit die Tabelle angezeigt werden mu&szlig;. Das bedeutet bei der Daten&uuml;bertragung aus dem WWW, da&szlig; ein Anwender am Bildschirm l&auml;nger wartet, bis &uuml;berhaupt etwas angezeigt wird. 
+<p>
+Alternativen zu blinden Tabellen sind <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tci.htm"><b>Frames</b></a> und neuerdings auch <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcl.htm"><b>Layer</b></a>.
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Mehrspaltigkeit</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceha.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Tabellen dienen nicht nur dazu, um tabellarische Information anzuzeigen. In HTML wie in anderen textverarbeitenden Systemen dienen Tabellen auch dazu, um einen &quot;Mehrspaltensatz&quot; am Bildschirm zu erzwingen. 
+<p>
+Mit Hilfe etwa einer dreispaltigen blinden Tabelle k&ouml;nnen Sie einen attraktiv aussehenden 3spaltigen Textsatz im Stil einer Zeitung realisieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;table cellpadding=5&gt;
+    &lt;tr valign=top&gt;
+      &lt;td width=33%&gt;
+  Hier folgt der Text von Spalte 1
+      &lt;/td&gt;
+      &lt;td width=33%&gt;
+  Hier folgt der Text von Spalte 2
+      &lt;/td&gt;
+      &lt;td width=34%&gt;
+  Hier folgt der Text von Spalte 3
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In diesem Beispiel werden drei Spalten definiert, deren Breiten mit den Angaben <b>width=</b> 33%, 33% und 34% (= 100%) definiert werden. Innerhalb jeder der 3 Spalten k&ouml;nnen beliebige Elemente 
+stehen. Grafiken, die zu breit sind, sprengen allerdings die erzwungenen Spaltenbreiten.<br> 
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a2"><b>Breite von Spalten erzwingen</b></a>)
+<p>
+Da die Inhalte der Spalten unterschiedlich lang sein k&ouml;nnen, wird mit der Angabe <b>valign=top</b> im einleitenden Tag der Zeile (<b>&lt;tr&gt;</b>) erreicht, da&szlig; alle Inhalte obenb&uuml;ndig ausgerichtet werden.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a2"><b>Ausrichtung oben, mittig und unten</b></a>)
+<p>
+Achten Sie darauf, da&szlig; die Inhalte aller definierten Spalten ungef&auml;hr gleich lang sind und m&ouml;glichst nicht mehr Inhalt enthalten, als ein Bildschirm bei 640 x 480 Pixeln Aufl&ouml;sung anzeigen kann. Denn sonst mu&szlig; der Anwender dauernd scrollen. Falls Sie mehr Information unterbringen wollen, sollten Sie danach einfach eine neue Tabellenzeile mit den n&auml;chsten drei Zellen notieren. Falls Sie Zwischen&uuml;berschriften oder Trennlinien notieren wollen, die sich &uuml;ber alle drei Spalten erstrecken sollen, m&uuml;ssen Sie daf&uuml;r ebenfalls eine eigene neue Tabellenzeile notieren. Statt drei Zellen notieren Sie dabei aber nur eine und erstrecken Sie mit der Zusatzangabe <b>colspan=3</b> &uuml;ber alle drei Spalten.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcee.htm#a1"><b>Zellen in einer Zeile spaltenweise verbinden</b></a>)
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Zur Realisierung von Mehrspaltigkeit in HTML gibt es neben der M&ouml;glichkeit blinder Tabellen auch noch eine direkte M&ouml;glichkeit f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdn.htm"><b>mehrspaltigen Textflu&szlig;</b></a>, die aber nur von Netscape ab V3.0 interpretiert wird.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Text und Grafik</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceha.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Mit Hilfe von blinden Tabellen k&ouml;nnen Sie mehrere Grafiken sauber nebeneinander plazieren und haben die M&ouml;glichkeit, dar&uuml;ber und darunter ebenso sauber Text zu plazieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table width=500 cellpadding=10&gt;
+  &lt;tr align=center&gt;
+    &lt;td&gt;&lt;h3&gt;&Uuml;berschrift&lt;/h3&gt;&lt;img src="grafik1.gif" width=70 height=76 border=0&gt;
+    &lt;td&gt;&lt;h3&gt;&Uuml;berschrift&lt;/h3&gt;&lt;img src="grafik2.gif" width=66 height=76 border=0&gt;
+    &lt;td&gt;&lt;h3&gt;&Uuml;berschrift&lt;/h3&gt;&lt;img src="grafik3.gif" width=81 height=76 border=0&gt;
+  &lt;/tr&gt;
+  &lt;tr align=center valign=top&gt;
+    &lt;td&gt;&lt;Beschreibungstext&gt;
+    &lt;td&gt;&lt;Beschreibungstext&gt;
+    &lt;td&gt;&lt;Beschreibungstext&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In diesem Beispiel werden drei Spalten definiert. In der ersten Zeile sollen 3 &Uuml;berschriften mit 3 dazugeh&ouml;rigen Grafiken unterhalb stehen, in der zweiten Zeile 3 passende Beschreibungstexte, wiederum unterhalb der jeweiligen Grafiken. Mit der Angabe <b>width=500</b> wird eine Gesamtbreite der Tabelle erzwungen. Die Breite ist in Abstimmung mit der Summe der Breite aller Grafiken und dem Textumfang so gew&auml;hlt, da&szlig; es optisch ordentlich aussieht. <br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a1"><b>H&ouml;he und Breite der gesamten Tabelle erzwingen</b></a>).
+<p>
+Durch die Angabe <b>cellpadding=10</b> wird sichergestellt, da&szlig; sich die Zelleninhalte bei gr&ouml;&szlig;erem Inhalt nicht zu nahe kommen.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a3"><b>Randabstand von Zelleninhalt zum Zellenrand</b></a>).
+<p>
+Mit <b>&lt;tr align=center&gt;</b> werden alle Zellen der jeweiligen Zeile zentriert ausgerichtet. Da die Beschriebungstexte unterschiedlich lang sein k&ouml;nnen, wird mit der Angabe valign=top erreicht, da&szlig; sie alle obenb&uuml;ndig ausgerichtet werden,<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a1"><b>Ausrichtung links, zentriert und rechts</b></a> und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tced.htm#a2"><b>Ausrichtung oben, mittig und unten</b></a>).
+<p>
+&Uuml;berschriften und Grafiken sind im obigen Beispiel zwar unmittelbar nebeneinander notiert. Da &Uuml;berschriften aber einen eigenen Absatz erzeugen, wird die dahinterstehende Grafik bei der Anzeige unterhalb der &Uuml;berschrift plaziert. Da der Zellinhalt zentriert ausgerichtet wird, steht die &Uuml;berschrift sauber zentriert &uuml;ber der jeweiligen Grafik.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm"><b>&Uuml;berschriften</b></a> und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a2"><b>Grafiken einbinden</b></a>).
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Seitenr&auml;nder erzwingen</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceha.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Mit Hilfe einer blinden Tabelle k&ouml;nnen Sie mit einer einzigen Tabellenzelle Seitenr&auml;nder erzwingen. Es gibt zwar einen m&auml;chtigeren HTML-Befehl zum <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tccc.htm"><b>Definieren von Seitenr&auml;ndern</b></a>, doch dieser Befehl wird nur vom MS Internet Explorer interpretiert. Die hier vorgestellte L&ouml;sung ist dagegen kompatibel zu HTML 3.2.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;div align=center&gt;
+&lt;table width=70%&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+Hier folgt der eigentliche Inhalt	  
+   &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In diesem Beispiel wird zun&auml;chst mit <b>&lt;div align=center&gt;</b> ein zentriert ausgerichteter Abschnitt definiert.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdl.htm#a2"><b>Gr&ouml;&szlig;ere Textabschnitte ausrichten</b></a>).
+<p>
+Zwischen dem Abschnitts-Tag und seinem Gegenst&uuml;ck <b>&lt;/div&gt;</b> wird eine Tabelle definiert, die nur eine Zeile mit einer Zelle enth&auml;lt. In dieser Zelle steht der gesamte Inhalt, der mit Seitenr&auml;ndern versehen wird. Die Seitenr&auml;nder selbst werden erreicht durch die Angabe width=70% im einleitenden Tabellen-Tag. Da die Tabelle selbst zentriert ausgerichtet wird, entsteht so links und rechts je ein Seitenrand von 15%.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a1"><b>H&ouml;he und Breite der gesamten Tabelle erzwingen</b></a>).
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Farbfl&auml;chen</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tceha.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Mit blinden und zugleich farbigen Tabellen k&ouml;nnen Sie einzelne Fl&auml;chen farbig hinterlegen, ohne da&szlig; dies wie eine Tabelle wirkt. S&auml;mtliche Beispiele in diesem Dokument, auch das folgende, basieren auf dieser Technik.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table bgcolor=#000066 cellpadding=20&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+&lt;font color=#FFFFFF&gt;Hier folgt der Inhalt - wei&szlig; auf dunkelblauem Grund&lt;/font&gt;	  
+   &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In diesem Beispiel wird eine Tabelle mit einer einzigen Zelle definiert. Durch die Angabe <b>bgcolor=#000066</b> wird der Tabelle ein dunkelblauer Hintergrund zugewiesen. Damit die Fl&auml;che den Text gro&szlig;z&uuml;gig einrahmt, wird mit <b>cellpadding=20</b> ein Randabstand definiert. Um den Text in der Zelle von dem dunklen Hintergrund abzuheben, wird mit &lt;font color=#FFFFFF&gt; eine kontrastierende Textfarbe (wei&szlig;) definiert.<br>
+(siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcef.htm"><b>Farbige Tabellen</b></a>, <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceb.htm#a3"><b>Randabstand von Zelleninhalt zum Zellenrand</b></a> und <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdk.htm#a2"><b>Schriftfarben</b></a>).
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tceg.htm"><b>Tabellenbeschriftung und Text neben Tabellen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcfa.htm"><b>Aufbau von Verweisen und Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>SELFHTML: Perl lokal auf einem PC einrichten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Perl lokal auf einem PC einrichten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Perl</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Der Perl-Interpreter</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Installation und Aufruf des Perl-Interpreters</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu Perl</font></h2></a>
+
+Perl steht f&uuml;r <b>P</b>ratical <b>E</b>xtraction and <b>R</b>eport <b>L</b>anguage. Die Sprache stammt aus der Unix-Welt und erblickte 1987 das Licht der Welt. Perl ist das Werk einer Einzelperson: der Erfinder, Larry Wall, hat auch heute noch die Oberhand &uuml;ber die Fortentwicklung der Syntax. Er gilt deshalb als Kultfigur.
+<p>
+Entsprechend der Unix-Philosophie ist Perl eine offene Sprache. Ihr Umfang und ihre M&ouml;glichkeiten wachsen mit neuen Versionen des Perl-Interpreters. Ab der Version 5.0, die derzeit verbeitet ist, unterst&uuml;tzt Perl z.B. auch den Ansatz der objektorientierten Programmierung. Jedoch ist es eine Script-Sprache, deren Haupteinsatz nicht umfangreiche Anwendungen sind, sondern trickreiche Automatismen in der t&auml;glichen Datenverarbeitung. Einen wahren Boom erlebt die Sprache aber vor allem als Lieblingswerkzeug der CGI-Programmierer im World Wide Web.
+<p>
+Perl gilt als Hacker-Sprache, als eine Sprache, in der man unglaubliche Dinge in einer einzigen Programmanweisung erledigen kann. Uneingeweihten erscheint der Quellcode eines Perl-Scripts h&auml;ufig wie das Ergebnis eines verungl&uuml;ckten Konvertierversuchs oder wie ein zuf&auml;lliger Dump aus dem Arbeitsspeicher. Perl hat eine eigenwillige Syntax, die sich bewu&szlig;t nicht an Vorbilder anlehnt. Perl basiert zwar auf C, ist aber nicht direkt mit C vergleichbar, und ebenso wenig mit Pascal oder modernen 4GL-Sprachen. Wer andere Programmiersprachen kennt und sich auf Perl einl&auml;&szlig;t, mu&szlig; viel umlernen, wird aber auch viel Spannendes entdecken. 
+<p>
+Dateien mit Perl-Anweisungen werden nicht f&uuml;r bestimmte Betriebssystemumgebungen compiliert, sondern von einem Interpreter-Programm beim Aufruf abgearbeitet. Der Nachteil dieses Prinzips: Scripts sind nicht so schnell ausf&uuml;hrbar wie compilierte und gelinkte Programme; daher eignen sie sich eher f&uuml;r kleinere Prozeduren und Anwendungen. Der Vorteil: Scripts brauchen nicht f&uuml;r jede Betriebssystemumgebung neu compiliert werden; daher sind sie problemlos portabel und laufen &uuml;berall, wo ein Perl-Interpreter installiert ist.
+<p>
+Zur Einstimmung auf Perl finden Sie viel im Internet:
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.perl.com/perl/"><b>Perl Language Home Page</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Die offizielle Einstiegsseite f&uuml;r Perl, Perl-Interpreter und Verweise zu Perl-Themen
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://perl.guru.org/"><b>perl.guru.org</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Die Verweisbasis f&uuml;r leidenschaftliche Perl-Liebhaber 
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://webreview.com/97/02/28/feature/index.html"><b>The Virtues of Perl</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Web-Review-Artikel zum Thema Perl inklusive Interview mit Larry Wall
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.oreilly.de/o/prog/perlprog/wall.html"><b>Buchvorwort von Larry Wall</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0><br>
+Wunderbar geschriebenes Statement mit &uuml;berraschenden Hintergrundinformationen
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="news:comp.lang.perl"><b>news:comp.lang.perl</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Die internationale Newsgroup zu Perl, in der auch Larry Wall verkehrt
+<p>
+<img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="news:de.comp.lang.perl"><b>news:de.comp.lang.perl</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0><br>
+Die deutschsprachige Newsgroup zu Perl. Hier bekommen Sie schnell Hilfe zu Programmierproblemen mit Perl.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Der Perl-Interpreter</font></h2></a>
+
+Perl-Dateien sind einfache ASCII-Dateien, die Programmanweisungen in der Syntax von Perl enthalten. Solche Dateien k&ouml;nnen Sie mit jedem Texteditor erstellen und bearbeiten. Zum Ausf&uuml;hren von Dateien mit Perl-Programmanweisungen ist jedoch der Perl-Interpreter erforderlich. 
+<p>
+Der Perl-Interpreter ist erfreulicherweise Freeware und f&uuml;r etliche Betriebssystemumgebungen verf&uuml;gbar. Au&szlig;erdem ist der C-Quellcode des Interpreters verf&uuml;gbar, soda&szlig; Sie ihn, wenn Sie einen C-Compiler haben, f&uuml;r Ihren Rechner compilieren k&ouml;nnen. Sie k&ouml;nnen den Perl-Interpreter im WWW downloaden:
+<p>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.perl.org/CPAN/ports/">
+<b>Ports directory</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Unterhalb dieses Verzeichnisses finden Sie compilierte und noch nicht compilierte Versionen des Perl-Interpreters f&uuml;r die verschiedenen Betriebssysteme. Lesen Sie in den einzelnen Verzeichnissen die Readme-Dateien, damit Sie die richtigen Dateien downloaden!
+<p>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.activeware.com/">
+<b>Activeware Perl-Interpreter f&uuml;r MS Windows (32-Bit-Umgebungen)</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Windows-Anwender k&ouml;nnen den Perl-Interpreter f&uuml;r ihre Umgebung auch von dieser Seite beziehen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Installation des Perl-Interpreters</font></h2></a>
+
+Je nach Betriebssystemumgebung m&uuml;ssen Sie den Perl-Interpreter manuell installieren, oder ein automatisch aufgerufenes Installationsprogramm f&uuml;hrt f&uuml;r Sie alle n&ouml;tigen Kopiervorg&auml;nge und Einstellungen durch. Wenn es kein ausf&uuml;hrbares Installationsprogramm gibt, finden Sie nach dem Entpacken der Download-Datei auf jeden Fall Hilfedateien vor, in denen beschrieben wird, wie der Interpreter installiert wird.
+<p>
+Wenn Sie den Perl-Interpreter f&uuml;r die CGI-Schnittstelle Ihres WWW-Servers nutzen wollen, m&uuml;ssen Sie bei den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm#a3"><b>Einstellungen des WWW-Servers</b></a> unbedingt den vollst&auml;ndigen Pfadnamen der ausf&uuml;hrbaren Perl-Interpreter-Datei angeben. 
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="teba.htm"><b>WWW-Server lokal auf einem PC einrichten</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tebc.htm"><b>CGI-Scripts auf &ouml;ffentlichem WWW-Server installieren</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

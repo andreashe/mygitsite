@@ -1,0 +1,520 @@
+<html>
+<head>
+<title>SELFHTML: Event-Handler</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Event-Handler</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Event-Handler verwenden</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Liste der Event-Handler in JavaScript</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Event-Handler verwenden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tdbja.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+&quot;Event&quot; bedeutet &quot;Ereignis&quot;. Event-Handler sind die Schnittstelle zwischen HTML-Datei und JavaScript-Code. Event-Handler erlauben Ihnen, in JavaScript auf Anwenderereignisse wie Mausklicks, Fensterwechsel usw. zu reagieren, d.h. JavaScript-Code auszuf&uuml;hren, wenn so ein Ereignis stattfindet. Mit Hilfe von Event-Handlern ist es beispielsweise m&ouml;glich, einen Befehl wie &quot;Zeige in der Statuszeile Text X an, wenn der Anwender mit der Maus &uuml;ber den Verweis f&auml;hrt&quot; zu realisieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Datum und Zeit&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+function CheckInput()
+{
+ var Fehler = 0;
+ if(document.Umfrage.Absender.value == &quot;&quot;)
+  {
+   Fehler = 1;
+   alert(&quot;Bitte geben Sie Ihren Namen ein&quot;);
+   document.Umfrage.Absender.focus();
+  }
+ if(document.Umfrage.eMail.value == &quot;&quot;)
+  {
+   Fehler = 1;
+   alert(&quot;Bitte geben Sie Ihren E-Mail-Adresse ein&quot;);
+   document.Umfrage.eMail.focus();
+  }
+ if(document.Umfrage.Text.value == &quot;&quot;)
+  {
+   Fehler = 1;
+   alert(&quot;Bitte geben Sie einen Kommentar ein&quot;);
+   document.Umfrage.Text.focus();
+  }
+ if(Fehler  == 0)
+   document.Umfrage.submit();
+}
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;mailto:s.muenz@euromail.com&quot; 
+name=&quot;Umfrage&quot; method=post enctype=&quot;text/plain&quot;&gt;
+Ihr Name:&lt;br&gt;
+&lt;input type=text name=&quot;Absender&quot; size=50 
+onFocus=&quot;window.status='Bitte geben Sie Ihren Namen ein';return true;&quot;&gt;&lt;p&gt;
+Ihre E-Mail-Adresse:&lt;br&gt;
+&lt;input type=text size=50 name=&quot;eMail&quot; 
+onFocus=&quot;window.status='Bitte geben Sie Ihre E-Mail-Adresse ein';return true;&quot;&gt;&lt;p&gt;
+Was ist &quot;Telepolis&quot;?:&lt;br&gt;
+&lt;textarea cols=50 rows=10 name=&quot;Text&quot; 
+onFocus=&quot;window.status='Bitte geben Sie Ihre Antwort ein';return true;&quot;&gt;&lt;/textarea&gt;&lt;p&gt;
+&lt;input type=submit value=&quot;Absenden&quot; onClick=&quot;CheckInput()&quot;&gt;
+&lt;input type=reset value=&quot;Abbrechen&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel zeigt eine komplette HTML-Datei. Die Datei enth&auml;lt ein <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a>, dessen Eingaben &uuml;berpr&uuml;ft werden sollen, bevor das Formular abgeschickt wird. W&auml;hrend der Eingabe werden in der Statuszeile des WWW-Browsers au&szlig;erdem erl&auml;uternde Aufforderungen zu den jeweils aktiven Feldern angezeigt. Die erl&auml;uternden Anzeigen in der Statuszeile werden mit Hilfe des Event-Handlers <b>onFocus=</b> realisiert (<i>onFocus = beim Aktivieren</i>). Dazu wird der Eigenschaft <b>status</b> des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcb.htm"><b>Objekts <i>window</i></b></a> der gew&uuml;nschte Text zugewiesen. Die zus&auml;tzliche Anweisung <b>return true;</b> ist bei Textanzeigen in der Statuszeile des Browsers immer erforderlich.
+<p>
+Beim Absenden der Formulardaten soll werden, da&szlig; in jedem der drei Eingabefelder des Formulars tats&auml;chlich etwas eingegeben wurde. Dazu wird beim Absende-Button mit Hilfe des Event-Handlers <b>onClick=</b> die JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> <i>CheckInput()</i> aufgerufen (<i>on Click = beim Anklicken</i>). Die Funktion <i>CheckInput()</i> wird nur dann aufgerufen, wenn der Anwender auf den Absende-Button klickt. Sie wird zuvor in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> definiert. Die Funktion &uuml;berpr&uuml;ft die drei Eingabefelder auf Inhalt. Wenn &uuml;berall etwas eingegeben wurde, schickt die Funktion das Formular ab (mit <b>document.Umfrage.submit();</b>). Andernfalls werden entsprechende Meldungen am Bildschirm ausgegeben, und der Anwender wird aufgefordert, das Formular richtig auszuf&uuml;llen.
+<p>
+Event-Handler notieren Sie innerhalb von HTML-Tags wie eine zus&auml;tzliche Angabe. Welche Event-Handler Sie in welchen HTML-Tags verwenden d&uuml;rfen, entnehmen Sie der <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>
+Liste der Event-Handler</b></a>. Hinter dem Namen des Event-Handler folgt ein Istgleichzeichen, und dahinter, in Anf&uuml;hrungszeichen, eine oder mehrere JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a1"><b>Anweisungen</b></a>. Es ist zwar erlaubt, mehrere Anweisungen innerhalb der Angabe zu notieren, aber im Normalfall sollte an dieser Stelle nur der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a2"><b>Aufruf einer Funktion</b></a> stehen. In diesem Fall darf auch das abschlie&szlig;ende Strichpunktzeichen <b>;</b> entfallen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Liste der Event-Handler in JavaScript</font></h2></a>
+
+Der folgende Abschnitt listet die derzeit gebr&auml;uchlichen Event-Handler auf. Die drei P&uuml;nktchen, z.B. bei <b>onBlur=&quot;...&quot;</b> bedeuten, da&szlig; an der betreffenden Stelle JavaScript-Code notiert werden mu&szlig;, wie <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>
+weiter oben beschrieben</b></a>.
+<p>
+Eine Besonderheit unter den Event-Handlern stellt die Schreibweise <b>&lt;a href=&quot;javascript:...&quot;&gt;...&lt;/a&gt;</b> dar. Damit k&ouml;nnen Sie bei einem Anklicken eines Verweises JavaScript-Code ausf&uuml;hren. Dieser spezielle Event-Handler wird am Ende der folgenden Liste beschrieben.
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a201"><b>onAbort=&quot;...&quot;</b></a> (beim Abbrechen)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a202"><b>onBlur=&quot;...&quot;</b></a> (beim Verlassen)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a203"><b>onChange=&quot;...&quot;</b></a> (bei ge&auml;ndertem Inhalt)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a204"><b>onClick=&quot;...&quot;</b></a> (beim Anklicken)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a205"><b>onError=&quot;...&quot;</b></a> (im Fehlerfall)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a206"><b>onFocus=&quot;...&quot;</b></a> (beim Positionieren)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a207"><b>onLoad=&quot;...&quot;</b></a> (beim Laden)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a208"><b>onMouseout=&quot;...&quot;</b></a> (beim Nicht-mehr-Dar&uuml;berfahren mit der Maus)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a209"><b>onMouseover=&quot;...&quot;</b></a> beim Dar&uuml;berfahren mit der Maus<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a210"><b>onReset=&quot;...&quot;</b></a> (beim L&ouml;schen von Formulareingaben)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a211"><b>onSelect=&quot;...&quot;</b></a> (bei getroffener Auswahl)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a212"><b>onSubmit=&quot;...&quot;</b></a> (beim Absenden von Formulardaten)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a213"><b>onUnload=&quot;...&quot;</b></a> (beim Verlassen einer Datei)<br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a214"><b>javascript:=&quot;...&quot;</b></a> (beim Anklicken eines Verweises)
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a201"><h3><font color=#6666CC>onAbort=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>beim Abbrechen</i>&quot; des Ladevorgangs einer Grafik.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Grafiken</b></a><b>:</b><br>
+<tt>&lt;img src=&quot;datei.gif&quot; onAbort=&quot;...&quot;&gt;</tt>
+</td>
+</tr>
+</table>
+<p>
+<b>onAbort=</b> ist f&uuml;r Hinweise gedacht, wenn der Anwender eine WWW-Seite beenden will, auf der noch nicht alle Grafiken geladen sind. Mit <tt>&lt;img src=&quot;logo.gif&quot; onAbort=&quot;alert('Das Logo ist noch nicht geladen')&quot;&gt;</tt> k&ouml;nnen Sie beispielsweise ein Meldungsfenster f&uuml;r diesen Fall ausgeben.
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a202"><h3><font color=#6666CC>onBlur=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>beim Verlassen</i>&quot; des Elements.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a1"><b>einzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;input type=text onBlur=&quot;...&quot;&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a4"><b>mehrzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;textarea onBlur=...&quot;&gt;&lt;/textarea&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm"><b>Auswahllisten</b></a><b>:</b><br>
+<tt>&lt;select onBlur=&quot;...&quot;&gt;&lt;/select&gt;</tt>
+</td>
+</tr>
+</table>
+<p>
+<b>onBlur=</b> ist z.B. zum &Uuml;berpr&uuml;fen von Formulareingaben geeignet. Der mit <b>onBlur</b> verkn&uuml;pfte JavaScript-Code wird jedoch nur dann ausgef&uuml;hrt, wenn der Anwender in einem der genannten Formluarelemente etwas eingegeben bzw. ausgew&auml;hlt hat.
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a203"><h3><font color=#6666CC>onChange=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>&Auml;nderungen</i>&quot; im Element<br>nach Verlassen des Elements.<br>
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a1"><b>einzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;input type=text onChange=&quot;...&quot;&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a4"><b>mehrzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;textarea onChange=...&quot;&gt;&lt;/textarea&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm"><b>Auswahllisten</b></a><b>:</b><br>
+<tt>&lt;select onChange=&quot;...&quot;&gt;&lt;/select&gt;</tt>
+</td>
+</tr>
+</table>
+<p>
+<b>onChange=</b> eignet sich z.B. zum &Uuml;berpr&uuml;fen von Formulareingaben. Mit <tt>&lt;input type=text name=&quot;Alter&quot; onChange=&quot;PruefeObZahl(this.form.Alter.value)&quot;&gt;</tt> k&ouml;nnen Sie beispielsweise nach erfolgter Eingabe in einem Feld zur Altersangabe pr&uuml;fen, ob in dem Feld eine Zahl eingegeben wurde. Voraussetzug ist dabei, da&szlig; Sie in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> der gleichen Datei eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> <tt>PruefeObZahl(Wert)</tt> definieren, die den ihr &uuml;bergebenen Wert daraufhin pr&uuml;ft, ob die &uuml;bergebenen Zeichen allesamt Ziffern sind. F&uuml;r solche &Uuml;berpr&uuml;fungen k&ouml;nnen Sie Eigenschaften und Methoden des Objekts <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcr.htm"><b>string</b></a> verwenden.
+
+ 
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a204"><h3><font color=#6666CC>onClick=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>beim  Anklicken</i>&quot; des Elements
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tche.htm#a1"><b>frei definierbaren Buttons</b></a><b>:</b><br>
+<tt>&lt;input type=button onClick=&quot;...&quot;&gt;</tt><br>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchd.htm#a1"><b>Radiobuttons</b></a><b>:</b><br>
+<tt>&lt;input type=radio onClick=&quot;...&quot;&gt;</tt><br>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchd.htm#a2"><b>Checkbuttons</b></a><b>:</b><br>
+<tt>&lt;input type=checkbox onClick=&quot;...&quot;&gt;</tt><br>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm#a1"><b>Buttons zum Absenden oder Abbrechen</b></a><b>:</b><br>
+<tt>&lt;input type=submit onClick=&quot;...&quot;&gt;</tt><br>
+<tt>&lt;input type=reset onClick=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onClick=</b> eignet sich z.B. dazu, um bei einem Anklicken eines frei definierten Buttons einen Verweis auszuf&uuml;hren. So k&ouml;nnen Sie beispielsweise mit <tt>&lt;form&gt;&lt;input type=button value=&quot;Zurueck&quot; onClick=&quot;history.back()&quot;&gt;&lt;/form&gt;</tt> einen Zur&uuml;ck-Button definieren, der die gleiche Bedeutung hat wie der Back-Button des WWW-Browsers.
+<p>
+Zum Handling beim Anklicken von Verweisen gibt es den speziellen Event-Handler <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a214"><b>javascript:</b></a>.
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a205"><h3><font color=#6666CC>onError=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>im Fehlerfall</i>&quot; beim Laden von Grafiken oder bei JavaScript-Fehlern.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a1"><b>Grafiken</b></a><b>:</b><br>
+<tt>&lt;img onError=&quot;...&quot;&gt;</tt>
+</td>
+</tr>
+</table>
+<p>
+<b>onError=</b> eignet sich zum Abfangen von Fehlermeldungen und zum Ersetzen solcher Meldungen durch eigene. Beachten Sie jedoch, da&szlig; dadurch nicht die Fehler selbst beseitigt werden!
+<p>
+<b>onError=</b> ist vor allem zum Handling von Fehlern beim Laden von Grafiken gedacht. Wenn Sie mit <b>onError=</b> eine eigene <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> aufrufen, m&uuml;ssen Sie am Anfang dieses JavaScript-Bereichs - vor der Funktion - immer die Anweisung <tt>window.onerror=null</tt> notieren, sonst kann es zum Programmabsturz kommen.
+<p>
+Wenn Sie am Anfang eines JavaScript-Bereichs <tt>window.onerror=null</tt> notieren und der Event-Handler sonst nirgendwo in einem HTML-Tag vorkommt, werden innerhalb dieses Bereichs alle JavaScript-Fehlermeldungen unterdr&uuml;ckt, sofern der WWW-Browser beim Ausf&uuml;hren von JavaScript-Code dieses Bereichs Fehler findet.
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a206"><h3><font color=#6666CC>onFocus=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Positionieren des Cursors</i>&quot; in ein Element.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a1"><b>einzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;input type=text onFocus=&quot;...&quot;&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a4"><b>mehrzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;textarea onFocus=...&quot;&gt;&lt;/textarea&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchc.htm"><b>Auswahllisten</b></a><b>:</b><br>
+<tt>&lt;select onFocus=&quot;...&quot;&gt;&lt;/select&gt;</tt>
+</td>
+</tr>
+</table>
+<p>
+<b>onFocus=</b> eignet sich z.B. zum Auskommentieren von Eingabefeldern, in die der Anwender gerade den Cursor setzt. Ein Anwendungsbeispiel daf&uuml;r finden Sie <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>weiter oben</b></a>.
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a207"><h3><font color=#6666CC>onLoad=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Laden</i>&quot; von WWW-Seiten.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Im</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm#a1"><b>einleitenden &lt;body&gt;-Tag</b></a><b>:</b><br>
+<tt>&lt;body onLoad=&quot;...&quot;&gt;</tt><br>
+<b>Im</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a2"><b>einleitenden &lt;frameset&gt;-Tag</b></a><b>:</b><br>
+<tt>&lt;frameset onLoad=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onLoad=</b> eignet sich dazu, um beim Laden einer HTML-Datei bestimmte JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktionen</b></a> auszuf&uuml;hren. So k&ouml;nnen Sie beispielsweise eine Funktion aufrufen, die mit dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcq.htm"><b>Objekt <i>navigator</i></b></a> den Namen und die Version des WWW-Browsers des Anwenders ermittelt. Davon abh&auml;ngig k&ouml;nnte die Funktion beispielsweise mit <b>window.location.href</b> entweder eine Datei mit oder eine ohne ActiveX-Elemente aufrufen.
+<p>
+Beachten Sie, da&szlig; <b>onLoad=</b> nur sinnvoll ist, um Funktionen aufzurufen. JavaScript-Code, der in einem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> au&szlig;erhalb definierter Funktionen steht, wird beim Laden der HTML-Datei automatisch ausgef&uuml;hrt.
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a208"><h3><font color=#6666CC>onMouseout=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Verlassen eines verweis-sensitiven Bereichs</i>&quot;.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Bei</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm"><b>Verweisen</b></a><b>:</b><br>
+<tt>&lt;a href=&quot;...&quot; onMouseout=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onMouseOut=</b> ist in Verbindung mit <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a209"><b>OnMouseover=</b></a> sinnvoll. So k&ouml;nnen Sie beispielsweite mit <tt>&lt;a href=&quot;seite2.htm&quot; onMouseover=&quot;window.status='Jetzt kannst Du auf einen Verweis klicken';return true;&quot; onMouseout=&quot;window.status='OK, Du musst nicht darauf klicken...';return true;&quot;&gt;Hier geht's zur zweiten Seite&lt;/a&gt;</tt> die Statuszeile des WWW-Browsers nutzen und dort Meldungen ausgeben, abh&auml;ngig davon, ob der Anwender mit der Maus &uuml;ber einen Verweis f&auml;hrt oder die Maus wieder von dem Verweis wegbewegt, ohne ihn angeklickt zu haben.
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a209"><h3><font color=#6666CC>onMouseover=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Wenn der Mauszeiger &uuml;ber einem verweis-sensitiven Bereich ist</i>&quot;.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Bei</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm"><b>Verweisen</b></a><b>:</b><br>
+<tt>&lt;a href=&quot;...&quot; onMouseover=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onMouseOver=</b> ist in Verbindung mit <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a208"><b>OnMouseout=</b></a> sinnvoll. So k&ouml;nnen Sie beispielsweite mit <tt>&lt;a href=&quot;seite2.htm&quot; onMouseover=&quot;window.status='Jetzt kannst Du auf einen Verweis klicken';return true;&quot; onMouseout=&quot;window.status='OK, Du musst nicht darauf klicken...';return true;&quot;&gt;Hier geht's zur zweiten Seite&lt;/a&gt;</tt> die Statuszeile des WWW-Browsers nutzen und dort Meldungen ausgeben, abh&auml;ngig davon, ob der Anwender mit der Maus &uuml;ber einen Verweis f&auml;hrt oder die Maus wieder von dem Verweis wegbewegt, ohne ihn angeklickt zu haben.
+
+
+
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a210"><h3><font color=#6666CC>onReset=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim L&ouml;schen aller Eingaben in einem Formular</i>&quot;.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Beim</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcha.htm#a2"><b>Definieren von Formularen</b></a><b>:</b><br>
+<tt>&lt;form action=&quot;...&quot; onReset=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onReset=</b> eignet sich dazu, um JavaScript-Code auszuf&uuml;hren, wenn der Anwender einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm#a1"><b>Button zum Abbrechen</b></a> anklickt. So k&ouml;nnen Sie beispielsweise mit <tt>&lt;form action=&quot;mailto:s.muenz@euromail.com&quot; onReset=&quot;alert('Jetzt sind alle Ihre Eingaben futsch, wie schade!')&quot;&gt;</tt> eine Meldung am Bildschirm ausgeben, nachdem der Abbrechen-Button gedr&uuml;ckt wurde.
+
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a211"><h3><font color=#6666CC>onSelect=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Markieren von Text</i>&quot; in einem Eingabefeld.<br>
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a1"><b>einzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;input type=text onSelect=&quot;...&quot;&gt;</tt><p>
+<b>In</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchb.htm#a4"><b>mehrzeiligen Eingabefeldern</b></a><b>:</b><br>
+<tt>&lt;textarea onSelect=...&quot;&gt;&lt;/textarea&gt;</tt><p>
+</td>
+</tr>
+</table>
+<p>
+<b>onSelect=</b> ist wohl dazu gedacht, um in Interaktion mit dem Anwender Text weiterzuverarbeiten. Der Anwender kann in einem Eingabeformular mit der Maus Text selektieren. Wenn dies der Fall ist, kann <b>onSelect=</b> die Aktion abfangen und JavaScript-Code ausf&uuml;hren. Leider gibt es jedoch bislang kein JavaScript-Objekt, in dem der selektierte Text gespeichert ist. 
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a212"><h3><font color=#6666CC>onSubmit=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Absenden eines Formulars</i>&quot;.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Beim</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcha.htm#a2"><b>Definieren von Formularen</b></a><b>:</b><br>
+<tt>&lt;form action=&quot;...&quot; onSubmit=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onSubmit=</b> eignet sich dazu, um JavaScript-Code auszuf&uuml;hren, nachdem der Anwender einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tchg.htm#a1"><b>Button zum Absenden</b></a> eines Formulars anklickt. So k&ouml;nnen Sie beispielsweise mit <tt>&lt;form action=&quot;mailto:s.muenz@euromail.com&quot; onSubmit=&quot;alert('Vielen Dank fuer Ihr Feedback!')&quot;&gt;</tt> eine Meldung am Bildschirm ausgeben, nachdem der Absenden-Button gedr&uuml;ckt wurde.
+
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a213"><h3><font color=#6666CC>onUnload=&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Verlassen </i>&quot; von WWW-Seiten.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Im</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm#a1"><b>einleitenden &lt;body&gt;-Tag</b></a><b>:</b><br>
+<tt>&lt;body onUnload=&quot;...&quot;&gt;</tt><br>
+<b>Im</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcia.htm#a2"><b>einleitenden &lt;frameset&gt;-Tag</b></a><b>:</b><br>
+<tt>&lt;frameset onUnload=&quot;...&quot;&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>onUnLoad=</b> eignet sich dazu, um JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktionen</b></a> auszuf&uuml;hren, wenn der Anwender die WWW-Seite verlassen will. So k&ouml;nnen Sie beispielsweise mit <tt>&lt;body onUnload=&quot;document.close();document.open('text/html');document.write('&lt;h1&gt;Bye Bye&lt;/h1&gt;');&quot;&gt;</tt> einen Bye-Bye-Text beim Beenden der aktuellen WWW-Seite im Anzeigefensters des WWW-Browsers anzeigen.
+
+
+
+
+<p><a href="#a2"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a214"><h3><font color=#6666CC>javascript:&quot;...&quot;</font></h3></a>
+
+<table border cellpadding=3>
+<tr>
+</td>
+<td bgcolor=#CCCCCC valign=top><b>Bedeutung</b></td>
+<td bgcolor=#CCCCCC valign=top><b>Erlaubt</b></td>
+</tr><tr>
+<td bgcolor=#CCFFFF valign=top>&quot;<i>Beim Anklicken eines Verweises</i>&quot;.
+</td>
+<td bgcolor=#FFFFCC valign=top>
+<b>Bei</b> <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm"><b>Verweisen</b></a><b>:</b><br>
+<tt>&lt;a href=&quot;javascript:...&quot;&gt;Verweistext&lt;/a&gt;</tt><br>
+</td>
+</tr>
+</table>
+<p>
+<b>javascript:</b> ist dazu gedacht, JavaScript-Code auszuf&uuml;hren, wenn der Anwender auf einen Verweis klickt. Ein Anwendungsbeispiel finden Sie im Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddb.htm"><b>Zwei Frames gleichzeitig &auml;ndern</b></a>  
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbi.htm"><b>Reservierte W&ouml;rter</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdca.htm"><b>Hinweise zur JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>SELFHTML: Tabellenbeschriftung und Text neben Tabellen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Tabellenbeschriftung und Text neben Tabellen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Tabellen&uuml;berschrift / Tabellenunterschrift definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Text links und rechts von Tabellen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Tabellen&uuml;berschrift / Tabellenunterschrift definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcega.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+
+Sie k&ouml;nnen f&uuml;r eine Tabelle eine von der Tabelle getrennte, aber ihr zugeh&ouml;rige &Uuml;ber- oder Unterschrift definieren.
+
+<a name="itable_captionvalign"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+  &lt;caption align=top&gt;Tabellen&uuml;berschriftentext&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;table border&gt;
+ &lt;caption align=bottom&gt;Tabellenunterschriftentext&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;caption align=top&gt;</b> definiert eine Tabellen&uuml;berschrift, <b>&lt;caption align=bottom&gt;</b> eine Tabellenunterschrift (<i>caption = &Uuml;berschrift, align = Ausrichtung, top = oben, bottom = unten</i>). Dahinter folgt der Text der &Uuml;ber- bzw. Unterschrift. Am Ende des Textes mu&szlig; ein abschlie&szlig;endes <b>&lt;/caption&gt;</b> stehen.  Notieren Sie den Befehl innerhalb der Tabelle, am besten unmittelbar unter dem einleitenden Tabellen-Tag (so wie in den beiden obigen Beispielen).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die meisten WWW-Browser, darunter Netscape und MS Internet Explorer, stellen Tabellen&uuml;berschriften und Tabellenunterschriften in normaler Flie&szlig;textschrift dar. Um die &Uuml;ber- bzw. Unterschrift auff&auml;llig zu formatieren, m&uuml;ssen Sie Befehle zur <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcd.htm"><b>Textgestaltung</b></a> anwenden.
+<p>
+Die meisten WWW-Browser richten Tabellen&uuml;berschriften und Tabellenunterschriften zentriert aus.
+<p>
+Da es in HTML derzeit noch keine M&ouml;glichkeit automatischer Numerierung solcher &Uuml;berschriften gibt, haben Tabellen&uuml;ber- und unterschriften zur Zeit keine gro&szlig;e Bedeutung. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Text links und rechts von Tabellen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcega.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen Text links oder rechts um Tabellen flie&szlig;en lassen, sofern die Tabelle nicht die gesamte Anzeigebreite einnimmt. 
+
+<a name="itable_align"><h4><font color=#6666CC>Beispiel 1:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;table border width=50% align=left&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+  &lt;/table&gt;
+Das ist Text, der rechts neben der Tabelle angezeigt wird
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel 2:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;table border width=50% align=right&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+  &lt;/table&gt;
+Das ist Text, der links neben der Tabelle angezeigt wird
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>align=left</b> (siehe Beispiel 1) im einleitenden Tabellen-Tag erreichen Sie, da&szlig; Text, der im Anschlu&szlig; an die Tabelle notiert wird, rechts um die Tabelle flie&szlig;t (<i>align = Ausrichtung, left = links</i>). Die Tabelle steht in diesem Fall also links, der umflie&szlig;ende Text rechts davon.<br>
+Mit der Angabe <b>align=right</b> (siehe Beispiel 2) k&ouml;nnen Sie den Text links um die Tabelle flie&szlig;en lassen (<i>left = links</i>). Die Tabelle steht in diesem Fall also rechts, der umflie&szlig;ende Text links davon.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn die Tabelle selbst gr&ouml;&szlig;ere Inhalte hat, m&uuml;ssen Sie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcec.htm#a1"><b>Gesamtbreite der Tabelle erzwingen</b></a>, damit links bzw. rechts noch Platz bleibt f&uuml;r den umflie&szlig;enden Text. Dies geschieht in den obigen Beispielen durch die Angabe <b>width=50%</b> im einleitenden Tabellen-Tag. Dadurch nimmt die Tabelle maximal 50% der Gesamtbreite des Anzeigefensters ein.
+<p>
+Im umflie&szlig;enden &quot;Text&quot; sind alle HTML-Elemente zur Gestaltung erlaubt, also beisielsweise &Uuml;berschriften, Listen, auch Grafik- und Multimedia-Referenzen, ja sogar neue Tabellen erlaubt.
+
+
+<p><spacer type=vertical size=30>
+<a name="a21"><h3><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="Netscape3.0"> Abstand zwischen Tabelle und umflie&szlig;endem Text</font></h3></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcega.htm#a21"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie nichts anderes angeben, umflie&szlig;t der Text die Tabelle ohne sichtbaren Abstand. &Auml;sthetischer ist ein gewisser Abstand. Sie k&ouml;nnen den Abstand zwischen Tabelle und und umflie&szlig;endem Text definieren. 
+
+<a name="itable_hspace_vspace"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;table border width=50% align=left hspace=20 vspace=5&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+  &lt;/table&gt;
+Das ist Text, der rechts neben der Tabelle angezeigt wird
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Wenn Sie im einleitenden Tabellen-Tag mit <b>align=</b> eine Anweisung zum Textumflu&szlig; notieren, k&ouml;nnen Sie mit der weiteren Angabe <b>hspace=</b> [Pixel] den seitlichen Abstand zwischen Tabelle und umflie&szlig;endem Text bestimmen (<i>hspace = horizontal space = horizontaler Abstand</i>). Mit der Angabe <b>vspace=</b> [Pixel] k&ouml;nnen Sie den Abstand zum Text ober- und unterhalb der Tabelle festlegen (<i>vspace = vertical space = vertikaler Abstand</i>). 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Angaben zum Abstand geh&ouml;ren nicht zum offiziellen HTML-Standard und wurden zum Redaktionsschlu&szlig; dieses Dokuments nur von Netscape 3.0 korrekt interpretiert.
+
+
+<p><spacer type=vertical size=30>
+<a name="a22"><h3><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Textfortsetzung unterhalb der Tabelle erzwingen</font></h3></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcega.htm#a22"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Manchmal m&ouml;chten Sie vielleicht nur zwei oder drei Zeilen kommentierenden Text neben der Tabelle haben und den folgenden Text dann unterhalb der Tabelle fortsetzen. Dazu m&uuml;ssen Sie einen speziellen Umbruch erzwingen, der den Textflu&szlig; neben der Tabelle unterbricht und stattdessen unterhalb der Tabelle fortf&auml;hrt.
+
+<a name="itable_br_clear"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+  &lt;table border width=50% align=left hspace=20 vspace=5&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Daten
+      &lt;td&gt;Daten
+    &lt;/tr&gt;
+  &lt;/table&gt;
+Das ist Text, der rechts neben der Tabelle angezeigt wird &lt;br clear=all&gt;
+Das ist Text, der unterhalb der Tabelle weitergeht
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Wenn Sie im einleitenden Tabellen-Tag mit <b>align=</b> eine Anweisung zum Textumlu&szlig; notieren, k&ouml;nnen Sie innerhalb des umflie&szlig;enden Textes die Angabe <b>&lt;br clear=all&gt;</b> notieren, um den Textflu&szlig; zu unterbrechen und unterhalb der Tabelle fortzufahren (<i>br = break = Umbruch, clear = l&ouml;schen, all = alles</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Neben <b>&lt;br clear=all&gt;</b> sind auch die Angaben <b>&lt;br clear=left&gt;</b> und <b>&lt;br clear=right&gt;</b> erlaubt. Experimentieren Sie mit diesen Angaben, wenn <b>&lt;br clear=all&gt;</b> nicht den gew&uuml;nschten Effekt bringt.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcef.htm"><b>Farbige Tabellen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tceh.htm"><b>Tips zum Umgang mit blinden Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tce.htm"><b>Tabellen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

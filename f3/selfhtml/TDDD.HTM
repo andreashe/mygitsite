@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>SELFHTML: Pers&ouml;nliche Seitenbesuche z&auml;hlen mit Cookies</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Pers&ouml;nliche Seitenbesuche z&auml;hlen mit Cookies</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Kurzbeschreibung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Quellcode</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Erl&auml;uterungen zum Quellcode</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddda.htm"><b>Beispiel testen: so sieht's aus</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Kurzbeschreibung</font></h2></a>
+Cookies (Kekse) sind ein nicht unumstrittenes Feature, da&szlig; Netscape in JavaScript eingebaut hat. Cookies erlauben einem JavaScript-Programm, Daten auf der Festplatte des Anwenders zu speichern. Dies geschieht jedoch in kontrollierter Form. Ein &quot;Ausspionieren&quot; der Anwenderfestplatte ist dabei ebenso wenig m&ouml;glich wie das Plazieren von ausf&uuml;hrbarem Code, also etwa Viren. Denn wenn Sie in einem JavaScript einen Cookie schreiben, k&ouml;nnen Sie nicht angeben, wohin der Cookie beim Anwender gespeichert wird. Das kontrolliert der WWW-Browser des Anwenders. Au&szlig;erdem k&ouml;nnen Cookies keine unkontrollierten Datenmengen auf den Anwenderrechner schreiben, sondern nur eine begrenzte Anzahl von Zeilen. Jede solcher Zeilen definiert eine Variable und weist dieser Variablen einen Wert zu. Ein Cookie l&auml;&szlig;t sich also mit einem Eintrag in einer Konfigurationsdatei vergleichen - mit dem Unterschied, da&szlig; der Cookie keine Konfigurationsdaten des Anwenderrechners ansprechen kann.
+<p>
+Durch die M&ouml;glichkeit, Daten zu speichern, werden jedoch viele neue Anwendungsbereiche f&uuml;r JavaScript m&ouml;glich. So auch das hier beschriebene Beispiel. Denn um zeitlich auseinanderliegende Seitenbesuche zu z&auml;hlen, mu&szlig; man die Anzahl der bisherigen Seitenbesuche irgendwo fest speichern, beim n&auml;chsten Seitenbesuch wieder auslesen, den Z&auml;hler um 1 erh&ouml;hen und den neuen Wert wieder speichern. Genau das tut das hier beschriebene Beispiel.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das Z&auml;hlen von pers&ouml;nlichen Seitenbesuchen ist etwas anderes als das Z&auml;hlen aller Seitenbesuche. Um alle Zugriffe auf eine Seite zu verwalten, mu&szlig; das Programm seine Z&auml;hlerst&auml;nde auf dem Server-Rechner ablegen. Deshalb funktioniert ein klassischer &quot;Counter&quot; nur mit CGI. Das hier beschriebene Script z&auml;hlt nur, wie oft ein bestimmter Anwender eine bestimmte Seite besucht.
+<p>
+Das hier beschriebene Beispiel funktioniert nur mit Netscape. Der MS Internet Explorer kennt zwar auch Cookies, doch haben diese einen anderen Aufbau und richten sich nicht nach dem von Netscape eingef&uuml;hrten Schema. Das Beispiel ist jedoch so konzipiert, da&szlig; die Ausf&uuml;hrung des Programmcodes beim MS Internet Explorer vermieden wird. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Quellcode</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tddda.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Studieren Sie das Beispiel aufmerksam und lesen Sie anschlie&szlig;end die Erl&auml;uterungen dazu. Zur besseren Orientierung enth&auml;lt das Beispiel Verweise zu den entsprechenden Erl&auml;uterungen, z.B. <a href="#a411"><b>(1)</b></a>. Diese Verweise geh&ouml;ren nicht zum Quellcode. Falls Sie das Beispiel in einen Editor kopieren, m&uuml;ssen Sie diese Verweise l&ouml;schen. Andernfalls erhalten Sie JavaScript-Fehlermeldungen.
+
+<h4><font color=#6666CC>Quellcode:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+ &lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;Hier den Titel der Datei eingeben&lt;/title&gt;
+ &lt;script language=&quot;JavaScript&quot;&gt;
+ &lt;!--
+ <a href="#a411"><b>(1)</b></a> 
+ if(navigator.appName ==&quot;Netscape&quot;)
+     Zaehlerstand();
+
+ <a href="#a412"><b>(2)</b></a> function Zaehlerstand() 
+    {
+      var Zahlstart, Zahlende, Anzahl;
+      <a href="#a413"><b>(3)</b></a> if(window.document.cookie) 
+        {
+         Zahlstart = window.document.cookie.indexOf(&quot;=&quot;) + 1;
+         Zahlende = window.document.cookie.indexOf(&quot;;&quot;);
+         if (Zahlende == -1) 
+            Zahlende = window.document.cookie.length;
+         Anzahl = parseInt(window.document.cookie.substring(Zahlstart, Zahlende));
+         Anzahl++;
+         window.document.cookie = &quot;Zaehler=&quot; + Anzahl + &quot;; expires=31-Dec-97 GMT&quot;;
+       }
+      else
+       {
+         window.document.cookie = &quot;Zaehler=1; expires=31-Dec-97 GMT&quot;;
+         Anzahl = 1;
+       }
+     <a href="#a414"><b>(4)</b></a> window.alert(&quot;Dies ist Ihr &quot; + Anzahl + &quot;. Besuch auf dieser Seite!&quot;);
+   }
+ //--&gt;
+ &lt;/script&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+ 
+ Hier den Inhalt der HTML-Datei eingeben
+ 
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre></td></tr></table><p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Erl&auml;uterungen zum Quellcode</font></h2></a>
+
+<a name ="a411"><font color=#6666CC><b>(1) JavaScript beim Aufruf der Datei ausf&uuml;hren</b></font></a><br>
+Das JavaScript im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> ist so konzipiert, da&szlig; es beim Aufruf der Seite automatisch ausgef&uuml;hrt wird. Das liegt daran, da&szlig; im definierten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tda.htm#a2"><b>JavaScript-Bereich</b></a> am Anfang direkt JavaScript-Code steht. Zun&auml;chst steht dort eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingte Anweisung</b></a> mit <b>if</b>. Darin wird mit Hilfe des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcq.htm"><b>navigator-Objekts</b></a> abgefragt, welchen WWW-Browser der Anwender benutzt. Falls es sich um Netscape handelt, wird eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> <i>Zaehlerstand()</i> aufgerufen. Diese Funktion verwaltet den Cookie zum Setzen und Auslesen des Z&auml;hlerstands. Falls der Anwender einen anderen WWW-Browser als Netscape benutzt, wird die Funktion nicht aufgerufen, und das JavaScript ist beendet. Auf diese Weise wird vermieden, da&szlig; Anwender, die zum Beispiel den MS Internet Explorer benutzen, eine fehlerhafte Ergebnisanzeige erhalten.
+<p>
+<a name ="a412"><font color=#6666CC><b>(2) Funktion <i>Zaehlerstand()</i></b></font></a><br>
+In der Funktion <i>Zaehlerstand()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> werden zun&auml;chst einige ben&ouml;tigte <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variablen</b></a> definiert:<br>
+<i>Zahlstart</i> und <i>Zahlende</i> sind zwei Werte, in denen festgehalten wird, an welcher Stelle innerhalb des Cookie-Eintrags der eigentliche Z&auml;hlerstand steht. <i>Anzahl</i> ist eine Variable, in der der Z&auml;hlerstand numerisch gespeichert wird. Mehr dazu weiter unten.
+<p>
+<a name ="a413"><font color=#6666CC><b>(3) Cookie pr&uuml;fen, Z&auml;hler ermitteln, erh&ouml;hen und speichern</b></font></a><br>
+Die Anweisung <i>if(window.document.cookie)</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a> pr&uuml;ft, ob bereits ein Cookie von der aktuellen Datei gesetzt wurde. Beim ersten Aufruf der Datei ist das nat&uuml;rlich noch nicht der Fall. In diesem Fall gibt es auch noch noch keinen vorhandenen Z&auml;hlerstand. Der Cookie mu&szlig; also zum ersten Mal geschrieben werden, und der Z&auml;hler wird dabei auf 1 gesetzt. Das geschieht im <i>else</i>-Zweig der Abfrage <i>if(window.document.cookie)</i>. In der Anweisung <i>window.document.cookie = "Zaehler=1; expires=31-Dec-97 GMT";</i> k&ouml;nnen Sie auch sehr gut den Aubau eines solchen Cookie-Eintrags erkennen. Mit <i>window.document.cookie=...</i> wird der Cookie auf den Rechner des Anwenders geschrieben und dort gespeichert. Wie Sie sehen, k&ouml;nnen Sie dabei nicht angeben, wo der Cookie gespeichert werden soll. Das entscheidet der WWW-Browser. Im Beispiel wird der Eintrag <i>Zaehler=1</i> gespeichert. Dahinter folgt, durch ein Semikolon getrennt, ein &quot;Verfallsdatum&quot; f&uuml;r den Cookie. Mehr dazu weiter unten.
+<p>
+Wenn die Seite bereits einmal besucht und ein Cookie gesetzt wurde, verzweigt das Programm in den Anweisungsblock, der unterhalb <i>if(window.document.cookie)</i> steht. Dort gilt es zun&auml;chst einmal, den aktuellen Z&auml;hlerstand auszulesen. Wie Sie bei der Anweisung zum Setzen eines Cookies bereits gesehen haben, ist ein Cookie nichts anderes als eine Zeile in einer Datei, also eine einfache Zeichenkette. Deshalb lassen sich darauf auch Eigenschaften und Methoden des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcr.htm"><b>string-Objekts</b></a> anwenden. Die beiden Anweisungen <i>Zahlstart=...</i> und <i>Zahlende=...</i> ermitteln mit Hilfe der string-Objektmethode <i>indexOf()</i> die Positionen innerhalb der Cookie-Zeichenkette, an denen die Zahl f&uuml;r den Z&auml;hlerstand beginnt und aufh&ouml;rt. Falls der Cookie-Eintrag aus irgendeinem Grund fehlerhaft ist und das Begrenzungszeichen f&uuml;r das Zahlende  (das Semikolon) nicht gefunden wird, wird als Zahlende einfach das Ende des gesamten Cookie-Eintrags festgelegt. Diese Sicherheitsabfrage geschieht mit der Abfrage <i>if (Zahlende == -1) Zahlende = window.document.cookie.length;</i>.
+<p>
+Um den Z&auml;hler um 1 zu erh&ouml;hen, mu&szlig; er in Form einer Zahl vorliegen, mit der sich rechnen l&auml;&szlig;t. Deshalb mu&szlig; der Teil der Cookie-Zeichenkette, der den Z&auml;hlerstand enth&auml;lt, in einen numerischen Wert umgewandelt werden. Das geschieht mit der Anweisung <i>Anzahl = parseInt(window.document.cookie.substring(Zahlstart, Zahlende));</i>. Die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcs.htm"><b>objektunabh&auml;ngige Funktion</b></a> <i>parseInt()</i> leistet diese Umwandlung. Das Ergebnis, also der Z&auml;hlerstand in numerischer Form, wird in der Variablen <i>Anzahl</i> gespeichert.
+<p>
+Mit <i>Anzahl</i> l&auml;&szlig;t sich rechnen. Die Anweisung <i>Anzahl++;</i> erh&ouml;ht den in der Variablen gespeicherten Wert um 1.
+<p>
+Dieser neue Wert mu&szlig; anschlie&szlig;end wieder als Cookie gespeichert werden. Denn was in der Variablen steht, geht verloren, sobald das Programm beendet ist. Nur weil ein Cookie auf den Rechner des Anwenders geschrieben wird, steht der Z&auml;hlerstand beim n&auml;chsten Aufruf der Datei wieder zur Verf&uuml;gung. Der Cookie wird wieder mit <i>window.document.cookie=</i> geschrieben. Eine R&uuml;ckumwandlung des numerischen Werts in eine Zeichenfolge ist in solchen F&auml;llen bei JavaScript nicht n&ouml;tig. Sie k&ouml;nnen den numerischen Wert also einfach mit anderen Zeichenfolgen zu einer Zeichenkette verkn&uuml;pfen, so wie im Beispiel.
+<p>
+
+<a name ="a414"><font color=#6666CC><b>(4) Z&auml;hlerstand am Bildschirm ausgeben</b></font></a><br>
+Der aktuelle Z&auml;hlerstand wird schlie&szlig;lich in einem Meldungsfenster am Bildschirm ausgegeben, damit der Anwender auch sieht, wie oft er schon die betreffende Datei aufgerufen hat. Nat&uuml;rlich k&ouml;nnen Sie auch andere Befehle benutzen, um den Z&auml;hler anzuzeigen, zum Beispiel <i>window.document.write()</i>.
+<p>
+
+<a name ="a414"><font color=#6666CC><b>&quot;Verfallsdatum&quot; von Cookies</b></font></a><br>
+Jeder Cookie sollte ein Verfallsdatum erhalten. Falls Sie kein solches Datum angeben oder einen unrealistischen Wert (z.B. den 1. Januar 4000), setzt der WWW-Browser den Eintrag selbst&auml;ndig auf einen realistischen Wert. Ein Verfallsdatum notieren Sie hinter dem eigentlichen Cookie-Eintrag, durch ein Semikolon getrennt. Das Format mu&szlig; so sein wie im obigen <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Beispiel</b></a>. Geben Sie Tag-Monat-Jahr durch Bindetriche getrennt und ohne Leerzeichen dazwischen ein. Das Jahr mu&szlig; zweistellig notiert werden. Als Monatsk&uuml;rzel sind erlaubt: <i>Jan</i> (f&uuml;r Januar), <i>Feb</i> (f&uuml;r Februar), <i>Mar</i> (f&uuml;r M&auml;rz), <i>Apr</i> (f&uuml;r April), <i>May</i> (f&uuml;r Mai), <i>Jun</i> (f&uuml;r Juni), <i>Jul</i> (f&uuml;r Juli), <i>Aug</i> (f&uuml;r August), <i>Sep</i> (f&uuml;r September), <i>Oct</i> (f&uuml;r Oktober), <i>Nov</i> (f&uuml;r November), <i>Dec</i> (f&uuml;r Dezember). Am Ende m&uuml;ssen die drei Grossbuchstaben GMT (steht f&uuml;r Greenwich Meridian Time) stehen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tddc.htm"><b>Taschenrechner</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdde.htm"><b>Dynamische grafische Buttons</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

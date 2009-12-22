@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>SELFHTML: Radio- und Checkbuttons</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Radio- und Checkbuttons</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Radiobuttons definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Checkbuttons definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Eintr&auml;ge bei Radio- oder Checkbuttons vorselektieren</b></a> <br>
+
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Radiobuttons definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchda.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Radiobuttons sind eine Gruppe von beschrifteten Buttons, aus der der Anwender einen markieren kann. Es kann immer nur einer der Buttons markiert sein. Der Wert des markierten Buttons wird beim Absenden des Formulars mit &uuml;bertragen.
+
+
+<a name="iinput_radio"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Geben Sie Ihre Zahlungsweise an:
+&lt;p&gt;
+&lt;input type=radio name=&quot;Zahlmethode&quot; value=&quot;Mastercard&quot;&gt; Mastercard 
+&lt;br&gt;
+&lt;input type=radio name=&quot;Zahlmethode&quot; value=&quot;Visa&quot;&gt; Visa
+&lt;br&gt;
+&lt;input type=radio name=&quot;Zahlmethode&quot; value=&quot;AmericanExpress"&gt; American Express</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Radiobuttons werden durch <b>&lt;input ...&gt;</b> definiert (<i>input = Eingabe</i>). Dahinter folgt die Angabe <b>type=radio</b> (<i>type = Typ, radio = Radial</i>). Jeder Radiobutton mu&szlig; einen internen Bezeichnernamen erhalten, und zwar mit der Angabe <b>name=</b>. Alle Radiobuttons, die den gleichen Namen haben, geh&ouml;ren zu einer Gruppe, d.h. von diesen Buttons kann der Anwender genau einen markieren. Der Name sollte nicht zu lang sein und darf keine Leerzeichen und keine deutschen Umlaute enthalten. Verwenden Sie als Sonderzeichen h&ouml;chstens den Unterstrich &quot;_&quot;. Setzen Sie den Namen in Anf&uuml;hrungszeichen.
+<p>
+Mit der Angabe <b>value=</b> bestimmen Sie einen internen Bezeichnerwert f&uuml;r jeden Radiobutton (<i>value = Wert</i>). Wenn der Anwender das Formular abschickt, wird der Bezeichnerwert des markierten Buttons &uuml;bertragen. Setzen Sie den Bezeichnerwert in Anf&uuml;hrungszeichen.
+<p>
+Hinter dem <b>&lt;input&gt;</b>-Tag geben Sie den Text ein, mit dem der Radiobutton bei der Anzeige im Browser beschriftet sein soll.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Checkbuttons definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchda.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Checkbuttons sind eine Gruppe von beschrifteten Buttons, aus der der Anwender keinen, einen oder mehrere markieren (&quot;ankreuzen&quot;) kann. Die Werte von markierten Checkbuttons werden beim Absenden des Formular mit &uuml;bertragen.
+
+<a name="iinput_check"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Geben Sie bei der Pizzabestellung die gew&amp;uuml;nschten Zutaten an:
+&lt;p&gt;
+&lt;input type=checkbox name=&quot;zutat&quot; value=&quot;salami&quot;&gt; Salami
+&lt;br&gt;
+&lt;input type=checkbox name=&quot;zutat&quot; value=&quot;pilze&quot;&gt; Pilze
+&lt;br&gt;
+&lt;input type=checkbox name=&quot;zutat&quot; value=&quot;sardellen&quot;&gt; Sardellen
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Checkbuttons werden durch <b>&lt;input ...&gt;</b> definiert (<i>input = Eingabe</i>). Dahinter folgt die Angabe <b>type=&quot;checkbox&quot;</b>. Jeder Checkbutton mu&szlig; einen internen Bezeichnernamen erhalten, und zwar mit der Angabe <b>name=</b>. Alle Checkbuttons, die den gleichen Namen 
+haben, geh&ouml;ren zu einer Gruppe, d.h. von diesen Buttons kann der Anwender keinen, einen oder mehrere ankreuzen. Der Name sollte nicht zu lang sein und darf keine Leerzeichen und keine deutschen Umlaute enthalten. Verwenden Sie als Sonderzeichen h&ouml;chstens den Unterstrich &quot;_&quot;. Setzen Sie den Namen in Anf&uuml;hrungszeichen.
+<p>
+Mit der Angabe <b>value=</b> bestimmen Sie einen internen Bezeichnerwert f&uuml;r jeden Checkbutton (<i>value = Wert</i>). Wenn der Anwender das Formular abschickt, werden die Bezeichnerwerte des oder der angekreuzten Buttons &uuml;bertragen. Setzen Sie den Bezeichnerwert in Anf&uuml;hrungszeichen.
+<p>
+Hinter dem Tag geben Sie den Text ein, mit dem der Checkbutton bei der Anzeige im Browser beschriftet sein soll.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Eintr&auml;ge bei Radio- oder Checkbuttons vorselektieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchda.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie nichts anderes angeben, ist bei Radio- und Checkbuttons zun&auml;chst kein Eintrag vorselektiert. Sie k&ouml;nnen bei Radiobuttons einen Eintrag und bei Checkbuttons einen oder mehrere Einträge vorselektieren. 
+
+<a name="iinput_checked"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Sind Sie:
+&lt;p&gt;
+&lt;input type=radio name=&quot;Geschlecht&quot; value=&quot;Mann&quot;&gt; ein Mann? 
+&lt;br&gt;
+&lt;input type=radio name=&quot;Geschlecht&quot; checked value=&quot;Frau&quot;&gt; eine Frau?
+&lt;p&gt;
+Ich mag:
+&lt;p&gt;
+&lt;input type=checkbox name=&quot;Vorliebe&quot; checked value=&quot;Urlaub&quot;&gt; Urlaub
+&lt;br&gt;
+&lt;input type=checkbox name=&quot;Vorliebe&quot; checked value=&quot;Geld&quot;&gt; Geld
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Um einen Radio- oder Checkbutton vorzuselektieren, setzen Sie bei der Definition des Buttons die Angabe <b>checked</b> hinzu.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tchc.htm"><b>Auswahllisten</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tche.htm"><b>Freie Buttons und Datei-Buttons</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

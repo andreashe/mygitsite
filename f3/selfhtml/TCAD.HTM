@@ -1,0 +1,250 @@
+<html>
+<head>
+<title>SELFHTML: Umlaute, Sonderzeichen und HTML-eigene Zeichen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Umlaute, Sonderzeichen und HTML-eigene Zeichen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Deutsche Umlaute und scharfes S</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Liste aller Sonderzeichen nach iso 8559</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>HTML-eigene Zeichen maskieren</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Deutsche Umlaute und scharfes S</font></h2></a>
+Im Hinblick auf das Internet und die internationale Verwendung sollten Sie deutsche 
+Umlaute in Ihren HTML-Dateien durch die daf&uuml;r vorgesehenen HTML-Zeichenfolgen 
+ersetzen. Das gilt f&uuml;r den gesamten Inhalt einer HTML-Datei.
+<p>
+<a name="iauml">Ersetzen</a> Sie das Zeichen <b>&auml;</b> durch die Zeichenfolge <b>&amp;auml;</b><br>
+Ersetzen Sie das Zeichen <b>&Auml;</b> durch die Zeichenfolge <b>&amp;Auml;</b><br>
+<a name="iouml">Ersetzen</a> Sie das Zeichen <b>&ouml;</b> durch die Zeichenfolge <b>&amp;ouml;</b><br>
+Ersetzen Sie das Zeichen <b>&Ouml;</b> durch die Zeichenfolge <b>&amp;Ouml;</b><br>
+<a name="iuuml;">Ersetzen</a> Sie das Zeichen <b>&uuml;</b> durch die Zeichenfolge <b>&amp;uuml;</b><br>
+Ersetzen Sie das Zeichen <b>&Uuml;</b> durch die Zeichenfolge <b>&amp;Uuml;</b><br>
+Ersetzen Sie das Zeichen <b>&szlig;</b> durch die Zeichenfolge <b>&amp;szlig;</b>
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+In M&amp;uuml;nchen steht ein Hofbr&amp;auml;uhaus.
+Dort gibt es Bier aus Ma&amp;szlig;kr&amp;uuml;gen.
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Tip:</font></h4>
+Tippen Sie den Text zuerst wie gewohnt ein. Verwenden Sie dann die Suche-Ersetze-Funktion des eingesetzten Editors, um vorhandene Umlaute und scharfes S durch die HTML-Zeichenfolgen zu ersetzen!
+<p>
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die oben genannten Umschreibungen sind Teil der folgenden Liste aller Sonderzeichen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Liste aller Sonderzeichen nach iso 8559</font></h2></a>
+Damit HTML-Dateien problemlos zwischen verschiedenen Rechnerwelten ausgetauscht werden k&ouml;nnen, setzt die Sprache HTML auf einem international genormten Zeichensatz auf: dem Zeichensatz ISO 8859-1 (auch ISO Latin-1 genannt). Dieser Zeichensatz enth&auml;lt 256 Zeichen. Davon sind die ersten 128 identisch mit dem klassischen 7-Bit-ASCII-Zeichensatz. Die zweiten 128 Zeichen beinhalten dagegen etliche Sonderzeichen und Buchstaben f&uuml;r bestimmte Sprachen. Die Zeichen mit den Dezimalwerten 128 bis 159 werden vom Latin-1-Zeichensatz jedoch derzeit offiziell nicht benutzt. Deshalb werden sie in der folgenden Liste auch nicht dargestellt.
+<p>
+Wenn Sie in Ihren HTML-Dateien erlaubte Sonderzeichen verwenden wollen, maskieren Sie diese Zeichen so wie in der Tabelle weiter unten angegeben. Dann wird jeder WWW-Browser auf der Welt Ihre HTML-Datei korrekt anzeigen (vorausgesetzt, die eingestellte Schrift unterst&uuml;tzt das Zeichen).
+<p>
+Sonderzeichen kodieren Sie am einfachsten durch ein kaufm&auml;nnisches Und (&amp;), ein Gatter (#) und den bereffenden Zahlenwert im Zeichensatz. Die folgende Liste enth&auml;lt alle Sonderzeichen des ISO Latin-1- Zeichensatzes und deren Kodierung im Text einer HTML-Datei. Buchstaben verschiedener Landessprachen k&ouml;nnen Sie auch mit einer entsprechenden Zeichenfolge umschreiben. Bei Buchstaben, wo dies m&ouml;glich ist, wird die entsprechende Zeichenfolge angegeben.
+<p>
+<table border cellpadding=3>
+  <tr><th bgcolor=#CCCCCC align=left>Zeichen
+          <th bgcolor=#CCCCCC align=left>Kodierung in HTML<br>entweder
+          <th bgcolor=#CCCCCC align=left>Kodierung in HTML<br>oder
+          <th bgcolor=#CCCCCC align=left>Bemerkung
+  </tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#160;</b></font><td bgcolor=#FFFFCC>&amp;#160;<td bgcolor=#FFFFCC>&amp;nbsp;<td bgcolor=#FFCC99>Erzwungenes Leerzeichen</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#161;</b></font><td bgcolor=#FFFFCC>&amp;#161;<td bgcolor=#FFFFCC>&amp;iexcl;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#162;</b></font><td bgcolor=#FFFFCC>&amp;#162;<td bgcolor=#FFFFCC>&amp;cent;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#163;</b></font><td bgcolor=#FFFFCC>&amp;#163;<td bgcolor=#FFFFCC>&amp;pound;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#164;</b></font><td bgcolor=#FFFFCC>&amp;#164;<td bgcolor=#FFFFCC>&amp;curren;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#165;</b></font><td bgcolor=#FFFFCC>&amp;#165;<td bgcolor=#FFFFCC>&amp;yen;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#166;</b></font><td bgcolor=#FFFFCC>&amp;#166;<td bgcolor=#FFFFCC>&amp;brvbar;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#167;</b></font><td bgcolor=#FFFFCC>&amp;#167;<td bgcolor=#FFFFCC>&amp;sect;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#168;</b></font><td bgcolor=#FFFFCC>&amp;#168;<td bgcolor=#FFFFCC>&amp;uml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#169;</b></font><td bgcolor=#FFFFCC>&amp;#169;<td bgcolor=#FFFFCC>&amp;copy;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#170;</b></font><td bgcolor=#FFFFCC>&amp;#170;<td bgcolor=#FFFFCC>&amp;ordf;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#171;</b></font><td bgcolor=#FFFFCC>&amp;#171;<td bgcolor=#FFFFCC>&amp;laquo;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#172;</b></font><td bgcolor=#FFFFCC>&amp;#172;<td bgcolor=#FFFFCC>&amp;not;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#173;</b></font><td bgcolor=#FFFFCC>&amp;#173;<td bgcolor=#FFFFCC>&amp;shy;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#174;</b></font><td bgcolor=#FFFFCC>&amp;#174;<td bgcolor=#FFFFCC>&amp;reg;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#175;</b></font><td bgcolor=#FFFFCC>&amp;#175;<td bgcolor=#FFFFCC>&amp;macr;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#176;</b></font><td bgcolor=#FFFFCC>&amp;#176;<td bgcolor=#FFFFCC>&amp;deg;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#177;</b></font><td bgcolor=#FFFFCC>&amp;#177;<td bgcolor=#FFFFCC>&amp;plusmn;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#178;</b></font><td bgcolor=#FFFFCC>&amp;#178;<td bgcolor=#FFFFCC>&amp;sup2;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#179;</b></font><td bgcolor=#FFFFCC>&amp;#179;<td bgcolor=#FFFFCC>&amp;sup3;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#180;</b></font><td bgcolor=#FFFFCC>&amp;#180;<td bgcolor=#FFFFCC>&amp;acute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#181;</b></font><td bgcolor=#FFFFCC>&amp;#181;<td bgcolor=#FFFFCC>&amp;micro;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#182;</b></font><td bgcolor=#FFFFCC>&amp;#182;<td bgcolor=#FFFFCC>&amp;para;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#183;</b></font><td bgcolor=#FFFFCC>&amp;#183;<td bgcolor=#FFFFCC>&amp;middot;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#184;</b></font><td bgcolor=#FFFFCC>&amp;#184;<td bgcolor=#FFFFCC>&amp;cedil;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#185;</b></font><td bgcolor=#FFFFCC>&amp;#185;<td bgcolor=#FFFFCC>&amp;sup1;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#186;</b></font><td bgcolor=#FFFFCC>&amp;#186;<td bgcolor=#FFFFCC>&amp;ordm;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#187;</b></font><td bgcolor=#FFFFCC>&amp;#187;<td bgcolor=#FFFFCC>&amp;raquo;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#188;</b></font><td bgcolor=#FFFFCC>&amp;#188;<td bgcolor=#FFFFCC>&amp;frac14;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#189;</b></font><td bgcolor=#FFFFCC>&amp;#189;<td bgcolor=#FFFFCC>&amp;frac12;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#190;</b></font><td bgcolor=#FFFFCC>&amp;#190;<td bgcolor=#FFFFCC>&amp;frac34;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#191;</b></font><td bgcolor=#FFFFCC>&amp;#191;<td bgcolor=#FFFFCC>&amp;iquest;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#192;</b></font><td bgcolor=#FFFFCC>&amp;#192;<td bgcolor=#FFFFCC>&amp;Agrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#193;</b></font><td bgcolor=#FFFFCC>&amp;#193;<td bgcolor=#FFFFCC>&amp;Aacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#194;</b></font><td bgcolor=#FFFFCC>&amp;#194;<td bgcolor=#FFFFCC>&amp;Acirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#195;</b></font><td bgcolor=#FFFFCC>&amp;#195;<td bgcolor=#FFFFCC>&amp;Atilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#196;</b></font><td bgcolor=#FFFFCC>&amp;#196;<td bgcolor=#FFFFCC>&amp;Auml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#197;</b></font><td bgcolor=#FFFFCC>&amp;#197;<td bgcolor=#FFFFCC>&amp;Aring;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#198;</b></font><td bgcolor=#FFFFCC>&amp;#198;<td bgcolor=#FFFFCC>&amp;Aelig;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#199;</b></font><td bgcolor=#FFFFCC>&amp;#199;<td bgcolor=#FFFFCC>&amp;Ccedil;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#200;</b></font><td bgcolor=#FFFFCC>&amp;#200;<td bgcolor=#FFFFCC>&amp;Egrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#201;</b></font><td bgcolor=#FFFFCC>&amp;#201;<td bgcolor=#FFFFCC>&amp;Eacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#202;</b></font><td bgcolor=#FFFFCC>&amp;#202;<td bgcolor=#FFFFCC>&amp;Ecirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#203;</b></font><td bgcolor=#FFFFCC>&amp;#203;<td bgcolor=#FFFFCC>&amp;Euml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#204;</b></font><td bgcolor=#FFFFCC>&amp;#204;<td bgcolor=#FFFFCC>&amp;Igrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#205;</b></font><td bgcolor=#FFFFCC>&amp;#205;<td bgcolor=#FFFFCC>&amp;Iacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#206;</b></font><td bgcolor=#FFFFCC>&amp;#206;<td bgcolor=#FFFFCC>&amp;Icirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#207;</b></font><td bgcolor=#FFFFCC>&amp;#207;<td bgcolor=#FFFFCC>&amp;Iuml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#208;</b></font><td bgcolor=#FFFFCC>&amp;#208;<td bgcolor=#FFFFCC>&amp;ETH;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#209;</b></font><td bgcolor=#FFFFCC>&amp;#209;<td bgcolor=#FFFFCC>&amp;Ntilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#210;</b></font><td bgcolor=#FFFFCC>&amp;#210;<td bgcolor=#FFFFCC>&amp;Ograve;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#211;</b></font><td bgcolor=#FFFFCC>&amp;#211;<td bgcolor=#FFFFCC>&amp;Oacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#212;</b></font><td bgcolor=#FFFFCC>&amp;#212;<td bgcolor=#FFFFCC>&amp;Ocirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#213;</b></font><td bgcolor=#FFFFCC>&amp;#213;<td bgcolor=#FFFFCC>&amp;Otilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#214;</b></font><td bgcolor=#FFFFCC>&amp;#214;<td bgcolor=#FFFFCC>&amp;Ouml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#215;</b></font><td bgcolor=#FFFFCC>&amp;#215;<td bgcolor=#FFFFCC>&amp;times;<td bgcolor=#CCCCCC>&#160;</tr>   
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#216;</b></font><td bgcolor=#FFFFCC>&amp;#216;<td bgcolor=#FFFFCC>&amp;Oslash;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#217;</b></font><td bgcolor=#FFFFCC>&amp;#217;<td bgcolor=#FFFFCC>&amp;Ugrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#218;</b></font><td bgcolor=#FFFFCC>&amp;#218;<td bgcolor=#FFFFCC>&amp;Uacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#219;</b></font><td bgcolor=#FFFFCC>&amp;#219;<td bgcolor=#FFFFCC>&amp;Ucirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#220;</b></font><td bgcolor=#FFFFCC>&amp;#220;<td bgcolor=#FFFFCC>&amp;Uuml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#221;</b></font><td bgcolor=#FFFFCC>&amp;#221;<td bgcolor=#FFFFCC>&amp;Yacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#222;</b></font><td bgcolor=#FFFFCC>&amp;#222;<td bgcolor=#FFFFCC>&amp;THORN;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#223;</b></font><td bgcolor=#FFFFCC>&amp;#223;<td bgcolor=#FFFFCC>&amp;szlig;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#224;</b></font><td bgcolor=#FFFFCC>&amp;#224;<td bgcolor=#FFFFCC>&amp;agrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#225;</b></font><td bgcolor=#FFFFCC>&amp;#225;<td bgcolor=#FFFFCC>&amp;aacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#226;</b></font><td bgcolor=#FFFFCC>&amp;#226;<td bgcolor=#FFFFCC>&amp;acirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#227;</b></font><td bgcolor=#FFFFCC>&amp;#227;<td bgcolor=#FFFFCC>&amp;atilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#228;</b></font><td bgcolor=#FFFFCC>&amp;#228;<td bgcolor=#FFFFCC>&amp;auml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#229;</b></font><td bgcolor=#FFFFCC>&amp;#229;<td bgcolor=#FFFFCC>&amp;aring;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#230;</b></font><td bgcolor=#FFFFCC>&amp;#230;<td bgcolor=#FFFFCC>&amp;aelig;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#231;</b></font><td bgcolor=#FFFFCC>&amp;#231;<td bgcolor=#FFFFCC>&amp;ccedil;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#232;</b></font><td bgcolor=#FFFFCC>&amp;#232;<td bgcolor=#FFFFCC>&amp;egrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#233;</b></font><td bgcolor=#FFFFCC>&amp;#233;<td bgcolor=#FFFFCC>&amp;eacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#234;</b></font><td bgcolor=#FFFFCC>&amp;#234;<td bgcolor=#FFFFCC>&amp;ecirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#235;</b></font><td bgcolor=#FFFFCC>&amp;#235;<td bgcolor=#FFFFCC>&amp;euml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#236;</b></font><td bgcolor=#FFFFCC>&amp;#236;<td bgcolor=#FFFFCC>&amp;igrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#237;</b></font><td bgcolor=#FFFFCC>&amp;#237;<td bgcolor=#FFFFCC>&amp;iacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#238;</b></font><td bgcolor=#FFFFCC>&amp;#238;<td bgcolor=#FFFFCC>&amp;icirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#239;</b></font><td bgcolor=#FFFFCC>&amp;#239;<td bgcolor=#FFFFCC>&amp;iuml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#240;</b></font><td bgcolor=#FFFFCC>&amp;#240;<td bgcolor=#FFFFCC>&amp;eth;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#241;</b></font><td bgcolor=#FFFFCC>&amp;#241;<td bgcolor=#FFFFCC>&amp;ntilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#242;</b></font><td bgcolor=#FFFFCC>&amp;#242;<td bgcolor=#FFFFCC>&amp;ograve;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#243;</b></font><td bgcolor=#FFFFCC>&amp;#243;<td bgcolor=#FFFFCC>&amp;oacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#244;</b></font><td bgcolor=#FFFFCC>&amp;#244;<td bgcolor=#FFFFCC>&amp;ocirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#245;</b></font><td bgcolor=#FFFFCC>&amp;#245;<td bgcolor=#FFFFCC>&amp;otilde;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#246;</b></font><td bgcolor=#FFFFCC>&amp;#246;<td bgcolor=#FFFFCC>&amp;ouml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#247;</b></font><td bgcolor=#FFFFCC>&amp;#247;<td bgcolor=#FFFFCC>&amp;divide;<td bgcolor=#CCCCCC>&#160;</tr>   
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#248;</b></font><td bgcolor=#FFFFCC>&amp;#248;<td bgcolor=#FFFFCC>&amp;oslash;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#249;</b></font><td bgcolor=#FFFFCC>&amp;#249;<td bgcolor=#FFFFCC>&amp;ugrave;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#250;</b></font><td bgcolor=#FFFFCC>&amp;#250;<td bgcolor=#FFFFCC>&amp;uacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#251;</b></font><td bgcolor=#FFFFCC>&amp;#251;<td bgcolor=#FFFFCC>&amp;ucirc;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#252;</b></font><td bgcolor=#FFFFCC>&amp;#252;<td bgcolor=#FFFFCC>&amp;uuml;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#253;</b></font><td bgcolor=#FFFFCC>&amp;#253;<td bgcolor=#FFFFCC>&amp;yacute;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#254;</b></font><td bgcolor=#FFFFCC>&amp;#254;<td bgcolor=#FFFFCC>&amp;thorn;<td bgcolor=#CCCCCC>&#160;</tr>
+  <tr><td bgcolor=#CCFFFF align=center><font size=5><b>&#255;</b></font><td bgcolor=#FFFFCC>&amp;#255;<td bgcolor=#FFFFCC>&amp;yuml;<td bgcolor=#CCCCCC>&#160;</tr>
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>HTML-eigene Zeichen maskieren</font></h2></a>
+Wenn in Ihrem Text Zeichen vorkommen, die in HTML eine bestimmte Bedeutung haben, 
+m&uuml;ssen Sie diese Zeichen maskieren. Die folgenden Zeichen m&uuml;ssen Sie 
+wie folgt maskieren:
+<p>
+<a name="ilt">Ersetzen</a> Sie das Zeichen <b>&lt;</b> durch die Zeichenfolge <b>&amp;lt;</b><br>
+<a name="igt">Ersetzen</a> Sie das Zeichen <b>&gt;</b> durch die Zeichenfolge <b>&amp;gt;</b><br>
+<a name="iamp">Ersetzen</a> Sie das Zeichen <b>&amp;</b> durch die Zeichenfolge <b>&amp;amp;</b><br>
+<a name="iquot">Ersetzen</a> Sie das Zeichen <b>&quot;</b> durch die Zeichenfolge <b>&amp;quot;</b><br>
+
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Das ist ein &amp;lt;HTML-Tag&amp;gt;
+Gmbh &amp;amp; Co. KG
+&amp;quot;Text steht in Anf&amp;uuml;hrungszeichen&amp;quot;
+</pre></td></tr></table><p>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcac.htm"><b>Regeln beim Editieren von HTML</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcae.htm"><b>Farben definieren in HTML</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

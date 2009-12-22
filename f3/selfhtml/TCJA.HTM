@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>SELFHTML: Style-Sheets in HTML einbinden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Style-Sheets in HTML einbinden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu Style-Sheets</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Arten, Style-Sheets zu definieren</b></a> <br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu Style-Sheets</font></h2></a>
+Style-Sheets sollen in HTML endlich erm&ouml;glichen, was in jeder halbwegs brauchbaren Textverarbeitung l&auml;ngst zum Standard geh&ouml;rt: definierte Formate, die auf einzelne Textabs&auml;tze anwendbar sind. Dazu geh&ouml;ren Angaben zu Schriftarten, Absatzabst&auml;nden, Einz&uuml;gen usw.
+<p>
+DTP-Feinheiten, wie sie durch Style-Sheets realisiert werden sollen, stehen in Konflikt zu den unterschiedlichen Betriebssystem- und Oberfl&auml;chen-Ressourcen der Anwender. Als HTML-Entwickler wissen Sie nicht, womit Ihre WWW-Seiten gelesen werden, ob mit einem MS-Windows-PC, einem Mac, einem Amiga, einer Sun oder einem VMS-Gro&szlig;rechner. HTML stellt zwar einen einheitlichen Zeichensatz zur Verf&uuml;gung, aber Sie werden kaum eine Schriftart finden, die auf wirklich jedem Rechner installiert ist. Auch erzwungene Schriftgr&ouml;&szlig;en 
+sind problematisch. Auf einem Bildschirm mit 1280x1024 Pixeln sieht eine 9-Punkt-Schrift ziemlich mikrig aus, auf einem Bildschirm mit 640x480 Pixeln dagegen recht ordentlich.
+<p>
+Echte DTP-Pr&auml;zision wird HTML im Rahmen seines Ansatzes ohnehin nie erreichen k&ouml;nnen. Da sind Formate wie das des Acrobat Reader (PDF-Dateien) wesentlich ausgereifter. Und auch das PDF-Format ist plattformunabh&auml;ngig. Nachteil gegen&uuml;ber HTML sind die vergleichsweise teueren Editierwerkzeuge und die Dateigr&ouml;&szlig;en. Dazu kommt, da&szlig; perfektes Print-Layout nicht unbedingt die beste L&ouml;sung f&uuml;r Information ist, die am Bildschirm gelesen wird. 
+<p>
+Style-Sheets sind bislang kein offizieller Bestandteil von HTML. Aber das W3-Konsortium bietet eine mittlerweile ziemlich ausgereifte Empfehlung zum Notieren von Style-Sheets an. Diese Empfehlung ist in der Internet-Draft <img src="xgonline.gif"  width=14 height=10>&nbsp;<a href="http://www.w3.org/pub/WWW/TR/PR-CSS1"><b>Cascading Style Sheets</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0> zusammengefa&szlig;t. 
+<p>
+Der Microsoft Internet Explorer interpretiert ab Version 3.0 Style-Sheets entsprechend der gegenw&auml;rtigen Vorschl&auml;ge, ebenso Netscape ab Version 4.0. Da die Technik noch nicht ausgereift ist, kommt es jedoch nicht immer zu den gew&uuml;nschten Anzeigeergebnissen. Aufgrund dieser Situation sollten Sie Style-Sheets noch nicht wie selbstverst&auml;ndlich auf Ihren WWW-Seiten verwenden und vermeiden, sie zum zentralen Gestaltungsmittel zu machen. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Arten, Style-Sheets zu definieren</font></h2></a>
+Style-Sheets k&ouml;nnen Sie auf verschiedene Arten definieren.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Titel der Datei&lt;/title&gt;
+&lt;link rel=stylesheet type=&quot;text/css&quot; href=&quot;formate.css&quot; title=&quot;Meine Formate&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+@import url(beispiel.css);
+  ... Style-Sheet-Definitionen ...
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p style=&quot;color: green&quot;&gt;Ziemlich gr&amp;uuml;ner Absatz&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel zeigt eine komplette HTML-Datei. Darin werden auf vier verschiedene Arten Style-Sheets definiert:
+<ol>
+<li>Mit dem Befehl <b>&lt;link rel=stylesheet type=&quot;text/css&quot; href=... title=....&gt;</b> im Kopf der HTML-Datei. Die Style-Sheet-Definitionen m&uuml;ssen dabei in einer separaten Datei stehen. Es mu&szlig; sich um eine reine Textdatei handeln, die m&ouml;glichst die Endung <b>.css</b> haben sollte. Diese Datei geben Sie bei der Angabe <b>href=</b> an. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Es gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Bei dieser Art, Style-Sheets einzubinden, kann der Anwender entscheiden, ob er die HTML-Datei normal oder mit Style-Sheets formatiert angezeigt bekommen will. Dazu sollte der WWW-Browser dem Anwender <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbe.htm"><b>Standardverweise</b></a> anbieten. Die Standardverweise werden zum Beispiel als Funktionsleiste mit anklickbaren Buttons angeboten. Mit der Angabe <b>title=</b> k&ouml;nnen Sie die Beschriftung solcher Verweis-Buttons bestimmen. Die Angabe sollte in Anf&uuml;hrungszeichen stehen und die damit verkn&uuml;pften Style-Sheet-Definitionen charakterisieren. Leider ist diese Art, Style-Sheets zu definieren, derzeit unbrauchbar, weil die meisten WWW-Browser keine Standardverweise interpretieren.
+<p>
+<li>Mit dem Befehl <b>&lt;style...&gt;</b> ... <b>&lt;/style&gt;</b> im Kopf der HTML-Datei. Bei dieser Art, Style-Sheets einzubinden, bestimmen Sie als Autor der HTML-Datei, da&szlig; die definierten Formate verwendet werden. Der Anwender hat keine Wahlm&ouml;glichkeit. Im einleitenden <b>&lt;style&gt;</b>-Tag m&uuml;ssen Sie den Typ der Formatdefinition angeben. Das geschieht bei allen hier beschriebenen Formatierm&ouml;glichkeiten durch die Angabe <b>type=&quot;text/css&quot;</b>. Zwischen dem einleitenden Tag und dem abschlie&szlig;enden <b>&lt;/style&gt;</b> k&ouml;nnen Sie Style-Sheets definieren. 
+<p>
+<li>Mit dem Befehl <b>@import url(...);</b> innerhalb von <b>&lt;style...&gt;</b> ... <b>&lt;/style&gt;</b> im Kopf der HTML-Datei. Die Style-Sheet-Definitionen m&uuml;ssen dabei in einer separaten Datei stehen. Das hat den Vorteil, da&szlig; Sie dieselben Formate in vielen verschiedenen HTML-Dateien verwenden k&ouml;nnen. Es mu&szlig; sich um eine reine Textdatei handeln, die m&ouml;glichst die Endung <b>.css</b> haben sollte. Innerhalb der runden Klammern k&ouml;nnen Sie eine Datei im gleichen Verzeichnis, in einem anderen Verzeichnis oder in Form einer vollst&auml;ndigen URL-Adresse angeben. Die Adressierung bei relativen Pfadnamen funktioniert genauso wie etwa beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm#a2"><b>Referenzieren einer Grafik in einem anderem Verzeichnis</b></a>. Wenn Sie innerhalb von <b>&lt;style...&gt;</b> ... <b>&lt;/style&gt;</b> sowohl Formatdefinitionen aus einer separaten Datei importieren als auch wie bei (2.) beschrieben direkt Formate definieren, haben die direkt definierten Formate Vorrang vor den importierten Formaten. So k&ouml;nnen Sie etwa immer wieder verwendete Formate importieren und einige davon mit dateispezifischen Formaten &uuml;berschreiben.
+<p>
+<li>Mit Style-Sheet-Definitionen direkt im Text der HTML-Datei, also innerhalb von <b>&lt;body&gt;</b> ... <b>&lt;/body&gt;</b>. Solche Definitionen gelten nur einmalig f&uuml;r den Textbereich, f&uuml;r den sie definiert werden. Dazu notieren Sie im einleitenden HTML-Tag eines Textbereichs die Angabe <b>style=</b> und dahinter, in Anf&uuml;hrungszeichen, die gew&uuml;nschte Formatdefinition. Im obigen Beispiel wird die Angabe im Absatz-Tag <b>&lt;p&gt;</b> notiert. Die Angabe kann in Befehlen f&uuml;r <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a> verwendet werden.
+</ol>
+
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Nachdem Sie entschieden haben, wie Sie Style-Sheets einbinden wollen, k&ouml;nnen Sie die eigentlichen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcjb.htm"><b>Style-Sheet-Angaben definieren</b></a>. Wenn Sie eine separate CSS-Datei dazu verwenden, sollte die Datei nichts anderes als erlaubte Style-Sheet-Definitionen enthalten.
+<p>
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcie.htm"><b>Tips zum Umgang mit Frames</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcjb.htm"><b>Style-Sheet-Angaben definieren</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

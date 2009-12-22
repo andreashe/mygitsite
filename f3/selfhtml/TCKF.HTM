@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>SELFHTML: Speziellere Objekteigenschaften</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Speziellere Objekteigenschaften</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Meldungstext w&auml;hrend des Ladevorgangs anzeigen</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Instanz eines Objekts nur bei Aufruf durch Anwender anzeigen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Meldungstext w&auml;hrend des Ladevorgangs anzeigen</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tckfa.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Multimedia-Objekte oder ausf&uuml;hrbare Programme wie Java-Applets k&ouml;nnen zum Teil l&auml;ngere Ladezeiten verursachen. Auch dann, wenn die Dateien selbst nicht gr&ouml;&szlig;er als durchschnittliche HTML- oder Grafikdateien sind, m&uuml;ssen beim Anwender in der Regel Plugins oder Laufzeitinterpreter aktiviert werden. Das kostet Zeit.
+<p>
+Um den Anwender nicht im unklaren &uuml;ber die Wartezeit und die Ladevorg&auml;nge an seinem Rechner zu lassen, k&ouml;nnen Sie einen Meldungstext angeben, der dem Anwender bis zur fertigen Anzeige des eingebundenen Objekts angezeigt wird.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object data=&quot;datei.wrl&quot; width=300 height=200 standby=&quot;VRML-Plugin wird geladen...&quot;&gt;&lt;/object&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Innerhalb eines einleitenden <b>&lt;object&gt;</b>-Tags k&ouml;nnen Sie mit der Angabe <b>standby=</b> einen Meldungstext f&uuml;r den Ladevorgang angeben. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Der Text darf auch HTML-kodierte <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcad.htm#a2"><b>Sonderzeichen nach iso 8559</b></a> enthalten.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+
+
+<a name="a2"><h2><font color=#6666CC>Instanz eines Objekts nur bei Aufruf durch Anwender anzeigen</font></h2></a>
+
+Sie k&ouml;nnen ein Objekt definieren, das der Anwender explizit aktivieren mu&szlig;, damit es angezeigt wird. Das Objekt wird dazu zun&auml;chst nur deklariert. Damit es angezeigt oder ausgef&uuml;hrt wird, mu&szlig; es vom Anwender aktiviert werden. Normalerweise geschieht das mit Hilfe eines Verweises auf das deklarierte Objekt. 
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;object declare classid=&quot;animation&quot; id=&quot;JavaAnimation&quot;&gt;
+ &lt;param name=animation_text value=&quot;Mein animierter Text&quot;&gt;
+&lt;/object&gt;
+&lt;p&gt;
+ &lt;a href=&quot;#JavaAnimation&quot;&gt;Animierten Text anzeigen&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Innerhalb eines einleitenden <b>&lt;object&gt;</b>-Tags k&ouml;nnen Sie mit der Angabe <b>declare</b> ein Objekt als lediglich deklariert definieren (<i>declare = erklären, angeben</i>). 
+<p>
+Mit der Angabe <b>id=</b> können Sie einen Zielanker innerhalb des Objekts definieren, im Beispiel: &quot;JavaAnimation&quot; (<i>id = identifier = Bezeichner</i>). Vergeben Sie keine zu langen Namen. Namen d&uuml;rfen keine Leerzeichen und keine deutschen Umlaute enthalten. Benutzen Sie als Sonderzeichen h&ouml;chstens den Unterstrich &quot;_&quot;. Der Name des Zielankers mu&szlig; in Anf&uuml;hrungszeichen stehen.
+<p>
+Mit einem Verweis auf den Zielanker (siehe obiges Beispiel) können Sie den Anwender das Objekt aktivieren lassen. Der Verweis zu dem Zielanker funktioniert nach dem gleichen Schema wie das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a2"><b>Setzen eines Verweises zu einem Anker</b></a> innerhalb der HTML-Datei. 
+
+
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcke.htm"><b>Abstand zwischen Objekt und umgebendem Text</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tckg.htm"><b>Multimedia einbinden (Netscape)</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tck.htm"><b>Multimedia (Sound, Video, Java usw.)</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

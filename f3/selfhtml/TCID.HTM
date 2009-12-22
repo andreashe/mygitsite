@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>SELFHTML: Eingebettete Frames</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Eingebettete Frames</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Eingebettete Frames definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften eingebetteter Frames definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Verweise zu eingebetteten Frames</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Eingebettete Frames definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcida.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Eingebettete Frames werden derzeit nur vom MS Internet-Explorer ab Version 3.0 interpretiert. Eingebettete Frames sind ein eigenst&auml;ndiges Gestaltungsmittel zur Informationsaufbereitung, das anders funktioniert als &quot;normale&quot; Frames. Eingebettete Frames erzeugen keine eigene Aufteilung des Bildschirms, sondern sind &auml;hnlich wie Grafiken oder Videos Bereiche innerhalb einer HTML-Datei, in denen fremde Quellen, vor allem andere HTML-Dateien angezeigt werden k&ouml;nnen. Die Idee ist sicher interessant, aber propriet&auml;r. Die Funktionalit&auml;t der eingebetteten Frames wird in Zukunft durch das allgemeine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcka.htm"><b>Einbinden von Objekten</b></a> ersetzbar sein.
+
+
+<a name="iiframe"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Datei mit eingebettetem Frame&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Inhalte der Datei
+&lt;iframe src=&quot;extrainfo.html&quot; name=&quot;Fenster&quot;&gt;
+Dieser Test wird angezeigt, wenn der Browser den Befehl nicht kennt
+&lt;/iframe&gt;
+Andere Inhalte der Datei
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+F&uuml;r HTML-Dateien mit eingebetteten Frames gilt das gew&ouml;hnliche <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcab.htm"><b>Grundger&uuml;st einer HTML-Datei</b></a>. Eingebettete Frames k&ouml;nnen dann im Textk&ouml;rper der HTML-Datei an einer gew&uuml;nschten Stelle vorkommen. Mit <b>&lt;iframe...&gt;</b> leiten Sie einen eingebetteten Frame ein (<i>iframe = internal frame = interner Rahmen</i>). Mit der Angabe <b>src=</b> bstimmen Sie, was in dem eingebetteten Frame angezeigt werden soll. Normalerweise wird dies eine andere HTML-Datei sein. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Es gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.<br>
+Ferner sollten Sie f&uuml;r den eingebetteten Frame mit <b>name=</b> einen Namen vergeben. Diese Namen brauchen Sie, um <img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Verweise zu dem eingebetteten Frame</b></a> zu definieren. Namen f&uuml;r Frames m&uuml;ssen in Anf&uuml;hrungszeichen stehen, d&uuml;rfen nicht zu lang sein und nur aus Buchstaben, Ziffern und dem Unterstrichen bestehen. 
+<p>
+Zwischen dem einleitenden <b>&lt;iframe&gt;</b> und dem erforderlichen, abschlie&szlig;enden <b>&lt;/iframe&gt;</b> k&ouml;nnen Sie Text und andere Elemente notieren, die von WWW-Browsern angezeigt werden, die den eingebetteten Frame nicht interpretieren.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Eigenschaften eingebetteter Frames definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcida.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen verschiedene Eigenschaften definieren, um die Gr&ouml;&szlig;e eines eingebetteten Frames, den Abstand zur Umgebung usw. zu bestimmen.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;iframe src=&quot;extrainfo.html&quot; width=200 height=300 align=left hspace=30 vspace=50 scrolling=yes&gt;
+Dieser Test wird angezeigt, wenn der Browser den Befehl nicht kennt
+&lt;/iframe&gt;Dieser Text flie&szlig;t rechts um den Frame.
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im einleitenden <b>&lt;iframe&gt;</b>-Tag k&ouml;nnen Sie folgende Eigenschaften definieren:
+<ul>
+<li>mit <b>width=</b> [Pixel] bestimmen Sie die Breite des eingebetteten Frames, mit <b>height=</b> seine H&ouml;he (<i>width= Breite, height = H&ouml;he</i>). Die Funktionalit&auml;t ist identisch wie die bei Grafiken (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcge.htm#a1"><b>Breite und H&ouml;he einer Grafik mit angeben</b></a>).
+<li>mit <b>align=left</b> richten Sie den eingebetteten Frame links aus. Der folgende Text flie&szlig;t rechts um den Frame. Mit <b>align=right</b> richten Sie den eingebetteten Frame rechts aus und der folgende Text flie&szlig;t links um den Frame. Die Funktionalit&auml;t ist identisch wie die bei Grafiken (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgc.htm#a1"><b>Grafik mit umflie&szlig;endem Text einbinden</b></a>).
+<li>mit <b>hspace=</b> [Pixel] bestimmen Sie den Abstand zum Text neben dem eingebetteten Frame, mit mit <b>vspace=</b> [Pixel] den Abstand zum Text &uuml;ber bzw. unter dem Frame (<i>hspace = horizontal space = horizontaler Abstand, vspace = vertical space = vertikaler Abstand</i>). Die Funktionalit&auml;t ist identisch wie die bei Grafiken (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcgd.htm#a1"><b>Abstand zwischen Grafik und Text definieren</b></a>).
+<li>Mit <b>scrolling=</b> [yes/no/auto] k&ouml;nnen Sie Scrollbars (Bildlaufleisten) in dem eingebetteten Frame erzwingen oder verhindern. Die Funktionalit&auml;t ist identisch wie die bei normalen Frames (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcib.htm#a1"><b>Scrollbars (Bildlaufleisten) erzwingen/verhindern</b></a>).
+</ul>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xmsie3.gif" width=30 height=30 border=0 alt="MSIE3.0"> Verweise zu eingebetteten Frames</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcida.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+In einer HTML-Datei, in der Sie einen eingebetteten Frame definieren, k&ouml;nnen Sie mit Verweisen auch den Inhalt des eingebetteten Frames &auml;ndern.
+
+<a name="iframeset"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;iframe src=&quot;extrainfo.html&quot; name=&quot;Fenster&quot;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&quot;nochmehrinfo.html&quot; target=&quot;Fenster&quot;&gt;Noch mehr Infos&lt;/a&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Voraussetzung f&uuml;r Verweise zu einem eingebetteten Frame ist, da&szlig; der eingebettete Frame einen Namen erhalten hat. Im obigen Beispiel ist das der Name <b>&quot;Fenster&quot;</b>.<br>
+F&uuml;r das Setzen eines Verweises zu dem eingebetteten Frame gilt das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfa.htm#a1"><b>Schema f&uuml;r alle Verweise in HTML</b></a>. Damit das Verweisziel in dem Frame angezeigt wird, notieren Sie im einleitenden Verweis-Tag zus&auml;tzlich die Angabe <b>target=</b> (<i>target = Ziel</i>). Dahinter folgt der Name des Frame-Fensters, in dem das Verweisziel angezeigt werden soll. Der Name mu&szlig; in Anf&uuml;hrungszeichen stehen.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcic.htm"><b>Verweise zu Frames und zum Beenden von Frame-Sets</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcie.htm"><b>Tips zum Umgang mit Frames</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tci.htm"><b>Frames - mehrere Bildschirmfenster</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

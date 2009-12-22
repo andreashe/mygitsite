@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>SELFHTML: Lauftext in der Statuszeile</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Lauftext in der Statuszeile</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Kurzbeschreibung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Quellcode</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Erl&auml;uterungen zum Quellcode</b></a><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddaa.htm"><b>Beispiel testen: so sieht's aus</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Kurzbeschreibung</font></h2></a>
+Das Beispiel bewirkt, da&szlig; in der Statuszeile des WWW-Browsers ein &quot;Ticker-Text&quot;, also ein Laufbandtext angezeigt wird. Dies ist z.B. sinnvoll, um auf letzte Neuigkeiten aufmerksam zu machen.
+Das Beispiel beruht im wesentlichen auf dem Beispiel der hervorragenden <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://rummelplatz.uni-mannheim.de/~skoch/js/script.htm"><b>JavaScript-Einf&uuml;hrung von Stefan Koch</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0>. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Quellcode</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tddaa.htm"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Der Quellcode zeigt die komplette HTML-Datei. Studieren Sie das Beispiel aufmerksam und lesen Sie anschlie&szlig;end die Erl&auml;uterungen dazu. Zur besseren Orientierung enth&auml;lt das Quellcode-Beispiel Verweise zu den entsprechenden Erl&auml;uterungen, z.B. <a href="#a2"><b>(1)</b></a>. Diese Verweise geh&ouml;ren nicht zum Quellcode. Falls Sie das Beispiel in einen Editor kopieren, m&uuml;ssen Sie diese Verweise l&ouml;schen. Andernfalls erhalten Sie JavaScript-Fehlermeldungen.
+
+
+<h4><font color=#6666CC>Quellcode:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+ &lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;Hier den Titel der Datei eingeben&lt;/title&gt;
+ &lt;script language="JavaScript"&gt;
+ &lt;!--
+  <a href="#a111"><b>(1)</b></a> var Text = &quot;Hier den Lauftext eingeben&quot;;  
+  var Geschwindigkeit = 150;   /*** Nach Bedarf erhoehen oder erniedrigen ***/
+  var Breite = 100;            /*** Nach Bedarf erhoehen oder erniedrigen ***/
+  var TextLaenge = Text.length; /*** Bitte nicht aendern ***/
+  var Position = 1 - Breite;   /*** Bitte nicht aendern ***/
+
+ <a href="#a112"><b>(2)</b></a> function StatusLauftext()    /*** ab hier bitte nichts aendern ***/
+ {
+  <a href="#a113"><b>(3)</b></a> Position++;
+  <a href="#a114"><b>(4)</b></a> var Textzustand=&quot;&quot;;
+  <a href="#a115"><b>(5)</b></a> if (Position == TextLaenge) 
+   {
+    Position = 1 - Breite;
+   }
+  <a href="#a116"><b>(6)</b></a> if (Position &lt; 0) 
+   {
+    for (var Zaehler=1; Zaehler &lt;= Math.abs(Position); Zaehler++) 
+     {
+      Textzustand = Textzustand + &quot; &quot;;
+     };
+    Textzustand = Textzustand + Text.substring(0, Breite - Zaehler + 1);
+   }
+  <a href="#a117"><b>(7)</b></a> else 
+   {
+    Textzustand = Textzustand + Text.substring(Position, Breite + Position);
+   }
+  <a href="#a118"><b>(8)</b></a> window.status = Textzustand;
+  <a href="#a119"><b>(9)</b></a> setTimeout(&quot;StatusLauftext()&quot;,Geschwindigkeit);
+ }
+ //--&gt;
+ &lt;/script&gt;
+ &lt;/head&gt;
+
+ <a href="#a1110"><b>(10)</b></a> &lt;body onLoad=&quot;StatusLauftext();return true&quot;&gt;
+ 
+ Hier den Inhalt der HTML-Datei eingeben
+ 
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre></td></tr></table><p>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Erl&auml;uterungen zum Quellcode</font></h2></a>
+Der gesamte JavaScript-Code f&uuml;r den Lauftext in der Statuszeile wird im Kopf der HTML-Datei notiert, also zwischen <b>&lt;head&gt;</b> und <b>&lt;/head&gt;</b> mit dem daf&uuml;r vorgesehenen HTML-Tag <b>&lt;script language=&quot;JavaScript&quot;&gt;</b> .... <b>&lt;/script&gt;</b>.
+<p>
+<a name ="a111"><font color=#6666CC><b>(1) Wichtige Variablen mit festem Ausgangswert</b></font></a><br>
+Zun&auml;chst werden im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> ein paar wichtige <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm#a1"><b>Variablen</b></a> definiert. Diese Variablen werden au&szlig;erhalb der Funktion <i>StatusLauftext()</i> definiert, da die Funktion selbst iterativ ist, d.h. die Funktion ruft sich am Ende selbst auf, um den Endlos-Effekt des Lauftextes zu bewerkstelligen. Die Variablen d&uuml;rfen jedoch nur einmal definiert werden, da sie feste Ausgangswerte bereitstellen, die dann bei jedem Aufruf der Funktion weiter verarbeitet werden. <br>
+Die Variable <i>Text</i> definiert den Text, der als Lauftext in der Statuszeile angezeigt werden soll.<br>
+Die Variable <i>Geschwindigkeit</i> definiert die Laufgeschwindigkeit des Textes. Die Wertzuweisung erfolgt in Millisekunden, da sie innerhalb der Funktion an die <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a5"><b>Methode</b></a> <b>setTimeout()</b> &uuml;bergeben wird, die eine Angabe in Millisekunden erwartet. Der Wert 100 bedeutet also eine zehntel Sekunde. In diesem Rhythmus erfolgt ein Refresh. Wenn Sie den Wert erh&ouml;hen, wird die Laufgeschwindigkeit erniedrigt, wenn Sie ihn erniedrigen, wird die Laufgeschwindigkeit erh&ouml;ht.<br>
+Die Variable <i>Breite</i> definiert die L&auml;nge des Lauftextwegs innerhalb der Statuszeile in Anzahl Zeichen. Erh&ouml;hen Sie den Wert, wenn Ihr Lauftext ziemlich lang ist. Erniedrigen Sie den Wert, wenn Sie einen kurzen Text haben und mehr Laufdurchg&auml;nge w&uuml;nschen.<br>
+Die beiden Variablen <i>TextLaenge</i> und <i>Position</i> werden f&uuml;r Berechnungen innerhalb der Funktion <i>StatusLauftext()</i> ben&ouml;tigt. Dabei erh&auml;lt <i>TextLaenge</i> die Anzahl Zeichen des in <i>Text</i> angegebenen Textes zugewiesen. <i>Position</i> wird im Beispiel auf -99 (1 - Breite) gesetzt. Innerhalb der Funktion <i>StatusLauftext()</i> wird diese Variable dazu verwendet, um die aktuelle Position des auszugebenden Textes innerhalb der definierten Breite zu speichern. Mit dem Anfangswert -99 wird der Beginn des auszugebenden Textes an den rechten Rand des Ausgabebereichs positioniert. Denn der Lauftext soll ja von rechts nach links laufen.
+<p>
+<a name ="a112"><font color=#6666CC><b>(2) Funktion definieren</b></font></a><br>
+Die Funktion <i>StatusLauftext()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> leistet die eigentliche Arbeit, d.h. sie sorgt f&uuml;r den Lauftext-Effekt aufgrund der zuvor definierten Variablen. Die Variablen stehen innerhalb der Funktion zur Verf&uuml;gung, weil sie im gleichen <b>&lt;script&gt;</b>...<b>&lt;script&gt;</b>-Bereich stehen wie die Funktion und selbst au&szlig;erhalb jeder Funktion definiert wurden.
+<p>
+<a name ="a113"><font color=#6666CC><b>(3) Ausgabeposition nach links verschieben</b></font></a><br>
+Bei allen Anweisungen innerhalb der Funktion <i>StatusLauftext()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> m&uuml;ssen Sie sich vergegenw&auml;rtigen, da&szlig; sich die Funktion immer wieder selbst aufruft. Dadurch werden alle Anweisungen immer wieder abgearbeitet. Die Ausgabeposition des Textes, die am Anfang bei -99 steht, wird mit der Anweisung <i>Position++</i> bei jedem Funktionsdurchlauf um 1 erh&ouml;ht. Gleichzeitig wird weiter unten in der Funktion daf&uuml;r gesorgt, da&szlig; entsprechend viele Zeichen des Textes ausgegeben werden. Durch das Erh&ouml;hen der Ausgabeposition auf -98, -97, -96 usw. wird bewirkt, da&szlig; der Text bei jedem Anzeige-Refresh immer weiter links beginnt.
+<p>
+<a name ="a114"><font color=#6666CC><b>(4) Textzustand (neu) definieren</b></font></a><br>
+Was dem Anwender als laufender Text erscheint, ist in Wirklichkeit eine Zeichenkette, die mit vielen Leerzeichen beginnt. Bei jedem Anzeige-Refresh wird eines der f&uuml;hrenden Leerzeichen weggenommen, wodurch der sichtbare Text Zeichen f&uuml;r Zeichen nach links rutscht. Die Zeichenkette mit den f&uuml;hrenden Leerzeichen und dem eigentlichen Text, der an einer bestimmten Stelle beginnt, mu&szlig; in einer Variablen gespeichert werden. Dies ist im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> die Variable <i>Textzustand</i>. Die Anzahl der f&uuml;hrenden Leerzeichen und den auszugebenden Text bekommt diese Variable bei jedem Funktionsdurchlauf von <i>StatusLauftext()</i> neu zugewiesen. Dies geschieht weiter unten in der Funktion. Hier, am Beginn, wird die Variable einfach neu definiert und mit &quot;keinem Inhalt&quot; vorbelegt. Da die Funktion iterativ ist, wird diese Variable also jedesmal neu erzeugt. 
+<p>
+<a name ="a115"><font color=#6666CC><b>(5) Position zur&uuml;cksetzen, wenn Text links verschwunden ist</b></font></a><br>
+Bei jedem Funktionsdurchlauf von <i>StatusLauftext()</i> im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> wird die Variable <i>Position</i>, ausgehend von ihrem Anfangswert <i>1 - Breite</i>, also -99, um 1 erh&ouml;ht. Irgendwann erreicht sie auf diese Weise 0. Dann steht der Text, der rechts zu laufen beginnt, exakt am linken Rand. Danach soll der Text jedoch Zeichen f&uuml;r Zeichen links verschwinden, bevor er rechts wieder auftaucht. Vollst&auml;ndig verschwunden ist er links, wenn der Positionsz&auml;hler 0 + die L&auml;nge des Textes betr&auml;gt, also identisch mit dem festen Wert der Variablen <i>TextLaenge</i> ist. Sobald dies der Fall ist, wird der Positionsz&auml;hler wieder auf den Anfangswert 1 - Breite (also -99) gesetzt, damit der n&auml;chste Laufdurchgang von rechts beginnen kann.
+<p>
+<a name ="a116"><font color=#6666CC><b>(6) Text Zeichen f&uuml;r Zeichen von rechts her aufbauen</b></font></a><br>
+Solange der Positionsz&auml;hler, der im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> bei -99 nach oben zu z&auml;hlen beginnt, kleiner als 0 bleibt, mu&szlig; der Text Zeichen f&uuml;r Zeichen von rechts her nach links verschoben werden. Dazu mu&szlig; die Statuszeile von links her bis zu der Position, an der der Text im aktuellen Zustand beginnen soll, mit Leerzeichen aufgef&uuml;llt werden. Dies geschieht in einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm#a2"><b>for-Schleife</b></a>. Nachdem in der Variablen <i>Textzustand</i> die berechnete Anzahl Leerzeichen gespeichert ist, wird ihr noch der eigentlich auszugebende Text angeh&auml;ngt. Dies geschieht durch Aufruf der Methode <b>substring</b>, angewendet auf das String-Objekt (die Variable) <i>Text</i>. Der Text wird von Zeichen 0 bis zu einem berechneten Zeichen (Breite - Zaehler + 1) ausgegeben. 
+<p>
+<a name ="a117"><font color=#6666CC><b>(7) Text am linken Rand verschwinden lassen</b></font></a><br>
+Wenn im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> der Positionsz&auml;hler gleich 0 ist, ist der Text am linken Rand angelangt. Ab diesem Moment m&uuml;ssen keine f&uuml;hrenden Leerzeichen mehr erzeugt werden. Stattdessen mu&szlig; bei jedem neuen Durchlauf vorne beim Text ein Zeichen verschwinden, so da&szlig; der Eindruck entsteht, der Text verschwinde am linken Rand. Auch dies geschieht durch Aufruf der Methode <b>substring</b>, angewendet auf das String-Objekt (die Variable) <i>Text</i>. Wenn der Positionsz&auml;hler nun gr&ouml;&szlig;er als 0 ist, z.B. 3, wird der Text erst ab Zeichen 3 (Position) ausgegeben. 
+Der Text wird bis zu einem berechneten Zeichen (Breite + Position) ausgegeben. 
+<p>
+<a name ="a118"><font color=#6666CC><b>(8) Text am Bildschirm ausgeben</b></font></a><br>
+Was im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> bislang passierte, geschah im Speicher der definierten Variablen ohne sichtbare Wirkung am Bildschirm. Nachdem die Position des jeweils auszugebenden Textes berechnet und die Zeichenkette, die letztendlich in der Statuszeile angezeigt werden soll, erzeugt worden ist, kann sie ausgegeben werden. Dazu wird der Objekteigenschaft <b>window.status</b> wird der Wert der auszugebenden Variablen <i>Textzustand</i> zugewiesen.
+<p>
+<a name ="a119"><font color=#6666CC><b>(9) N&auml;chsten Durchlauf aufrufen</b></font></a><br>
+Nachdem der aktuelle Zustand des Lauftextes im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> in die Statuszeile geschrieben ist, ruft sich die Funktion <i>StatusLauftext()</i> am Ende selbst auf (Iteration). Das tut sie jedoch nicht sofort, sondern sie wartet so lange, wie es in der Variablen <i>Geschwindigkeit</i> eingestellt ist. In Wirklichkeit ist der Wert der Variablen <i>Geschwindigkeit</i> also die Verz&ouml;gerungszeit zwischen einem Zustand und dem n&auml;chsten. Mit der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a5"><b>Methode</b></a> <b>setTimeout()</b> ist dieser verz&ouml;gerte Funktionsaufruf m&ouml;glich.
+<p>
+<a name ="a1110"><font color=#6666CC><b>(10) Lauftext beim Laden der HTML-Datei starten</b></font></a><br>
+Da der Statuszeilen-Lauftext im <img src="xgoup.gif" width=14 height=10 border=0">&nbsp;<a href="#a2"><b>Quellcode</b></a> gleich beim Aufruf des Dokuments starten soll, wird der Aufruf der Funktion <i>StatusLauftext()</i> gleich im einleitenden <b>&lt;body&gt;</b>-Tag der HTML-Datei mit Hilfe des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handlers</b></a> <b>onLoad</b> aufgerufen. Der Lauftext funktioniert nun, solange der Anwender die Datei am Bildschirm anzeigt.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcs.htm"><b>Objektunabh&auml;ngige Funktionen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tddb.htm"><b>Zwei Frames gleichzeitig &auml;ndern</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdd.htm"><b>JavaScript Anwendungsbeispiele</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

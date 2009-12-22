@@ -1,0 +1,117 @@
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub StopButton_Click()
+call GameOfLife1.StopLife()
+end sub
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub StartButton_Click()
+call GameOfLife1.StartLife()
+end sub
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub SpeedButton_SpinUp()
+if speedbox > 10 then
+SpeedBox = SpeedBox - 10
+end if
+end sub
+Sub SpeedButton_SpinDown()
+SpeedBox = SpeedBox + 10
+end sub
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub SpeedBox_Exit(ByVal Cancel)
+
+end sub
+Sub SpeedBox_Error(ByVal Number, ByVal Description, ByVal SCode, ByVal Source, ByVal HelpFile, ByVal HelpContext, ByVal CancelDisplay)
+
+end sub
+Sub SpeedBox_BeforeUpdate(ByVal Cancel)
+
+end sub
+Sub SpeedBox_Change()
+if (Speedbox <> "") then
+     if (SpeedBox => 10)then
+          GameOfLife1.Speed=SpeedBox
+     else
+          GameOfLife1.Speed=25
+     end if
+end if
+
+end sub
+Sub SpeedBox_AfterUpdate()
+
+end sub
+
+-->
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub AboutButton_Click()
+call GameOfLife1.AboutBox()
+end sub
+-->
+</SCRIPT>
+<DIV STYLE="LAYOUT:FIXED;WIDTH:334pt;HEIGHT:170pt;">
+    <OBJECT ID="GameOfLife1"
+     CLASSID="CLSID:A859DE03-DC2B-11CF-95F8-444553540000" STYLE="TOP:3pt;LEFT:3pt;WIDTH:237pt;HEIGHT:173pt;ZINDEX:0;"
+        CODEBASE="ActveXGameOfLife.ocx#version=1,0,0,1">
+        <PARAM NAME="_Version" VALUE="65536">
+        <PARAM NAME="_ExtentX" VALUE="8361">
+        <PARAM NAME="_ExtentY" VALUE="6103">
+        <PARAM NAME="_StockProps" VALUE="0">
+	<PARAM NAME="_Speed" value="500">
+    </OBJECT>
+    <OBJECT ID="StartButton"
+     CLASSID="CLSID:D7053240-CE69-11CD-A777-00DD01143C57" STYLE="TOP:8pt;LEFT:256pt;WIDTH:66pt;HEIGHT:20pt;TABINDEX:1;ZINDEX:1;">
+        <PARAM NAME="Caption" VALUE="Start">
+        <PARAM NAME="Size" VALUE="2328;706">
+        <PARAM NAME="FontName" VALUE="Arial">
+        <PARAM NAME="FontCharSet" VALUE="0">
+        <PARAM NAME="FontPitchAndFamily" VALUE="2">
+        <PARAM NAME="ParagraphAlign" VALUE="3">
+        <PARAM NAME="FontWeight" VALUE="0">
+    </OBJECT>
+    <OBJECT ID="StopButton"
+     CLASSID="CLSID:D7053240-CE69-11CD-A777-00DD01143C57" STYLE="TOP:33pt;LEFT:256pt;WIDTH:66pt;HEIGHT:20pt;TABINDEX:2;ZINDEX:2;">
+        <PARAM NAME="Caption" VALUE="Stop">
+        <PARAM NAME="Size" VALUE="2328;706">
+        <PARAM NAME="FontName" VALUE="Arial">
+        <PARAM NAME="FontCharSet" VALUE="0">
+        <PARAM NAME="FontPitchAndFamily" VALUE="2">
+        <PARAM NAME="ParagraphAlign" VALUE="3">
+        <PARAM NAME="FontWeight" VALUE="0">
+    </OBJECT>
+    <OBJECT ID="SpeedButton"
+     CLASSID="CLSID:79176FB0-B7F2-11CE-97EF-00AA006D2776" STYLE="TOP:134pt;LEFT:256pt;WIDTH:66pt;HEIGHT:17pt;TABINDEX:3;ZINDEX:3;">
+        <PARAM NAME="Size" VALUE="2328;600">
+        <PARAM NAME="Orientation" VALUE="1">
+    </OBJECT>
+    <OBJECT ID="SpeedBox"
+     CLASSID="CLSID:8BD21D10-EC42-11CE-9E0D-00AA006002F3" STYLE="TOP:118pt;LEFT:256pt;WIDTH:66pt;HEIGHT:18pt;TABINDEX:4;ZINDEX:4;">
+        <PARAM NAME="VariousPropertyBits" VALUE="746604571">
+        <PARAM NAME="Size" VALUE="2328;635">
+        <PARAM NAME="Value" VALUE="50">
+        <PARAM NAME="FontCharSet" VALUE="0">
+        <PARAM NAME="FontPitchAndFamily" VALUE="2">
+        <PARAM NAME="FontWeight" VALUE="0">
+    </OBJECT>
+    <OBJECT ID="AboutButton"
+     CLASSID="CLSID:D7053240-CE69-11CD-A777-00DD01143C57" STYLE="TOP:77pt;LEFT:256pt;WIDTH:66pt;HEIGHT:20pt;TABINDEX:5;ZINDEX:5;">
+        <PARAM NAME="Caption" VALUE="About....">
+        <PARAM NAME="Size" VALUE="2328;706">
+        <PARAM NAME="FontName" VALUE="Arial">
+        <PARAM NAME="FontCharSet" VALUE="0">
+        <PARAM NAME="FontPitchAndFamily" VALUE="2">
+        <PARAM NAME="ParagraphAlign" VALUE="3">
+        <PARAM NAME="FontWeight" VALUE="0">
+    </OBJECT>
+</DIV>
+¹

@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>SELFHTML: Array</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Array</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Das Objekt <b>Array</b> ist als &quot;Container&quot; f&uuml;r Ketten gleichartiger Variablen gedacht. In der Programmierersprache spricht man auch von einem &quot;Vektor&quot;. Wenn Sie beispielsweise die 16 Grundfarben speichern wollen, brauchen Sie keine 16 Variablen, sondern ein Array-Objekt, in dem Sie 16 gleichartige Werte (im Beispiel: Farbwerte) speichern k&ouml;nnen.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Instanz des Objekts <i>Array</i> erzeugen</font></h3>
+Eine Instanz von <b>Array</b> m&uuml;ssen Sie selbst erzeugen. 
+
+<h4><font color=#6666CC>Schemata:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+Variante 1: <tt>Objektname = new Array();</tt><br>
+Variante 2: <tt>Objektname = new Array(Zahl);</tt><br>
+Variante 3: <tt>Objektname = new Array(Element0, Element1, ..., element_n);</tt>
+</td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+Variante 1: <tt>MeineFrauen = new Array();</tt><br>
+Variante 2: <tt>MeineFrauen = new Array(100);</tt><br>
+Variante 3: <tt>MeineFrauen = new Array(&quot;Anita&quot;,&quot;Bettina&quot;,&quot;Christa&quot;,&quot;Doris&quot;);</tt>
+</td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Objektinstanz von <b>Array</b> speichern Sie in einem selbst vergebenen Objektnamen. Hinter dem Namen folgt ein Istgleichzeichen. Dahinter folgt das reservierte Wort <b>new</b> und der Aufruf der Objektfunktion <b>Array()</b>.
+<p>
+Benutzen Sie Variante 1, wenn Sie zum Zeitpunkt der Definition noch nicht wissen, wie viele Elemente in dem Variablenvektor gespeichert werden sollen.<br>
+Benutzen Sie Variante 2, wenn Sie zum Zeitpunkt der Definition bereits wissen, wie viele Elemente in dem Variablenvektor gespeichert werden sollen. Die Anzahl können Sie der Objektfunktion als Parameter übergeben.<br>
+Benutzen Sie Variante 3, um den Variablenvektor gleich mit Anfangswerten vorzubelegen. Bei den Varianten 1 und 2 bleiben die einzelnen Variablen des Variablenvektors leer, bis ihnen im Programmverlauf ein Wert zugewiesen wird.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Instanz des Objekts <i>Array</i> verwenden</font></h3>
+Nachdem Sie eine Instanz des Array-Objekts erzeugt haben, können Sie dies in Ihrem JavaScript-Code verwenden.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+Zahlen = new Array(34,86,167,413);
+var x = Zahlen[1];
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Nachdem Sie eine Instanz des Array-Objekts in einem Namen gespeichert haben (im Beispiel der Name <i>Zahlen</i>), können Sie wie in der zweiten Zeile gezeigt einzelne Werte innerhalb des Variablenvektors ansprechen. Im Beispiel wird eine gewöhnliche Variable <i>x</i> definiert. In dieser Variablen wird der Wert der zweiten Variable des Zahlen-Vektors gespeichert, also 86. Beachten Sie, da&szlig; der Z&auml;hler bei 0 beginnt, d.h. den ersten Wert im Vektor sprechen Sie im Beispiel mit <b>Zahlen[0]</b> an, den zweiten mit <b>Zahlen[1]</b> usw. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<b><font color=#6666CC>ARRAYNAME.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Die Anzahl der Elemente eines Arrays.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+Diese Methoden sind anwendbar, wenn zuvor eine Objektinstanz (= Objektname) von <b>Array</b> erzeugt wurde.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>ARRAYNAME.join(<i>[Exta-Anweisungen]</i>)</font></b><br>
+Diese Funktion wandelt alle Werte des Variablenvektors in eine einzige Zeichenkette um. So können Sie beispielsweise mit <i>Elemente = new Array("Wind","Regen","Feuer"); window.document.write(Elemente.join() +&quot;&lt;br&gt;&quot;);</i> die gespeicherten Variableninhalte HTML-formatiert im Dokumentfenster ausgeben. Für Formatierungen, die jedes einzelne Element betreffen, können Sie außerdem Extra-Anweisungen übergeben. So können Sie etwa mit <i>Elemente = new Array("Wind","Regen","Feuer"); window.document.write(Elemente.join(&quot;, &quot;));</i> eine Ausgabe erzeugen, die alle Variablenwerte durch Kommata getrennt ausgibt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>ARRAYNAME.reverse()</font></b><br>
+Kehrt die Reihenfolge innerhalb des Vektors um. Wenn Sie beispielsweise mit <i>Zahlen = new Array(1,2,3,4,5,6);</i> einen Variablenvektor erzeugt haben, bewirkt die Anweisung <i>Zahlen.reverse();</i>, daß Zahlen[0] hinterher den Wert 6 statt 1 hat, Zahlen[1] den Wert 5 statt 2 usw.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>ARRAYNAME.sort(<i>[Vergleichsfunktion]</i>)</font></b><br>
+Sortiert die Werte eines Variablenvektors.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcm.htm"><b>FENSTERNAME.location</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdco.htm"><b>Date</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

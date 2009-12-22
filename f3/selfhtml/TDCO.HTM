@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>SELFHTML: Date</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Date</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Das Objekt <b>Date</b> ist f&uuml;r alle Berechnungen mit Datum und Zeit zust&auml;ndig. Dabei gibt es, wie in der EDV &uuml;blich, einen fixen historischen Zeitpunkt, der intern als Speicherungs- und Berechnungsbasis dient. In JavaScript ist dies - wie in der C- und Unix-Welt - der 1. Januar 1970, 0.00 Uhr. Die Einheit, in der in JavaScript intern Zeit berechnet wird, ist eine Millisekunde.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Instanz des Objekts <i>Date</i> erzeugen</font></h3>
+Bevor Sie &uuml;ber JavaScript Zugriff auf die eingebauten Datums- und Uhrzeitfunktionen haben, m&uuml;ssen Sie eine Objektinstanz von <b>Date</b> erzeugen. 
+
+<h4><font color=#6666CC>Schema:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+Variante 1: <tt>Objektname = new Date();</tt><br>
+Variante 2: <tt>Objektname = new Date(&quot;Monat Tag, Jahr Stunden:Minuten:Sekunden&quot;);</tt><br>
+Variante 3: <tt>Objektname = new Date(Jahr,Monat,Tag);</tt><br>
+Variante 4: <tt>Objektname = new Date(Jahr,Monat,Tag,Stunden,Minuten,Sekunden);</tt>
+</td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Eine Objektinstanz von <b>Date</b> speichern Sie in einem selbst vergebenen Objektnamen. Hinter dem Namen folgt ein Istgleichzeichen. Dahinter folgt das reservierte Wort <b>new</b> und der Aufruf der Objektfunktion <b>Date()</b>.
+<p>
+Benutzen Sie Variante 1, wenn Sie eine Objektinstanz erzeugen wollen, in der das zum Zeitpunkt der Programmausf&uuml;hrung aktuelle Datum und die aktuelle Uhrzeit gespeichert werden soll. Benutzen Sie eine der Varianten 2 bis 4, wenn Sie das neue Datum-Objekt mit bestimmten Werten (also einem bestimmten Datum und einer bestimmten Uhrzeit) initialisieren wollen. Alle Initialisierungswerte wie Monat oder Minuten m&uuml;ssen Sie in Zahlenform angeben, also etwa 10 f&uuml;r Monat Oktober. Ausnahme: bei Variante (2) &uuml;bergeben Sie die Initialisierungsdaten als Zeichenkette. Dabei wird der Monat in englischer
+Schreibweise angegeben, also beispielsweise <i>october</i>.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+function bis2000()
+{
+ jetzt = new Date();
+ var Zeit = jetzt.getTime() / 1000;
+ Jahr2000 = new Date(2000,1,1,0,0,0);
+ var Endzeit = Jahr2000.getTime() / 1000;
+ var Rest = Math.floor(Endzeit - Zeit);
+ window.alert("Noch " + Rest + " Sekunden bis zum Jahr 2000");  
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel zeigt eine vollst&auml;ndige JavaScript-<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a>. Die Funktion ermittelt die Anzahl Sekunden zwischen aktuellem Zeitpunkt und dem Jahr 2000. Dazu wird in <i>jetzt</i> eine neue Instanz von <b>Date</b> mit der aktuellen Zeit erzeugt. F&uuml;r den Zeitpunkt, an dem das Jahr 2000 beginnt, wird eine zweite Objektinstanz von <b>Date</b> erzeugt, n&auml;mlich in <i>Jahr2000</i>. Dazu werden der Objektfunktion <b>Date()</b> entprechende Parameter &uuml;bergeben. &Uuml;ber die beiden Objektnamen <i>jetzt</i> bzw. <i>Jahr2000</i> wird dann die Methode <b>Objektname.getTime()</b> aufgerufen. <b>getTime()</b> liefert die Anzahl Millisekunden seit dem 1.1.1970 zur&uuml;ck. In der Variablen <i>Zeit</i> wird auf diese Weise die Anzahl Sekunden zwischen dem 1.1.1970 und dem aktuellen Zeitpunkt gespeichert, und in der Variablen <i>Endzeit</i> die Anzahl Sekunden zwischen dem 1.1.1970 und dem 1.1.2000. Die Differenz der beiden Werte wird in der Variablen <i>Rest</i> gespeichert und mit <b>window.alert()</b> in einem Meldungsfenster am Bildschirm ausgegeben.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+Das Objekt <b>Date</b> hat keine Eigenschaften.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+Diese Methoden sind anwendbar, wenn zuvor eine Objektinstanz (= Objektname) von <b>Date</b> erzeugt wurde.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getDate()</font></b><br>
+Liefert den Monatstag des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 2, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist. Mit einer Anweisung wie <i>var x = jetzt.getDate();</i> k&ouml;nnen Sie den R&uuml;ckgabewert beispielsweise in einer Variablen x speichern.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getDay()</font></b><br>
+Liefert den Wochentag des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 3, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist, da der 2.10.1991 ein Mittwoch war. Die m&ouml;glichen R&uuml;ckgabewerte sind 0 (Sonntag), 1 (Montag), 2 (Dienstag), 3 (Mittwoch), 4 (Donnerstag), 5 (Freitag), 6 (Samstag).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getHours()</font></b><br>
+Liefert die Stunden der Uhrzeit des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 23, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getMinutes()</font></b><br>
+Liefert die Minuten der Uhrzeit des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 59, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getMonth()</font></b><br>
+Liefert den Monat des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 9, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist. Beachten Sie, da&szlig; die Monatsz&auml;hlung bei 0 beginnt. 0 ist also Januar, 1 ist Februar usw.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getSeconds()</font></b><br>
+Liefert die Sekunden der Uhrzeit des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 0, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getTime()</font></b><br>
+Liefert die Anzahl Millisekunden als Zahl zur&uuml;ck, die seit dem 1. Januar 1970, 0:00:00, bis zu dem in <i>Objektname</i> gespeicherten Zeitpunkt vergangen sind.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getTimeZoneoffset()</font></b><br>
+Liefert den Unterschied zwischen lokaler Rechnerzeit und Greenwich Meridian Time (GMT) in Anzahl Minuten zur&uuml;ck.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.getYear()</font></b><br>
+Liefert das Jahr des Objekts <i>Objektname</i> als Zahl zur&uuml;ck, beispielsweise 1991, wenn in <i>Objektname</i> der 2.10.1991, 23:59:00, gespeichert ist.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.parse(Zeitpunkt)</font></b><br>
+Ermittelt aus einer zu &uuml;bergebenden Zeichenkette <i>Zeitpunkt</i> die Anzahl Millisekunden, die zwischen dem 1.1.1970 0:00:00, und dem &uuml;bergebenen Zeitpunkt verstrichen sind. Die Zeichenkette <i>Zeitpunkt</i> mu&szlig; dem IETF-Standard folgen. Beispiele: &quot;Wed, 2 Oct 1991 23:59:00 GMT&quot;, oder &quot;Mon, 25 Dec 1995 13:30:00 GMT+0430&quot; (Beispiel f&uuml;r Zeitzonen-Offset).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setDate(Tag)</font></b><br>
+&Auml;ndert den in <i>Objektname</i> gespeicherten Monatstag auf den als Zahl zu &uuml;bergebenden Monatstag. Sinnvolle Werte zwischen 1 und 31 &uuml;bergeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setHours(Stunden)</font></b><br>
+&Auml;ndert die in <i>Objektname</i> gespeicherten Stunden der Uhrzeit auf die als Zahl zu &uuml;bergebenden Stunden. Werte zwischen 0 und 23 &uuml;bergeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setMinutes(Minuten)</font></b><br>
+&Auml;ndert die in <i>Objektname</i> gespeicherten Minuten der Uhrzeit auf die als Zahl zu &uuml;bergebende Minutenzahl. Werte zwischen 0 und 59 &uuml;bergeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setMonth(Monat)</font></b><br>
+&Auml;ndert den in <i>Objektname</i> gespeicherten Monat auf den als Zahl zu &uuml;bergebenden Monat. Werte zwischen 1 und 12 &uuml;bergeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setSeconds(Sekunden)</font></b><br>
+&Auml;ndert die in <i>Objektname</i> gespeicherten Sekunden der Uhrzeit auf die als Zahl zu &uuml;bergebenden Sekunden. Werte zwischen 0 und 59 &uuml;bergeben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setTime(Millisekunden)</font></b><br>
+&Auml;ndert den kompetten Inhalt von <i>Objektname</i> auf einmal durch &Uuml;bergeben einer Zahl. Diese Zahl stellt die Anzahl Millisekunden seit dem 1.1.1970 0:00:00 dar. &Uuml;bergeben Sie beispielsweise (8*365+2*366)*24*60*60*1000, um den Inhalt von <i>Objektname</i> auf den 1.1.1980 0:00:00 zu setzen.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.setYear(Jahr)</font></b><br>
+&Auml;ndert das in <i>Objektname</i> gespeicherte Jahr auf das als Zahl zu &uuml;bergebende Jahr. Die Zahl mu&szlig; gr&ouml;&szlig;er oder gleich 1970 sein.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.toGMTString()</font></b><br>
+Wandelt die in <i>Objektname</i> gespeicherten Daten in eine Zeichenkette nach dem IETF-Standard um. Wenn beispielsweise in <i>Objektname</i> der 2.10.1991 23:59:00 gespeichert ist, liefert diese Methode zur&uuml;ck: &quot;Wed, 2 Oct 1991 23:59:00 GMT&quot;.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.toLocaleString()</font></b><br>
+Wandelt die in <i>Objektname</i> gespeicherten Daten in eine Zeichenkette um. Die zur&uuml;ckgegebene Zeichenkette ber&uuml;cksichtigt die lokale Uhrzeit. Wenn beispielsweise in <i>Objektname</i> der 2.10.1991 23:59:00 gespeichert ist, liefert diese Methode zur&uuml;ck: &quot;10/2/91 23:59&quot;.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Objektname.UTC(Jahr, Monat, Tag [, Stunden] [, Minuten] [,Sekunden])</font></b><br>
+Liefert die Anzahl Millisekunden zur&uuml;ck, die zwischen dem 1.1.1970 0:00:00 und dem &uuml;bergebenen Zeitpunkt verstrichen sind. Alle Parameter sind als Zahlenwerte zu &uuml;bergeben. Die Angabe der Datumswerte ist zwingend, die der Uhrzeitwerte optional.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcn.htm"><b>Array</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcp.htm"><b>Math</i></b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

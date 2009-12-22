@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>SELFHTML: Variablen und Werte</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Variablen und Werte</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Variablen definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Werte von Variablen &auml;ndern</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Variablen definieren</font></h2></a>
+
+Variablen sind Speicherbereiche, in denen Sie Daten, die Sie im Laufe Ihrer Programmprozeduren ben&ouml;tigen, speichern k&ouml;nnen. Der Inhalt, der in einer Variablen gespeichert ist, wird als &quot;Wert&quot; bezeichnet. Sie k&ouml;nnen den Wert einer Variablen jederzeit &auml;ndern. Um mit Variablen arbeiten zu k&ouml;nnen, m&uuml;ssen Sie die ben&ouml;tigten Variablen zuerst definieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sinn des Lebens zum Quadrat&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var SinnDesLebens = 42;
+   
+  function SchreibeQuadrate()
+  {
+      var i, x;
+      var Satzteil = &quot;Das Quadrat von &quot;;
+      document.close();
+      document.open(&quot;text/html&quot;);
+      for(i=1; i &lt;= SinnDesLebens; ++i)
+        {
+          x = i * i;
+          document.write(Satzteil + i + &quot; ist &quot; + x + &quot;&lt;br&gt;&quot;);
+        }
+  }
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;SchreibeQuadrate()&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Variablen k&ouml;nnen mit Hilfe des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbi.htm"><b>reservierten Wortes</b></a> <b>var</b> definiert werden. Dieses Schl&uuml;sselwort ist zwar nicht zwingend notwendig, macht den Quellcode aber lesbarer, da es signalisiert, da&szlig; an der betreffenden Stelle eine neue Variable definiert wird. Jede Variablendefinition wird mit einem Strichpunkt abgeschlossen, genau wie eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a1"><b>Anweisung</b></a> (betrachten Sie eine Variablendefinition einfach als eine Anweisung!).
+<p>
+Es gibt globale Variablen und Variablen, die innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm"><b>Funktion</b></a> definiert sind. Im obigen Beispiel ist die Variable <i>SinnDesLebens</i> global, w&auml;hrend die Variablen <i>i</i>, <i>x</i> und <i>Satzteil</i> funktionsgebunden sind. Eine globale Variable steht jederzeit zur Verf&uuml;gung, w&auml;hrend eine Variable, die innerhalb einer Funktion definiert wird, nur innerhalb dieser Funktion zur Verf&uuml;gung steht. Man spricht in diesem Zusammenhang auch von der &quot;Lebensdauer&quot; von Variablen. 
+<p>
+Variablen k&ouml;nnen mit oder ohne weitere Wertzuweisung definiert werden. Im obigen Beispiel wird der Variablen <i>SinnDesLebens</i> bei der Definition gleich ein Wert zugewiesen, n&auml;mlich 42. Auch die Variable <i>Satzteil</i> erh&auml;lt eine anf&auml;ngliche Wertzuweisung, n&auml;mlich den Wert &quot;Das Quadrat von &quot;. Die Variablen <i>i</i> und <i>x</i> werden dagegen nicht mit einem Anfangswert versehen. Beim Zuweisen eines Wertes notieren Sie hinter dem Variablennamen ein Istgleichzeichen und dahinter den Wert, den Sie der Variablen zuweisen wollen. 
+<p>
+Sie k&ouml;nnen mehrere Variablen auf einmal definieren, so wie die beiden Variablen <i>i</i> und <i>x</i> im Beispiel. Dazu trennen Sie die Variablennamen durch Kommata. Das ist nat&uuml;rlich auch in Verbindung mit zugewiesenen Anfangswerten m&ouml;glich.
+<p>
+Es gibt numerische Variablen und Variablen f&uuml;r Zeichen bzw. Zeichenketten. Im obigen Beispiel sind die Variablen <i>SinnDesLebens</i>, <i>i</i> und <i>x</i> numerische Variablen. Die im Beispiel definierte Variable <i>Satzteil</i> ist dagegen eine Zeichenvariable. Dies ist daran erkennbar, da&szlig; der ihr zugewiesene Wert, ein Text, in Anf&uuml;hrungszeichen gesetzt wird. Sie k&ouml;nnten z.B. eine Variable <b>Nummer = 1;</b> und eine Variable <b>Zeichen = &quot;1&quot;;</b> definieren. Der Unterschied ist, da&szlig; Sie mit der Variablen <i>Nummer</i> Rechenoperationen anstellen k&ouml;nnen, mit der Variablen <i>Zeichen</i> nicht.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei der Vergabe von Variablennamen gelten die Regeln f&uuml;r <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdba.htm#a3"><b>selbstvergebene Namen</b></a>.
+<p>
+Variablen in JavaScript sind nicht so streng &quot;getypt&quot; wie in vielen anderen Programmiersprachen. Au&szlig;er der Unterscheidung von numerischen und nicht-numerischen Variablen gibt es keine Unterscheidung. Kommazahlen und Ganzzahlen ben&ouml;tigen keine unterschiedlichen Typen. Der Inhalt von numerischen Variablen kann ohne vorherige Konvertierung in Zeichenketten auf den Bildschirm oder in Meldungsfenster geschrieben werden.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Werte von Variablen &auml;ndern</font></h2></a>
+
+Wert&auml;nderungen von Variablen sind das A &amp; O bei der Programmierung. Sie werden nur dann erfolgreich eigene Programme schreiben k&ouml;nnen, wenn Sie jederzeit den &Uuml;berblick haben, was in einer Variablen an einem bestimmten Punkt des Programmablaufs steht. Besonders, wenn Sie mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbg.htm"><b>bedingten Anweisungen</b></a> oder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm"><b>Schleifen</b></a> arbeiten, werden Sie schnell feststellen, wie leicht der &Uuml;berblick &uuml;ber den aktuellen Zustand einer Variablen verloren gehen kann.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sinn des Lebens zum Quadrat&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var SinnDesLebens = 42;
+   
+  function SchreibeQuadrate()
+  {
+      var i, x;
+      var Satzteil = &quot;Das Quadrat von &quot;;
+      document.close();
+      document.open(&quot;text/html&quot;);
+      for(i=1; i &lt;= SinnDesLebens; ++i)
+        {
+          x = i * i;
+          document.write(Satzteil + i + &quot; ist &quot; + x + &quot;&lt;br&gt;&quot;);
+        }
+  }
+// --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;SchreibeQuadrate()&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel leert das Anzeigefenster des WWW-Browsers und schreibt HTML-formatiert in das leere Fenster untereinander die Quadrate von 1 bis zum Sinn des Lebens (42). Dazu dienen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbc.htm#a5"><b>Methoden</b></a> des <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcc.htm"><b>Objekts <i>document</i></b></a>
+<p>
+Die Variablen <i>SinnDesLebens</i> und <i>Satzteil</i> werden w&auml;hrend des Programmablaufs zwar benutzt, aber ihr Wert wird nicht ge&auml;ndert. Die Variablen <i>i</i> und <i>x</i> dagegen &auml;ndern ihren Wert laufend. Das liegt daran, da&szlig; sie innerhalb einer <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbh.htm#a2"><b>for-Schleife</b></a> bei jedem Schleifendurchlauf neue Werte zugewiesen bekommen.
+<p>
+Die Wertzuweisung erfolgt, indem Sie den Variablennamen, dahinter ein Istgleichzeiten und dahinter den gew&uuml;nschten Wert notieren. Bei dem Wert, den Sie zuweisen, k&ouml;nnen Sie anstelle einer bestimmten Zahl oder einer Zeichenkette auch Namen anderer Variablen notieren. So wird im Beispiel der Variablen <i>x</i> bei jedem Schleifendurchlauf als Wert das Ergebnis der mit sich selbst multiplizierten Variablen <i>i</i> zugewiesen.
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbc.htm"><b>Objekte, Eigenschaften und Methoden</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbe.htm"><b>Steuerzeichen und besondere Notationen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

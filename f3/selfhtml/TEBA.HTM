@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>SELFHTML: WWW-Server lokal auf einem PC einrichten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>WWW-Server lokal auf einem PC einrichten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Der eigene WWW-Server</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Geeignete Produkte</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Grundeinstellungen f&uuml;r den lokalen Betrieb</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Der eigene WWW-Server</font></h2></a>
+Viele PC-Anwender mit Internet-Zugang verbinden mit dem Begriff <i>WWW-Server</i> eine Art Gro&szlig;rechner, auf dem die Daten liegen, die im Internet zu sehen sind. Eigentlich ist ein WWW-Server jedoch ein gar nicht besonders gro&szlig;es Software-Programm, das im Prinzip auf jedem Rechner laufen kann, also nicht nur auf Server-Rechnern im Internet, sondern auch auf jedem PC. Es ist nicht mal eine Internet-Verbindung erforderlich, um einen WWW-Server zu betreiben. Es mu&szlig; lediglich ein TCP/IP-Socket vorhanden sein (unter MS Windows ist das zum Beispiel die WINSOCK.DLL). Wenn Sie also einen funktionierenden Internet-Zugang haben, sind bereits alle Voraussetzungen erf&uuml;llt, um einen WWW-Server offline und ohne Verbindungskosten zu betreiben. WWW-Browser und WWW-Server laufen dann auf dem gleichen Rechner, k&ouml;nnen aber so miteinander kommunizieren, wie es bei Online-Verbindungen ins Internet &uuml;blich ist.
+<p>
+Einen eigenen WWW-Server sollten Sie sich im hier behandelten Zusammenhang deshalb installieren, um lokal auf Ihrem PC eine CGI-Schnittstelle zu haben. Denn CGI funktioniert nur, wenn ein WWW-Server vorhanden ist. Vieles, was im WWW mit CGI m&ouml;glich ist, k&ouml;nnen Sie dann auch lokal auf Ihrem PC realisieren. So k&ouml;nnen Sie eigene CGI-Scripts w&auml;hrend der Erstellungsphase in Ruhe und ohne Online-Kosten austesten. Sie k&ouml;nnen dann genauso arbeiten, wie Sie es von HTML-Dateien oder JavaScripts her gewohnt sind. Au&szlig;erdem bekommen Sie eher ein Gef&uuml;hl f&uuml;r die Zusammenh&auml;nge zwischen WWW-Browser und WWW-Server.
+<p>
+Auch wenn Sie selber Provider sind, eine Standverbindung ins Internet haben und einen &ouml;ffentlichen WWW-Server betreiben, ist es sinnvoll, auf einem separaten Arbeitsrechner einen lokalen WWW-Server einzurichten. So belasten Sie den &ouml;ffentlichen Rechner nicht, w&auml;hrend Sie CGI-Scripts erstellen und austesten.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Wenn Sie sich lokal auf Ihrem Rechner einen WWW-Server einrichten, bedeutet das  nicht, da&szlig; von nun an weltweit jeder Internet-Anwender auf Ihrem Rechner Daten abrufen kann. Damit ein Rechner zu einem &ouml;ffentlichen Internet-Server-Rechner wird, mu&szlig; der Rechner eine &ouml;ffentlich g&uuml;ltige IP-Adresse besitzen und eine festgelegte Anbindung an einen anderen &ouml;ffentlichen Server-Rechner haben. Das ist bei einem lokal installierten WWW-Server nicht der Fall.
+<p>
+Ein lokal installierter WWW-Server beeintr&auml;chtigt Ihren vorhandenen Internet-Zugang nicht. Er benutzt lediglich das TCP/IP-Protokoll Ihres Rechners (z.B. die WINSOCK.DLL). Einstellungen, die f&uuml;r Ihre Online-Verbindung ins Internet wichtig sind, interessieren den WWW-Server nicht und k&ouml;nnen unver&auml;ndert bleiben.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Geeignete Produkte</font></h2></a>
+
+Erfreulicherweise gibt es im Internet verschiedene WWW-Server zum Downloaden, die Freeware oder Shareware sind, d.h. diese Produkte kosten nichts oder erfordern nach einer kostenlosen Testphase eine geringe Registriergeb&uuml;hr. Zum lokalen Einsatz sind solche Produkte v&ouml;llig ausreichend. Die folgende Auswahl ist nicht vollst&auml;ndig, sondern beschr&auml;nkt sich auf besonders geeignete Produkte. 
+
+
+<a name="a21"><h3><font color=#6666CC>WWW-Server f&uuml;r MS Windows</font></h3></a>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.fas.harvard.edu/~glau/httpd/">
+<b>OmniHTTPd</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware, l&auml;uft unter Windows 95 und Windows NT - besonders empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt und einfach einzurichten ist.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.imatix.com/html/xitami/index.htm">
+<b>Xitami</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware f&uuml;r verschiedene Plattformen, auch f&uuml;r Windows 95, Windows NT und Windows 3.1 - besonders empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt und einfach einzurichten ist. F&uuml;r Windows 3.1 gibt es jedoch derzeit noch keine CGI-Unterst&uuml;tzung.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.ilar.com/folkweb.htm">
+<b>FolkWeb</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Shareware, l&auml;uft unter Windows 95 und Windows NT - empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt und neben CGI auch die Microsoft ISAPI-Schnittstelle f&uuml;r Scripts und Programme im WWW unterst&uuml;tzt.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://tech.west.ora.com/win-httpd/">
+<b>WinHTTPd</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Shareware, l&auml;uft unter Windows 3.1/ Windows f. Workgroups 3.11 - recht simpel, zum Thema CGI und Perl unbedingt auch die Seite <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.winternet.com/~plp/cgi-dos.html">
+<b>Perl Scripts with Win 3.1 HTTP Server</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0> lesen.<br>
+
+
+
+<a name="a22"><h3><font color=#6666CC>WWW-Server f&uuml;r Macintosh</font></h3></a>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.slaphappy.com/html/">
+<b>Quid Pro Quo</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware f&uuml;r 68xxx-Prozessoren oder h&ouml;her und alle Power Macs ab System 7.5 - besonders empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt und sehr einfach einzurichten ist.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.starnine.com/webstar/webstar.html">
+<b>WebStar</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware f&uuml;r 68030-Prozessoren oder h&ouml;her - sehr empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt.<br>
+
+
+<a name="a23"><h3><font color=#6666CC>WWW-Server f&uuml;r OS/2</font></h3></a>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.imatix.com/html/xitami/index.htm">
+<b>Xitami</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware f&uuml;r verschiedene Plattformen, auch f&uuml;r OS/2 - sehr empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.slink.com/ApacheOS2/">
+<b>Apache</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware, die OS/2-Version des Unix-Servers - sehr empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt.<br>
+
+
+<a name="a24"><h3><font color=#6666CC>WWW-Server f&uuml;r Unix und Unix-Derivate</font></h3></a>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.apache.org/">
+<b>Apache</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware, C-Source-Code, der am eigenen System compiliert werden kann. Sehr empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt. Apache gilt derzeit als einer der f&uuml;hrenden Web-Server f&uuml;r &ouml;ffentliche Internet-Server-Rechner, kann aber auch problemlos lokal betrieben werden.<br>
+<img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://www.imatix.com/html/xitami/index.htm">
+<b>Xitami</b></a>&nbsp;<img src="xeng.gif" width=16 height=10 border=0><br>
+Freeware f&uuml;r verschiedene Plattformen, auch f&uuml;r Unix und Unix-Derivate - C-Source-Code, der am eigenen System compiliert werden kann. Sehr empfehlenswert, da er &uuml;ber alle Features verf&uuml;gt.<br>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Grundeinstellungen f&uuml;r den lokalen  Betrieb</font></h2></a>
+
+Ein WWW-Server ist kein Programm mit &quot;Arbeitsoberfl&auml;che&quot;. Durch den Aufruf der ausf&uuml;hrbaren Programmdatei starten Sie einfach den Server-Betrieb. Ihr WWW-Browser ist dann in der Lage, mit diesem Server auf Ihrem Rechner zu kommunizieren, genau so, wie der Browser mit jedem &ouml;ffentlichen WWW-Server kommunizieren kann. Bevor das richtig funktioniert, m&uuml;ssen Sie den WWW-Server jedoch einrichten, d.h. wichtige Grundeinstellungen vornehmen.
+<p>
+Einige WWW-Server k&ouml;nnen Sie nach dem Starten dialoggesteuert einrichten (z.B. OmniHTTPd f&uuml;r Windows oder Quid Pro Quo f&uuml;r Macintosh), bei anderen Produkten richten Sie den Web-Server vor dem Start durch Editieren von Konfigurationsdateien ein. Suchen Sie im Zweifelsfall nach der Installation des Web-Servers in dessen Programmverzeichnis nach Hilfedateien. Dort sollte dokumentiert sein, wie Sie Ihren Web-Server einrichten k&ouml;nnen. Alle Einstellungen bleiben auf jeden Fall gespeichert. Wenn Ihr WWW-Server also erst mal funktioniert, brauchen Sie ihn nur noch durch Starten und Beenden der Programmdatei ein- und auszuschalten.
+<p>
+Folgende wichtige Daten m&uuml;ssen Sie nach Wunsch bzw. korrekt einstellen:
+<ul>
+<li><font color=#6666CC><b>IP-Adresse des Servers</b></font><br>
+F&uuml;r den lokalen Betrieb m&uuml;ssen Sie hier normalerweise die reservierte IP-Adresse <b>127.0.0.1</b> oder die Namensadresse <b>localhost</b> eintragen. Wenn beide Angaben nicht funktionieren, versuchen Sie, in den Hilfedateien Informationen zu finden, oder setzen Sie sich mit dem Produktanbieter des WWW-Servers &uuml;ber dessen Homepage (nach E-Mail-Adresse suchen!) in Verbindung. Wenn die Angaben funktionieren, k&ouml;nnen Sie im WWW-Browser nach Einschalten des WWW-Servers lokal gespeicherte HTML-Dateien &uuml;ber die Internet-Adressen <b>http://127.0.0.1/</b> oder <b>http://localhost/</b> aufrufen. 
+<p>
+<li><font color=#6666CC><b>Port des Servers</b></font><br>
+Dabei ist normalerweise <b>80</b> einzutragen. Ports sind Nummern f&uuml;r Internet-Dienste. F&uuml;r den Internet-Dienst FTP ist beispielsweise 21 die &uuml;bliche Portnummer, f&uuml;r den WWW-Dienst ist es 80. Lesen Sie jedoch sicherheitshalber in der Dokumentation des WWW-Servers nach, welche Nummer Sie hier eintragen sollten.
+<p>
+<li><font color=#6666CC><b>Stammverzeichnis f&uuml;r HTML-Dateien</b></font><br>
+Dabei geben Sie entsprechend der Syntax Ihres Betriebssystems den Pfadnamen an, unterhalb dessen sich Ihre lokalen HTML-Dateien befinden. Wenn Sie beispielsweise MS Windows benutzen, k&ouml;nnten Sie hier z.B. <b>c:\www\daten</b> eingeben - je nachdem, wohin Sie Ihre lokale HTML-Einstiegsdatei abgelegt haben. Wenn Sie im Stammverzeichnis beispielsweise eine Datei <b>myhome.htm</b> haben, k&ouml;nnen Sie diese Datei bei eingeschaltetem WWW-Server mit Ihrem WWW-Browser via HTTP-Protokoll durch Eingabe von <b>http://127.0.0.1/myhome.htm</b> bzw. <b>http://localhost/myhome.htm</b> aufrufen.
+<p>
+<li><font color=#6666CC><b>Default-HTML-Dateiname f&uuml;r Verzeichnisse</b></font><br>
+Die verbreitetsten Namen daf&uuml;r sind <b>index.html</b> oder <b>index.htm</b>. Wenn es eine HTML-Datei mit dem entsprechenden Namen in einem Verzeichnis gibt, gen&uuml;gt als URL-Adresse beispielsweise <b>http://127.0.0.01/verzeichnis/</b>, wobei dann  <b>http://127.0.0.01/verzeichnis/index.html</b> aufgerufen wird.
+<p>
+<li><font color=#6666CC><b>Stammverzeichnis und virtuelles Verzeichnis f&uuml;r CGI-Scripts</b></font><br>
+Als Stammverzeichnis geben Sie entsprechend der Syntax Ihres Betriebssystems den Pfadnamen des Verzeichnisses an, in dem Sie ausf&uuml;hrbare CGI-Scripts ablegen wollen. Der &uuml;bliche Verzeichnisname daf&uuml;r ist <b>cgi-bin</b>. Wenn Sie beispielsweise MS Windows benutzen, k&ouml;nnten Sie hier z.B. <b>c:\www\cgi-bin</b> eingeben - je nachdem, wohin Sie die CGI-Scripts ablegen wollen. Das betreffende Verzeichnis m&uuml;ssen Sie erstellen. Au&szlig;erdem m&uuml;ssen Sie bei den meisten WWW-Servern ein virtuelles CGI-Verzeichnis angeben. Tragen Sie dabei am besten <b>/cgi-bin</b> ein. Wenn Sie dann beispielsweise ein Perl-Script namens <b>guestbook.pl</b> in dem CGI-Verzeichnis ablegen, k&ouml;nnen Sie es mit <b>http://127.0.0.1/cgi-bin/guestbook.pl</b> bzw. <b>http://localhost/cgi-bin/guestbook.pl</b> ausf&uuml;hren.
+<p>
+<li><font color=#6666CC><b>Perl-Interpreter und andere Interpreter</b></font><br>
+Um Perl-Scripts als CGI-Scripts ausf&uuml;hren zu k&ouml;nnen, m&uuml;ssen Sie den vollst&auml;ndigen Pfadnamen der ausf&uuml;hrbaren Perl-Interpreter-Datei angeben. Unter MS-Windows m&uuml;ssen Sie beispielsweise <b>c:\www\perl\bin\perl.exe</b> eingeben, je nachdem, wo sich die ausf&uuml;hrbare Programmdatei befindet. Dazu m&uuml;ssen Sie <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebb.htm"><b>Perl bzw. den Perl-Interpreter installieren</b></a>.
+<p>
+<li><font color=#6666CC><b>Log-Dateien</b></font><br>
+Die meisten WWW-Server f&uuml;hren &quot;Logb&uuml;cher&quot; &uuml;ber alle HTTP-Zugriffe auf Dateien oder CGI-Programme. Das sind die standardisierten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tge.htm#a2"><b>Log-Dateien</b></a>. Es gibt drei wichtige Log-Dateien: eine f&uuml;r die Protokollierung der Zugriffe (<b>access.log</b>), eine f&uuml;r die Protokollierung der Herkunftsadressen (<b>referrer.log</b>), und eine f&uuml;r Fehlerprotokollierung (<b>error.log</b>). Tragen Sie am besten diese typischen Namen ein. Diese Dateien k&ouml;nnen Sie &uuml;brigens jederzeit mit einem Dateibetrachter oder Texteditor aufrufen.
+<p>
+<li><font color=#6666CC><b>Timeouts</b></font><br>
+Es gibt zeitliche Grenzwerte daf&uuml;r, wie lange der WWW-Browser auf eine Antwort vom Server warten soll, und wie lange der Server versuchen soll, Daten an den WWW-Browser zu schicken. Die Angaben erfolgen in der Regel in Form von Millisekunden. Tragen Sie z.B. f&uuml;r Senden und Empfangen <b>60000</b> (= eine Minute) ein.
+<p>
+<li><font color=#6666CC><b>Mime-Typen</b></font><br>
+<img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tckj.htm"><b>Mime-Typen</b></a> legen in diesem Zusammenhang die Dateiformate fest, die der WWW-Server kennt und bereit ist an den aufrufenden WWW-Browser zu &uuml;bertragen. Andere Dateitypen als die hier angegebenen sendet der Server nicht. Normalerweise sind bereits alle wichtigen Dateitypen vorkonfiguriert. Um einen bestimmten Dateityp (z.B. Excel-Dateien) hinzuzuf&uuml;gen, m&uuml;ssen Sie einen Mime-Type-Namen (z.B <b>application/ms-excel</b>) und eine typische Dateinamenendung (z.B. <b>.xls</b>) angeben. Dann ist der Server bereit, solche Dateien an den WWW-Browser zu &uuml;bertragen. Der Browser mu&szlig; nat&uuml;rlich wissen, was er mit dem betreffenden Dateityp tun soll (siehe hierzu den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfg.htm#a2"><b>Verweise auf beliebige Dateien im Internet</b></a>). 
+<p>
+</ul>
+Es gibt weitere Einstellm&ouml;glichkeiten. Wenn Sie die oben genannten Einstellungen korrekt vorgenommen haben, sollte Ihr WWW-Server f&uuml;r den lokalen Betrieb jedoch betriebsbereit sein.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tea.htm"><b>CGI und HTML</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tebb.htm"><b>Perl lokal auf einem PC einrichten</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

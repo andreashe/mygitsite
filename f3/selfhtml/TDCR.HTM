@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>SELFHTML: string</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>string</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zur Verwendung</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Eigenschaften</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Methoden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zur Verwendung</font></h2></a>
+Mit dem Objekt <b>string</b> k&ouml;nnen Sie Zeichenketten manipulieren, z.B. alle darin enthaltenen Kleinbuchstaben in Gro&szlig;buchstaben umzuwandeln, oder  HTML-Formatierungen auf die Zeichenkette anwenden. Dazu stehen Ihnen verschiedene Methoden und Funktionen sowie eine Eigenschaft zur Verf&uuml;gung.
+
+<spacer type=vertical size=30>
+<h3><font color=#6666CC>Instanz des Objekts <i>string</i> erzeugen</font></h3>
+Eine Instanz von <b>string</b> brauchen Sie nicht eigens erzeugen. Sie k&ouml;nnen Eigenschaften und Methoden von <b>string</b> direkt f&uuml;r jede definierte <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbd.htm"><b>Variable</b></a> verwenden, in der eine Zeichenkette gespeichert ist.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+var Ort = &quot;Friedrichshafen&quot;
+alert(Ort + &quot; hat &quot; + Ort.length + &quot; Buchstaben&quot;)
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Im Beispiel wird eine Variable <i>Ort</i> definiert, der ein Wert zugewiesen wird, n&auml;mlich der Wert <i>Friedrichshafen</i>. Anschlie&szlig;end wird in einem Meldungsfenster ausgegeben: <i>Friedrichshafen hat 15 Buchstaben</i>. Dies geschieht durch einen Aufruf der (string)-Objekteigenschaft <b>Variablenname.length</b>. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Eigenschaften</font></h2></a>
+
+<b><font color=#6666CC>Variablenname.length</font></b>
+<table cellpadding=3><tr><td width=100 bgcolor=#CCFFFF><b>Lesen</b></td></tr></table>
+Die Anzahl Zeichen einer Zeichenkette, bei der Zeichenkette &quot;Guten Abend&quot; beispielsweise 11.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Methoden</font></h2></a>
+Diese Methoden sind vor allem von Bedeutung, wenn Sie mit Javascript mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdcc.htm#a31"><b>document.write(...)</b></a> dynamisch HTML-formatierten Text in ein Fenster schreiben.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.anchor(Ankername)</font></b><br>
+Erzeugt einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcfb.htm#a1"><b>Anker</b></a> als Ziel für Verweise innerhalb einer HTML-Datei mit dem &uuml;bergebenen Namen f&uuml;r den Anker. Wenn Sie beispielsweise eine Variable <i>var Inhalt = &quot;Inhalt&quot;</i> und die Anweisung <i>document.write(Inhalt.anchor(&quot;a1&quot;))</i> notieren, wird daraus das Ergebnis <i>&lt;a name=&quot;a1&quot;&gt;Inhalt&lt;/a&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.big()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;big&gt; ... &lt;/big&gt;</b> und bewirkt dadurch eine gr&ouml;&szlig;ere Schrift. Wenn Sie beispielsweise eine Variable <i>var Typ = &quot;Riese&quot;</i> und die Anweisung <i>document.write(Typ.big())</i> notieren, wird daraus das Ergebnis <i>&lt;big&gt;Riese&lt;/big&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.blink()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;blink&gt; ... &lt;/blink&gt;</b> und bewirkt dadurch eine blinkende Schrift. Wenn Sie beispielsweise eine Variable <i>var Wichtig = &quot;Wichter Hinweis&quot;</i> und die Anweisung <i>document.write(Wichtig.blink())</i> notieren, wird daraus das Ergebnis <i>&lt;blink&gt;Wichtiger Hinweis&lt;/blink&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.bold()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;b&gt; ... &lt;/b&gt;</b> und bewirkt dadurch eine fette Schrift. Wenn Sie beispielsweise eine Variable <i>var  Typ = &quot;Fettwanst&quot;</i> und die Anweisung <i>document.write(Typ.bold())</i> notieren, wird daraus das Ergebnis <i>&lt;b&gt;Fettwanst&lt;/b&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.charAt(ZeichenNummer)</font></b><br>
+Liefert das Zeichen zur&uuml;ck, das in der Zeichenkette an der Stelle steht, die im Parameter <i>ZeichenNummer</i> zu &uuml;bergeben ist. Wenn Sie beispielsweise eine Variable <i>var Name = &quot;Stefan&quot;</i> haben und <i>x = Name.charAt(2)</i> notieren, wird <i>x</i> das Zeichen <i>e</i> zugewiesen, da bei 0 zu z&auml;hlen begonnen wird (im Beispiel ist also S=0, t=1, e=2 usw.).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.fixed()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;tt&gt; ... &lt;/tt&gt;</b> und bewirkt dadurch eine dicktengleiche Schrift. Wenn Sie beispielsweise eine Variable <i>var Dateiname = &quot;README.TXT&quot;</i> und die Anweisung <i>document.write(Dateiname.fixed())</i> notieren, wird daraus das Ergebnis <i>&lt;tt&gt;README.TXT&lt;/tt&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.fontcolor(Farbe)</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;font color=&gt; ... &lt;/font&gt;</b> und bewirkt dadurch eine andersfarbige Schrift. Die gew&uuml;nschte Farbe wird der Funktion als Parameter &uuml;bergeben, und zwar entweder in <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm#a2"><b>hexadezimaler Schreibweise</b></a> oder als <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm#a3"><b>Farbname</b></a>. Wenn Sie beispielsweise eine Variable <i>var Achtung = &quot;Hier komme ich!&quot;</i> und die Anweisung <i>document.write(Achtung.fontColor(FF0000))</i> notieren, wird daraus das Ergebnis <i>&lt;font color=#FF0000&gt;Hier komme ich!&lt;/font&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.fontsize(Zahl)</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;font size=&gt; ... &lt;/font&gt;</b> und bewirkt dadurch eine gr&ouml;&szlig;ere oder kleinere Schrift. Die gew&uuml;nschte Farbe wird der Funktion als Parameter &uuml;bergeben. Es mu&szlig; eine Zahl von 1 bis 7 sein. 1 ist sehr kleine Schrift, 3 ist Normalschrift, 7 ist sehr gro&szlig;e Schrift. Wenn Sie beispielsweise eine Variable <i>var Achtung = &quot;Hier komme ich!&quot;</i> und die Anweisung <i>document.write(Achtung.fontsize(5))</i> notieren, wird daraus das Ergebnis <i>&lt;font size=5&gt;Hier komme ich!&lt;/font&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.indexOf(Suchzeichen, [Nummer])</font></b><br>
+Ermittelt das erste Vorkommen eines Zeichens oder einer Zeichenkette innerhalb einer Zeichenkette und gibt zur&uuml;ck, an wievielter Stelle das Zeichen in der Zeichenkette steht. Die Z&auml;hlung beginnt bei 0. Optional ist es m&ouml;glich, die Funktion in einem zweiten Parameter anzuweisen, ab der wievielten Stelle in der Zeichenkette sie mit der Suche beginnen soll. Wenn Sie beispielsweise eine Variable <i>var Aussage = &quot;Der Mensch hat 36 Z&auml;hne&quot; und dann </i>var Such3 = Aussage.indexOf("3", 5)</i> notieren, beginnt die Suche beim 6. Zeichen, also bei &quot;e&quot;, und speichert in <i>Such3</i> den Wert 15 (die erste vorkommende &quot;3&quot;).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.italics()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;i&gt; ... &lt;/i&gt;</b> und bewirkt dadurch eine kursive Schrift. Wenn Sie beispielsweise eine Variable <i>var Symbol = &quot;schiefer Turm von Pisa&quot;</i> und die Anweisung <i>document.write(Symbol.italics())</i> notieren, wird daraus das Ergebnis <i>&lt;i&gt;schiefer Turm von Pisa&lt;/i&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.lastIndexOf()</font></b><br>
+Ermittelt das letzte Vorkommen eines Zeichens oder einer Zeichenkette innerhalb einer Zeichenkette und gibt zur&uuml;ck, an wievielter Stelle das Zeichen in der Zeichenkette steht. Die Z&auml;hlung beginnt bei 0. Optional ist es m&ouml;glich, die Funktion in einem zweiten Parameter anzuweisen, ab der wievielten Stelle in der Zeichenkette sie mit der Suche beginnen soll. Wenn Sie beispielsweise eine Variable <i>var Aussage = &quot;Der Mensch hat 36 Z&auml;hne&quot; und dann </i>var SuchKleinesN = Aussage.lastIndexOf("n")</i> notieren, also bei &quot;e&quot;, und speichert in <i>Such3</i> den Wert 26 (das letzte vorkommende &quot;n&quot;).
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.link(Verweisziel)</font></b><br>
+Erzeugt einen <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweis</b></a>. Das Verweisziel, eine URL-Adresse, wird als Parameter &uuml;bergeben. Den Verweistext m&uuml;ssen Sie als Variable definieren. Wenn Sie beispielsweise eine Variable <i>var HotText = &quot;Besuchen Sie mein Traumziel!&quot;</i> und die Anweisung <i>document.write(HotText.link(&quot;http://www.xy.ko/&quot;))</i> notieren, wird daraus das Ergebnis <i>&lt;a href=&quot;http://www.xy.ko/&quot;&gt;Besuchen Sie mein Traumziel!&lt;/a&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.small()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;small&gt; ... &lt;/small&gt;</b> und bewirkt dadurch eine kleinere Schrift. Wenn Sie beispielsweise eine Variable <i>var FeelMySelf = &quot;klein&quot;</i> und die Anweisung <i>document.write(&quot;Ich fuehl mich heut' so &quot; + FeelMySelf.small())</i> notieren, wird daraus das Ergebnis <i>Ich fuehl mich heut' so &lt;small&gt;klein&lt;/small&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.strike()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;s&gt; ... &lt;/s&gt;</b> und bewirkt dadurch einen durchgestrichenen Text. Wenn Sie beispielsweise eine Variable <i>var Falschmeldung = &quot;Helmut Kohl springt heimlich Bungee&quot;</i> und die Anweisung <i>document.write(Falschmeldung.strike())</i> notieren, wird daraus das Ergebnis <i>&lt;s&gt;Helmut Kohl springt heimlich Bungee&lt;/s&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.sub()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;sub&gt; ... &lt;/sub&gt;</b> und bewirkt dadurch eine tiefgestellte Schrift. Wenn Sie beispielsweise eine Variable <i>var KleineNull = &quot;0&quot;</i> und die Anweisung <i>document.write(&quot;S&quot; + KleineNull.sub() + &quot;-Anschluss&quot;)</i> notieren, wird daraus das Ergebnis <i>S&lt;sub&gt;0&lt;/sub&gt;-Anschluss</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.substring(von,bis)</font></b><br>
+Liefert eine Zeichenkette zur&uuml;ck, die einen Teil innerhalb einer Zeichenkette  darstellt. Als Parameter werden der Funktion die Eckwerte der zur&uuml;ckzugebenden Zeichenkette &uuml;bergeben. Das erste Zeichen hat den Wert 0. Wenn Sie beispielsweise eine Variable <i>var StimmtImmer = &quot;Die vom ARD sagen die vom ZDF senden immer Wiederholungen&quot;</i> haben und die Anweisung <i>var WerSagt = StimmtImmer.substring(12,20)</i> notieren, so wird in <i>WertSagt</i> die Zeichenkette <i>sagen die</i> gespeichert.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.sup()</font></b><br>
+Setzt eine Zeichenkette in die HTML-Tags <b>&lt;sup&gt; ... &lt;/sup&gt;</b> und bewirkt dadurch eine hochgestellte Schrift. Wenn Sie beispielsweise eine Variable <i>var Hochzwei = &quot;2&quot;</i> und die Anweisung <i>document.write(&quot;10&quot; + Hochzwei.sup())</i> notieren, wird daraus das Ergebnis <i>10&lt;sup&gt;2&lt;/sup&gt;</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.toLowerCase()</font></b><br>
+Wandelt alle in einer Zeichenkette enthaltenen Gro&szlig;buchstaben in Kleinbuchstaben um. Wenn Sie beispielsweise eine Variable <i>var Text = &quot;HALLO hier komme ICH&quot;</i> und die Anweisung <i>document.writeln(Text.toLowerCase())</i> notieren, wird daraus das Ergebnis <i>hallo hier komme ich</i> erzeugt.
+
+<p><spacer type=vertical size=15>
+<b><font color=#6666CC>Variablenname.toUpperCase()</font></b><br>
+Wandelt alle in einer Zeichenkette enthaltenen Kleinbuchstaben in Gro&szlig;buchstaben um.
+Wenn Sie beispielsweise eine Variable <i>var Text = &quot;HALLO hier komme ICH&quot;</i> und die Anweisung <i>document.writeln(Text.toUpperCase())</i> notieren, wird daraus das Ergebnis <i>HALLO HIER KOMME ICH</i> erzeugt.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdcq.htm"><b>navigator</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdcs.htm"><b>Objektunabh&auml;ngige Funktionen</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdc.htm"><b>JavaScript-Objektreferenz</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

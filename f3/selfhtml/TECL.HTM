@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Mit Zahlen und Zeit arbeiten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Mit Zahlen und Zeit arbeiten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Technisch/wissenschaftliche Berechnungen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Datum und Uhrzeit</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Technisch/wissenschaftliche Berechnungen</font></h2></a>
+In Perl stehen f&uuml;r die wichtigsten h&ouml;heren mathematischen Funktionen entsprechende <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktionen</b></a> zur Verf&uuml;gung.
+
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Abswert = abs(-45683);
+print &quot;Absolutwert von -45683 lautet: &quot;, $Abswert, &quot;\n&quot;;   
+
+$Wurzel = sqrt(23876);
+print &quot;Die Quadratwurzel von 23876 lautet: &quot;, $Wurzel, &quot;\n&quot;;
+
+$Ganzzahl = int(sqrt(3298476));
+print &quot;Der Ganzzahlanteil der Quadratwurzel 3298476 von lautet: &quot;, $Ganzzahl, &quot;\n&quot;;   
+
+$Exp = exp(39);
+print &quot;Die Potenz 39 zur Basis e lautet: &quot;, $Exp, &quot;\n&quot;;   
+
+$Log = log(23);
+print &quot;Der natuerliche Logarithmus zur Basis e von 23 lautet: &quot;, $Log, &quot;\n&quot;;   
+
+$Sinus = sin(1.2387);
+$Cosinus = cos(10.237);
+$ArkTangens = atan2(1.389,2.438);
+print &quot;Der Sinus von 1.2387 lautet: &quot;, $Sinus, &quot;\n&quot;;   
+print &quot;Der Cosinus von 10.237 lautet: &quot;, $Cosinus, &quot;\n&quot;;   
+print &quot;Der Arkustangens von 1.389/2.438 lautet: &quot;, $ArkTangens, &quot;\n&quot;;   
+
+
+@Hexwerte = (10,20,30,40,50,60,70,80,90,A0,B0,C0,D0,E0,F0);
+for(@Hexwerte) 
+ {  
+  $Dezimalwert = hex($_);
+  print $_, &quot; ist dezimal: &quot;, $Dezimalwert, &quot;\n&quot;;   
+ }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Funktion <B>abs</B> k&ouml;nnen Sie erzwingen, da&szlig; eine Zahl in jedem Fall positiv ist. &Uuml;bergeben Sie der Funktion die Zahl, die behandelt werden soll. Die Funktion gibt den behandelten Wert zur&uuml;ck.<br>
+Mit <B>sqrt</B> k&ouml;nnen Sie die Quadratwurzel einer Zahl berechnen. &Uuml;bergeben Sie der Funktion die Zahl, aus der die Wurzel gezogen werden soll. Die Funktion gibt das Ergebnis zur&uuml;ck.<br>
+Mit <B>int</B> erzwingen Sie von einer Bruchzahl den ganzzahligen Anteil, also bei 3.1415 etwa die Zahl 3. &Uuml;bergeben Sie der Funktion die Zahl, aus der der Kommawert entfernt werden soll. Die Funktion gibt das Ergebnis zur&uuml;ck. Im obigen Beispiel zu dieser Funktion sehen Sie &uuml;brigens, wie man in Perl einer Funktion eine andere Funktion &uuml;bergeben kann. Die Funktion berechnet in diesem Beispiel den R&uuml;ckgabewert der Funktion f&uuml;r die Quadratwurzel.<br>
+Die Funktionen <B>exp</B> liefert die Konstante <B>e</B> in einer beliebigen Potenz zur&uuml;ck. Die Gew&uuml;nschte Potenz &uuml;bergeben Sie als Parameter. Die Funktion liefert das Ergebnis zur&uuml;ck.<br>
+Die Funktion <B>log</B> ermittelt den nat&uuml;rlichen Logarithmus einer Zahl zur Basis <B>e</B>. &Uuml;bergeben Sie die gew&uuml;nschte Zahl als Parameter. Die Funktion gibt das Ergebnis zur&uuml;ck.<br>
+Als geometrische Funktionen bietet Perl <B>sin</B> f&uuml;r Sinus, <B>cos</B> f&uuml;r Cosinus und <B>atan2</B> f&uuml;r den Arkustangens an. &Uuml;bergeben Sie diesen Funktionen die gew&uuml;nschte Zahl. Arkustangens erwartet zwei Werte: von und bis. Die Funktionen geben das Ergebnis zur&uuml;ck.
+<p>
+Neben diesen Funktionen sind nat&uuml;rlich auch Berechnungen mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecf.htm#a3"><b>Berechnungsoperatoren</b></a> m&ouml;glich.
+<p>
+Zum Konvertieren von Hexadezimalwerten in Dezimalwerte k&ouml;nnen Sie die Funktion <B>hex</B> verwenden. &Uuml;bergeben Sie der Funktion einen Hexadezimalwert (Ziffern 0 bis 9 und Buchstaben A bis F). Die Funktion gibt den Dezimalwert zur&uuml;ck.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Datum und Uhrzeit</font></h2></a>
+Perl bietet Funktionen zum Ermitteln von Datum und Uhrzeit an.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+$Jetztwert = time();
+$Jetztzeit = localtime($Jetztwert);
+&Deutschnamen;
+@Zeit = split(/ /,$Jetztzeit);
+@Uhrzeit = split(/:/,$Zeit[3]);
+
+print &quot;Guten Tag!\n&quot;;
+print &quot;Heute ist &quot;,$Zeit[0],&quot;, der &quot;,$Zeit[2],&quot;. &quot;,$Zeit[1],&quot; &quot;,$Zeit[4],&quot;\n&quot;;
+print &quot;Es ist jetzt &quot;,$Uhrzeit[0],&quot;:&quot;,$Uhrzeit[1],&quot; Uhr\n&quot;;
+
+sub Deutschnamen
+{
+ $Jetztzeit =~ s/Mon/Montag/;
+ $Jetztzeit =~ s/Tue/Dienstag/;
+ $Jetztzeit =~ s/Wed/Mittwoch/;
+ $Jetztzeit =~ s/Thu/Donnerstag/;
+ $Jetztzeit =~ s/Fri/Freitag/;
+ $Jetztzeit =~ s/Sat/Samstag/;
+ $Jetztzeit =~ s/Sun/Sonntag/;
+ $Jetztzeit =~ s/Jan/Januar/;
+ $Jetztzeit =~ s/Feb/Februar/;
+ $Jetztzeit =~ s/Mar/M&auml;rz/;
+ $Jetztzeit =~ s/Apr/April/;
+ $Jetztzeit =~ s/May/Mai/;
+ $Jetztzeit =~ s/Jun/Juni/;
+ $Jetztzeit =~ s/Jul/Juli/;
+ $Jetztzeit =~ s/Aug/August/;
+ $Jetztzeit =~ s/Sep/September/;
+ $Jetztzeit =~ s/Oct/Oktober/;
+ $Jetztzeit =~ s/Nov/November/;
+ $Jetztzeit =~ s/Dec/Dezember/;
+}
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel ermittelt Datum und Uhrzeit und gibt das Ergebnis ordentlich formatiert und deutschsprachig aus.
+<p>
+Mit dem Aufruf der <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a4"><b>Perl-Funktion</b></a> <B>time</B> wird die aktuelle Zeit ermittelt. Die Funktion gibt, wie unter Unix und C &uuml;blich, die Anzahl der Millisekunden zur&uuml;ck, die seit dem 1.1.1970 vergangen sind. Das ist eine ziemlich hohe Zahl, die nichts weiter ausssagt, aber sehr exakt ist. Im obigen Beispiel wird diese Zahl in dem <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalar</b></a> <i>$Jetztwert</i> gespeichert. Sie ist Grundlage f&uuml;r den Aufruf der Funktion <b>localtime</b>. Diese Funktion erwartet als Parameter eine Zahl, die sie als Anzahl Millisekunden seit 1.1.1970 interpretiert. Die Funktion erzeugt daraus eine Zeichenkette, die Datum und Uhrzeit im internationalen Format enth&auml;lt, z.B. <i>Fri Jun 13 20:29:11 1997</i>. Diese Zeichenkette gibt die Funktion zur&uuml;ck. Im obigben Beispiel wird dieser R&uuml;ckgabewert in <i>$Jetztzeit</i> gespeichert.<br>
+Im Beispiel wird als n&auml;chstes ein <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm"><b>Unterprogramm</b></a> mit Namen <i>Deutschnamen</i> aufgerufen, das in der Zeichenkette von <i>$Jetztzeit</i> alle denkbaren internationalen Tages- und Monatsk&uuml;rzel durch die &uuml;blichen deutschsprachigen Namen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teck.htm#a6"><b>ersetzt</b></a>.<br>
+Die Datums- und Zeitelemente in <i>$Jetztzeit</i> sind durch Leerzeichen voneinander getrennt. Diese Eigenschaft macht sich die Anweisung <i>@Zeit = split(/ /,$Jetztzeit);</i> im Beispiel zu eigen. Anschlie&szlig;end sind die einzelnen Elemente wie Tag, Monat, Jahr usw. einzeln als Elemente dieser <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a2"><b>Liste</b></a> ansprechbar. Ein Element dieser Liste, ansprechbar &uuml;ber $Zeit[3], stellt die Uhrzeit dar. Die Uhrzeit besteht aus Stunden, Minuten und Sekunden, getrennt durch Doppelpunkt. Auch diese Zeichenkette wird im Beispiel wieder in ihre Bestandteile zerlegt, n&auml;mlich mit der Anweisung <i>@Uhrzeit = split(/:/,$Zeit[3]);</i>.<br>
+Danach sind alle Elemente einzeln ansprechbar und k&ouml;nnen - wie im Beispiel - mit der <b>print</b>-Funktion nach Belieben ausgegeben werden.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="teck.htm"><b>Zeichenketten und Listen manipulieren</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecm.htm"><b>CGI-typische Anweisungen in Perl</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

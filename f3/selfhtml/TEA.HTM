@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>SELFHTML: CGI und HTML</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>CGI und HTML</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Die CGI-Schnittstelle</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>CGI-Aufrufe aus HTML und HTML-Ausgabe &uuml;ber CGI</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Beispiel f&uuml;r die Wechselwirkung zwischen HTML und CGI</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Die CGI-Schnittstelle</font></h2></a>
+
+CGI (Common Gateway Interface) erlaubt es einem WWW-Browser, &uuml;ber einen WWW-Server Programme auszuf&uuml;hren. Solche Programme (oder Scripts) k&ouml;nnen beispielsweise Formulareingaben aus HTML-Dateien verarbeiten, auf dem Server-Rechner Daten speichern und dort gespeicherte Daten auslesen. Auf diese Weise werden WWW-Seiten zu Oberfl&auml;chen f&uuml;r &quot;Anwendungen&quot;, beispielsweise f&uuml;r elektronische Warenbestellung oder zum Abfragen von Datenbanken.
+<p>
+Die sogenannte CGI-Schnittstelle steht zur Verf&uuml;gung, wenn ein WWW-Server installiert ist, der CGI unterst&uuml;tzt. Sie k&ouml;nnen sich selbst auf Ihrem PC <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm"><b>lokal einen WWW-Server einrichten</b></a>, um dort eine CGI-Schnittstelle zur Verf&uuml;gung zu haben. Wenn Sie bei einem Provider auf einem &ouml;ffentlichen WWW-Server im Internet Speicherplatz f&uuml;r eigene WWW-Seiten erhalten, k&ouml;nnen Sie die CGI-Schnittstelle dieses WWW-Servers benutzen, um eigene CGI-Scripts im WWW einzusetzen. Ihr Provider mu&szlig; Ihnen allerdings den Zugriff auf die CGI-Schnittstelle erm&ouml;glichen. Fragen Sie den Provider im Zweifelsfall danach!
+<p>
+Die CGI-Schnittstelle besteht aus:
+<ul>
+<li>einem bestimmten Verzeichnis auf dem Server-Rechner, das CGI-Programme enthalten darf. Meist erh&auml;lt dieses Verzeichnis den Namen <b>cgi-bin</b> oder <b>cgi-local</b>. Ein WWW-Browser kann CGI-Programme oder CGI-Scripts nur dann ausf&uuml;hren, wenn sie in diesem Verzeichnis liegen. Welches das CGI-Verzeichnis ist und wie es hei&szlig;t, k&ouml;nnen Sie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teba.htm#a3"><b>Einrichten des eigenen WWW-Servers</b></a> festlegen. Bei einem Provider, der Ihnen &ouml;ffentlichen WWW-Speicher mit CGI-Schnittstelle eingerichtet hat, finden Sie das CGI-Verzeichnis bereits vor. Sie brauchen dann nur noch Ihre CGI-Scripts in dieses Verzeichnis hochladen (siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebc.htm"><b>CGI-Scripts auf &ouml;ffentlichem WWW-Server installieren</b></a>).
+<p>
+<li>einer Reihe von Daten, die der WWW-Server speichert, und die ein CGI-Script auslesen kann (und zum Teil auslesen mu&szlig;), um Daten verarbeiten zu k&ouml;nnen. Diese Daten speichert der WWW-Server in sogenannten <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebd.htm"><b>CGI-Umgebungsvariablen</b></a>.
+</ul>
+Derzeit liegt die CGI-Schnitstellendefinition in der Version 1.1 vor. Neue, andere Schnittstellen f&uuml;r ausf&uuml;hrbare Programme im WWW, die von kommerziellen Herstellern wie Netscape oder Microsoft eingef&uuml;hrt wurden, machen der klassischen CGI-Schnittstelle jedoch zunehmend Konkurrenz. Von Netscape stammt beispielsweise die API-Schnittstelle, von Microsoft die ISAPI-Schnittstelle. Beide Schnittstellen sind f&uuml;r die Server-Software-Produkte der jeweiligen Hersteller optimiert. Dabei wird allerdings auch eine Performance bei der Datenverarbeitung im WWW erreicht, die ein Mehrfaches der CGI-Schnittstelle betr&auml;gt. Ein entscheidender Vorteil der CGI-Schnittstelle bleibt jedoch die Tatsache, da&szlig; es sich - &auml;hnlich wie bei HTML - um einen kommerziell unabh&auml;ngigen, kostenlosen, produkt&uuml;bergreifenden Standard handelt.
+<p>
+Perl ist noch immer die meistbenutzte Programmiersprache f&uuml;r CGI-Scripts. Der Grund daf&uuml;r ist, da&szlig; Perl sehr m&auml;chtige Funktionen besitzt, z.B. f&uuml;r Zeichenkettenoperationen oder f&uuml;r das Lesen und Schreiben von Daten. Der Perl-Interpreter, der zum Ausf&uuml;hren eines Perl-Scripts erforderlich ist, ist f&uuml;r fast alle Betriebssysteme als Freeware verf&uuml;gbar und auf fast allen Server-Rechnern im WWW installiert (siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebb.htm"><b>Perl einrichten</b></a>).
+<p>
+Wenn Sie in einer anderen Programmiersprache, z.B. in C, Pascal oder Fortran, bereits viel Erfahrung haben, k&ouml;nnen Sie auch diese Sprachen f&uuml;r CGI-Programme verwenden. Das Problem bei diesen Sprachen ist, da&szlig; der damit erstellte Code erst ausf&uuml;hrbar ist, nachdem er f&uuml;r die Betriebssystemumgebung compiliert und gelinkt wurde, unter der er ausf&uuml;hrbar sein soll. Wenn Sie beispielsweise ein C-Programm schreiben und dieses Programm als CGI-Programm im WWW auf einem Server-Rechner mit Unix-Betriebssystem zum Einsatz bringen wollen, mu&szlig; das Programm unter Unix compiliert werden. Ein C-Compiler, den Sie vielleicht auf Ihrem DOS/Windows-PC haben, nutzt Ihnen da nichts. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+In diesem Abschnitt wird vorausgesetzt, da&szlig; Sie mit HTML vertraut sind und sich auch &uuml;ber grunds&auml;tzliche Abl&auml;ufe bei der CGI-unterst&uuml;tzten Kommunikation zwischen WWW-Browser und Server-Rechner im klaren sind. Lesen Sie dazu vor allem den Abschnitt <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbba.htm"><b>CGI: Server-Datenspeicherung und dynamisches HTML</b></a> in der Einf&uuml;hrung zu diesem Dokument.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>CGI-Aufrufe aus HTML und HTML-Ausgabe &uuml;ber CGI</font></h2></a>
+
+HTML und CGI kommunizieren in beide Richtungen: es ist einerseits m&ouml;glich, aus einer HTML-Datei, die gerade am Bildschirm angezeigt wird, ein CGI-Script aufzurufen; anderseits kann ein CGI-Script HTML-Code an den WWW-Browser &uuml;bertragen, den dieser dann am Bildschirm ausgibt.
+<p>
+Ein CGI-Script kann Daten verarbeiten, die von einer HTML-Datei aus beim Aufruf &uuml;bergeben werden.  Zum Beispiel kann ein CGI-Script eine Datenbank durchsuchen, wobei der Anwender den Begriff, nach dem gesucht werden soll, in einem Formular angegeben hat. Die Ergebnisse einer Datenverarbeitung kann ein CGI-Script an den WWW-Browser in Form von HTML-Code zur&uuml;cksenden. So kann ein Script, das eine Datenbank nach Begriffen durchsucht, zum Beispiel die Suchtreffer eines Suchvorgangs in Form einer dynamisch generierten HTML-Datei an den WWW-Browser zur&uuml;cksenden.
+<p>
+CGI-Scripts k&ouml;nnen auch Daten auf dem Server speichern und zu einem sp&auml;teren Zeitpunkt auslesen. Auf diesem Prinzip basieren beispielsweise G&auml;steb&uuml;cher oder Nachrichtenforen (Bulletin-Boards). Ein Anwender kann in einer HTML-Datei in einem Formular einen Beitrag eingeben. Beim Absenden des Formulars wird ein CGI-Script aufgerufen, das den Beitrag in einer Datei speichert. Ein zweites CGI-Script oder ein anderer Aufruf des CGI-Scripts kann anschlie&szlig;end HTML-Code mit allen gespeicherten Beitr&auml;gen an einen WWW-Browser &uuml;bertragen.
+<p>
+Ein CGI-Script kann aus einer HTML-Datei heraus auf verschiedene Arten aufgerufen werden:
+<ul>
+<li>&uuml;ber ein <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tch.htm"><b>Formular</b></a>. Dabei steht im einleitenden <b>&lt;form&gt;</b>-Tag der Aufruf des CGI-Scripts (Beispiel: <b>&lt;form action=&quot;/cgi-bin/guestbook.pl&quot; method=&quot;get&quot;&gt;</b>). Der Aufruf erfolgt nach dem Absenden des Formulars. Die vom Anwender eingegebenen oder ausgew&auml;hlten Daten stehen dem CGI-Script zur Verarbeitung zur Verf&uuml;gung. Auf diese Weise funktionieren etwa Suchdienste, G&auml;steb&uuml;cher oder elektronische Einkaufsk&ouml;rbe.
+<p>
+<li>&uuml;ber <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcf.htm"><b>Verweise</b></a>. Es gen&uuml;gt, als URL-Adresse des Verweisziels das ausf&uuml;hrbare CGI-Script anzugeben (Beispiel: <b>&lt;a href=&quot;/cgi-bin/statistik.pl&quot;&gt;Tagesstatistik aufrufen&lt;/a&gt;</b>). Dies ist sinnvoll f&uuml;r CGI-Scripts, die keinen &quot;Input&quot; vom Anwender ben&ouml;tigen, sondern lediglich feste Datenausgaben erzeugen, zum Beispiel f&uuml;r ein CGI-Script, das aktuelle Zugriffsstatistiken f&uuml;r WWW-Seiten ausgibt.
+<p>
+<li>&uuml;ber eine <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tcg.htm"><b>Grafikreferenz</b></a>. Auch dabei gen&uuml;gt es, als URL-Adresse in der <b>src</b>-Angabe des <b>&lt;img&gt;</b>-Tags das ausf&uuml;hrbare CGI-Script anzugeben (Beispiel: <b>&lt;img src=&quot;/cgi-bin/counter.pl&quot;&gt;</b>). Dabei mu&szlig; das CGI-Script allerdings eine Grafikdatei im GIF- oder JPEG-Format an den WWW-Browser zur&uuml;cksenden. Die meisten grafischen Zugriffsz&auml;hler basieren auf diesem Prinzip.
+<p>
+<li>&uuml;ber eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebe.htm"><b>Server Side Include</b></a> Anweisung in einer HTML-Datei, z.B. mit der Anweisung <b>&lt;!-- #exec cgi=&quot;/cgi-bin/counter.pl&quot; --&gt;</b>. Das ist sehr praktisch, um mit Hilfe eines CGI-Scripts dynamische Information in Textform in eine HTML-Datei einzubinden. Diese Form ist zum Beispiel interessant f&uuml;r textbasierte Zugriffsz&auml;hler.
+<p>
+<li>&uuml;ber <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcbd.htm#a5"><b>automatisches Laden</b></a> des ausf&uuml;hrbaren CGI-Scripts/CGI-Programms. Dazu geben Sie in dem <b>&lt;meta&gt;</b>-Befehl einfach anstelle einer anderen HTML-Datei die URL-Adresse des ausf&uuml;hrbaren CGI-Scripts an  (Beispiel: <b>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; URL=/cgi-bin/welcome.pl&quot;&gt;</b>). 
+</ul>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Beispiel f&uuml;r die Wechselwirkung zwischen HTML und CGI</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="teaa.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Das Beispiel bewirkt einen einfachen CGI-Vorgang, der die Wechselwirkung zwischen HTML und CGI verdeutlicht: in einer HTML-Datei kann der Anwender in einem Formular seinen Namen und einen Kommentartext eingeben. Wenn er das Formular absendet, wird ein CGI-Programm <i>comments.pl</i> aufgerufen. Dieses Script ist in Perl geschrieben. Es liest die ankommenden Formulardaten ein, splittet sie in ihre Bestandteile auf und erzeugt eine vollst&auml;ndige HTML-Datei, in der es die eingelesenen Daten ausgibt. Der WWW-Browser zeigt diesen von <i>comments.pl</i> generierten HTML-Code am Bildschirm an. Studieren Sie das Beispiel in Ruhe und verzweifeln Sie nicht gleich an dem Perl-Programmcode!
+
+<h4><font color=#6666CC>Beispiel: HTML-Datei mit CGI-Aufruf</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Kommentarseite&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Ihr Kommentar&lt;/h1&gt;
+&lt;form action=&quot;/cgi-bin/comments.pl&quot; method=post&gt;
+Name: &lt;input size=40 maxlength=40 name=&quot;AnwenderName&quot;&gt;&lt;br&gt;
+Text: &lt;textarea rows=5 cols=70 name=&quot;Kommentartext&quot; wrap=virtual&gt;&lt;/textarea&gt;&lt;p&gt;
+&lt;input type=submit value=&quot;Absenden&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Beispiel: CGI-Script <i>comments.pl</i> mit HTML-Ausgabe</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+#!/usr/bin/perl
+
+read(STDIN, $Daten, $ENV{'CONTENT_LENGTH'});
+print 'Content-type: text/html\n\n';
+print '&lt;html&gt;&lt;head&gt;&lt;title&gt;CGI-Feedback&lt;/title&gt;&lt;/head&gt;\n';
+print '&lt;body&gt;&lt;h1&gt;CGI-Feedback vom Programm &lt;i&gt;comments.pl&lt;/i&gt;&lt;/h1&gt;\n';
+@Formularfelder = split(/&amp;/, $Daten);
+foreach $Feld (@Formularfelder)  
+ {
+  ($name, $value) = split(/=/, $Feld);   
+  $value =~ tr/+/ /;
+  $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack(&quot;C&quot;, hex($1))/eg;
+  $value =~ s/&lt;!--(.|\n)*--&gt;//g;      
+  $Formular{$name} = $name;   
+  $Formular{$value} = $value;
+  print $Formular{$name} = $Formular{$value}, '&lt;br&gt;\n'; 
+ }
+print '&lt;/body&gt;&lt;/html&gt;\n';
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In der HTML-Datei wird ein Formular mit zwei Eingabefeldern definiert. Das erste Feld (<b>&lt;input size=40 maxlength=40 name=&quot;AnwenderName&quot;&gt;</b>) ist ein einzeiliges Eingabefeld, in dem der Anwender seinen Namen eingeben soll. Das zweite Feld (<b>&lt;textarea rows=5 cols=70 name=&quot;Kommentartext&quot; wrap=virtual&gt;&lt;/textarea&gt;</b>) ist ein mehrzeiliger Eingabebereich, in dem der Anwender einen beliebigen Text eingeben kann. Durch Klicken auf den Absendebutton (<b>&lt;input type=submit value=&quot;Absenden&quot;&gt;</b>) wird das Formular abgesendet. Was mit den Formulardaten geschehen soll, ist im einleitenden Formular-Tag angegeben: mit der Angabe <b>action=&quot;/cgi-bin/comments.pl&quot;</b> wird ein CGI-Script aufgerufen, das die abgesendeten Formulardaten verarbeiten soll. Die Daten werden dem CGI-Script mit <b>method=post</b> &uuml;bergeben. Das bedeutet, das Script bekommt die Daten von der Standardeingabe als Parameter &uuml;bergeben. Das ist genau so, wie wenn Sie ein Programm auf Ihrem Rechner mit einem Parameter, etwa dem Namen einer zu &ouml;ffnenden Datei, aufrufen.
+<p>
+Im Perl-Script <i>comments.pl</i>, das im CGI-Verzeichnis liegt, werden die Daten der Standardeingabe mit der Anweisung <b>read(STDIN, $Daten, $ENV{'CONTENT_LENGTH'});</b> eingelesen. Anschlie&szlig;end beginnt das Programm mit dem Erzeugen der HTML-Datei, die es an den WWW-Browser zur&uuml;cksendet. Dazu dienen die <b>print</b>-Anweisungen, die eine HTML-Datei mit den daf&uuml;r &uuml;blichen Befehlen konstruieren. Unterbrochen wird die HTML-Ausgabe durch die Anweisung <b>@Formularfelder = split(/&amp;/, $Daten);</b>. Diese Anweisung splittet die eingelesenen Daten nach Formularfeldern getrennt in einzelne Elemente auf. Innerhalb der darauffolgenden <b>foreach</b>-Schleife bearbeitet das Script die Daten. Die ziemlich kryptisch anmutenden Befehle dienen dazu, die &uuml;bergebenen Daten in lesbaren Text umzuwandeln. Denn die Daten, die das Script empfangen hat, sind nach einer bestimmten Konvention kodiert - dem Mime-Type <i>application/x-www-form-urlencoded</i>. In diesem Kodierungstyp werden Leerzeichen und Satz- sowie Sonderzeichen durch hexadezimale Umschreibungen dargestellt (siehe auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tebf.htm#a2"><b>Datenstrom bei &Uuml;bertragung von Formulardaten</b></a>). Nach der Dekodierung gibt das Perl-Script die Daten der einzelnen Formularfelder aus (wir befinden uns dabei immer noch im Erzeugen des HTML-Codes, der an den Browser zur&uuml;ckgesendet wird). Nach Beenden der <b>foreach</b>-Schleife endet das Perl-Script mit den abschlie&szlig;enden Befehlen zum Erzeugen der HTML-Datei.
+<p>
+Aus Sicht des Anwenders verschwindet nun die HTML-Datei mit dem Eingabeformular vom Bildschirm. Stattdessen baut der WWW-Browser eine neue Seite auf, die den von <i>comments.pl</i> erzeugten HTML-Code enth&auml;lt.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Das obige Beispiel ist lediglich zur Veranschaulichung der Wechselbeziehung zwischen HTML und CGI gedacht. Wenn Sie sich bislang noch nie mit Perl besch&auml;ftigt haben und Ihnen das Perl-Script v&ouml;llig unverst&auml;ndlich vorkommt, ist das ganz normal. Perl ist eine m&auml;chtige, aber ziemlich eigenwillige Programmiersprache. Auf die einzelnen Sprachelemente von Perl wird hier nicht n&auml;her eingegangen. Lesen Sie dazu den Abschnitt <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="tec.htm"><b>Perl Sprachelemente</b></a>. Bevor Sie sich jedoch n&auml;her mit Perl besch&auml;ftigen, sollten Sie zuerst das Kapitel <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="teb.htm"><b>CGI und Perl: Voraussetzungen/Allgemeines</b></a> durcharbeiten. Die dort vermittelten Kenntnisse ben&ouml;tigen Sie, um eigene CGI-Scripts erstellen zu k&ouml;nnen.
+
+
+
+
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdde.htm"><b>Dynamische grafische Buttons</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="teba.htm"><b>WWW-Server lokal auf einem PC einrichten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

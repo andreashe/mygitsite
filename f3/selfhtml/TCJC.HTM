@@ -1,0 +1,500 @@
+<html>
+<head>
+<title>SELFHTML: Kurzreferenz: Style-Sheet-Angaben</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Kurzreferenz: Style-Sheet-Angaben</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Angaben zur Schrift- und Textformatierung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Angaben zu Farbe und Hintergrund</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Angaben zur Absatzformatierung</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Spezielle Angaben zur Listenformatierung</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Angaben zur Schrift- und Textformatierung</font></h2></a>
+
+<h4><font color=#6666CC>Erlaubte Ma&szlig;angaben bei numerischen Werten:</font></h4>
+
+<p>
+<b>pt</b> f&uuml;r <b>Punkt</b> (= 1/72 inches)<br>
+<b>pc</b> f&uuml;r <b>Pica</b> (= 12 Punkt)<br>
+<b>in</b> f&uuml;r <b>Inch</b> (= 2,54 cm)<br>
+<b>mm</b> f&uuml;r <b>Millimeter</b><br>
+<b>cm</b> f&uuml;r <b>Zentimeter</b><br>
+<b>em</b> f&uuml;r <b>elementeigene Schrifth&ouml;he</b> (relative Angabe)<br>
+<b>ex</b> f&uuml;r <b>elementeigene H&ouml;he des Buchstabens x</b> (relative Angabe)<br>
+<b>px</b> f&uuml;r <b>Pixel</b> (relative Angabe wegen unterschiedlicher Bildschirmaufl&ouml;sung)<br>
+<b>%</b> f&uuml;r <b>Prozent gegen&uuml;ber Elementnorm</b> (relative Angabe)
+<p>
+
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCC align=left>Eigenschaft</th>
+<th bgcolor=#CCCCC align=left>Syntax</th>
+<th bgcolor=#CCCCC align=left>Werte / Wertebereiche</th>
+<th bgcolor=#CCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schriftfamilie</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font-family:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Schriftnamen / Schriftfamiliennamen)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1,h2,h3 { font-familiy: arial }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schriftart</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font-style:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[normal | italic | oblique]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { font-style: italic }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schriftvariante</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font-variant:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[normal | small-caps]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h3 { font-variant: small-caps }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schriftgr&ouml;&szlig;e</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font-size:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p { font-size: 12 pt }<br>p.klein { font-size: 80% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schriftgewicht</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font-weight:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>strong { font-weight: bold }</td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Schrift (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>font:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus: font-style  font-variant  font-weight font-size  line-height  font-family)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p { font: bold italic Palatino }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Wortabstand</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>word-spacing:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h3 { word-spacing: 5mm }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Zeichenabstand</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>letter-spacing:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>b { letter-spacing: 0.3em }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Zeilenh&ouml;he</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>line-height:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h2 { line-height: 125% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Textdekoration</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>text-decoration:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[underline | overline | line-through | blink | none]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>strong { text-decoration: blink }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Texttransformation</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>text-transform:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[capitalize | uppercase | lowercase | none]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { text-transform: capitalize }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Texteinr&uuml;ckung</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>text-indent:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen absatzerzeugenden Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p { text-indent: 5mm }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Vertikale Textausrichtung</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>vertical-align:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[baseline | sub | super | top | text-top | middle | bottom | text-bottom]</tt> oder numerisch in Prozent<br>
+<b>erlaubt bei</b> <i>allen absatzerzeugenden Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p.grafik { vertical-align: top }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Horizontale Textausrichtung</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>text-align:</tt></td>
+<td bgcolor=#FFCC99 valign=top><tt>[left | right | center | justify]</tt><br>
+<b>erlaubt bei</b> <i>allen absatzerzeugenden Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p.mittig { text-align: center }</tt></td>
+</tr>
+</table>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Angaben zu Farbe und Hintergrund</font></h2></a>
+
+<h4><font color=#6666CC>Erlaubte Angaben bei Farben:</font></h4>
+
+<p>
+<b>#XXXXXX</b> f&uuml;r hexadezimale RGB-Werte - siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm#a2"><b>Hexadezimale Angabe von Farben</b></a><br>
+<b>rgb(#,#,#)</b> f&uuml;r dezimale RGB-Werte, <b># = 0-255</b><br>
+<b>[Farbname]</b> f&uuml;r Grundfarben - siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm#a3"><b>Farbnamen f&uuml;r die 16 Grundfarben</b></a><br>
+<b>url([Dateiname])</b> f&uuml;r Hintergrundbilder<br>
+<p>
+
+
+<table border cellpadding=3>
+ <tr height=30>
+<th bgcolor=#CCCCC align=left>Format-Eigenschaft</th>
+<th bgcolor=#CCCCC align=left>Syntax</th>
+<th bgcolor=#CCCCC align=left>Werte / Wertebereiche</th>
+<th bgcolor=#CCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Farbe</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>color:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Farbangabe<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p { color: rgb(0,128,255) }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Hintergrundfarbe</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background-color:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Farbangabe<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>table { background-color: black }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Hintergrund-Bild</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background-image:</tt></td>
+<td bgcolor=#FFCC99 valign=top>URL-Angabe<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>table { background-image: url(back.gif) }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Wallpaper-Effekt</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background-repeat:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>repeat | repeat-x | repeat-y | no-repeat]</tt><br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>body { background-repeat: no-repeat }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Wasserzeichen-Effekt</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background-attachment:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>scroll | fixed</tt>]<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>body { background-attachment: fixed }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Hintergrundposition</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background-position:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>top | center | bottom</tt>]  und  [<tt>left | center | right</tt>] oder als numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen absatzerzeugenden Elementen und body</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>body { background-position: 100% 100% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Hintergrund (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>background:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen background-Eigenschaften)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>p { background: url(back.gif) fixed }</tt></td>
+</tr>
+</table>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Angaben zur Absatzformatierung</font></h2></a>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+
+<p>
+<b>Abstand/Rand</b> bedeutet den Abstand eines Elements zu den seitlichen Begrenzungen des Anzeigefensters und zu voranstehenden oder nachfolgenden Elementen. In Verbindung mit Hintergrundfarbangaben kann dieser Rahmen auch optisch sichtbar vom &uuml;brigen Inhalt abgegrenzt sein.<br>
+<b>Rahmen</b> bedeutet einen Au&szlig;enrahmen um ein Element.<br>
+<b>Innenabstand</b> bedeutet den Abstand zwischen Inhalt eines Elements und dessen Au&szlig;enrahmen. Dies ist relevant, wenn das Element aufgrund von Hintergrundfarbangaben oder Rahmen optisch sichtbar ist.
+<p>
+
+<table border cellpadding=3>
+ <tr height=30>
+<th bgcolor=#CCCCC align=left>Format-Eigenschaft</th>
+<th bgcolor=#CCCCC align=left>Syntax</th>
+<th bgcolor=#CCCCC align=left>Werte / Wertebereiche</th>
+<th bgcolor=#CCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Abstand/Rand oben</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>margin-top:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { margin-top: 20 pt }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Abstand/Rand links</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>margin-left:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { margin-left: 10% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Abstand/Rand unten</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>margin-bottom:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { margin-bottom: 30 pt }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Abstand/Rand rechts</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>margin-right:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { margin-right: 20% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Abstand/Rand allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>margin:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert (alle Rahmenseiten)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { margin: 1 cm }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmendicke oben</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-top-width:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>thin | medium | thick</tt>] oder numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { border-top-width: thin }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmendicke links</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-left-width:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>thin | medium | thick</tt>] oder numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { border-left-width: thick }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmendicke unten</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-bottom-width:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>thin | medium | thick</tt>] oder numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { border-bottom-width: 5 mm }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmendicke rechts</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-right-width:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>thin | medium | thick</tt>] oder numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { border-right-width: medium }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmendicke (alle R&auml;nder)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-width:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>thin | medium | thick</tt>] oder numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { border-width: thin }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmenfarbe</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-color:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Farbangabe, 1 bis 4 Angaben f&uuml;r die einzelnen Rahmen<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-color: #FFCC99 }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmentyp</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-style:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>none | dotted | dashed | solid | double | groove | ridge | inset | outset</tt>], 1 bis 4 Angaben f&uuml;r die einzelnen Rahmen<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-style: dashed }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmen oben (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-top:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen Rahmenigenschaften f&uuml;r Rahmen oben)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-top: thick solid red }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmen links (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-left:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen Rahmenigenschaften f&uuml;r Rahmen links)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-left: thin dashed #FFCC00 }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmen unten (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-bottom:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen Rahmenigenschaften f&uuml;r Rahmen unten)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-bottom: medium black }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmen rechts (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border-right:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen Rahmenigenschaften f&uuml;r Rahmen rechts)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border-right: thick solid blue }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Rahmen (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>border</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammensetzung aus den einzelnen Rahmenigenschaften f&uuml;r gesamten Rahmen)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1: { border: solid red }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Innenabstand oben</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>padding-top:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { padding-top: 10 pt }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Innenabstand links</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>padding-left:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { padding-left: 10% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Innenabstand unten</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>padding-bottom:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { padding-bottom: 15 pt }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Innenabstand rechts</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>padding-right:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { padding-right: 5% }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Innenabstand allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>padding:</tt></td>
+<td bgcolor=#FFCC99 valign=top>Numerischer Wert (Innenabst&auml;nde aller Seiten)<br>
+<b>erlaubt bei</b> <i>allen Elementen</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>h1 { padding: 10 mm }</tt></td>
+</tr>
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC>Spezielle Angaben zur Listenformatierung</font></h2></a>
+
+<table border cellpadding=3>
+ <tr height=30>
+<th bgcolor=#CCCCC align=left>Format-</th>
+<th bgcolor=#CCCCC align=left>Syntax</th>
+<th bgcolor=#CCCCC align=left>Werte / Wertebereiche</th>
+<th bgcolor=#CCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Darstellungstyp</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>list-style-type:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>disc | circle | square | decimal | lower-roman | upper-roman | lower-alpha | upper-alpha | none</tt>]<br>
+<b>erlaubt bei</b> <i>ol, ul</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>ul { list-style-type: square }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Listeneinr&uuml;ckung</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>list-style-position:</tt></td>
+<td bgcolor=#FFCC99 valign=top>[<tt>inside | outside</tt>]<br>
+<b>erlaubt bei</b> <i>ol, ul</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>ol { list-style-position: inside }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Listen-Bulltet-Grafik</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>list-style-image:</tt></td>
+<td bgcolor=#FFCC99 valign=top>URL-Angabe<br>
+<b>erlaubt bei</b> <i>ol, ul</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>ul { list-style-image: url(yellow.gif) }</tt></td>
+</tr>
+<tr>
+<td bgcolor=#CCFFFF valign=top>Listendarstellung (allgemein)</td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>list-style:</tt></td>
+<td bgcolor=#FFCC99 valign=top>(Zusammenfassung aller Listeneigenschaften)<br>
+<b>erlaubt bei</b> <i>ol, ul</i></td>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>ul { list-style: square inside }</tt></td>
+</tr>
+</table>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcja.htm"><b>Style-Sheets in HTML einbinden</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcka.htm"><b>Daten und Programme als Objekt einbinden</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcj.htm"><b>Style-Sheets - Formatvorlagen</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

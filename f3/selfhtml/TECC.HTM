@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Vordefinierte Variablen in Perl</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Vordefinierte Variablen in Perl</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Allgemeines zu vordefinierten Variablen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Vordefinierte Skalare</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Vordefinierte Listen und Hashs</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Perl-eigene Umgebungsvariablen</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Allgemeines zu vordefinierten Variablen</font></h2></a>
+
+Perl h&auml;lt eine F&uuml;lle spezieller, vordefinierter Variablen bereit. Den Inhalt dieser Variablen k&ouml;nnen Sie auslesen, um Informationen zur aktuellen Perl-Konfiguration zu ermitteln, oder um die Systemkonfiguration des Rechners, auf das Script und der Perl-Interpreter laufen, zu ermitteln. Einige der Variablen haben je nach Prozedur-Situation bestimmte Inhalte. Diese M&ouml;glichkeiten sollten Sie jedoch erst nutzen, wenn Sie mit Perl gut vertraut sind.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Vordefinierte Skalare</font></h2></a>
+Die folgende Liste ist nicht vollst&auml;ndig, sondern enth&auml;lt nur einige wichtige vordefinierte Skalare.
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Skalar</th>
+<th bgcolor=#CCCCCC align=left>Erl&auml;uterung</th>
+<th bgcolor=#CCCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$_</tt></td>
+<td bgcolor=#CCFFFF valign=top>Die bekannteste vordefinierte Variable in Perl. Sie enth&auml;lt in Suchl&auml;ufen (z.B. bei der Suche in einer Liste) den jeweils aktuellen Wert. Sie kann direkt in die Suche integriert werden, ohne da&szlig; eine selbst definierte Variable erforderlich ist. Das nebenstehende Beispiel gibt einfach der Reihe nach alle Zahlen aus, die in der Liste <i>@Zahlen</i> definiert wurden.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+@Zahlen = (1..10);<br>
+for(@Zahlen)<br>
+ { print $_, "\n"; }
+ </tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$.</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die aktuelle Zeilennummer der zuletzt eingelesenen Datei. Im nebenstehenden Beispiel werden alle Zeilen einer Textdatei eingelesen und ausgegeben. Am Ende kann $. dar&uuml;ber Auskunft geben, wie viele Zeilen eingelesen wurden.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+open(DATEI, &quot;&lt;readme.txt&quot;);<br>
+while(&lt;DATEI&gt;)<br>
+ { print $_; }<br>
+print $., &quot; Zeilen gelesen&quot;;<br>
+close(DATEI);
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$/</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den eingestellten Eingabeseparator. Kann ge&auml;ndert werden - auch mehrere Zeichen sind erlaubt. Das nebenstehende Beispiel bewirkt, da&szlig; eine Eingabe von der Standardeingabe erst dann abgeschlossen ist, wenn der Anwender die Zeichenfolge ENDE eingibt und &lt;Return&gt; dr&uuml;ckt.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+$/ = &quot;ENDE&quot;;<br>
+$DeinName = &lt;STDIN&gt;;<br>
+print $DeinName;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$]</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Versionsnummer des verwendeten Perl-Interpreters. Gut geeignet, um bei Scripts die Ausf&uuml;hrung des restlichen Programmcodes davon abh&auml;ngig zu machen, da&szlig; der Perl-Interpreter mindestens eine bestimmte Versionsnummer hat.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+if($] &lt; 5)<br>
+ { die &quot;Perl-Interpreter zu alt&quot;; }<br>
+else { print $]; }
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$!</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt eine im aktuellen Programm-Kontext aktuelle Fehlermeldung oder Fehlernummer, sofern ein Fehler aufgetreten ist. Die nebenstehende Anweisung versucht eine Datei zu &ouml;ffnen und gibt im Fehlerfall die vordefinierte Perl-Fehlermeldung aus, wenn die Datei nicht ge&ouml;ffnet werden kann.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+open(DATEI, &quot;&lt;nixda.txt&quot;) || print $!;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$0</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den Dateinamen des Perl-Scripts, das gerade ausgef&uuml;hrt wird. Wert kann ge&auml;ndert werden.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+print $0, &quot; wird ausgefuehrt!&quot;;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$$</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Proze&szlig;-ID des Perl-Scripts, das gerade ausgef&uuml;hrt wird. Vor allem unter Unix von Interesse.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+&quot;Prozess  &quot;, $$, &quot; wird ausgefuehrt!&quot;;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$^T</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den genauen Zeitpunkt (Millisekunden), zu dem das Script gestartet wurde. Das nebenstehende Beispiel stellt einen kleinen Benchmark-Test dar. Es f&uuml;hrt eine lange Schleife von Berechnungen durch und ermittelt, wie lange das Perl-Script dazu braucht.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+@Zahlen = (1..50000);<br>
+for(@Zahlen) { $x = sqrt($_); }<br>
+$Start = $^T; $Jetzt = time;<br>
+print "Laufzeit: ", $Jetzt - $Start, " ms\n";
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$&</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt nach Anwenden eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm"><b>regul&auml;ren Ausdrucks</b></a> den Wert, auf den das Suchmuster pa&szlig;te.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+$Satz = &quot;Mann und Frau&quot;;<br>
+$Satz =~ /\bund\b.*/;<br>
+print $&;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$&</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt nach Anwenden eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecg.htm#a7"><b>regul&auml;ren Ausdrucks mit Klammern</b></a> den Inhalt der Klammer, die mit dem letzten Suchmuster &uuml;bereinstimmte.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+$Satz = &quot;Mann und Frau&quot;;<br>
+$Satz =~ /(\bund\b).*/;<br>
+print $+;
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>$1, $2, usw.</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt nach Anwenden eines regul&auml;ren Ausdrucks mit Klammern die Werte der Klammern 1, 2 usw., auf die das in der jeweiligen Klammer definierte Suchmuster pa&szlig;te.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+$Satz = &quot;Mann und Frau und Kind&quot;;<br>
+$Satz =~ /(\bund\b).*\1/;<br>
+print $1;
+</tt></td>
+</tr>
+</table>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Vordefinierte Listen und Hashs</font></h2></a>
+Die folgende Liste ist nicht vollst&auml;ndig, sondern enth&auml;lt nur einige wichtige vordefinierte Listen- und Hash-Variablen.
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Liste/Hash</th>
+<th bgcolor=#CCCCCC align=left>Erl&auml;uterung</th>
+<th bgcolor=#CCCCCC align=left>Beispiel</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>@_</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Parameter, die beim Aufruf eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="teci.htm#a1"><b>Unterprogramms</b></a> &uuml;bergeben wurden. Innerhalb des Unterprogramms sind die &uuml;pbergebenen Parameter mit $_[0] (= erster Parameter), $_[1] (= zweiter Parameter) usw. ansprechbar.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+&amp;Sprich(&quot;Hallo Welt&quot;);<br>
+sub Sprich<br>
+{<br>
+ print $_[0];<br>
+}<br>
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>@ARGV</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die Parameter, die beim Aufruf des Perl-Scripts mit &uuml;bergeben wurden. Wenn z.B. <i>perl test.pl meintext.txt</i> eingegeben wurde, ist <i>meintext.txt</i> der erste Parameter aus Sicht des Perl-Scripts. Das Script kann Parameter als Input f&uuml;r den Programmablauf auswerten. Im nebenstehenden Beispiel wird der erste &uuml;bergebene Parameter $ARGV[0] als Dateiname interpretiert. Das Script versucht, diese Datei zu &ouml;ffnen.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+open(DATEI, &quot;&lt;$ARGV[0]&quot;) || die &quot;Fehler!&quot;;<br>
+print $ARGV[0], &quot; geoeffnet!&quot;;<br>
+close(DATEI);
+</tt></td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>%ENV</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt die komplette Rechnerumgebung, wie Sie dem Perl-Interpreter bekannt ist (geladene Treiber, Systemprogramme usw.). Das nebenstehende Beispiel gibt die Elemente der in diesem Hash gespeicherten Daten aus.</td>
+<td bgcolor=#FFCC99 valign=top nowrap><tt>
+for(%ENV)<br>
+ { print $_, "\n"; }
+</tt></td>
+</tr>
+</table>
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC>Perl-eigene Umgebungsvariablen</font></h2></a>
+Perl benutzt Umgebungsvariablen vor allem, um dem Perl-Interpreter bestimmte Suchverzeichnisse zu bezeichnen. Die folgende Liste ist nicht vollst&auml;ndig, sondern enth&auml;lt nur einige wichtige vordefinierte Umgebungsvariablen. Den Inhalt einer Umgebungsvariablen k&ouml;nnen Sie mit einer Anweisung wie <i>$Wert = $ENV{'PATH'};</i> abfragen. Wichtig ist dabei die Verwendung von <b>$ENV{'Variablenname'}</b> - der Name der Variablen mu&szlig; in geschweiften Klammern stehen und sollte durch einfache Anf&uuml;hrungszeichen eingeschlossen sein.
+
+<p>
+<table border cellpadding=3>
+<tr>
+<th bgcolor=#CCCCCC align=left>Variable</th>
+<th bgcolor=#CCCCCC align=left>Erl&auml;uterung</th>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>HOME</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt das Verzeichnis, zu dem gesprungen werden soll, wenn eine chdir-Anweisung keine Parameter enth&auml;lt (Unix-typisch)</td>
+</tr>
+<tr>
+<td bgcolor=#FFFFCC valign=top nowrap><tt>PATH</tt></td>
+<td bgcolor=#CCFFFF valign=top>Enth&auml;lt den kompletten Pfad, d.h. alle Verzeichnisse, in denen nach ausf&uuml;hrbaren Programmen gesucht werden soll. Wird von Perl benutzt, wenn aus einem Perl-Script andere Perl-Scripts aufgerufen werden, deren Lage nicht n&auml;her angegeben ist.</td>
+</tr>
+</table>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tecb.htm"><b>Variablen und Datentypen</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tecd.htm"><b>Bedingte Anweisungen</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>SELFHTML: Perl / Steuerzeichen und besondere Notationen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Steuerzeichen und besondere Notationen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Konventionen f&uuml;r Zeichenketten</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Notation numerischer Werte</b></a><br>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Konventionen f&uuml;r Zeichenketten</font></h2></a>
+
+Zeichenketten in Perl k&ouml;nnen Sie wahlweise in einfachen oder in doppelten Anf&uuml;hrungszeichen notieren. Der Unterschied zwischen beiden Notationen ist, da&szlig; bei Zeichenketten, die in doppelten Anf&uuml;hrungszeichen notiert werden, auch diverse Steuerzeichen innerhalb der Zeichenkette interpretiert werden. Bei Zeichenketten in einfachen Anf&uuml;hrungszeichen werden nur die wichtigsten Steuerzeichen interpretiert.
+
+<h4><font color=#6666CC>Beispiele:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$Skalar01 = &quot;Hier erfolgt ein\nZeilenumbruch&quot;;
+$Skalar02 = &quot;Hier erfolgt ein\fSeitenvorschub&quot;;
+$Skalar03 = &quot;Hier erfolgt ein\bBackspace&quot;;
+$Skalar04 = &quot;Hier erfolgt ein\rWagenr&uuml;cklauf&quot;;
+$Skalar05 = &quot;Hier erfolgt ein\tTabulator&quot;;
+$Skalar06 = &quot;Hier erfolgt ein\vvertikaler Tabulator&quot;;
+$Skalar07 = &quot;Hier erfolgt ein\aAlarm&quot;;
+$Skalar08 = &quot;Hier erfolgt ein\012 Zeichen mit dem Oktalwert 012&quot;;
+$Skalar09 = &quot;Hier erfolgt ein\x7f Zeichen mit dem Hexadezimalwert 7f&quot;;
+$Skalar10 = &quot;Hier erfolgt ein\cC Control-Zeichen (hier: [Strg]+[C])&quot;;
+$Skalar11 = &quot;Hier erfolgt ein\&quot;Anf&uuml;hrungszeichen&quot;;
+$Skalar12 = &quot;Hier erfolgt ein\\umgekehrter Schr&auml;gstrich&quot;;
+$Skalar13 = &quot;Dieses \lA wird als kleines a interpretiert&quot;;
+$Skalar14 = &quot;Dieses \LWORT\E wird kleingeschrieben interpretiert&quot;;
+$Skalar15 = &quot;Dieses \ua wird als gro&szlig;es A interpretiert&quot;;
+$Skalar16 = &quot;Dieses \Uwort\E wird gro&szlig;geschrieben interpretiert&quot;;
+
+$Skalar17 = 'hier wird nur \\ und \' interpretiert';
+
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+In den obigen Beispielen werden bei den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tecb.htm#a1"><b>Skalaren</b></a> <i>$Skalar01</i> bis <i>$Skalar16</i> die zugewiesenen Zeichenketten in doppelten Anf&uuml;hrungszeichen notiert. Deshalb sind darin alle Steuerzeichen erlaubt.
+<p>
+Steuerzeichen werden durch das Zeichen <b>\</b> eingeleitet. Dahinter folgt ein Buchstabe oder eine Zahl in Oktal oder Hexadezimalschreibweise, um das Steuerzeichen n&auml;her zu spezifizieren.
+<p>
+Im Beispiel von <i>$Skalar17</i> wird die zugewiesene Zeichenkette in einfachen Anf&uuml;hrungszeichen notiert. In diesem Fall sind nur die beiden dort genannten Steuerzeichen erlaubt, n&auml;mlich die Maskierung des einfachen Anf&uuml;hrungszeichens innerhalb der Zeichenkette und die Maskierung des Maskierungszeichens, also des umgekehrten Schr&auml;gstrichs.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Von den Steuerzeichen ist im CGI-Zusammenhang vor allem das Zeichen <b>\n</b> von Bedeutung. So ist es beispielsweise erforderlich, beim Start der HTML-Datenausgabe von einem CGI-Script an einen WWW-Browser den HTTP-Header voranzuschicken. Dieser wiederum mu&szlig; durch eine Leerzeile von dem nachfolgenden HTML-Code getrennt sein. Der typische Befehl dazu lautet:<br><i>print &quot;Content-type: text/html\n\n&quot;;</i>
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Notation numerischer Werte</font></h2></a>
+
+Sie k&ouml;nnen Zahlen ganz normal notieren. Beachten Sie dabei nur, da&szlig; bei Kommazahlen anstelle eines Kommas ein Punkt notiert werden mu&szlig;. So wird die Zahl Pi beispielsweise als 3.1415 notiert. F&uuml;r sehr hohe und sehr niedrige Zahlen und f&uuml;r komplexe Kommazahlen gibt es daneben aber noch andere Notationsm&ouml;glichkeiten.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+$a = 1E1;
+$b = 1.2345E4;
+$c = 2e-3;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>e</b> oder <b>E</b> bestimmen Sie die Anzahl Nullen, die hinter der Zahl vor dem <b>e</b> bzw. <b>E</b> stehen.
+<p>
+Die erste Zahl im Beispiel, 1E1, ist eine 1 mit einer 0 dahinter, also 10.<br>
+Die zweite Zahl im Beispiel, 1.2345E4, ist eine andere Schreibweise f&uuml;r 12345. Der Dezimalpunkt wird also einfach um so viele Stellen nach rechts verschoben, wie hinter dem E-Zeichen angegeben.<br>
+Die dritte Zahl im Beispiel, 2e-3, ist eine andere Schreibweise f&uuml;r 0.002. Der Dezimalpunkt wird also einfach um so viele Stellen nach links verschoben, wie hinter dem E-Zeichen angegeben. Diese umgekehrte Richtung wird durch das Minuszeichen bewirkt, da&szlig; hinter dem <b>e</b> folgt.<br>
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tecg.htm"><b>Regul&auml;re Ausdr&uuml;cke</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="teci.htm"><b>Unterprogramme und Perl-Funktionen</b></a></td>
+</tr>
+</table>
+<p>
+
+<p>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="te.htm"><b>Dokumentation: CGI/Perl</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tec.htm"><b>CGI und Perl: Perl Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

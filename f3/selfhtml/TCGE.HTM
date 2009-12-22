@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>SELFHTML: Ladevorgang f&uuml;r Grafiken optimieren</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Ladevorgang f&uuml;r Grafiken optimieren</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Breite und H&ouml;he einer Grafik mit angeben</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Grafik in zwei Versionen laden</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Breite und H&ouml;he einer Grafik mit angeben</font></h2></a>
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgea.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie Grafiken in HTML-Dateien einbinden, die Sie im WWW anbieten wollen, sollten Sie immer die Breite und H&ouml;he der Grafik mit angeben. Dadurch entnimmt der WWW-Browser bereits der HTML-Datei, wie gro&szlig; die Grafik ist, und mu&szlig; nicht warten, bis er die entsprechende Header-Information der Grafikdatei ausgelesen hat. Dadurch kann er die gesamte WWW-Seite bereits am Bildschirm aufbauen und bei noch nicht eingelesenen Grafiken erst mal eine entsprechend gro&szlig;e Freifl&auml;che anzeigen. Wenn Sie Breite und H&ouml;he nicht angeben, wartet der Browser dagegen mit der Anzeige der WWW-Seite, bis er alle n&ouml;tigen Gr&ouml;&szlig;enangaben aus eingebundenen Grafikdateien eingelesen hat.
+
+<a name="iimg_width_height"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.gif&quot; width=250 height=450&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit der Angabe <b>width=</b> [Pixel] geben Sie die Breite der Grafik an, mit <b>height=</b> [Pixel] die H&ouml;he.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Um die genaue Breite und H&ouml;he einer Grafik zu ermiteln, brauchen Sie entweder ein Grafikprogramm, das diese Werte anzeigt, oder einen HTML-Editor, der beim Einbinden einer Grafik im Dialog auch gleich den Dateikopf der Grafik ausliest und die entsprechenden Angaben in das &lt;img&gt;-Tag automatisch einf&uuml;gt.
+<p>
+Um einem Besucher Ihrer WWW-Seiten nicht ungefragt gro&szlig;e Grafiken mit langen Ladezeiten zuzumuten, k&ouml;nnen Sie auch <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tfc.htm#a7"><b>Vorschaugrafiken</b></a> verwenden.
+
+<h4><font color=#6666CC>Tips:</font></h4>
+Sie k&ouml;nnen auch Angaben zu Breite und H&ouml;he einer Grafik machen, die absichtlich von den tats&auml;chlichen Abmessungen der Grafik abweichen. Dadurch k&ouml;nnen Sie interessante Verzerrungseffekte erreichen, wie man sie von Cartoons kennt.
+<p>
+Wenn Sie eine Grafik haben, die Sie an anderer Stelle in kleinerer Form wiederholen m&ouml;chten (zum Beispiel ein Logo, das auf der Einstiegsseite gro&szlig; angezeigt werden soll und auf den Unterseiten kleiner), brauchen Sie keine zwei Grafiken. Es gen&uuml;gt, wenn Sie, um eine Grafik kleiner darzustellen, die Angaben zu Breite und H&ouml;he proportional verkleinern. Wenn Ihr Logo beispielsweise die Au&szlig;ma&szlig;e 300 Pixel breit und 200 Pixel hoch hat, k&ouml;nnen Sie es halb so gro&szlig; darstellen, indem Sie beim Einbinden der Grafik <b>width=150 height=100</b> angeben. Sinnvoll ist das aber nur, wenn die groﬂe Grafik bereits angezeigt wurde und sich im Cache-Speicher des WWW-Browsers befindet.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xnetsi11.gif" width=30 height=30 border=0 alt="Netscape1.1"> Grafik in zwei Versionen laden</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcgea.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Dieses Feature ist dann sinnvoll, wenn Sie aufwendige Grafiken im WWW pr&auml;sentieren wollen. Dazu brauchen Sie zwei Versionen einer Grafik: eine hochaufl&ouml;sende, die Sie am Ende pr&auml;sentieren wollen, und eine niedrigaufl&ouml;sende, die m&ouml;glichst schnell angezeigt werden soll. Leider wird diese M&ouml;glichkeit bislang nur von Netscape interpretiert. Sie k&ouml;nnen Netscape veranlassen, erst einmal die kleinere, niedrigaufl&ouml;sende Grafik anzuzeigen. Wenn dann das gesamte Dokument mit allen Grafik- und sonstigen Referenzen geladen ist, l&auml;dt Netscape in einem zweiten Schritt die h&ouml;heraufl&ouml;sende, gr&ouml;&szlig;ere Grafik &quot;&uuml;ber&quot; die bereits geladene einfachere Version. Das kostet zus&auml;tzlichen Speicher, hat aber den Vorteil, da&szlig; der Anwender die WWW-Seite in ihrem Aufbau schneller am Bildschirm hat.
+
+<a name="iimg_lowsrc"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;img src=&quot;datei.jpg&quot; lowsrc=&quot;datei.gif&quot; width=300 height=700&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>lowsrc=</b> bewirken Sie, da&szlig; Netscape zun&auml;chst die niedrigaufl&ouml;sendere, kleinere Grafik l&auml;dt (das ist die Grafik, die Sie bei <b>lowsrc=</b> angeben). Wenn die komplette Seite geladen ist, l&auml;dt Netscape die hochaufl&ouml;sende, gr&ouml;&szlig;ere Grafik (das ist die Grafik, die Sie bei <b>src=</b> angeben).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Beide Grafiken sollten sinnvollerweise den gleichen Inhalt und die gleiche Gr&ouml;&szlig;e haben. Ihr Unterschied sollte in der Aufl&ouml;sungsqualit&auml;t und im Speicherbedarf liegen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcgd.htm"><b>Abstand zwischen Grafik und umgebenden Text</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcgf.htm"><b>Grafiken als Verweise</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcg.htm"><b>Grafik in HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

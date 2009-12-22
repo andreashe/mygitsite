@@ -1,0 +1,217 @@
+<html>
+<head>
+<title>SELFHTML: Auswahllisten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Auswahllisten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Auswahlliste definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Auswahlliste mit Mehrfachauswahl</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Eintr&auml;ge vorselektieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>Absendewert von Eintr&auml;gen bestimmen</b></a> <br>
+
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC> <img src="xok.gif" width=30 height=30 border=0 alt="HTML2.0"> Auswahlliste definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchca.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen dem Anwender eine Liste mit festen Eintr&auml;gen anbieten, aus der er einen Eintrag ausw&auml;hlen kann. Der Text des ausgew&auml;hlten Eintrags wird &uuml;bertragen, wenn der Anwender das Formular abschickt.
+
+<a name="iselect_option"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Ihr Favorit:
+&lt;p&gt;
+&lt;select name=&quot;top5&quot; size=3&gt;
+&lt;option&gt; Heino
+&lt;option&gt; Michael Jackson
+&lt;option&gt; Tom Waits
+&lt;option&gt; Nina Hagen
+&lt;option&gt; Marianne Rosenberg
+&lt;/select&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+<b>&lt;select ...&gt;</b> leitet eine Auswahlliste ein. Jede Auswahlliste mu&szlig; einen internen Bezeichnernamen erhalten, und zwar mit der Angabe <b>name=</b>. Der Name sollte nicht zu lang sein und darf keine Leerzeichen und keine deutschen Umlaute enthalten. Verwenden Sie als Sonderzeichen h&ouml;chstens den Unterstrich &quot;_&quot;. Setzen Sie den Namen in Anf&uuml;hrungszeichen.
+<p>
+Mit der Angabe <b>size=</b> bestimmen Sie die Anzeigegr&ouml;&szlig;e der Liste, d.h. wie viele Eintr&auml;ge angezeigt werden sollen. Wenn die Liste mehr Eintr&auml;ge enth&auml;lt als 
+angezeigt werden, kann der Anwender in der Liste scrollen. Wenn Sie <b>size=1</b> angeben, definieren Sie eine sogenannte &quot;Drop-Down-Liste&quot;.
+<p>
+<b>&lt;option&gt;</b> definiert jeweils einen Eintrag der Auswahlliste. Hinter <b>&lt;option&gt;</b> mu&szlig; der Text des Listeneintrags stehen.
+<p>
+Mit <b>&lt;/select&gt;</b> wird die Auswahlliste abgeschlossen.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Die Breite der Listenanzeige wird automatisch ermittelt.
+<p>
+Mit Hilfe von <img src="x1.gif" width=15 height=13 border=0>&nbsp;<a href="td.htm"><b>JavaScript</b></a> k&ouml;nnen Sie Auswahllisten auch &quot;zweckentfremden&quot;, um Verweise innerhalb Ihres Projekts zu realisieren.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Auswahlliste mit Mehrfachauswahl</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchca.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie nichts anderes angeben, kann der Anwender aus einer Auswahlliste genau einen Eintrag ausw&auml;hlen. Sie k&ouml;nnen eine Mehrfachauswahl erlauben.
+
+<a name="iselect_multiple"><h4><font color=#6666CC>Beispiele:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Alle Ihre Favoriten aus der 70er-Jahre-Liste:
+&lt;p&gt;
+&lt;select name=&quot;top70s&quot; size=5 multiple&gt;
+&lt;option&gt; Sweet
+&lt;option&gt; T.Rex
+&lt;option&gt; Slade
+&lt;option&gt; Mud
+&lt;option&gt; Bay City Rollers
+&lt;/select&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Auswahllisten mit Mehrfachauswahl werden wie gew&ouml;hnliche <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Auswahllisten</b></a> definiert. Die Mehrfachauswahl erlauben Sie durch die zus&auml;tzliche Angabe <b>multiple</b> im einleitenden Tag von 
+<b>&lt;select ...&gt;</b>.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Eine Mehrfachauswahl ist f&uuml;r Anwender nicht unmittelbar erkennbar. Deshalb sollten Sie darauf hinweisen, wenn mehrere Eintr&auml;ge ausw&auml;hlbar sind. Auch ist nicht allen Anwendern klar, wie sie mehrere Eintr&auml;ge selektieren k&ouml;nnen. Auf modernen PC-Tastaturen geschieht das normalerweise durch Halten der [Strg]-Taste bei gleichzeitigem Anklicken der gew&uuml;nschten Listeneintr&auml;ge.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Eintr&auml;ge vorselektieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchca.htm#a3"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Wenn Sie nichts anderes angeben, ist zun&auml;chst kein Eintrag einer Auswahlliste vorselektiert. Sie k&ouml;nnen einen Eintrag vorselektieren. In Verbindung mit <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Mehrfachauswahl</b></a> k&ouml;nnen Sie auch mehrere Eintr&auml;ge vorselektieren. Vorselektierte Eintr&auml;ge haben einen sichtbaren Markierungsbalken.
+
+
+<a name="ioption_selected"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Wen kennen Sie am besten?
+&lt;p&gt;
+&lt;select name=&quot;BestKenn&quot; size=3&gt;
+&lt;option&gt; Rosa Luxemburg
+&lt;option selected&gt; Helmut Kohl
+&lt;option&gt; Herbert Gruhl
+&lt;/select&gt;
+</pre></td></tr></table><p>
+
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Auswahllisten mit Vorselektion werden wie gew&ouml;hnliche <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Auswahllisten</b></a> definiert. Um einen Eintrag der Auswahlliste vorzuselektieren, geben Sie im Tag <b>&lt;option...&gt;</b> des betreffenden Eintrags den 
+Zusatz <b>selected</b> an.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC> <img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> Absendewert von Eintr&auml;gen bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tchca.htm#a4"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Normalerweise wird beim Absenden des Formulars der Text eines ausgew&auml;hlten Listeneintrags &uuml;bertragen, der hinter <b>&lt;option&gt;</b> steht. Sie k&ouml;nnen jedoch bestimmen, da&szlig; intern ein anderer Text &uuml;bertragen wird.
+
+<a name="ioption_value"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+Ihre Pizza-Bestellung:
+&lt;p&gt;
+&lt;select name=&quot;Pizza&quot; size=5&gt;
+&lt;option value=&quot;P101&quot;&gt; Pizza Napoli
+&lt;option value=&quot;P102&quot;&gt; Pizza Funghi
+&lt;option value=&quot;P103&quot;&gt; Pizza Capriciosa
+&lt;option value=&quot;P104&quot;&gt; Pizza Vegetabile
+&lt;option value=&quot;P105&quot;&gt; Pizza Mexicana
+&lt;option value=&quot;P106&quot;&gt; Pizza Quatro Stagioni
+&lt;option value=&quot;P107&quot;&gt; Pizza de la Casa
+&lt;option value=&quot;P108&quot;&gt; Pizza Calzone
+&lt;option value=&quot;P109&quot;&gt; Pizza con tutti
+&lt;/select&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Auswahllisten mit anderen Absendewerten werden wie gew&ouml;hnliche <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Auswahllisten</b></a> definiert. Um f&uuml;r einen Eintrag der Auswahlliste einen anderen Absendewert zu bestimmen, geben Sie im Tag <b>&lt;option...&gt;</b> des betreffenden Eintrags den Zusatz <b>value=</b> an. Die Angabe mu&szlig; in Anf&uuml;hrungszeichen stehen. Beim Absenden des Formulars wird dann der hier bestimmte Text eines ausgew&auml;hlten Eintrags &uuml;bertragen, nicht der Text, der dem Anwender beim Listeneintrag angeboten wurde.
+
+
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tchb.htm"><b>Eingabefelder</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tchd.htm"><b>Radio- und Checkbuttons</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tch.htm"><b>Formulare</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

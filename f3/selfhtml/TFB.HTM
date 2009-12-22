@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>SELFHTML: Farbtiefen und Farbpaletten</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tf.htm"><b>Grundwissen Grafik</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Farbtiefen und Farbpaletten</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Farbtiefen</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Farbpaletten</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Farbtiefen</font></h2></a>
+Farbtiefe bedeutet, wie viele verschiedene Farbt&ouml;ne in einer Grafikdatei gespeichert werden. Bei Pixelformaten gibt es heute folgende typische Farbtiefen:
+<ul>
+<li>2 Farben (schwarz/wei&szlig;)
+<li>16 Farben
+<li>256 Farben
+<li>16,7 Mio. Farben
+</ul>
+Das GIF-Format unterst&uuml;tzt 2, 16 und 256 Farben, das JPEG-Format 16,7 Mio. und 23,7 Mio. Farben. Da&szlig; in einer Datei so viele Farben gespeichert werden k&ouml;nnen, bedeutet aber noch lange nicht, da&szlig; Anwender tats&auml;chlich so viele Farben sehen. Denn wie viele Farben beim Anwender angezeigt werden k&ouml;nnen, h&auml;ngt von der eingesetzten Hardware (Grafikkarte, Bildschirm) ab. Nur die wenigsten Anwender verf&uuml;gen &uuml;ber Hardware, mit deren Hilfe volle 16,7 Mio. Farben angezeigt werden k&ouml;nnen. Viele Standard-PCs bieten bei arbeitsgerechter Bildschirmaufl&ouml;sung auch heute nicht mehr als 256 Farben an. Bei etwas besserer Ausstattung werden h&auml;ufig auch 16.000, 32.000 oder 64.000 Farben angezeigt, was f&uuml;r alle Computerbesitzer, die viele Grafiken betrachten (also auch f&uuml;r WWW-Surfer) unbedingt zu empfehlen ist.
+
+<a name="a11"><h3><font color=#6666CC>Farbmodelle</font></h3></a>
+Um Farbwerte in einer Grafikdatei zu speichern, m&uuml;ssen die Farben in einer computergerechten Form beschrieben werden, n&auml;mlich als Zahlen. Dabei gibt es verschiedene Modelle, mit Hilfe von Zahlen den Wert von Farben zu beschreiben. Die beiden bekanntesten Modelle sind:
+<ul>
+<li><b>Das RGB-Modell:</b> Beim RGB-Modell wird eine Farbe durch ihre Anteile an den drei Grundfarben Rot, Gr&uuml;n und Blau definiert. Jede Farbe hat also einen Rotwert, einen Gr&uuml;nwert und einen Blauwert. Jeder der drei Werte wird durch Zahlen zwischen 0 und 255 definiert. Der Wert 0 bedeutet: keinen Anteil an der betreffenden Grundfarbe, der Wert 255 bedeutet: maximalen Anteil an der betreffenden Grundfarbe. Ein <font color=#000099><b>dunkles Blau</b></font> hat nach diesem Schema z.B. die Farbwerte 0,0,153. (0 rot, 0 gr&uuml;n, 153 blau). Mit diesem Schema k&ouml;nnen bis zu 16,7 Mio. unterschiedliche Farben definiert werden.
+<p>
+<img src="xrgb.gif" width=400 height=200 border=0 alt="RGB-Modell">
+<p>
+<li><b>Das HSB-Modell</b>: Auch bei diesem Modell gibt es drei definierende Zahlenwerte. <b>H</b> steht f&uuml;r <i>Hue</i> (<i>Farbton</i>), <b>S</b> f&uuml;r <i>Saturation</i> (<i>S&auml;ttigung</i>), und <b>B</b> f&uuml;r <i>Brightness</i> (<i>Helligkeit</i>). Farbt&ouml;ne k&ouml;nnen Werte zwischen 0 und 359 annehmen, S&auml;ttigung und Helligkeit Werte zwischen 0 und 255. Auf diese Weise lassen sich ca. 23,6 Mio. Farben definieren.
+<p>
+<img src="xhsb.jpg" width=400 height=200 border=0 alt="HSB-Modell">
+<p>
+</ul>
+F&uuml;r WWW-gerechte Grafiken ist das RGB-Modell ma&szlig;geblich. Wenn Sie zum Erstellen von WWW-Grafiken mit einem Grafikprogramm arbeiten, da&szlig; mehrere Farbmodelle kennt, halten Sie sich an das RGB-Modell.
+<p>
+In HTML werden die 256 m&ouml;glichen Werte f&uuml;r RGB-Werte in Hexadezimalform (0 bis FF) notiert. Mehr hierzu im Kapitel <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcae.htm#a2"><b>Hexadezimale Angabe von Farben</b></a>.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Farbpaletten</font></h2></a>
+Im GIF-Format k&ouml;nnen Sie pro GIF-Datei aus den 16,7 Mio. m&ouml;glichen Farben des RGB-Farbmodells maximal 256 Farben &quot;aussuchen&quot; und abspeichern. Bei einer solchen Farbauswahl spricht man von einer Farbpalette.
+<p>
+Theoretisch kann jede der 256 Farben beliebige RGB-Werte haben, d.h. es sind auch &quot;krumme&quot; Farbwerte wie 71,217,34 denkbar. F&uuml;r WWW-gerechte GIF-Grafiken sollten Sie sich jedoch an ein Standard-Schema halten, das auch von Netscape optimal interpretiert wird. Bei diesem Schema sind alle Farben erlaubt, deren RGB-Werte durch 51 dividierbar sind. R(ot), G(r&uuml;n) und B(lau) sollten danach also einen der Werte 0, 51, 102, 153, 204 oder 255 (hexadezimal: 00, 33, 66, 99, CC oder FF) haben. Ein erlaubter Wert ist danach z.B. <font color=#FF33CC><b>255,51,204 (hexadezimal: FF,33,CC)</b></font>. Auf diese Weise ergeben sich 6 x 6 x 6 m&ouml;gliche Farben, also 216. Die verbleibenden 40 Farben k&ouml;nnen Sie als &quot;eiserne Reserve&quot; betrachten. Wenn Sie f&uuml;r einzelne Grafiken bestimmte, fehlende Farbt&ouml;ne brauchen, k&ouml;nnen Sie  unbenutzte Farben der Palette mit der gew&uuml;nschten Farbe definieren.
+<p>
+<a name="a21"><img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"></a><br>
+<a href="tfbb.htm#a21"><b>Anzeigebeispiel: die 256 (216) Standardfarben</b></a>
+<p>
+Wenn Sie Ihre Anspr&uuml;che an die Hardware des Endanwenders noch weiter zur&uuml;ckschrauben wollen, k&ouml;nnen Sie sich auch auf Grafiken beschr&auml;nken, die eine 16-Farbpalette enthalten. Auch dabei gilt: theoretisch kann jede der 16 Farben einer solchen Farbpalette beliebige Farbwerte haben. Es gibt jedoch 16 Farben, die von jedem VGA-kompatiblen Bildschirm angezeigt werden k&ouml;nnen. In MS Windows sind das deshalb auch die 16 Grundfarben. Bei einer Beschr&auml;nkung auf 16 Farben ist es daher sinnvoll, mit diesen 16 Grundfarben zu arbeiten.
+<p>
+<a name="a22"><img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"></a><br>
+<a href="tfba.htm#a22"><b>Anzeigebeispiel: die 16 Grundfarben</b></a>
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tfa.htm"><b>WWW-gerechte Grafiken</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tfc.htm"><b>Typische Grafiksorten f&uuml;r WWW-Seiten</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tf.htm"><b>Grundwissen Grafik</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

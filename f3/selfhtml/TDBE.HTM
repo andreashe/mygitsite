@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>SELFHTML: Steuerzeichen und besondere Notationen</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>Steuerzeichen und besondere Notationen</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Steuerzeichen bei Zeichenketten</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Notation numerischer Werte</b></a> 
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Steuerzeichen bei Zeichenketten</font></h2></a>
+
+Bei Zeichenkettenvariablen gibt es die M&ouml;glichkeit, Steuerzeichen in den Variablenwert einzuf&uuml;gen.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var Variable1 = &quot;Hier erfolgt ein\nZeilenumbruch&quot;;
+  var Variable2 = &quot;Hier erfolgt ein\fWagenr&uuml;cklauf&quot;;
+  var Variable3 = &quot;Hier erfolgt ein\bBackspace&quot;;
+  var Variable4 = &quot;Hier erfolgt ein\rDOS-Extra-Zeilenumbruch&quot;;
+  var Variable5 = &quot;Hier erfolgt ein\tTabulator&quot;;
+  var Variable6 = &quot;Hier erfolgt ein\&quot;Anf&uuml;hrungszeichen&quot;;
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Steuerzeichen dieser Art werden durch das Zeichen <b>\</b> eingeleitet. Dahinter folgt ein Buchstabe, der das Steuerzeichen markiert.
+<p>
+Das Steuerzeichen <b>\n</b> ist z.B. in <b>alert(...)</b>-Meldungen sinnvoll, um innerhalb des auszugebenden Textes einen Zeilenumbruch einzuf&uuml;gen.<br>
+Das Steuerzeichen <b>\t</b> ist z.B. sinnvoll, um etwa innerhalb einer <b>alert(...)</b>-Meldung tabellarische Information auszugeben.<br>
+Das Steuerzeichen <b>\r</b> sollten Sie zus&auml;tzlich zu dem Steuerzeichen <b>\n</b> notieren, wenn <b>\n</b> alleine nicht funktioniert.<br>
+Das Steuerzeichen <b>\&quot;</b> m&uuml;ssen Sie notieren, wenn Sie innerhalb einer Zeichenkette ein Anf&uuml;hrungszeichen verwenden m&ouml;chten.
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Notation numerischer Werte</font></h2></a>
+
+Sie k&ouml;nnen Zahlen ganz normal notieren. Beachten Sie dabei nur, da&szlig; bei Kommazahlen anstelle eines Kommas ein Punkt notiert werden mu&szlig;. So wird die Zahl Pi beispielsweise als 3.1415 notiert. F&uuml;r sehr hohe und sehr niedrige Zahlen und f&uuml;r komplexe Kommazahlen gibt es daneben aber noch andere Notationsm&ouml;glichkeiten.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+  var a = 1E1
+  var b = 1.2345E4
+  var c = 2e-3
+// --&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>e</b> oder <b>E</b> bestimmen Sie die Anzahl Nullen, die hinter der Zahl vor dem <b>e</b> bzw. <b>E</b> stehen.
+<p>
+Die erste Zahl im Beispiel, 1E1, ist eine 1 mit einer 0 dahinter, also 10.<br>
+Die zweite Zahl im Beispiel, 1.2345E4, ist eine andere Schreibweise f&uuml;r 12345. Der Dezimalpunkt wird also einfach um so viele Stellen nach rechts verschoben, wie hinter dem E-Zeichen angegeben.<br>
+Die dritte Zahl im Beispiel, 2e-3, ist eine andere Schreibweise f&uuml;r 0.002. Der Dezimalpunkt wird also einfach um so viele Stellen nach links verschoben, wie hinter dem E-Zeichen angegeben. Diese umgekehrte Richtung wird durch das Minuszeichen bewirkt, da&szlig; hinter dem <b>e</b> folgt.<br>
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tdbd.htm"><b>Variablen und Werte</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdbf.htm"><b>Operatoren</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tdb.htm"><b>JavaScript Sprachelemente</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

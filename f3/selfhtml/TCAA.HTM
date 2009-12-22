@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>SELFHTML: Tags (Steuerbefehle in HTML)</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Tags (Steuerbefehle in HTML)</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Tags in HTML</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Verschachtelung von Tags</b></a><br> 
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Zusatzangaben in Tags</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Tags in HTML</font></h2></a>
+
+HTML-Dateien bestehen aus ASCII-Text. Deshalb können Sie HTML-Dateien mit jedem einfachen Text-Editor bearbeiten. Besser sind allerdings ausgereifte <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbda.htm"><b>HTML-Editoren</b></a>.
+<p>
+Neben dem eigentlichen Text enthalten HTML-Dateien HTML-spezifische Befehle. Alle HTML-Befehle stehen in sog. <i>Tags</i>. Die Tags werden durch spitze Klammern markiert. Fast alle Befehle von HTML bestehen aus einem einleitenden und einem abschlie&szlig;enden Tag. Der Text dazwischen ist der 
+&quot;G&uuml;ltigkeitsbereich&quot; f&uuml;r die betreffenden Tags.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;h4&gt;HTML - die Sprache des WWW&lt;/h4&gt;
+</pre></td></tr></table><p>
+In Ihrem WWW-Browser erscheint dieser Beispieltext so:
+<h4>HTML - die Sprache des WWW</h4>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel zeigt eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcda.htm"><b>&Uuml;berschrift</b></a> 4. Ordnung. 
+Das einleitende Tag <b>&lt;h4&gt;</b> signalisiert, da&szlig; eine 
+&Uuml;berschrift 4. Ordnung folgt (<i>h&nbsp;=&nbsp;heading&nbsp;=&nbsp;&Uuml;berschrift</i>). Das abschlie&szlig;ende 
+Tag <b>&lt;/h4&gt;</b> signalisiert das Ende des &Uuml;berschriftentextes. Ein 
+abschlie&szlig;endes Tag ist immer an dem Schr&auml;gstrich 
+<b>&quot;/&quot;</b> zu erkennen.
+<p>
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es spielt keine Rolle, ob die Tags in Form von Klein- oder 
+Gro&szlig;buchstaben notiert werden. So bedeuten z.B. <b>&lt;h1&gt;</b> und 
+<b>&lt;H1&gt;</b> das gleiche.
+<p>
+Es gibt einige wenige &quot;Standalone-Tags&quot;, d.h. Tags, die keine 
+Einleitung f&uuml;r den folgenden Text darstellen und deshalb 
+kein abschlie&szlig;endes Pendent haben.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+Eine Zeile, ein manueller Zeilenumbruch &lt;br&gt;
+und die n&auml;chste Zeile
+</pre></td></tr></table><p>  
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Am Ende der ersten Zeile signalisiert das Tag <b>&lt;br&gt;</b>, da&szlig; ein 
+manueller <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcdc.htm#a1"><b>Zeilenumbruch</b></a> eingef&uuml;gt werden 
+soll (<i>br&nbsp;=&nbsp;break&nbsp;=&nbsp;Umbruch</i>).
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Verschachtelung von Tags</font></h2></a>
+Tags k&ouml;nnen ineinander verschachtelt werden.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;h4&gt;&lt;i&gt;HTML&lt;/i&gt; - die Sprache des WWW&lt;/h4&gt;
+</pre></td></tr></table><p>
+In Ihrem WWW-Browser erscheint dieser Beispieltext so:
+<h4><i>HTML</i> - die Sprache des WWW</h4>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Die Anweisung <b>&lt;i&gt;</b> steht f&uuml;r <i>italic</i> (<i>=&nbsp;kursiver Text</i>). Der Text 
+zwischen <b>&lt;i&gt;</b> und <b>&lt;/i&gt;</b> wird als kursiv interpretiert, 
+abh&auml;ngig von der eingestellten Schriftart und Schriftgr&ouml;&szlig;e f&uuml;r die 
+&Uuml;berschrift 4. Ordnung.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xok.gif" width=30 height=30 border=0 alt="HTML2"> Zus&auml;tzliche Angaben in Tags</font></h2></a>
+Einleitende Tags und Standalone-Flags k&ouml;nnen zus&auml;tzliche 
+Angaben enthalten.
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC><pre>
+&lt;h4 align=center&gt;HTML - die Sprache des WWW&lt;/h4&gt;
+</pre></td></tr></table><p>
+In Ihrem WWW-Browser erscheint dieser Beispieltext so:
+<h4 align=center>HTML - die Sprache des WWW</h4>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die zus&auml;tzliche Angabe <b>align=center</b> wird bewirkt, 
+da&szlig; der Text zentriert ausgerichtet wird (<i>align&nbsp;=&nbsp;Ausrichtung, center&nbsp;=&nbsp;zentriert</i>).
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es gibt folgende Arten von Zusatzangaben in HTML-Tags:
+<ul>
+<li>Alleinstehende Zusatzangaben, z.B. im Befehl <b>&lt;hr noshade&gt;</b> (Trennlinie ohne Schatten).
+<li>Zusatzangaben mit Wertzuweisung, wobei es bestimmte erlaubte Werte gibt, z.B. im Befehl <b>&lt;h1 align=center&gt;</b> (&Uuml;berschrift 1. Ordnung zentriert ausgerichtet - hier sind nur die Werte <b>left</b>, <b>center</b> und <b>right</b> erlaubt).
+<li>Zusatzangaben mit numerischer Wertzuweisung, z.B. im Befehl <b>&lt;hr width=300&gt;</b> (Trennlinie 300 Pixel breit).
+<li>Zusatzangaben mit prozentualer Wertzuweisung, z.B. im Befehl <b>&lt;hr width=50%&gt;</b> (Trennlinie 50% Breite des Anzeigefensters).
+<li>Zusatzangaben mit variablen Namen, z.B. im Befehl <b>&lt;font face=&quot;Arial&quot;&gt;</b> (Schriftart Arial).
+</ul>
+Bei Zusatzangaben mit variablen Namen sollten Sie den zugewiesenen Wert in Anf&uuml;hrungszeichen notieren. In allen anderen F&auml;llen sind keine Anf&uuml;hrungszeichen n&ouml;tig. Lassen Sie bei Wertzuweisungen keine Leerzeichen zwischen Angabe, Istgleichzeichen und Zuweisungswert. So vermeiden Sie Fehler bei weniger toleranten WWW-Browsern.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tbdd.htm"><b>FTP-Programme</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcab.htm"><b>Grundger&uuml;st einer HTML-Datei</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tca.htm"><b> Sprachkonzept, Dateiger&uuml;st, Grundregeln</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

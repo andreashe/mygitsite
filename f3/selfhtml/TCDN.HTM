@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>SELFHTML: Mehrspaltiger Textflu&szlig;</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b>Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0"> Mehrspaltiger Textflu&szlig;</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Mehrspaltigen Textflu&szlig; definieren</b></a> <br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Spaltenbreite und Spaltenabstand bestimmen</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Mehrspaltigen Textflu&szlig; definieren</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdna.htm#a1"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Bislang war die Realisierung von Mehrspaltigkeit in HTML nur mit <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tceh.htm"><b>blinden Tabellen</b></a> m&ouml;glich. Netscape unterst&uuml;tzt ab  Version 3.0 eine einfachere Methode, mehrspaltigen Flie&szlig;text im Zeitungsstil in HTML zu realisieren. Da jedoch noch kein anderer WWW-Browser als Netscape 3.0 diesen HTML-Befehl interpretiert, ist beim Einsatz im WWW Vorsicht angebracht.
+
+
+<a name="imulticol"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;multicol cols=3&gt;
+Viel Text mit &Uuml;berschriften, Abs&auml;tzen, 
+Listen, dazu Bilder, Java ... alles m&ouml;glich
+&lt;/multicol&gt;  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;multicol ... &gt;</b> leiten Sie einen mehrspaltigen Abschnitt ein (<i>multicol = multiple columns = mehrere Spalten</i>). Zwingend erforderlich ist die Zusatzangabe <b>cols=</b>, mit der Sie die Anzahl der gew&uuml;nschten Spalten festlegen. Daran anschlie&szlig;end k&ouml;nnen beliebige andere Elemente folgen. Mit <b>&lt;/multicol&gt;</b> wird der mehrspaltige Abschnitt beendet.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Alles, was zwischen dem einleitenden Tag <b>&lt;multicol ... &gt;</b> und dem abschlie&szlig;enden Tag <b>&lt;/multicol</b> steht, wird automatisch so verteilt, da&szlig; es sich optimal &uuml;ber die angegebene Anzahl Spalten erstreckt. Bei Bildern, Java-Applets usw. kann es allerdings zu unsch&ouml;nen Anzeigen kommen. Denn anders als bei Tabellen richtet sich die Breite einer Spalte bei <b>&lt;multicol ... &gt;</b> nicht nach dem breitesten Inhalt, sondern nach der rechnerischen Spaltenbreite. Das kann dazu f&uuml;hren, da&szlig; Grafiken, die breiter sind als die Spalte, in die Nachbarspalte hineinreichen und sich mit dem dort stehenden Inhalt &uuml;berlappen.
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape 3.0">  Spaltenbreite und Spaltenabstand bestimmen</font></h2></a>
+
+<img src="xview.gif" width=30 height=20 border=0 alt="Beispiel"><br>
+<a href="tcdna.htm#a2"><b>Anzeigebeispiel: So sieht's aus</b></a>
+<p>
+Sie k&ouml;nnen sowohl die Breite der Spalten als auch die Breite der Spaltenzwischenr&auml;ume eines mehrspaltigen Textflusses festlegen.
+
+
+<a name="imulticol_width_gutter"><h4><font color=#6666CC>Beispiel:</font></h4></a>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;multicol cols=3 width=500 gutter=15&gt;
+Viel Text mit &Uuml;berschriften, Abs&auml;tzen, 
+Listen, dazu Bilder, Java ... alles m&ouml;glich
+&lt;/multicol&gt;  
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Durch die Zusatzangabe <b>width=</b> k&ouml;nnen Sie die Gesamtbreite der Spalten beeinflussen. Sie k&ouml;nnen eine Zahl oder einen Prozentwert angeben. Mit einer Zahl, z.B. 500, erzwingen Sie, da&szlig; alle Spalten zusammengenommen so viel Pixel breit sind wie angegeben. Mit einem Prozentwert erreichen Sie, da&szlig; alle Spalten zusammengenommen maximal vo viel Breite des Anzeigefensters einnehmen wie angegeben. F&uuml;r eine prozentuale Angabe notieren Sie hinter der Zahl einfach ein Prozentzeichen.
+<p>
+Mit der Zusatzangabe <b>gutter=</b> k&ouml;nnen Sie den Abstand zwischen den Spalten vergr&ouml;&szlig;ern oder verkleineren. Die Voreinstellung ist ein Abstand von 10 Pixeln. Mit einem h&ouml;heren Wert erreichen Sie einen gr&ouml;&szlig;eren Spaltenabstand, mit einem niedrigeren Wert einen geringeren Spaltenabstand.
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcdm.htm"><b>Trennlinien</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tcdo.htm"><b>Freies Plazieren von Text</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tc.htm"><b>Dokumentation: HTML</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tcd.htm"><b> Absatztypen und Textgestaltung</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+

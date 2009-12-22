@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>SELFHTML: JavaScript in HTML einbinden</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC>JavaScript in HTML einbinden</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>JavaScript und HTML</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>JavaScript-Bereiche in HTML definieren</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>JavaScript-Elemente in HTML-Tags</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a4"><b>JavaScripts in separaten Dateien</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+<p>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>JavaScript und HTML</font></h2></a>
+JavaScript ist kein Bestandteil von HTML, sondern eine eigene Programmiersprache. Diese Sprache wurde jedoch eigens zu dem Zweck geschaffen, HTML-Autoren ein Werkzeug in die Hand zu geben, mit dessen Hilfe sich WWW-Seiten optimieren lassen.
+<p>
+JavaScript-Programme werden wahlweise direkt in der HTML-Datei oder in separaten Dateien notiert. Sie werden nicht - wie etwa Java-Programme - compiliert, sondern als Quelltext zur Laufzeit interpretiert, also &auml;hnlich wie Batchdateien bzw. Shellscripts. Dazu besitzen moderne WWW-Browser wie Netscape oder Microsoft Internet Explorer entsprechende Interpreter-Software. 
+<p>
+In einer Programmiersprache wie JavaScript gibt es f&uuml;r Anf&auml;nger viele verwirrende Elemente: Sonderzeichen, Variablen, Wenn-Dann-Anweisungen, Schleifen, Funktionen, Methoden, Parameter, Objekte, Eigenschaften und anderes mehr. Um mit diesen Elementen richtig umgehen zu k&ouml;nnen, m&uuml;ssen Sie lernen sich vorzustellen, was im Computer passiert, wenn der Programmcode ausgef&uuml;hrt wird. Das ist ein langwieriger Lernproze&szlig;, den Anf&auml;nger nur durch viel &Uuml;bung bew&auml;ltigen. JavaScript ist dazu allerdings hervorragend geeignet, weil es eine vergleichsweise einfache Sprache ist, bei der viele Aufgabenbereiche einer &quot;gro&szlig;en&quot; Programmiersprache fehlen, z.B. Dinge wie Arbeitsspeicherverwaltung oder Dateioperationen. Au&szlig;erdem setzt JavaScript auf einer bestimmten Umgebung auf, n&auml;mlich auf einer anzuzeigenden oder angezeigten WWW-Seite.
+<p>
+Bevor Sie daran gehen, neuen, eigenen JavaScript-Code zu programmieren, m&uuml;ssen Sie sich exakt dar&uuml;ber im klaren sein, welches Problem Sie damit l&ouml;sen wollen. Dazu m&uuml;ssen Sie erst einmal wissen, was man mit HTML selbst alles machen kann, und wo die Grenzen von HTML liegen. Von JavaScript m&uuml;ssen Sie dann so viel wissen, da&szlig; Sie entscheiden k&ouml;nnen, ob das Problem mit JavaScript &uuml;berhaupt l&ouml;sbar ist. Mit  JavaScript k&ouml;nnen Sie z.B. <b>nicht</b> die typischen Aufgaben von <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tbba.htm"><b>CGI-Scripts</b></a> l&ouml;sen! 
+<p>
+Ferner sollten Sie sich im WWW umsehen, ob es nicht schon frei verf&uuml;gbare JavaScript-Beispiele gibt, die genau Ihr Problem l&ouml;sen. Denn es ist immer besser, auf Code zur&uuml;ckzugreifen, der sich in der Praxis bereits bew&auml;hrt hat, als neuen Code zu erstellen, dessen &quot;heimliche T&uuml;cken&quot; einem noch nicht bekannt sind. In vielen F&auml;llen gen&uuml;gt es, vorhandene JavaScripts den eigenen Erfordernissen anzupassen. Eine gute Einstiegsadresse f&uuml;r die Suche nach JavaScripts ist das WWW-Angebot <img src="xgonline.gif" width=14 height=10 border=0>&nbsp;<a href="http://javascript.seite.net/"><b>Kakao und Kekse</b></a>&nbsp;<img src="xdeu.gif" width=16 height=10 border=0> von Johannes Gamperl. Bei vorhandenen JavaScripts m&uuml;ssen Sie allerdings so viel von der Sprache verstehen, da&szlig; Sie genau wissen, welche Variablen oder festen Werte Sie ver&auml;ndern oder welche Funktion Sie erg&auml;nzen wollen.
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Stellen Sie keine WWW-Seiten mit ungepr&uuml;ftem JavaScript-Code ins WWW. F&uuml;r einen Anwender ist es sehr &auml;rgerlich, wenn er Fehlermeldungen des JavaScript-Interpreters am Bildschirm erh&auml;lt und in schlimmeren F&auml;llen einen Programmabsturz des WWW-Browsers oder gar einen Systemabsturz hat, was bei Online-Sitzungen besonders unangenehm ist.
+<p>
+Wenn Sie JavaScript f&uuml;r wichtige WWW-Seiten verwenden wollen, sollten Sie auf jeden Fall mehrere Browser zum Testen einsetzen. Denn leider sind die JavaScript-Interpreter der beiden JavaScript-f&auml;higen WWW-Browser Netscape und MS Internet Explorer noch immer sehr intolerant, unintelligent und unterschiedlich in ihrer Leistung. Generell gilt: Netscape 2.0 interpretiert den seinerzeit eingef&uuml;hrten JavaScript-Sprachstandard 1.0. Der MS Internet Explorer versteht diesen Sprachstandard weitgehend seit der Version 3.0. Netscape interpretiert seit Version 3.0 den erweiterten JavaScript-Standard 1.1. Dazu geh&ouml;rt vor allem das neu hinzugekommene <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdch.htm"><b>Grafik-Objekt </b></a>. Ab Version 4.0 versteht Netscape auch das <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdci.htm"><b>Layer-Objekt</b></a>. Weiterhin unterscheiden sich Netscape und der MS Internet Explorer in der Interpretation einzelner Objekteigenschaften. So ist etwa das Format f&uuml;r Cookies (siehe <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tddd.htm"><b>Anwendungsbeispiel f&uuml;r Cookies</b></a>) bei beiden Browsern unterschiedlich. Auch bei der internen Verarbeitung von vielfach zu durchlaufenden Schleifen gibt es Unterschiede. 
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> JavaScript-Bereiche in HTML definieren</font></h2></a>
+F&uuml;r JavaScript-Programmabschnitte k&ouml;nnen Sie in HTML Bereiche definieren.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+ alert(&quot;Hallo Welt!&quot;);
+//--&gt;
+&lt;/script&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Mit <b>&lt;script language=&quot;JavaScript&quot;&gt;</b> leiten Sie einen Bereich f&uuml;r JavaScript innerhalb einer HTML-Datei ein (<i>script = Quelltext, language = Sprache</i>). Dahinter - am besten in der n&auml;chsten Zeile - sollten Sie mit <b>&lt;!--</b> einen <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaf.htm#a1"><b>Kommentar</b></a> einleiten. Dadurch verhindern Sie, da&szlig; &auml;ltere WWW-Browser, die JavaScript nicht kennen, den folgenden JavaScript-Code ignorieren und nicht irrt&uuml;mlich als Text innerhalb der HTML-Datei interpretieren.
+<p>
+Im obigen Beispiel wird mit Hilfe von JavaScript ein Meldungsfenster mit dem Text &quot;Hallo Welt!&quot; am Bildschirm ausgegeben.
+<p>
+Am Ende eines JavaScript-Bereichs schlie&szlig;en Sie mit <b>//--&gt;</b> den Kommentar und mit <b>&lt;/script&gt;</b> den Bereich f&uuml;r den Programmcode. 
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Es gibt keine festen Vorschriften daf&uuml;r, an welcher Stelle einer HTML-Datei ein JavaScript-Bereich definiert werden mu&szlig;. Es ist unter JavaScript-Programmierern zur Gewohnheit geworden, einen solchen Bereich im Kopf der HTML-Datei, also zwischen <b>&lt;head&gt;</b> und <b>&lt;/head&gt;</b> zu definieren. Dadurch ist am ehesten sichergestellt, da&szlig; der Code vom WWW-Browser bereits eingelesen ist und zur Verf&uuml;gung steht, wenn er ausgef&uuml;hrt werden soll.
+<p>
+JavaScript-Code kann automatisch beim Einlesen der HTML-Datei ausgef&uuml;hrt werden. Das ist dann der Fall, wenn JavaScript-Befehle in einem JavaScript-Bereich au&szlig;erhalb jeder <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a1"><b>selbst definierten Funktion</b></a> stehen, so wie im obigen Beispiel. Wenn Sie eigene Funktionen definieren, k&ouml;nnen Sie diese kontrolliert an bestimmten Stellen aufrufen, wie im folgenden beschrieben.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a3"><h2><font color=#6666CC><img src="xhtml32.gif" width=30 height=30 border=0 alt="HTML3.2"> JavaScript-Elemente in HTML-Tags</font></h2></a>
+JavaScript kann auch innerhalb herk&ouml;mmlicher HTML-Tags vorkommen. Das ist dann kein komplexer Programmcode, sondern in der Regel nur der Aufruf bestimmter Methoden, Funktionen, Objekte, Eigenschaften. F&uuml;r den Aufruf gibt es sogenannte <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handler</b></a>. Das sind JavaScript-eigene <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaa.htm#a3"><b>Zusatzangaben</b></a> in HTML-Tags. F&uuml;r jeden der m&ouml;glichen Event-Handler ist festgelegt, in welchen HTML-Tags er vorkommen darf.
+
+<h4><font color=#6666CC>Beispiel:</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;JavaScript-Test&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;!--
+ function Quadrat(Zahl)
+  {
+   Ergebnis = Zahl * Zahl;
+   alert(&quot;Das Quadrat von &quot; + Zahl + &quot; = &quot; + Ergebnis);
+  }
+//--&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=button value=&quot;Quadrat von 6 errechnen&quot; onClick=&quot;Quadrat(6)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das obige Beispiel zeigt eine komplette HTML-Datei. Im Dateikopf ist ein <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>
+JavaScript-Bereich</b></a> definiert. Innerhalb dieses Bereichs steht eine <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbb.htm#a1"><b>selbst definierte Funktion</b></a>, die Funktion mit dem Namen <b>Quadrat(x)</b>. Die Funktion bekommt beim Aufruf eine Zahl x &uuml;bergeben. Sie errechnet das Quadrat dieser Zahl und gibt das Ergebnis in einem Meldungsfenster aus. Dieser JavaScript-Code wird aber nur ausgef&uuml;hrt, wenn die Funktion explizit aufgerufen wird. Im obigen Beispiel erfolgt der Aufruf mit Hilfe eines <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tche.htm#a1"><b>frei definierten Formularbuttons</b></a>. Wenn der Anwender auf den Button klickt, wird die Funktion ausgef&uuml;hrt.
+
+<h4><font color=#6666CC>Beachten Sie:</font></h4>
+Bei den <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tdbj.htm"><b>Event-Handlern</b></a> wird beschrieben, was solche Angaben wie <b>onClick=</b> (wie im obigen Beispiel) bedeuten, und in welchen HTML-Tags sie vorkommen d&uuml;rfen.
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a4"><h2><font color=#6666CC><img src="xnetsi3.gif" width=30 height=30 border=0 alt="Netscape3.0"> JavaScripts in separaten Dateien</font></h2></a>
+
+Netscape interpretiert seit der Version 3.0 auch JavaScript-Code, der in separaten Dateien notiert ist. Das ist sehr n&uuml;tzlich, wenn Sie gleiche JavaScript-Funktionen in mehreren HTML-Dateien verwenden wollen. Denn so brauchen Sie den Code nur einmal notieren und k&ouml;nnen ihn in mehreren HTML-Dateien referenzieren.
+
+<h4><font color=#6666CC>Beispiel (HTML-Datei):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;JavaScript-Test&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot; src=&quot;quadrat.js&quot;&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=button value=&quot;Quadrat von 6 errechnen&quot; onClick=&quot;Quadrat(6)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table><p>
+<h4><font color=#6666CC>Beispiel (separate JavaScript-Datei):</font></h4>
+<table width=100% cellpadding=10><tr><td bgcolor=#FFFFCC>
+<pre>
+ function Quadrat(Zahl)
+  {
+   Ergebnis = Zahl * Zahl;
+   alert(&quot;Das Quadrat von &quot; + Zahl + &quot; = &quot; + Ergebnis);
+  }
+</pre></td></tr></table><p>
+
+<h4><font color=#6666CC>Erl&auml;uterung:</font></h4>
+Das Beispiel tut das gleiche wie das Beispiel im <img src="xgoup.gif" width=14 height=10 border=0>&nbsp;<a href="#a3"><b>Abschnitt zuvor</b></a>. Der Unterschied ist lediglich, da&szlig; der JavaScript-Code in einer separaten Datei steht. Dazu notieren Sie im einleitenden <b>&lt;script&gt;</b>-Tag die Angabe <b>src=</b> (<i>src = source = Quelle</i>). Dahinter folgt, in Anf&uuml;hrungszeichen, der Name der separaten Datei mit dem Quellcode. 
+<p>
+Die Datei mit dem Quellcode mu&szlig; eine reine ASCII-Datei sein und sollte die Dateinamenerweiterung <b>.js</b> erhalten. Die Datei sollte nichts anderes als JavaScript-Code enthalten.
+<p>
+Beim Referenzieren von separaten JavaScript-Dateien, die sich in anderen Verzeichnissen oder auf anderen Server-Rechnern im Internet befinden, gelten die gleichen Regeln wie beim <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcga.htm"><b>Einbinden von Grafiken</b></a>.
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>.
+
+
+<p>
+
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tcm.htm"><b>Guter HTML-Stil</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tdba.htm"><b>Allgemeine Notationsregeln</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="td.htm"><b>Dokumentation: JavaScript</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+
