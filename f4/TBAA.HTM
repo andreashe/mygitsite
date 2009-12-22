@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>SELFHTML: HTML als Dokumentbeschreibungssprache</title>
+</head>
+<body bgcolor=#FFFFFF text=#000000 link=#CC6633 vlink=#993300 alink=#6666CC>
+
+<a name="top">&#160;</a>
+<table cellpadding=0>
+<tr>
+<td><img src="xweb.gif" width=106 height=109></td>
+<td>
+<table>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einführung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tba.htm"><b>Allgemeines zu HTML</b></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h1><font color=#6666CC> HTML als Dokumentbeschreibungssprache</font></h1>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a1"><b>Aufgabe einer Dokumentbeschreibungssprache wie HTML</b></a><br>
+<img src="xgdown.gif" width=14 height=10 border=0>&nbsp;<a href="#a2"><b>Hypertext als ASCII-Text</b></a>
+<p>
+<hr noshade  size=1 width=50% align=left color=#6666CC>
+
+<spacer type=vertical size=30>
+<a name="a1"><h2><font color=#6666CC>Aufgabe einer Dokumentbeschreibungssprache wie HTML</font></h2></a>
+HTML bedeutet <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage. Es handelt sich dabei um einen Ableger von SGML (Structured Generalized Markup Language) mit spezieller Ausrichtung auf Hypertext-Funktionen. 
+<p>
+SGML ist als ISO-Norm 8779 festgeschrieben und wird immer h&auml;ufiger von gro&szlig;en Konzernen und Institutionen zum internationalen, standardisierten Dokumentenaustausch benutzt. HTML ist zur Sprache 
+f&uuml;r Dokumente des World Wide Web (WWW) im Internet geworden. 
+<p>
+<img src="xtbaa01.gif" width=279 height=465 border=0 alt="Dokumentstruktur" align=left hspace=10>HTML ist eine sogenannte Dokumentbeschreibungssprache. Eine Dokumentbeschreibungssprache hat die Aufgabe, die Struktur eines Dokuments in einer vereinheitlichten, abstrakten Form zu beschreiben. Die Beschreibungssprache sollte in der Lage sein, typische Elemente eines Dokuments, wie Kapitel, Unterkapitel, Textabs&auml;tze, Listen, Tabellen, Grafiken, Querverweise zu anderen Dokumenten usw. zu bezeichnen. Dabei handelt es sich um logische Elemente des Dokuments. 
+<p>
+HTML war zun&auml;chst als rein logische Dokumentbeschreibungssprache gedacht. Es hat sich jedoch herausgestellt, da&szlig; damit allein die Bed&uuml;rfnisse der Anbieter von WWW-Seiten nicht zu befriedigen waren. Deshalb beschreibt HTML heute neben den logischen Strukturen eines Dokuments auch physische Elemente wie 
+Textformatierungen, Formatvorlagen usw.
+<p>
+Das Beschreibungsschema von HTML geht von einer hierarchischen Gliederung aus, wie Sie sie auf der Grafik nachvollziehen k&ouml;nnen. HTML beschreibt Dokumente. Dokumente haben globale Eigenschaften wie zum Beispiel einen Titel oder eine Hintergrundfarbe. Der eigentliche Inhalt besteht aus Elementen, zum Beispiel einer &Uuml;berschrift 1. Ordnung. Einige dieser Elemente haben wiederum Unterelemente. So enth&auml;lt ein Textabsatz zum Beispiel eine als fett markierte Textstelle, eine Aufz&auml;hlungsliste besteht aus einzelnen Listenpunkten, und eine Tabelle gliedert sich in einzelne Tabellenzellen. 
+<p>
+Jedes dieser Elemente hat einen fest definierbaren Erstreckungsraum. So geht eine &Uuml;berschrift vom ersten bis zum letzten Zeichen, eine Aufz&auml;hlungsliste vom ersten bis zum letzten Listenpunkt, oder eine Tabelle von der ersten bis zur letzten Zelle. Eine Dokumentbeschreibungssprache benutzt sogenannte Auszeichnungen (<i>markups</i>), um Anfang und Ende von Elementen zu beschreiben. Um etwa eine &Uuml;berschrift auszuzeichnen, lautet das Schema also:
+<p>
+<table><tr><td><b>[&Uuml;berschrift]</b> <i>Text der &Uuml;berschrift </i><b>[Ende &Uuml;berschrift]</b></td></tr></table>
+<p>
+Bei einem Element, das wiederum Unterelemente besitzt, etwa einer Aufz&auml;hlungsliste, l&auml;&szlig;t sich das gleiche Schema anwenden:
+<p>
+<table><tr><td><b>[Liste]</b><br>
+<b>[Listenpunkt]</b> <i>Text des Listenpunkts </i><b>[Ende Listenpunkt]</b><br>
+<b>[Listenpunkt]</b> <i>Text des Listenpunkts </i><b>[Ende Listenpunkt]</b><br>
+<b>[Ende Liste]</b></td></tr></table>
+<p>
+WWW-Browser, die HTML-Dateien am Bildschirm anzeigen, l&ouml;sen die Auszeichnungsbefehle auf und stellen die Elemente dann in optisch gut erkennbarer Form am Bildschirm dar. 
+
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a><spacer type=vertical size=30>
+<a name="a2"><h2><font color=#6666CC>Hypertext als ASCII-Text</font></h2></a>
+
+HTML-Dateien bestehen aus reinem ASCII-Text und k&ouml;nnen mit jedem ASCII-Editor gelesen und bearbeitet werden. Dadurch bleiben HTML-Dateien plattformunabh&auml;ngig, d.h. dasselbe Dokument kann auf Sun-Workstations, auf Apple Macintoshs, auf Ataris oder IBM-PCs pr&auml;sentiert werden. Plattformabh&auml;ngig ist nur die Pr&auml;sentations-Software, also die WWW-Browser. 
+<p>
+Die Auszeichnungsbefehle in HTML-Dateien hei&szlig;en <img src="x3.gif" width=15 height=10 border=0>&nbsp;<a href="tcaa.htm"><b>Tags</b></a>. Die Tags bestehen aus spitzen Klammern &lt; und &gt;. Innerhalb der spitzen Klammern werden HTML-Befehle notiert. WWW-Browser interpretieren die Tags und erzeugen daraus die korrekte Abbildung der Dokumentstruktur. 
+<p>
+Ein in HTML geschriebenes Dokument kann au&szlig;er Text auch Grafiken sowie multimediale Elemente (Sound, Video usw.) enthalten. Solche Elemente werden als Referenz auf eine entsprechende Grafik- oder Multimedia-Datei notiert. Ein WWW-Browser mu&szlig; entsprechende Software-Module besitzen oder aufrufen, mit deren Hilfe solche Dateien dargestellt werden k&ouml;nnen. 
+
+
+
+<p><a href="#top"><img src="xgoup2.gif" width=15 height=19 border=0></a>
+<p>
+<hr noshade  size=4 width=50% align=left color=#6666CC>
+<p>
+
+<table>
+<tr><td></td><td colspan=2 align=center><font size=-1>Bl&auml;ttern:</font></td><td></td></tr>
+<tr>
+<td><a href="tad.htm"><b>In eigener Sache</b></a></td>
+<td><img  src="x3.gif" width=15 height=10 border=0>&nbsp;<img  src="xgprev.gif" width=10 height=10 border=0></td>
+<td align=right><img  src="xgnext.gif" width=10 height=10 border=0>&nbsp;<img  src="x3.gif" width=15 height=10 border=0></td>
+<td><a href="tbab.htm"><b>Geschichte von HTML</b></a></td>
+</tr>
+</table>
+<p>
+<table cellpadding=0>
+<tr>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=3><a href="selfhtml.htm"><b>HTML-Dateien selbst erstellen</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td colspan=2><a href="tb.htm"><b>Einführung</b></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><img  src="x2.gif" width=16 height=13 border=0></td>
+<td><a href="tba.htm"><b>Allgemeines zu HTML</b></a></td>
+</tr>
+</table>
+<p>
+
+<address>&copy; 1997 <img src="xgmail.gif" width=15 height=10 border=0>&nbsp;<a href="mailto:s.muenz@euromail.com">Stefan M&uuml;nz, s.muenz@euromail.com</a></address><p>
+
+</body>
+</html>
+
